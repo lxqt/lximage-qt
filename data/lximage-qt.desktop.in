@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=LXImage Image Viewer
+GenericName=Image Viewer
+Comment=Simple and fast image viewer
+Icon=
+Exec=lximage-qt
+
+
