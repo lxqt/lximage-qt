@@ -1,15 +1,10 @@
 #include <QApplication>
 #include <QIcon>
-#include "lximage-qt.h"
-#include "mainwindow.h"
+#include "application.h"
 
 int main(int argc, char** argv) {
-  QApplication app(argc, argv);
-  
-  // FIXME: read icon theme name from config
-  QIcon::setThemeName("oxygen");
-  
-  LxImage::MainWindow mainWindow;
-  mainWindow.show();
+  LxImage::Application app(argc, argv);
+  if(!app.init())
+    return 1;
   return app.exec();
 }

@@ -2,7 +2,25 @@ project(lximage-qt)
 # newer cmake is required for CMAKE_AUTOMOC Qt support
 cmake_minimum_required(VERSION 2.8.6)
 
-find_package(Qt4 REQUIRED)
+find_package(Qt4 REQUIRED
+  QtCore
+  QtGui
+  QtDBus
+)
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLIB REQUIRED
+  glib-2.0
+)
+
+pkg_check_modules(EXIF REQUIRED
+  libexif
+)
+
+pkg_check_modules(LIBFM_QT REQUIRED
+  libfm-qt
+  libfm>=1.2
+)
 
 # add src subdirectory
 add_subdirectory(src)

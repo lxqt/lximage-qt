@@ -4,6 +4,9 @@ set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
 include_directories(
   ${QT_INCLUDES}
   ${CMAKE_CURRENT_BINARY_DIR}
+  ${GLIB_INCLUDE_DIRS}
+  ${EXIF_INCLUDE_DIRS}
+  ${LIBFM_QT_INCLUDE_DIRS}
 )
 
 set(CMAKE_AUTOMOC TRUE)
@@ -17,6 +20,7 @@ include_directories(
 set(lximage-qt_SRCS
   lximage-qt.cpp
   mainwindow.cpp
+  application.cpp
   imageview.cpp
 )
 
@@ -35,11 +39,16 @@ add_executable(lximage-qt
 
 add_definitions(
 -DPACKAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
+-DLIBFM_QT_API=Q_DECL_IMPORT    # FIXME: This should be done in libfm-qt headers instead :-(
 )
 
 target_link_libraries(lximage-qt
   ${QT_QTCORE_LIBRARY}
   ${QT_QTGUI_LIBRARY}
+  ${QT_DBUS_LIBRARY}
+  ${GLIB_LIBRARIES}
+  ${EXIF_LIBRARIES}
+  ${LIBFM_QT_LIBRARIES}
 )
 
 install(TARGETS lximage-qt RUNTIME DESTINATION bin)

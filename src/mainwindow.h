@@ -27,6 +27,10 @@
 #include "imageview.h"
 #include <QImage>
 
+#include <libfm/fm-folder.h>
+#include <libfm-qt/foldermodel.h>
+#include <libfm-qt/proxyfoldermodel.h>
+
 namespace LxImage {
 
 class MainWindow : public QMainWindow {
@@ -35,6 +39,8 @@ class MainWindow : public QMainWindow {
 public:
   MainWindow();
   virtual ~MainWindow();
+  
+  bool openImage(QString fileName);
 
 private Q_SLOTS:
   void on_actionAbout_triggered();
@@ -44,14 +50,24 @@ private Q_SLOTS:
   void on_actionSaveAs_triggered();
   void on_actionQuit_triggered();
 
+  void on_actionPrevious_triggered();
+  void on_actionNext_triggered();
+
   void on_actionZoomIn_triggered();
   void on_actionZoomOut_triggered();
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
 
 private:
+  static void onFolderLoaded(FmFolder* folder, MainWindow* pThis);
+  
+private:
   Ui::MainWindow ui;
   QImage image_;
+  FmFolder* folder_;
+  Fm::FolderModel* folderModel_;
+  Fm::ProxyFolderModel* proxyModel_;
+  QModelIndex currentIndex_;
 };
 
 };
