@@ -46,7 +46,7 @@ MainWindow::MainWindow():
 MainWindow::~MainWindow() {
   if(cancellable_) {
     g_cancellable_cancel(cancellable_);
-    g_object_unref(cancellable_);
+    // the cancellable object is freed in loadImageDataFree().
   }
   if(currentFile_)
     fm_path_unref(currentFile_);
@@ -125,8 +125,8 @@ void MainWindow::on_actionSaveAs_triggered() {
 
 }
 
-void MainWindow::on_actionQuit_triggered() {
-  qApp->quit();
+void MainWindow::on_actionClose_triggered() {
+  deleteLater();
 }
 
 void MainWindow::on_actionNext_triggered() {
@@ -181,7 +181,8 @@ gboolean MainWindow::loadImageThread(GIOSchedulerJob* job, GCancellable* cancell
       data->image = QImage::fromData(imageBuffer.buffer());
   }
   // do final step in the main thread
-  g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(_onImageLoaded), data, NULL);
+  if(!g_cancellable_is_cancelled(data->cancellable))
+    g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(_onImageLoaded), data, NULL);
   return FALSE;
 }
 
@@ -203,6 +204,7 @@ void MainWindow::loadFolder(FmPath* newFolderPath) {
   currentIndex_ = QModelIndex(); // set current index to invalid
 }
 
+// the image is loaded
 void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
   isLoading_ = false;
   cancellable_ = NULL; // cancellable will be freed later in loadImageDataFree().
@@ -210,7 +212,7 @@ void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
   image_ = data->image;
   ui.view->setImage(data->image);
   ui.view->zoomFit();
-  
+
   if(currentFile_)
     fm_path_unref(currentFile_);
   currentFile_ = fm_path_ref(data->path);
@@ -247,7 +249,7 @@ void MainWindow::updateUI() {
   }
 }
 
-// this function is called from main thread
+// this function is called from main thread only
 gboolean MainWindow::_onImageLoaded(LoadImageData* data) {
   // only do processing if the job is not cancelled
   if(!g_cancellable_is_cancelled(data->cancellable)) {
@@ -270,7 +272,8 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   // cancel loading of current image
   if(isLoading_) {
     g_cancellable_cancel(cancellable_);
-    g_object_unref(cancellable_);
+    // the cancellable object is freed in loadImageDataFree().
+    // we do not own a ref and hence there is no need to unref it.
   }
 
   // start a new gio job to load the specified image
