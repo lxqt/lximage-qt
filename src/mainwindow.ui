@@ -114,9 +114,12 @@
    <addaction name="actionOriginalSize"/>
    <addaction name="separator"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbout">
    <property name="icon">
-    <iconset theme="help-about"/>
+    <iconset theme="help-about">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -124,7 +127,9 @@
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset theme="document-open"/>
+    <iconset theme="document-open">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;Open</string>
@@ -132,7 +137,9 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset theme="document-save"/>
+    <iconset theme="document-save">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -140,7 +147,9 @@
   </action>
   <action name="actionSaveAs">
    <property name="icon">
-    <iconset theme="document-save-as"/>
+    <iconset theme="document-save-as">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Save &amp;As</string>
@@ -148,7 +157,9 @@
   </action>
   <action name="actionQuit">
    <property name="icon">
-    <iconset theme="application-exit"/>
+    <iconset theme="application-exit">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
@@ -156,7 +167,9 @@
   </action>
   <action name="actionZoomIn">
    <property name="icon">
-    <iconset theme="zoom-in"/>
+    <iconset theme="zoom-in">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Zoom &amp;In</string>
@@ -164,7 +177,9 @@
   </action>
   <action name="actionZoomOut">
    <property name="icon">
-    <iconset theme="zoom-out"/>
+    <iconset theme="zoom-out">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Zoomo &amp;Out</string>
@@ -177,7 +192,9 @@
   </action>
   <action name="actionNext">
    <property name="icon">
-    <iconset theme="go-next"/>
+    <iconset theme="go-next">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Next</string>
@@ -185,7 +202,9 @@
   </action>
   <action name="actionPrevious">
    <property name="icon">
-    <iconset theme="go-previous"/>
+    <iconset theme="go-previous">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Previous</string>
@@ -193,7 +212,9 @@
   </action>
   <action name="actionOriginalSize">
    <property name="icon">
-    <iconset theme="zoom-original"/>
+    <iconset theme="zoom-original">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Original Size</string>
@@ -201,7 +222,9 @@
   </action>
   <action name="actionZoomFit">
    <property name="icon">
-    <iconset theme="zoom-fit-best"/>
+    <iconset theme="zoom-fit-best">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Fit</string>
@@ -209,7 +232,9 @@
   </action>
   <action name="actionClockwiseRotation">
    <property name="icon">
-    <iconset theme="object-rotate-right"/>
+    <iconset theme="object-rotate-right">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Clockwise Rotation</string>
@@ -217,7 +242,9 @@
   </action>
   <action name="actionCounterclockwiseRotation">
    <property name="icon">
-    <iconset theme="object-rotate-left"/>
+    <iconset theme="object-rotate-left">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Counterclockwise Rotation</string>

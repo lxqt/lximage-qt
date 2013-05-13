@@ -22,31 +22,53 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QImage>
+#include <QBuffer>
 
 using namespace LxImage;
 
 MainWindow::MainWindow():
   QMainWindow(),
+  currentFile_(NULL),
+  // currentFileInfo_(NULL),
+  isLoading_(false),
+  cancellable_(NULL),
   folder_(NULL),
+  folderPath_(NULL),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
   image_() {
 
   ui.setupUi(this);
+  proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
 }
 
 MainWindow::~MainWindow() {
+  if(cancellable_) {
+    g_cancellable_cancel(cancellable_);
+    g_object_unref(cancellable_);
+  }
+  if(currentFile_)
+    fm_path_unref(currentFile_);
+  //if(currentFileInfo_)
+  //  fm_file_info_unref(currentFileInfo_);
   if(folder_) {
-    g_signal_handlers_disconnect_by_func(folder_, gpointer(onFolderLoaded), this);
+    g_signal_handlers_disconnect_by_func(folder_, gpointer(_onFolderLoaded), this);
     g_object_unref(folder_);
   }
+  if(folderPath_)
+    fm_path_unref(folderPath_);
   delete folderModel_;
   delete proxyModel_;
 }
 
 void MainWindow::on_actionAbout_triggered() {
-  QMessageBox::about(this, tr("About"), tr("LXImage - a simple and fast image viewer\n\nLXDE Project: http://lxde.org/"));
+  QMessageBox::about(this, tr("About"),
+                     tr("LXImage - a simple and fast image viewer\n\n"
+                     "Copyright (C) 2013\n"
+                     "LXDE Project: http://lxde.org/\n\n"
+                     "Authors:\n"
+                     "Hong Jen Yee (PCMan) <pcman.tw@gmail.com>"));
 }
 
 void MainWindow::on_actionOriginalSize_triggered() {
@@ -65,47 +87,33 @@ void MainWindow::on_actionZoomOut_triggered() {
   ui.view->zoomOut();
 }
 
-void MainWindow::onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
-  qDebug("Finish loading: %d files", pThis->proxyModel_->rowCount());
+void MainWindow::onFolderLoaded(FmFolder* folder) {
+  qDebug("Finish loading: %d files", proxyModel_->rowCount());
   FmFileInfoList* files = fm_folder_get_files(folder);
   for(GList* l = fm_file_info_list_peek_head_link(files); l; l = l->next) {
     FmFileInfo* fi = FM_FILE_INFO(l->data);
-    qDebug("%s", fm_file_info_get_disp_name(fi));
   }
 }
 
-bool MainWindow::openImage(QString fileName) {
-  if(folder_) {
-    g_signal_handlers_disconnect_by_func(folder_, gpointer(onFolderLoaded), this);
-    g_object_unref(folder_);
-    folder_ = NULL;
-  }
-
-  if(image_.load(fileName)) {
-    ui.view->setImage(image_);
-    QByteArray uname = fileName.toUtf8();
-    uname = uname.left(uname.lastIndexOf('/'));
-    folder_ = fm_folder_from_path_name(uname.constData());
-    folderModel_->setFolder(folder_);
-    currentIndex_ = proxyModel_->index(0, 0);
-
-    g_signal_connect(folder_, "finish-loading", G_CALLBACK(onFolderLoaded), this);
-  }
-  else {
-    image_ = QImage();
-    ui.view->setImage(image_);
-  }
-  ui.view->zoomFit();
-  return !image_.isNull();
+void MainWindow::_onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
+  pThis->onFolderLoaded(folder);
 }
 
 void MainWindow::on_actionOpen_triggered() {
   QString fileName = QFileDialog::getOpenFileName(
                       this, tr("Open File"), QString(),
                        tr("Images (*.png *.xpm *.jpg *.jpeg *.bmp)"));
-  // FIXME: support gio/gvfs and load the image file asynchronously?
   if(!fileName.isEmpty()) {
-    openImage(fileName);
+    FmPath* path = fm_path_new_for_str(qPrintable(fileName));
+    if(currentFile_ && fm_path_equal(currentFile_, path)) {
+      // the same file! do not load it again
+      fm_path_unref(path);
+      return;
+    }
+    // load the image file asynchronously
+    loadImage(path);
+    loadFolder(fm_path_get_parent(path));
+    fm_path_unref(path);
   }
 }
 
@@ -122,33 +130,160 @@ void MainWindow::on_actionQuit_triggered() {
 }
 
 void MainWindow::on_actionNext_triggered() {
+  QModelIndex index;
   if(currentIndex_.row() < proxyModel_->rowCount())
-    currentIndex_ = proxyModel_->index(currentIndex_.row() + 1, 0);
+    index = proxyModel_->index(currentIndex_.row() + 1, 0);
   else
-    currentIndex_ = proxyModel_->index(0, 0);
-  FmFileInfo* info = proxyModel_->fileInfoFromIndex(currentIndex_);
+    index = proxyModel_->index(0, 0);
+  FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
   if(info) {
     FmPath* path = fm_file_info_get_path(info);
-    char* pathStr = fm_path_to_str(path);
-    if(image_.load(pathStr)) {
-      ui.view->setImage(image_);
-    }
-    g_free(pathStr);
+    loadImage(path, index);
   }
 }
 
 void MainWindow::on_actionPrevious_triggered() {
+  QModelIndex index;
   if(currentIndex_.row() > 0)
-    currentIndex_ = proxyModel_->index(currentIndex_.row() - 1, 0);
+    index = proxyModel_->index(currentIndex_.row() - 1, 0);
   else
-    currentIndex_ = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
-  FmFileInfo* info = proxyModel_->fileInfoFromIndex(currentIndex_);
+    index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+  FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
   if(info) {
     FmPath* path = fm_file_info_get_path(info);
-    char* pathStr = fm_path_to_str(path);
-    if(image_.load(pathStr)) {
-      ui.view->setImage(image_);
-    }
-    g_free(pathStr);
+    loadImage(path, index);
   }
+}
+
+// This is called from the worker thread, not main thread
+gboolean MainWindow::loadImageThread(GIOSchedulerJob* job, GCancellable* cancellable, LoadImageData* data) {
+  GFile* gfile = fm_path_to_gfile(data->path);
+  GFileInputStream* fileStream = g_file_read(gfile, data->cancellable, &data->error);
+  g_object_unref(gfile);
+
+  if(fileStream) { // if the file stream is successfually opened
+    QBuffer imageBuffer;
+    GInputStream* inputStream = G_INPUT_STREAM(fileStream);
+    while(!g_cancellable_is_cancelled(data->cancellable)) {
+      char buffer[4096];
+      gssize readSize = g_input_stream_read(inputStream, 
+                                            buffer, 4096,
+                                            data->cancellable, &data->error);
+      if(readSize == -1 || readSize == 0) // error or EOF
+        break;
+      // append the bytes read to the image buffer
+      imageBuffer.buffer().append(buffer, readSize);
+    }
+    g_input_stream_close(inputStream, NULL, NULL);
+
+    // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
+    if(!data->error) // load the image from buffer if there are no errors
+      data->image = QImage::fromData(imageBuffer.buffer());
+  }
+  // do final step in the main thread
+  g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(_onImageLoaded), data, NULL);
+  return FALSE;
+}
+
+void MainWindow::loadFolder(FmPath* newFolderPath) {
+  if(folder_) { // an folder is already loaded
+    if(fm_path_equal(newFolderPath, folderPath_)) // same folder, ignore
+      return;
+    // free current folder
+    g_signal_handlers_disconnect_by_func(folder_, gpointer(_onFolderLoaded), this);
+    g_object_unref(folder_);
+    fm_path_unref(folderPath_);
+  }
+
+  folderPath_ = fm_path_ref(newFolderPath);
+  folder_ = fm_folder_from_path(newFolderPath);
+  g_signal_connect(folder_, "finish-loading", G_CALLBACK(_onFolderLoaded), this);
+
+  folderModel_->setFolder(folder_);
+  currentIndex_ = QModelIndex(); // set current index to invalid
+}
+
+void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
+  isLoading_ = false;
+  cancellable_ = NULL; // cancellable will be freed later in loadImageDataFree().
+
+  image_ = data->image;
+  ui.view->setImage(data->image);
+  ui.view->zoomFit();
+  
+  if(currentFile_)
+    fm_path_unref(currentFile_);
+  currentFile_ = fm_path_ref(data->path);
+
+  if(data->index.isValid())
+    currentIndex_ = data->index;
+  else {
+    // FIXME: handle the case in which index is invalid
+    // in this case, we need to find the index from the proxy folder model
+    currentIndex_ = proxyModel_->index(0, 0);
+  }
+
+  if(data->error) {
+    // if there are errors
+  }
+
+  updateUI();
+}
+
+void MainWindow::updateUI() {
+  if(currentFile_) {
+    char* dispName = fm_path_display_basename(currentFile_);
+    QString title = tr("%1 (%2x%3) - Image Viewer")
+                      .arg(QString::fromUtf8(dispName))
+                      .arg(image_.width())
+                      .arg(image_.height());
+    g_free(dispName);
+    setWindowTitle(title);
+
+    // TODO: update status bar, show current index in the folder
+  }
+  else {
+    setWindowTitle(tr("Image Viewer"));
+  }
+}
+
+// this function is called from main thread
+gboolean MainWindow::_onImageLoaded(LoadImageData* data) {
+  // only do processing if the job is not cancelled
+  if(!g_cancellable_is_cancelled(data->cancellable)) {
+    data->mainWindow->onImageLoaded(data);
+  }
+  return TRUE;
+}
+
+void MainWindow::loadImageDataFree(LoadImageData* data) {
+  g_object_unref(data->cancellable);
+  fm_path_unref(data->path);
+  if(data->error)
+    g_error_free(data->error);
+  delete data;
+}
+
+// Load the specified image file asynchronously in a worker thread.
+// When the loading is finished, onImageLoaded() will be called.
+void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
+  // cancel loading of current image
+  if(isLoading_) {
+    g_cancellable_cancel(cancellable_);
+    g_object_unref(cancellable_);
+  }
+
+  // start a new gio job to load the specified image
+  LoadImageData* data = new LoadImageData();
+  data->cancellable = g_cancellable_new();
+  data->path = fm_path_ref(filePath);
+  data->index = index;
+  data->mainWindow = this;
+  data->error = NULL;
+  cancellable_ = data->cancellable;
+
+  isLoading_ = true;
+  g_io_scheduler_push_job(GIOSchedulerJobFunc(loadImageThread),
+                          data, GDestroyNotify(loadImageDataFree),
+                          G_PRIORITY_DEFAULT, cancellable_);
 }

@@ -30,17 +30,28 @@
 #include <libfm/fm-folder.h>
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
+#include <gio/gio.h>
 
 namespace LxImage {
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
+  struct LoadImageData {
+    MainWindow* mainWindow;
+    GCancellable* cancellable;
+    FmPath* path;
+    QModelIndex index;
+    QImage image;
+    GError* error;
+  };
+
 public:
   MainWindow();
   virtual ~MainWindow();
-  
-  bool openImage(QString fileName);
+
+  void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
+  void loadFolder(FmPath* newFolderPath);
 
 private Q_SLOTS:
   void on_actionAbout_triggered();
@@ -59,15 +70,32 @@ private Q_SLOTS:
   void on_actionZoomFit_triggered();
 
 private:
-  static void onFolderLoaded(FmFolder* folder, MainWindow* pThis);
-  
+  void onImageLoaded(LoadImageData* data);
+  void onFolderLoaded(FmFolder* folder);
+  void updateUI();
+
+  // GObject related signal handers and callbacks
+  static void _onFolderLoaded(FmFolder* folder, MainWindow* pThis);
+  static gboolean loadImageThread(GIOSchedulerJob *job, GCancellable *cancellable, LoadImageData* data);
+  static gboolean _onImageLoaded(LoadImageData* data);
+  static void loadImageDataFree(LoadImageData* data);
+
 private:
   Ui::MainWindow ui;
-  QImage image_;
+  QImage image_; // the image currently shown
+  FmPath* currentFile_; // path to current image file
+  // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
+
+  // folder browsing
   FmFolder* folder_;
+  FmPath* folderPath_;
   Fm::FolderModel* folderModel_;
   Fm::ProxyFolderModel* proxyModel_;
   QModelIndex currentIndex_;
+
+  // multi-threading loading of images
+  bool isLoading_;
+  GCancellable* cancellable_;
 };
 
 };
