@@ -67,11 +67,13 @@ private Q_SLOTS:
   void on_actionNext_triggered();
   void on_actionFirst_triggered();
   void on_actionLast_triggered();
-  
+
   void on_actionZoomIn_triggered();
   void on_actionZoomOut_triggered();
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
+  void on_actionClockwiseRotation_triggered();
+  void on_actionCounterclockwiseRotation_triggered();
 
 private:
   void onImageLoaded(LoadImageData* data);

@@ -211,6 +211,8 @@ gboolean MainWindow::loadImageThread(GIOSchedulerJob* job, GCancellable* cancell
     }
     g_input_stream_close(inputStream, NULL, NULL);
 
+    // FIXME: utilize libexif to apply orientation flag if it's available here.
+    
     // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
     if(!data->error) // load the image from buffer if there are no errors
       data->image = QImage::fromData(imageBuffer.buffer());
@@ -338,4 +340,22 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   g_io_scheduler_push_job(GIOSchedulerJobFunc(loadImageThread),
                           data, GDestroyNotify(loadImageDataFree),
                           G_PRIORITY_DEFAULT, cancellable_);
+}
+
+void MainWindow::on_actionClockwiseRotation_triggered() {
+  if(!image_.isNull()) {
+    QTransform transform;
+    transform.rotate(90.0);
+    image_ = image_.transformed(transform, Qt::SmoothTransformation);
+    ui.view->setImage(image_);
+  }
+}
+
+void MainWindow::on_actionCounterclockwiseRotation_triggered() {
+  if(!image_.isNull()) {
+    QTransform transform;
+    transform.rotate(-90.0);
+    image_ = image_.transformed(transform, Qt::SmoothTransformation);
+    ui.view->setImage(image_);
+  }
 }
