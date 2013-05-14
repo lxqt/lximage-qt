@@ -42,7 +42,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -52,6 +52,12 @@
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrevious"/>
+    <addaction name="actionNext"/>
+    <addaction name="actionFirst"/>
+    <addaction name="actionLast"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
@@ -217,7 +223,10 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Next</string>
+    <string>Next File</string>
+   </property>
+   <property name="toolTip">
+    <string>Next File</string>
    </property>
    <property name="shortcut">
     <string>Right</string>
@@ -230,7 +239,10 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Previous</string>
+    <string>Previous File</string>
+   </property>
+   <property name="toolTip">
+    <string>Previous File</string>
    </property>
    <property name="shortcut">
     <string>Left</string>
@@ -279,6 +291,27 @@
   <action name="action_Preferences">
    <property name="text">
     <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>&amp;Print</string>
+   </property>
+  </action>
+  <action name="actionFirst">
+   <property name="text">
+    <string>First File</string>
+   </property>
+   <property name="shortcut">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionLast">
+   <property name="text">
+    <string>Last File</string>
+   </property>
+   <property name="shortcut">
+    <string>End</string>
    </property>
   </action>
  </widget>

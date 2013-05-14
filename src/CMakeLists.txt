@@ -22,6 +22,7 @@ set(lximage-qt_SRCS
   mainwindow.cpp
   application.cpp
   imageview.cpp
+  modelfilter.cpp
 )
 
 set(lximage-qt_UIS

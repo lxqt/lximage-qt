@@ -32,6 +32,8 @@
 #include <libfm-qt/proxyfoldermodel.h>
 #include <gio/gio.h>
 
+#include "modelfilter.h"
+
 namespace LxImage {
 
 class MainWindow : public QMainWindow {
@@ -63,7 +65,9 @@ private Q_SLOTS:
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();
-
+  void on_actionFirst_triggered();
+  void on_actionLast_triggered();
+  
   void on_actionZoomIn_triggered();
   void on_actionZoomOut_triggered();
   void on_actionOriginalSize_triggered();
@@ -73,6 +77,7 @@ private:
   void onImageLoaded(LoadImageData* data);
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
+  QModelIndex indexFromPath(FmPath* filePath);
 
   // GObject related signal handers and callbacks
   static void _onFolderLoaded(FmFolder* folder, MainWindow* pThis);
@@ -91,6 +96,7 @@ private:
   FmPath* folderPath_;
   Fm::FolderModel* folderModel_;
   Fm::ProxyFolderModel* proxyModel_;
+  ModelFilter* modelFilter_;
   QModelIndex currentIndex_;
 
   // multi-threading loading of images

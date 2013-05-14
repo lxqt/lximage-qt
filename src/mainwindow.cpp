@@ -36,9 +36,11 @@ MainWindow::MainWindow():
   folderPath_(NULL),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
+  modelFilter_(new ModelFilter()),
   image_() {
 
   ui.setupUi(this);
+  proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
 }
@@ -60,6 +62,7 @@ MainWindow::~MainWindow() {
     fm_path_unref(folderPath_);
   delete folderModel_;
   delete proxyModel_;
+  delete modelFilter_;
 }
 
 void MainWindow::on_actionAbout_triggered() {
@@ -89,10 +92,11 @@ void MainWindow::on_actionZoomOut_triggered() {
 
 void MainWindow::onFolderLoaded(FmFolder* folder) {
   qDebug("Finish loading: %d files", proxyModel_->rowCount());
-  FmFileInfoList* files = fm_folder_get_files(folder);
-  for(GList* l = fm_file_info_list_peek_head_link(files); l; l = l->next) {
-    FmFileInfo* fi = FM_FILE_INFO(l->data);
-  }
+
+  // if currently we're showing a file, get its index in the folder now
+  // since the folder is fully loaded.
+  if(currentFile_ && !currentIndex_.isValid())
+    currentIndex_ = indexFromPath(currentFile_);
 }
 
 void MainWindow::_onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
@@ -130,28 +134,59 @@ void MainWindow::on_actionClose_triggered() {
 }
 
 void MainWindow::on_actionNext_triggered() {
-  QModelIndex index;
-  if(currentIndex_.row() < proxyModel_->rowCount())
-    index = proxyModel_->index(currentIndex_.row() + 1, 0);
-  else
-    index = proxyModel_->index(0, 0);
-  FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-  if(info) {
-    FmPath* path = fm_file_info_get_path(info);
-    loadImage(path, index);
+  if(currentIndex_.isValid()) {
+    QModelIndex index;
+    if(currentIndex_.row() < proxyModel_->rowCount() - 1)
+      index = proxyModel_->index(currentIndex_.row() + 1, 0);
+    else
+      index = proxyModel_->index(0, 0);
+    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
+    if(info) {
+      FmPath* path = fm_file_info_get_path(info);
+      qDebug("try load: %s", fm_path_get_basename(path));
+      loadImage(path, index);
+    }
   }
 }
 
 void MainWindow::on_actionPrevious_triggered() {
-  QModelIndex index;
-  if(currentIndex_.row() > 0)
-    index = proxyModel_->index(currentIndex_.row() - 1, 0);
-  else
-    index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
-  FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-  if(info) {
-    FmPath* path = fm_file_info_get_path(info);
-    loadImage(path, index);
+  if(currentIndex_.isValid()) {
+    QModelIndex index;
+    qDebug("current row: %d", currentIndex_.row());
+    if(currentIndex_.row() > 0)
+      index = proxyModel_->index(currentIndex_.row() - 1, 0);
+    else
+      index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
+    if(info) {
+      FmPath* path = fm_file_info_get_path(info);
+      qDebug("try load: %s", fm_path_get_basename(path));
+      loadImage(path, index);
+    }
+  }
+}
+
+void MainWindow::on_actionFirst_triggered() {
+  QModelIndex index = proxyModel_->index(0, 0);
+  if(index.isValid()) {
+    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
+    if(info) {
+      FmPath* path = fm_file_info_get_path(info);
+      qDebug("try load: %s", fm_path_get_basename(path));
+      loadImage(path, index);
+    }
+  }
+}
+
+void MainWindow::on_actionLast_triggered() {
+  QModelIndex index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+  if(index.isValid()) {
+    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
+    if(info) {
+      FmPath* path = fm_file_info_get_path(info);
+      qDebug("try load: %s", fm_path_get_basename(path));
+      loadImage(path, index);
+    }
   }
 }
 
@@ -216,21 +251,35 @@ void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
   if(currentFile_)
     fm_path_unref(currentFile_);
   currentFile_ = fm_path_ref(data->path);
-
-  if(data->index.isValid())
-    currentIndex_ = data->index;
-  else {
-    // FIXME: handle the case in which index is invalid
-    // in this case, we need to find the index from the proxy folder model
-    currentIndex_ = proxyModel_->index(0, 0);
-  }
+  currentIndex_ = data->index;
+  if(!currentIndex_.isValid())
+    currentIndex_ = indexFromPath(currentFile_);
 
   if(data->error) {
     // if there are errors
+    // TODO: show a info bar?
   }
 
   updateUI();
 }
+
+QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
+  // if the folder is already loaded, figure out our index
+  // otherwise, it will be done again in onFolderLoaded() when the folder is fully loaded.
+  if(folder_ && fm_folder_is_loaded(folder_)) {
+    QModelIndex index;
+    int count = proxyModel_->rowCount();
+    for(int row = 0; row < count; ++row) {
+      index = proxyModel_->index(row, 0);
+      FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
+      if(info && fm_path_equal(filePath, fm_file_info_get_path(info))) {
+        return index;
+      }
+    }
+  }
+  return QModelIndex();
+}
+
 
 void MainWindow::updateUI() {
   if(currentFile_) {
