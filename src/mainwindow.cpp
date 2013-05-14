@@ -103,30 +103,45 @@ void MainWindow::_onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
   pThis->onFolderLoaded(folder);
 }
 
+void MainWindow::openImageFile(QString fileName) {
+  FmPath* path = fm_path_new_for_str(qPrintable(fileName));
+  if(currentFile_ && fm_path_equal(currentFile_, path)) {
+    // the same file! do not load it again
+    fm_path_unref(path);
+    return;
+  }
+  // load the image file asynchronously
+  loadImage(path);
+  loadFolder(fm_path_get_parent(path));
+  fm_path_unref(path);
+}
+
 void MainWindow::on_actionOpen_triggered() {
   QString fileName = QFileDialog::getOpenFileName(
                       this, tr("Open File"), QString(),
                        tr("Images (*.png *.xpm *.jpg *.jpeg *.bmp)"));
   if(!fileName.isEmpty()) {
-    FmPath* path = fm_path_new_for_str(qPrintable(fileName));
-    if(currentFile_ && fm_path_equal(currentFile_, path)) {
-      // the same file! do not load it again
-      fm_path_unref(path);
-      return;
-    }
-    // load the image file asynchronously
-    loadImage(path);
-    loadFolder(fm_path_get_parent(path));
-    fm_path_unref(path);
+    openImageFile(fileName);
+  }
+}
+
+void MainWindow::on_actionOpenInNewWindow_triggered() {
+  QString fileName = QFileDialog::getOpenFileName(
+                       this, tr("Open File"), QString(),
+                       tr("Images (*.png *.xpm *.jpg *.jpeg *.bmp)"));
+  if(!fileName.isEmpty()) {
+    MainWindow* window = new MainWindow();
+    window->openImageFile(fileName);
+    window->show();
   }
 }
 
 void MainWindow::on_actionSave_triggered() {
-
+  // TODO
 }
 
 void MainWindow::on_actionSaveAs_triggered() {
-
+  // TODO
 }
 
 void MainWindow::on_actionClose_triggered() {
@@ -376,3 +391,21 @@ void MainWindow::on_actionCounterclockwiseRotation_triggered() {
     ui.view->setImage(image_);
   }
 }
+
+void MainWindow::on_actionCopy_triggered() {
+  // TODO
+}
+
+void MainWindow::on_actionFlip_triggered() {
+  // TODO
+}
+
+void MainWindow::on_actionPreferences_triggered() {
+  // TODO
+}
+
+void MainWindow::on_actionPrint_triggered() {
+  // TODO
+}
+
+

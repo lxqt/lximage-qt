@@ -52,6 +52,9 @@ public:
   MainWindow();
   virtual ~MainWindow();
 
+  void openImageFile(QString fileName);
+
+protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
   void loadFolder(FmPath* newFolderPath);
 
@@ -59,9 +62,15 @@ private Q_SLOTS:
   void on_actionAbout_triggered();
 
   void on_actionOpen_triggered();
+  void on_actionOpenInNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();
+  void on_actionPrint_triggered();
   void on_actionClose_triggered();
+
+  void on_actionPreferences_triggered();
+
+  void on_actionCopy_triggered();
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();
@@ -74,6 +83,7 @@ private Q_SLOTS:
   void on_actionZoomFit_triggered();
   void on_actionClockwiseRotation_triggered();
   void on_actionCounterclockwiseRotation_triggered();
+  void on_actionFlip_triggered();
 
 private:
   void onImageLoaded(LoadImageData* data);

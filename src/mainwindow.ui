@@ -50,28 +50,19 @@
      <string>&amp;File</string>
     </property>
     <addaction name="actionOpen"/>
+    <addaction name="actionOpenInNewWindow"/>
+    <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
-    <addaction name="actionPrevious"/>
-    <addaction name="actionNext"/>
-    <addaction name="actionFirst"/>
-    <addaction name="actionLast"/>
+    <addaction name="actionPreferences"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
-   <widget class="QMenu" name="menu_Edit">
-    <property name="title">
-     <string>&amp;Edit</string>
-    </property>
-    <addaction name="actionCopy"/>
-    <addaction name="separator"/>
-    <addaction name="action_Preferences"/>
-   </widget>
    <widget class="QMenu" name="menu_View">
     <property name="title">
-     <string>&amp;View</string>
+     <string>&amp;Image</string>
     </property>
     <addaction name="actionZoomIn"/>
     <addaction name="actionZoomOut"/>
@@ -80,6 +71,9 @@
     <addaction name="separator"/>
     <addaction name="actionClockwiseRotation"/>
     <addaction name="actionCounterclockwiseRotation"/>
+    <addaction name="actionFlip"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -87,9 +81,25 @@
     </property>
     <addaction name="actionAbout"/>
    </widget>
+   <widget class="QMenu" name="menuGo">
+    <property name="title">
+     <string>Go</string>
+    </property>
+    <addaction name="actionPrevious"/>
+    <addaction name="actionNext"/>
+    <addaction name="actionFirst"/>
+    <addaction name="actionLast"/>
+   </widget>
+   <widget class="QMenu" name="menu_Vib">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionFullScreen"/>
+   </widget>
    <addaction name="menu_File"/>
-   <addaction name="menu_Edit"/>
+   <addaction name="menu_Vib"/>
    <addaction name="menu_View"/>
+   <addaction name="menuGo"/>
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
@@ -213,7 +223,7 @@
   </action>
   <action name="actionCopy">
    <property name="text">
-    <string>&amp;Copy</string>
+    <string>&amp;Copy to Clipboard</string>
    </property>
   </action>
   <action name="actionNext">
@@ -265,7 +275,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Fit</string>
+    <string>&amp;Fit</string>
    </property>
   </action>
   <action name="actionClockwiseRotation">
@@ -275,7 +285,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Clockwise Rotation</string>
+    <string>Clockwise &amp;Rotation</string>
    </property>
   </action>
   <action name="actionCounterclockwiseRotation">
@@ -285,10 +295,10 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Counterclockwise Rotation</string>
+    <string>&amp;Counterclockwise Rotation</string>
    </property>
   </action>
-  <action name="action_Preferences">
+  <action name="actionPreferences">
    <property name="text">
     <string>Preferences</string>
    </property>
@@ -312,6 +322,26 @@
    </property>
    <property name="shortcut">
     <string>End</string>
+   </property>
+  </action>
+  <action name="actionOpenInNewWindow">
+   <property name="text">
+    <string>Open in New Window</string>
+   </property>
+  </action>
+  <action name="actionFlip">
+   <property name="text">
+    <string>F&amp;lip</string>
+   </property>
+  </action>
+  <action name="actionScreenshot">
+   <property name="text">
+    <string>Capture Screenshot</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="text">
+    <string>Full Screen</string>
    </property>
   </action>
  </widget>

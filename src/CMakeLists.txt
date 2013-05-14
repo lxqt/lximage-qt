@@ -25,6 +25,14 @@ set(lximage-qt_SRCS
   modelfilter.cpp
 )
 
+qt4_add_dbus_adaptor(lximage-qt_SRCS
+  org.lxde.LxImage.Application.xml
+  application.h
+  LxImage::Application
+  applicationadaptor
+  ApplicationAdaptor
+)
+
 set(lximage-qt_UIS
   mainwindow.ui
 )
@@ -39,7 +47,7 @@ add_executable(lximage-qt
 )
 
 add_definitions(
--DPACKAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
+-DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
 -DLIBFM_QT_API=Q_DECL_IMPORT    # FIXME: This should be done in libfm-qt headers instead :-(
 )
 

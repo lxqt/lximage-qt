@@ -33,9 +33,15 @@ class Application : public QApplication {
 public:
   Application(int& argc, char** argv);
   bool init();
+  bool parseCommandLineArgs(int argc, char** argv);
 
+  void newWindow(QStringList files = QStringList());
+  
 private:
   Fm::LibFmQt libFm;
+  bool isPrimaryInstance;
+  QTranslator translator;
+  QTranslator qtTranslator;
 };
 
 }
