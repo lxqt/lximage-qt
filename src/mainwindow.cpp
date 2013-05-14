@@ -214,7 +214,7 @@ gboolean MainWindow::loadImageThread(GIOSchedulerJob* job, GCancellable* cancell
     // FIXME: utilize libexif to apply orientation flag if it's available here.
     
     // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
-    if(!data->error) // load the image from buffer if there are no errors
+    if(!data->error && !g_cancellable_is_cancelled(data->cancellable)) // load the image from buffer if there are no errors
       data->image = QImage::fromData(imageBuffer.buffer());
   }
   // do final step in the main thread
