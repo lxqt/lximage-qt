@@ -32,6 +32,13 @@ install(
   DESTINATION share/applications
 )
 
+# install an icon for the application
+install(
+  FILES data/lximage-qt.png
+  # FIXME: is this the proper place to install an icon?
+  DESTINATION share/icons/hicolor/48x48/apps
+)
+
 # update translations
 add_custom_target(update_translations ALL DEPENDS
   lximage-qt_translations

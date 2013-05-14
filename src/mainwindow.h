@@ -57,6 +57,9 @@ public:
 protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
   void loadFolder(FmPath* newFolderPath);
+  QString openFileName();
+
+  virtual void changeEvent(QEvent * event);
 
 private Q_SLOTS:
   void on_actionAbout_triggered();
@@ -68,9 +71,10 @@ private Q_SLOTS:
   void on_actionPrint_triggered();
   void on_actionClose_triggered();
 
+  void on_actionCopy_triggered();
   void on_actionPreferences_triggered();
 
-  void on_actionCopy_triggered();
+  void on_actionFullScreen_triggered();
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();

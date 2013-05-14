@@ -119,12 +119,17 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
     g_option_context_free(context);
   }
 
+  // FIXME: canonicalize paths here and handle relative paths
   QStringList paths;
   if(file_names) {
+    char* cwd = g_get_current_dir();
     for(char** filename = file_names; *filename; ++filename) {
-      QString path(*filename);
+      char* canonicalName = fm_canonicalize_filename(*filename, cwd);
+      QString path(canonicalName);
+      g_free(canonicalName);
       paths.push_back(path);
     }
+    g_free(cwd);
   }
 
   if(isPrimaryInstance) {

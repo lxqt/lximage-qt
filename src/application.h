@@ -36,7 +36,7 @@ public:
   bool parseCommandLineArgs(int argc, char** argv);
 
   void newWindow(QStringList files = QStringList());
-  
+
 private:
   Fm::LibFmQt libFm;
   bool isPrimaryInstance;

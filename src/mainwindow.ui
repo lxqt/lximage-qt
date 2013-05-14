@@ -56,24 +56,15 @@
     <addaction name="actionSaveAs"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
-    <addaction name="actionPreferences"/>
-    <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
    <widget class="QMenu" name="menu_View">
     <property name="title">
      <string>&amp;Image</string>
     </property>
-    <addaction name="actionZoomIn"/>
-    <addaction name="actionZoomOut"/>
-    <addaction name="actionOriginalSize"/>
-    <addaction name="actionZoomFit"/>
-    <addaction name="separator"/>
     <addaction name="actionClockwiseRotation"/>
     <addaction name="actionCounterclockwiseRotation"/>
     <addaction name="actionFlip"/>
-    <addaction name="separator"/>
-    <addaction name="actionCopy"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -94,9 +85,23 @@
     <property name="title">
      <string>&amp;View</string>
     </property>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="actionOriginalSize"/>
+    <addaction name="actionZoomFit"/>
+    <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
    </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="separator"/>
+    <addaction name="actionPreferences"/>
+   </widget>
    <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
    <addaction name="menu_Vib"/>
    <addaction name="menu_View"/>
    <addaction name="menuGo"/>
@@ -328,6 +333,9 @@
    <property name="text">
     <string>Open in New Window</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionFlip">
    <property name="text">
@@ -342,6 +350,9 @@
   <action name="actionFullScreen">
    <property name="text">
     <string>Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
    </property>
   </action>
  </widget>

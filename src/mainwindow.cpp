@@ -22,7 +22,10 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QImage>
+#include <QImageReader>
 #include <QBuffer>
+#include <QClipboard>
+#include <QPainter>
 
 using namespace LxImage;
 
@@ -116,19 +119,36 @@ void MainWindow::openImageFile(QString fileName) {
   fm_path_unref(path);
 }
 
-void MainWindow::on_actionOpen_triggered() {
+// popup a file dialog and retrieve the selected image file name
+QString MainWindow::openFileName() {
+  QString filterStr;
+  QList<QByteArray> formats = QImageReader::supportedImageFormats();
+  QList<QByteArray>::iterator it = formats.begin();
+  for(;;) {
+    filterStr += "*.";
+    filterStr += (*it).toLower();
+    ++it;
+    if(it != formats.end())
+      filterStr += ' ';
+    else
+      break;
+  }
+
   QString fileName = QFileDialog::getOpenFileName(
-                      this, tr("Open File"), QString(),
-                       tr("Images (*.png *.xpm *.jpg *.jpeg *.bmp)"));
+    this, tr("Open File"), QString(),
+          tr("Image files (%1)").arg(filterStr));
+  return fileName;
+}
+
+void MainWindow::on_actionOpen_triggered() {
+  QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
   }
 }
 
 void MainWindow::on_actionOpenInNewWindow_triggered() {
-  QString fileName = QFileDialog::getOpenFileName(
-                       this, tr("Open File"), QString(),
-                       tr("Images (*.png *.xpm *.jpg *.jpeg *.bmp)"));
+  QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     MainWindow* window = new MainWindow();
     window->openImageFile(fileName);
@@ -393,7 +413,17 @@ void MainWindow::on_actionCounterclockwiseRotation_triggered() {
 }
 
 void MainWindow::on_actionCopy_triggered() {
-  // TODO
+  QClipboard *clipboard = QApplication::clipboard();
+  QImage copiedImage = image_;
+  // FIXME: should we copy the currently scaled result instead of the original image?
+  /*
+  double factor = ui.view->scaleFactor();
+  if(factor == 1.0)
+    copiedImage = image_;
+  else
+    copiedImage = image_.scaled();
+  */
+  clipboard->setImage(copiedImage);
 }
 
 void MainWindow::on_actionFlip_triggered() {
@@ -408,4 +438,30 @@ void MainWindow::on_actionPrint_triggered() {
   // TODO
 }
 
+// TODO: This can later be used for doing slide show
+void MainWindow::on_actionFullScreen_triggered() {
+  if(isFullScreen())
+    showNormal();
+  else
+    showFullScreen();
+}
+
+void MainWindow::changeEvent(QEvent* event) {
+  // TODO: hide menu/toolbars in full screen mode and make the background black.
+  if(event->type() == QEvent::WindowStateChange) {
+/*
+    if(isFullScreen()) {
+      ui.menubar->hide();
+      ui.toolBar->hide();
+      ui.statusBar->hide();
+    }
+    else {
+      ui.menubar->show();
+      ui.toolBar->show();
+      ui.statusBar->show();
+    }
+*/
+  }
+  QWidget::changeEvent(event);
+}
 
