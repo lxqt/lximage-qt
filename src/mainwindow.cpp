@@ -241,7 +241,7 @@ void MainWindow::loadFolder(FmPath* newFolderPath) {
   currentIndex_ = QModelIndex(); // set current index to invalid
 }
 
-// the image is loaded
+// the image is loaded (the method is only called if the loading is not cancelled)
 void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
   isLoading_ = false;
   cancellable_ = NULL; // cancellable will be freed later in loadImageDataFree().
@@ -250,19 +250,15 @@ void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
   ui.view->setImage(data->image);
   ui.view->zoomFit();
 
-  if(currentFile_)
-    fm_path_unref(currentFile_);
-  currentFile_ = fm_path_ref(data->path);
-  currentIndex_ = data->index;
   if(!currentIndex_.isValid())
     currentIndex_ = indexFromPath(currentFile_);
+
+  updateUI();
 
   if(data->error) {
     // if there are errors
     // TODO: show a info bar?
   }
-
-  updateUI();
 }
 
 QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
@@ -284,20 +280,32 @@ QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
 
 
 void MainWindow::updateUI() {
+  QString title;
   if(currentFile_) {
     char* dispName = fm_path_display_basename(currentFile_);
-    QString title = tr("%1 (%2x%3) - Image Viewer")
-                      .arg(QString::fromUtf8(dispName))
-                      .arg(image_.width())
-                      .arg(image_.height());
+    if(isLoading_) {
+      title = tr("%1 (Loading...) - Image Viewer")
+                .arg(QString::fromUtf8(dispName));
+    }
+    else {
+      if(image_.isNull()) {
+        title = tr("%1 (Failed to Load) - Image Viewer")
+                  .arg(QString::fromUtf8(dispName));
+      }
+      else {
+        title = tr("%1 (%2x%3) - Image Viewer")
+                  .arg(QString::fromUtf8(dispName))
+                  .arg(image_.width())
+                  .arg(image_.height());
+      }
+    }
     g_free(dispName);
-    setWindowTitle(title);
-
     // TODO: update status bar, show current index in the folder
   }
   else {
-    setWindowTitle(tr("Image Viewer"));
+    title = tr("Image Viewer");
   }
+  setWindowTitle(title);
 }
 
 // this function is called from main thread only
@@ -327,6 +335,13 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
     // we do not own a ref and hence there is no need to unref it.
   }
 
+  currentIndex_ = index;
+  if(currentFile_)
+    fm_path_unref(currentFile_);
+  currentFile_ = fm_path_ref(filePath);
+  // clear current image, but do not update the view now to prevent flickers
+  image_ = QImage();
+
   // start a new gio job to load the specified image
   LoadImageData* data = new LoadImageData();
   data->cancellable = g_cancellable_new();
@@ -340,6 +355,8 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   g_io_scheduler_push_job(GIOSchedulerJobFunc(loadImageThread),
                           data, GDestroyNotify(loadImageDataFree),
                           G_PRIORITY_DEFAULT, cancellable_);
+
+  updateUI();
 }
 
 void MainWindow::on_actionClockwiseRotation_triggered() {
