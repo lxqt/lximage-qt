@@ -119,13 +119,15 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
     g_option_context_free(context);
   }
 
-  // FIXME: canonicalize paths here and handle relative paths
+  // handle files to open
   QStringList paths;
   if(file_names) {
     char* cwd = g_get_current_dir();
     for(char** filename = file_names; *filename; ++filename) {
+      // handle relative paths and remove unnecessary . & ..
       char* canonicalName = fm_canonicalize_filename(*filename, cwd);
-      QString path(canonicalName);
+      // convert from local encoding to QString (utf16).
+      QString path = QString::fromLocal8Bit(canonicalName);
       g_free(canonicalName);
       paths.push_back(path);
     }
