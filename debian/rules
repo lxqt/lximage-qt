@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+%:
+	dh  $@
+
+configure_flags += \
+			-DCMAKE_INSTALL_PREFIX="/usr"
+
+override_dh_auto_configure:
+	dh_auto_configure -- 	$(configure_flags)
+
+override_dh_install:
+	dh_install --fail-missing
+
+override_dh_strip:
+	dh_strip --dbg-package=lximage-qt-dbg

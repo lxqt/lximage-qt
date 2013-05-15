@@ -1,0 +1,28 @@
+Source: lximage-qt
+Section: x11
+Priority: optional
+Maintainer: Julien Lavergne <gilir@ubuntu.com>
+Build-Depends: debhelper (>= 9~)
+ , cmake
+ , libqt4-dev
+ , libglib2.0-dev
+ , libexif-dev
+ , libfm-qt-dev
+ , libfm-dev
+Standards-Version: 3.9.3
+
+Package: lximage-qt
+Architecture: any
+Depends: ${shlibs:Depends}, 
+         ${misc:Depends},
+Description: Image viewer in Qt for LXDE
+ lximage-qt is a simple image viewer in Qt for LXDE.
+
+Package: lximage-qt-dbg
+Architecture: any
+Section: debug
+Depends: lximage-qt (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Description: Debug package for lximage-qt
+ This package containes debug symbols.
