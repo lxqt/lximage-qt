@@ -31,27 +31,6 @@ static const char* ifaceName = "org.lxde.LxImage.Application";
 Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
   libFm() {
-  // QDBusConnection::sessionBus().registerObject("/org/pcmanfm/Application", this);
-  QDBusConnection dbus = QDBusConnection::sessionBus();
-
-  if(dbus.registerService(serviceName)) {
-    // we successfully registered the service
-    isPrimaryInstance = true;
-
-    new ApplicationAdaptor(this);
-    dbus.registerObject("/Application", this);
-
-    // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
-
-    // FIXME: read icon theme name from config (razor-Qt/KDE config, gtkrc, or xsettings?)
-    QIcon::setThemeName("oxygen");
-    Fm::IconTheme::setThemeName("oxygen");
-  }
-  else {
-    // an service of the same name is already registered.
-    // we're not the first instance
-    isPrimaryInstance = false;
-  }
 }
 
 bool Application::init() {
@@ -65,6 +44,24 @@ bool Application::init() {
   // install our own tranlations
   translator.load("lximage-qt_" + QLocale::system().name(), LXIMAGE_DATA_DIR "/translations");
   installTranslator(&translator);
+
+  // initialize dbus
+  QDBusConnection dbus = QDBusConnection::sessionBus();
+  if(dbus.registerService(serviceName)) {
+    // we successfully registered the service
+    isPrimaryInstance = true;
+    new ApplicationAdaptor(this);
+    dbus.registerObject("/Application", this);
+    // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
+    // FIXME: read icon theme name from config (razor-Qt/KDE config, gtkrc, or xsettings?)
+    QIcon::setThemeName("oxygen");
+    Fm::IconTheme::setThemeName("oxygen");
+  }
+  else {
+    // an service of the same name is already registered.
+    // we're not the first instance
+    isPrimaryInstance = false;
+  }
 
   if(!parseCommandLineArgs(QCoreApplication::argc(), QCoreApplication::argv()))
     return false;
@@ -135,7 +132,7 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
   }
 
   if(isPrimaryInstance) {
-    // TODO: load settings
+    settings_.load();
     keepRunning = true;
     newWindow(paths);
   }

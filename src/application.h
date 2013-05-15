@@ -24,6 +24,7 @@
 #include <QApplication>
 #include <libfm-qt/libfmqt.h>
 #include "mainwindow.h"
+#include "settings.h"
 
 namespace LxImage {
 
@@ -37,11 +38,16 @@ public:
 
   void newWindow(QStringList files = QStringList());
 
+  Settings& settings() {
+    return settings_;
+  }
+
 private:
   Fm::LibFmQt libFm;
   bool isPrimaryInstance;
   QTranslator translator;
   QTranslator qtTranslator;
+  Settings settings_;
 };
 
 }

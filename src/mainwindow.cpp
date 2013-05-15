@@ -23,6 +23,7 @@
 #include <QFileDialog>
 #include <QImage>
 #include <QImageReader>
+#include <QImageWriter>
 #include <QClipboard>
 #include <QPainter>
 #include "preferencesdialog.h"
@@ -34,6 +35,7 @@ MainWindow::MainWindow():
   currentFile_(NULL),
   // currentFileInfo_(NULL),
   loadJob_(NULL),
+  saveJob_(NULL),
   folder_(NULL),
   folderPath_(NULL),
   folderModel_(new Fm::FolderModel()),
@@ -162,15 +164,32 @@ QString MainWindow::openFileName() {
   return fileName;
 }
 
+// popup a file dialog and retrieve the selected image file name
+QString MainWindow::saveFileName() {
+  QString filterStr;
+  QList<QByteArray> formats = QImageWriter::supportedImageFormats();
+  QList<QByteArray>::iterator it = formats.begin();
+  for(;;) {
+    filterStr += "*.";
+    filterStr += (*it).toLower();
+    ++it;
+    if(it != formats.end())
+      filterStr += ' ';
+    else
+      break;
+  }
+  // FIXME: should we generate better filter strings? one format per item?
+  
+  QString fileName = QFileDialog::getSaveFileName(
+    this, tr("Save File"), QString(), tr("Image files (%1)").arg(filterStr));
+  return fileName;
+}
+
 void MainWindow::on_actionOpenFile_triggered() {
   QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
   }
-}
-
-void MainWindow::on_actionOpenFolder_triggered() {
-  // TODO: open a folder
 }
 
 void MainWindow::on_actionNewWindow_triggered() {
@@ -179,13 +198,28 @@ void MainWindow::on_actionNewWindow_triggered() {
 }
 
 void MainWindow::on_actionSave_triggered() {
-  if(!image_.isNull() && currentFile_) {
-    saveImage(currentFile_);
+  if(saveJob_) // if we're currently saving another file
+    return;
+
+  if(!image_.isNull()) {
+    if(currentFile_)
+      saveImage(currentFile_);
+    else
+      on_actionSaveAs_triggered();
   }
 }
 
 void MainWindow::on_actionSaveAs_triggered() {
-  // TODO
+  if(saveJob_) // if we're currently saving another file
+    return;
+
+  QString fileName = saveFileName();
+  if(!fileName.isEmpty()) {
+    FmPath* path = fm_path_new_for_str(qPrintable(fileName));
+    // save the image file asynchronously
+    saveImage(path);
+    fm_path_unref(path);
+  }
 }
 
 void MainWindow::on_actionClose_triggered() {
@@ -286,6 +320,13 @@ void MainWindow::onImageLoaded(LoadImageJob* job) {
   }
 }
 
+void MainWindow::onImageSaved(SaveImageJob* job) {
+  if(!job->error()) {
+    setModified(false);
+  }
+  saveJob_ = NULL;
+}
+
 QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
   // if the folder is already loaded, figure out our index
   // otherwise, it will be done again in onFolderLoaded() when the folder is fully loaded.
@@ -362,7 +403,12 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
 }
 
 void MainWindow::saveImage(FmPath* filePath) {
-  // TODO: save the file
+  if(saveJob_) // do not launch a new job if the current one is still in progress
+    return;
+  // start a new gio job to save current image to the specified path
+  saveJob_ = new SaveImageJob(this, filePath);
+  saveJob_->start();
+  // FIXME: add a cancel button to the UI? update status bar?
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {

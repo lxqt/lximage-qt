@@ -19,16 +19,29 @@
 
 
 #include "preferencesdialog.h"
+#include "application.h"
 
 using namespace LxImage;
 
 PreferencesDialog::PreferencesDialog(QWidget* parent):
   QDialog(parent) {
-
   ui.setupUi(this);
+
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+
 }
 
 PreferencesDialog::~PreferencesDialog() {
 
 }
 
+void PreferencesDialog::accept() {
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+  
+  
+  
+  settings.save();
+  QDialog::accept();
+}

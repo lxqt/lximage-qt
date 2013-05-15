@@ -34,6 +34,7 @@
 
 #include "modelfilter.h"
 #include "loadimagejob.h"
+#include "saveimagejob.h"
 
 namespace LxImage {
 
@@ -41,26 +42,36 @@ class MainWindow : public QMainWindow {
   Q_OBJECT
 public:
   friend class LoadImageJob;
-
+  friend class SaveImageJob;
+  
   MainWindow();
   virtual ~MainWindow();
 
   void openImageFile(QString fileName);
+  
+  QImage image() const {
+    return image_;
+  }
+  
+  FmPath* currentFile() const {
+    return currentFile_;
+  }
 
 protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
   void saveImage(FmPath* filePath); // save current image to a file
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
+  QString saveFileName();
   virtual void changeEvent(QEvent * event);
 
   void onImageLoaded(LoadImageJob* job);
-
+  void onImageSaved(SaveImageJob* job);
+  
 private Q_SLOTS:
   void on_actionAbout_triggered();
 
   void on_actionOpenFile_triggered();
-  void on_actionOpenFolder_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();
@@ -118,6 +129,7 @@ private:
 
   // multi-threading loading of images
   LoadImageJob* loadJob_;
+  SaveImageJob* saveJob_;
 };
 
 };

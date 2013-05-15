@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Image Viewer</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="lximage-qt"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="spacing">
@@ -51,10 +54,10 @@
     </property>
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
-    <addaction name="actionOpenFolder"/>
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
+    <addaction name="actionDelete"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
@@ -134,7 +137,6 @@
    <addaction name="actionZoomOut"/>
    <addaction name="actionZoomFit"/>
    <addaction name="actionOriginalSize"/>
-   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbout">
@@ -316,6 +318,9 @@
    </property>
   </action>
   <action name="actionFirst">
+   <property name="icon">
+    <iconset theme="go-first"/>
+   </property>
    <property name="text">
     <string>First File</string>
    </property>
@@ -324,6 +329,9 @@
    </property>
   </action>
   <action name="actionLast">
+   <property name="icon">
+    <iconset theme="go-last"/>
+   </property>
    <property name="text">
     <string>Last File</string>
    </property>
@@ -332,6 +340,9 @@
    </property>
   </action>
   <action name="actionNewWindow">
+   <property name="icon">
+    <iconset theme="document-new"/>
+   </property>
    <property name="text">
     <string>&amp;New Window</string>
    </property>
@@ -373,20 +384,23 @@
     <string>&amp;Paste from Clipboard</string>
    </property>
   </action>
-  <action name="actionOpenFolder">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Open &amp;Folder</string>
-   </property>
-  </action>
   <action name="actionSlideShow">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="text">
     <string>&amp;Slide Show</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset theme="edit-delete"/>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
    </property>
   </action>
  </widget>

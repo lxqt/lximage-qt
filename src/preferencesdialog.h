@@ -31,6 +31,8 @@ class PreferencesDialog : public QDialog {
 public:
   explicit PreferencesDialog(QWidget* parent = 0);
   virtual ~PreferencesDialog();
+  
+  virtual void accept();
 private:
   Ui::PreferencesDialog ui;
 };
