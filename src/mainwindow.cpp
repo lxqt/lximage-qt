@@ -26,6 +26,7 @@
 #include <QBuffer>
 #include <QClipboard>
 #include <QPainter>
+#include "preferencesdialog.h"
 
 using namespace LxImage;
 
@@ -40,6 +41,7 @@ MainWindow::MainWindow():
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
   modelFilter_(new ModelFilter()),
+  imageModified_(false),
   image_() {
 
   ui.setupUi(this);
@@ -140,20 +142,20 @@ QString MainWindow::openFileName() {
   return fileName;
 }
 
-void MainWindow::on_actionOpen_triggered() {
+void MainWindow::on_actionOpenFile_triggered() {
   QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
   }
 }
 
-void MainWindow::on_actionOpenInNewWindow_triggered() {
-  QString fileName = openFileName();
-  if(!fileName.isEmpty()) {
-    MainWindow* window = new MainWindow();
-    window->openImageFile(fileName);
-    window->show();
-  }
+void MainWindow::on_actionOpenFolder_triggered() {
+  // TODO: open a folder
+}
+
+void MainWindow::on_actionNewWindow_triggered() {
+  MainWindow* window = new MainWindow();
+  window->show();
 }
 
 void MainWindow::on_actionSave_triggered() {
@@ -369,6 +371,11 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
     // the cancellable object is freed in loadImageDataFree().
     // we do not own a ref and hence there is no need to unref it.
   }
+  if(imageModified_) {
+    // TODO: ask the user to save the modified image?
+    // this should be made optional
+    setModified(false);
+  }
 
   currentIndex_ = index;
   if(currentFile_)
@@ -394,21 +401,23 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   updateUI();
 }
 
-void MainWindow::on_actionClockwiseRotation_triggered() {
+void MainWindow::on_actionRotateClockwise_triggered() {
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
     ui.view->setImage(image_);
+    setModified(true);
   }
 }
 
-void MainWindow::on_actionCounterclockwiseRotation_triggered() {
+void MainWindow::on_actionRotateCounterclockwise_triggered() {
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(-90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
     ui.view->setImage(image_);
+    setModified(true);
   }
 }
 
@@ -426,16 +435,45 @@ void MainWindow::on_actionCopy_triggered() {
   clipboard->setImage(copiedImage);
 }
 
-void MainWindow::on_actionFlip_triggered() {
-  // TODO
+void MainWindow::on_actionPaste_triggered() {
+  // TODO: paste image from clipboard
+  setModified(true);
+}
+
+void MainWindow::on_actionFlipVertical_triggered() {
+  if(!image_.isNull()) {
+    image_ = image_.mirrored(false, true);
+    ui.view->setImage(image_);
+    setModified(true);
+  }
+  setModified(true);
+}
+
+void MainWindow::on_actionFlipHorizontal_triggered() {
+  if(!image_.isNull()) {
+    image_ = image_.mirrored(true, false);
+    ui.view->setImage(image_);
+    setModified(true);
+  }
+  setModified(true);
+}
+
+void MainWindow::setModified(bool modified) {
+  imageModified_ = modified;
+  updateUI(); // TODO: update title bar to reflect the state change
 }
 
 void MainWindow::on_actionPreferences_triggered() {
-  // TODO
+  PreferencesDialog dlg;
+  dlg.exec();
 }
 
 void MainWindow::on_actionPrint_triggered() {
-  // TODO
+  // TODO: implement printing support
+}
+
+void MainWindow::on_actionScreenshot_triggered() {
+  // TODO: implement screenshot capturing
 }
 
 // TODO: This can later be used for doing slide show

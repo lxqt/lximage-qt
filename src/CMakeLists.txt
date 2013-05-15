@@ -20,6 +20,7 @@ include_directories(
 set(lximage-qt_SRCS
   lximage-qt.cpp
   mainwindow.cpp
+  preferencesdialog.cpp
   application.cpp
   imageview.cpp
   modelfilter.cpp
@@ -35,6 +36,7 @@ qt4_add_dbus_adaptor(lximage-qt_SRCS
 
 set(lximage-qt_UIS
   mainwindow.ui
+  preferencedialog.ui
 )
 
 qt4_wrap_ui(lximage-qt_UI_H

@@ -49,22 +49,15 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionOpen"/>
-    <addaction name="actionOpenInNewWindow"/>
+    <addaction name="actionNewWindow"/>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionOpenFolder"/>
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
-   </widget>
-   <widget class="QMenu" name="menu_View">
-    <property name="title">
-     <string>&amp;Image</string>
-    </property>
-    <addaction name="actionClockwiseRotation"/>
-    <addaction name="actionCounterclockwiseRotation"/>
-    <addaction name="actionFlip"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -81,7 +74,7 @@
     <addaction name="actionFirst"/>
     <addaction name="actionLast"/>
    </widget>
-   <widget class="QMenu" name="menu_Vib">
+   <widget class="QMenu" name="menu_View">
     <property name="title">
      <string>&amp;View</string>
     </property>
@@ -91,18 +84,24 @@
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
+    <addaction name="actionSlideShow"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
      <string>&amp;Edit</string>
     </property>
+    <addaction name="actionRotateClockwise"/>
+    <addaction name="actionRotateCounterclockwise"/>
+    <addaction name="actionFlipHorizontal"/>
+    <addaction name="actionFlipVertical"/>
+    <addaction name="separator"/>
     <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
     <addaction name="separator"/>
     <addaction name="actionPreferences"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
-   <addaction name="menu_Vib"/>
    <addaction name="menu_View"/>
    <addaction name="menuGo"/>
    <addaction name="menu_Help"/>
@@ -126,11 +125,11 @@
    <addaction name="actionPrevious"/>
    <addaction name="actionNext"/>
    <addaction name="separator"/>
-   <addaction name="actionOpen"/>
+   <addaction name="actionOpenFile"/>
    <addaction name="actionSaveAs"/>
    <addaction name="separator"/>
-   <addaction name="actionClockwiseRotation"/>
-   <addaction name="actionCounterclockwiseRotation"/>
+   <addaction name="actionRotateClockwise"/>
+   <addaction name="actionRotateCounterclockwise"/>
    <addaction name="actionZoomIn"/>
    <addaction name="actionZoomOut"/>
    <addaction name="actionZoomFit"/>
@@ -148,14 +147,14 @@
     <string>&amp;About</string>
    </property>
   </action>
-  <action name="actionOpen">
+  <action name="actionOpenFile">
    <property name="icon">
     <iconset theme="document-open">
      <normaloff/>
     </iconset>
    </property>
    <property name="text">
-    <string>&amp;Open</string>
+    <string>&amp;Open File</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -283,32 +282,35 @@
     <string>&amp;Fit</string>
    </property>
   </action>
-  <action name="actionClockwiseRotation">
+  <action name="actionRotateClockwise">
    <property name="icon">
     <iconset theme="object-rotate-right">
      <normaloff/>
     </iconset>
    </property>
    <property name="text">
-    <string>Clockwise &amp;Rotation</string>
+    <string>&amp;Rotate Clockwise</string>
    </property>
   </action>
-  <action name="actionCounterclockwiseRotation">
+  <action name="actionRotateCounterclockwise">
    <property name="icon">
     <iconset theme="object-rotate-left">
      <normaloff/>
     </iconset>
    </property>
    <property name="text">
-    <string>&amp;Counterclockwise Rotation</string>
+    <string>Rotate &amp;Counterclockwise</string>
    </property>
   </action>
   <action name="actionPreferences">
    <property name="text">
-    <string>Preferences</string>
+    <string>P&amp;references</string>
    </property>
   </action>
   <action name="actionPrint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>&amp;Print</string>
    </property>
@@ -329,30 +331,62 @@
     <string>End</string>
    </property>
   </action>
-  <action name="actionOpenInNewWindow">
+  <action name="actionNewWindow">
    <property name="text">
-    <string>Open in New Window</string>
+    <string>&amp;New Window</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
    </property>
   </action>
-  <action name="actionFlip">
+  <action name="actionFlipHorizontal">
    <property name="text">
-    <string>F&amp;lip</string>
+    <string>Flip &amp;Horizontally</string>
    </property>
   </action>
   <action name="actionScreenshot">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Capture Screenshot</string>
    </property>
   </action>
   <action name="actionFullScreen">
    <property name="text">
-    <string>Full Screen</string>
+    <string>F&amp;ull Screen</string>
    </property>
    <property name="shortcut">
     <string>F11</string>
+   </property>
+  </action>
+  <action name="actionFlipVertical">
+   <property name="text">
+    <string>Flip &amp;Vertically</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Paste from Clipboard</string>
+   </property>
+  </action>
+  <action name="actionOpenFolder">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Open &amp;Folder</string>
+   </property>
+  </action>
+  <action name="actionSlideShow">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Slide Show</string>
    </property>
   </action>
  </widget>

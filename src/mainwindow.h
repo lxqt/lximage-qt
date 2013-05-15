@@ -64,14 +64,21 @@ protected:
 private Q_SLOTS:
   void on_actionAbout_triggered();
 
-  void on_actionOpen_triggered();
-  void on_actionOpenInNewWindow_triggered();
+  void on_actionOpenFile_triggered();
+  void on_actionOpenFolder_triggered();
+  void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();
   void on_actionPrint_triggered();
+  void on_actionScreenshot_triggered();
   void on_actionClose_triggered();
 
+  void on_actionRotateClockwise_triggered();
+  void on_actionRotateCounterclockwise_triggered();
+  void on_actionFlipVertical_triggered();
+  void on_actionFlipHorizontal_triggered();
   void on_actionCopy_triggered();
+  void on_actionPaste_triggered();
   void on_actionPreferences_triggered();
 
   void on_actionFullScreen_triggered();
@@ -85,14 +92,12 @@ private Q_SLOTS:
   void on_actionZoomOut_triggered();
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
-  void on_actionClockwiseRotation_triggered();
-  void on_actionCounterclockwiseRotation_triggered();
-  void on_actionFlip_triggered();
 
 private:
   void onImageLoaded(LoadImageData* data);
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
+  void setModified(bool modified);
   QModelIndex indexFromPath(FmPath* filePath);
 
   // GObject related signal handers and callbacks
@@ -106,6 +111,7 @@ private:
   QImage image_; // the image currently shown
   FmPath* currentFile_; // path to current image file
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
+  bool imageModified_;
 
   // folder browsing
   FmFolder* folder_;
