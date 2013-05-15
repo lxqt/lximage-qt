@@ -33,21 +33,15 @@
 #include <gio/gio.h>
 
 #include "modelfilter.h"
+#include "loadimagejob.h"
 
 namespace LxImage {
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
-
-  struct LoadImageData {
-    MainWindow* mainWindow;
-    GCancellable* cancellable;
-    FmPath* path;
-    QImage image;
-    GError* error;
-  };
-
 public:
+  friend class LoadImageJob;
+
   MainWindow();
   virtual ~MainWindow();
 
@@ -57,8 +51,9 @@ protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
-
   virtual void changeEvent(QEvent * event);
+
+  void onImageLoaded(LoadImageJob* job);
 
 private Q_SLOTS:
   void on_actionAbout_triggered();
@@ -93,7 +88,6 @@ private Q_SLOTS:
   void on_actionZoomFit_triggered();
 
 private:
-  void onImageLoaded(LoadImageData* data);
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
   void setModified(bool modified);
@@ -101,16 +95,13 @@ private:
 
   // GObject related signal handers and callbacks
   static void _onFolderLoaded(FmFolder* folder, MainWindow* pThis);
-  static gboolean loadImageThread(GIOSchedulerJob *job, GCancellable *cancellable, LoadImageData* data);
-  static gboolean _onImageLoaded(LoadImageData* data);
-  static void loadImageDataFree(LoadImageData* data);
 
 private:
   Ui::MainWindow ui;
   QImage image_; // the image currently shown
   FmPath* currentFile_; // path to current image file
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
-  bool imageModified_;
+  bool imageModified_; // the current image is modified by rotation, flip, or others and needs to be saved
 
   // folder browsing
   FmFolder* folder_;
@@ -121,8 +112,7 @@ private:
   QModelIndex currentIndex_;
 
   // multi-threading loading of images
-  bool isLoading_;
-  GCancellable* cancellable_;
+  LoadImageJob* loadJob_;
 };
 
 };

@@ -24,6 +24,7 @@ set(lximage-qt_SRCS
   application.cpp
   imageview.cpp
   modelfilter.cpp
+  loadimagejob.cpp
 )
 
 qt4_add_dbus_adaptor(lximage-qt_SRCS

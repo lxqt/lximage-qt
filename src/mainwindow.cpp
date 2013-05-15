@@ -34,8 +34,7 @@ MainWindow::MainWindow():
   QMainWindow(),
   currentFile_(NULL),
   // currentFileInfo_(NULL),
-  isLoading_(false),
-  cancellable_(NULL),
+  loadJob_(NULL),
   folder_(NULL),
   folderPath_(NULL),
   folderModel_(new Fm::FolderModel()),
@@ -51,9 +50,9 @@ MainWindow::MainWindow():
 }
 
 MainWindow::~MainWindow() {
-  if(cancellable_) {
-    g_cancellable_cancel(cancellable_);
-    // the cancellable object is freed in loadImageDataFree().
+  if(loadJob_) {
+    loadJob_->cancel();
+    // we don't need to do delete here. It will be done automatically
   }
   if(currentFile_)
     fm_path_unref(currentFile_);
@@ -227,39 +226,6 @@ void MainWindow::on_actionLast_triggered() {
   }
 }
 
-// This is called from the worker thread, not main thread
-gboolean MainWindow::loadImageThread(GIOSchedulerJob* job, GCancellable* cancellable, LoadImageData* data) {
-  GFile* gfile = fm_path_to_gfile(data->path);
-  GFileInputStream* fileStream = g_file_read(gfile, data->cancellable, &data->error);
-  g_object_unref(gfile);
-
-  if(fileStream) { // if the file stream is successfually opened
-    QBuffer imageBuffer;
-    GInputStream* inputStream = G_INPUT_STREAM(fileStream);
-    while(!g_cancellable_is_cancelled(data->cancellable)) {
-      char buffer[4096];
-      gssize readSize = g_input_stream_read(inputStream, 
-                                            buffer, 4096,
-                                            data->cancellable, &data->error);
-      if(readSize == -1 || readSize == 0) // error or EOF
-        break;
-      // append the bytes read to the image buffer
-      imageBuffer.buffer().append(buffer, readSize);
-    }
-    g_input_stream_close(inputStream, NULL, NULL);
-
-    // FIXME: utilize libexif to apply orientation flag if it's available here.
-    
-    // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
-    if(!data->error && !g_cancellable_is_cancelled(data->cancellable)) // load the image from buffer if there are no errors
-      data->image = QImage::fromData(imageBuffer.buffer());
-  }
-  // do final step in the main thread
-  if(!g_cancellable_is_cancelled(data->cancellable))
-    g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(_onImageLoaded), data, NULL);
-  return FALSE;
-}
-
 void MainWindow::loadFolder(FmPath* newFolderPath) {
   if(folder_) { // an folder is already loaded
     if(fm_path_equal(newFolderPath, folderPath_)) // same folder, ignore
@@ -279,12 +245,11 @@ void MainWindow::loadFolder(FmPath* newFolderPath) {
 }
 
 // the image is loaded (the method is only called if the loading is not cancelled)
-void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
-  isLoading_ = false;
-  cancellable_ = NULL; // cancellable will be freed later in loadImageDataFree().
+void MainWindow::onImageLoaded(LoadImageJob* job) {
+  loadJob_ = NULL; // the job object will be freed later automatically
 
-  image_ = data->image;
-  ui.view->setImage(data->image);
+  image_ = job->image();
+  ui.view->setImage(image_);
   ui.view->zoomFit();
 
   if(!currentIndex_.isValid())
@@ -292,7 +257,7 @@ void MainWindow::onImageLoaded(MainWindow::LoadImageData* data) {
 
   updateUI();
 
-  if(data->error) {
+  if(job->error()) {
     // if there are errors
     // TODO: show a info bar?
   }
@@ -320,7 +285,7 @@ void MainWindow::updateUI() {
   QString title;
   if(currentFile_) {
     char* dispName = fm_path_display_basename(currentFile_);
-    if(isLoading_) {
+    if(loadJob_) { // if loading is in progress
       title = tr("%1 (Loading...) - Image Viewer")
                 .arg(QString::fromUtf8(dispName));
     }
@@ -345,31 +310,13 @@ void MainWindow::updateUI() {
   setWindowTitle(title);
 }
 
-// this function is called from main thread only
-gboolean MainWindow::_onImageLoaded(LoadImageData* data) {
-  // only do processing if the job is not cancelled
-  if(!g_cancellable_is_cancelled(data->cancellable)) {
-    data->mainWindow->onImageLoaded(data);
-  }
-  return TRUE;
-}
-
-void MainWindow::loadImageDataFree(LoadImageData* data) {
-  g_object_unref(data->cancellable);
-  fm_path_unref(data->path);
-  if(data->error)
-    g_error_free(data->error);
-  delete data;
-}
-
 // Load the specified image file asynchronously in a worker thread.
 // When the loading is finished, onImageLoaded() will be called.
 void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   // cancel loading of current image
-  if(isLoading_) {
-    g_cancellable_cancel(cancellable_);
-    // the cancellable object is freed in loadImageDataFree().
-    // we do not own a ref and hence there is no need to unref it.
+  if(loadJob_) {
+    loadJob_->cancel(); // the job object will be freed automatically later
+    loadJob_ = NULL;
   }
   if(imageModified_) {
     // TODO: ask the user to save the modified image?
@@ -385,17 +332,8 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   image_ = QImage();
 
   // start a new gio job to load the specified image
-  LoadImageData* data = new LoadImageData();
-  data->cancellable = g_cancellable_new();
-  data->path = fm_path_ref(filePath);
-  data->mainWindow = this;
-  data->error = NULL;
-  cancellable_ = data->cancellable;
-
-  isLoading_ = true;
-  g_io_scheduler_push_job(GIOSchedulerJobFunc(loadImageThread),
-                          data, GDestroyNotify(loadImageDataFree),
-                          G_PRIORITY_DEFAULT, cancellable_);
+  loadJob_ = new LoadImageJob(this, filePath);
+  loadJob_->start();
 
   updateUI();
 }
