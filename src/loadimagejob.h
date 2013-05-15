@@ -59,7 +59,7 @@ private:
   ~LoadImageJob(); // prevent direct deletion
 
   static gboolean loadImageThread(GIOSchedulerJob *job, GCancellable *cancellable, LoadImageJob* pThis);
-  static gboolean onImageLoaded(LoadImageJob* pThis);
+  static gboolean finish(LoadImageJob* pThis);
   static void freeMe(LoadImageJob* pThis);
 
 public:

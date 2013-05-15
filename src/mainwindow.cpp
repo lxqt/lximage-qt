@@ -23,7 +23,6 @@
 #include <QFileDialog>
 #include <QImage>
 #include <QImageReader>
-#include <QBuffer>
 #include <QClipboard>
 #include <QPainter>
 #include "preferencesdialog.h"
