@@ -388,7 +388,6 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   LoadImageData* data = new LoadImageData();
   data->cancellable = g_cancellable_new();
   data->path = fm_path_ref(filePath);
-  data->index = index;
   data->mainWindow = this;
   data->error = NULL;
   cancellable_ = data->cancellable;

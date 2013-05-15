@@ -43,7 +43,6 @@ class MainWindow : public QMainWindow {
     MainWindow* mainWindow;
     GCancellable* cancellable;
     FmPath* path;
-    QModelIndex index;
     QImage image;
     GError* error;
   };
