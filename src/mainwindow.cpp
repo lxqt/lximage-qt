@@ -40,12 +40,34 @@ MainWindow::MainWindow():
   proxyModel_(new Fm::ProxyFolderModel()),
   modelFilter_(new ModelFilter()),
   imageModified_(false),
+  contextMenu_(new QMenu(this)),
   image_() {
 
   ui.setupUi(this);
   proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
+  
+  // build context menu
+  ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
+  connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
+
+  contextMenu_->addAction(ui.actionPrevious);
+  contextMenu_->addAction(ui.actionNext);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionZoomOut);
+  contextMenu_->addAction(ui.actionZoomIn);
+  contextMenu_->addAction(ui.actionOriginalSize);
+  contextMenu_->addAction(ui.actionZoomFit);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionSlideShow);
+  contextMenu_->addAction(ui.actionFullScreen);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionRotateClockwise);
+  contextMenu_->addAction(ui.actionRotateCounterclockwise);
+  contextMenu_->addAction(ui.actionFlipHorizontal);
+  contextMenu_->addAction(ui.actionFlipVertical);
+  contextMenu_->addAction(ui.actionFlipVertical);
 }
 
 MainWindow::~MainWindow() {
@@ -157,7 +179,9 @@ void MainWindow::on_actionNewWindow_triggered() {
 }
 
 void MainWindow::on_actionSave_triggered() {
-  // TODO
+  if(!image_.isNull() && currentFile_) {
+    saveImage(currentFile_);
+  }
 }
 
 void MainWindow::on_actionSaveAs_triggered() {
@@ -337,6 +361,10 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   updateUI();
 }
 
+void MainWindow::saveImage(FmPath* filePath) {
+  // TODO: save the file
+}
+
 void MainWindow::on_actionRotateClockwise_triggered() {
   if(!image_.isNull()) {
     QTransform transform;
@@ -439,3 +467,6 @@ void MainWindow::changeEvent(QEvent* event) {
   QWidget::changeEvent(event);
 }
 
+void MainWindow::onContextMenu(QPoint pos) {
+  contextMenu_->exec(ui.view->mapToGlobal(pos));
+}

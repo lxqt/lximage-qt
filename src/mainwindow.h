@@ -49,6 +49,7 @@ public:
 
 protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
+  void saveImage(FmPath* filePath); // save current image to a file
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
   virtual void changeEvent(QEvent * event);
@@ -87,6 +88,8 @@ private Q_SLOTS:
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
 
+  void onContextMenu(QPoint pos);
+  
 private:
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
@@ -98,6 +101,8 @@ private:
 
 private:
   Ui::MainWindow ui;
+  QMenu* contextMenu_;
+
   QImage image_; // the image currently shown
   FmPath* currentFile_; // path to current image file
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
