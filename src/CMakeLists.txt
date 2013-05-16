@@ -7,6 +7,7 @@ include_directories(
   ${GLIB_INCLUDE_DIRS}
   ${EXIF_INCLUDE_DIRS}
   ${LIBFM_QT_INCLUDE_DIRS}
+  ${X11_INCLUDE_DIR}
 )
 
 set(CMAKE_AUTOMOC TRUE)
@@ -27,6 +28,9 @@ set(lximage-qt_SRCS
   loadimagejob.cpp
   saveimagejob.cpp
   settings.cpp
+  desktopsettings.cpp
+  xsettings/xsettings-client.c
+  xsettings/xsettings-common.c
 )
 
 qt4_add_dbus_adaptor(lximage-qt_SRCS
@@ -63,6 +67,7 @@ target_link_libraries(lximage-qt
   ${GLIB_LIBRARIES}
   ${EXIF_LIBRARIES}
   ${LIBFM_QT_LIBRARIES}
+  ${X11_LIBRARIES}
 )
 
 install(TARGETS lximage-qt RUNTIME DESTINATION bin)

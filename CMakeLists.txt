@@ -22,6 +22,9 @@ pkg_check_modules(LIBFM_QT REQUIRED
   libfm>=1.2
 )
 
+# for xsettings support
+find_package(X11 REQUIRED)
+
 # add src subdirectory
 add_subdirectory(src)
 

@@ -25,6 +25,7 @@
 #include <libfm-qt/libfmqt.h>
 #include "mainwindow.h"
 #include "settings.h"
+#include "desktopsettings.h"
 
 namespace LxImage {
 
@@ -42,12 +43,23 @@ public:
     return settings_;
   }
 
+  Xdg::DesktopSettings& desktopSettings() {
+    return desktopSettings_;
+  }
+
+  // FIXME: deprecated in Qt 5 :-(
+  virtual bool x11EventFilter(XEvent* event );
+
+private Q_SLOTS:
+  void desktopSettingsChanged();
+  
 private:
   Fm::LibFmQt libFm;
   bool isPrimaryInstance;
   QTranslator translator;
   QTranslator qtTranslator;
   Settings settings_;
+  Xdg::DesktopSettings desktopSettings_;
 };
 
 }

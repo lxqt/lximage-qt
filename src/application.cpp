@@ -53,9 +53,8 @@ bool Application::init() {
     new ApplicationAdaptor(this);
     dbus.registerObject("/Application", this);
     // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
-    // FIXME: read icon theme name from config (razor-Qt/KDE config, gtkrc, or xsettings?)
-    QIcon::setThemeName("oxygen");
-    Fm::IconTheme::setThemeName("oxygen");
+
+    Fm::IconTheme::setThemeName(desktopSettings_.iconThemeName());
   }
   else {
     // an service of the same name is already registered.
@@ -161,5 +160,16 @@ void Application::newWindow(QStringList files) {
       window->show();
     }
   }
+}
+
+bool Application::x11EventFilter(XEvent* event) {
+  if(desktopSettings_.x11EventFilter(event))
+    return true;
+  return QApplication::x11EventFilter(event);
+}
+
+void Application::desktopSettingsChanged() {
+  qDebug("desktopSettingsChanged");
+  Fm::IconTheme::setThemeName(desktopSettings_.iconThemeName());
 }
 
