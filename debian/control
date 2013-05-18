@@ -5,6 +5,7 @@ Maintainer: Julien Lavergne <gilir@ubuntu.com>
 Build-Depends: debhelper (>= 9~)
  , cmake
  , libqt4-dev
+ , libx11-dev
  , libglib2.0-dev
  , libexif-dev
  , libfm-qt-dev
