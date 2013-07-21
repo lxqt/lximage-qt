@@ -36,23 +36,27 @@ ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(
 }
 
 ScreenshotDialog::~ScreenshotDialog() {
-  qDebug("destroy");
 }
 
 void ScreenshotDialog::done(int r) {
   if(r == QDialog::Accepted) {
     hide();
-    XSync(QX11Info::display(), 0); // make sure we're not visible
     QDialog::done(r);
+    XSync(QX11Info::display(), 0); // is this useful?
 
     int delay = ui.delay->value();
-    if(delay > 0) {
-      QTimer::singleShot(delay * 1000, this, SLOT(doScreenshot()));
+    if(delay == 0) {
+      // NOTE:
+      // Well, we need to give X and the window manager some time to
+      // really hide our own dialog from the screen.
+      // Nobody knows how long it will take, and there is no reliable
+      // way to ensure that. Let's wait for 400 ms here for it.
+      delay = 400;
     }
-    else {
-      // the dialog object will be deleted in doScreenshot().
-      doScreenshot();
-    }
+    else
+      delay *= 1000;
+    // the dialog object will be deleted in doScreenshot().
+    QTimer::singleShot(delay, this, SLOT(doScreenshot()));
   }
   else {
     deleteLater();
@@ -106,7 +110,6 @@ WId ScreenshotDialog::activeWindowId() {
 }
 
 void ScreenshotDialog::doScreenshot() {
-  qDebug("screenshot!");
   WId wid = 0;
   int x = 0, y = 0, width = -1, height = -1;
   wid = QApplication::desktop()->winId(); // get desktop window

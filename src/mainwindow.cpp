@@ -480,8 +480,11 @@ void MainWindow::on_actionCopy_triggered() {
 }
 
 void MainWindow::on_actionPaste_triggered() {
-  // TODO: paste image from clipboard
-  setModified(true);
+  QClipboard *clipboard = QApplication::clipboard();
+  QImage image = clipboard->image();
+  if(!image.isNull()) {
+    pasteImage(image);
+  }
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
