@@ -52,7 +52,9 @@ public:
   QImage image() const {
     return image_;
   }
-  
+
+  void pasteImage(QImage newImage);
+
   FmPath* currentFile() const {
     return currentFile_;
   }

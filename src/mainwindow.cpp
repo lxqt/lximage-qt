@@ -27,6 +27,7 @@
 #include <QClipboard>
 #include <QPainter>
 #include "preferencesdialog.h"
+#include "application.h"
 
 using namespace LxImage;
 
@@ -143,6 +144,29 @@ void MainWindow::openImageFile(QString fileName) {
   fm_path_unref(path);
 }
 
+// paste the specified image into the current view,
+// reset the window, remove loaded folders, and
+// invalidate current file name.
+void MainWindow::pasteImage(QImage newImage) {
+  // cancel loading of current image
+  if(loadJob_) {
+    loadJob_->cancel(); // the job object will be freed automatically later
+    loadJob_ = NULL;
+  }
+  setModified(true);
+
+  currentIndex_ = QModelIndex(); // invaludate current index since we don't have a folder model now
+  if(currentFile_)
+    fm_path_unref(currentFile_);
+  currentFile_ = NULL;
+
+  image_ = newImage;
+  ui.view->setImage(image_);
+  ui.view->zoomOriginal();
+
+  updateUI();
+}
+
 // popup a file dialog and retrieve the selected image file name
 QString MainWindow::openFileName() {
   QString filterStr;
@@ -218,7 +242,13 @@ void MainWindow::on_actionSaveAs_triggered() {
     FmPath* path = fm_path_new_for_str(qPrintable(fileName));
     // save the image file asynchronously
     saveImage(path);
-    fm_path_unref(path);
+
+    if(!currentFile_) { // if we haven't load any file yet
+      currentFile_ = path;
+      loadFolder(fm_path_get_parent(path));
+    }
+    else
+      fm_path_unref(path);
   }
 }
 
@@ -227,6 +257,8 @@ void MainWindow::on_actionClose_triggered() {
 }
 
 void MainWindow::on_actionNext_triggered() {
+  if(proxyModel_->rowCount() <= 1)
+    return;
   if(currentIndex_.isValid()) {
     QModelIndex index;
     if(currentIndex_.row() < proxyModel_->rowCount() - 1)
@@ -243,6 +275,8 @@ void MainWindow::on_actionNext_triggered() {
 }
 
 void MainWindow::on_actionPrevious_triggered() {
+  if(proxyModel_->rowCount() <= 1)
+    return;
   if(currentIndex_.isValid()) {
     QModelIndex index;
     qDebug("current row: %d", currentIndex_.row());
@@ -483,7 +517,8 @@ void MainWindow::on_actionPrint_triggered() {
 }
 
 void MainWindow::on_actionScreenshot_triggered() {
-  // TODO: implement screenshot capturing
+  Application* app = static_cast<Application*>(qApp);
+  app->screenshot();
 }
 
 // TODO: This can later be used for doing slide show

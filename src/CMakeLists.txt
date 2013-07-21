@@ -27,6 +27,7 @@ set(lximage-qt_SRCS
   modelfilter.cpp
   loadimagejob.cpp
   saveimagejob.cpp
+  screenshotdialog.cpp
   settings.cpp
   desktopsettings.cpp
   xsettings/xsettings-client.c
@@ -44,6 +45,7 @@ qt4_add_dbus_adaptor(lximage-qt_SRCS
 set(lximage-qt_UIS
   mainwindow.ui
   preferencedialog.ui
+  screenshotdialog.ui
 )
 
 qt4_wrap_ui(lximage-qt_UI_H

@@ -22,6 +22,7 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 #include "applicationadaptor.h"
+#include "screenshotdialog.h"
 
 using namespace LxImage;
 
@@ -147,19 +148,30 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
   return keepRunning;
 }
 
+MainWindow* Application::createWindow() {
+  LxImage::MainWindow* window;
+  window = new LxImage::MainWindow();
+  return window;
+}
+
 void Application::newWindow(QStringList files) {
   LxImage::MainWindow* window;
   if(files.empty()) {
-    window = new LxImage::MainWindow();
+    window = createWindow();
     window->show();
   }
   else {
     Q_FOREACH(QString fileName, files) {
-      window = new LxImage::MainWindow();
+      window = createWindow();
       window->openImageFile(fileName);
       window->show();
     }
   }
+}
+
+void Application::screenshot() {
+  ScreenshotDialog* dlg = new ScreenshotDialog();
+  dlg->show();
 }
 
 bool Application::x11EventFilter(XEvent* event) {
@@ -172,4 +184,3 @@ void Application::desktopSettingsChanged() {
   qDebug("desktopSettingsChanged");
   Fm::IconTheme::setThemeName(desktopSettings_.iconThemeName());
 }
-

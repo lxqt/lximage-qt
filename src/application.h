@@ -38,6 +38,8 @@ public:
   bool parseCommandLineArgs(int argc, char** argv);
 
   void newWindow(QStringList files = QStringList());
+  MainWindow* createWindow();
+  void screenshot();
 
   Settings& settings() {
     return settings_;
