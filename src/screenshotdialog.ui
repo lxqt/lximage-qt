@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>301</width>
-    <height>241</height>
+    <width>329</width>
+    <height>261</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Screenshot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="camera-photo"/>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <property name="fieldGrowthPolicy">

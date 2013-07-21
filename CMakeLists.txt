@@ -1,6 +1,7 @@
-project(lximage-qt)
 # newer cmake is required for CMAKE_AUTOMOC Qt support
 cmake_minimum_required(VERSION 2.8.6)
+
+project(lximage-qt)
 
 find_package(Qt4 REQUIRED
   QtCore
@@ -28,10 +29,12 @@ find_package(X11 REQUIRED)
 # add src subdirectory
 add_subdirectory(src)
 
-# install a desktop entry file
+# install desktop entry files
 configure_file(data/lximage-qt.desktop.in lximage-qt.desktop @ONLY)
-install(
-  FILES ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
+configure_file(data/lximage-qt-screenshot.desktop.in lximage-qt-screenshot.desktop @ONLY)
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
+  ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop
   DESTINATION share/applications
 )
 
