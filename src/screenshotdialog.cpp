@@ -33,9 +33,14 @@ using namespace LxImage;
 
 ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(parent, f) {
   ui.setupUi(this);
+
+  Application* app = static_cast<Application*>(qApp);
+  app->addWindow();
 }
 
 ScreenshotDialog::~ScreenshotDialog() {
+  Application* app = static_cast<Application*>(qApp);
+  app->removeWindow();  
 }
 
 void ScreenshotDialog::done(int r) {

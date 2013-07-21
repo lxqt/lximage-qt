@@ -41,6 +41,18 @@ public:
   MainWindow* createWindow();
   void screenshot();
 
+  void addWindow() { // call this when you create a new toplevel window
+    ++windowCount_;
+    qDebug("add");
+  }
+
+  void removeWindow() { // call this when you destroy a toplevel window
+    qDebug("remove");
+    --windowCount_;
+    if(0 == windowCount_)
+      quit();
+  }
+
   Settings& settings() {
     return settings_;
   }
@@ -49,6 +61,7 @@ public:
     return desktopSettings_;
   }
 
+ 
   // FIXME: deprecated in Qt 5 :-(
   virtual bool x11EventFilter(XEvent* event );
 
@@ -62,6 +75,7 @@ private:
   QTranslator qtTranslator;
   Settings settings_;
   Xdg::DesktopSettings desktopSettings_;
+  int windowCount_;
 };
 
 }

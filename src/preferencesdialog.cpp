@@ -30,10 +30,12 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();
 
+  app->addWindow();
 }
 
 PreferencesDialog::~PreferencesDialog() {
-
+  Application* app = static_cast<Application*>(qApp);
+  app->removeWindow();
 }
 
 void PreferencesDialog::accept() {

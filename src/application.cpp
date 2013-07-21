@@ -31,6 +31,7 @@ static const char* ifaceName = "org.lxde.LxImage.Application";
 
 Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
+  windowCount_(0),
   libFm() {
 }
 
@@ -51,6 +52,8 @@ bool Application::init() {
   if(dbus.registerService(serviceName)) {
     // we successfully registered the service
     isPrimaryInstance = true;
+    setQuitOnLastWindowClosed(false); // do not quit even when there're no windows
+    
     new ApplicationAdaptor(this);
     dbus.registerObject("/Application", this);
     // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
@@ -91,6 +94,7 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
   // The only drawback is the translated string returned by tr() is
   // a temporary one. We need to store them in a list to keep them alive. :-(
   char** file_names = NULL;
+  gboolean screenshotTool = FALSE;
 
   { // this block is required to limit the scope of FakeTr object so it don't affect
     // other normal QObject::tr() outside the block.
@@ -98,6 +102,7 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
     // it convert the translated strings to UTF8 and add them to a list to
     // keep them alive during the option parsing process.
     GOptionEntry option_entries[] = {
+      {"screenshot", 0, 0, G_OPTION_ARG_NONE, &screenshotTool, tr("Take a screenshot"), NULL},
       {G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_FILENAME_ARRAY, &file_names, NULL, tr("[FILE1, FILE2,...]")},
       { NULL }
     };
@@ -115,7 +120,7 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
     }
     g_option_context_free(context);
   }
-
+  
   // handle files to open
   QStringList paths;
   if(file_names) {
@@ -134,14 +139,23 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
   if(isPrimaryInstance) {
     settings_.load();
     keepRunning = true;
-    newWindow(paths);
+
+    if(screenshotTool) {
+      screenshot();
+    }
+    else {
+      newWindow(paths);
+    }
   }
   else {
     // we're not the primary instance.
     // call the primary instance via dbus to do operations
     QDBusConnection dbus = QDBusConnection::sessionBus();
     QDBusInterface iface(serviceName, "/Application", ifaceName, dbus, this);
-    iface.call("newWindow", paths);
+    if(screenshotTool)
+      iface.call("screenshot");
+    else
+      iface.call("newWindow", paths);
   }
   // cleanup
   g_strfreev(file_names);

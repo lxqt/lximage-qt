@@ -46,6 +46,11 @@ MainWindow::MainWindow():
   contextMenu_(new QMenu(this)),
   image_() {
 
+  setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
+
+  Application* app = static_cast<Application*>(qApp);
+  app->addWindow();
+
   ui.setupUi(this);
   proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
@@ -91,6 +96,9 @@ MainWindow::~MainWindow() {
   delete folderModel_;
   delete proxyModel_;
   delete modelFilter_;
+
+  Application* app = static_cast<Application*>(qApp);
+  app->removeWindow();
 }
 
 void MainWindow::on_actionAbout_triggered() {
