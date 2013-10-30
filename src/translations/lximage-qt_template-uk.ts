@@ -5,12 +5,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Зробити знімок</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="106"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"/>
+        <translation>[ФАЙЛ1, ФАЙЛ2,...]</translation>
     </message>
 </context>
 <context>
