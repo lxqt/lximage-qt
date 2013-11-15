@@ -223,7 +223,7 @@
     </iconset>
    </property>
    <property name="text">
-    <string>Zoomo &amp;Out</string>
+    <string>Zoom &amp;Out</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+-</string>
