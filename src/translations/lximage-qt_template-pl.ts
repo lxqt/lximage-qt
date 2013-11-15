@@ -5,12 +5,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Wykonaj zrzut ekranu</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="106"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"/>
+        <translation>[PLIK1, PLIK2,...]</translation>
     </message>
 </context>
 <context>
@@ -18,7 +18,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="105"/>
         <source>About</source>
-        <translation type="unfinished"/>
+        <translation>O programie</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="106"/>
@@ -29,43 +29,49 @@ LXDE Project: http://lxde.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"/>
+        <translation>LXImage - prosta i szybka przeglądarka obrazów
+
+Prawa autorskie (C) 2013
+Projekt LXDE: http://lxde.org/
+
+Autorzy:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="194"/>
         <source>Open File</source>
-        <translation type="unfinished"/>
+        <translation>Otwórz plik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="195"/>
         <location filename="../mainwindow.cpp" line="216"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"/>
+        <translation>Pliki obrazów (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="216"/>
         <source>Save File</source>
-        <translation type="unfinished"/>
+        <translation>Zapisz plik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"/>
+        <translation>%1 (Wczytywanie...) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="400"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"/>
+        <translation>%1 (Błąd wczytywania) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="404"/>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"/>
+        <translation>%1 (%2x%3) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="414"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"/>
+        <translation>Przeglądarka obrazów</translation>
     </message>
 </context>
 <context>
@@ -73,234 +79,234 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="366"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"/>
+        <translation>Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="367"/>
         <source>&amp;About</source>
-        <translation type="unfinished"/>
+        <translation>&amp;O programie</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="368"/>
         <source>&amp;Open File</source>
-        <translation type="unfinished"/>
+        <translation>O&amp;twórz plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="369"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="370"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Zapisz</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="371"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="372"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"/>
+        <translation>Z&amp;apisz jako</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="373"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="374"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Zamknij</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="375"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="376"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"/>
+        <translation>Po&amp;większ</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="377"/>
         <source>Ctrl++</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="378"/>
         <source>Zoomo &amp;Out</source>
-        <translation type="unfinished"/>
+        <translation>Po&amp;mniejsz</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="379"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="380"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Kopiuj do schowka</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="381"/>
         <location filename="../../build/src/ui_mainwindow.h" line="383"/>
         <source>Next File</source>
-        <translation type="unfinished"/>
+        <translation>Następny plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="385"/>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>W prawo</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="386"/>
         <location filename="../../build/src/ui_mainwindow.h" line="388"/>
         <source>Previous File</source>
-        <translation type="unfinished"/>
+        <translation>Poprzedni plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="390"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>W lewo</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="391"/>
         <source>Original Size</source>
-        <translation type="unfinished"/>
+        <translation>Rozmiar oryginalny</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="392"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"/>
+        <translation>Dopa&amp;sowanie</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="393"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"/>
+        <translation>Obróć &amp;zgodnie z ruchem wskazówek zegara</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="394"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"/>
+        <translation>Ob&amp;róć przeciwnie do ruchu wskazówek zegara</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="395"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"/>
+        <translation>Pre&amp;ferencje</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="396"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Drukuj</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="397"/>
         <source>First File</source>
-        <translation type="unfinished"/>
+        <translation>Pierwszy plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="398"/>
         <source>Home</source>
-        <translation type="unfinished"/>
+        <translation>Początek</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="399"/>
         <source>Last File</source>
-        <translation type="unfinished"/>
+        <translation>Ostatni plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="400"/>
         <source>End</source>
-        <translation type="unfinished"/>
+        <translation>Koniec</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="401"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Nowe okno</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="402"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="403"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Od&amp;bij w poziomie</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="404"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Przechwyć zrzut ekranu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="405"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Pełny ekran</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="406"/>
         <source>F11</source>
-        <translation type="unfinished"/>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="407"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"/>
+        <translation>Odbi&amp;j w pionie</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="408"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Wklej ze schowka</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="409"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"/>
+        <translation>Pokaz s&amp;lajdów</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="410"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Usuń</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="411"/>
         <source>Del</source>
-        <translation type="unfinished"/>
+        <translation>Usuń</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="412"/>
         <source>&amp;File</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Plik</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="413"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"/>
+        <translation>Pomo&amp;c</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="414"/>
         <source>Go</source>
-        <translation type="unfinished"/>
+        <translation>Przejdź</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="415"/>
         <source>&amp;View</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Widok</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="416"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Edycja</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="417"/>
         <source>toolBar</source>
-        <translation type="unfinished"/>
+        <translation>Pasek narzędzi</translation>
     </message>
 </context>
 <context>
@@ -308,22 +314,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="80"/>
         <source>Preferences</source>
-        <translation type="unfinished"/>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="81"/>
         <source>TODO: Add configuration options here</source>
-        <translation type="unfinished"/>
+        <translation>Do zrobienia: Dodać tutaj opcje konfiguracyjne</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="82"/>
         <source>Tab 1</source>
-        <translation type="unfinished"/>
+        <translation>Karta 1</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="83"/>
         <source>Tab 2</source>
-        <translation type="unfinished"/>
+        <translation>Karta 2</translation>
     </message>
 </context>
 <context>
@@ -331,47 +337,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="119"/>
         <source>Screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Zrzut ekranu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="120"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Wykonaj zrzut ekranu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="121"/>
         <source>Region</source>
-        <translation type="unfinished"/>
+        <translation>Obszar</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="122"/>
         <source>Whole screen</source>
-        <translation type="unfinished"/>
+        <translation>Cały ekran</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="123"/>
         <source>Current window only</source>
-        <translation type="unfinished"/>
+        <translation>Tylko bieżące okno</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="124"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"/>
+        <translation>Dołącz kursor myszy</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="125"/>
         <source> seconds</source>
-        <translation type="unfinished"/>
+        <translation> sekund</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="126"/>
         <source>Delay:</source>
-        <translation type="unfinished"/>
+        <translation>Opóźnienie:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="127"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"/>
+        <translation>Dołącz tytuł okna i obramowanie</translation>
     </message>
 </context>
 </TS>
