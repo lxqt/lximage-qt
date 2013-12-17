@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="zh_TW">
 <context>
@@ -95,7 +94,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="369"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="370"/>
@@ -105,7 +104,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="371"/>
         <source>Ctrl+S</source>
-        <translation></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="372"/>
@@ -115,7 +114,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="373"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="374"/>
@@ -125,7 +124,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="375"/>
         <source>Ctrl+W</source>
-        <translation></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="376"/>
@@ -135,7 +134,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="377"/>
         <source>Ctrl++</source>
-        <translation></translation>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="378"/>
@@ -145,7 +144,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="379"/>
         <source>Ctrl+-</source>
-        <translation></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="380"/>
@@ -161,7 +160,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="385"/>
         <source>Right</source>
-        <translation></translation>
+        <translation>右</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="386"/>
@@ -172,7 +171,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="390"/>
         <source>Left</source>
-        <translation></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="391"/>
@@ -212,7 +211,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="398"/>
         <source>Home</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="399"/>
@@ -222,7 +221,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="400"/>
         <source>End</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="401"/>
@@ -232,7 +231,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="402"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="403"/>
@@ -252,7 +251,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="406"/>
         <source>F11</source>
-        <translation></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="407"/>
@@ -277,7 +276,7 @@ Authors:
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="411"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="412"/>
@@ -320,17 +319,17 @@ Authors:
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="81"/>
         <source>TODO: Add configuration options here</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="82"/>
         <source>Tab 1</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="83"/>
         <source>Tab 2</source>
-        <translation></translation>
+        <translation/>
     </message>
 </context>
 <context>
