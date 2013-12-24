@@ -176,7 +176,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="391"/>
         <source>Original Size</source>
-        <translation type="unfinished"/>
+        <translation>Izvorna veličina</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="392"/>
@@ -186,62 +186,62 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="393"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Rotiraj u smjeru kazaljke na satu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="394"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"/>
+        <translation>Rotiraj &amp;obrnuto od smjera kazaljke na satu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="395"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"/>
+        <translation>O&amp;sobitosti</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="396"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Ispis</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="397"/>
         <source>First File</source>
-        <translation type="unfinished"/>
+        <translation>Prva datoteka</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="398"/>
         <source>Home</source>
-        <translation type="unfinished"/>
+        <translation>Osobna mapa</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="399"/>
         <source>Last File</source>
-        <translation type="unfinished"/>
+        <translation>Zadnja datoteka</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="400"/>
         <source>End</source>
-        <translation type="unfinished"/>
+        <translation>Kraj</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="401"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Novi prozor</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="402"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="403"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Obrni &amp;vodoravno</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="404"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"/>
+        <translation>Uhvati sliku zaslona</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="405"/>
@@ -256,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="407"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"/>
+        <translation>Obrni &amp;okomito</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="408"/>
@@ -319,7 +319,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="81"/>
         <source>TODO: Add configuration options here</source>
-        <translation type="unfinished"/>
+        <translation>TODO: Dodaj konfiguracijske opcije ovdje</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencedialog.h" line="82"/>
