@@ -52,9 +52,27 @@ qt4_wrap_ui(lximage-qt_UI_H
   ${lximage-qt_UIS}
 )
 
+# add translation for lximage-qt
+# See http://www.cmake.org/Wiki/CMake:How_To_Build_Qt4_Software
+file(GLOB TS_FILES translations/*.ts)
+option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts files")
+if (UPDATE_TRANSLATIONS)
+  qt4_create_translation(QM_FILES
+    ${lximage-qt_SRCS}
+    ${lximage-qt_UI_H}
+    ${TS_FILES})
+else (UPDATE_TRANSLATIONS)
+  qt4_add_translation(QM_FILES ${TS_FILES})
+endif (UPDATE_TRANSLATIONS)
+add_custom_target (lximage-qt_translations DEPENDS ${QM_FILES})
+install(FILES ${QM_FILES} DESTINATION share/lximage-qt/translations)
+# prevent the generated files from being deleted during make clean
+set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM true)
+
 add_executable(lximage-qt
   ${lximage-qt_SRCS}
   ${lximage-qt_UI_H}
+  ${QM_FILES}
 )
 
 add_definitions(
@@ -73,19 +91,3 @@ target_link_libraries(lximage-qt
 )
 
 install(TARGETS lximage-qt RUNTIME DESTINATION bin)
-
-# add translation for lximage-qt
-# See http://www.cmake.org/Wiki/CMake:How_To_Build_Qt4_Software
-file(GLOB TS_FILES translations/*.ts)
-qt4_create_translation(QM_FILES
-  ${lximage-qt_SRCS}
-  ${lximage-qt_UI_H}
-  ${TS_FILES})
-qt4_add_translation(QM_FILES ${TS_FILES})
-add_custom_target (lximage-qt_translations DEPENDS ${QM_FILES})
-install(FILES ${QM_FILES} DESTINATION share/lximage-qt/translations)
-
-# prevent the generated files from being deleted during make clean
-set_directory_properties(PROPERTIES
-  CLEAN_NO_CUSTOM true
-)

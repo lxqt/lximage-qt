@@ -45,11 +45,6 @@ install(
   DESTINATION share/icons/hicolor/48x48/apps
 )
 
-# update translations
-add_custom_target(update_translations ALL DEPENDS
-  lximage-qt_translations
-)
-
 # building tarball with CPack -------------------------------------------------
 # To create a source distribution, type:
 # make package_source
