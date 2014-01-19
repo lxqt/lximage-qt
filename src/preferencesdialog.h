@@ -26,6 +26,8 @@
 
 namespace LxImage {
 
+class Settings;
+
 class PreferencesDialog : public QDialog {
   Q_OBJECT
 public:
@@ -33,6 +35,10 @@ public:
   virtual ~PreferencesDialog();
   
   virtual void accept();
+
+private:
+  void initIconThemes(Settings& settings);
+
 private:
   Ui::PreferencesDialog ui;
 };

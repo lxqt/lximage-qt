@@ -32,14 +32,29 @@ public:
 
   Settings();
   ~Settings();
+
   bool load();
   bool save();
 
+  bool useFallbackIconTheme() const {
+    return useFallbackIconTheme_;
+  };
+
+  QString fallbackIconTheme() {
+    return fallbackIconTheme_;
+  }
+  void setFallbackIconTheme(QString value) {
+    fallbackIconTheme_ = value;
+  }
+
+private:
+  bool useFallbackIconTheme_;
   QColor bgColor_;
   QColor fullScreenBgColor_;
   bool showThumbnails_;
   bool showSidePane_;
   int slideShowInterval_;
+  QString fallbackIconTheme_;
 };
 
 }

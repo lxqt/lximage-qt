@@ -19,28 +19,36 @@
 
 
 #include "settings.h"
+#include <QSettings>
+#include <QIcon>
 
 using namespace LxImage;
 
 Settings::Settings():
+  useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == "hicolor"),
   bgColor_(255, 255, 255),
   showThumbnails_(false),
   showSidePane_(false),
   fullScreenBgColor_(0, 0, 0),
+  fallbackIconTheme_("oxygen"),
   slideShowInterval_(5) {
 }
 
 Settings::~Settings() {
-
 }
 
 bool Settings::load() {
+  QSettings settings("lximage-qt", "settings");
+  fallbackIconTheme_ = settings.value("fallbackIconTheme", fallbackIconTheme_).toString();
+  bgColor_ = settings.value("bgColor", bgColor_).value<QColor>();
   return true;
 }
 
 bool Settings::save() {
+  QSettings settings("lximage-qt", "settings");
+  settings.setValue("fallbackIconTheme", fallbackIconTheme_);
+  settings.setValue("bgColor", bgColor_);
   return true;
 }
-
 
 

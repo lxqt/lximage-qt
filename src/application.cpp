@@ -50,6 +50,7 @@ bool Application::init() {
   // initialize dbus
   QDBusConnection dbus = QDBusConnection::sessionBus();
   if(dbus.registerService(serviceName)) {
+    settings_.load(); // load settings
     // we successfully registered the service
     isPrimaryInstance = true;
     setQuitOnLastWindowClosed(false); // do not quit even when there're no windows
@@ -58,7 +59,8 @@ bool Application::init() {
     dbus.registerObject("/Application", this);
     // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
 
-    Fm::IconTheme::setThemeName(desktopSettings_.iconThemeName());
+    if(settings_.useFallbackIconTheme())
+      QIcon::setThemeName(settings_.fallbackIconTheme());
   }
   else {
     // an service of the same name is already registered.
@@ -186,15 +188,4 @@ void Application::newWindow(QStringList files) {
 void Application::screenshot() {
   ScreenshotDialog* dlg = new ScreenshotDialog();
   dlg->show();
-}
-
-bool Application::x11EventFilter(XEvent* event) {
-  if(desktopSettings_.x11EventFilter(event))
-    return true;
-  return QApplication::x11EventFilter(event);
-}
-
-void Application::desktopSettingsChanged() {
-  qDebug("desktopSettingsChanged");
-  Fm::IconTheme::setThemeName(desktopSettings_.iconThemeName());
 }

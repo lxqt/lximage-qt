@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="id">
 <context>
@@ -77,257 +78,267 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="366"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="365"/>
         <source>Image Viewer</source>
         <translation>Penampil Gambar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="367"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="366"/>
         <source>&amp;About</source>
         <translation>Tent&amp;ang</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="368"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="367"/>
         <source>&amp;Open File</source>
         <translation>&amp;Buka Berkas</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="369"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="368"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="370"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="369"/>
         <source>&amp;Save</source>
         <translation>&amp;Simpan</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="371"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="370"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="372"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="371"/>
         <source>Save &amp;As</source>
         <translation>Simpan Seb&amp;agai</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="373"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="372"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="374"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="373"/>
         <source>&amp;Close</source>
         <translation>&amp;Tutup</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="375"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="374"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="376"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="375"/>
         <source>Zoom &amp;In</source>
         <translation>Per&amp;besar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="377"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="376"/>
         <source>Ctrl++</source>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="378"/>
         <source>Zoomo &amp;Out</source>
-        <translation>Per&amp;kecil</translation>
+        <translation type="obsolete">Per&amp;kecil</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="379"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="377"/>
+        <source>Zoom &amp;Out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../build/src/ui_mainwindow.h" line="378"/>
         <source>Ctrl+-</source>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="380"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="379"/>
         <source>&amp;Copy to Clipboard</source>
         <translation>&amp;Salin ke Papan Klip</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="381"/>
-        <location filename="../../build/src/ui_mainwindow.h" line="383"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="380"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="382"/>
         <source>Next File</source>
         <translation>Berkas Selanjutnya</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="385"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="384"/>
         <source>Right</source>
         <translation>Kanan</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="386"/>
-        <location filename="../../build/src/ui_mainwindow.h" line="388"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="385"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="387"/>
         <source>Previous File</source>
         <translation>Berkas Sebelumnya</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="390"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="389"/>
         <source>Left</source>
         <translation>Kiri</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="391"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="390"/>
         <source>Original Size</source>
         <translation>Ukuran Asli</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="392"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="391"/>
         <source>&amp;Fit</source>
         <translation>&amp;Pas</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="393"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="392"/>
         <source>&amp;Rotate Clockwise</source>
         <translation>Puta&amp;r Searah Jarum Jam</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="394"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="393"/>
         <source>Rotate &amp;Counterclockwise</source>
         <translation>Putar Ber&amp;lawanan Jarum Jam</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="395"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="394"/>
         <source>P&amp;references</source>
         <translation>P&amp;referensi</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="396"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="395"/>
         <source>&amp;Print</source>
         <translation>&amp;Cetak</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="397"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="396"/>
         <source>First File</source>
         <translation>Berkas Pertama</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="398"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="397"/>
         <source>Home</source>
+        <translatorcomment>asumsi: nama tombol</translatorcomment>
         <translation>Home</translation>
-    <translatorcomment>asumsi: nama tombol</translatorcomment></message>
+    </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="399"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="398"/>
         <source>Last File</source>
         <translation>Berkas Terakhir</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="400"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="399"/>
         <source>End</source>
+        <translatorcomment>asumsi: nama tombol</translatorcomment>
         <translation>End</translation>
-    <translatorcomment>asumsi: nama tombol</translatorcomment></message>
+    </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="401"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="400"/>
         <source>&amp;New Window</source>
         <translation>Je&amp;ndela Baru</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="402"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="401"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="403"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="402"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Balikkan Arah &amp;Horisontal</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="404"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="403"/>
         <source>Capture Screenshot</source>
         <translation>Ambil Cuplikan Layar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="405"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="404"/>
         <source>F&amp;ull Screen</source>
         <translation>Layar Pen&amp;uh</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="406"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="405"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="407"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="406"/>
         <source>Flip &amp;Vertically</source>
         <translation>Balikkan Arah &amp;Vertikal</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="408"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="407"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>Tem&amp;pel dari Papan Klip</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="409"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="408"/>
         <source>&amp;Slide Show</source>
         <translation>Pertunjukan &amp;Salindia</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="410"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="409"/>
         <source>&amp;Delete</source>
         <translation>&amp;Hapus</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="411"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="410"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="412"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="411"/>
         <source>&amp;File</source>
         <translation>&amp;Berkas</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="413"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="412"/>
         <source>&amp;Help</source>
         <translation>B&amp;antuan</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="414"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="413"/>
         <source>Go</source>
         <translation>Pergi</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="415"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="414"/>
         <source>&amp;View</source>
         <translation>&amp;Lihat</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="416"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="415"/>
         <source>&amp;Edit</source>
         <translation>&amp;Sunting</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="417"/>
+        <location filename="../../build/src/ui_mainwindow.h" line="416"/>
+        <source>Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>toolBar</source>
-        <translation>Bilah Alat</translation>
+        <translation type="obsolete">Bilah Alat</translation>
     </message>
 </context>
 <context>
     <name>PreferencesDialog</name>
     <message>
-        <location filename="../../build/src/ui_preferencedialog.h" line="80"/>
+        <location filename="../../build/src/ui_preferencedialog.h" line="79"/>
         <source>Preferences</source>
         <translation>Preferensi</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencedialog.h" line="81"/>
+        <location filename="../../build/src/ui_preferencedialog.h" line="80"/>
         <source>TODO: Add configuration options here</source>
         <translation>TODO: Tambahkan opsi konfigurasi di sini</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencedialog.h" line="82"/>
+        <location filename="../../build/src/ui_preferencedialog.h" line="81"/>
         <source>Tab 1</source>
         <translation>Tab 1</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencedialog.h" line="83"/>
+        <location filename="../../build/src/ui_preferencedialog.h" line="82"/>
         <source>Tab 2</source>
         <translation>Tab 2</translation>
     </message>
@@ -335,47 +346,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
 <context>
     <name>ScreenshotDialog</name>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="119"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="118"/>
         <source>Screenshot</source>
         <translation>Cuplikan layar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="120"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="119"/>
         <source>Take a screenshot</source>
         <translation>Ambil cuplikan layar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="121"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="120"/>
         <source>Region</source>
         <translation>Wilayah</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="122"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="121"/>
         <source>Whole screen</source>
         <translation>Seluruh layar</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="123"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="122"/>
         <source>Current window only</source>
         <translation>Hanya jendela saat ini</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="124"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="123"/>
         <source>Include mouse cursor</source>
         <translation>Sertakan kursor tetikus</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="125"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="124"/>
         <source> seconds</source>
         <translation> detik</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="126"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="125"/>
         <source>Delay:</source>
         <translation>Tundaan:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_screenshotdialog.h" line="127"/>
+        <location filename="../../build/src/ui_screenshotdialog.h" line="126"/>
         <source>Include window title and frame</source>
         <translation>Sertakan rangka dan judul jendela</translation>
     </message>

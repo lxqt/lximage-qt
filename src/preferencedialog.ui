@@ -16,12 +16,25 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="iconThemeLabel">
+         <property name="text">
+          <string>Icon theme:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="iconTheme"/>
+       </item>
+       <item row="1" column="0" colspan="2">
         <widget class="QLabel" name="label">
          <property name="text">
           <string>TODO: Add configuration options here</string>

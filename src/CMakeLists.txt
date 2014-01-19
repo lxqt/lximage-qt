@@ -29,9 +29,6 @@ set(lximage-qt_SRCS
   saveimagejob.cpp
   screenshotdialog.cpp
   settings.cpp
-  desktopsettings.cpp
-  xsettings/xsettings-client.c
-  xsettings/xsettings-common.c
 )
 
 qt4_add_dbus_adaptor(lximage-qt_SRCS
