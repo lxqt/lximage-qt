@@ -1,6 +1,6 @@
 /*
     <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) 2013  <copyright holder> <email>
+    Copyright (C) 2013 - 2014  Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,6 +26,9 @@
 #include <QImageWriter>
 #include <QClipboard>
 #include <QPainter>
+#include <QPrintDialog>
+#include <QPrinter>
+#include <QDebug>
 #include "preferencesdialog.h"
 #include "application.h"
 
@@ -524,7 +527,28 @@ void MainWindow::on_actionPreferences_triggered() {
 }
 
 void MainWindow::on_actionPrint_triggered() {
-  // TODO: implement printing support
+  // QPrinter printer(QPrinter::HighResolution);
+  QPrinter printer;
+  QPrintDialog dlg(&printer);
+  if(dlg.exec() == QDialog::Accepted) {
+    QPainter painter;
+    painter.begin(&printer);
+    QRect pageRect = printer.pageRect();
+    int cols = (image_.width() / pageRect.width()) + (image_.width() % pageRect.width() ? 1 : 0);
+    int rows = (image_.height() / pageRect.height()) + (image_.height() % pageRect.height() ? 1 : 0);
+    // qDebug() << "page:" << printer.pageRect() << "image:" << image_.size() << "cols, rows:" << cols << rows;
+    for(int row = 0; row < rows; ++row) {
+      for(int col = 0; col < cols; ++col) {
+        QRect srcRect(pageRect.width() * col, pageRect.height() * row, pageRect.width(), pageRect.height());
+        // qDebug() << "row:" << row << "col:" << col << "src:" << srcRect << "page:" << printer.pageRect();
+        painter.drawImage(QPoint(0, 0), image_, srcRect);
+        if(col + 1 == cols && row + 1 == rows) // this is the last page
+          break;
+        printer.newPage();
+      }
+    }
+    painter.end();
+  }
 }
 
 void MainWindow::on_actionScreenshot_triggered() {

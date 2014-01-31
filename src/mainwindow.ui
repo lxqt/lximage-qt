@@ -47,7 +47,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -312,9 +312,6 @@
    </property>
   </action>
   <action name="actionPrint">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
    <property name="text">
     <string>&amp;Print</string>
    </property>
