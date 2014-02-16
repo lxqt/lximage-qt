@@ -22,12 +22,14 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QImage>
+#include <QPainter>
 #include "application.h"
 #include <QDesktopWidget>
 
 #include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
+#include <X11/extensions/Xfixes.h>
 
 using namespace LxImage;
 
@@ -36,6 +38,11 @@ ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(
 
   Application* app = static_cast<Application*>(qApp);
   app->addWindow();
+
+  int event_base, error_base;
+  hasXfixes_ = XFixesQueryExtension(QX11Info::display(), &event_base, &error_base) ? true : false;
+  if(!hasXfixes_)
+    ui.includeCursor->hide();
 }
 
 ScreenshotDialog::~ScreenshotDialog() {
@@ -136,6 +143,35 @@ void ScreenshotDialog::doScreenshot() {
   QPixmap pixmap;
   pixmap = QPixmap::grabWindow(wid, x, y, width, height);
   QImage image = pixmap.toImage();
+
+  if(hasXfixes_ && ui.includeCursor->isChecked()) {
+    // capture the cursor if needed
+    XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
+    if(cursor) {
+      if(cursor->pixels) { // pixles should be an ARGB array
+        QImage cursorImage;
+        quint32* buf = NULL;
+        if(sizeof(long) == 4) {
+          // FIXME: will we encounter byte-order problems here?
+          cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
+        }
+        else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
+          long len = cursor->width * cursor->height;
+          quint32* buf = new quint32[len];
+          for(long i = 0; i < len; ++i)
+            buf[i] = (quint32)cursor->pixels[i];
+          cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32);
+        }
+        // paint the cursor on the current image
+        QPainter painter(&image);
+        painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
+        if(buf)
+          delete []buf;
+      }
+      XFree(cursor);
+    }
+  }
+
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = app->createWindow();
   window->pasteImage(image);

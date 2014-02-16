@@ -43,6 +43,7 @@ private Q_SLOTS:
 
 private:
   Ui::ScreenshotDialog ui;
+  bool hasXfixes_;
 };
 
 }

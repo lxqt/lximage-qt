@@ -8,6 +8,7 @@ include_directories(
   ${EXIF_INCLUDE_DIRS}
   ${LIBFM_QT_INCLUDE_DIRS}
   ${X11_INCLUDE_DIR}
+  ${XFIXES_INCLUDE_DIRS}
 )
 
 set(CMAKE_AUTOMOC TRUE)
@@ -85,6 +86,7 @@ target_link_libraries(lximage-qt
   ${EXIF_LIBRARIES}
   ${LIBFM_QT_LIBRARIES}
   ${X11_LIBRARIES}
+  ${XFIXES_LIBRARIES}
 )
 
 install(TARGETS lximage-qt RUNTIME DESTINATION bin)

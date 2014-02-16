@@ -14,8 +14,9 @@ pkg_check_modules(GLIB REQUIRED
   glib-2.0
 )
 
+# FIXME: we'll need this to provide detail info for photos in the future
 pkg_check_modules(EXIF REQUIRED
-  libexif
+ libexif
 )
 
 pkg_check_modules(LIBFM_QT REQUIRED
@@ -23,8 +24,14 @@ pkg_check_modules(LIBFM_QT REQUIRED
   libfm>=1.2
 )
 
-# for xsettings support
+# TODO: make the X11 stuff optional.
+# for screenshot support
 find_package(X11 REQUIRED)
+
+# Xfixes is needed to capture the mouse cursor image
+pkg_check_modules(XFIXES REQUIRED
+  xfixes
+)
 
 # add src subdirectory
 add_subdirectory(src)

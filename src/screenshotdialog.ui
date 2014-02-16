@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>329</width>
+    <width>348</width>
     <height>261</height>
    </rect>
   </property>
@@ -14,7 +14,9 @@
    <string>Screenshot</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="camera-photo"/>
+   <iconset theme="camera-photo">
+    <normaloff/>
+   </iconset>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <property name="fieldGrowthPolicy">
@@ -55,9 +57,6 @@
    </item>
    <item row="3" column="0" colspan="2">
     <widget class="QCheckBox" name="includeCursor">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="text">
       <string>Include mouse cursor</string>
      </property>
