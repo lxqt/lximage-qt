@@ -64,6 +64,14 @@ void ImageView::resizeEvent(QResizeEvent* event) {
 }
 
 void ImageView::zoomFit() {
+  if(!image_.isNull()) {
+    // if the image is smaller than our view, use its original size
+    // instead of scaling it up.
+    if(image_.width() <= width() && image_.height() <= height()) {
+      zoomOriginal();
+      return;
+    }
+  }
   fitInView(scene_->sceneRect(), Qt::KeepAspectRatio);
   scaleFactor_ = transform().m11();
 }
