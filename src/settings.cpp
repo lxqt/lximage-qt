@@ -41,6 +41,10 @@ bool Settings::load() {
   QSettings settings("lximage-qt", "settings");
   fallbackIconTheme_ = settings.value("fallbackIconTheme", fallbackIconTheme_).toString();
   bgColor_ = settings.value("bgColor", bgColor_).value<QColor>();
+  fullScreenBgColor_ = settings.value("fullScreenBgColor", fullScreenBgColor_).value<QColor>();
+  // showThumbnails_;
+  // showSidePane_;
+  int slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
   return true;
 }
 
@@ -48,6 +52,8 @@ bool Settings::save() {
   QSettings settings("lximage-qt", "settings");
   settings.setValue("fallbackIconTheme", fallbackIconTheme_);
   settings.setValue("bgColor", bgColor_);
+  settings.setValue("fullScreenBgColor", fullScreenBgColor_);
+  settings.setValue("slideShowInterval", slideShowInterval_);
   return true;
 }
 

@@ -47,6 +47,26 @@ public:
     fallbackIconTheme_ = value;
   }
 
+  QColor bgColor() {
+    return bgColor_;
+  }
+
+  QColor fullScreenBgColor() {
+    return fullScreenBgColor_;
+  }
+
+  bool showThumbnails() {
+    return showThumbnails_;
+  }
+
+  bool showSidePane() {
+    return showSidePane_;
+  }
+
+  int slideShowInterval() {
+    return slideShowInterval_;
+  }
+
 private:
   bool useFallbackIconTheme_;
   QColor bgColor_;

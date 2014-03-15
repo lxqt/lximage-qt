@@ -36,6 +36,8 @@
 #include "loadimagejob.h"
 #include "saveimagejob.h"
 
+class QTimer;
+
 namespace LxImage {
 
 class MainWindow : public QMainWindow {
@@ -90,7 +92,8 @@ private Q_SLOTS:
   void on_actionPaste_triggered();
   void on_actionPreferences_triggered();
 
-  void on_actionFullScreen_triggered();
+  void on_actionFullScreen_triggered(bool checked);
+  void on_actionSlideShow_triggered(bool checked);
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();
@@ -116,6 +119,7 @@ private:
 private:
   Ui::MainWindow ui;
   QMenu* contextMenu_;
+  QTimer* slideShowTimer_;
 
   QImage image_; // the image currently shown
   FmPath* currentFile_; // path to current image file

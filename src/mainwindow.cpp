@@ -30,6 +30,7 @@
 #include <QPrinter>
 #include <QDebug>
 #include <QWheelEvent>
+#include <QTimer>
 #include "preferencesdialog.h"
 #include "application.h"
 
@@ -38,6 +39,7 @@ using namespace LxImage;
 MainWindow::MainWindow():
   QMainWindow(),
   currentFile_(NULL),
+  slideShowTimer_(NULL),
   // currentFileInfo_(NULL),
   loadJob_(NULL),
   saveJob_(NULL),
@@ -85,6 +87,9 @@ MainWindow::MainWindow():
 }
 
 MainWindow::~MainWindow() {
+  if(slideShowTimer_)
+    delete slideShowTimer_;
+
   if(loadJob_) {
     loadJob_->cancel();
     // we don't need to do delete here. It will be done automatically
@@ -580,11 +585,30 @@ void MainWindow::on_actionScreenshot_triggered() {
 }
 
 // TODO: This can later be used for doing slide show
-void MainWindow::on_actionFullScreen_triggered() {
-  if(isFullScreen())
-    showNormal();
-  else
+void MainWindow::on_actionFullScreen_triggered(bool checked) {
+  if(checked)
     showFullScreen();
+  else
+    showNormal();
+}
+
+void MainWindow::on_actionSlideShow_triggered(bool checked) {
+  if(checked) {
+    if(!slideShowTimer_) {
+      slideShowTimer_ = new QTimer();
+      // switch to the next image when timeout
+      connect(slideShowTimer_, SIGNAL(timeout()), SLOT(on_actionNext_triggered()));
+    }
+    Application* app = static_cast<Application*>(qApp);
+    slideShowTimer_->start(app->settings().slideShowInterval() * 1000);
+    // showFullScreen();
+  }
+  else {
+    if(slideShowTimer_) {
+      delete slideShowTimer_;
+      slideShowTimer_ = NULL;
+    }
+  }
 }
 
 void MainWindow::changeEvent(QEvent* event) {

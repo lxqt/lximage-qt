@@ -47,7 +47,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>19</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -366,6 +366,9 @@
    </property>
   </action>
   <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>F&amp;ull Screen</string>
    </property>
@@ -384,8 +387,8 @@
    </property>
   </action>
   <action name="actionSlideShow">
-   <property name="enabled">
-    <bool>false</bool>
+   <property name="checkable">
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>&amp;Slide Show</string>
