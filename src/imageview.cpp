@@ -40,11 +40,7 @@ ImageView::~ImageView() {
 
 
 void ImageView::wheelEvent(QWheelEvent* event) {
-  // Block the default handler of QGraphicsView
-  // QGraphicsView::wheelEvent(event);
-
   int delta = event->delta();
-  
   // Ctrl key is pressed
   if(event->modifiers() & Qt::ControlModifier) {
     if(delta > 0) { // forward
@@ -55,7 +51,10 @@ void ImageView::wheelEvent(QWheelEvent* event) {
     }
   }
   else {
-    // TODO: switch to prev/next file
+    // The default handler QGraphicsView::wheelEvent(event) tries to
+    // scroll the view, which is not what we need.
+    // Skip the default handler and use its parent QWidget's handler here.
+    QWidget::wheelEvent(event);
   }
 }
 

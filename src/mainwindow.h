@@ -70,6 +70,7 @@ protected:
   void onImageLoaded(LoadImageJob* job);
   void onImageSaved(SaveImageJob* job);
   
+  virtual bool eventFilter(QObject* watched, QEvent* event);
 private Q_SLOTS:
   void on_actionAbout_triggered();
 

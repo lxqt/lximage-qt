@@ -29,6 +29,7 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QDebug>
+#include <QWheelEvent>
 #include "preferencesdialog.h"
 #include "application.h"
 
@@ -62,6 +63,8 @@ MainWindow::MainWindow():
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
   connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
+  // install an event filter on the image view
+  ui.view->installEventFilter(this);
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
@@ -370,6 +373,26 @@ void MainWindow::onImageSaved(SaveImageJob* job) {
     setModified(false);
   }
   saveJob_ = NULL;
+}
+
+// filter events of other objects, mainly the image view.
+bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
+  if(watched == ui.view) { // we got an event for the image view
+    switch(event->type()) {
+      case QEvent::Wheel: { // mouse wheel event
+        QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
+        if(wheelEvent->modifiers() == 0) {
+          int delta = wheelEvent->delta();
+          if(delta < 0)
+            on_actionNext_triggered(); // next image
+          else
+            on_actionPrevious_triggered(); // previous image
+        }
+        break;
+      }
+    }
+  }
+  return QObject::eventFilter(watched, event);
 }
 
 QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
