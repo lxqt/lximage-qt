@@ -37,6 +37,11 @@
 #include "saveimagejob.h"
 
 class QTimer;
+class QDockWidget;
+
+namespace Fm {
+  class FolderView;
+}
 
 namespace LxImage {
 
@@ -60,6 +65,8 @@ public:
   FmPath* currentFile() const {
     return currentFile_;
   }
+
+  void setShowThumbnails(bool show);
 
 protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
@@ -92,6 +99,7 @@ private Q_SLOTS:
   void on_actionPaste_triggered();
   void on_actionPreferences_triggered();
 
+  void on_actionShowThumbnails_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
   void on_actionSlideShow_triggered(bool checked);
 
@@ -107,7 +115,9 @@ private Q_SLOTS:
 
   void onContextMenu(QPoint pos);
   void onExitFullscreen();
-  
+
+  void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
+
 private:
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
@@ -134,6 +144,9 @@ private:
   Fm::ProxyFolderModel* proxyModel_;
   ModelFilter* modelFilter_;
   QModelIndex currentIndex_;
+
+  QDockWidget* thumbnailsDock_;
+  Fm::FolderView* thumbnailsView_;
 
   // multi-threading loading of images
   LoadImageJob* loadJob_;

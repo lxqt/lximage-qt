@@ -88,6 +88,7 @@
     <addaction name="actionOriginalSize"/>
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
+    <addaction name="actionShowThumbnails"/>
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
    </widget>
@@ -405,6 +406,14 @@
    </property>
    <property name="shortcut">
     <string>Del</string>
+   </property>
+  </action>
+  <action name="actionShowThumbnails">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Thumbnails</string>
    </property>
   </action>
  </widget>

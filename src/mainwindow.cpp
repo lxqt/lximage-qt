@@ -33,8 +33,10 @@
 #include <QMouseEvent>
 #include <QTimer>
 #include <QShortcut>
+#include <QDockWidget>
 #include "preferencesdialog.h"
 #include "application.h"
+#include <libfm-qt/folderview.h>
 
 using namespace LxImage;
 
@@ -52,6 +54,8 @@ MainWindow::MainWindow():
   modelFilter_(new ModelFilter()),
   imageModified_(false),
   contextMenu_(new QMenu(this)),
+  thumbnailsDock_(NULL),
+  thumbnailsView_(NULL),
   image_() {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
@@ -71,6 +75,9 @@ MainWindow::MainWindow():
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
 
+  if(app->settings().showThumbnails())
+    setShowThumbnails(true);
+  
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
   contextMenu_->addSeparator();
@@ -100,6 +107,10 @@ MainWindow::MainWindow():
 MainWindow::~MainWindow() {
   if(slideShowTimer_)
     delete slideShowTimer_;
+  if(thumbnailsView_)
+    delete thumbnailsView_;
+  if(thumbnailsDock_)
+    delete thumbnailsDock_;
 
   if(loadJob_) {
     loadJob_->cancel();
@@ -150,11 +161,16 @@ void MainWindow::on_actionZoomOut_triggered() {
 
 void MainWindow::onFolderLoaded(FmFolder* folder) {
   qDebug("Finish loading: %d files", proxyModel_->rowCount());
-
   // if currently we're showing a file, get its index in the folder now
   // since the folder is fully loaded.
-  if(currentFile_ && !currentIndex_.isValid())
+  if(currentFile_ && !currentIndex_.isValid()) {
     currentIndex_ = indexFromPath(currentFile_);
+    if(thumbnailsView_) { // showing thumbnails
+      // select current file in the thumbnails view
+      thumbnailsView_->childView()->setCurrentIndex(currentIndex_);
+      thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+    }
+  }
 }
 
 void MainWindow::_onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
@@ -437,6 +453,14 @@ QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
 
 
 void MainWindow::updateUI() {
+  if(currentIndex_.isValid()) {
+    if(thumbnailsView_) { // showing thumbnails
+      // select current file in the thumbnails view
+      thumbnailsView_->childView()->setCurrentIndex(currentIndex_);
+      thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+    }
+  }
+
   QString title;
   if(currentFile_) {
     char* dispName = fm_path_display_basename(currentFile_);
@@ -568,6 +592,7 @@ void MainWindow::setModified(bool modified) {
 }
 
 void MainWindow::on_actionPreferences_triggered() {
+  // FIXME: all windows in the application should apply the settings.
   PreferencesDialog dlg;
   if(dlg.exec() == QDialog::Accepted) {
     Application* app = static_cast<Application*>(qApp);
@@ -636,6 +661,41 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
   }
 }
 
+void MainWindow::setShowThumbnails(bool show) {
+  if(show) {
+    if(!thumbnailsDock_) {
+      thumbnailsDock_ = new QDockWidget(this);
+      thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
+      thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
+      thumbnailsDock_->setWidget(thumbnailsView_);
+      addDockWidget(Qt::BottomDockWidgetArea, thumbnailsDock_);
+      QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
+      listView->setFlow(QListView::TopToBottom);
+      listView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+      listView->setSelectionMode(QAbstractItemView::SingleSelection);
+      // FIXME: optimize the size of the thumbnail view
+      // FIXME if the thumbnail view is docked elsewhere, update the settings.
+      thumbnailsView_->setMinimumHeight(listView->gridSize().height());
+      thumbnailsView_->setModel(proxyModel_);
+      proxyModel_->setShowThumbnails(true);
+      connect(thumbnailsView_->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onThumbnailSelChanged(QItemSelection,QItemSelection)));
+    }
+  }
+  else {
+    if(thumbnailsDock_) {
+      delete thumbnailsView_;
+      thumbnailsView_ = NULL;
+      delete thumbnailsDock_;
+      thumbnailsDock_ = NULL;
+    }
+    proxyModel_->setShowThumbnails(false);
+  }
+}
+
+void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
+  setShowThumbnails(checked);
+}
+
 void MainWindow::changeEvent(QEvent* event) {
   // TODO: hide menu/toolbars in full screen mode and make the background black.
   if(event->type() == QEvent::WindowStateChange) {
@@ -645,6 +705,8 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
       ui.toolBar->hide();
       ui.statusBar->hide();
+      if(thumbnailsDock_)
+        thumbnailsDock_->hide();
       // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
       // is disabled. We needs to add the actions to the main window manually to enable the
       // shortcuts again.
@@ -666,6 +728,8 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.menubar->show();
       ui.toolBar->show();
       ui.statusBar->show();
+      if(thumbnailsDock_)
+        thumbnailsDock_->show();
     }
   }
   QWidget::changeEvent(event);
@@ -678,4 +742,16 @@ void MainWindow::onContextMenu(QPoint pos) {
 void MainWindow::onExitFullscreen() {
   if(isFullScreen())
     showNormal();
+}
+
+void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QItemSelection& deselected) {
+  // the selected item of thumbnail view is changed
+  if(!selected.isEmpty()) {
+    QModelIndex index = selected.first().topLeft();
+    if(index.isValid() && index != currentIndex_) {
+      FmFileInfo* file = proxyModel_->fileInfoFromIndex(index);
+      if(file)
+        loadImage(fm_file_info_get_path(file), index);
+    }
+  }
 }
