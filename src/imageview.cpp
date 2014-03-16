@@ -88,6 +88,7 @@ void ImageView::zoomFit() {
 }
 
 void ImageView::zoomIn() {
+  autoZoomFit_ = false;
   if(!image_.isNull()) {
     resetTransform();
     scaleFactor_ *= 1.1;
@@ -96,6 +97,7 @@ void ImageView::zoomIn() {
 }
 
 void ImageView::zoomOut() {
+  autoZoomFit_ = false;
   if(!image_.isNull()) {
     resetTransform();
     scaleFactor_ /= 1.1;
@@ -106,6 +108,7 @@ void ImageView::zoomOut() {
 void ImageView::zoomOriginal() {
   resetTransform();
   scaleFactor_ = 1.0;
+  autoZoomFit_ = false;
 }
 
 void ImageView::setImage(QImage image) {

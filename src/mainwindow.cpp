@@ -34,6 +34,7 @@
 #include <QTimer>
 #include <QShortcut>
 #include <QDockWidget>
+#include <QScrollBar>
 #include "application.h"
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
@@ -456,6 +457,22 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
       }
     }
   }
+  else if(thumbnailsView_ && watched == thumbnailsView_->childView()) {
+    // scroll the thumbnail view with mouse wheel
+    switch(event->type()) {
+      case QEvent::Wheel: { // mouse wheel event
+        QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
+        if(wheelEvent->modifiers() == 0) {
+          int delta = wheelEvent->delta();
+          QScrollBar* hscroll = thumbnailsView_->childView()->horizontalScrollBar();
+          if(hscroll)
+            hscroll->setValue(hscroll->value() - delta);
+          return true;
+        }
+        break;
+      }
+    }
+  }
   return QObject::eventFilter(watched, event);
 }
 
@@ -683,6 +700,7 @@ void MainWindow::setShowThumbnails(bool show) {
   if(show) {
     if(!thumbnailsDock_) {
       thumbnailsDock_ = new QDockWidget(this);
+      thumbnailsDock_->setFeatures(QDockWidget::NoDockWidgetFeatures); // FIXME: should use DockWidgetClosable
       thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
       thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
       thumbnailsDock_->setWidget(thumbnailsView_);
@@ -691,9 +709,11 @@ void MainWindow::setShowThumbnails(bool show) {
       listView->setFlow(QListView::TopToBottom);
       listView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
       listView->setSelectionMode(QAbstractItemView::SingleSelection);
+      listView->installEventFilter(this);
       // FIXME: optimize the size of the thumbnail view
       // FIXME if the thumbnail view is docked elsewhere, update the settings.
-      thumbnailsView_->setMinimumHeight(listView->gridSize().height());
+      int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+      thumbnailsView_->setFixedHeight(listView->gridSize().height() + scrollHeight);
       thumbnailsView_->setModel(proxyModel_);
       proxyModel_->setShowThumbnails(true);
       connect(thumbnailsView_->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onThumbnailSelChanged(QItemSelection,QItemSelection)));
