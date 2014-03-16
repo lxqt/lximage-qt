@@ -668,11 +668,13 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
     Application* app = static_cast<Application*>(qApp);
     slideShowTimer_->start(app->settings().slideShowInterval() * 1000);
     // showFullScreen();
+    ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-stop"));
   }
   else {
     if(slideShowTimer_) {
       delete slideShowTimer_;
       slideShowTimer_ = NULL;
+      ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-start"));
     }
   }
 }

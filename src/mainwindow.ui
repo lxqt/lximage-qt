@@ -136,6 +136,8 @@
    <addaction name="separator"/>
    <addaction name="actionOpenFile"/>
    <addaction name="actionSaveAs"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
    <addaction name="separator"/>
    <addaction name="actionRotateClockwise"/>
    <addaction name="actionRotateCounterclockwise"/>
@@ -143,6 +145,8 @@
    <addaction name="actionZoomOut"/>
    <addaction name="actionZoomFit"/>
    <addaction name="actionOriginalSize"/>
+   <addaction name="separator"/>
+   <addaction name="actionSlideShow"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbout">
@@ -234,6 +238,9 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset theme="edit-copy"/>
+   </property>
    <property name="text">
     <string>&amp;Copy to Clipboard</string>
    </property>
@@ -391,6 +398,9 @@
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset theme="edit-paste"/>
+   </property>
    <property name="text">
     <string>&amp;Paste from Clipboard</string>
    </property>
@@ -398,6 +408,11 @@
   <action name="actionSlideShow">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="media-playback-start">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;Slide Show</string>
