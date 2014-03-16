@@ -34,7 +34,6 @@
 #include <QTimer>
 #include <QShortcut>
 #include <QDockWidget>
-#include "preferencesdialog.h"
 #include "application.h"
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
@@ -66,6 +65,9 @@ MainWindow::MainWindow():
   app->addWindow();
 
   ui.setupUi(this);
+  connect(ui.actionScreenshot, SIGNAL(triggered(bool)), app, SLOT(screenshot()));
+  connect(ui.actionPreferences, SIGNAL(triggered(bool)), app ,SLOT(editPreferences()));
+  
   proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
@@ -173,10 +175,6 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
       thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
     }
   }
-}
-
-void MainWindow::_onFolderLoaded(FmFolder* folder, MainWindow* pThis) {
-  pThis->onFolderLoaded(folder);
 }
 
 void MainWindow::openImageFile(QString fileName) {
@@ -614,17 +612,13 @@ void MainWindow::setModified(bool modified) {
   updateUI(); // TODO: update title bar to reflect the state change
 }
 
-void MainWindow::on_actionPreferences_triggered() {
-  // FIXME: all windows in the application should apply the settings.
-  PreferencesDialog dlg;
-  if(dlg.exec() == QDialog::Accepted) {
-    Application* app = static_cast<Application*>(qApp);
-    Settings& settings = app->settings();
-    if(isFullScreen())
-      ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
-    else
-      ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
-  }
+void MainWindow::applySettings() {
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+  if(isFullScreen())
+    ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
+  else
+    ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
 }
 
 void MainWindow::on_actionPrint_triggered() {
@@ -650,11 +644,6 @@ void MainWindow::on_actionPrint_triggered() {
     }
     painter.end();
   }
-}
-
-void MainWindow::on_actionScreenshot_triggered() {
-  Application* app = static_cast<Application*>(qApp);
-  app->screenshot();
 }
 
 // TODO: This can later be used for doing slide show

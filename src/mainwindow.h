@@ -67,6 +67,7 @@ public:
   }
 
   void setShowThumbnails(bool show);
+  void applySettings();
 
 protected:
   void loadImage(FmPath* filePath, QModelIndex index = QModelIndex());
@@ -88,7 +89,6 @@ private Q_SLOTS:
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();
   void on_actionPrint_triggered();
-  void on_actionScreenshot_triggered();
   void on_actionDelete_triggered();
   void on_actionFileProperties_triggered();
   void on_actionClose_triggered();
@@ -99,7 +99,6 @@ private Q_SLOTS:
   void on_actionFlipHorizontal_triggered();
   void on_actionCopy_triggered();
   void on_actionPaste_triggered();
-  void on_actionPreferences_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
@@ -127,7 +126,9 @@ private:
   QModelIndex indexFromPath(FmPath* filePath);
 
   // GObject related signal handers and callbacks
-  static void _onFolderLoaded(FmFolder* folder, MainWindow* pThis);
+  static void _onFolderLoaded(FmFolder* folder, MainWindow* _this) {
+    _this->onFolderLoaded(folder);
+  }
 
 private:
   Ui::MainWindow ui;

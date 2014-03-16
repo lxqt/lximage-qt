@@ -35,6 +35,7 @@ public:
   virtual ~PreferencesDialog();
   
   virtual void accept();
+  virtual void done(int r);
 
 private:
   void initIconThemes(Settings& settings);

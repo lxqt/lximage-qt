@@ -23,6 +23,8 @@
 #include <QDBusInterface>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
+#include "preferencesdialog.h"
+#include "mainwindow.h"
 
 using namespace LxImage;
 
@@ -185,7 +187,19 @@ void Application::newWindow(QStringList files) {
   }
 }
 
+void Application::applySettings() {
+  Q_FOREACH(QWidget* window, topLevelWidgets()) {
+    if(window->inherits("LxImage::MainWindow"))
+      static_cast<MainWindow*>(window)->applySettings();
+  }
+}
+
 void Application::screenshot() {
   ScreenshotDialog* dlg = new ScreenshotDialog();
+  dlg->show();
+}
+
+void Application::editPreferences() {
+  PreferencesDialog* dlg = new PreferencesDialog();
   dlg->show();
 }

@@ -71,6 +71,7 @@ void PreferencesDialog::accept() {
   
   settings.save();
   QDialog::accept();
+  app->applySettings();
 }
 
 static void findIconThemesInDir(QHash<QString, QString>& iconThemes, QString dirName) {
@@ -135,3 +136,9 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
     ui.iconTheme->hide();
   }
 }
+
+void PreferencesDialog::done(int r) {
+  QDialog::done(r);
+  deleteLater();
+}
+

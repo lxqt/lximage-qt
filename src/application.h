@@ -38,7 +38,6 @@ public:
 
   void newWindow(QStringList files = QStringList());
   MainWindow* createWindow();
-  void screenshot();
 
   void addWindow() { // call this when you create a new toplevel window
     ++windowCount_;
@@ -55,6 +54,12 @@ public:
   Settings& settings() {
     return settings_;
   }
+
+  void applySettings();
+
+public Q_SLOTS:
+  void editPreferences();
+  void screenshot();
 
 private:
   Fm::LibFmQt libFm;
