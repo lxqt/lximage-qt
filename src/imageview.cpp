@@ -27,7 +27,9 @@ ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
   imageItem_(new QGraphicsRectItem()),
   scene_(new QGraphicsScene(this)),
+  autoZoomFit_(false),
   scaleFactor_(1.0) {
+
   setScene(scene_);
   imageItem_->hide();
   // imageItem_->setPen(QPen(Qt::NoPen));
@@ -68,6 +70,8 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
 
 void ImageView::resizeEvent(QResizeEvent* event) {
   QGraphicsView::resizeEvent(event);
+  if(autoZoomFit_)
+    zoomFit();
 }
 
 void ImageView::zoomFit() {
@@ -117,6 +121,9 @@ void ImageView::setImage(QImage image) {
     imageItem_->show();
     scene_->setSceneRect(0, 0, image_.width(), image_.height());
   }
+
+  if(autoZoomFit_)
+    zoomFit();
 }
 
 void ImageView::setScaleFactor(double factor) {

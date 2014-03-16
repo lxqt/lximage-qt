@@ -52,6 +52,15 @@ public:
   void zoomFit();
   void zoomOriginal();
 
+  bool autoZoomFit() {
+    return autoZoomFit_;
+  }
+
+  // if set to true, zoomFit() is done automatically when the size of the window is changed.
+  void setAutoZoomFit(bool value) {
+    autoZoomFit_ = value;
+  }
+  
 protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);
@@ -62,6 +71,7 @@ private:
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
   double scaleFactor_;
+  bool autoZoomFit_;
 };
 
 }

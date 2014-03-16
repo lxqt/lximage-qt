@@ -148,18 +148,22 @@ void MainWindow::on_actionAbout_triggered() {
 }
 
 void MainWindow::on_actionOriginalSize_triggered() {
+  ui.view->setAutoZoomFit(false);
   ui.view->zoomOriginal();
 }
 
 void MainWindow::on_actionZoomFit_triggered() {
+  ui.view->setAutoZoomFit(true);
   ui.view->zoomFit();
 }
 
 void MainWindow::on_actionZoomIn_triggered() {
+  ui.view->setAutoZoomFit(false);
   ui.view->zoomIn();
 }
 
 void MainWindow::on_actionZoomOut_triggered() {
+  ui.view->setAutoZoomFit(false);
   ui.view->zoomOut();
 }
 
@@ -407,8 +411,8 @@ void MainWindow::onImageLoaded(LoadImageJob* job) {
   loadJob_ = NULL; // the job object will be freed later automatically
 
   image_ = job->image();
+  ui.view->setAutoZoomFit(true);
   ui.view->setImage(image_);
-  ui.view->zoomFit();
 
   if(!currentIndex_.isValid())
     currentIndex_ = indexFromPath(currentFile_);
