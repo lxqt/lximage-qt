@@ -50,13 +50,22 @@ public:
   QColor bgColor() {
     return bgColor_;
   }
+  void setBgColor(QColor color) {
+    bgColor_ = color;
+  }
 
   QColor fullScreenBgColor() {
     return fullScreenBgColor_;
   }
+  void setFullScreenBgColor(QColor color) {
+    fullScreenBgColor_ = color;
+  }
 
   bool showThumbnails() {
     return showThumbnails_;
+  }
+  void setShowThumbnails(bool show) {
+    showThumbnails_ = show;
   }
 
   bool showSidePane() {
@@ -65,6 +74,9 @@ public:
 
   int slideShowInterval() {
     return slideShowInterval_;
+  }
+  void setSlideShowInterval(int interval) {
+    slideShowInterval_ = interval;
   }
 
 private:

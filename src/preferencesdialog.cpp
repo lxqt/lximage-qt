@@ -35,6 +35,9 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   app->addWindow();
   
   initIconThemes(settings);
+  ui.bgColor->setColor(settings.bgColor());
+  ui.fullScreenBgColor->setColor(settings.fullScreenBgColor());
+  ui.slideShowInterval->setValue(settings.slideShowInterval());
 }
 
 PreferencesDialog::~PreferencesDialog() {
@@ -61,6 +64,10 @@ void PreferencesDialog::accept() {
       }
     }
   }
+
+  settings.setBgColor(ui.bgColor->color());
+  settings.setFullScreenBgColor(ui.fullScreenBgColor->color());
+  settings.setSlideShowInterval(ui.slideShowInterval->value());
   
   settings.save();
   QDialog::accept();

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>335</width>
-    <height>232</height>
+    <width>331</width>
+    <height>225</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,9 +21,12 @@
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Tab 1</string>
+       <string>General</string>
       </attribute>
       <layout class="QFormLayout" name="formLayout">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
        <item row="0" column="0">
         <widget class="QLabel" name="iconThemeLabel">
          <property name="text">
@@ -34,19 +37,45 @@
        <item row="0" column="1">
         <widget class="QComboBox" name="iconTheme"/>
        </item>
-       <item row="1" column="0" colspan="2">
+       <item row="1" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>TODO: Add configuration options here</string>
+          <string>Normal background color:</string>
          </property>
         </widget>
        </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Fullscreen background color:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="Fm::ColorButton" name="bgColor">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="Fm::ColorButton" name="fullScreenBgColor">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Slide show interval (seconds):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="slideShowInterval"/>
+       </item>
       </layout>
-     </widget>
-     <widget class="QWidget" name="tab_2">
-      <attribute name="title">
-       <string>Tab 2</string>
-      </attribute>
      </widget>
     </widget>
    </item>
@@ -62,6 +91,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Fm::ColorButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">libfm-qt/colorbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

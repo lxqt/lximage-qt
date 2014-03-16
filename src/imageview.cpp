@@ -58,6 +58,14 @@ void ImageView::wheelEvent(QWheelEvent* event) {
   }
 }
 
+void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
+  // The default behaviour of QGraphicsView::mouseDoubleClickEvent() is
+  // not needed for us. We call its parent class instead so the event can be
+  // filtered by event filter installed on the view.
+  // QGraphicsView::mouseDoubleClickEvent(event);
+  QAbstractScrollArea::mouseDoubleClickEvent(event);
+}
+
 void ImageView::resizeEvent(QResizeEvent* event) {
   QGraphicsView::resizeEvent(event);
 }

@@ -30,7 +30,9 @@
 #include <QPrinter>
 #include <QDebug>
 #include <QWheelEvent>
+#include <QMouseEvent>
 #include <QTimer>
+#include <QShortcut>
 #include "preferencesdialog.h"
 #include "application.h"
 
@@ -67,6 +69,7 @@ MainWindow::MainWindow():
   connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
   // install an event filter on the image view
   ui.view->installEventFilter(this);
+  ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
@@ -84,6 +87,14 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
   contextMenu_->addAction(ui.actionFlipVertical);
+
+  // create shortcuts
+  QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
+  connect(shortcut, SIGNAL(activated()), SLOT(on_actionPrevious_triggered()));
+  shortcut = new QShortcut(Qt::Key_Right, this);
+  connect(shortcut, SIGNAL(activated()), SLOT(on_actionNext_triggered()));
+  shortcut = new QShortcut(Qt::Key_Escape, this);
+  connect(shortcut, SIGNAL(activated()), SLOT(onExitFullscreen()));
 }
 
 MainWindow::~MainWindow() {
@@ -382,6 +393,7 @@ void MainWindow::onImageSaved(SaveImageJob* job) {
 
 // filter events of other objects, mainly the image view.
 bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
+  // qDebug() << event;
   if(watched == ui.view) { // we got an event for the image view
     switch(event->type()) {
       case QEvent::Wheel: { // mouse wheel event
@@ -393,6 +405,12 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
           else
             on_actionPrevious_triggered(); // previous image
         }
+        break;
+      }
+      case QEvent::MouseButtonDblClick: {
+        QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
+        if(mouseEvent->button() == Qt::LeftButton)
+          ui.actionFullScreen->trigger();
         break;
       }
     }
@@ -551,7 +569,14 @@ void MainWindow::setModified(bool modified) {
 
 void MainWindow::on_actionPreferences_triggered() {
   PreferencesDialog dlg;
-  dlg.exec();
+  if(dlg.exec() == QDialog::Accepted) {
+    Application* app = static_cast<Application*>(qApp);
+    Settings& settings = app->settings();
+    if(isFullScreen())
+      ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
+    else
+      ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+  }
 }
 
 void MainWindow::on_actionPrint_triggered() {
@@ -614,22 +639,43 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
 void MainWindow::changeEvent(QEvent* event) {
   // TODO: hide menu/toolbars in full screen mode and make the background black.
   if(event->type() == QEvent::WindowStateChange) {
-/*
-    if(isFullScreen()) {
-      ui.menubar->hide();
+    Application* app = static_cast<Application*>(qApp);
+    if(isFullScreen()) { // changed to fullscreen mode
+      ui.view->setFrameStyle(QFrame::NoFrame);
+      ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
       ui.toolBar->hide();
       ui.statusBar->hide();
+      // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
+      // is disabled. We needs to add the actions to the main window manually to enable the
+      // shortcuts again.
+      ui.menubar->hide();
+      Q_FOREACH(QAction* action, ui.menubar->actions()) {
+        if(!action->shortcut().isEmpty())
+          addAction(action);
+      }
+      addActions(ui.menubar->actions());
     }
-    else {
+    else { // restore to normal window mode
+      ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
+      ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
+      // now we're going to re-enable the menu, so remove the actions previously added.
+      Q_FOREACH(QAction* action, ui.menubar->actions()) {
+        if(!action->shortcut().isEmpty())
+          removeAction(action);
+      }
       ui.menubar->show();
       ui.toolBar->show();
       ui.statusBar->show();
     }
-*/
   }
   QWidget::changeEvent(event);
 }
 
 void MainWindow::onContextMenu(QPoint pos) {
   contextMenu_->exec(ui.view->mapToGlobal(pos));
+}
+
+void MainWindow::onExitFullscreen() {
+  if(isFullScreen())
+    showNormal();
 }

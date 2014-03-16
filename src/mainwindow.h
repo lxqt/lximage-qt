@@ -106,6 +106,7 @@ private Q_SLOTS:
   void on_actionZoomFit_triggered();
 
   void onContextMenu(QPoint pos);
+  void onExitFullscreen();
   
 private:
   void onFolderLoaded(FmFolder* folder);

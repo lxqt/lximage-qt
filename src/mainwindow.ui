@@ -247,7 +247,7 @@
     <string>Next File</string>
    </property>
    <property name="shortcut">
-    <string>Right</string>
+    <string>PgDown</string>
    </property>
   </action>
   <action name="actionPrevious">
@@ -263,7 +263,7 @@
     <string>Previous File</string>
    </property>
    <property name="shortcut">
-    <string>Left</string>
+    <string>PgUp</string>
    </property>
   </action>
   <action name="actionOriginalSize">
