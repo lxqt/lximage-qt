@@ -89,6 +89,8 @@ private Q_SLOTS:
   void on_actionSaveAs_triggered();
   void on_actionPrint_triggered();
   void on_actionScreenshot_triggered();
+  void on_actionDelete_triggered();
+  void on_actionFileProperties_triggered();
   void on_actionClose_triggered();
 
   void on_actionRotateClockwise_triggered();

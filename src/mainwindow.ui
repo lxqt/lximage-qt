@@ -60,6 +60,8 @@
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
     <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionFileProperties"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
@@ -89,6 +91,7 @@
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
     <addaction name="actionShowThumbnails"/>
+    <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
    </widget>
@@ -362,6 +365,11 @@
    </property>
   </action>
   <action name="actionScreenshot">
+   <property name="icon">
+    <iconset theme="camera-photo">
+     <normaloff/>
+    </iconset>
+   </property>
    <property name="text">
     <string>Capture Screenshot</string>
    </property>
@@ -414,6 +422,11 @@
    </property>
    <property name="text">
     <string>Show Thumbnails</string>
+   </property>
+  </action>
+  <action name="actionFileProperties">
+   <property name="text">
+    <string>File Properties</string>
    </property>
   </action>
  </widget>

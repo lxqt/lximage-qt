@@ -37,6 +37,8 @@
 #include "preferencesdialog.h"
 #include "application.h"
 #include <libfm-qt/folderview.h>
+#include <libfm-qt/filepropsdialog.h>
+#include <libfm-qt/fileoperation.h>
 
 using namespace LxImage;
 
@@ -295,6 +297,27 @@ void MainWindow::on_actionSaveAs_triggered() {
     }
     else
       fm_path_unref(path);
+  }
+}
+
+void MainWindow::on_actionDelete_triggered() {
+  // delete the current file
+  if(currentFile_) {
+    FmPathList* paths = fm_path_list_new();
+    fm_path_list_push_tail(paths, currentFile_);
+    Fm::FileOperation::deleteFiles(paths);
+    fm_path_list_unref(paths);
+  }
+}
+
+void MainWindow::on_actionFileProperties_triggered() {
+  if(currentIndex_.isValid()) {
+    FmFileInfo* file = proxyModel_->fileInfoFromIndex(currentIndex_);
+    // it's better to use an async job to query the file info since it's
+    // possible that loading of the folder is not finished and the file info is
+    // not available yet, but it's overkill for a rarely used function.
+    if(file)
+      Fm::FilePropsDialog::showForFile(file);
   }
 }
 
