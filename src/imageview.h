@@ -25,6 +25,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QImage>
+#include <QPixmap>
 
 namespace LxImage {
 
@@ -65,11 +66,13 @@ protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);
   virtual void resizeEvent(QResizeEvent* event);
+  // virtual void paintEvent(QPaintEvent* event);
 
 private:
   QGraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
+  QPixmap cache_; // caching of current viewport content (high quality scaled image)
   double scaleFactor_;
   bool autoZoomFit_;
 };

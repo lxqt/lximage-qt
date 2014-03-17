@@ -20,6 +20,8 @@
 
 #include "imageview.h"
 #include <QWheelEvent>
+#include <QPaintEvent>
+#include <QPainter>
 
 using namespace LxImage;
 

@@ -28,39 +28,29 @@
 using namespace LxImage;
 
 LoadImageJob::LoadImageJob(MainWindow* window, FmPath* filePath):
-  cancellable_(g_cancellable_new()),
+  Job(),
   path_(fm_path_ref(filePath)),
-  mainWindow_(window),
-  error_(NULL) {
+  mainWindow_(window) {
 }
 
 LoadImageJob::~LoadImageJob() {
-  g_object_unref(cancellable_);
   fm_path_unref(path_);
-  if(error_)
-    g_error_free(error_);
-}
-
-void LoadImageJob::start() {
-  g_io_scheduler_push_job(GIOSchedulerJobFunc(loadImageThread),
-                          this, GDestroyNotify(freeMe),
-                          G_PRIORITY_DEFAULT, cancellable_);
 }
 
 // This is called from the worker thread, not main thread
-gboolean LoadImageJob::loadImageThread(GIOSchedulerJob* job, GCancellable* cancellable, LoadImageJob* pThis) {
-  GFile* gfile = fm_path_to_gfile(pThis->path_);
-  GFileInputStream* fileStream = g_file_read(gfile, pThis->cancellable_, &pThis->error_);
+bool LoadImageJob::run() {
+  GFile* gfile = fm_path_to_gfile(path_);
+  GFileInputStream* fileStream = g_file_read(gfile, cancellable_, &error_);
   g_object_unref(gfile);
 
   if(fileStream) { // if the file stream is successfually opened
     QBuffer imageBuffer;
     GInputStream* inputStream = G_INPUT_STREAM(fileStream);
-    while(!g_cancellable_is_cancelled(pThis->cancellable_)) {
+    while(!g_cancellable_is_cancelled(cancellable_)) {
       char buffer[4096];
       gssize readSize = g_input_stream_read(inputStream, 
                                             buffer, 4096,
-                                            pThis->cancellable_, &pThis->error_);
+                                            cancellable_, &error_);
       if(readSize == -1 || readSize == 0) // error or EOF
         break;
       // append the bytes read to the image buffer
@@ -69,13 +59,13 @@ gboolean LoadImageJob::loadImageThread(GIOSchedulerJob* job, GCancellable* cance
     g_input_stream_close(inputStream, NULL, NULL);
     
     // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
-    if(!pThis->error_ && !g_cancellable_is_cancelled(pThis->cancellable_)) { // load the image from buffer if there are no errors
-      pThis->image_ = QImage::fromData(imageBuffer.buffer());
+    if(!error_ && !g_cancellable_is_cancelled(cancellable_)) { // load the image from buffer if there are no errors
+      image_ = QImage::fromData(imageBuffer.buffer());
 
-      if(!pThis->image_.isNull()) { // if the image is loaded correctly
+      if(!image_.isNull()) { // if the image is loaded correctly
         // check if this file is a jpeg file
         // FIXME: can we use FmFileInfo instead if it's available?
-        const char* basename = fm_path_get_basename(pThis->path_);
+        const char* basename = fm_path_get_basename(path_);
         char* mime_type = g_content_type_guess(basename, NULL, 0, NULL);
         if(mime_type && strcmp(mime_type, "image/jpeg") == 0) { // this is a jpeg file
           // use libexif to extract additional info embedded in jpeg files
@@ -111,7 +101,7 @@ gboolean LoadImageJob::loadImageThread(GIOSchedulerJob* job, GCancellable* cance
               if(rotate_degrees != 0.0) {
                 QTransform transform;
                 transform.rotate(rotate_degrees);
-                pThis->image_ = pThis->image_.transformed(transform, Qt::SmoothTransformation);
+                image_ = image_.transformed(transform, Qt::SmoothTransformation);
               }
               // TODO: handle other EXIF tags as well
             }
@@ -122,21 +112,13 @@ gboolean LoadImageJob::loadImageThread(GIOSchedulerJob* job, GCancellable* cance
       }
     }
   }
-  // do final step in the main thread
-  if(!g_cancellable_is_cancelled(pThis->cancellable_))
-    g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(finish), pThis, NULL);
-  return FALSE;
+  return false;
 }
 
 // this function is called from main thread only
-gboolean LoadImageJob::finish(LoadImageJob* pThis) {
+void LoadImageJob::finish() {
   // only do processing if the job is not cancelled
-  if(!g_cancellable_is_cancelled(pThis->cancellable_)) {
-    pThis->mainWindow_->onImageLoaded(pThis);
+  if(!g_cancellable_is_cancelled(cancellable_)) {
+    mainWindow_->onImageLoaded(this);
   }
-  return TRUE;
-}
-
-void LoadImageJob::freeMe(LoadImageJob* pThis) {
-  delete pThis;
 }
