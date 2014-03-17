@@ -24,20 +24,16 @@
 #include <gio/gio.h>
 #include <libfm/fm.h>
 #include <QImage>
+#include "job.h"
 
 namespace LxImage {
 
 class MainWindow;
   
-class SaveImageJob {
+class SaveImageJob : public Job {
 
 public:
   SaveImageJob(MainWindow* window, FmPath* filePath);
-
-  void cancel() {
-    g_cancellable_cancel(cancellable_);
-  }
-  void start();
 
   QImage image() const {
     return image_;
@@ -47,27 +43,17 @@ public:
     return path_;
   }
 
-  GError* error() const {
-    return error_;
-  }
-
-  bool isCancelled() const {
-    return bool(g_cancellable_is_cancelled(cancellable_));
-  }
-
+protected:
+  virtual bool run();
+  virtual void finish();
+  
 private:
   ~SaveImageJob(); // prevent direct deletion
 
-  static gboolean saveImageThread(GIOSchedulerJob *job, GCancellable *cancellable, SaveImageJob* pThis);
-  static gboolean finish(SaveImageJob* pThis);
-  static void freeMe(SaveImageJob* pThis);
-
 public:
   MainWindow* mainWindow_;
-  GCancellable* cancellable_;
   FmPath* path_;
   QImage image_;
-  GError* error_;
 };
 
 }

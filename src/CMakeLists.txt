@@ -26,6 +26,7 @@ set(lximage-qt_SRCS
   application.cpp
   imageview.cpp
   modelfilter.cpp
+  job.cpp
   loadimagejob.cpp
   saveimagejob.cpp
   screenshotdialog.cpp
