@@ -21,6 +21,7 @@
 #include "application.h"
 #include <QDBusConnection>
 #include <QDBusInterface>
+#include <QPixmapCache>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
 #include "preferencesdialog.h"
@@ -70,6 +71,8 @@ bool Application::init() {
     isPrimaryInstance = false;
   }
 
+  QPixmapCache::setCacheLimit(1024); // avoid pixmap caching.
+  
   if(!parseCommandLineArgs(QCoreApplication::argc(), QCoreApplication::argv()))
     return false;
   return true;
