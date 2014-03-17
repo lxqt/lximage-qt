@@ -186,8 +186,23 @@ void ImageView::generateCache() {
   cacheTimer_->deleteLater();
   cacheTimer_ = NULL;
   cachedRect_ = viewportToScene(viewport()->rect());
-  QImage scaled = image_.copy(cachedRect_).scaled(viewport()->width(), viewport()->height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  cachedPixmap_ = QPixmap::fromImage(scaled);
+  
+  // create a sub image without real data copy
+  // http://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
+  QRect subRect = image_.rect().intersect(cachedRect_);
+  const uchar* bits = image_.constBits();
+  unsigned int offset = subRect.x() * image_.depth() / 8 + subRect.y() * image_.bytesPerLine();
+  QImage subImage = QImage(bits + offset, subRect.width(), subRect.height(), image_.bytesPerLine(), image_.format());
+  // qDebug() << offset << cachedRect_ << image_.depth() << image_.bytesPerLine() << image_.format();
+  QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+  cachedPixmap_ = QPixmap(viewport()->size());
+  QPainter painter(&cachedPixmap_);
+  painter.fillRect(viewport()->rect(), backgroundBrush());
+  // FIXME: when the background brush is changed, we need to invalidate the cache and regenerate one.
+  QRect imageRect = QRect((viewport()->width() - scaled.width())/2, (viewport()->height() - scaled.height())/2, scaled.width(), scaled.height());
+  painter.drawImage(imageRect, scaled);
+  // cachedPixmap_ = QPixmap::fromImage(scaled);
   viewport()->update(); // repaint the viewport
 }
 
