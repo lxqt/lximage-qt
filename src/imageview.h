@@ -26,6 +26,9 @@
 #include <QGraphicsRectItem>
 #include <QImage>
 #include <QPixmap>
+#include <QRect>
+
+class QTimer;
 
 namespace LxImage {
 
@@ -66,13 +69,22 @@ protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);
   virtual void resizeEvent(QResizeEvent* event);
-  // virtual void paintEvent(QPaintEvent* event);
+  virtual void paintEvent(QPaintEvent* event);
+
+private:
+  void queueGenerateCache();
+  QRect viewportToScene(const QRect& rect);
+
+private Q_SLOTS:
+  void generateCache();
 
 private:
   QGraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
-  QPixmap cache_; // caching of current viewport content (high quality scaled image)
+  QPixmap cachedPixmap_; // caching of current viewport content (high quality scaled image)
+  QRect cachedRect_; // rectangle containing the cached region (in the coordinate of the original image)
+  QTimer* cacheTimer_;
   double scaleFactor_;
   bool autoZoomFit_;
 };
