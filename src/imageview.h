@@ -74,6 +74,7 @@ protected:
 private:
   void queueGenerateCache();
   QRect viewportToScene(const QRect& rect);
+  QRect sceneToViewport(const QRectF& rect);
 
 private Q_SLOTS:
   void generateCache();
@@ -83,7 +84,8 @@ private:
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
   QPixmap cachedPixmap_; // caching of current viewport content (high quality scaled image)
-  QRect cachedRect_; // rectangle containing the cached region (in the coordinate of the original image)
+  QRect cachedRect_; // rectangle containing the cached region (in viewport coordinate)
+  QRect cachedSceneRect_; // rectangle containing the cached region (in scene/original image coordinate)
   QTimer* cacheTimer_;
   double scaleFactor_;
   bool autoZoomFit_;

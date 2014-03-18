@@ -25,6 +25,7 @@
 #include <QTimer>
 #include <QPolygon>
 #include <QDebug>
+#include <QStyle>
 
 namespace LxImage {
 
@@ -35,6 +36,9 @@ ImageView::ImageView(QWidget* parent):
   autoZoomFit_(false),
   cacheTimer_(NULL),
   scaleFactor_(1.0) {
+
+  setViewportMargins(0, 0, 0, 0);
+  setLineWidth(0);
 
   setScene(scene_);
   imageItem_->hide();
@@ -154,16 +158,26 @@ void ImageView::setScaleFactor(double factor) {
 }
 
 void ImageView::paintEvent(QPaintEvent* event) {
-  if(!cachedPixmap_.isNull()) { // if we have a high quality cached image
-    QRect exposedRect = viewportToScene(event->rect());
-    if(cachedRect_.contains(exposedRect)) { // we have the required image in the cache
-      QPainter painter(viewport());
-      painter.fillRect(event->rect(), backgroundBrush());
-      painter.drawPixmap(event->rect(), cachedPixmap_);
-      return;
+  // if the image is scaled and we have a high quality cached image
+  if(scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
+    // rectangle of the whole image in viewport coordinate
+    QRect viewportImageRect = sceneToViewport(sceneRect());
+    // the visible part of the image.
+    QRect desiredCachedRect = viewportToScene(viewportImageRect.intersect(viewport()->rect()));
+    // check if the cached area is what we need and if the cache is out of date
+    if(cachedSceneRect_ == desiredCachedRect) {
+      // rect of the image area that needs repaint, in viewport coordinate
+      QRect repaintImageRect = viewportImageRect.intersect(event->rect());
+      // see if the part asking for repaint is contained by our cache.
+      if(cachedRect_.contains(repaintImageRect)) {
+        QPainter painter(viewport());
+        painter.fillRect(event->rect(), backgroundBrush());
+        painter.drawPixmap(repaintImageRect, cachedPixmap_);
+        return;
+      }
     }
   }
-  if(!image_.isNull()) { // we don't have a cache, generate one
+  if(!image_.isNull()) { // we don't have a cache yet or it's out of date already, generate one
     queueGenerateCache();
   }
   QGraphicsView::paintEvent(event);
@@ -178,32 +192,41 @@ void ImageView::queueGenerateCache() {
     cacheTimer_->setSingleShot(true);
     connect(cacheTimer_, SIGNAL(timeout()), SLOT(generateCache()));
   }
-  cacheTimer_->start(300); // restart the timer
+  cacheTimer_->start(200); // restart the timer
 }
 
 // really generate the cache
 void ImageView::generateCache() {
+  // disable the one-shot timer
   cacheTimer_->deleteLater();
   cacheTimer_ = NULL;
-  cachedRect_ = viewportToScene(viewport()->rect());
-  
-  // create a sub image without real data copy
-  // http://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
-  QRect subRect = image_.rect().intersect(cachedRect_);
+
+  // generate a cache for "the visible part" of the scaled image
+  // rectangle of the whole image in viewport coordinate
+  QRect viewportImageRect = sceneToViewport(sceneRect());
+  // rect of the image area that's visible in the viewport (in viewport coordinate)
+  cachedRect_ = viewportImageRect.intersect(viewport()->rect());
+
+  // convert to the coordinate of the original image
+  cachedSceneRect_ = viewportToScene(cachedRect_);
+  // create a sub image of the visible without real data copy
+  // Reference: http://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
+  QRect subRect = image_.rect().intersect(cachedSceneRect_);
   const uchar* bits = image_.constBits();
   unsigned int offset = subRect.x() * image_.depth() / 8 + subRect.y() * image_.bytesPerLine();
   QImage subImage = QImage(bits + offset, subRect.width(), subRect.height(), image_.bytesPerLine(), image_.format());
-  // qDebug() << offset << cachedRect_ << image_.depth() << image_.bytesPerLine() << image_.format();
-  QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.width(), cachedRect_.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
-  cachedPixmap_ = QPixmap(viewport()->size());
-  QPainter painter(&cachedPixmap_);
-  painter.fillRect(viewport()->rect(), backgroundBrush());
-  // FIXME: when the background brush is changed, we need to invalidate the cache and regenerate one.
-  QRect imageRect = QRect((viewport()->width() - scaled.width())/2, (viewport()->height() - scaled.height())/2, scaled.width(), scaled.height());
-  painter.drawImage(imageRect, scaled);
-  // cachedPixmap_ = QPixmap::fromImage(scaled);
-  viewport()->update(); // repaint the viewport
+  // convert the cached scaled image to pixmap
+  cachedPixmap_ = QPixmap::fromImage(scaled);
+  viewport()->update();
+  /*
+  qDebug() << "viewportImageRect" << viewportImageRect
+  << "cachedRect_" << cachedRect_
+  << "cachedSceneRect_" << cachedSceneRect_
+  << "subRect" << subRect;
+  */
 }
 
 // convert viewport coordinate to the original image (not scaled).
@@ -213,5 +236,12 @@ QRect ImageView::viewportToScene(const QRect& rect) {
   QPoint bottomRight = mapToScene(rect.bottomRight()).toPoint();
   return QRect(topLeft, bottomRight);
 }
+
+QRect ImageView::sceneToViewport(const QRectF& rect) {
+  QPoint topLeft = mapFromScene(rect.topLeft());
+  QPoint bottomRight = mapFromScene(rect.bottomRight());
+  return QRect(topLeft, bottomRight);
+}
+
 
 } // namespace LxImage
