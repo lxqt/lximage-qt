@@ -38,6 +38,7 @@ ImageView::ImageView(QWidget* parent):
   scaleFactor_(1.0) {
 
   setViewportMargins(0, 0, 0, 0);
+  setContentsMargins(0, 0, 0, 0);
   setLineWidth(0);
 
   setScene(scene_);
@@ -161,7 +162,7 @@ void ImageView::paintEvent(QPaintEvent* event) {
   // if the image is scaled and we have a high quality cached image
   if(scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
     // rectangle of the whole image in viewport coordinate
-    QRect viewportImageRect = sceneToViewport(sceneRect());
+    QRect viewportImageRect = sceneToViewport(imageItem_->rect());
     // the visible part of the image.
     QRect desiredCachedRect = viewportToScene(viewportImageRect.intersect(viewport()->rect()));
     // check if the cached area is what we need and if the cache is out of date
@@ -187,6 +188,16 @@ void ImageView::queueGenerateCache() {
   if(!cachedPixmap_.isNull()) // clear the old pixmap if there's any
     cachedPixmap_ = QPixmap();
 
+  // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
+  if(scaleFactor_ == 1.0) {
+    if(cacheTimer_) {
+      cacheTimer_->stop();
+      delete cacheTimer_;
+      cacheTimer_ = NULL;
+    }
+    return;
+  }
+
   if(!cacheTimer_) {
     cacheTimer_ = new QTimer();
     cacheTimer_->setSingleShot(true);
@@ -203,7 +214,7 @@ void ImageView::generateCache() {
 
   // generate a cache for "the visible part" of the scaled image
   // rectangle of the whole image in viewport coordinate
-  QRect viewportImageRect = sceneToViewport(sceneRect());
+  QRect viewportImageRect = sceneToViewport(imageItem_->rect());
   // rect of the image area that's visible in the viewport (in viewport coordinate)
   cachedRect_ = viewportImageRect.intersect(viewport()->rect());
 
