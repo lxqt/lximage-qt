@@ -3,6 +3,10 @@ cmake_minimum_required(VERSION 2.8.6)
 
 project(lximage-qt)
 
+set (MAJOR_VERSION 0)
+set (MINOR_VERSION 1)
+set (PATCH_VERSION 0)
+
 find_package(Qt4 REQUIRED
   QtCore
   QtGui
@@ -53,17 +57,11 @@ install(
 )
 
 # building tarball with CPack -------------------------------------------------
-# To create a source distribution, type:
-# make package_source
 include (InstallRequiredSystemLibraries)
-set (CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING")
-set (CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README")
-set (CPACK_PACKAGE_VENDOR "")
-set (CPACK_PACKAGE_VERSION_MAJOR "0")
-set (CPACK_PACKAGE_VERSION_MINOR "1")
-set (CPACK_PACKAGE_VERSION_PATCH "0")
+set (CPACK_PACKAGE_VERSION_MAJOR ${MAJOR_VERSION})
+set (CPACK_PACKAGE_VERSION_MINOR ${MINOR_VERSION})
+set (CPACK_PACKAGE_VERSION_PATCH ${PATCH_VERSION})
 set (CPACK_GENERATOR TBZ2)
 set (CPACK_SOURCE_GENERATOR TBZ2)
 set (CPACK_SOURCE_IGNORE_FILES /build/;.gitignore;.*~;.git;.kdev4;temp)
-# set (CPACK_SOURCE_PACKAGE_FILE_NAME lximage-qt.0.1.0.tar.gz)
 include (CPack)
