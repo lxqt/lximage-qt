@@ -3,6 +3,7 @@ set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
 
 include_directories(
   ${QT_INCLUDES}
+  ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_BINARY_DIR}
   ${GLIB_INCLUDE_DIRS}
   ${EXIF_INCLUDE_DIRS}
@@ -13,10 +14,10 @@ include_directories(
 
 set(CMAKE_AUTOMOC TRUE)
 
-include_directories(
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  ${CMAKE_CURRENT_BINARY_DIR}
+# For some unknown reasons these are required for build on FreeBSD
+link_directories(
+  ${QT_LIBRARY_DIR}
+  ${GLIB_LIBRARY_DIRS}
 )
 
 set(lximage-qt_SRCS
