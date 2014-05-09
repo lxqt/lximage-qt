@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
-Name=LxImage Image Viewer
+Name=LXImage
 GenericName=Image Viewer
-Comment=Simple and fast image viewer
+Comment=The LXQt image viewer
 Icon=lximage-qt
 Exec=lximage-qt
 StartupNotify=true
