@@ -8,24 +8,24 @@ set (MINOR_VERSION 1)
 set (PATCH_VERSION 0)
 
 find_package(Qt4 REQUIRED
-  QtCore
-  QtGui
-  QtDBus
+	QtCore
+	QtGui
+	QtDBus
 )
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLIB REQUIRED
-  glib-2.0
+	glib-2.0
 )
 
 # FIXME: we'll need this to provide detail info for photos in the future
 pkg_check_modules(EXIF REQUIRED
- libexif
+	libexif
 )
 
 pkg_check_modules(LIBFM_QT REQUIRED
-  libfm-qt
-  libfm>=1.2
+	libfm-qt
+	libfm>=1.2
 )
 
 # TODO: make the X11 stuff optional.
@@ -34,7 +34,7 @@ find_package(X11 REQUIRED)
 
 # Xfixes is needed to capture the mouse cursor image
 pkg_check_modules(XFIXES REQUIRED
-  xfixes
+	xfixes
 )
 
 # add src subdirectory
@@ -44,16 +44,16 @@ add_subdirectory(src)
 configure_file(data/lximage-qt.desktop.in lximage-qt.desktop @ONLY)
 configure_file(data/lximage-qt-screenshot.desktop.in lximage-qt-screenshot.desktop @ONLY)
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
-  ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop
-  DESTINATION share/applications
+	${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
+	${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop
+	DESTINATION share/applications
 )
 
 # install an icon for the application
 install(
-  FILES data/lximage-qt.png
-  # FIXME: is this the proper place to install an icon?
-  DESTINATION share/icons/hicolor/48x48/apps
+	FILES data/lximage-qt.png
+	# FIXME: is this the proper place to install an icon?
+	DESTINATION share/icons/hicolor/48x48/apps
 )
 
 # building tarball with CPack -------------------------------------------------
