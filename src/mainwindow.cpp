@@ -455,6 +455,7 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
           ui.actionFullScreen->trigger();
         break;
       }
+      default:;
     }
   }
   else if(thumbnailsView_ && watched == thumbnailsView_->childView()) {
@@ -471,6 +472,7 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
         }
         break;
       }
+      default:;
     }
   }
   return QObject::eventFilter(watched, event);
