@@ -38,7 +38,7 @@ Application::Application(int& argc, char** argv):
   libFm() {
 }
 
-bool Application::init() {
+bool Application::init(int argc, char** argv) {
   // install the translations built-into Qt itself
   qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
   installTranslator(&qtTranslator);
@@ -73,7 +73,7 @@ bool Application::init() {
 
   QPixmapCache::setCacheLimit(1024); // avoid pixmap caching.
   
-  if(!parseCommandLineArgs(QCoreApplication::argc(), QCoreApplication::argv()))
+  if(!parseCommandLineArgs(argc, argv))
     return false;
   return true;
 }

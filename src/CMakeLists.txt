@@ -1,9 +1,16 @@
 # set visibility to hidden to hide symbols, unlesss they're exporeted manually in the code
 set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
 
+if(USE_QT5)
+  set(QTX_INCLUDE_DIRS "")
+  set(QTX_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
+else()
+  set(QTX_INCLUDE_DIRS ${QT_INCLUDES})
+  set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_DBUS_LIBRARY})
+endif()
+
 include_directories(
-  ${QT_INCLUDES}
-  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${QTX_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
   ${GLIB_INCLUDE_DIRS}
   ${EXIF_INCLUDE_DIRS}
@@ -11,8 +18,6 @@ include_directories(
   ${X11_INCLUDE_DIR}
   ${XFIXES_INCLUDE_DIRS}
 )
-
-set(CMAKE_AUTOMOC TRUE)
 
 # For some unknown reasons these are required for build on FreeBSD
 link_directories(
@@ -34,13 +39,23 @@ set(lximage-qt_SRCS
   settings.cpp
 )
 
-qt4_add_dbus_adaptor(lximage-qt_SRCS
-  org.lxde.LxImage.Application.xml
-  application.h
-  LxImage::Application
-  applicationadaptor
-  ApplicationAdaptor
-)
+if(USE_QT5)
+  qt5_add_dbus_adaptor(lximage-qt_SRCS
+    org.lxde.LxImage.Application.xml
+    application.h
+    LxImage::Application
+    applicationadaptor
+    ApplicationAdaptor
+  )
+else()
+  qt4_add_dbus_adaptor(lximage-qt_SRCS
+    org.lxde.LxImage.Application.xml
+    application.h
+    LxImage::Application
+    applicationadaptor
+    ApplicationAdaptor
+  )
+endif()
 
 set(lximage-qt_UIS
   mainwindow.ui
@@ -48,22 +63,30 @@ set(lximage-qt_UIS
   screenshotdialog.ui
 )
 
-qt4_wrap_ui(lximage-qt_UI_H
-  ${lximage-qt_UIS}
-)
+if(USE_QT5)
+  qt5_wrap_ui(lximage-qt_UI_H ${lximage-qt_UIS})
+else()
+  qt4_wrap_ui(lximage-qt_UI_H ${lximage-qt_UIS})
+endif()
 
 # add translation for lximage-qt
 # See http://www.cmake.org/Wiki/CMake:How_To_Build_Qt4_Software
 file(GLOB TS_FILES translations/*.ts)
 option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts files")
-if (UPDATE_TRANSLATIONS)
-  qt4_create_translation(QM_FILES
-    ${lximage-qt_SRCS}
-    ${lximage-qt_UI_H}
-    ${TS_FILES})
-else (UPDATE_TRANSLATIONS)
-  qt4_add_translation(QM_FILES ${TS_FILES})
-endif (UPDATE_TRANSLATIONS)
+if(USE_QT5)
+  if (UPDATE_TRANSLATIONS)
+    qt5_create_translation(QM_FILES ${lximage-qt_SRCS} ${lximage-qt_UI_H} ${TS_FILES})
+  else (UPDATE_TRANSLATIONS)
+    qt5_add_translation(QM_FILES ${TS_FILES})
+  endif (UPDATE_TRANSLATIONS)
+else(USE_QT5)
+  if (UPDATE_TRANSLATIONS)
+    qt4_create_translation(QM_FILES ${lximage-qt_SRCS} ${lximage-qt_UI_H} ${TS_FILES})
+  else (UPDATE_TRANSLATIONS)
+    qt4_add_translation(QM_FILES ${TS_FILES})
+  endif (UPDATE_TRANSLATIONS)
+endif(USE_QT5)
+
 add_custom_target (lximage-qt_translations DEPENDS ${QM_FILES})
 install(FILES ${QM_FILES} DESTINATION share/lximage-qt/translations)
 # prevent the generated files from being deleted during make clean
@@ -81,9 +104,7 @@ add_definitions(
 )
 
 target_link_libraries(lximage-qt
-  ${QT_QTCORE_LIBRARY}
-  ${QT_QTGUI_LIBRARY}
-  ${QT_DBUS_LIBRARY}
+  ${QTX_LIBRARIES}
   ${GLIB_LIBRARIES}
   ${EXIF_LIBRARIES}
   ${LIBFM_QT_LIBRARIES}

@@ -7,35 +7,43 @@ set (MAJOR_VERSION 0)
 set (MINOR_VERSION 2)
 set (PATCH_VERSION 0)
 
-find_package(Qt4 REQUIRED
-	QtCore
-	QtGui
-	QtDBus
-)
+# Support Qt5
+option(USE_QT5 "Build with Qt5." $ENV{USE_QT5})
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_AUTOMOC ON)
+if(USE_QT5)
+  cmake_minimum_required(VERSION 2.8.11)
+  find_package(Qt5Widgets REQUIRED)
+  find_package(Qt5DBus REQUIRED)
+  find_package(Qt5PrintSupport REQUIRED QUIET)
+  find_package(Qt5X11Extras REQUIRED QUIET)
+  find_package(Qt5LinguistTools REQUIRED QUIET)
+  message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
+else()
+  find_package(Qt4 REQUIRED QtCore QtGui QtDBus)
+  include(${QT_USE_FILE})
+  message(STATUS "Building with Qt${QTVERSION}")
+endif()
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GLIB REQUIRED
-	glib-2.0
-)
+pkg_check_modules(GLIB REQUIRED glib-2.0)
 
 # FIXME: we'll need this to provide detail info for photos in the future
-pkg_check_modules(EXIF REQUIRED
-	libexif
-)
+pkg_check_modules(EXIF REQUIRED libexif)
 
-pkg_check_modules(LIBFM_QT REQUIRED
-	libfm-qt
-	libfm>=1.2
-)
+if(USE_QT5)
+  pkg_check_modules(LIBFM_QT REQUIRED libfm-qt5 libfm>=1.2)
+else()
+  pkg_check_modules(LIBFM_QT REQUIRED libfm-qt libfm>=1.2)
+endif()
 
 # TODO: make the X11 stuff optional.
 # for screenshot support
 find_package(X11 REQUIRED)
 
 # Xfixes is needed to capture the mouse cursor image
-pkg_check_modules(XFIXES REQUIRED
-	xfixes
-)
+pkg_check_modules(XFIXES REQUIRED xfixes)
 
 # add src subdirectory
 add_subdirectory(src)

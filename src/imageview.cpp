@@ -164,11 +164,11 @@ void ImageView::paintEvent(QPaintEvent* event) {
     // rectangle of the whole image in viewport coordinate
     QRect viewportImageRect = sceneToViewport(imageItem_->rect());
     // the visible part of the image.
-    QRect desiredCachedRect = viewportToScene(viewportImageRect.intersect(viewport()->rect()));
+    QRect desiredCachedRect = viewportToScene(viewportImageRect.intersected(viewport()->rect()));
     // check if the cached area is what we need and if the cache is out of date
     if(cachedSceneRect_ == desiredCachedRect) {
       // rect of the image area that needs repaint, in viewport coordinate
-      QRect repaintImageRect = viewportImageRect.intersect(event->rect());
+      QRect repaintImageRect = viewportImageRect.intersected(event->rect());
       // see if the part asking for repaint is contained by our cache.
       if(cachedRect_.contains(repaintImageRect)) {
         QPainter painter(viewport());
@@ -216,13 +216,13 @@ void ImageView::generateCache() {
   // rectangle of the whole image in viewport coordinate
   QRect viewportImageRect = sceneToViewport(imageItem_->rect());
   // rect of the image area that's visible in the viewport (in viewport coordinate)
-  cachedRect_ = viewportImageRect.intersect(viewport()->rect());
+  cachedRect_ = viewportImageRect.intersected(viewport()->rect());
 
   // convert to the coordinate of the original image
   cachedSceneRect_ = viewportToScene(cachedRect_);
   // create a sub image of the visible without real data copy
   // Reference: http://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
-  QRect subRect = image_.rect().intersect(cachedSceneRect_);
+  QRect subRect = image_.rect().intersected(cachedSceneRect_);
   const uchar* bits = image_.constBits();
   unsigned int offset = subRect.x() * image_.depth() / 8 + subRect.y() * image_.bytesPerLine();
   QImage subImage = QImage(bits + offset, subRect.width(), subRect.height(), image_.bytesPerLine(), image_.format());

@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
   LxImage::Application app(argc, argv);
-  if(!app.init())
+  if(!app.init(argc, argv))
     return 0;
   return app.exec();
 }

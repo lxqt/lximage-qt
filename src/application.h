@@ -33,7 +33,7 @@ class Application : public QApplication {
 
 public:
   Application(int& argc, char** argv);
-  bool init();
+  bool init(int argc, char** argv);
   bool parseCommandLineArgs(int argc, char** argv);
 
   void newWindow(QStringList files = QStringList());
