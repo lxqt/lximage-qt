@@ -36,6 +36,7 @@
 #include <QDockWidget>
 #include <QScrollBar>
 #include "application.h"
+#include <libfm-qt/path.h>
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
@@ -240,7 +241,7 @@ QString MainWindow::openFileName() {
 }
 
 // popup a file dialog and retrieve the selected image file name
-QString MainWindow::saveFileName() {
+QString MainWindow::saveFileName(QString defaultName) {
   QString filterStr;
   QList<QByteArray> formats = QImageWriter::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
@@ -256,7 +257,11 @@ QString MainWindow::saveFileName() {
   // FIXME: should we generate better filter strings? one format per item?
   
   QString fileName = QFileDialog::getSaveFileName(
-    this, tr("Save File"), QString(), tr("Image files (%1)").arg(filterStr));
+    this, tr("Save File"), defaultName, tr("Image files (%1)").arg(filterStr));
+
+  // use png format by default if the extension is not set
+  if(!fileName.isEmpty() && fileName.indexOf('.') == -1)
+    fileName += ".png";
   return fileName;
 }
 
@@ -287,8 +292,7 @@ void MainWindow::on_actionSave_triggered() {
 void MainWindow::on_actionSaveAs_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
-
-  QString fileName = saveFileName();
+  QString fileName = saveFileName(currentFile_ ? Fm::Path(currentFile_).displayName() : QString());
   if(!fileName.isEmpty()) {
     FmPath* path = fm_path_new_for_str(qPrintable(fileName));
     // save the image file asynchronously

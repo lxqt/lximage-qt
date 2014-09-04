@@ -74,7 +74,7 @@ protected:
   void saveImage(FmPath* filePath); // save current image to a file
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
-  QString saveFileName();
+  QString saveFileName(QString defaultName = QString());
   virtual void changeEvent(QEvent * event);
 
   void onImageLoaded(LoadImageJob* job);
