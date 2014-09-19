@@ -4,11 +4,14 @@ Priority: optional
 Maintainer: Julien Lavergne <gilir@ubuntu.com>
 Build-Depends: debhelper (>= 9~)
  , cmake
- , libqt4-dev
- , libx11-dev
+ , qtbase5-dev
+ , qttools5-dev
+ , qttools5-dev-tools
+ , libqt5xdg-dev
+ , libqt5x11extras5-dev
  , libglib2.0-dev
  , libexif-dev
- , libfm-qt-dev
+ , libfm-qt5-dev
  , libfm-dev
 Standards-Version: 3.9.3
 
