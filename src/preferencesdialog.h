@@ -22,7 +22,7 @@
 #define LXIMAGE_PREFERENCESDIALOG_H
 
 #include <QDialog>
-#include "ui_preferencedialog.h"
+#include "ui_preferencesdialog.h"
 
 namespace LxImage {
 

@@ -59,7 +59,7 @@ endif()
 
 set(lximage-qt_UIS
   mainwindow.ui
-  preferencedialog.ui
+  preferencesdialog.ui
   screenshotdialog.ui
 )
 
