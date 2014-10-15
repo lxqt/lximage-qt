@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.6)
 project(lximage-qt)
 
 set (MAJOR_VERSION 0)
-set (MINOR_VERSION 2)
+set (MINOR_VERSION 3)
 set (PATCH_VERSION 0)
 
 # Support Qt5
