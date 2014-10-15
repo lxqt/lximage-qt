@@ -5,9 +5,7 @@
 	dh  $@
 
 configure_flags += \
-			-DCMAKE_INSTALL_PREFIX="/usr" \
-			-DUSE_QT5=ON \
-			-DUSE_QT4=OFF
+			-DCMAKE_INSTALL_PREFIX="/usr"
 
 override_dh_auto_configure:
 	dh_auto_configure -- 	$(configure_flags)

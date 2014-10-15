@@ -1,5 +1,5 @@
 # newer cmake is required for CMAKE_AUTOMOC Qt support
-cmake_minimum_required(VERSION 2.8.6)
+cmake_minimum_required(VERSION 2.8.11)
 
 project(lximage-qt)
 
@@ -7,24 +7,16 @@ set (MAJOR_VERSION 0)
 set (MINOR_VERSION 3)
 set (PATCH_VERSION 0)
 
-# Support Qt5
-option(USE_QT5 "Build with Qt5." $ENV{USE_QT5})
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
-if(USE_QT5)
-  cmake_minimum_required(VERSION 2.8.11)
-  find_package(Qt5Widgets REQUIRED)
-  find_package(Qt5DBus REQUIRED)
-  find_package(Qt5PrintSupport REQUIRED QUIET)
-  find_package(Qt5X11Extras REQUIRED QUIET)
-  find_package(Qt5LinguistTools REQUIRED QUIET)
-  message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
-else()
-  find_package(Qt4 REQUIRED QtCore QtGui QtDBus)
-  include(${QT_USE_FILE})
-  message(STATUS "Building with Qt${QTVERSION}")
-endif()
+
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5DBus REQUIRED)
+find_package(Qt5PrintSupport REQUIRED QUIET)
+find_package(Qt5X11Extras REQUIRED QUIET)
+find_package(Qt5LinguistTools REQUIRED QUIET)
+message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLIB REQUIRED glib-2.0)
@@ -32,11 +24,7 @@ pkg_check_modules(GLIB REQUIRED glib-2.0)
 # FIXME: we'll need this to provide detail info for photos in the future
 pkg_check_modules(EXIF REQUIRED libexif)
 
-if(USE_QT5)
-  pkg_check_modules(LIBFM_QT REQUIRED libfm-qt5 libfm>=1.2)
-else()
-  pkg_check_modules(LIBFM_QT REQUIRED libfm-qt libfm>=1.2)
-endif()
+pkg_check_modules(LIBFM_QT REQUIRED libfm-qt5 libfm>=1.2)
 
 # TODO: make the X11 stuff optional.
 # for screenshot support
@@ -52,8 +40,8 @@ add_subdirectory(src)
 configure_file(data/lximage-qt.desktop.in lximage-qt.desktop @ONLY)
 configure_file(data/lximage-qt-screenshot.desktop.in lximage-qt-screenshot.desktop @ONLY)
 install(FILES
-	${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
-	${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop
+	"${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop"
+	"${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop"
 	DESTINATION share/applications
 )
 
