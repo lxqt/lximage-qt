@@ -138,7 +138,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="378"/>
-        <source>Zoomo &amp;Out</source>
+        <source>Zoom &amp;Out</source>
         <translation>&amp;Reducir</translation>
     </message>
     <message>

@@ -138,7 +138,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <source>Zoomo &amp;Out</source>
+        <source>Zoom &amp;Out</source>
         <translation type="obsolete">Redu&amp;zir</translation>
     </message>
     <message>

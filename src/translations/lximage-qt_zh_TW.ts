@@ -138,7 +138,7 @@ Authors:
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <source>Zoomo &amp;Out</source>
+        <source>Zoom &amp;Out</source>
         <translation type="obsolete">拉遠(&amp;O)</translation>
     </message>
     <message>
