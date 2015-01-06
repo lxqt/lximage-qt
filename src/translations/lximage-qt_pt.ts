@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="106"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[Ficheiro1, Ficheiro2,...]</translation>
+        <translation>[Ficheiro1, ficheiro2,...]</translation>
     </message>
 </context>
 <context>
@@ -30,10 +30,10 @@ LXDE Project: http://lxde.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-qt - um visualizador de imagens simples e rápido
+        <translation>LXImage - um visualizador de imagens simples e rápido
 
-Direitos de autor (C) 2013
-LXDE Project: http://lxde.org/
+Direitos de autor (C) 2013-2015
+Projeto LXDE: http://lxde.org/
 
 Autor:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
@@ -57,12 +57,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Carregamento...) - Visualizador de imagens</translation>
+        <translation>%1 (carregamento...) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="400"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Falha ao carregar) - Visualizador de imagens</translation>
+        <translation>%1 (falha ao carregar) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="404"/>
@@ -140,11 +140,6 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <source>Zoom &amp;Out</source>
         <translation type="obsolete">Redu&amp;zir</translation>
-    </message>
-    <message>
-        <location filename="../../build/src/ui_mainwindow.h" line="377"/>
-        <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="378"/>
@@ -311,7 +306,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="416"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de ferramentas</translation>
     </message>
     <message>
         <source>toolBar</source>
