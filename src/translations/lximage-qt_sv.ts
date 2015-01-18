@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.1">
 <context>
     <name>../data/lxinput.desktop.in.h:1</name>
     <message>
@@ -224,6 +224,10 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <source>Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Thumbnails</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -292,15 +296,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -411,6 +407,26 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>PgDown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Thumbnails</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PreferencesDialog</name>
@@ -419,15 +435,23 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>TODO: Add configuration options here</source>
+        <source>Icon theme:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tab 1</source>
+        <source>Normal background color:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tab 2</source>
+        <source>Fullscreen background color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slide show interval (seconds):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

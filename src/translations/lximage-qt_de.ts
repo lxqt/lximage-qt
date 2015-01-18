@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="uk">
+<TS version="2.0" language="de_DE">
 <context>
     <name>LxImage::Application</name>
     <message>
         <location filename="../application.cpp" line="112"/>
         <source>Take a screenshot</source>
-        <translation>Зробити знімок</translation>
+        <translation type="unfinished">Erstelle ein Bildschirmfoto</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="113"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[ФАЙЛ1, ФАЙЛ2,...]</translation>
+        <translation type="unfinished">[Datei1, Datei2,...]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="144"/>
         <source>About</source>
-        <translation>Про програму</translation>
+        <translation type="unfinished">Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="145"/>
@@ -30,54 +30,54 @@ LXDE Project: http://lxde.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage - простий та швидкий переглядач зображень
+        <translation type="unfinished">LXImage - ein einfacher und schneller Bildbetrachter
 
 Copyright (C) 2013
-Проект LXDE: http://lxde.org/
+LXDE Project: http://lxde.org/
 
-Автори:
+Autor:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="238"/>
         <source>Open File</source>
-        <translation>Відкрити файл</translation>
+        <translation type="unfinished">Öffne Datei</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="239"/>
         <location filename="../mainwindow.cpp" line="260"/>
         <source>Image files (%1)</source>
-        <translation>Файли зображень (%1)</translation>
+        <translation type="unfinished">Bilddateien (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="260"/>
         <source>Save File</source>
-        <translation>Зберегти файл</translation>
+        <translation type="unfinished">Speichere Datei</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="516"/>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Завантаження...) - Переглядач зображень</translation>
+        <translation type="unfinished">%1 (Lade...) - Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="521"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Невдача завантаження) - Переглядач зображень</translation>
+        <translation type="unfinished">%1 (Fehler beim Laden) - Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="525"/>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (%2x%3) - Переглядач зображень</translation>
+        <translation type="unfinished">%1 (%2x%3) - Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="535"/>
         <source>Image Viewer</source>
-        <translation>Переглядач зображень</translation>
+        <translation type="unfinished">Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Miniaturen</translation>
     </message>
 </context>
 <context>
@@ -85,97 +85,90 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="412"/>
         <source>Image Viewer</source>
-        <translation>Переглядач зображень</translation>
+        <translation type="unfinished">Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="413"/>
         <source>&amp;About</source>
-        <translation>&amp;Про програму</translation>
+        <translation type="unfinished">&amp;Über</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="414"/>
         <source>&amp;Open File</source>
-        <translation>&amp;Відкрити файл</translation>
+        <translation type="unfinished">Ö&amp;ffnen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="415"/>
         <source>Ctrl+O</source>
-        <translation>Ctrl+O</translation>
+        <translatorcomment>Shortcuts werden automatisch übersetzt</translatorcomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="416"/>
         <source>&amp;Save</source>
-        <translation>&amp;Зберегти</translation>
+        <translation type="unfinished">&amp;Speichern</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="417"/>
         <source>Ctrl+S</source>
-        <translation>Ctrl+S</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="418"/>
         <source>Save &amp;As</source>
-        <translation>Зберегти &amp;як</translation>
+        <translation type="unfinished">Speichern &amp;unter</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="419"/>
         <source>Ctrl+A</source>
-        <translation>Ctrl+A</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="420"/>
         <source>&amp;Close</source>
-        <translation>&amp;Закрити</translation>
+        <translation type="unfinished">Sch&amp;ließen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="421"/>
         <source>Ctrl+W</source>
-        <translation>Ctrl+W</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="422"/>
         <source>Zoom &amp;In</source>
-        <translation>З&amp;більшити</translation>
+        <translation type="unfinished">Ver&amp;größern</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="423"/>
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="424"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">&amp;Зменшити</translation>
+        <translation type="unfinished">Ver&amp;kleinern</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="425"/>
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="426"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Копіювати до буфера</translation>
+        <translation type="unfinished">In die &amp;Zwischenablage einfügen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="427"/>
         <location filename="../../build/src/ui_mainwindow.h" line="429"/>
         <source>Next File</source>
-        <translation>Наступний файл</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="vanished">Праворуч</translation>
+        <translation type="unfinished">Nächste Datei</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="432"/>
         <location filename="../../build/src/ui_mainwindow.h" line="434"/>
         <source>Previous File</source>
-        <translation>Попередній Файл</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="vanished">Ліворуч</translation>
+        <translation type="unfinished">Vorige Datei</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="431"/>
@@ -190,32 +183,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="437"/>
         <source>Original Size</source>
-        <translation>Оригінальний розмір</translation>
+        <translation type="unfinished">Originalgröße</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="438"/>
         <source>&amp;Fit</source>
-        <translation>&amp;Підігнати</translation>
+        <translation type="unfinished">Passen&amp;d</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="439"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Обернути за год. стрілкою</translation>
+        <translation type="unfinished">Im &amp;Uhrzeigersinn drehen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="440"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Обернути проти &amp;год. стрілки</translation>
+        <translation type="unfinished">&amp;Gegen den Uhrzeigersinn drehen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="441"/>
         <source>P&amp;references</source>
-        <translation>На&amp;лаштування</translation>
+        <translation type="unfinished">Vo&amp;rgaben</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="442"/>
         <source>&amp;Print</source>
-        <translation>&amp;Друк</translation>
+        <translation type="unfinished">&amp;Drucken</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="443"/>
@@ -225,121 +218,118 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="444"/>
         <source>First File</source>
-        <translation>Перший файл</translation>
+        <translation type="unfinished">Erste Datei</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="445"/>
         <source>Home</source>
-        <translation>Home</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="446"/>
         <source>Last File</source>
-        <translation>Останній файл</translation>
+        <translation type="unfinished">Letzte Datei</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="447"/>
         <source>End</source>
-        <translation>End</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="448"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Нове вікно</translation>
+        <translation type="unfinished">&amp;Neues Fenster</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="449"/>
         <source>Ctrl+N</source>
-        <translation>Ctrl+N</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="450"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Віддзеркалити &amp;горизонтально</translation>
+        <translation type="unfinished">&amp;Horizontal spiegeln</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="451"/>
         <source>Capture Screenshot</source>
-        <translation>Зробити знімок екрана</translation>
+        <translation type="unfinished">Bildschirmfoto erstellen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="452"/>
         <source>F&amp;ull Screen</source>
-        <translation>П&amp;овний екран</translation>
+        <translation type="unfinished">&amp;Gesamter Bildschirm</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="453"/>
         <source>F11</source>
-        <translation>F11</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="454"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Віддзеркалити &amp;вертикально</translation>
+        <translation type="unfinished">&amp;Vertikal spiegeln</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="455"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Вставити з буфера обміну</translation>
+        <translation type="unfinished">&amp;Aus Zwischenablage einfügen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="456"/>
         <source>&amp;Slide Show</source>
-        <translation>&amp;Показ слайдів</translation>
+        <translation type="unfinished">&amp;Diaschau</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="457"/>
         <source>&amp;Delete</source>
-        <translation>В&amp;илучити</translation>
+        <translation type="unfinished">&amp;Löschen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="458"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="459"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zeige Miniaturen</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="460"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Übersetzung von &apos;file&apos; weggelassen, da redundant.</translatorcomment>
+        <translation type="unfinished">Eigenschaften</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="461"/>
         <source>&amp;File</source>
-        <translation>&amp;Файл</translation>
+        <translation type="unfinished">&amp;Datei</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="462"/>
         <source>&amp;Help</source>
-        <translation>&amp;Довідка</translation>
+        <translation type="unfinished">&amp;Hilfe</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="463"/>
         <source>Go</source>
-        <translation>Перейти</translation>
+        <translation type="unfinished">Gehe zu</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="464"/>
         <source>&amp;View</source>
-        <translation>П&amp;ерегляд</translation>
+        <translation type="unfinished">&amp;Ansicht</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="465"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Редагування</translation>
+        <translation type="unfinished">&amp;Bearbeiten</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="466"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>toolBar</source>
-        <translation type="obsolete">Панель інструментів</translation>
+        <translation type="unfinished">Werkzeugleiste</translation>
     </message>
 </context>
 <context>
@@ -347,44 +337,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="125"/>
         <source>Preferences</source>
-        <translation>Налаштування</translation>
+        <translation type="unfinished">Vorgaben</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Symboldesign:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Normale Hintergrundfarbe:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vollbild-Hintergrundfarbe:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="131"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diaschau Bildwechsel (Sekunden):</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TODO: Add configuration options here</source>
-        <translation type="vanished">Далі буде...</translation>
-    </message>
-    <message>
-        <source>Tab 1</source>
-        <translation type="vanished">Вкладка 1</translation>
-    </message>
-    <message>
-        <source>Tab 2</source>
-        <translation type="vanished">Вкладка 2</translation>
+        <translation type="unfinished">Allgemein</translation>
     </message>
 </context>
 <context>
@@ -392,47 +370,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="123"/>
         <source>Screenshot</source>
-        <translation>Знімок екрану</translation>
+        <translation type="unfinished">Bildschirmfoto</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="124"/>
         <source>Take a screenshot</source>
-        <translation>Зробити знімок</translation>
+        <translation type="unfinished">Erstelle ein Bildschirmfoto</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="125"/>
         <source>Region</source>
-        <translation>Регіон</translation>
+        <translation type="unfinished">Bereich</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="126"/>
         <source>Whole screen</source>
-        <translation>Екран цілком</translation>
+        <translation type="unfinished">Genzer Bildschirm</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="127"/>
         <source>Current window only</source>
-        <translation>Лише поточне вікно</translation>
+        <translation type="unfinished">Nur aktuelles Fenster</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="128"/>
         <source>Include mouse cursor</source>
-        <translation>Включаючи вказівник миші</translation>
+        <translation type="unfinished">Einschließlich Mauszeiger</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="129"/>
         <source> seconds</source>
-        <translation> секунд</translation>
+        <translation type="unfinished"> Sekunden</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="130"/>
         <source>Delay:</source>
-        <translation>Затримка:</translation>
+        <translation type="unfinished">Verzögerung:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="131"/>
         <source>Include window title and frame</source>
-        <translation>Включаючи заголовок вікна та кадр</translation>
+        <translation type="unfinished">Einschließlich Fenstertitel und Rahmen</translation>
     </message>
 </context>
 </TS>
