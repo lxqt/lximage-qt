@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 2.8.11)
 
 project(lximage-qt)
 
+# additional cmake files
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
 set (MAJOR_VERSION 0)
 set (MINOR_VERSION 3)
 set (PATCH_VERSION 0)
@@ -35,15 +38,6 @@ pkg_check_modules(XFIXES REQUIRED xfixes)
 
 # add src subdirectory
 add_subdirectory(src)
-
-# install desktop entry files
-configure_file(data/lximage-qt.desktop.in lximage-qt.desktop @ONLY)
-configure_file(data/lximage-qt-screenshot.desktop.in lximage-qt-screenshot.desktop @ONLY)
-install(FILES
-	"${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop"
-	"${CMAKE_CURRENT_BINARY_DIR}/lximage-qt-screenshot.desktop"
-	DESTINATION share/applications
-)
 
 # install an icon for the application
 install(

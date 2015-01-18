@@ -64,9 +64,17 @@ install(FILES ${QM_FILES} DESTINATION share/lximage-qt/translations)
 # prevent the generated files from being deleted during make clean
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM true)
 
+# process desktop entry files
+include(LXQtTranslateDesktop)
+
+file(GLOB desktop_files_in ../data/*.desktop.in)
+lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in})
+install(FILES ${desktop_files} DESTINATION share/applications)
+
 add_executable(lximage-qt
     ${lximage-qt_SRCS}
     ${lximage-qt_UI_H}
+    ${desktop_files}
     ${QM_FILES}
 )
 
