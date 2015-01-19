@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<TS version="2.0" language="pt">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -77,7 +77,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Miniaturas</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="424"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Redu&amp;zir</translation>
+        <translation>Redu&amp;zir</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="425"/>
@@ -165,7 +165,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Direita</translation>
+        <translation>Direita</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="432"/>
@@ -175,17 +175,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Esquerda</translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="431"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PageDown</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="436"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PageUp</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="437"/>
@@ -220,7 +220,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="443"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="444"/>
@@ -300,12 +300,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="459"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar miniaturas</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="460"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades do ficheiro</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="461"/>
@@ -352,39 +352,39 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de ícones:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor de fundo normal:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor de fundo em ecrã completo:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="131"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo da apresentação (segundos):</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Geral</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation type="vanished">Tarefas: Adicionar opções de configuração</translation>
+        <translation>Tarefas: Adicionar opções de configuração</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation type="vanished">Separador 1</translation>
+        <translation>Separador 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation type="vanished">Separador 2</translation>
+        <translation>Separador 2</translation>
     </message>
 </context>
 <context>
