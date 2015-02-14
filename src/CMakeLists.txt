@@ -1,5 +1,5 @@
 # set visibility to hidden to hide symbols, unlesss they're exporeted manually in the code
-set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_KEYWORDS -fno-exceptions")
 
 set(QTX_INCLUDE_DIRS "")
 set(QTX_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
