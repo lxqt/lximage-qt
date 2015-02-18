@@ -1,14 +1,15 @@
-# newer cmake is required for CMAKE_AUTOMOC Qt support
 cmake_minimum_required(VERSION 2.8.11)
 
 project(lximage-qt)
 
+include(GNUInstallDirs)
+
 # additional cmake files
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-set (MAJOR_VERSION 0)
-set (MINOR_VERSION 3)
-set (PATCH_VERSION 0)
+set(MAJOR_VERSION 0)
+set(MINOR_VERSION 3)
+set(PATCH_VERSION 0)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -41,17 +42,16 @@ add_subdirectory(src)
 
 # install an icon for the application
 install(
-	FILES data/lximage-qt.png
-	# FIXME: is this the proper place to install an icon?
-	DESTINATION share/icons/hicolor/48x48/apps
+    FILES data/lximage-qt.png
+    DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps"
 )
 
 # building tarball with CPack -------------------------------------------------
-include (InstallRequiredSystemLibraries)
-set (CPACK_PACKAGE_VERSION_MAJOR ${MAJOR_VERSION})
-set (CPACK_PACKAGE_VERSION_MINOR ${MINOR_VERSION})
-set (CPACK_PACKAGE_VERSION_PATCH ${PATCH_VERSION})
-set (CPACK_GENERATOR TBZ2)
-set (CPACK_SOURCE_GENERATOR TBZ2)
-set (CPACK_SOURCE_IGNORE_FILES /build/;.gitignore;.*~;.git;.kdev4;temp)
-include (CPack)
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_VERSION_MAJOR ${MAJOR_VERSION})
+set(CPACK_PACKAGE_VERSION_MINOR ${MINOR_VERSION})
+set(CPACK_PACKAGE_VERSION_PATCH ${PATCH_VERSION})
+set(CPACK_GENERATOR TBZ2)
+set(CPACK_SOURCE_GENERATOR TBZ2)
+set(CPACK_SOURCE_IGNORE_FILES /build/;.gitignore;.*~;.git;.kdev4;temp)
+include(CPack)

@@ -1,9 +1,6 @@
 # set visibility to hidden to hide symbols, unlesss they're exporeted manually in the code
 set(CMAKE_CXX_FLAGS "-DQT_NO_KEYWORDS -fno-exceptions")
 
-set(QTX_INCLUDE_DIRS "")
-set(QTX_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
-
 include_directories(
     ${QTX_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -50,10 +47,9 @@ set(lximage-qt_UIS
 qt5_wrap_ui(lximage-qt_UI_H ${lximage-qt_UIS})
 
 # add translation for lximage-qt
-# See http://www.cmake.org/Wiki/CMake:How_To_Build_Qt4_Software
 file(GLOB TS_FILES translations/*.ts)
-option (UPDATE_TRANSLATIONS "Update source translation translations/*.ts files")
-if (UPDATE_TRANSLATIONS)
+option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files")
+if(UPDATE_TRANSLATIONS)
     qt5_create_translation(QM_FILES ${lximage-qt_SRCS} ${lximage-qt_UI_H} ${TS_FILES})
 else()
     qt5_add_translation(QM_FILES ${TS_FILES})
@@ -83,8 +79,10 @@ add_definitions(
     -DLIBFM_QT_API=Q_DECL_IMPORT    # FIXME: This should be done in libfm-qt headers instead :-(
 )
 
+set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
+
 target_link_libraries(lximage-qt
-    ${QTX_LIBRARIES}
+    ${QT_LIBRARIES}
     ${GLIB_LIBRARIES}
     ${EXIF_LIBRARIES}
     ${LIBFM_QT_LIBRARIES}
