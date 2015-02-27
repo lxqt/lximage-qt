@@ -31,7 +31,12 @@ Settings::Settings():
   showSidePane_(false),
   fullScreenBgColor_(0, 0, 0),
   fallbackIconTheme_("oxygen"),
-  slideShowInterval_(5) {
+  slideShowInterval_(5),
+  fixedWindowWidth_(640),
+  fixedWindowHeight_(480),
+  lastWindowWidth_(640),
+  lastWindowHeight_(480),
+  lastWindowMaximized_(false) {
 }
 
 Settings::~Settings() {
@@ -45,15 +50,36 @@ bool Settings::load() {
   // showThumbnails_;
   // showSidePane_;
   int slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
+  
+  settings.beginGroup("Window");
+  fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
+  fixedWindowHeight_ = settings.value("FixedHeight", 480).toInt();
+  lastWindowWidth_ = settings.value("LastWindowWidth", 640).toInt();
+  lastWindowHeight_ = settings.value("LastWindowHeight", 480).toInt();
+  lastWindowMaximized_ = settings.value("LastWindowMaximized", false).toBool();
+  rememberWindowSize_ = settings.value("RememberWindowSize", true).toBool();
+  settings.endGroup();
+  
   return true;
 }
 
 bool Settings::save() {
   QSettings settings("lximage-qt", "settings");
+  
   settings.setValue("fallbackIconTheme", fallbackIconTheme_);
   settings.setValue("bgColor", bgColor_);
   settings.setValue("fullScreenBgColor", fullScreenBgColor_);
   settings.setValue("slideShowInterval", slideShowInterval_);
+  
+  settings.beginGroup("Window");
+  settings.setValue("FixedWidth", fixedWindowWidth_);
+  settings.setValue("FixedHeight", fixedWindowHeight_);
+  settings.setValue("LastWindowWidth", lastWindowWidth_);
+  settings.setValue("LastWindowHeight", lastWindowHeight_);
+  settings.setValue("LastWindowMaximized", lastWindowMaximized_);
+  settings.setValue("RememberWindowSize", rememberWindowSize_);
+  settings.endGroup();
+  
   return true;
 }
 

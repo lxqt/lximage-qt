@@ -76,6 +76,8 @@ protected:
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
   virtual void changeEvent(QEvent * event);
+  virtual void resizeEvent(QResizeEvent *event);
+  virtual void closeEvent(QCloseEvent *event);
 
   void onImageLoaded(LoadImageJob* job);
   void onImageSaved(SaveImageJob* job);

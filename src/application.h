@@ -41,11 +41,11 @@ public:
 
   void addWindow() { // call this when you create a new toplevel window
     ++windowCount_;
-    qDebug("add");
+    qDebug("add window");
   }
 
   void removeWindow() { // call this when you destroy a toplevel window
-    qDebug("remove");
+    qDebug("remove window");
     --windowCount_;
     if(0 == windowCount_)
       quit();
@@ -60,6 +60,9 @@ public:
 public Q_SLOTS:
   void editPreferences();
   void screenshot();
+  
+protected Q_SLOTS:
+  void onAboutToQuit();
 
 private:
   Fm::LibFmQt libFm;

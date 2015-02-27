@@ -78,6 +78,63 @@ public:
   void setSlideShowInterval(int interval) {
     slideShowInterval_ = interval;
   }
+  
+  bool rememberWindowSize() const {
+    return rememberWindowSize_;
+  }
+
+  void setRememberWindowSize(bool rememberWindowSize) {
+    rememberWindowSize_ = rememberWindowSize;
+  }
+
+  int windowWidth() const {
+    if(rememberWindowSize_)
+      return lastWindowWidth_;
+    else
+      return fixedWindowWidth_;
+  }
+
+  int windowHeight() const {
+    if(rememberWindowSize_)
+      return lastWindowHeight_;
+    else
+      return fixedWindowHeight_;
+  }
+
+  bool windowMaximized() const {
+    if(rememberWindowSize_)
+      return lastWindowMaximized_;
+    else
+      return false;
+  }
+
+  int fixedWindowWidth() const {
+    return fixedWindowWidth_;
+  }
+
+  void setFixedWindowWidth(int fixedWindowWidth) {
+    fixedWindowWidth_ = fixedWindowWidth;
+  }
+
+  int fixedWindowHeight() const {
+    return fixedWindowHeight_;
+  }
+
+  void setFixedWindowHeight(int fixedWindowHeight) {
+    fixedWindowHeight_ = fixedWindowHeight;
+  }
+
+  void setLastWindowWidth(int lastWindowWidth) {
+      lastWindowWidth_ = lastWindowWidth;
+  }
+
+  void setLastWindowHeight(int lastWindowHeight) {
+      lastWindowHeight_ = lastWindowHeight;
+  }
+
+  void setLastWindowMaximized(bool lastWindowMaximized) {
+      lastWindowMaximized_ = lastWindowMaximized;
+  }
 
 private:
   bool useFallbackIconTheme_;
@@ -87,6 +144,13 @@ private:
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;
+  
+  bool rememberWindowSize_;
+  int fixedWindowWidth_;
+  int fixedWindowHeight_;
+  int lastWindowWidth_;
+  int lastWindowHeight_;
+  bool lastWindowMaximized_;
 };
 
 }

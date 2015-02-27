@@ -66,6 +66,8 @@ MainWindow::MainWindow():
   Application* app = static_cast<Application*>(qApp);
   app->addWindow();
 
+  Settings& settings = app->settings();
+  
   ui.setupUi(this);
   connect(ui.actionScreenshot, SIGNAL(triggered(bool)), app, SLOT(screenshot()));
   connect(ui.actionPreferences, SIGNAL(triggered(bool)), app ,SLOT(editPreferences()));
@@ -77,11 +79,12 @@ MainWindow::MainWindow():
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
   connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
+  
   // install an event filter on the image view
   ui.view->installEventFilter(this);
-  ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
+  ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
 
-  if(app->settings().showThumbnails())
+  if(settings.showThumbnails())
     setShowThumbnails(true);
   
   contextMenu_->addAction(ui.actionPrevious);
@@ -273,7 +276,13 @@ void MainWindow::on_actionOpenFile_triggered() {
 }
 
 void MainWindow::on_actionNewWindow_triggered() {
+  Application* app = static_cast<Application*>(qApp);
   MainWindow* window = new MainWindow();
+  window->resize(app->settings().windowWidth(), app->settings().windowHeight());
+
+  if(app->settings().windowMaximized())
+        window->setWindowState(window->windowState() | Qt::WindowMaximized);
+  
   window->show();
 }
 
@@ -777,6 +786,33 @@ void MainWindow::changeEvent(QEvent* event) {
     }
   }
   QWidget::changeEvent(event);
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event) {
+  QMainWindow::resizeEvent(event);
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+  if(settings.rememberWindowSize()) {
+    settings.setLastWindowMaximized(isMaximized());
+
+    if(!isMaximized()) {
+        settings.setLastWindowWidth(width());
+        settings.setLastWindowHeight(height());
+    }
+  }
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+  QWidget::closeEvent(event);
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+  if(settings.rememberWindowSize()) {
+    settings.setLastWindowMaximized(isMaximized());
+
+    if(!isMaximized()) {
+        settings.setLastWindowWidth(width());
+        settings.setLastWindowHeight(height());
+    }
+  }
 }
 
 void MainWindow::onContextMenu(QPoint pos) {

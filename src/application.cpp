@@ -60,7 +60,8 @@ bool Application::init(int argc, char** argv) {
     
     new ApplicationAdaptor(this);
     dbus.registerObject("/Application", this);
-    // connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
+    
+    connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
 
     if(settings_.useFallbackIconTheme())
       QIcon::setThemeName(settings_.fallbackIconTheme());
@@ -179,12 +180,22 @@ void Application::newWindow(QStringList files) {
   LxImage::MainWindow* window;
   if(files.empty()) {
     window = createWindow();
+    
+    window->resize(settings_.windowWidth(), settings_.windowHeight());
+    if(settings_.windowMaximized())
+      window->setWindowState(window->windowState() | Qt::WindowMaximized);
+    
     window->show();
   }
   else {
     Q_FOREACH(QString fileName, files) {
       window = createWindow();
       window->openImageFile(fileName);
+      
+      window->resize(settings_.windowWidth(), settings_.windowHeight());
+      if(settings_.windowMaximized())
+        window->setWindowState(window->windowState() | Qt::WindowMaximized);
+    
       window->show();
     }
   }
@@ -205,4 +216,9 @@ void Application::screenshot() {
 void Application::editPreferences() {
   PreferencesDialog* dlg = new PreferencesDialog();
   dlg->show();
+}
+
+void Application::onAboutToQuit() {
+  qDebug("aboutToQuit");
+  settings_.save();
 }
