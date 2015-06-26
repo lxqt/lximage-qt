@@ -40,7 +40,7 @@ SaveImageJob::~SaveImageJob() {
 // This is called from the worker thread, not main thread
 bool SaveImageJob::run() {
   GFile* gfile = fm_path_to_gfile(path_);
-  GFileOutputStream* fileStream = g_file_replace(gfile, NULL, false, G_FILE_CREATE_PRIVATE, cancellable_, &error_);
+  GFileOutputStream* fileStream = g_file_replace(gfile, NULL, false, G_FILE_CREATE_NONE, cancellable_, &error_);
   g_object_unref(gfile);
 
   if(fileStream) { // if the file stream is successfually opened
