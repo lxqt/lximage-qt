@@ -5,7 +5,7 @@ project(lximage-qt)
 include(GNUInstallDirs)
 
 # additional cmake files
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
 
 set(MAJOR_VERSION 0)
 set(MINOR_VERSION 4)
