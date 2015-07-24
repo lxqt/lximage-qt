@@ -19,6 +19,7 @@
 
 
 #include "application.h"
+#include <QCommandLineParser>
 #include <QDBusConnection>
 #include <QDBusInterface>
 #include <QPixmapCache>
@@ -74,80 +75,37 @@ bool Application::init(int argc, char** argv) {
 
   QPixmapCache::setCacheLimit(1024); // avoid pixmap caching.
   
-  if(!parseCommandLineArgs(argc, argv))
-    return false;
-  return true;
+  return parseCommandLineArgs();
 }
 
-bool Application::parseCommandLineArgs(int argc, char** argv) {
+bool Application::parseCommandLineArgs() {
+  QCommandLineParser parser;
+  parser.addHelpOption();
 
-  struct FakeTr {
-    FakeTr(int reserved = 20) {
-      strings.reserve(reserved);
-    }
+  QCommandLineOption screenshotOption(
+    QStringList() << "s" << "screenshot",
+    tr("Take a screenshot")
+  );
+  parser.addOption(screenshotOption);
 
-    const char* operator()(const char* str) {
-      QString translated = QApplication::translate(NULL, str);
-      strings.push_back(translated.toUtf8());
-      return strings.back().constData();
-    }
-    QVector<QByteArray> strings;
-  };
+  const QString files = tr("[FILE1, FILE2,...]");
+  parser.addPositionalArgument("files", files, files);
+
+  parser.process(*this);
+
+  const QStringList args = parser.positionalArguments();
+  const bool screenshotTool = parser.isSet(screenshotOption);
+
+  QStringList paths;
+  Q_FOREACH(QString arg, args) {
+    QFileInfo info(arg);
+    paths.push_back(info.absoluteFilePath());
+  }
 
   bool keepRunning = false;
-  // It's really a shame that the great Qt library does not come
-  // with any command line parser.
-  // After trying some Qt ways, I finally realized that glib is the best.
-  // Simple, efficient, effective, and does not use signal/slot!
-  // The only drawback is the translated string returned by tr() is
-  // a temporary one. We need to store them in a list to keep them alive. :-(
-  char** file_names = NULL;
-  gboolean screenshotTool = FALSE;
-
-  { // this block is required to limit the scope of FakeTr object so it don't affect
-    // other normal QObject::tr() outside the block.
-    FakeTr tr; // a functor used to override QObject::tr().
-    // it convert the translated strings to UTF8 and add them to a list to
-    // keep them alive during the option parsing process.
-    GOptionEntry option_entries[] = {
-      {"screenshot", 0, 0, G_OPTION_ARG_NONE, &screenshotTool, tr("Take a screenshot"), NULL},
-      {G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_FILENAME_ARRAY, &file_names, NULL, tr("[FILE1, FILE2,...]")},
-      { NULL }
-    };
-
-    GOptionContext* context = g_option_context_new("");
-    g_option_context_add_main_entries(context, option_entries, NULL);
-    GError* error = NULL;
-
-    if(!g_option_context_parse(context, &argc, &argv, &error)) {
-      // show error and exit
-      g_fprintf(stderr, "%s\n\n", error->message);
-      g_error_free(error);
-      g_option_context_free(context);
-      return false;
-    }
-    g_option_context_free(context);
-  }
-  
-  // handle files to open
-  QStringList paths;
-  if(file_names) {
-    char* cwd = g_get_current_dir();
-    for(char** filename = file_names; *filename; ++filename) {
-      // handle relative paths and remove unnecessary . & ..
-      char* canonicalName = fm_canonicalize_filename(*filename, cwd);
-      // convert from local encoding to QString (utf16).
-      QString path = QString::fromLocal8Bit(canonicalName);
-      g_free(canonicalName);
-      paths.push_back(path);
-    }
-    g_free(cwd);
-  }
-
   if(isPrimaryInstance) {
     settings_.load();
     keepRunning = true;
-
     if(screenshotTool) {
       screenshot();
     }
@@ -165,8 +123,6 @@ bool Application::parseCommandLineArgs(int argc, char** argv) {
     else
       iface.call("newWindow", paths);
   }
-  // cleanup
-  g_strfreev(file_names);
   return keepRunning;
 }
 
