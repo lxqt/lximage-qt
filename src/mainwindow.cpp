@@ -67,26 +67,26 @@ MainWindow::MainWindow():
   app->addWindow();
 
   Settings& settings = app->settings();
-  
+
   ui.setupUi(this);
   connect(ui.actionScreenshot, SIGNAL(triggered(bool)), app, SLOT(screenshot()));
   connect(ui.actionPreferences, SIGNAL(triggered(bool)), app ,SLOT(editPreferences()));
-  
+
   proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
-  
+
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
   connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
-  
+
   // install an event filter on the image view
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
 
   if(settings.showThumbnails())
     setShowThumbnails(true);
-  
+
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
   contextMenu_->addSeparator();
@@ -258,7 +258,7 @@ QString MainWindow::saveFileName(QString defaultName) {
       break;
   }
   // FIXME: should we generate better filter strings? one format per item?
-  
+
   QString fileName = QFileDialog::getSaveFileName(
     this, tr("Save File"), defaultName, tr("Image files (%1)").arg(filterStr));
 
@@ -282,7 +282,7 @@ void MainWindow::on_actionNewWindow_triggered() {
 
   if(app->settings().windowMaximized())
         window->setWindowState(window->windowState() | Qt::WindowMaximized);
-  
+
   window->show();
 }
 

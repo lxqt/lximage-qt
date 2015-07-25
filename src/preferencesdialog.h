@@ -33,7 +33,7 @@ class PreferencesDialog : public QDialog {
 public:
   explicit PreferencesDialog(QWidget* parent = 0);
   virtual ~PreferencesDialog();
-  
+
   virtual void accept();
   virtual void done(int r);
 

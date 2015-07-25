@@ -48,7 +48,7 @@ bool LoadImageJob::run() {
     GInputStream* inputStream = G_INPUT_STREAM(fileStream);
     while(!g_cancellable_is_cancelled(cancellable_)) {
       char buffer[4096];
-      gssize readSize = g_input_stream_read(inputStream, 
+      gssize readSize = g_input_stream_read(inputStream,
                                             buffer, 4096,
                                             cancellable_, &error_);
       if(readSize == -1 || readSize == 0) // error or EOF
@@ -57,7 +57,7 @@ bool LoadImageJob::run() {
         imageBuffer.buffer().append(buffer, readSize);
     }
     g_input_stream_close(inputStream, NULL, NULL);
-    
+
     // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
     if(!error_ && !g_cancellable_is_cancelled(cancellable_)) { // load the image from buffer if there are no errors
       image_ = QImage::fromData(imageBuffer.buffer());

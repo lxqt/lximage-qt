@@ -50,12 +50,12 @@ class MainWindow : public QMainWindow {
 public:
   friend class LoadImageJob;
   friend class SaveImageJob;
-  
+
   MainWindow();
   virtual ~MainWindow();
 
   void openImageFile(QString fileName);
-  
+
   QImage image() const {
     return image_;
   }
@@ -81,7 +81,7 @@ protected:
 
   void onImageLoaded(LoadImageJob* job);
   void onImageSaved(SaveImageJob* job);
-  
+
   virtual bool eventFilter(QObject* watched, QEvent* event);
 private Q_SLOTS:
   void on_actionAbout_triggered();

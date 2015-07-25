@@ -60,7 +60,7 @@ public:
 public Q_SLOTS:
   void editPreferences();
   void screenshot();
-  
+
 protected Q_SLOTS:
   void onAboutToQuit();
 

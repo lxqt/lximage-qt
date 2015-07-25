@@ -50,7 +50,7 @@ bool Settings::load() {
   // showThumbnails_;
   // showSidePane_;
   int slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
-  
+
   settings.beginGroup("Window");
   fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
   fixedWindowHeight_ = settings.value("FixedHeight", 480).toInt();
@@ -59,18 +59,18 @@ bool Settings::load() {
   lastWindowMaximized_ = settings.value("LastWindowMaximized", false).toBool();
   rememberWindowSize_ = settings.value("RememberWindowSize", true).toBool();
   settings.endGroup();
-  
+
   return true;
 }
 
 bool Settings::save() {
   QSettings settings("lximage-qt", "settings");
-  
+
   settings.setValue("fallbackIconTheme", fallbackIconTheme_);
   settings.setValue("bgColor", bgColor_);
   settings.setValue("fullScreenBgColor", fullScreenBgColor_);
   settings.setValue("slideShowInterval", slideShowInterval_);
-  
+
   settings.beginGroup("Window");
   settings.setValue("FixedWidth", fixedWindowWidth_);
   settings.setValue("FixedHeight", fixedWindowHeight_);
@@ -79,7 +79,7 @@ bool Settings::save() {
   settings.setValue("LastWindowMaximized", lastWindowMaximized_);
   settings.setValue("RememberWindowSize", rememberWindowSize_);
   settings.endGroup();
-  
+
   return true;
 }
 

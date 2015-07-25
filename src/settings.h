@@ -78,7 +78,7 @@ public:
   void setSlideShowInterval(int interval) {
     slideShowInterval_ = interval;
   }
-  
+
   bool rememberWindowSize() const {
     return rememberWindowSize_;
   }
@@ -144,7 +144,7 @@ private:
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;
-  
+
   bool rememberWindowSize_;
   int fixedWindowWidth_;
   int fixedWindowHeight_;

@@ -58,10 +58,10 @@ bool Application::init(int argc, char** argv) {
     // we successfully registered the service
     isPrimaryInstance = true;
     setQuitOnLastWindowClosed(false); // do not quit even when there're no windows
-    
+
     new ApplicationAdaptor(this);
     dbus.registerObject("/Application", this);
-    
+
     connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
 
     if(settings_.useFallbackIconTheme())
@@ -74,7 +74,7 @@ bool Application::init(int argc, char** argv) {
   }
 
   QPixmapCache::setCacheLimit(1024); // avoid pixmap caching.
-  
+
   return parseCommandLineArgs();
 }
 
@@ -136,22 +136,22 @@ void Application::newWindow(QStringList files) {
   LxImage::MainWindow* window;
   if(files.empty()) {
     window = createWindow();
-    
+
     window->resize(settings_.windowWidth(), settings_.windowHeight());
     if(settings_.windowMaximized())
       window->setWindowState(window->windowState() | Qt::WindowMaximized);
-    
+
     window->show();
   }
   else {
     Q_FOREACH(QString fileName, files) {
       window = createWindow();
       window->openImageFile(fileName);
-      
+
       window->resize(settings_.windowWidth(), settings_.windowHeight());
       if(settings_.windowMaximized())
         window->setWindowState(window->windowState() | Qt::WindowMaximized);
-    
+
       window->show();
     }
   }

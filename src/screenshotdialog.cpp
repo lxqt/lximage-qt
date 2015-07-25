@@ -47,7 +47,7 @@ ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(
 
 ScreenshotDialog::~ScreenshotDialog() {
   Application* app = static_cast<Application*>(qApp);
-  app->removeWindow();  
+  app->removeWindow();
 }
 
 void ScreenshotDialog::done(int r) {

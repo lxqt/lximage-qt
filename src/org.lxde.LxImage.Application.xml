@@ -7,7 +7,7 @@
       <!-- file paths to open in new windows -->
       <arg type="as" direction="in"/>
     </method>
-    
+
     <!-- launch a tool to take a screenshot -->
     <method name="screenshot" />
 

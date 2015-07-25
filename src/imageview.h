@@ -64,7 +64,7 @@ public:
   void setAutoZoomFit(bool value) {
     autoZoomFit_ = value;
   }
-  
+
 protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);

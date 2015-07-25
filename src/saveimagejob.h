@@ -29,7 +29,7 @@
 namespace LxImage {
 
 class MainWindow;
-  
+
 class SaveImageJob : public Job {
 
 public:
@@ -46,7 +46,7 @@ public:
 protected:
   virtual bool run();
   virtual void finish();
-  
+
 private:
   ~SaveImageJob(); // prevent direct deletion
 
