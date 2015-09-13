@@ -226,6 +226,12 @@ void ImageView::generateCache() {
   const uchar* bits = image_.constBits();
   unsigned int offset = subRect.x() * image_.depth() / 8 + subRect.y() * image_.bytesPerLine();
   QImage subImage = QImage(bits + offset, subRect.width(), subRect.height(), image_.bytesPerLine(), image_.format());
+
+  // If the original image has a color table, also use it for the subImage
+  QVector<QRgb> colorTable = image_.colorTable();
+  if (!colorTable.empty())
+    subImage.setColorTable(colorTable);
+
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
   QImage scaled = subImage.scaled(cachedRect_.width(), cachedRect_.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
