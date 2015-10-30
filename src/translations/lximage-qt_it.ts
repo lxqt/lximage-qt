@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="112"/>
+        <location filename="../application.cpp" line="87"/>
         <source>Take a screenshot</source>
         <translation>Cattura una schermata</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="91"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[File1, File2,...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="144"/>
+        <location filename="../mainwindow.cpp" line="147"/>
         <source>About</source>
         <translation>A proposito</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="145"/>
+        <location filename="../mainwindow.cpp" line="148"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -40,43 +40,43 @@ Autor:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="238"/>
+        <location filename="../mainwindow.cpp" line="241"/>
         <source>Open File</source>
         <translation>Apri file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="239"/>
-        <location filename="../mainwindow.cpp" line="260"/>
+        <location filename="../mainwindow.cpp" line="242"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Image files (%1)</source>
         <translation>File immagini (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="260"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="525"/>
         <source>%1 (Loading...) - Image Viewer</source>
         <translation>%1 (Caricando...) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
         <translation>%1 (Errore in caricamento) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="534"/>
         <source>%1 (%2x%3) - Image Viewer</source>
         <translation>%1 (%2x%3) - Visualizzatore Immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="544"/>
         <source>Image Viewer</source>
         <translation>Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
+        <location filename="../mainwindow.cpp" line="719"/>
         <source>Thumbnails</source>
         <translation>Miniature</translation>
     </message>
@@ -336,32 +336,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
 <context>
     <name>PreferencesDialog</name>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="125"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
         <source>Preferences</source>
         <translation>Preferenze</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
         <source>Icon theme:</source>
         <translation>Tema icone:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
         <source>Normal background color:</source>
         <translation>Colore sfondo:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="129"/>
         <source>Fullscreen background color:</source>
         <translation>Colore sfondo schermo intero:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="131"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
         <source>Slide show interval (seconds):</source>
         <translation>Ritardo presentazione (secondi):</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="133"/>
         <source>General</source>
         <translation>Generali</translation>
     </message>

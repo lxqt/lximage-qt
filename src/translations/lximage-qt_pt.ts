@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="112"/>
+        <location filename="../application.cpp" line="87"/>
         <source>Take a screenshot</source>
         <translation>Obter captura de ecrã</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="91"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[Ficheiro1, ficheiro2,...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="144"/>
+        <location filename="../mainwindow.cpp" line="147"/>
         <source>About</source>
         <translation>Sobre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="145"/>
+        <location filename="../mainwindow.cpp" line="148"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,43 +39,43 @@ Autor:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="238"/>
+        <location filename="../mainwindow.cpp" line="241"/>
         <source>Open File</source>
         <translation>Abrir ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="239"/>
-        <location filename="../mainwindow.cpp" line="260"/>
+        <location filename="../mainwindow.cpp" line="242"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Image files (%1)</source>
         <translation>Ficheiros de imagem (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="260"/>
+        <location filename="../mainwindow.cpp" line="263"/>
         <source>Save File</source>
         <translation>Gravar ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="525"/>
         <source>%1 (Loading...) - Image Viewer</source>
         <translation>%1 (carregamento...) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="521"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
         <translation>%1 (falha ao carregar) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="534"/>
         <source>%1 (%2x%3) - Image Viewer</source>
         <translation>%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="544"/>
         <source>Image Viewer</source>
         <translation>Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
+        <location filename="../mainwindow.cpp" line="719"/>
         <source>Thumbnails</source>
         <translation>Miniaturas</translation>
     </message>
@@ -165,7 +165,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Direita</translation>
+        <translation type="vanished">Direita</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="432"/>
@@ -175,7 +175,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Esquerda</translation>
+        <translation type="vanished">Esquerda</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="431"/>
@@ -345,46 +345,46 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
 <context>
     <name>PreferencesDialog</name>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="125"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
         <source>Preferences</source>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="126"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
         <source>Icon theme:</source>
         <translation>Tema de ícones:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
         <source>Normal background color:</source>
         <translation>Cor de fundo normal:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="129"/>
         <source>Fullscreen background color:</source>
         <translation>Cor de fundo em ecrã completo:</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="131"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
         <source>Slide show interval (seconds):</source>
         <translation>Intervalo da apresentação (segundos):</translation>
     </message>
     <message>
-        <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
+        <location filename="../../build/src/ui_preferencesdialog.h" line="133"/>
         <source>General</source>
         <translation>Geral</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation>Tarefas: Adicionar opções de configuração</translation>
+        <translation type="vanished">Tarefas: Adicionar opções de configuração</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation>Separador 1</translation>
+        <translation type="vanished">Separador 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation>Separador 2</translation>
+        <translation type="vanished">Separador 2</translation>
     </message>
 </context>
 <context>
