@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it" sourcelanguage="it">
+<TS version="2.0" language="it" sourcelanguage="it">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="147"/>
         <source>About</source>
-        <translation>A proposito</translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="148"/>
@@ -31,12 +31,12 @@ LXDE Project: http://lxde.org/
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translatorcomment>need update...</translatorcomment>
-        <translation type="unfinished">LXImage - un visualizzatore immagini semplice e veloce
+        <translation>LXImage - un visualizzatore immagini semplice e veloce
 
 Copyright (C) 2013
 LXDE Project: http://lxde.org/
 
-Autor:
+Autori:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
@@ -58,17 +58,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="525"/>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Caricando...) - Visualizzatore immagini</translation>
+        <translation>%1 (Caricamento in corso...) - Visualizzatore immagini</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="530"/>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Errore in caricamento) - Visualizzatore immagini</translation>
+        <translation>%1 (Caricamento non riuscito) - Visualizzatore immagini</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="534"/>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (%2x%3) - Visualizzatore Immagini</translation>
+        <translation>%1 (%2x%3) - Visualizzatore immagini</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="544"/>
@@ -91,12 +91,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="413"/>
         <source>&amp;About</source>
-        <translation>A &amp;proposito</translation>
+        <translation>Inform&amp;azioni</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="414"/>
         <source>&amp;Open File</source>
-        <translation>&amp;Apri</translation>
+        <translation>&amp;Apri file</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="415"/>
@@ -112,7 +112,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="417"/>
         <source>Ctrl+S</source>
-        <translation></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="418"/>
@@ -122,7 +122,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="419"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="420"/>
@@ -132,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="421"/>
         <source>Ctrl+W</source>
-        <translation></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="422"/>
@@ -142,7 +142,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="423"/>
         <source>Ctrl++</source>
-        <translation></translation>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="424"/>
@@ -152,7 +152,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="425"/>
         <source>Ctrl+-</source>
-        <translation></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="426"/>
@@ -163,13 +163,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../../build/src/ui_mainwindow.h" line="427"/>
         <location filename="../../build/src/ui_mainwindow.h" line="429"/>
         <source>Next File</source>
-        <translation>Prossimo</translation>
+        <translation>File successivo</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="432"/>
         <location filename="../../build/src/ui_mainwindow.h" line="434"/>
         <source>Previous File</source>
-        <translation>Precedente</translation>
+        <translation>File precedente</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="431"/>
@@ -179,57 +179,57 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="436"/>
         <source>PgUp</source>
-        <translation>Pagina sù</translation>
+        <translation>Pagina su</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="437"/>
         <source>Original Size</source>
-        <translation type="unfinished">&amp;Dimensioni originiali</translation>
+        <translation>Dimensioni originali</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="438"/>
         <source>&amp;Fit</source>
-        <translation>&amp;Adatta alla finestra</translation>
+        <translation>&amp;Adatta</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="439"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Gira a &amp;destra</translation>
+        <translation>&amp;Ruota in senso orario</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="440"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Gira a &amp;sinistra</translation>
+        <translation>Ruota in &amp;senso antiorario</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="441"/>
         <source>P&amp;references</source>
-        <translation>&amp;Preferenze</translation>
+        <translation>P&amp;referenze</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="442"/>
         <source>&amp;Print</source>
-        <translation>&amp;Stampa</translation>
+        <translation>Stam&amp;pa</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="443"/>
         <source>Ctrl+P</source>
-        <translation></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="444"/>
         <source>First File</source>
-        <translation>Primo</translation>
+        <translation>Primo file</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="445"/>
         <source>Home</source>
-        <translation></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="446"/>
         <source>Last File</source>
-        <translation>Ultimo</translation>
+        <translation>Ultimo file</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="447"/>
@@ -244,12 +244,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="449"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="450"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Rispecchia &amp;horizzontalmente</translation>
+        <translation>Rispecchia &amp;orizzontalmente</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="451"/>
@@ -264,7 +264,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="453"/>
         <source>F11</source>
-        <translation></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="454"/>
@@ -274,7 +274,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="455"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Incolla da appunti</translation>
+        <translation>&amp;Incolla dagli appunti</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="456"/>
@@ -284,23 +284,23 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="457"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Cestina</translation>
+        <translation>&amp;Elimina</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="458"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Canc</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="459"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished">&amp;Mostra barra miniature</translation>
+        <translation>Mostra miniature</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="460"/>
         <source>File Properties</source>
         <translatorcomment>Übersetzung von &apos;file&apos; weggelassen, da redundant.</translatorcomment>
-        <translation>Proprietà</translation>
+        <translation>Proprietà del file</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="461"/>
