@@ -1,12 +1,7 @@
 # set visibility to hidden to hide symbols, unlesss they're exporeted manually in the code
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_KEYWORDS -fno-exceptions")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
 
 include_directories(
-    ${QTX_INCLUDE_DIRS}
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${GLIB_INCLUDE_DIRS}
-    ${EXIF_INCLUDE_DIRS}
-    ${LIBFM_QT_INCLUDE_DIRS}
     ${X11_INCLUDE_DIR}
     ${XFIXES_INCLUDE_DIRS}
 )
@@ -76,16 +71,14 @@ add_executable(lximage-qt
 
 add_definitions(
     -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
-    -DLIBFM_QT_API=Q_DECL_IMPORT    # FIXME: This should be done in libfm-qt headers instead :-(
 )
 
 set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
 
 target_link_libraries(lximage-qt
+    fm-qt
     ${QT_LIBRARIES}
-    ${GLIB_LIBRARIES}
     ${EXIF_LIBRARIES}
-    ${LIBFM_QT_LIBRARIES}
     ${X11_LIBRARIES}
     ${XFIXES_LIBRARIES}
 )

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.0.2)
 
 project(lximage-qt)
 
@@ -40,15 +40,13 @@ find_package(Qt5DBus REQUIRED)
 find_package(Qt5PrintSupport REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
+find_package(fm-qt REQUIRED QUIET)
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GLIB REQUIRED glib-2.0)
 
 # FIXME: we'll need this to provide detail info for photos in the future
 pkg_check_modules(EXIF REQUIRED libexif)
-
-pkg_check_modules(LIBFM_QT REQUIRED libfm-qt5 libfm>=1.2)
 
 # TODO: make the X11 stuff optional.
 # for screenshot support
