@@ -85,7 +85,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="412"/>
         <source>Image Viewer</source>
-        <translation>Просмотрщик изоборажений</translation>
+        <translation>Просмотрщик изображений</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="413"/>
