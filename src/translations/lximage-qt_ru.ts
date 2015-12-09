@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="87"/>
         <source>Take a screenshot</source>
-        <translation>Снять снимок экрана</translation>
+        <translation>Сделать снимок экрана</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="91"/>
@@ -145,7 +145,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="424"/>
         <source>Zoom &amp;Out</source>
-        <translation>Ото&amp;двинуть</translation>
+        <translation>От&amp;далить</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="425"/>
@@ -247,12 +247,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="450"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Отобразить &amp;горизонтально</translation>
+        <translation>Отразить &amp;горизонтально</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="451"/>
         <source>Capture Screenshot</source>
-        <translation>Снять снимок экрана</translation>
+        <translation>Сделать снимок экрана</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="452"/>
@@ -267,7 +267,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="454"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Отобразить &amp;вертикально</translation>
+        <translation>Отразить &amp;вертикально</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="455"/>
@@ -373,7 +373,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="124"/>
         <source>Take a screenshot</source>
-        <translation>Снять снимок экрана</translation>
+        <translation>Сделать снимок экрана</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_screenshotdialog.h" line="125"/>
