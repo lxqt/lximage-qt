@@ -77,7 +77,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="719"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Miniaturki</translation>
     </message>
 </context>
 <context>
@@ -145,7 +145,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="424"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Po&amp;mniejsz</translation>
+        <translation>Po&amp;mniejsz</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="425"/>
@@ -300,12 +300,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="459"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż miniaturki</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="460"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Właściwości pliku</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="461"/>
@@ -335,7 +335,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_mainwindow.h" line="466"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasek narzędziowy</translation>
     </message>
     <message>
         <source>toolBar</source>
@@ -352,27 +352,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="127"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zestaw ikon:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="128"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor tła:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="129"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor tła dla pełnego ekranu:</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="132"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Interwał pokazu slajdów (sekundy):</translation>
     </message>
     <message>
         <location filename="../../build/src/ui_preferencesdialog.h" line="133"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
