@@ -150,7 +150,6 @@ void ScreenshotDialog::doScreenshot() {
     if(cursor) {
       if(cursor->pixels) { // pixles should be an ARGB array
         QImage cursorImage;
-        quint32* buf = NULL;
         if(sizeof(long) == 4) {
           // FIXME: will we encounter byte-order problems here?
           cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
@@ -160,13 +159,11 @@ void ScreenshotDialog::doScreenshot() {
           quint32* buf = new quint32[len];
           for(long i = 0; i < len; ++i)
             buf[i] = (quint32)cursor->pixels[i];
-          cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32);
+          cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) { delete[] (quint32*)b; }, buf);
         }
         // paint the cursor on the current image
         QPainter painter(&image);
         painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
-        if(buf)
-          delete []buf;
       }
       XFree(cursor);
     }
