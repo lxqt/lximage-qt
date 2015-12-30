@@ -37,6 +37,7 @@ Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
   windowCount_(0),
   libFm() {
+  setApplicationVersion(LXIMAGE_VERSION);
 }
 
 bool Application::init(int argc, char** argv) {
@@ -81,6 +82,7 @@ bool Application::init(int argc, char** argv) {
 bool Application::parseCommandLineArgs() {
   QCommandLineParser parser;
   parser.addHelpOption();
+  parser.addVersionOption();
 
   QCommandLineOption screenshotOption(
     QStringList() << "s" << "screenshot",

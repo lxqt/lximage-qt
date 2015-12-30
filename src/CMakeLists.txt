@@ -71,6 +71,7 @@ add_executable(lximage-qt
 
 add_definitions(
     -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
+    -DLXIMAGE_VERSION="${LXIMAGE_VERSION}"
 )
 
 set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
