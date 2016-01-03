@@ -35,6 +35,7 @@
 #include <QShortcut>
 #include <QDockWidget>
 #include <QScrollBar>
+#include <QDesktopWidget>
 #include "application.h"
 #include <libfm-qt/path.h>
 #include <libfm-qt/folderview.h>
@@ -437,6 +438,10 @@ void MainWindow::onImageLoaded(LoadImageJob* job) {
     // if there are errors
     // TODO: show a info bar?
   }
+
+  /* we resized and moved the window without showing
+     it in updateUI(), so we need to show it here */
+  show();
 }
 
 void MainWindow::onImageSaved(SaveImageJob* job) {
@@ -535,6 +540,33 @@ void MainWindow::updateUI() {
                   .arg(QString::fromUtf8(dispName))
                   .arg(image_.width())
                   .arg(image_.height());
+        /* Here we try to implement the following behavior as far as possible:
+             (1) A minimum size of 400x400 is assumed;
+             (2) The window is scaled to fit the image;
+             (3) But for too big images, the window is scaled down;
+             (4) The window is centered on the screen. */
+        if (!isVisible()) {
+          /* To have a correct position, we should move the window BEFORE
+             it's shown but we also need to know the dimensions of its view.
+             Therefore, we use show() without really showing the window. */
+          setAttribute(Qt::WA_DontShowOnScreen);
+          show();
+          int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+          QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
+          QRect ag = QApplication::desktop()->availableGeometry();
+          // since the window isn't decorated yet, we have to assume a max thickness for its frame
+          QSize maxFrame = QSize(50, 100);
+          if (newSize.width() > ag.width() - maxFrame.width() || newSize.height() > ag.height() - maxFrame.height())
+            newSize.scale (ag.width() - maxFrame.width(), ag.height() - maxFrame.height(), Qt::KeepAspectRatio);
+          // a minimum size of 400x400 is good
+          if (newSize.width() < 400) newSize.rwidth() = 400;
+          if (newSize.height() < 400 ) newSize.rheight() = 400;
+          move (ag.x() + (ag.width() - newSize.width())/2,
+                ag.y() + (ag.height() - newSize.height())/2);
+          resize(newSize);
+          hide(); // hide it to show it again later, at onImageLoaded()
+          setAttribute(Qt::WA_DontShowOnScreen, false);
+        }
       }
     }
     g_free(dispName);
@@ -731,6 +763,13 @@ void MainWindow::setShowThumbnails(bool show) {
       thumbnailsView_->setFixedHeight(listView->gridSize().height() + scrollHeight);
       thumbnailsView_->setModel(proxyModel_);
       proxyModel_->setShowThumbnails(true);
+      if (currentFile_) { // select the loaded image
+        currentIndex_ = indexFromPath(currentFile_);
+        listView->setCurrentIndex(currentIndex_);
+        // wait to center the selection
+        QCoreApplication::processEvents();
+        listView->scrollTo(currentIndex_, QAbstractItemView::PositionAtCenter);
+      }
       connect(thumbnailsView_->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onThumbnailSelChanged(QItemSelection,QItemSelection)));
     }
   }

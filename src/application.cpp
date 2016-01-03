@@ -154,7 +154,9 @@ void Application::newWindow(QStringList files) {
       if(settings_.windowMaximized())
         window->setWindowState(window->windowState() | Qt::WindowMaximized);
 
-      window->show();
+      /* when there's an image, we show the window AFTER resizing
+         and centering it appropriately at MainWindow::updateUI() */
+      //window->show();
     }
   }
 }
