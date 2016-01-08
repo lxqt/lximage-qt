@@ -26,6 +26,7 @@
 #include <QGraphicsRectItem>
 #include <QImage>
 #include <QPixmap>
+#include <QMovie>
 #include <QRect>
 
 class QTimer;
@@ -39,7 +40,8 @@ public:
   ImageView(QWidget* parent = 0);
   virtual ~ImageView();
 
-  void setImage(QImage image);
+  void setImage(QImage image, bool show = true);
+  void setGifAnimation(QString fileName);
 
   QImage image() {
     return image_;
@@ -83,6 +85,7 @@ private:
   QGraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
+  QMovie *gifMovie_; // gif animation to show (should be deleted explicitly)
   QPixmap cachedPixmap_; // caching of current viewport content (high quality scaled image)
   QRect cachedRect_; // rectangle containing the cached region (in viewport coordinate)
   QRect cachedSceneRect_; // rectangle containing the cached region (in scene/original image coordinate)

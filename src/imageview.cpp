@@ -26,6 +26,8 @@
 #include <QPolygon>
 #include <QDebug>
 #include <QStyle>
+#include <QLabel>
+#include <QGraphicsProxyWidget>
 
 namespace LxImage {
 
@@ -33,6 +35,7 @@ ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
   imageItem_(new QGraphicsRectItem()),
   scene_(new QGraphicsScene(this)),
+  gifMovie_(NULL),
   autoZoomFit_(false),
   cacheTimer_(NULL),
   scaleFactor_(1.0) {
@@ -48,7 +51,9 @@ ImageView::ImageView(QWidget* parent):
 }
 
 ImageView::~ImageView() {
-  delete imageItem_;
+  scene_->clear(); // deletes all items
+  if(gifMovie_)
+    delete gifMovie_;
   if(cacheTimer_) {
     cacheTimer_->stop();
     delete cacheTimer_;
@@ -130,7 +135,18 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
-void ImageView::setImage(QImage image) {
+void ImageView::setImage(QImage image, bool show) {
+  if(gifMovie_ && show) { // a gif animation was shown
+    scene_->clear();
+    delete gifMovie_;
+    gifMovie_ = NULL;
+    // recreate the rect item
+    imageItem_ = new QGraphicsRectItem();
+    imageItem_->hide();
+    imageItem_->setPen(QPen(Qt::NoPen));
+    scene_->addItem(imageItem_);
+  }
+
   image_ = image;
   if(image.isNull()) {
     imageItem_->hide();
@@ -138,15 +154,54 @@ void ImageView::setImage(QImage image) {
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
-    imageItem_->setRect(0, 0, image_.width(), image_.height());
-    imageItem_->setBrush(image_);
-    imageItem_->show();
+    if(show) {
+      imageItem_->setRect(0, 0, image_.width(), image_.height());
+      imageItem_->setBrush(image_);
+      imageItem_->show();
+    }
     scene_->setSceneRect(0, 0, image_.width(), image_.height());
   }
 
   if(autoZoomFit_)
     zoomFit();
   queueGenerateCache();
+}
+
+void ImageView::setGifAnimation(QString fileName) {
+  QImage image(fileName);
+  if(image.isNull()) {
+    image_ = QImage();
+    imageItem_->hide();
+    imageItem_->setBrush(QBrush());
+    scene_->setSceneRect(0, 0, 0, 0);
+  }
+  else {
+    scene_->clear();
+    imageItem_ = NULL; // it's deleted by clear();
+    if(gifMovie_) {
+      delete gifMovie_;
+      gifMovie_ = NULL;
+    }
+    QPixmap pix(image.size());
+    pix.fill(Qt::transparent);
+    QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
+    QLabel *gifLabel = new QLabel();
+    gifMovie_ = new QMovie(fileName);
+    QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
+    gifLabel->setAttribute(Qt::WA_NoSystemBackground);
+    gifLabel->setMovie(gifMovie_);
+    gifWidget->setWidget(gifLabel);
+    gifMovie_->start();
+    /* the first frame won't be shown but will be
+       used for tracking position and dimensions */
+    image_ = gifMovie_->currentImage();
+    scene_->addItem(gifItem);
+    scene_->setSceneRect(gifItem->boundingRect());
+  }
+
+  if(autoZoomFit_)
+    zoomFit();
+  queueGenerateCache(); // deletes the cache timer in this case
 }
 
 void ImageView::setScaleFactor(double factor) {
@@ -189,7 +244,8 @@ void ImageView::queueGenerateCache() {
     cachedPixmap_ = QPixmap();
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
-  if(scaleFactor_ == 1.0) {
+  // no cache for gif animations either
+  if(scaleFactor_ == 1.0 || gifMovie_) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
@@ -198,12 +254,13 @@ void ImageView::queueGenerateCache() {
     return;
   }
 
-  if(!cacheTimer_) {
+  if(!cacheTimer_ && !gifMovie_) {
     cacheTimer_ = new QTimer();
     cacheTimer_->setSingleShot(true);
     connect(cacheTimer_, SIGNAL(timeout()), SLOT(generateCache()));
   }
-  cacheTimer_->start(200); // restart the timer
+  if(cacheTimer_)
+    cacheTimer_->start(200); // restart the timer
 }
 
 // really generate the cache

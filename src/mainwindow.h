@@ -126,6 +126,7 @@ private:
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(FmPath* filePath);
+  QGraphicsItem* getGifItem();
 
   // GObject related signal handers and callbacks
   static void _onFolderLoaded(FmFolder* folder, MainWindow* _this) {
