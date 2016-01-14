@@ -147,6 +147,7 @@
    <addaction name="actionOriginalSize"/>
    <addaction name="separator"/>
    <addaction name="actionSlideShow"/>
+   <addaction name="actionCopyFileName"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbout">
@@ -450,6 +451,11 @@
    <property name="text">
     <string>File Properties</string>
    </property>
+  </action>
+  <action name="actionCopyFileName">
+    <property name="text">
+      <string>Copy File Name</string>
+      </property>
   </action>
  </widget>
  <customwidgets>

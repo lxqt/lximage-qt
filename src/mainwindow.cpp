@@ -104,6 +104,8 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
   contextMenu_->addAction(ui.actionFlipVertical);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionCopyFileName);
 
   // create shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
@@ -647,6 +649,12 @@ void MainWindow::on_actionCopy_triggered() {
     copiedImage = image_.scaled();
   */
   clipboard->setImage(copiedImage);
+}
+
+void MainWindow::on_actionCopyFileName_triggered() {
+  QClipboard *clipboard = QApplication::clipboard();
+  printf("Test!\n");
+  //clipboard->setImage(copiedImage);
 }
 
 void MainWindow::on_actionPaste_triggered() {

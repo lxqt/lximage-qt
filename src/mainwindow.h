@@ -86,6 +86,8 @@ protected:
 private Q_SLOTS:
   void on_actionAbout_triggered();
 
+  void on_actionCopyFileName_triggered();
+
   void on_actionOpenFile_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
