@@ -651,10 +651,13 @@ void MainWindow::on_actionCopy_triggered() {
   clipboard->setImage(copiedImage);
 }
 
+// Function for grabbing the full path of the current fil loaded.
 void MainWindow::on_actionCopyFileName_triggered() {
   QClipboard *clipboard = QApplication::clipboard();
-  printf("Test!\n");
-  //clipboard->setImage(copiedImage);
+  if(currentFile_) { //Ensure file is a valid path.
+    clipboard->setText(fm_path_to_str(currentFile_)); //Set the clipboard to be the current path of the current image.
+  }
+
 }
 
 void MainWindow::on_actionPaste_triggered() {
