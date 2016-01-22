@@ -3,3 +3,4 @@ mkdir build
 cd build
 cmake ..
 make
+./build/src/lximage-qt
