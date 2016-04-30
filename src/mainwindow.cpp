@@ -876,6 +876,7 @@ void MainWindow::changeEvent(QEvent* event) {
           addAction(action);
       }
       addActions(ui.menubar->actions());
+      ui.view->hideCursor(true);
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
@@ -890,6 +891,7 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.statusBar->show();
       if(thumbnailsDock_)
         thumbnailsDock_->show();
+      ui.view->hideCursor(false);
     }
   }
   QWidget::changeEvent(event);
