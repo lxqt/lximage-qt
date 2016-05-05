@@ -4,9 +4,6 @@ project(lximage-qt)
 
 include(GNUInstallDirs)
 
-# additional cmake files
-list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
-
 set(MAJOR_VERSION 0)
 set(MINOR_VERSION 4)
 set(PATCH_VERSION 0)
@@ -42,6 +39,7 @@ find_package(Qt5PrintSupport REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
+find_package(lxqt REQUIRED) #just a build dependency for .desktop files translation
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
 
 find_package(PkgConfig REQUIRED)
