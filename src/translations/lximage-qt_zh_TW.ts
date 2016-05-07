@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="87"/>
+        <location filename="../application.cpp" line="89"/>
         <source>Take a screenshot</source>
         <translation>拍攝螢幕快照</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="91"/>
+        <location filename="../application.cpp" line="93"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[檔案1、檔案2...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
+        <location filename="../mainwindow.cpp" line="148"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="148"/>
+        <location filename="../mainwindow.cpp" line="149"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,43 +39,43 @@ Authors:
 洪任諭 (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="241"/>
+        <location filename="../mainwindow.cpp" line="242"/>
         <source>Open File</source>
         <translation>開啟檔案</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="242"/>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="243"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Image files (%1)</source>
         <translation>影像檔案 (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Save File</source>
         <translation>儲存檔案</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
-        <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (正在載入...) - 圖片檢視程式</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="530"/>
-        <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (載入失敗) - 圖片檢視程式</translation>
+        <source>[*]%1 (Loading...) - Image Viewer</source>
+        <translation>[*]%1 (正在載入...) - 圖片檢視程式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
-        <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (%2x%3) - 圖片檢視程式</translation>
+        <location filename="../mainwindow.cpp" line="535"/>
+        <source>[*]%1 (Failed to Load) - Image Viewer</source>
+        <translation>[*]%1 (載入失敗) - 圖片檢視程式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="544"/>
-        <source>Image Viewer</source>
-        <translation>圖片檢視程式</translation>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <source>[*]%1 (%2x%3) - Image Viewer</source>
+        <translation>[*]%1 (%2x%3) - 圖片檢視程式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="719"/>
+        <location filename="../mainwindow.cpp" line="576"/>
+        <source>[*]Image Viewer</source>
+        <translation>[*]圖片檢視程式</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="819"/>
         <source>Thumbnails</source>
         <translation type="unfinished"></translation>
     </message>
