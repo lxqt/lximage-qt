@@ -209,19 +209,19 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 (Loading...) - Image Viewer</source>
+        <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 (Failed to Load) - Image Viewer</source>
+        <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 (%2x%3) - Image Viewer</source>
+        <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Image Viewer</source>
+        <source>[*]Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

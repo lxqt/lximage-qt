@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="87"/>
+        <location filename="../application.cpp" line="89"/>
         <source>Take a screenshot</source>
         <translation>Wykonaj zrzut ekranu</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="91"/>
+        <location filename="../application.cpp" line="93"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[PLIK1, PLIK2,...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
+        <location filename="../mainwindow.cpp" line="148"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="148"/>
+        <location filename="../mainwindow.cpp" line="149"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,43 +39,43 @@ Autorzy:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="241"/>
+        <location filename="../mainwindow.cpp" line="242"/>
         <source>Open File</source>
         <translation>Otwórz plik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="242"/>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="243"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Image files (%1)</source>
         <translation>Pliki obrazów (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Save File</source>
         <translation>Zapisz plik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
-        <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Wczytywanie...) - Przeglądarka obrazów</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="530"/>
-        <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Błąd wczytywania) - Przeglądarka obrazów</translation>
+        <source>[*]%1 (Loading...) - Image Viewer</source>
+        <translation>[*]%1 (Wczytywanie...) - Przeglądarka obrazów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
-        <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (%2x%3) - Przeglądarka obrazów</translation>
+        <location filename="../mainwindow.cpp" line="535"/>
+        <source>[*]%1 (Failed to Load) - Image Viewer</source>
+        <translation>[*]%1 (Błąd wczytywania) - Przeglądarka obrazów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="544"/>
-        <source>Image Viewer</source>
-        <translation>Przeglądarka obrazów</translation>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <source>[*]%1 (%2x%3) - Image Viewer</source>
+        <translation>[*]%1 (%2x%3) - Przeglądarka obrazów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="719"/>
+        <location filename="../mainwindow.cpp" line="576"/>
+        <source>[*]Image Viewer</source>
+        <translation>[*]Przeglądarka obrazów</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="819"/>
         <source>Thumbnails</source>
         <translation>Miniaturki</translation>
     </message>

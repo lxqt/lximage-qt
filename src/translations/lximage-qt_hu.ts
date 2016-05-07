@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="87"/>
+        <location filename="../application.cpp" line="89"/>
         <source>Take a screenshot</source>
         <translation>Képernyőkép</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="91"/>
+        <location filename="../application.cpp" line="93"/>
         <source>[FILE1, FILE2,...]</source>
         <translation></translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="147"/>
+        <location filename="../mainwindow.cpp" line="148"/>
         <source>About</source>
         <translation>Rólunk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="148"/>
+        <location filename="../mainwindow.cpp" line="149"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,43 +39,43 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="241"/>
+        <location filename="../mainwindow.cpp" line="242"/>
         <source>Open File</source>
         <translation>Fájl megnyitás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="242"/>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="243"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Image files (%1)</source>
         <translation>Képfájlok (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="263"/>
+        <location filename="../mainwindow.cpp" line="264"/>
         <source>Save File</source>
         <translation>Fájl mentés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
-        <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Betöltés...) - Képnéző</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="530"/>
-        <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Betöltés sikertelen) - Képnéző</translation>
+        <source>[*]%1 (Loading...) - Image Viewer</source>
+        <translation>[*]%1 (Betöltés...) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="534"/>
-        <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (Loading...) - Képnéző</translation>
+        <location filename="../mainwindow.cpp" line="535"/>
+        <source>[*]%1 (Failed to Load) - Image Viewer</source>
+        <translation>[*]%1 (Betöltés sikertelen) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="544"/>
-        <source>Image Viewer</source>
-        <translation>Képnéző</translation>
+        <location filename="../mainwindow.cpp" line="539"/>
+        <source>[*]%1 (%2x%3) - Image Viewer</source>
+        <translation>[*]%1 (Loading...) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="719"/>
+        <location filename="../mainwindow.cpp" line="576"/>
+        <source>[*]Image Viewer</source>
+        <translation>[*]Képnéző</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="819"/>
         <source>Thumbnails</source>
         <translation>Bélyegképek</translation>
     </message>
