@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="is">
+<TS version="2.1">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -158,14 +158,14 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../build/src/ui_mainwindow.h" line="432"/>
-        <location filename="../../../build/src/ui_mainwindow.h" line="434"/>
-        <source>Previous File</source>
+        <location filename="../../../build/src/ui_mainwindow.h" line="431"/>
+        <source>PgDown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../build/src/ui_mainwindow.h" line="431"/>
-        <source>PgDown</source>
+        <location filename="../../../build/src/ui_mainwindow.h" line="432"/>
+        <location filename="../../../build/src/ui_mainwindow.h" line="434"/>
+        <source>Previous File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
