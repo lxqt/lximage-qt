@@ -47,7 +47,7 @@ lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
         ${lximage-qt_SRCS}
-        ${lximage-qt_UI_H}
+        ${lximage-qt_UIS}
     INSTALL_DIR
         "${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/translations"
     PULL_TRANSLATIONS
