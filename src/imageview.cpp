@@ -29,6 +29,8 @@
 #include <QLabel>
 #include <QGraphicsProxyWidget>
 
+#define CURSOR_HIDE_DELY 3000
+
 namespace LxImage {
 
 ImageView::ImageView(QWidget* parent):
@@ -38,6 +40,7 @@ ImageView::ImageView(QWidget* parent):
   gifMovie_(NULL),
   autoZoomFit_(false),
   cacheTimer_(NULL),
+  cursorTimer_(NULL),
   scaleFactor_(1.0) {
 
   setViewportMargins(0, 0, 0, 0);
@@ -57,6 +60,10 @@ ImageView::~ImageView() {
   if(cacheTimer_) {
     cacheTimer_->stop();
     delete cacheTimer_;
+  }
+  if(cursorTimer_) {
+    cursorTimer_->stop();
+    delete cursorTimer_;
   }
 }
 
@@ -86,6 +93,34 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
   // filtered by event filter installed on the view.
   // QGraphicsView::mouseDoubleClickEvent(event);
   QAbstractScrollArea::mouseDoubleClickEvent(event);
+}
+
+void ImageView::mousePressEvent(QMouseEvent * event) {
+  QGraphicsView::mousePressEvent(event);
+  if(cursorTimer_) cursorTimer_->stop();
+}
+
+void ImageView::mouseReleaseEvent(QMouseEvent* event) {
+  QGraphicsView::mouseReleaseEvent(event);
+  if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
+}
+
+void ImageView::mouseMoveEvent(QMouseEvent* event) {
+  QGraphicsView::mouseMoveEvent(event);
+   if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
+                       || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+    cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
+    viewport()->setCursor(Qt::OpenHandCursor);
+  }
+}
+
+void ImageView::focusInEvent(QFocusEvent* event) {
+  QGraphicsView::focusInEvent(event);
+  if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
+                      || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+    cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
+    viewport()->setCursor(Qt::OpenHandCursor);
+  }
 }
 
 void ImageView::resizeEvent(QResizeEvent* event) {
@@ -317,5 +352,26 @@ QRect ImageView::sceneToViewport(const QRectF& rect) {
   return QRect(topLeft, bottomRight);
 }
 
+void ImageView::blankCursor() {
+    viewport()->setCursor(Qt::BlankCursor);
+}
+
+void ImageView::hideCursor(bool enable) {
+  if(enable) {
+    if(cursorTimer_) delete cursorTimer_;
+    cursorTimer_ = new QTimer(this);
+    cursorTimer_->setSingleShot(true);
+    connect(cursorTimer_, SIGNAL(timeout()), this, SLOT(blankCursor()));
+    if(viewport()->cursor().shape() == Qt::OpenHandCursor)
+        cursorTimer_->start(CURSOR_HIDE_DELY);
+  }
+  else if (cursorTimer_) {
+    cursorTimer_->stop();
+    delete cursorTimer_;
+    cursorTimer_ = NULL;
+    if(viewport()->cursor().shape() == Qt::BlankCursor)
+        viewport()->setCursor(Qt::OpenHandCursor);
+  }
+}
 
 } // namespace LxImage
