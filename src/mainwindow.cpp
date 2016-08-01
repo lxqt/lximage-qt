@@ -36,6 +36,7 @@
 #include <QDockWidget>
 #include <QScrollBar>
 #include <QDesktopWidget>
+#include <QGraphicsSvgItem>
 #include "application.h"
 #include <libfm-qt/path.h>
 #include <libfm-qt/folderview.h>
@@ -174,7 +175,7 @@ void MainWindow::on_actionZoomOut_triggered() {
 }
 
 void MainWindow::onFolderLoaded(FmFolder* folder) {
-  qDebug("Finish loading: %d files", proxyModel_->rowCount());
+  //qDebug("Finish loading: %d files", proxyModel_->rowCount());
   // if currently we're showing a file, get its index in the folder now
   // since the folder is fully loaded.
   if(currentFile_ && !currentIndex_.isValid()) {
@@ -354,7 +355,7 @@ void MainWindow::on_actionNext_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      qDebug("try load: %s", fm_path_get_basename(path));
+      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -365,7 +366,7 @@ void MainWindow::on_actionPrevious_triggered() {
     return;
   if(currentIndex_.isValid()) {
     QModelIndex index;
-    qDebug("current row: %d", currentIndex_.row());
+    //qDebug("current row: %d", currentIndex_.row());
     if(currentIndex_.row() > 0)
       index = proxyModel_->index(currentIndex_.row() - 1, 0);
     else
@@ -373,7 +374,7 @@ void MainWindow::on_actionPrevious_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      qDebug("try load: %s", fm_path_get_basename(path));
+      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -385,7 +386,7 @@ void MainWindow::on_actionFirst_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      qDebug("try load: %s", fm_path_get_basename(path));
+      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -397,7 +398,7 @@ void MainWindow::on_actionLast_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      qDebug("try load: %s", fm_path_get_basename(path));
+      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -601,21 +602,27 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   image_ = QImage();
 
   const char* basename = fm_path_get_basename(currentFile_);
-  char* mimeType = g_content_type_guess(basename, NULL, 0, NULL);
-  if(mimeType && strcmp(mimeType, "image/gif") == 0) {
-    g_free(mimeType);
-    char *file_Name = fm_path_to_str(currentFile_);
-    QString fileName(file_Name);
-    g_free(file_Name);
+  char* mime_type = g_content_type_guess(basename, NULL, 0, NULL);
+  QString mimeType;
+  if (mime_type) {
+    mimeType = QString(mime_type);
+    g_free(mime_type);
+  }
+  if(mimeType == "image/gif"
+     || mimeType == "image/svg+xml" || mimeType == "image/svg+xml-compressed") {
+    char *file_name = fm_path_to_str(currentFile_);
+    QString fileName(file_name);
+    g_free(file_name);
     ui.view->setAutoZoomFit(true); // like in onImageLoaded()
-    ui.view->setGifAnimation(fileName);
+    if(mimeType == "image/gif")
+      ui.view->setGifAnimation(fileName);
+    else
+      ui.view->setSVG(fileName);
     image_ = ui.view->image();
     updateUI();
     show();
   }
   else {
-    if(mimeType)
-      g_free(mimeType);
     // start a new gio job to load the specified image
     loadJob_ = new LoadImageJob(this, filePath);
     loadJob_->start();
@@ -633,55 +640,55 @@ void MainWindow::saveImage(FmPath* filePath) {
   // FIXME: add a cancel button to the UI? update status bar?
 }
 
-QGraphicsItem* MainWindow::getGifItem() {
-  if(!ui.view->items().isEmpty()) {
-    QGraphicsItem *gifItem = ui.view->items().at(0);
-    if(gifItem->isWidget()) // we have gif animation
-      return gifItem;
-  }
+QGraphicsItem* MainWindow::getGraphicsItem() {
+  if(!ui.view->items().isEmpty())
+    return ui.view->items().at(0);
   return NULL;
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *gifItem = getGifItem();
+  QGraphicsItem *graphItem = getGraphicsItem();
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    /* when this is a gif animation, we need to rotate the first frame
+    /* when this is GIF or SVG, we need to rotate its corresponding QImage
        without showing it to have the right measure for auto-zooming */
-    ui.view->setImage(image_, gifItem ? false : true);
+    ui.view->setImage(image_, graphItem->isWidget() // we have gif animation
+                              || static_cast<QGraphicsSvgItem*>(graphItem) // an SVG image
+                              ? false : true);
     setModified(true);
   }
 
-  if(gifItem) {
+  if(graphItem) {
     QTransform transform;
-    transform.translate(gifItem->sceneBoundingRect().height(), 0);
+    transform.translate(graphItem->sceneBoundingRect().height(), 0);
     transform.rotate(90);
     // we need to apply transformations in the reverse order
-    QTransform prevTrans = gifItem->transform();
-    gifItem->setTransform(transform, false);
-    gifItem->setTransform(prevTrans, true);
+    QTransform prevTrans = graphItem->transform();
+    graphItem->setTransform(transform, false);
+    graphItem->setTransform(prevTrans, true);
   }
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  QGraphicsItem *gifItem = getGifItem();
+  QGraphicsItem *graphItem = getGraphicsItem();
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(-90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    ui.view->setImage(image_, gifItem ? false : true);
+    ui.view->setImage(image_, graphItem->isWidget() || static_cast<QGraphicsSvgItem*>(graphItem)
+                              ? false : true);
     setModified(true);
   }
 
-  if(gifItem) {
+  if(graphItem) {
     QTransform transform;
-    transform.translate(0, gifItem->sceneBoundingRect().width());
+    transform.translate(0, graphItem->sceneBoundingRect().width());
     transform.rotate(-90);
-    QTransform prevTrans = gifItem->transform();
-    gifItem->setTransform(transform, false);
-    gifItem->setTransform(prevTrans, true);
+    QTransform prevTrans = graphItem->transform();
+    graphItem->setTransform(transform, false);
+    graphItem->setTransform(prevTrans, true);
   }
 }
 
@@ -708,37 +715,37 @@ void MainWindow::on_actionPaste_triggered() {
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
-  if(QGraphicsItem *gifItem = getGifItem()) {
+  bool hasQGraphicsItem(false);
+  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+    hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(1, -1);
-    transform.translate(0, -gifItem->sceneBoundingRect().height());
-    QTransform prevTrans = gifItem->transform();
-    gifItem->setTransform(transform, false);
-    gifItem->setTransform(prevTrans, true);
-    setModified(true);
-    /* we don't need to flip the first frame because its position
-       and dimensions are the same as before while it isn't shown */
+    transform.translate(0, -graphItem->sceneBoundingRect().height());
+    QTransform prevTrans = graphItem->transform();
+    graphItem->setTransform(transform, false);
+    graphItem->setTransform(prevTrans, true);
   }
-  else if(!image_.isNull()) {
+  if(!image_.isNull()) {
     image_ = image_.mirrored(false, true);
-    ui.view->setImage(image_);
+    ui.view->setImage(image_, !hasQGraphicsItem);
     setModified(true);
   }
 }
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
-  if(QGraphicsItem *gifItem = getGifItem()) {
+  bool hasQGraphicsItem(false);
+  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+    hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(-1, 1);
-    transform.translate(-gifItem->sceneBoundingRect().width(), 0);
-    QTransform prevTrans = gifItem->transform();
-    gifItem->setTransform(transform, false);
-    gifItem->setTransform(prevTrans, true);
-    setModified(true);
+    transform.translate(-graphItem->sceneBoundingRect().width(), 0);
+    QTransform prevTrans = graphItem->transform();
+    graphItem->setTransform(transform, false);
+    graphItem->setTransform(prevTrans, true);
   }
-  else if(!image_.isNull()) {
-    image_ = image_.mirrored(true, false);
-    ui.view->setImage(image_);
+  if(!image_.isNull()) {
+    image_ = image_.mirrored(true, true);
+    ui.view->setImage(image_, !hasQGraphicsItem);
     setModified(true);
   }
 }
