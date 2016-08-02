@@ -28,6 +28,7 @@
 #include <QStyle>
 #include <QLabel>
 #include <QGraphicsProxyWidget>
+#include <QGraphicsSvgItem>
 
 #define CURSOR_HIDE_DELY 3000
 
@@ -41,7 +42,8 @@ ImageView::ImageView(QWidget* parent):
   autoZoomFit_(false),
   cacheTimer_(NULL),
   cursorTimer_(NULL),
-  scaleFactor_(1.0) {
+  scaleFactor_(1.0),
+  isSVG(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -171,10 +173,13 @@ void ImageView::zoomOriginal() {
 }
 
 void ImageView::setImage(QImage image, bool show) {
-  if(gifMovie_ && show) { // a gif animation was shown
+  if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
-    delete gifMovie_;
-    gifMovie_ = NULL;
+    isSVG = false;
+    if(gifMovie_) { // should be deleted explicitly
+      delete gifMovie_;
+      gifMovie_ = NULL;
+    }
     // recreate the rect item
     imageItem_ = new QGraphicsRectItem();
     imageItem_->hide();
@@ -203,11 +208,14 @@ void ImageView::setImage(QImage image, bool show) {
 }
 
 void ImageView::setGifAnimation(QString fileName) {
-  QImage image(fileName);
-  if(image.isNull()) {
-    image_ = QImage();
-    imageItem_->hide();
-    imageItem_->setBrush(QBrush());
+  /* the built-in gif reader gives the first frame, which won't
+     be shown but is used for tracking position and dimensions */
+  image_ = QImage(fileName);
+  if(image_.isNull()) {
+    if(imageItem_) {
+      imageItem_->hide();
+      imageItem_->setBrush(QBrush());
+    }
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
@@ -217,7 +225,7 @@ void ImageView::setGifAnimation(QString fileName) {
       delete gifMovie_;
       gifMovie_ = NULL;
     }
-    QPixmap pix(image.size());
+    QPixmap pix(image_.size());
     pix.fill(Qt::transparent);
     QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
     QLabel *gifLabel = new QLabel();
@@ -227,11 +235,31 @@ void ImageView::setGifAnimation(QString fileName) {
     gifLabel->setMovie(gifMovie_);
     gifWidget->setWidget(gifLabel);
     gifMovie_->start();
-    /* the first frame won't be shown but will be
-       used for tracking position and dimensions */
-    image_ = gifMovie_->currentImage();
     scene_->addItem(gifItem);
     scene_->setSceneRect(gifItem->boundingRect());
+  }
+
+  if(autoZoomFit_)
+    zoomFit();
+  queueGenerateCache(); // deletes the cache timer in this case
+}
+
+void ImageView::setSVG(QString fileName) {
+  image_ = QImage(fileName); // for tracking position and dimensions
+  if(image_.isNull()) {
+    if(imageItem_) {
+      imageItem_->hide();
+      imageItem_->setBrush(QBrush());
+    }
+    scene_->setSceneRect(0, 0, 0, 0);
+  }
+  else {
+    scene_->clear();
+    imageItem_ = NULL;
+    isSVG = true;
+    QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
+    scene_->addItem(svgItem);
+    scene_->setSceneRect(svgItem->boundingRect());
   }
 
   if(autoZoomFit_)
@@ -250,7 +278,7 @@ void ImageView::setScaleFactor(double factor) {
 
 void ImageView::paintEvent(QPaintEvent* event) {
   // if the image is scaled and we have a high quality cached image
-  if(scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
+  if(imageItem_ && scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
     // rectangle of the whole image in viewport coordinate
     QRect viewportImageRect = sceneToViewport(imageItem_->rect());
     // the visible part of the image.
@@ -279,8 +307,8 @@ void ImageView::queueGenerateCache() {
     cachedPixmap_ = QPixmap();
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
-  // no cache for gif animations either
-  if(scaleFactor_ == 1.0 || gifMovie_) {
+  // no cache for gif animations or SVG images either
+  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
@@ -289,7 +317,7 @@ void ImageView::queueGenerateCache() {
     return;
   }
 
-  if(!cacheTimer_ && !gifMovie_) {
+  if(!cacheTimer_) {
     cacheTimer_ = new QTimer();
     cacheTimer_->setSingleShot(true);
     connect(cacheTimer_, SIGNAL(timeout()), SLOT(generateCache()));
@@ -303,6 +331,8 @@ void ImageView::generateCache() {
   // disable the one-shot timer
   cacheTimer_->deleteLater();
   cacheTimer_ = NULL;
+
+  if(!imageItem_ || image_.isNull()) return;
 
   // generate a cache for "the visible part" of the scaled image
   // rectangle of the whole image in viewport coordinate

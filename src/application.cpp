@@ -179,6 +179,6 @@ void Application::editPreferences() {
 }
 
 void Application::onAboutToQuit() {
-  qDebug("aboutToQuit");
+  //qDebug("aboutToQuit");
   settings_.save();
 }

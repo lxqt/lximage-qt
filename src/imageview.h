@@ -42,6 +42,7 @@ public:
 
   void setImage(QImage image, bool show = true);
   void setGifAnimation(QString fileName);
+  void setSVG(QString fileName);
 
   QImage image() {
     return image_;
@@ -101,6 +102,7 @@ private:
   QTimer *cursorTimer_; // for hiding cursor in fullscreen mode
   double scaleFactor_;
   bool autoZoomFit_;
+  bool isSVG; // is the image an SVG file?
 };
 
 }

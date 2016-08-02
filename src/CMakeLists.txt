@@ -81,7 +81,7 @@ add_definitions(
     -DLXIMAGE_VERSION="${LXIMAGE_VERSION}"
 )
 
-set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras)
+set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras Qt5::Svg)
 
 target_link_libraries(lximage-qt
     fm-qt

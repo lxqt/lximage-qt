@@ -38,6 +38,7 @@ find_package(Qt5DBus REQUIRED)
 find_package(Qt5PrintSupport REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
+find_package(Qt5Svg REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
 find_package(lxqt REQUIRED) #just a build dependency for .desktop files translation
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
