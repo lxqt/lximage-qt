@@ -1,6 +1,3 @@
-# set visibility to hidden to hide symbols, unlesss they're exporeted manually in the code
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
-
 include_directories(
     ${X11_INCLUDE_DIR}
     ${XFIXES_INCLUDE_DIRS}
