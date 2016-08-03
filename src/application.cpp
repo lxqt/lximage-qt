@@ -35,8 +35,8 @@ static const char* ifaceName = "org.lxde.LxImage.Application";
 
 Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
-  windowCount_(0),
-  libFm() {
+  libFm(),
+  windowCount_(0) {
   setApplicationVersion(LXIMAGE_VERSION);
 }
 

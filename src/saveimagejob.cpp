@@ -28,8 +28,8 @@ using namespace LxImage;
 
 SaveImageJob::SaveImageJob(MainWindow* window, FmPath* filePath):
   Job(),
-  path_(fm_path_ref(filePath)),
   mainWindow_(window),
+  path_(fm_path_ref(filePath)),
   image_(window->image()) {
 }
 

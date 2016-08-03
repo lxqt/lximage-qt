@@ -46,21 +46,21 @@ using namespace LxImage;
 
 MainWindow::MainWindow():
   QMainWindow(),
-  currentFile_(nullptr),
+  contextMenu_(new QMenu(this)),
   slideShowTimer_(nullptr),
+  image_(),
+  currentFile_(nullptr),
   // currentFileInfo_(nullptr),
-  loadJob_(nullptr),
-  saveJob_(nullptr),
+  imageModified_(false),
   folder_(nullptr),
   folderPath_(nullptr),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
   modelFilter_(new ModelFilter()),
-  imageModified_(false),
-  contextMenu_(new QMenu(this)),
   thumbnailsDock_(nullptr),
   thumbnailsView_(nullptr),
-  image_() {
+  loadJob_(nullptr),
+  saveJob_(nullptr) {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
 

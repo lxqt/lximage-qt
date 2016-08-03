@@ -35,7 +35,7 @@ Job::~Job() {
 
 // This is called from the worker thread, not main thread
 gboolean Job::_jobThread(GIOSchedulerJob* job, GCancellable* cancellable, Job* pThis) {
-  bool ret = pThis->run();
+  pThis->run();
   // do final step in the main thread
   if(!g_cancellable_is_cancelled(pThis->cancellable_))
     g_io_scheduler_job_send_to_mainloop(job, GSourceFunc(_finish), pThis, NULL);
