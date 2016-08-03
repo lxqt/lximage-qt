@@ -24,7 +24,6 @@
 #include <QPainter>
 #include <QTimer>
 #include <QPolygon>
-#include <QDebug>
 #include <QStyle>
 #include <QLabel>
 #include <QGraphicsProxyWidget>
@@ -38,10 +37,10 @@ ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
   imageItem_(new QGraphicsRectItem()),
   scene_(new QGraphicsScene(this)),
-  gifMovie_(NULL),
+  gifMovie_(nullptr),
   autoZoomFit_(false),
-  cacheTimer_(NULL),
-  cursorTimer_(NULL),
+  cacheTimer_(nullptr),
+  cursorTimer_(nullptr),
   scaleFactor_(1.0),
   isSVG(false) {
 
@@ -178,7 +177,7 @@ void ImageView::setImage(QImage image, bool show) {
     isSVG = false;
     if(gifMovie_) { // should be deleted explicitly
       delete gifMovie_;
-      gifMovie_ = NULL;
+      gifMovie_ = nullptr;
     }
     // recreate the rect item
     imageItem_ = new QGraphicsRectItem();
@@ -220,10 +219,10 @@ void ImageView::setGifAnimation(QString fileName) {
   }
   else {
     scene_->clear();
-    imageItem_ = NULL; // it's deleted by clear();
+    imageItem_ = nullptr; // it's deleted by clear();
     if(gifMovie_) {
       delete gifMovie_;
-      gifMovie_ = NULL;
+      gifMovie_ = nullptr;
     }
     QPixmap pix(image_.size());
     pix.fill(Qt::transparent);
@@ -255,7 +254,7 @@ void ImageView::setSVG(QString fileName) {
   }
   else {
     scene_->clear();
-    imageItem_ = NULL;
+    imageItem_ = nullptr;
     isSVG = true;
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
     scene_->addItem(svgItem);
@@ -312,7 +311,7 @@ void ImageView::queueGenerateCache() {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
-      cacheTimer_ = NULL;
+      cacheTimer_ = nullptr;
     }
     return;
   }
@@ -320,7 +319,7 @@ void ImageView::queueGenerateCache() {
   if(!cacheTimer_) {
     cacheTimer_ = new QTimer();
     cacheTimer_->setSingleShot(true);
-    connect(cacheTimer_, SIGNAL(timeout()), SLOT(generateCache()));
+    connect(cacheTimer_, &QTimer::timeout, this, &ImageView::generateCache);
   }
   if(cacheTimer_)
     cacheTimer_->start(200); // restart the timer
@@ -330,7 +329,7 @@ void ImageView::queueGenerateCache() {
 void ImageView::generateCache() {
   // disable the one-shot timer
   cacheTimer_->deleteLater();
-  cacheTimer_ = NULL;
+  cacheTimer_ = nullptr;
 
   if(!imageItem_ || image_.isNull()) return;
 
@@ -360,12 +359,6 @@ void ImageView::generateCache() {
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
   viewport()->update();
-  /*
-  qDebug() << "viewportImageRect" << viewportImageRect
-  << "cachedRect_" << cachedRect_
-  << "cachedSceneRect_" << cachedSceneRect_
-  << "subRect" << subRect;
-  */
 }
 
 // convert viewport coordinate to the original image (not scaled).
@@ -391,14 +384,14 @@ void ImageView::hideCursor(bool enable) {
     if(cursorTimer_) delete cursorTimer_;
     cursorTimer_ = new QTimer(this);
     cursorTimer_->setSingleShot(true);
-    connect(cursorTimer_, SIGNAL(timeout()), this, SLOT(blankCursor()));
+    connect(cursorTimer_, &QTimer::timeout, this, &ImageView::blankCursor);
     if(viewport()->cursor().shape() == Qt::OpenHandCursor)
         cursorTimer_->start(CURSOR_HIDE_DELY);
   }
   else if (cursorTimer_) {
     cursorTimer_->stop();
     delete cursorTimer_;
-    cursorTimer_ = NULL;
+    cursorTimer_ = nullptr;
     if(viewport()->cursor().shape() == Qt::BlankCursor)
         viewport()->setCursor(Qt::OpenHandCursor);
   }

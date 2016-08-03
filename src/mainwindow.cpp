@@ -28,7 +28,6 @@
 #include <QPainter>
 #include <QPrintDialog>
 #include <QPrinter>
-#include <QDebug>
 #include <QWheelEvent>
 #include <QMouseEvent>
 #include <QTimer>
@@ -47,20 +46,20 @@ using namespace LxImage;
 
 MainWindow::MainWindow():
   QMainWindow(),
-  currentFile_(NULL),
-  slideShowTimer_(NULL),
-  // currentFileInfo_(NULL),
-  loadJob_(NULL),
-  saveJob_(NULL),
-  folder_(NULL),
-  folderPath_(NULL),
+  currentFile_(nullptr),
+  slideShowTimer_(nullptr),
+  // currentFileInfo_(nullptr),
+  loadJob_(nullptr),
+  saveJob_(nullptr),
+  folder_(nullptr),
+  folderPath_(nullptr),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
   modelFilter_(new ModelFilter()),
   imageModified_(false),
   contextMenu_(new QMenu(this)),
-  thumbnailsDock_(NULL),
-  thumbnailsView_(NULL),
+  thumbnailsDock_(nullptr),
+  thumbnailsView_(nullptr),
   image_() {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
@@ -71,8 +70,8 @@ MainWindow::MainWindow():
   Settings& settings = app->settings();
 
   ui.setupUi(this);
-  connect(ui.actionScreenshot, SIGNAL(triggered(bool)), app, SLOT(screenshot()));
-  connect(ui.actionPreferences, SIGNAL(triggered(bool)), app ,SLOT(editPreferences()));
+  connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
+  connect(ui.actionPreferences, &QAction::triggered, app , &Application::editPreferences);
 
   proxyModel_->addFilter(modelFilter_);
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
@@ -80,7 +79,7 @@ MainWindow::MainWindow():
 
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
-  connect(ui.view, SIGNAL(customContextMenuRequested(QPoint)), SLOT(onContextMenu(QPoint)));
+  connect(ui.view, &QWidget::customContextMenuRequested, this, &MainWindow::onContextMenu);
 
   // install an event filter on the image view
   ui.view->installEventFilter(this);
@@ -108,11 +107,11 @@ MainWindow::MainWindow():
 
   // create shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
-  connect(shortcut, SIGNAL(activated()), SLOT(on_actionPrevious_triggered()));
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
   shortcut = new QShortcut(Qt::Key_Right, this);
-  connect(shortcut, SIGNAL(activated()), SLOT(on_actionNext_triggered()));
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
   shortcut = new QShortcut(Qt::Key_Escape, this);
-  connect(shortcut, SIGNAL(activated()), SLOT(onExitFullscreen()));
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::onExitFullscreen);
 }
 
 MainWindow::~MainWindow() {
@@ -175,7 +174,6 @@ void MainWindow::on_actionZoomOut_triggered() {
 }
 
 void MainWindow::onFolderLoaded(FmFolder* folder) {
-  //qDebug("Finish loading: %d files", proxyModel_->rowCount());
   // if currently we're showing a file, get its index in the folder now
   // since the folder is fully loaded.
   if(currentFile_ && !currentIndex_.isValid()) {
@@ -208,14 +206,14 @@ void MainWindow::pasteImage(QImage newImage) {
   // cancel loading of current image
   if(loadJob_) {
     loadJob_->cancel(); // the job object will be freed automatically later
-    loadJob_ = NULL;
+    loadJob_ = nullptr;
   }
   setModified(true);
 
   currentIndex_ = QModelIndex(); // invaludate current index since we don't have a folder model now
   if(currentFile_)
     fm_path_unref(currentFile_);
-  currentFile_ = NULL;
+  currentFile_ = nullptr;
 
   image_ = newImage;
   ui.view->setImage(image_);
@@ -355,7 +353,6 @@ void MainWindow::on_actionNext_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -366,7 +363,6 @@ void MainWindow::on_actionPrevious_triggered() {
     return;
   if(currentIndex_.isValid()) {
     QModelIndex index;
-    //qDebug("current row: %d", currentIndex_.row());
     if(currentIndex_.row() > 0)
       index = proxyModel_->index(currentIndex_.row() - 1, 0);
     else
@@ -374,7 +370,6 @@ void MainWindow::on_actionPrevious_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -386,7 +381,6 @@ void MainWindow::on_actionFirst_triggered() {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
       FmPath* path = fm_file_info_get_path(info);
-      //qDebug("try load: %s", fm_path_get_basename(path));
       loadImage(path, index);
     }
   }
@@ -397,8 +391,7 @@ void MainWindow::on_actionLast_triggered() {
   if(index.isValid()) {
     FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
     if(info) {
-      FmPath* path = fm_file_info_get_path(info);
-      //qDebug("try load: %s", fm_path_get_basename(path));
+      FmPath* path = fm_file_info_get_path(info);;
       loadImage(path, index);
     }
   }
@@ -424,7 +417,7 @@ void MainWindow::loadFolder(FmPath* newFolderPath) {
 
 // the image is loaded (the method is only called if the loading is not cancelled)
 void MainWindow::onImageLoaded(LoadImageJob* job) {
-  loadJob_ = NULL; // the job object will be freed later automatically
+  loadJob_ = nullptr; // the job object will be freed later automatically
 
   image_ = job->image();
   ui.view->setAutoZoomFit(true);
@@ -449,12 +442,11 @@ void MainWindow::onImageSaved(SaveImageJob* job) {
   if(!job->error()) {
     setModified(false);
   }
-  saveJob_ = NULL;
+  saveJob_ = nullptr;
 }
 
 // filter events of other objects, mainly the image view.
 bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
-  // qDebug() << event;
   if(watched == ui.view) { // we got an event for the image view
     switch(event->type()) {
       case QEvent::Wheel: { // mouse wheel event
@@ -586,7 +578,7 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   // cancel loading of current image
   if(loadJob_) {
     loadJob_->cancel(); // the job object will be freed automatically later
-    loadJob_ = NULL;
+    loadJob_ = nullptr;
   }
   if(imageModified_) {
     // TODO: ask the user to save the modified image?
@@ -643,7 +635,7 @@ void MainWindow::saveImage(FmPath* filePath) {
 QGraphicsItem* MainWindow::getGraphicsItem() {
   if(!ui.view->items().isEmpty())
     return ui.view->items().at(0);
-  return NULL;
+  return nullptr;
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
@@ -774,11 +766,9 @@ void MainWindow::on_actionPrint_triggered() {
     QRect pageRect = printer.pageRect();
     int cols = (image_.width() / pageRect.width()) + (image_.width() % pageRect.width() ? 1 : 0);
     int rows = (image_.height() / pageRect.height()) + (image_.height() % pageRect.height() ? 1 : 0);
-    // qDebug() << "page:" << printer.pageRect() << "image:" << image_.size() << "cols, rows:" << cols << rows;
     for(int row = 0; row < rows; ++row) {
       for(int col = 0; col < cols; ++col) {
         QRect srcRect(pageRect.width() * col, pageRect.height() * row, pageRect.width(), pageRect.height());
-        // qDebug() << "row:" << row << "col:" << col << "src:" << srcRect << "page:" << printer.pageRect();
         painter.drawImage(QPoint(0, 0), image_, srcRect);
         if(col + 1 == cols && row + 1 == rows) // this is the last page
           break;
@@ -802,7 +792,7 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
     if(!slideShowTimer_) {
       slideShowTimer_ = new QTimer();
       // switch to the next image when timeout
-      connect(slideShowTimer_, SIGNAL(timeout()), SLOT(on_actionNext_triggered()));
+      connect(slideShowTimer_, &QTimer::timeout, this, &MainWindow::on_actionNext_triggered);
     }
     Application* app = static_cast<Application*>(qApp);
     slideShowTimer_->start(app->settings().slideShowInterval() * 1000);
@@ -812,7 +802,7 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
   else {
     if(slideShowTimer_) {
       delete slideShowTimer_;
-      slideShowTimer_ = NULL;
+      slideShowTimer_ = nullptr;
       ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-start"));
     }
   }
@@ -845,15 +835,16 @@ void MainWindow::setShowThumbnails(bool show) {
         QCoreApplication::processEvents();
         listView->scrollTo(currentIndex_, QAbstractItemView::PositionAtCenter);
       }
-      connect(thumbnailsView_->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onThumbnailSelChanged(QItemSelection,QItemSelection)));
+      connect(thumbnailsView_->selectionModel(), &QItemSelectionModel::selectionChanged,
+              this, &MainWindow::onThumbnailSelChanged);
     }
   }
   else {
     if(thumbnailsDock_) {
       delete thumbnailsView_;
-      thumbnailsView_ = NULL;
+      thumbnailsView_ = nullptr;
       delete thumbnailsDock_;
-      thumbnailsDock_ = NULL;
+      thumbnailsDock_ = nullptr;
     }
     proxyModel_->setShowThumbnails(false);
   }

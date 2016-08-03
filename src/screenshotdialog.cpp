@@ -25,6 +25,7 @@
 #include <QPainter>
 #include "application.h"
 #include <QDesktopWidget>
+#include <QScreen>
 
 #include <QX11Info>
 #include <X11/Xlib.h>
@@ -83,7 +84,7 @@ QRect ScreenshotDialog::windowFrame(WId wid) {
     int x, y;
     // translate to root coordinate
     XTranslateCoordinates(QX11Info::display(), wid, wa.root, 0, 0, &x, &y, &child);
-    qDebug("%d, %d, %d, %d", x, y, wa.width, wa.height);
+    //qDebug("%d, %d, %d, %d", x, y, wa.width, wa.height);
     result.setRect(x, y, wa.width, wa.height);
 
     // get the frame widths added by the window manager
@@ -140,38 +141,42 @@ void ScreenshotDialog::doScreenshot() {
     }
   }
 
-  QPixmap pixmap;
-  pixmap = QPixmap::grabWindow(wid, x, y, width, height);
-  QImage image = pixmap.toImage();
+  QImage image;
+  QScreen *screen = QGuiApplication::primaryScreen();
+  if(screen) {
+    QPixmap pixmap = screen->grabWindow(wid, x, y, width, height);
+    image = pixmap.toImage();
 
-  if(hasXfixes_ && ui.includeCursor->isChecked()) {
-    // capture the cursor if needed
-    XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
-    if(cursor) {
-      if(cursor->pixels) { // pixles should be an ARGB array
-        QImage cursorImage;
-        if(sizeof(long) == 4) {
-          // FIXME: will we encounter byte-order problems here?
-          cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
+    if(hasXfixes_ && ui.includeCursor->isChecked()) {
+      // capture the cursor if needed
+      XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
+      if(cursor) {
+        if(cursor->pixels) { // pixles should be an ARGB array
+          QImage cursorImage;
+          if(sizeof(long) == 4) {
+            // FIXME: will we encounter byte-order problems here?
+            cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
+          }
+          else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
+            long len = cursor->width * cursor->height;
+            quint32* buf = new quint32[len];
+            for(long i = 0; i < len; ++i)
+              buf[i] = (quint32)cursor->pixels[i];
+            cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) { delete[] (quint32*)b; }, buf);
+          }
+          // paint the cursor on the current image
+          QPainter painter(&image);
+          painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
         }
-        else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
-          long len = cursor->width * cursor->height;
-          quint32* buf = new quint32[len];
-          for(long i = 0; i < len; ++i)
-            buf[i] = (quint32)cursor->pixels[i];
-          cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) { delete[] (quint32*)b; }, buf);
-        }
-        // paint the cursor on the current image
-        QPainter painter(&image);
-        painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
+        XFree(cursor);
       }
-      XFree(cursor);
     }
   }
 
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = app->createWindow();
-  window->pasteImage(image);
+  if(!image.isNull())
+    window->pasteImage(image);
   window->show();
 
   deleteLater(); // destroy ourself
