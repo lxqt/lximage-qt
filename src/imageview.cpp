@@ -35,13 +35,13 @@ namespace LxImage {
 
 ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
-  imageItem_(new QGraphicsRectItem()),
   scene_(new QGraphicsScene(this)),
+  imageItem_(new QGraphicsRectItem()),
   gifMovie_(nullptr),
-  autoZoomFit_(false),
   cacheTimer_(nullptr),
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
+  autoZoomFit_(false),
   isSVG(false) {
 
   setViewportMargins(0, 0, 0, 0);

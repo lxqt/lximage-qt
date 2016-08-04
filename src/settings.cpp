@@ -27,11 +27,11 @@ using namespace LxImage;
 Settings::Settings():
   useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == "hicolor"),
   bgColor_(255, 255, 255),
+  fullScreenBgColor_(0, 0, 0),
   showThumbnails_(false),
   showSidePane_(false),
-  fullScreenBgColor_(0, 0, 0),
-  fallbackIconTheme_("oxygen"),
   slideShowInterval_(5),
+  fallbackIconTheme_("oxygen"),
   fixedWindowWidth_(640),
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
@@ -49,7 +49,7 @@ bool Settings::load() {
   fullScreenBgColor_ = settings.value("fullScreenBgColor", fullScreenBgColor_).value<QColor>();
   // showThumbnails_;
   // showSidePane_;
-  int slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
+  slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
 
   settings.beginGroup("Window");
   fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
