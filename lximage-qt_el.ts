@@ -57,38 +57,38 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="530"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Φόρτωση...) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="535"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Αποτυχία φόρτωσης) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="539"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="576"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Προβολέας εικόνων</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="vanished">%1 (Φορτώνεται....) - Προβολέας εικόνων</translation>
+        <translation>%1 (Φόρτωση...) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation type="vanished">%1 (Αποτυχία φόρτωσης) - Προβολέας εικόνων</translation>
+        <translation>%1 (Αποτυχία φόρτωσης) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation type="vanished">%1 (%2x%3) - Προβολέας εικόνων</translation>
+        <translation>%1 (%2x%3) - Προβολέας εικόνων</translation>
     </message>
     <message>
         <source>Image Viewer</source>
-        <translation type="vanished">Προβολέας εικόνων</translation>
+        <translation>Προβολέας εικόνων</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="819"/>
