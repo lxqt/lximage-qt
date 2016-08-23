@@ -301,7 +301,13 @@ void MainWindow::on_actionSave_triggered() {
 void MainWindow::on_actionSaveAs_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
-  QString fileName = saveFileName(currentFile_ ? Fm::Path(currentFile_).displayName() : QString());
+  QString baseName;
+  if(currentFile_) {
+    char* dispName = fm_path_display_name(currentFile_, false);
+    baseName = QString::fromUtf8(dispName);
+    g_free(dispName);
+  }
+  QString fileName = saveFileName(baseName);
   if(!fileName.isEmpty()) {
     FmPath* path = fm_path_new_for_str(qPrintable(fileName));
     // save the image file asynchronously
