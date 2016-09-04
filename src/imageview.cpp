@@ -322,7 +322,7 @@ void ImageView::queueGenerateCache() {
     connect(cacheTimer_, &QTimer::timeout, this, &ImageView::generateCache);
   }
   if(cacheTimer_)
-    cacheTimer_->start(200); // restart the timer
+    cacheTimer_->start(); // restart the timer
 }
 
 // really generate the cache
