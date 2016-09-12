@@ -102,7 +102,8 @@ private:
   QTimer *cursorTimer_; // for hiding cursor in fullscreen mode
   double scaleFactor_;
   bool autoZoomFit_;
-  bool isSVG; // is the image an SVG file?
+  bool isSVG_; // is the image an SVG file?
+  bool isLoading_; // is the image being loaded?
 };
 
 }
