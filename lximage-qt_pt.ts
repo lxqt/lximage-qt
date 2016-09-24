@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<TS version="2.0" language="pt">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -57,38 +57,38 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="530"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (a carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="535"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (falha ao carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="539"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="576"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Visualizador de imagens</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="vanished">%1 (carregamento...) - Visualizador de imagens</translation>
+        <translation>%1 (a carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation type="vanished">%1 (falha ao carregar) - Visualizador de imagens</translation>
+        <translation>%1 (falha ao carregar) - Visualizador de imagens</translation>
     </message>
     <message>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation type="vanished">%1 (%2x%3) - Visualizador de imagens</translation>
+        <translation>%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
         <source>Image Viewer</source>
-        <translation type="vanished">Visualizador de imagens</translation>
+        <translation>Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="819"/>
@@ -181,7 +181,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Direita</translation>
+        <translation>Direita</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="273"/>
@@ -191,7 +191,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Esquerda</translation>
+        <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="263"/>
@@ -392,15 +392,15 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation type="vanished">Tarefas: Adicionar opções de configuração</translation>
+        <translation>Tarefas: Adicionar opções de configuração</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation type="vanished">Separador 1</translation>
+        <translation>Separador 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation type="vanished">Separador 2</translation>
+        <translation>Separador 2</translation>
     </message>
 </context>
 <context>
