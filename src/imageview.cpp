@@ -24,21 +24,25 @@
 #include <QPainter>
 #include <QTimer>
 #include <QPolygon>
-#include <QDebug>
 #include <QStyle>
 #include <QLabel>
 #include <QGraphicsProxyWidget>
+#include <QGraphicsSvgItem>
+
+#define CURSOR_HIDE_DELY 3000
 
 namespace LxImage {
 
 ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
-  imageItem_(new QGraphicsRectItem()),
   scene_(new QGraphicsScene(this)),
-  gifMovie_(NULL),
+  imageItem_(new QGraphicsRectItem()),
+  gifMovie_(nullptr),
+  cacheTimer_(nullptr),
+  cursorTimer_(nullptr),
+  scaleFactor_(1.0),
   autoZoomFit_(false),
-  cacheTimer_(NULL),
-  scaleFactor_(1.0) {
+  isSVG(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -57,6 +61,10 @@ ImageView::~ImageView() {
   if(cacheTimer_) {
     cacheTimer_->stop();
     delete cacheTimer_;
+  }
+  if(cursorTimer_) {
+    cursorTimer_->stop();
+    delete cursorTimer_;
   }
 }
 
@@ -86,6 +94,34 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
   // filtered by event filter installed on the view.
   // QGraphicsView::mouseDoubleClickEvent(event);
   QAbstractScrollArea::mouseDoubleClickEvent(event);
+}
+
+void ImageView::mousePressEvent(QMouseEvent * event) {
+  QGraphicsView::mousePressEvent(event);
+  if(cursorTimer_) cursorTimer_->stop();
+}
+
+void ImageView::mouseReleaseEvent(QMouseEvent* event) {
+  QGraphicsView::mouseReleaseEvent(event);
+  if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
+}
+
+void ImageView::mouseMoveEvent(QMouseEvent* event) {
+  QGraphicsView::mouseMoveEvent(event);
+   if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
+                       || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+    cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
+    viewport()->setCursor(Qt::OpenHandCursor);
+  }
+}
+
+void ImageView::focusInEvent(QFocusEvent* event) {
+  QGraphicsView::focusInEvent(event);
+  if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
+                      || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+    cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
+    viewport()->setCursor(Qt::OpenHandCursor);
+  }
 }
 
 void ImageView::resizeEvent(QResizeEvent* event) {
@@ -136,10 +172,13 @@ void ImageView::zoomOriginal() {
 }
 
 void ImageView::setImage(QImage image, bool show) {
-  if(gifMovie_ && show) { // a gif animation was shown
+  if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
-    delete gifMovie_;
-    gifMovie_ = NULL;
+    isSVG = false;
+    if(gifMovie_) { // should be deleted explicitly
+      delete gifMovie_;
+      gifMovie_ = nullptr;
+    }
     // recreate the rect item
     imageItem_ = new QGraphicsRectItem();
     imageItem_->hide();
@@ -168,21 +207,24 @@ void ImageView::setImage(QImage image, bool show) {
 }
 
 void ImageView::setGifAnimation(QString fileName) {
-  QImage image(fileName);
-  if(image.isNull()) {
-    image_ = QImage();
-    imageItem_->hide();
-    imageItem_->setBrush(QBrush());
+  /* the built-in gif reader gives the first frame, which won't
+     be shown but is used for tracking position and dimensions */
+  image_ = QImage(fileName);
+  if(image_.isNull()) {
+    if(imageItem_) {
+      imageItem_->hide();
+      imageItem_->setBrush(QBrush());
+    }
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
     scene_->clear();
-    imageItem_ = NULL; // it's deleted by clear();
+    imageItem_ = nullptr; // it's deleted by clear();
     if(gifMovie_) {
       delete gifMovie_;
-      gifMovie_ = NULL;
+      gifMovie_ = nullptr;
     }
-    QPixmap pix(image.size());
+    QPixmap pix(image_.size());
     pix.fill(Qt::transparent);
     QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
     QLabel *gifLabel = new QLabel();
@@ -192,11 +234,31 @@ void ImageView::setGifAnimation(QString fileName) {
     gifLabel->setMovie(gifMovie_);
     gifWidget->setWidget(gifLabel);
     gifMovie_->start();
-    /* the first frame won't be shown but will be
-       used for tracking position and dimensions */
-    image_ = gifMovie_->currentImage();
     scene_->addItem(gifItem);
     scene_->setSceneRect(gifItem->boundingRect());
+  }
+
+  if(autoZoomFit_)
+    zoomFit();
+  queueGenerateCache(); // deletes the cache timer in this case
+}
+
+void ImageView::setSVG(QString fileName) {
+  image_ = QImage(fileName); // for tracking position and dimensions
+  if(image_.isNull()) {
+    if(imageItem_) {
+      imageItem_->hide();
+      imageItem_->setBrush(QBrush());
+    }
+    scene_->setSceneRect(0, 0, 0, 0);
+  }
+  else {
+    scene_->clear();
+    imageItem_ = nullptr;
+    isSVG = true;
+    QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
+    scene_->addItem(svgItem);
+    scene_->setSceneRect(svgItem->boundingRect());
   }
 
   if(autoZoomFit_)
@@ -215,7 +277,7 @@ void ImageView::setScaleFactor(double factor) {
 
 void ImageView::paintEvent(QPaintEvent* event) {
   // if the image is scaled and we have a high quality cached image
-  if(scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
+  if(imageItem_ && scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
     // rectangle of the whole image in viewport coordinate
     QRect viewportImageRect = sceneToViewport(imageItem_->rect());
     // the visible part of the image.
@@ -244,20 +306,20 @@ void ImageView::queueGenerateCache() {
     cachedPixmap_ = QPixmap();
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
-  // no cache for gif animations either
-  if(scaleFactor_ == 1.0 || gifMovie_) {
+  // no cache for gif animations or SVG images either
+  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
-      cacheTimer_ = NULL;
+      cacheTimer_ = nullptr;
     }
     return;
   }
 
-  if(!cacheTimer_ && !gifMovie_) {
+  if(!cacheTimer_) {
     cacheTimer_ = new QTimer();
     cacheTimer_->setSingleShot(true);
-    connect(cacheTimer_, SIGNAL(timeout()), SLOT(generateCache()));
+    connect(cacheTimer_, &QTimer::timeout, this, &ImageView::generateCache);
   }
   if(cacheTimer_)
     cacheTimer_->start(200); // restart the timer
@@ -267,7 +329,9 @@ void ImageView::queueGenerateCache() {
 void ImageView::generateCache() {
   // disable the one-shot timer
   cacheTimer_->deleteLater();
-  cacheTimer_ = NULL;
+  cacheTimer_ = nullptr;
+
+  if(!imageItem_ || image_.isNull()) return;
 
   // generate a cache for "the visible part" of the scaled image
   // rectangle of the whole image in viewport coordinate
@@ -295,12 +359,6 @@ void ImageView::generateCache() {
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
   viewport()->update();
-  /*
-  qDebug() << "viewportImageRect" << viewportImageRect
-  << "cachedRect_" << cachedRect_
-  << "cachedSceneRect_" << cachedSceneRect_
-  << "subRect" << subRect;
-  */
 }
 
 // convert viewport coordinate to the original image (not scaled).
@@ -317,5 +375,26 @@ QRect ImageView::sceneToViewport(const QRectF& rect) {
   return QRect(topLeft, bottomRight);
 }
 
+void ImageView::blankCursor() {
+    viewport()->setCursor(Qt::BlankCursor);
+}
+
+void ImageView::hideCursor(bool enable) {
+  if(enable) {
+    if(cursorTimer_) delete cursorTimer_;
+    cursorTimer_ = new QTimer(this);
+    cursorTimer_->setSingleShot(true);
+    connect(cursorTimer_, &QTimer::timeout, this, &ImageView::blankCursor);
+    if(viewport()->cursor().shape() == Qt::OpenHandCursor)
+        cursorTimer_->start(CURSOR_HIDE_DELY);
+  }
+  else if (cursorTimer_) {
+    cursorTimer_->stop();
+    delete cursorTimer_;
+    cursorTimer_ = nullptr;
+    if(viewport()->cursor().shape() == Qt::BlankCursor)
+        viewport()->setCursor(Qt::OpenHandCursor);
+  }
+}
 
 } // namespace LxImage

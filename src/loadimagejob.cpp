@@ -29,8 +29,8 @@ using namespace LxImage;
 
 LoadImageJob::LoadImageJob(MainWindow* window, FmPath* filePath):
   Job(),
-  path_(fm_path_ref(filePath)),
-  mainWindow_(window) {
+  mainWindow_(window),
+  path_(fm_path_ref(filePath)) {
 }
 
 LoadImageJob::~LoadImageJob() {
@@ -71,7 +71,7 @@ bool LoadImageJob::run() {
           // use libexif to extract additional info embedded in jpeg files
           ExifLoader *exif_loader = exif_loader_new();
           // write image data to exif loader
-          int ret = exif_loader_write(exif_loader, (unsigned char*)imageBuffer.data().constData(), (unsigned int)imageBuffer.size());
+          exif_loader_write(exif_loader, (unsigned char*)imageBuffer.data().constData(), (unsigned int)imageBuffer.size());
           ExifData *exif_data = exif_loader_get_data(exif_loader);
           exif_loader_unref(exif_loader);
           if(exif_data) {

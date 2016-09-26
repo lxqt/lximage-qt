@@ -5,7 +5,7 @@ project(lximage-qt)
 include(GNUInstallDirs)
 
 set(MAJOR_VERSION 0)
-set(MINOR_VERSION 4)
+set(MINOR_VERSION 5)
 set(PATCH_VERSION 0)
 set(LXIMAGE_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
@@ -13,34 +13,17 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
 
-# C++ 11 support
-if (CMAKE_VERSION VERSION_LESS "3.1")
-    include(CheckCXXCompilerFlag)
-    CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
-    if(COMPILER_SUPPORTS_CXX11)
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-    else()
-        CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
-        # -std=c++0x is deprecated but some tools e.g. qmake or older gcc are still using it
-        if(COMPILER_SUPPORTS_CXX0X)
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-        else()
-            message(FATAL_ERROR "Compiler ${CMAKE_CXX_COMPILER} does not support c++11/c++0x")
-        endif()
-    endif()
-else()
-  set(CMAKE_CXX_STANDARD 11)
-endif()
-
-
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5DBus REQUIRED)
 find_package(Qt5PrintSupport REQUIRED QUIET)
 find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
+find_package(Qt5Svg REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
 find_package(lxqt REQUIRED) #just a build dependency for .desktop files translation
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
+
+include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 find_package(PkgConfig REQUIRED)
 

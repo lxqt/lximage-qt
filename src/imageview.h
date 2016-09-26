@@ -42,6 +42,7 @@ public:
 
   void setImage(QImage image, bool show = true);
   void setGifAnimation(QString fileName);
+  void setSVG(QString fileName);
 
   QImage image() {
     return image_;
@@ -67,9 +68,16 @@ public:
     autoZoomFit_ = value;
   }
 
+  // if set to true, hides the cursor after 3s of inactivity
+  void hideCursor(bool enable);
+
 protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);
+  virtual void mousePressEvent(QMouseEvent* event);
+  virtual void mouseReleaseEvent(QMouseEvent* event);
+  virtual void mouseMoveEvent(QMouseEvent* event);
+  virtual void focusInEvent(QFocusEvent* event);
   virtual void resizeEvent(QResizeEvent* event);
   virtual void paintEvent(QPaintEvent* event);
 
@@ -80,6 +88,7 @@ private:
 
 private Q_SLOTS:
   void generateCache();
+  void blankCursor();
 
 private:
   QGraphicsScene* scene_; // the topmost container of all graphic items
@@ -90,8 +99,10 @@ private:
   QRect cachedRect_; // rectangle containing the cached region (in viewport coordinate)
   QRect cachedSceneRect_; // rectangle containing the cached region (in scene/original image coordinate)
   QTimer* cacheTimer_;
+  QTimer *cursorTimer_; // for hiding cursor in fullscreen mode
   double scaleFactor_;
   bool autoZoomFit_;
+  bool isSVG; // is the image an SVG file?
 };
 
 }

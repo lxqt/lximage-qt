@@ -41,11 +41,9 @@ public:
 
   void addWindow() { // call this when you create a new toplevel window
     ++windowCount_;
-    qDebug("add window");
   }
 
   void removeWindow() { // call this when you destroy a toplevel window
-    qDebug("remove window");
     --windowCount_;
     if(0 == windowCount_)
       quit();

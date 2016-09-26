@@ -35,8 +35,8 @@ static const char* ifaceName = "org.lxde.LxImage.Application";
 
 Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
-  windowCount_(0),
-  libFm() {
+  libFm(),
+  windowCount_(0) {
   setApplicationVersion(LXIMAGE_VERSION);
 }
 
@@ -63,7 +63,7 @@ bool Application::init(int argc, char** argv) {
     new ApplicationAdaptor(this);
     dbus.registerObject("/Application", this);
 
-    connect(this, SIGNAL(aboutToQuit()), SLOT(onAboutToQuit()));
+    connect(this, &Application::aboutToQuit, this, &Application::onAboutToQuit);
 
     if(settings_.useFallbackIconTheme())
       QIcon::setThemeName(settings_.fallbackIconTheme());
@@ -179,6 +179,5 @@ void Application::editPreferences() {
 }
 
 void Application::onAboutToQuit() {
-  qDebug("aboutToQuit");
   settings_.save();
 }
