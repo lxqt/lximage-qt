@@ -646,19 +646,19 @@ QGraphicsItem* MainWindow::getGraphicsItem() {
 
 void MainWindow::on_actionRotateClockwise_triggered() {
   QGraphicsItem *graphItem = getGraphicsItem();
+  bool isGifOrSvg (graphItem->isWidget() // we have gif animation
+                   || dynamic_cast<QGraphicsSvgItem*>(graphItem)); // an SVG image;
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
     /* when this is GIF or SVG, we need to rotate its corresponding QImage
        without showing it to have the right measure for auto-zooming */
-    ui.view->setImage(image_, graphItem->isWidget() // we have gif animation
-                              || static_cast<QGraphicsSvgItem*>(graphItem) // an SVG image
-                              ? false : true);
+    ui.view->setImage(image_, isGifOrSvg ? false : true);
     setModified(true);
   }
 
-  if(graphItem) {
+  if(isGifOrSvg) {
     QTransform transform;
     transform.translate(graphItem->sceneBoundingRect().height(), 0);
     transform.rotate(90);
@@ -671,16 +671,17 @@ void MainWindow::on_actionRotateClockwise_triggered() {
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
   QGraphicsItem *graphItem = getGraphicsItem();
+  bool isGifOrSvg (graphItem->isWidget()
+                   || dynamic_cast<QGraphicsSvgItem*>(graphItem));
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(-90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    ui.view->setImage(image_, graphItem->isWidget() || static_cast<QGraphicsSvgItem*>(graphItem)
-                              ? false : true);
+    ui.view->setImage(image_, isGifOrSvg ? false : true);
     setModified(true);
   }
 
-  if(graphItem) {
+  if(isGifOrSvg) {
     QTransform transform;
     transform.translate(0, graphItem->sceneBoundingRect().width());
     transform.rotate(-90);
