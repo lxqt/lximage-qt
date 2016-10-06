@@ -19,6 +19,8 @@
 
 
 #include "mainwindow.h"
+#include <QDir>
+#include <QFileInfo>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QImage>
@@ -41,6 +43,7 @@
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
+#include <libfm-qt/fileinfo.h>
 
 using namespace LxImage;
 
@@ -193,9 +196,20 @@ void MainWindow::openImageFile(QString fileName) {
     fm_path_unref(path);
     return;
   }
-  // load the image file asynchronously
-  loadImage(path);
-  loadFolder(fm_path_get_parent(path));
+  Fm::FileInfo info = Fm::FileInfo::newFromNativeFile(nullptr,
+                                                      qPrintable(fileName),
+                                                      nullptr);
+  if (info.isDir()) {
+      QString imageString = firstImageOfDir(fileName);
+      FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
+      loadImage(imagePath);
+      fm_path_unref(imagePath);
+      loadFolder(path);
+  } else {
+      // load the image file asynchronously
+      loadImage(path);
+      loadFolder(fm_path_get_parent(path));
+  }
   fm_path_unref(path);
 }
 
@@ -266,6 +280,24 @@ QString MainWindow::saveFileName(QString defaultName) {
   if(!fileName.isEmpty() && fileName.indexOf('.') == -1)
     fileName += ".png";
   return fileName;
+}
+
+QString MainWindow::firstImageOfDir(QString dirname)
+{
+    QList<QByteArray> formatsBytes = QImageReader::supportedImageFormats();
+    QStringList formats;
+    for (const QByteArray& formatBytes: formatsBytes) {
+        formats << QString("*.") + formatBytes;
+    }
+    QDir dir(dirname);
+    dir.setNameFilters(formats);
+    dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+    dir.setSorting(QDir::Name);
+    QList<QFileInfo> imageFiles = dir.entryInfoList();
+    if (!imageFiles.empty()) {
+        return imageFiles.first().absoluteFilePath();
+    }
+    return QString();
 }
 
 void MainWindow::on_actionOpenFile_triggered() {

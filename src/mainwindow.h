@@ -75,6 +75,7 @@ protected:
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
+  QString firstImageOfDir(QString dirname);
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
   virtual void closeEvent(QCloseEvent *event);
