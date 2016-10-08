@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.0.2)
-
 project(lximage-qt)
 
 include(GNUInstallDirs)
@@ -11,9 +10,9 @@ set(LXIMAGE_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
 set(LXQTBT_MINIMUM_VERSION "0.1.0")
 
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(CMAKE_AUTOMOC ON)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5DBus REQUIRED)
