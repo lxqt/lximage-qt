@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt">
+<TS version="2.1" language="pt">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -30,9 +30,9 @@ LXDE Project: http://lxde.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage - um visualizador de imagens simples e rápido
+        <translation>LXImage-Qt - um visualizador de imagens simples e rápido
 
-Direitos de autor (C) 2013-2015
+Direitos de autor (C) 2013-2016
 Projeto LXDE: http://lxde.org/
 
 Autor:
@@ -52,7 +52,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="264"/>
         <source>Save File</source>
-        <translation>Gravar ficheiro</translation>
+        <translation>Guardar ficheiro</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="530"/>
@@ -121,7 +121,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="182"/>
         <source>&amp;Save</source>
-        <translation>&amp;Gravar</translation>
+        <translation>&amp;Guardar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="185"/>
@@ -131,7 +131,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="195"/>
         <source>Save &amp;As</source>
-        <translation>Gravar &amp;como</translation>
+        <translation>Guardar &amp;como</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="198"/>
@@ -177,7 +177,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../../mainwindow.ui" line="257"/>
         <location filename="../../mainwindow.ui" line="260"/>
         <source>Next File</source>
-        <translation>Próximo ficheiro</translation>
+        <translation>Ficheiro seguinte</translation>
     </message>
     <message>
         <source>Right</source>
@@ -306,7 +306,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="435"/>
         <source>&amp;Delete</source>
-        <translation>E&amp;liminar</translation>
+        <translation>&amp;Apagar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="438"/>
@@ -383,7 +383,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Intervalo da apresentação (segundos):</translation>
+        <translation>Intervalo entre imagens (segundos):</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="24"/>
@@ -438,7 +438,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="68"/>
         <source> seconds</source>
-        <translation>segundos</translation>
+        <translation> segundos</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="85"/>
