@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.0.2)
-
 project(lximage-qt)
 
 include(GNUInstallDirs)
@@ -9,9 +8,11 @@ set(MINOR_VERSION 5)
 set(PATCH_VERSION 0)
 set(LXIMAGE_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
+set(LXQTBT_MINIMUM_VERSION "0.1.0")
+
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(CMAKE_AUTOMOC ON)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5DBus REQUIRED)
@@ -20,7 +21,7 @@ find_package(Qt5X11Extras REQUIRED QUIET)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(Qt5Svg REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
-find_package(lxqt REQUIRED) #just a build dependency for .desktop files translation
+find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
