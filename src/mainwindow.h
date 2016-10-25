@@ -75,6 +75,7 @@ protected:
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
+  QString openDirectory();
   QString firstImageOfDir(QString dirname);
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
@@ -88,6 +89,7 @@ private Q_SLOTS:
   void on_actionAbout_triggered();
 
   void on_actionOpenFile_triggered();
+  void on_actionOpenDirectory_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();

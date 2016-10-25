@@ -257,6 +257,12 @@ QString MainWindow::openFileName() {
   return fileName;
 }
 
+QString MainWindow::openDirectory() {
+  QString directory = QFileDialog::getExistingDirectory(this,
+          tr("Open directory"), QString());
+  return directory;
+}
+
 // popup a file dialog and retrieve the selected image file name
 QString MainWindow::saveFileName(QString defaultName) {
   QString filterStr;
@@ -304,6 +310,13 @@ void MainWindow::on_actionOpenFile_triggered() {
   QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
+  }
+}
+
+void MainWindow::on_actionOpenDirectory_triggered() {
+  QString directory = openDirectory();
+  if(!directory.isEmpty()) {
+    openImageFile(directory);
   }
 }
 

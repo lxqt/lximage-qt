@@ -56,6 +56,7 @@
     </property>
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
+    <addaction name="actionOpenDirectory"/>
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
@@ -452,6 +453,17 @@
   <action name="actionFileProperties">
    <property name="text">
     <string>File Properties</string>
+   </property>
+  </action>
+  <action name="actionOpenDirectory">
+   <property name="icon">
+    <iconset theme="document-open"/>
+   </property>
+   <property name="text">
+    <string>Open &amp;Directory</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
  </widget>
