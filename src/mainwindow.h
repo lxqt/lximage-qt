@@ -74,6 +74,7 @@ protected:
   void saveImage(FmPath* filePath); // save current image to a file
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
+  QString openDirectory();
   QString saveFileName(QString defaultName = QString());
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
@@ -87,6 +88,7 @@ private Q_SLOTS:
   void on_actionAbout_triggered();
 
   void on_actionOpenFile_triggered();
+  void on_actionOpenDirectory_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();
@@ -127,6 +129,7 @@ private:
   void setModified(bool modified);
   QModelIndex indexFromPath(FmPath* filePath);
   QGraphicsItem* getGraphicsItem();
+  bool dirHasImage(QString dirname);
 
   // GObject related signal handers and callbacks
   static void _onFolderLoaded(FmFolder* folder, MainWindow* _this) {

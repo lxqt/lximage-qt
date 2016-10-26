@@ -19,6 +19,8 @@
 
 
 #include "mainwindow.h"
+#include <QDir>
+#include <QFileInfo>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QImage>
@@ -184,6 +186,9 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
       thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
     }
   }
+  // this is used to open the first image of a folder
+  if (!currentFile_)
+    on_actionFirst_triggered();
 }
 
 void MainWindow::openImageFile(QString fileName) {
@@ -193,10 +198,33 @@ void MainWindow::openImageFile(QString fileName) {
     fm_path_unref(path);
     return;
   }
-  // load the image file asynchronously
-  loadImage(path);
-  loadFolder(fm_path_get_parent(path));
+  if (QFileInfo(fileName).isDir()) {
+    if(fm_path_equal(path, folderPath_) || !dirHasImage(fileName)) {
+      fm_path_unref(path);
+      return;
+    }
+    if(currentFile_)
+      fm_path_unref(currentFile_);
+    currentFile_ = nullptr;
+    loadFolder(path);
+  } else {
+    // load the image file asynchronously
+    loadImage(path);
+    loadFolder(fm_path_get_parent(path));
+  }
   fm_path_unref(path);
+}
+
+bool MainWindow::dirHasImage(QString dirname)
+{
+  QList<QByteArray> formats = QImageReader::supportedImageFormats();
+  QStringList formatsFilters;
+  for (const QByteArray& format: formats)
+    formatsFilters << QString("*.") + format;
+  QDir dir(dirname);
+  dir.setNameFilters(formatsFilters);
+  dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+  return !dir.entryList().isEmpty();
 }
 
 // paste the specified image into the current view,
@@ -243,6 +271,12 @@ QString MainWindow::openFileName() {
   return fileName;
 }
 
+QString MainWindow::openDirectory() {
+  QString directory = QFileDialog::getExistingDirectory(this,
+          tr("Open directory"), QString());
+  return directory;
+}
+
 // popup a file dialog and retrieve the selected image file name
 QString MainWindow::saveFileName(QString defaultName) {
   QString filterStr;
@@ -272,6 +306,13 @@ void MainWindow::on_actionOpenFile_triggered() {
   QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
+  }
+}
+
+void MainWindow::on_actionOpenDirectory_triggered() {
+  QString directory = openDirectory();
+  if(!directory.isEmpty()) {
+    openImageFile(directory);
   }
 }
 
