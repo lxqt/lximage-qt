@@ -345,7 +345,7 @@ void MainWindow::on_actionOpenFile_triggered() {
 void MainWindow::on_actionOpenDirectory_triggered() {
   QString directory = openDirectory();
   if(!directory.isEmpty()) {
-    openImageFile(directory);
+    openImageDirectory(directory);
   }
 }
 
