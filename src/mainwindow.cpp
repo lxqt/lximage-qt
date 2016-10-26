@@ -45,7 +45,6 @@
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
-#include <libfm-qt/fileinfo.h>
 
 using namespace LxImage;
 
@@ -198,10 +197,7 @@ void MainWindow::openImageFile(QString fileName) {
     fm_path_unref(path);
     return;
   }
-  Fm::FileInfo info = Fm::FileInfo::newFromNativeFile(nullptr,
-                                                      qPrintable(fileName),
-                                                      nullptr);
-  if (info.isDir()) {
+  if (QFileInfo(fileName).isDir()) {
       QString imageString = findFirstImageOfDir(fileName);
       FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
       loadImage(imagePath);
