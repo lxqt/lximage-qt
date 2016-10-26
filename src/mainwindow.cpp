@@ -313,7 +313,7 @@ QString MainWindow::findFirstImageOfDir(QString dirname)
 
     QCollator collator;
     collator.setNumericMode(true);
-    std::sort(files.begin(), files.end(),
+    std::partial_sort(files.begin(), files.begin() + 1, files.end(),
             [&collator](const QString& file1, const QString& file2)
             {
                 return collator.compare(file1, file2) < 0;
