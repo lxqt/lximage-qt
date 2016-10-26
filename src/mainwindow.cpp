@@ -301,38 +301,38 @@ QString MainWindow::saveFileName(QString defaultName) {
 
 QStringList MainWindow::getImageFormatsFilters()
 {
-    QList<QByteArray> formats = QImageReader::supportedImageFormats();
-    QStringList formatsFilters;
-    for (const QByteArray& format: formats) {
-        formatsFilters << QString("*.") + format;
-    }
-    return formatsFilters;
+  QList<QByteArray> formats = QImageReader::supportedImageFormats();
+  QStringList formatsFilters;
+  for (const QByteArray& format: formats) {
+    formatsFilters << QString("*.") + format;
+  }
+  return formatsFilters;
 }
 
 QString MainWindow::findFirstImageOfDir(QString dirname)
 {
-    auto formatsFilters = getImageFormatsFilters();
+  auto formatsFilters = getImageFormatsFilters();
 
-    QDir dir(dirname);
-    dir.setNameFilters(formatsFilters);
-    dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
-    dir.setSorting(QDir::NoSort);
+  QDir dir(dirname);
+  dir.setNameFilters(formatsFilters);
+  dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+  dir.setSorting(QDir::NoSort);
 
-    auto files = dir.entryList();
+  auto files = dir.entryList();
 
-    if (files.empty()) {
-        return QString();
-    }
+  if (files.empty()) {
+    return QString();
+  }
 
-    QCollator collator;
-    collator.setNumericMode(true);
-    std::partial_sort(files.begin(), files.begin() + 1, files.end(),
-            [&collator](const QString& file1, const QString& file2)
-            {
-                return collator.compare(file1, file2) < 0;
-            });
+  QCollator collator;
+  collator.setNumericMode(true);
+  std::partial_sort(files.begin(), files.begin() + 1, files.end(),
+          [&collator](const QString& file1, const QString& file2)
+          {
+              return collator.compare(file1, file2) < 0;
+          });
 
-    return dir.absoluteFilePath(files.first());
+  return dir.absoluteFilePath(files.first());
 }
 
 void MainWindow::on_actionOpenFile_triggered() {
