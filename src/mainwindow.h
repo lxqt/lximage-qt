@@ -54,7 +54,7 @@ public:
   MainWindow();
   virtual ~MainWindow();
 
-  void openImageFile(QString fileName);
+  void openPath(QString fileName);
 
   QImage image() const {
     return image_;
@@ -75,6 +75,9 @@ protected:
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
+  void openImageDirectory(const QString& path);
+  bool isFileLoaded(FmPath* path);
+  void openImageFile(QString fileName);
   QString openDirectory();
   QStringList getImageFormatsFilters();
   QString findFirstImageOfDir(QString dirname);

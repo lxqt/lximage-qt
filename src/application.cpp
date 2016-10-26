@@ -148,7 +148,7 @@ void Application::newWindow(QStringList files) {
   else {
     Q_FOREACH(QString fileName, files) {
       window = createWindow();
-      window->openImageFile(fileName);
+      window->openPath(fileName);
 
       window->resize(settings_.windowWidth(), settings_.windowHeight());
       if(settings_.windowMaximized())

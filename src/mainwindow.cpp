@@ -190,24 +190,37 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
   }
 }
 
+void MainWindow::openPath(QString path) {
+  if (QFileInfo(path).isDir()) {
+    openImageDirectory(path);
+  } else {
+    openImageFile(path);
+  }
+}
+
+void MainWindow::openImageDirectory(const QString& dir) {
+  QString imageString = findFirstImageOfDir(dir);
+  FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
+  loadImage(imagePath);
+  fm_path_unref(imagePath);
+  FmPath* fmDir = fm_path_new_for_str(qPrintable(dir));
+  loadFolder(fmDir);
+  fm_path_unref(fmDir);
+}
+
+bool MainWindow::isFileLoaded(FmPath* path) {
+  return currentFile_ && fm_path_equal(currentFile_, path);
+}
+
 void MainWindow::openImageFile(QString fileName) {
   FmPath* path = fm_path_new_for_str(qPrintable(fileName));
-  if(currentFile_ && fm_path_equal(currentFile_, path)) {
-    // the same file! do not load it again
+  if (isFileLoaded(path)) {
     fm_path_unref(path);
     return;
   }
-  if (QFileInfo(fileName).isDir()) {
-      QString imageString = findFirstImageOfDir(fileName);
-      FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
-      loadImage(imagePath);
-      fm_path_unref(imagePath);
-      loadFolder(path);
-  } else {
-      // load the image file asynchronously
-      loadImage(path);
-      loadFolder(fm_path_get_parent(path));
-  }
+  // load the image file asynchronously
+  loadImage(path);
+  loadFolder(fm_path_get_parent(path));
   fm_path_unref(path);
 }
 
