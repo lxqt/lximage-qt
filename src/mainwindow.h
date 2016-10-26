@@ -54,7 +54,7 @@ public:
   MainWindow();
   virtual ~MainWindow();
 
-  void openImageFile(QString fileName);
+  void openPath(QString fileName);
 
   QImage image() const {
     return image_;
@@ -75,6 +75,12 @@ protected:
   void loadFolder(FmPath* newFolderPath);
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
+  void openImageDirectory(const QString& path);
+  bool isFileLoaded(FmPath* path);
+  void openImageFile(QString fileName);
+  QString openDirectory();
+  QStringList getImageFormatsFilters();
+  QString findFirstImageOfDir(QString dirname);
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
   virtual void closeEvent(QCloseEvent *event);
@@ -87,6 +93,7 @@ private Q_SLOTS:
   void on_actionAbout_triggered();
 
   void on_actionOpenFile_triggered();
+  void on_actionOpenDirectory_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();

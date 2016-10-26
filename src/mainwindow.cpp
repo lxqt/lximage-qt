@@ -19,6 +19,10 @@
 
 
 #include "mainwindow.h"
+#include <algorithm>
+#include <QCollator>
+#include <QDir>
+#include <QFileInfo>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QImage>
@@ -186,10 +190,31 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
   }
 }
 
+void MainWindow::openPath(QString path) {
+  if (QFileInfo(path).isDir()) {
+    openImageDirectory(path);
+  } else {
+    openImageFile(path);
+  }
+}
+
+void MainWindow::openImageDirectory(const QString& dir) {
+  QString imageString = findFirstImageOfDir(dir);
+  FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
+  loadImage(imagePath);
+  fm_path_unref(imagePath);
+  FmPath* fmDir = fm_path_new_for_str(qPrintable(dir));
+  loadFolder(fmDir);
+  fm_path_unref(fmDir);
+}
+
+bool MainWindow::isFileLoaded(FmPath* path) {
+  return currentFile_ && fm_path_equal(currentFile_, path);
+}
+
 void MainWindow::openImageFile(QString fileName) {
   FmPath* path = fm_path_new_for_str(qPrintable(fileName));
-  if(currentFile_ && fm_path_equal(currentFile_, path)) {
-    // the same file! do not load it again
+  if (isFileLoaded(path)) {
     fm_path_unref(path);
     return;
   }
@@ -243,6 +268,12 @@ QString MainWindow::openFileName() {
   return fileName;
 }
 
+QString MainWindow::openDirectory() {
+  QString directory = QFileDialog::getExistingDirectory(this,
+          tr("Open directory"), QString());
+  return directory;
+}
+
 // popup a file dialog and retrieve the selected image file name
 QString MainWindow::saveFileName(QString defaultName) {
   QString filterStr;
@@ -268,10 +299,53 @@ QString MainWindow::saveFileName(QString defaultName) {
   return fileName;
 }
 
+QStringList MainWindow::getImageFormatsFilters()
+{
+  QList<QByteArray> formats = QImageReader::supportedImageFormats();
+  QStringList formatsFilters;
+  for (const QByteArray& format: formats) {
+    formatsFilters << QString("*.") + format;
+  }
+  return formatsFilters;
+}
+
+QString MainWindow::findFirstImageOfDir(QString dirname)
+{
+  auto formatsFilters = getImageFormatsFilters();
+
+  QDir dir(dirname);
+  dir.setNameFilters(formatsFilters);
+  dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+  dir.setSorting(QDir::NoSort);
+
+  auto files = dir.entryList();
+
+  if (files.empty()) {
+    return QString();
+  }
+
+  QCollator collator;
+  collator.setNumericMode(true);
+  std::partial_sort(files.begin(), files.begin() + 1, files.end(),
+          [&collator](const QString& file1, const QString& file2)
+          {
+              return collator.compare(file1, file2) < 0;
+          });
+
+  return dir.absoluteFilePath(files.first());
+}
+
 void MainWindow::on_actionOpenFile_triggered() {
   QString fileName = openFileName();
   if(!fileName.isEmpty()) {
     openImageFile(fileName);
+  }
+}
+
+void MainWindow::on_actionOpenDirectory_triggered() {
+  QString directory = openDirectory();
+  if(!directory.isEmpty()) {
+    openImageDirectory(directory);
   }
 }
 
