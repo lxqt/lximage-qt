@@ -76,7 +76,8 @@ protected:
   QString openFileName();
   QString saveFileName(QString defaultName = QString());
   QString openDirectory();
-  QString firstImageOfDir(QString dirname);
+  QStringList getImageFormatsFilters();
+  QString findFirstImageOfDir(QString dirname);
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
   virtual void closeEvent(QCloseEvent *event);

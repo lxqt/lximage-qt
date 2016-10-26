@@ -19,6 +19,8 @@
 
 
 #include "mainwindow.h"
+#include <algorithm>
+#include <QCollator>
 #include <QDir>
 #include <QFileInfo>
 #include <QMessageBox>
@@ -200,7 +202,7 @@ void MainWindow::openImageFile(QString fileName) {
                                                       qPrintable(fileName),
                                                       nullptr);
   if (info.isDir()) {
-      QString imageString = firstImageOfDir(fileName);
+      QString imageString = findFirstImageOfDir(fileName);
       FmPath* imagePath = fm_path_new_for_str(qPrintable(imageString));
       loadImage(imagePath);
       fm_path_unref(imagePath);
@@ -288,22 +290,40 @@ QString MainWindow::saveFileName(QString defaultName) {
   return fileName;
 }
 
-QString MainWindow::firstImageOfDir(QString dirname)
+QStringList MainWindow::getImageFormatsFilters()
 {
-    QList<QByteArray> formatsBytes = QImageReader::supportedImageFormats();
-    QStringList formats;
-    for (const QByteArray& formatBytes: formatsBytes) {
-        formats << QString("*.") + formatBytes;
+    QList<QByteArray> formats = QImageReader::supportedImageFormats();
+    QStringList formatsFilters;
+    for (const QByteArray& format: formats) {
+        formatsFilters << QString("*.") + format;
     }
+    return formatsFilters;
+}
+
+QString MainWindow::findFirstImageOfDir(QString dirname)
+{
+    auto formatsFilters = getImageFormatsFilters();
+
     QDir dir(dirname);
-    dir.setNameFilters(formats);
+    dir.setNameFilters(formatsFilters);
     dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
-    dir.setSorting(QDir::Name);
-    QList<QFileInfo> imageFiles = dir.entryInfoList();
-    if (!imageFiles.empty()) {
-        return imageFiles.first().absoluteFilePath();
+    dir.setSorting(QDir::NoSort);
+
+    auto files = dir.entryList();
+
+    if (files.empty()) {
+        return QString();
     }
-    return QString();
+
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(files.begin(), files.end(),
+            [&collator](const QString& file1, const QString& file2)
+            {
+                return collator.compare(file1, file2) < 0;
+            });
+
+    return dir.absoluteFilePath(files.first());
 }
 
 void MainWindow::on_actionOpenFile_triggered() {
