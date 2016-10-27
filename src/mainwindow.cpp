@@ -187,7 +187,7 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
     }
   }
   // this is used to open the first image of a folder
-  if (!currentFile_)
+  else if (currentFile_ == nullptr)
     on_actionFirst_triggered();
 }
 
