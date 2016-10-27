@@ -199,7 +199,18 @@ void MainWindow::openImageFile(QString fileName) {
     return;
   }
   if (QFileInfo(fileName).isDir()) {
-    if(fm_path_equal(path, folderPath_) || !dirHasImage(fileName)) {
+    if(fm_path_equal(path, folderPath_)) {
+      fm_path_unref(path);
+      return;
+    }
+    QList<QByteArray> formats = QImageReader::supportedImageFormats();
+    QStringList formatsFilters;
+    for (const QByteArray& format: formats)
+      formatsFilters << QString("*.") + format;
+    QDir dir(fileName);
+    dir.setNameFilters(formatsFilters);
+    dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
+    if(dir.entryList().isEmpty()) {
       fm_path_unref(path);
       return;
     }
@@ -213,18 +224,6 @@ void MainWindow::openImageFile(QString fileName) {
     loadFolder(fm_path_get_parent(path));
   }
   fm_path_unref(path);
-}
-
-bool MainWindow::dirHasImage(QString dirname)
-{
-  QList<QByteArray> formats = QImageReader::supportedImageFormats();
-  QStringList formatsFilters;
-  for (const QByteArray& format: formats)
-    formatsFilters << QString("*.") + format;
-  QDir dir(dirname);
-  dir.setNameFilters(formatsFilters);
-  dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
-  return !dir.entryList().isEmpty();
 }
 
 // paste the specified image into the current view,

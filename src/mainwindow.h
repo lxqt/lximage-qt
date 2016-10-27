@@ -129,7 +129,6 @@ private:
   void setModified(bool modified);
   QModelIndex indexFromPath(FmPath* filePath);
   QGraphicsItem* getGraphicsItem();
-  bool dirHasImage(QString dirname);
 
   // GObject related signal handers and callbacks
   static void _onFolderLoaded(FmFolder* folder, MainWindow* _this) {
