@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="uk">
+<TS version="2.0" language="uk">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -57,43 +57,43 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="530"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Завантаження...) - Переглядач малюнків</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="535"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Не вдалося завантажити) - Переглядач малюнків</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="539"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Переглядач малюнків</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="576"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Переглядач малюнків</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="vanished">%1 (Завантаження...) - Переглядач зображень</translation>
+        <translation>%1 (Завантаження...) - Переглядач зображень</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation type="vanished">%1 (Невдача завантаження) - Переглядач зображень</translation>
+        <translation>%1 (Невдача завантаження) - Переглядач зображень</translation>
     </message>
     <message>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation type="vanished">%1 (%2x%3) - Переглядач зображень</translation>
+        <translation>%1 (%2x%3) - Переглядач зображень</translation>
     </message>
     <message>
         <source>Image Viewer</source>
-        <translation type="vanished">Переглядач зображень</translation>
+        <translation>Переглядач зображень</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="819"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Значки</translation>
     </message>
 </context>
 <context>
@@ -161,7 +161,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="234"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">&amp;Зменшити</translation>
+        <translation>&amp;Зменшити</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="237"/>
@@ -181,7 +181,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Праворуч</translation>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="273"/>
@@ -191,17 +191,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Ліворуч</translation>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="263"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="279"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="289"/>
@@ -236,7 +236,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="332"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="342"/>
@@ -316,12 +316,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="446"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати значки</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="451"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Властивості файлу</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -351,7 +351,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="120"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель інструментів</translation>
     </message>
     <message>
         <source>toolBar</source>
@@ -368,39 +368,39 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема значків:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Нормальний колір тла:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Колір тла повного екрану:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Інтервал слайд-шоу (секунди):</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Загальне</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation type="vanished">Далі буде...</translation>
+        <translation>На майбутнє: Додати тут опції налаштування</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation type="vanished">Вкладка 1</translation>
+        <translation>Вкладка 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation type="vanished">Вкладка 2</translation>
+        <translation>Вкладка 2</translation>
     </message>
 </context>
 <context>
