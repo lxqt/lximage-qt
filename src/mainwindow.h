@@ -27,6 +27,9 @@
 #include "imageview.h"
 #include <QImage>
 
+#include <QTableWidget>
+#include <QLabel>
+
 #include <libfm/fm-folder.h>
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
@@ -67,6 +70,7 @@ public:
   }
 
   void setShowThumbnails(bool show);
+  void setShowExifData(bool show);
   void applySettings();
 
 protected:
@@ -103,6 +107,7 @@ private Q_SLOTS:
   void on_actionPaste_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
+  void on_actionShowExifData_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
   void on_actionSlideShow_triggered(bool checked);
 
@@ -153,6 +158,14 @@ private:
 
   QDockWidget* thumbnailsDock_;
   Fm::FolderView* thumbnailsView_;
+
+  // EXIF Data
+  QDockWidget* exifDataDock_ = nullptr;
+  QWidget* exifDataDockView_;
+  QVBoxLayout* exifDataDockViewContent_;
+  QTableWidget* exifDataContentTable_;
+
+  QMap<QString, QString> exifData_;
 
   // multi-threading loading of images
   LoadImageJob* loadJob_;

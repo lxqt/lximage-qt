@@ -24,6 +24,7 @@
 #include <gio/gio.h>
 #include <libfm/fm.h>
 #include <QImage>
+#include <QMap>
 #include "job.h"
 
 namespace LxImage {
@@ -43,11 +44,15 @@ public:
     return path_;
   }
 
+  QMap<QString, QString> getExifData() {
+    return exifData_;
+  }
+
 private:
   ~LoadImageJob(); // prevent direct deletion
-
   virtual bool run();
   virtual void finish();
+  QMap<QString, QString> exifData_;
 
 public:
   MainWindow* mainWindow_;

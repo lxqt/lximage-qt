@@ -37,6 +37,21 @@ LoadImageJob::~LoadImageJob() {
   fm_path_unref(path_);
 }
 
+QMap<QString, QString> exifData;
+
+void readExifEntry(ExifEntry* ee, void* ifd) {
+  char c[100];
+  QString key = exif_tag_get_title_in_ifd(ee->tag, *((ExifIfd*)ifd));
+  QString value = exif_entry_get_value(ee, c, 100);
+
+  exifData.insert(key, value);
+}
+
+void readExifContent(ExifContent* ec, void* user_data) {
+  ExifIfd ifd = exif_content_get_ifd(ec);
+  exif_content_foreach_entry(ec, readExifEntry, &ifd);
+}
+
 // This is called from the worker thread, not main thread
 bool LoadImageJob::run() {
   GFile* gfile = fm_path_to_gfile(path_);
@@ -103,8 +118,11 @@ bool LoadImageJob::run() {
                 transform.rotate(rotate_degrees);
                 image_ = image_.transformed(transform, Qt::SmoothTransformation);
               }
-              // TODO: handle other EXIF tags as well
+
             }
+            exif_data_foreach_content(exif_data, readExifContent, NULL);
+
+            exifData_ = exifData;
             exif_data_unref(exif_data);
           }
         }

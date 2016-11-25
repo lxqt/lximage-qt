@@ -426,6 +426,7 @@ void MainWindow::onImageLoaded(LoadImageJob* job) {
   loadJob_ = nullptr; // the job object will be freed later automatically
 
   image_ = job->image();
+  exifData_ = job->getExifData();
   ui.view->setAutoZoomFit(true);
   ui.view->setImage(image_);
 
@@ -519,6 +520,10 @@ void MainWindow::updateUI() {
       // select current file in the thumbnails view
       thumbnailsView_->childView()->setCurrentIndex(currentIndex_);
       thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+    }
+
+    if(exifDataDock_) {
+      setShowExifData(true);
     }
   }
 
@@ -815,6 +820,14 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
   }
 }
 
+void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
+  setShowThumbnails(checked);
+}
+
+void MainWindow::on_actionShowExifData_triggered(bool checked) {
+  setShowExifData(checked);
+}
+
 void MainWindow::setShowThumbnails(bool show) {
   if(show) {
     if(!thumbnailsDock_) {
@@ -857,8 +870,53 @@ void MainWindow::setShowThumbnails(bool show) {
   }
 }
 
-void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
-  setShowThumbnails(checked);
+void MainWindow::setShowExifData(bool show) {
+  // Close the dock if it exists and show is false
+  if (exifDataDock_ && !show) {
+    exifDataDock_->close();
+    exifDataDock_ = nullptr;
+  }
+
+  // Be sure the dock was created before rendering content to it
+  if (show && !exifDataDock_) {
+    exifDataDock_ = new QDockWidget(tr("EXIF Data"), this);
+    exifDataDock_->setFeatures(QDockWidget::NoDockWidgetFeatures);
+    addDockWidget(Qt::RightDockWidgetArea, exifDataDock_);
+  }
+
+  // Render the content to the dock
+  if (show) {
+    QWidget* exifDataDockView_ = new QWidget();
+
+    QVBoxLayout* exifDataDockViewContent_ = new QVBoxLayout();
+    QTableWidget* exifDataContentTable_ = new QTableWidget();
+
+    // Table setup
+    exifDataContentTable_->setColumnCount(2);
+    exifDataContentTable_->setShowGrid(false);
+    exifDataContentTable_->horizontalHeader()->hide();
+    exifDataContentTable_->verticalHeader()->hide();
+
+    // The table is not editable
+    exifDataContentTable_->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
+    // Write the EXIF Data to the table
+    for (QString key : exifData_.keys()) {
+      int rowCount = exifDataContentTable_->rowCount();
+
+      exifDataContentTable_->insertRow(rowCount);
+      exifDataContentTable_->setItem(rowCount,0, new QTableWidgetItem(key));
+      exifDataContentTable_->setItem(rowCount,1, new QTableWidgetItem(exifData_.value(key)));
+    }
+
+    // Table setup after content was added
+    exifDataContentTable_->resizeColumnsToContents();
+    exifDataContentTable_->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+
+    exifDataDockViewContent_->addWidget(exifDataContentTable_);
+    exifDataDockView_->setLayout(exifDataDockViewContent_);
+    exifDataDock_->setWidget(exifDataDockView_);
+  }
 }
 
 void MainWindow::changeEvent(QEvent* event) {
