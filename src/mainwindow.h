@@ -97,6 +97,7 @@ private Q_SLOTS:
 
   void on_actionRotateClockwise_triggered();
   void on_actionRotateCounterclockwise_triggered();
+  void on_actionRotateCustom_triggered();
   void on_actionFlipVertical_triggered();
   void on_actionFlipHorizontal_triggered();
   void on_actionCopy_triggered();
@@ -125,6 +126,7 @@ private:
   void onFolderLoaded(FmFolder* folder);
   void updateUI();
   void setModified(bool modified);
+  void rotateImage(int rotationInDegrees);
   QModelIndex indexFromPath(FmPath* filePath);
   QGraphicsItem* getGraphicsItem();
 
