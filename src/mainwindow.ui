@@ -15,15 +15,23 @@
   </property>
   <property name="windowIcon">
    <iconset theme="lximage-qt">
-    <normaloff/>
-   </iconset>
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="spacing">
      <number>0</number>
     </property>
-    <property name="margin">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
      <number>0</number>
     </property>
     <item>
@@ -101,6 +109,7 @@
     </property>
     <addaction name="actionRotateClockwise"/>
     <addaction name="actionRotateCounterclockwise"/>
+    <addaction name="actionRotateCustom"/>
     <addaction name="actionFlipHorizontal"/>
     <addaction name="actionFlipVertical"/>
     <addaction name="separator"/>
@@ -152,8 +161,7 @@
   <action name="actionAbout">
    <property name="icon">
     <iconset theme="help-about">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -162,8 +170,7 @@
   <action name="actionOpenFile">
    <property name="icon">
     <iconset theme="document-open">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Open File</string>
@@ -175,8 +182,7 @@
   <action name="actionSave">
    <property name="icon">
     <iconset theme="document-save">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -188,8 +194,7 @@
   <action name="actionSaveAs">
    <property name="icon">
     <iconset theme="document-save-as">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Save &amp;As</string>
@@ -201,8 +206,7 @@
   <action name="actionClose">
    <property name="icon">
     <iconset theme="application-exit">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Close</string>
@@ -214,8 +218,7 @@
   <action name="actionZoomIn">
    <property name="icon">
     <iconset theme="zoom-in">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Zoom &amp;In</string>
@@ -227,8 +230,7 @@
   <action name="actionZoomOut">
    <property name="icon">
     <iconset theme="zoom-out">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Zoom &amp;Out</string>
@@ -240,8 +242,7 @@
   <action name="actionCopy">
    <property name="icon">
     <iconset theme="edit-copy">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Copy to Clipboard</string>
@@ -250,8 +251,7 @@
   <action name="actionNext">
    <property name="icon">
     <iconset theme="go-next">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Next File</string>
@@ -266,8 +266,7 @@
   <action name="actionPrevious">
    <property name="icon">
     <iconset theme="go-previous">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Previous File</string>
@@ -282,8 +281,7 @@
   <action name="actionOriginalSize">
    <property name="icon">
     <iconset theme="zoom-original">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Original Size</string>
@@ -295,8 +293,7 @@
   <action name="actionZoomFit">
    <property name="icon">
     <iconset theme="zoom-fit-best">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Fit</string>
@@ -305,8 +302,7 @@
   <action name="actionRotateClockwise">
    <property name="icon">
     <iconset theme="object-rotate-right">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Rotate Clockwise</string>
@@ -315,8 +311,7 @@
   <action name="actionRotateCounterclockwise">
    <property name="icon">
     <iconset theme="object-rotate-left">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Rotate &amp;Counterclockwise</string>
@@ -338,8 +333,7 @@
   <action name="actionFirst">
    <property name="icon">
     <iconset theme="go-first">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>First File</string>
@@ -351,8 +345,7 @@
   <action name="actionLast">
    <property name="icon">
     <iconset theme="go-last">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Last File</string>
@@ -364,8 +357,7 @@
   <action name="actionNewWindow">
    <property name="icon">
     <iconset theme="document-new">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;New Window</string>
@@ -382,8 +374,7 @@
   <action name="actionScreenshot">
    <property name="icon">
     <iconset theme="camera-photo">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Capture Screenshot</string>
@@ -408,8 +399,7 @@
   <action name="actionPaste">
    <property name="icon">
     <iconset theme="edit-paste">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Paste from Clipboard</string>
@@ -421,8 +411,7 @@
    </property>
    <property name="icon">
     <iconset theme="media-playback-start">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Slide Show</string>
@@ -431,8 +420,7 @@
   <action name="actionDelete">
    <property name="icon">
     <iconset theme="edit-delete">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Delete</string>
@@ -452,6 +440,11 @@
   <action name="actionFileProperties">
    <property name="text">
     <string>File Properties</string>
+   </property>
+  </action>
+  <action name="actionRotateCustom">
+   <property name="text">
+    <string>Rotate Custom</string>
    </property>
   </action>
  </widget>

@@ -26,6 +26,7 @@
 #include <QImageWriter>
 #include <QClipboard>
 #include <QPainter>
+#include <QInputDialog>
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QWheelEvent>
@@ -645,37 +646,32 @@ QGraphicsItem* MainWindow::getGraphicsItem() {
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *graphItem = getGraphicsItem();
-  bool isGifOrSvg (graphItem->isWidget() // we have gif animation
-                   || dynamic_cast<QGraphicsSvgItem*>(graphItem)); // an SVG image;
-  if(!image_.isNull()) {
-    QTransform transform;
-    transform.rotate(90.0);
-    image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    /* when this is GIF or SVG, we need to rotate its corresponding QImage
-       without showing it to have the right measure for auto-zooming */
-    ui.view->setImage(image_, isGifOrSvg ? false : true);
-    setModified(true);
-  }
-
-  if(isGifOrSvg) {
-    QTransform transform;
-    transform.translate(graphItem->sceneBoundingRect().height(), 0);
-    transform.rotate(90);
-    // we need to apply transformations in the reverse order
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
-  }
+    rotateImage(90);
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
+    rotateImage(-90);
+}
+
+void MainWindow::on_actionRotateCustom_triggered() {
+  bool rotateImageConfirm;
+
+  int customRotation = QInputDialog::getInt(this, tr("Custom rotation"),
+                                              tr("Rotate in degrees"), 0, -360, 360, 1, &rotateImageConfirm);
+
+  if (rotateImageConfirm && customRotation) {
+      rotateImage(customRotation);
+  }
+}
+
+void MainWindow::rotateImage(int rotationInDegrees) {
   QGraphicsItem *graphItem = getGraphicsItem();
   bool isGifOrSvg (graphItem->isWidget()
                    || dynamic_cast<QGraphicsSvgItem*>(graphItem));
+
   if(!image_.isNull()) {
     QTransform transform;
-    transform.rotate(-90.0);
+    transform.rotate(rotationInDegrees);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
     ui.view->setImage(image_, isGifOrSvg ? false : true);
     setModified(true);
@@ -683,8 +679,12 @@ void MainWindow::on_actionRotateCounterclockwise_triggered() {
 
   if(isGifOrSvg) {
     QTransform transform;
-    transform.translate(0, graphItem->sceneBoundingRect().width());
-    transform.rotate(-90);
+
+    // FIXME: Better center point calculation on custom rotation
+    transform.translate(graphItem->sceneBoundingRect().width() / 2, graphItem->sceneBoundingRect().height() / 2);
+    transform.rotate(rotationInDegrees);
+    transform.translate(-(graphItem->sceneBoundingRect().width() / 2), -(graphItem->sceneBoundingRect().height() / 2));
+
     QTransform prevTrans = graphItem->transform();
     graphItem->setTransform(transform, false);
     graphItem->setTransform(prevTrans, true);
