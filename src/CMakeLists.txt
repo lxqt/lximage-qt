@@ -83,7 +83,7 @@ set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extr
 target_link_libraries(lximage-qt
     fm-qt
     ${QT_LIBRARIES}
-    ${EXIF_LIBRARIES}
+    ${EXIF_LDFLAGS}
     ${X11_LIBRARIES}
     ${XFIXES_LIBRARIES}
 )
