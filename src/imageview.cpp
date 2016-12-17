@@ -35,7 +35,7 @@ namespace LxImage {
 
 ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
-  scene_(new QGraphicsScene(this)),
+  scene_(new GraphicsScene(this)),
   imageItem_(new QGraphicsRectItem()),
   gifMovie_(nullptr),
   cacheTimer_(nullptr),
@@ -49,6 +49,7 @@ ImageView::ImageView(QWidget* parent):
   setLineWidth(0);
 
   setScene(scene_);
+  connect(scene_, &GraphicsScene::fileDropped, this, &ImageView::onFileDropped);
   imageItem_->hide();
   imageItem_->setPen(QPen(Qt::NoPen)); // remove the border
   scene_->addItem(imageItem_);
@@ -68,6 +69,9 @@ ImageView::~ImageView() {
   }
 }
 
+void ImageView::onFileDropped(const QString file) {
+    Q_EMIT fileDropped(file);
+}
 
 void ImageView::wheelEvent(QWheelEvent* event) {
   int delta = event->delta();

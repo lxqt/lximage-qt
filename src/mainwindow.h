@@ -123,6 +123,8 @@ private Q_SLOTS:
 
   void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
 
+  void onFileDropped(const QString path);
+
 private:
   void onFolderLoaded(FmFolder* folder);
   void updateUI();

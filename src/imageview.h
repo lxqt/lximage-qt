@@ -21,6 +21,7 @@
 #ifndef LXIMAGE_IMAGEVIEW_H
 #define LXIMAGE_IMAGEVIEW_H
 
+#include "graphicsscene.h"
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
@@ -71,6 +72,9 @@ public:
   // if set to true, hides the cursor after 3s of inactivity
   void hideCursor(bool enable);
 
+Q_SIGNALS:
+  void fileDropped(const QString file);
+
 protected:
   virtual void wheelEvent(QWheelEvent* event);
   virtual void mouseDoubleClickEvent(QMouseEvent* event);
@@ -87,11 +91,12 @@ private:
   QRect sceneToViewport(const QRectF& rect);
 
 private Q_SLOTS:
+  void onFileDropped(const QString file);
   void generateCache();
   void blankCursor();
 
 private:
-  QGraphicsScene* scene_; // the topmost container of all graphic items
+  GraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
   QImage image_; // image to show
   QMovie *gifMovie_; // gif animation to show (should be deleted explicitly)

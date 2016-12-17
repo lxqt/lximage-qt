@@ -83,6 +83,8 @@ MainWindow::MainWindow():
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
   connect(ui.view, &QWidget::customContextMenuRequested, this, &MainWindow::onContextMenu);
 
+  connect(ui.view, &ImageView::fileDropped, this, &MainWindow::onFileDropped);
+
   // install an event filter on the image view
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
@@ -988,4 +990,8 @@ void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QIt
         loadImage(fm_file_info_get_path(file), index);
     }
   }
+}
+
+void MainWindow::onFileDropped(const QString path) {
+    openImageFile(path);
 }
