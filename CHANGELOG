@@ -1,7 +1,22 @@
 
-lximage-qt-0.5.0 / 2016-09-24
+lximage-qt-0.5.1 / 2016-12-21
 =============================
 
+  * Bump patch version and (#82)
+  * Create lximage-qt-screenshot_it.desktop (#83)
+  * Add *da.desktop files
+  * Desktop entry files: Fix typo in French translation
+  * [MRG] Display first image when loading a directory (v2) (#75)
+  * Desktop entry files: Add French translation
+  * Use lxqt-build-tools
+  * Use the new lxqt-build-tools package
+  * Fixed A Cast (#71)
+  * Remove cpack (#70)
+
+0.5.0 / 2016-09-24
+==================
+
+  * Release 0.5.0: Add changelog
   * Bump version to 0.5.0 (#67)
   * Remove Core and Qt from Categories in desktop file (#64)
   * Extend README.md
