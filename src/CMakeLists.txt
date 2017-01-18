@@ -21,6 +21,7 @@ set(lximage-qt_SRCS
     saveimagejob.cpp
     screenshotdialog.cpp
     settings.cpp
+    graphicsscene.cpp
 )
 
 qt5_add_dbus_adaptor(lximage-qt_SRCS
