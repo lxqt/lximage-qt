@@ -177,7 +177,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="279"/>
         <source>PgUp</source>
-        <translation>Av Pàg</translation>
+        <translation>Re Pàg</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="289"/>
