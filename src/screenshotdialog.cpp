@@ -19,6 +19,7 @@
 
 
 #include "screenshotdialog.h"
+#include "screenshotselectarea.h"
 #include <QTimer>
 #include <QPixmap>
 #include <QImage>
@@ -170,6 +171,13 @@ void ScreenshotDialog::doScreenshot() {
         }
         XFree(cursor);
       }
+    }
+  }
+
+  if(ui.screenArea->isChecked() && !image.isNull()) {
+    ScreenshotSelectArea selectArea(image);
+    if(QDialog::Accepted == selectArea.exec()) {
+      image = image.copy(selectArea.selectedArea());
     }
   }
 

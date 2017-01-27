@@ -15,8 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset theme="camera-photo">
-    <normaloff/>
-   </iconset>
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <property name="fieldGrowthPolicy">
@@ -49,6 +48,13 @@
        <widget class="QRadioButton" name="currentWindow">
         <property name="text">
          <string>Current window only</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="screenArea">
+        <property name="text">
+         <string>Capture an area of the screen</string>
         </property>
        </widget>
       </item>

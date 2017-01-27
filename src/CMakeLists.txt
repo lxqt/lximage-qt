@@ -20,6 +20,8 @@ set(lximage-qt_SRCS
     loadimagejob.cpp
     saveimagejob.cpp
     screenshotdialog.cpp
+    screenshotselectarea.cpp
+    screenshotselectareagraphicsview.cpp
     settings.cpp
     graphicsscene.cpp
 )
