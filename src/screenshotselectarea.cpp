@@ -23,7 +23,7 @@
 
 using namespace LxImage;
 
-ScreenshotSelectArea::ScreenshotSelectArea(QImage image, QWidget* parent) : QDialog(parent)
+ScreenshotSelectArea::ScreenshotSelectArea(const QImage & image, QWidget* parent) : QDialog(parent)
 {
   scene = new QGraphicsScene(this);
   scene->addPixmap(QPixmap::fromImage(image));
@@ -36,7 +36,7 @@ ScreenshotSelectArea::ScreenshotSelectArea(QImage image, QWidget* parent) : QDia
   view->move(0,0);
   view->resize(image.width(), image.height());
   setWindowState(windowState() | Qt::WindowFullScreen);
-  connect(view, SIGNAL(selectedArea(QRect)), this, SLOT(areaSelected(QRect)));
+  connect(view, &ScreenshotSelectAreaGraphicsView::selectedArea, this, &ScreenshotSelectArea::areaSelected);
 }
 
 QRect ScreenshotSelectArea::selectedArea()
