@@ -25,25 +25,26 @@ using namespace LxImage;
 
 ScreenshotSelectAreaGraphicsView::ScreenshotSelectAreaGraphicsView(QGraphicsScene* scene, QWidget* parent) : QGraphicsView(scene, parent)
 {
-  p_x0 = p_y0 = -1.0;
-  selectedAreaRect = nullptr;
+  p_x0_ = p_y0_ = -1.0;
+  selectedAreaRect_ = nullptr;
   setCursor(Qt::CrossCursor);
 }
 
 void ScreenshotSelectAreaGraphicsView::mousePressEvent(QMouseEvent *event)
 {
-  if(p_x0 < 0) {
-    p_x0 = event->x();
-    p_y0 = event->y();
+  if(p_x0_ < 0) {
+    p_x0_ = event->x();
+    p_y0_ = event->y();
   } else {
-    if(selectedAreaRect == nullptr) {
-      QPen pen(Qt::green, 3, Qt::DashDotLine, Qt::RoundCap, Qt::RoundJoin);
-      QColor color(Qt::green);
+    if(selectedAreaRect_ == nullptr) {
+      QColor highlight = palette().color(QPalette::Active,QPalette::Highlight);
+      QPen pen(highlight, 3, Qt::DashDotLine, Qt::RoundCap, Qt::RoundJoin);
+      QColor color(highlight);
       color.setAlpha(128);
       QBrush brush(color);
-      selectedAreaRect = scene()->addRect(p_x0, p_y0, p_x0, p_y0, pen, brush);
+      selectedAreaRect_ = scene()->addRect(p_x0_, p_y0_, p_x0_, p_y0_, pen, brush);
     } 
-    selectedAreaRect->setRect(rectPositionAndSize(event->x(),event->y()));
+    selectedAreaRect_->setRect(rectPositionAndSize(event->x(),event->y()));
   }
 }
 
@@ -60,17 +61,15 @@ void ScreenshotSelectAreaGraphicsView::mouseReleaseEvent(QMouseEvent *event)
 }
 
 QRectF ScreenshotSelectAreaGraphicsView::rectPositionAndSize(int x, int y) {
-  int width = x - p_x0;
-  int height = y - p_y0;
-  int x0 = p_x0;
-  int y0 = p_y0;
+  int width = x - p_x0_;
+  int height = y - p_y0_;
   
   if(width >= 0 && height >= 0) {
-    return QRectF(x0, y0, width, height);
+    return QRectF(p_x0_, p_y0_, width, height);
   } else if(width >= 0) {
-    return QRectF(x0, y, width, -height);
+    return QRectF(p_x0_, y, width, -height);
   } else if(height >= 0) {
-    return QRectF(x, y0, -width, height);
+    return QRectF(x, p_y0_, -width, height);
   }
   return QRectF(x, y, -width, -height);
 }

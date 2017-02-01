@@ -40,9 +40,9 @@ private Q_SLOTS:
   void areaSelected(QRect rect);
   
 private:
-  QGraphicsScene *scene;
-  ScreenshotSelectAreaGraphicsView *view;
-  QRect selectedRect;
+  QGraphicsScene *scene_;
+  ScreenshotSelectAreaGraphicsView *view_;
+  QRect selectedRect_;
 };
 
 }

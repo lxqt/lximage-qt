@@ -46,8 +46,8 @@ private:
   QRectF rectPositionAndSize(int x, int y);
 
 private:
-  qreal p_x0, p_y0;
-  QGraphicsRectItem *selectedAreaRect;
+  qreal p_x0_, p_y0_;
+  QGraphicsRectItem *selectedAreaRect_;
 };
 
 }

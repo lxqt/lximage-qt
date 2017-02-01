@@ -25,27 +25,27 @@ using namespace LxImage;
 
 ScreenshotSelectArea::ScreenshotSelectArea(const QImage & image, QWidget* parent) : QDialog(parent)
 {
-  scene = new QGraphicsScene(this);
-  scene->addPixmap(QPixmap::fromImage(image));
+  scene_ = new QGraphicsScene(this);
+  scene_->addPixmap(QPixmap::fromImage(image));
   
-  view = new ScreenshotSelectAreaGraphicsView(scene, this);
-  view->setRenderHints( QPainter::Antialiasing );
-  view->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
-  view->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
-  view->show();
-  view->move(0,0);
-  view->resize(image.width(), image.height());
+  view_ = new ScreenshotSelectAreaGraphicsView(scene_, this);
+  view_->setRenderHints( QPainter::Antialiasing );
+  view_->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+  view_->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+  view_->show();
+  view_->move(0,0);
+  view_->resize(image.width(), image.height());
   setWindowState(windowState() | Qt::WindowFullScreen);
-  connect(view, &ScreenshotSelectAreaGraphicsView::selectedArea, this, &ScreenshotSelectArea::areaSelected);
+  connect(view_, &ScreenshotSelectAreaGraphicsView::selectedArea, this, &ScreenshotSelectArea::areaSelected);
 }
 
 QRect ScreenshotSelectArea::selectedArea()
 {
-  return selectedRect;
+  return selectedRect_;
 }
 
 void ScreenshotSelectArea::areaSelected(QRect rect)
 {
-  this->selectedRect = rect;
+  this->selectedRect_ = rect;
   accept();
 }
