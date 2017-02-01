@@ -43,10 +43,7 @@ protected:
   void mouseReleaseEvent(QMouseEvent *event);
 
 private:
-  QRectF rectPositionAndSize(int x, int y);
-
-private:
-  qreal p_x0_, p_y0_;
+  QPointF p0_;
   QGraphicsRectItem *selectedAreaRect_;
 };
 

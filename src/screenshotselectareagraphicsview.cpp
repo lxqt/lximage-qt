@@ -25,16 +25,15 @@ using namespace LxImage;
 
 ScreenshotSelectAreaGraphicsView::ScreenshotSelectAreaGraphicsView(QGraphicsScene* scene, QWidget* parent) : QGraphicsView(scene, parent)
 {
-  p_x0_ = p_y0_ = -1.0;
+  p0_ = QPointF(-1.0, -1.0);
   selectedAreaRect_ = nullptr;
   setCursor(Qt::CrossCursor);
 }
 
 void ScreenshotSelectAreaGraphicsView::mousePressEvent(QMouseEvent *event)
 {
-  if(p_x0_ < 0) {
-    p_x0_ = event->x();
-    p_y0_ = event->y();
+  if(p0_.x() < 0) {
+    p0_ = QPointF(event->pos());
   } else {
     if(selectedAreaRect_ == nullptr) {
       QColor highlight = palette().color(QPalette::Active,QPalette::Highlight);
@@ -42,9 +41,9 @@ void ScreenshotSelectAreaGraphicsView::mousePressEvent(QMouseEvent *event)
       QColor color(highlight);
       color.setAlpha(128);
       QBrush brush(color);
-      selectedAreaRect_ = scene()->addRect(p_x0_, p_y0_, p_x0_, p_y0_, pen, brush);
+      selectedAreaRect_ = scene()->addRect(QRectF(), pen, brush);
     } 
-    selectedAreaRect_->setRect(rectPositionAndSize(event->x(),event->y()));
+    selectedAreaRect_->setRect(QRectF(p0_,QPointF(event->pos())).normalized());
   }
 }
 
@@ -55,21 +54,5 @@ void ScreenshotSelectAreaGraphicsView::mouseMoveEvent(QMouseEvent *event)
 
 void ScreenshotSelectAreaGraphicsView::mouseReleaseEvent(QMouseEvent *event)
 {
-  QRectF rectF = rectPositionAndSize(event->x(),event->y());
-  QRect rect(rectF.x(), rectF.y(), rectF.width(), rectF.height());
-  Q_EMIT selectedArea(rect);
-}
-
-QRectF ScreenshotSelectAreaGraphicsView::rectPositionAndSize(int x, int y) {
-  int width = x - p_x0_;
-  int height = y - p_y0_;
-  
-  if(width >= 0 && height >= 0) {
-    return QRectF(p_x0_, p_y0_, width, height);
-  } else if(width >= 0) {
-    return QRectF(p_x0_, y, width, -height);
-  } else if(height >= 0) {
-    return QRectF(x, p_y0_, -width, height);
-  }
-  return QRectF(x, y, -width, -height);
+  Q_EMIT selectedArea(QRectF(p0_,QPointF(event->pos())).normalized().toRect());
 }
