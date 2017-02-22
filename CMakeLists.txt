@@ -22,19 +22,16 @@ find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(Qt5Svg REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
 find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
+find_package(Exif REQUIRED QUIET)
 message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
-
-find_package(PkgConfig REQUIRED)
-
-# FIXME: we'll need this to provide detail info for photos in the future
-pkg_check_modules(EXIF REQUIRED libexif)
 
 # TODO: make the X11 stuff optional.
 # for screenshot support
 find_package(X11 REQUIRED)
 
+find_package(PkgConfig REQUIRED)
 # Xfixes is needed to capture the mouse cursor image
 pkg_check_modules(XFIXES REQUIRED xfixes)
 
