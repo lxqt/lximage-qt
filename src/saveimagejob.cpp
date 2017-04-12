@@ -26,25 +26,24 @@
 
 using namespace LxImage;
 
-SaveImageJob::SaveImageJob(MainWindow* window, FmPath* filePath):
-  Job(),
-  mainWindow_(window),
-  path_(fm_path_ref(filePath)),
-  image_(window->image()) {
+SaveImageJob::SaveImageJob(MainWindow* window, const Fm::FilePath & filePath):
+  mainWindow_{window},
+  path_{filePath},
+  image_{window->image()} {
 }
 
 SaveImageJob::~SaveImageJob() {
-  fm_path_unref(path_);
 }
 
 // This is called from the worker thread, not main thread
-bool SaveImageJob::run() {
-  GFile* gfile = fm_path_to_gfile(path_);
-  GFileOutputStream* fileStream = g_file_replace(gfile, NULL, false, G_FILE_CREATE_NONE, cancellable_, &error_);
-  g_object_unref(gfile);
+void SaveImageJob::exec() {
+  //TODO: the error handling (emitError() etc...) how to?
+  GError * error = nullptr;
+  GFileOutputStream* fileStream = g_file_replace(path_.gfile().get(), NULL, false, G_FILE_CREATE_NONE, cancellable().get(), &error);
 
   if(fileStream) { // if the file stream is successfually opened
-    const char* format = fm_path_get_basename(path_);
+    const Fm::CStrPtr f = path_.baseName();
+    char const * format = f.get();
     format = strrchr(format, '.');
     if(format) // use filename extension as the image format
       ++format;
@@ -56,17 +55,8 @@ bool SaveImageJob::run() {
                               imageBuffer.data().constData(),
                               imageBuffer.size(),
                               NULL,
-                              cancellable_,
-                              &error_);
+                              cancellable().get(),
+                              &error);
     g_output_stream_close(outputStream, NULL, NULL);
-  }
-  return false;
-}
-
-// this function is called from main thread only
-void SaveImageJob::finish() {
-  // only do processing if the job is not cancelled
-  if(!g_cancellable_is_cancelled(cancellable_)) {
-    mainWindow_->onImageSaved(this);
   }
 }

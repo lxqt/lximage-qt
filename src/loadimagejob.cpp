@@ -27,30 +27,28 @@
 
 using namespace LxImage;
 
-LoadImageJob::LoadImageJob(MainWindow* window, FmPath* filePath):
-  Job(),
-  mainWindow_(window),
-  path_(fm_path_ref(filePath)) {
+LoadImageJob::LoadImageJob(MainWindow* window, const Fm::FilePath & filePath):
+  mainWindow_{window},
+  path_{filePath} {
 }
 
 LoadImageJob::~LoadImageJob() {
-  fm_path_unref(path_);
 }
 
 // This is called from the worker thread, not main thread
-bool LoadImageJob::run() {
-  GFile* gfile = fm_path_to_gfile(path_);
-  GFileInputStream* fileStream = g_file_read(gfile, cancellable_, &error_);
-  g_object_unref(gfile);
+void LoadImageJob::exec() {
+  //TODO: the error handling (emitError() etc...) how to?
+  GError * error = nullptr;
+  GFileInputStream* fileStream = g_file_read(path_.gfile().get(), cancellable().get(), &error);
 
   if(fileStream) { // if the file stream is successfually opened
     QBuffer imageBuffer;
     GInputStream* inputStream = G_INPUT_STREAM(fileStream);
-    while(!g_cancellable_is_cancelled(cancellable_)) {
+    while(!isCancelled()) {
       char buffer[4096];
       gssize readSize = g_input_stream_read(inputStream,
                                             buffer, 4096,
-                                            cancellable_, &error_);
+                                            cancellable().get(), &error);
       if(readSize == -1 || readSize == 0) // error or EOF
         break;
       // append the bytes read to the image buffer
@@ -59,14 +57,14 @@ bool LoadImageJob::run() {
     g_input_stream_close(inputStream, NULL, NULL);
 
     // FIXME: maybe it's a better idea to implement a GInputStream based QIODevice.
-    if(!error_ && !g_cancellable_is_cancelled(cancellable_)) { // load the image from buffer if there are no errors
+    if(!error && !isCancelled()) { // load the image from buffer if there are no errors
       image_ = QImage::fromData(imageBuffer.buffer());
 
       if(!image_.isNull()) { // if the image is loaded correctly
         // check if this file is a jpeg file
         // FIXME: can we use FmFileInfo instead if it's available?
-        const char* basename = fm_path_get_basename(path_);
-        char* mime_type = g_content_type_guess(basename, NULL, 0, NULL);
+        const Fm::CStrPtr basename = path_.baseName();
+        char* mime_type = g_content_type_guess(basename.get(), NULL, 0, NULL);
         if(mime_type && strcmp(mime_type, "image/jpeg") == 0) { // this is a jpeg file
           // use libexif to extract additional info embedded in jpeg files
           ExifLoader *exif_loader = exif_loader_new();
@@ -112,13 +110,5 @@ bool LoadImageJob::run() {
       }
     }
   }
-  return false;
 }
 
-// this function is called from main thread only
-void LoadImageJob::finish() {
-  // only do processing if the job is not cancelled
-  if(!g_cancellable_is_cancelled(cancellable_)) {
-    mainWindow_->onImageLoaded(this);
-  }
-}
