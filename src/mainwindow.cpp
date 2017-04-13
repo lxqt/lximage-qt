@@ -430,7 +430,6 @@ void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
 void MainWindow::onImageLoaded() {
   image_ = loadJob_->image();
 
-  //TODO: check if the Job is realy auto-destructed!
   loadJob_ = nullptr; // the job object will be freed later automatically
 
   ui.view->setAutoZoomFit(true);
@@ -447,11 +446,9 @@ void MainWindow::onImageLoaded() {
 }
 
 void MainWindow::onImageSaved() {
-  //TODO: error handling
-  //if(!job->error()) {
+  if(!saveJob_->failed()) {
     setModified(false);
-  //}
-  //TODO: check if the Job is realy auto-destructed!
+  }
   saveJob_ = nullptr;
 }
 
@@ -621,11 +618,15 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   }
   else {
     // start a new gio job to load the specified image
-    loadJob_ = new LoadImageJob(this, currentFile_);
+    loadJob_ = new LoadImageJob(currentFile_);
     connect(loadJob_, &Fm::Job::finished, this, &MainWindow::onImageLoaded);
-    //TODO handle Fm::Job::cancelled, Fm::Job::error
-    // if there are errors
-    // TODO: show a info bar?
+    connect(loadJob_, &Fm::Job::error, this
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+          {
+            // TODO: show a info bar?
+            qWarning().noquote() << "lximage-qt:" << err.message();
+          }
+        , Qt::BlockingQueuedConnection);
     loadJob_->runAsync();
 
     updateUI();
@@ -636,11 +637,15 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   if(saveJob_) // do not launch a new job if the current one is still in progress
     return;
   // start a new gio job to save current image to the specified path
-  saveJob_ = new SaveImageJob(this, filePath);
+  saveJob_ = new SaveImageJob(image_, filePath);
   connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
-  //TODO handle Fm::Job::cancelled, Fm::Job::error
-  // if there are errors
-  // TODO: show a info bar?
+  connect(saveJob_, &Fm::Job::error, this
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        {
+          // TODO: show a info bar?
+          qWarning().noquote() << "lximage-qt:" << err.message();
+        }
+      , Qt::BlockingQueuedConnection);
   saveJob_->runAsync();
   // FIXME: add a cancel button to the UI? update status bar?
 }

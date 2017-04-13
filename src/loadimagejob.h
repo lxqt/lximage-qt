@@ -27,12 +27,10 @@
 
 namespace LxImage {
 
-class MainWindow;
-
 class LoadImageJob : public Fm::Job {
 
 public:
-  LoadImageJob(MainWindow* window, const Fm::FilePath & filePath);
+  LoadImageJob(const Fm::FilePath & filePath);
 
   QImage image() const {
     return image_;
@@ -47,8 +45,6 @@ private:
 
   virtual void exec() override;
 
-public:
-  MainWindow* mainWindow_;
   const Fm::FilePath path_;
   QImage image_;
 };

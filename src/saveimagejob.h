@@ -27,12 +27,10 @@
 
 namespace LxImage {
 
-class MainWindow;
-
 class SaveImageJob : public Fm::Job {
 
 public:
-  SaveImageJob(MainWindow* window, const Fm::FilePath & filePath);
+  SaveImageJob(const QImage & image, const Fm::FilePath & filePath);
 
   QImage image() const {
     return image_;
@@ -42,16 +40,20 @@ public:
     return path_;
   }
 
+  bool failed() const
+  {
+      return failed_;
+  }
+
 protected:
   virtual void exec() override;
 
 private:
   ~SaveImageJob(); // prevent direct deletion
 
-public:
-  MainWindow* mainWindow_;
   const Fm::FilePath path_;
-  QImage image_;
+  const QImage image_;
+  bool failed_;
 };
 
 }
