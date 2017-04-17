@@ -51,11 +51,9 @@ MainWindow::MainWindow():
   contextMenu_(new QMenu(this)),
   slideShowTimer_(nullptr),
   image_(),
-  currentFile_(nullptr),
   // currentFileInfo_(nullptr),
   imageModified_(false),
   folder_(nullptr),
-  folderPath_(nullptr),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
   modelFilter_(new ModelFilter()),
@@ -130,16 +128,8 @@ MainWindow::~MainWindow() {
     loadJob_->cancel();
     // we don't need to do delete here. It will be done automatically
   }
-  if(currentFile_)
-    fm_path_unref(currentFile_);
   //if(currentFileInfo_)
   //  fm_file_info_unref(currentFileInfo_);
-  if(folder_) {
-    g_signal_handlers_disconnect_by_func(folder_, gpointer(_onFolderLoaded), this);
-    g_object_unref(folder_);
-  }
-  if(folderPath_)
-    fm_path_unref(folderPath_);
   delete folderModel_;
   delete proxyModel_;
   delete modelFilter_;
@@ -177,7 +167,7 @@ void MainWindow::on_actionZoomOut_triggered() {
   ui.view->zoomOut();
 }
 
-void MainWindow::onFolderLoaded(FmFolder* folder) {
+void MainWindow::onFolderLoaded() {
   // if currently we're showing a file, get its index in the folder now
   // since the folder is fully loaded.
   if(currentFile_ && !currentIndex_.isValid()) {
@@ -189,22 +179,20 @@ void MainWindow::onFolderLoaded(FmFolder* folder) {
     }
   }
   // this is used to open the first image of a folder
-  else if (currentFile_ == nullptr)
+  else if (!currentFile_)
     on_actionFirst_triggered();
 }
 
 void MainWindow::openImageFile(QString fileName) {
-  FmPath* path = fm_path_new_for_str(qPrintable(fileName));
-  if(currentFile_ && fm_path_equal(currentFile_, path)) {
+  const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // the same file! do not load it again
-    fm_path_unref(path);
+  if(currentFile_ && currentFile_ == path)
     return;
-  }
+
   if (QFileInfo(fileName).isDir()) {
-    if(fm_path_equal(path, folderPath_)) {
-      fm_path_unref(path);
+    if(path == folderPath_)
       return;
-    }
+
     QList<QByteArray> formats = QImageReader::supportedImageFormats();
     QStringList formatsFilters;
     for (const QByteArray& format: formats)
@@ -212,20 +200,16 @@ void MainWindow::openImageFile(QString fileName) {
     QDir dir(fileName);
     dir.setNameFilters(formatsFilters);
     dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
-    if(dir.entryList().isEmpty()) {
-      fm_path_unref(path);
+    if(dir.entryList().isEmpty())
       return;
-    }
-    if(currentFile_)
-      fm_path_unref(currentFile_);
-    currentFile_ = nullptr;
+
+    currentFile_ = Fm::FilePath{};
     loadFolder(path);
   } else {
     // load the image file asynchronously
     loadImage(path);
-    loadFolder(fm_path_get_parent(path));
+    loadFolder(path.parent());
   }
-  fm_path_unref(path);
 }
 
 // paste the specified image into the current view,
@@ -240,9 +224,7 @@ void MainWindow::pasteImage(QImage newImage) {
   setModified(true);
 
   currentIndex_ = QModelIndex(); // invaludate current index since we don't have a folder model now
-  if(currentFile_)
-    fm_path_unref(currentFile_);
-  currentFile_ = nullptr;
+  currentFile_ = Fm::FilePath{};
 
   image_ = newImage;
   ui.view->setImage(image_);
@@ -344,44 +326,36 @@ void MainWindow::on_actionSaveAs_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
   QString baseName;
-  if(currentFile_) {
-    char* dispName = fm_path_display_name(currentFile_, false);
-    baseName = QString::fromUtf8(dispName);
-    g_free(dispName);
-  }
+  if(currentFile_)
+    baseName = QString::fromUtf8(currentFile_.displayName().get());
+
   QString fileName = saveFileName(baseName);
   if(!fileName.isEmpty()) {
-    FmPath* path = fm_path_new_for_str(qPrintable(fileName));
+    const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // save the image file asynchronously
     saveImage(path);
 
     if(!currentFile_) { // if we haven't load any file yet
       currentFile_ = path;
-      loadFolder(fm_path_get_parent(path));
+      loadFolder(path.parent());
     }
-    else
-      fm_path_unref(path);
   }
 }
 
 void MainWindow::on_actionDelete_triggered() {
   // delete the current file
-  if(currentFile_) {
-    FmPathList* paths = fm_path_list_new();
-    fm_path_list_push_tail(paths, currentFile_);
-    Fm::FileOperation::deleteFiles(paths);
-    fm_path_list_unref(paths);
-  }
+  if(currentFile_)
+    Fm::FileOperation::deleteFiles({currentFile_});
 }
 
 void MainWindow::on_actionFileProperties_triggered() {
   if(currentIndex_.isValid()) {
-    FmFileInfo* file = proxyModel_->fileInfoFromIndex(currentIndex_);
+    const auto file = proxyModel_->fileInfoFromIndex(currentIndex_);
     // it's better to use an async job to query the file info since it's
     // possible that loading of the folder is not finished and the file info is
     // not available yet, but it's overkill for a rarely used function.
     if(file)
-      Fm::FilePropsDialog::showForFile(file);
+      Fm::FilePropsDialog::showForFile(std::move(file));
   }
 }
 
@@ -398,11 +372,9 @@ void MainWindow::on_actionNext_triggered() {
       index = proxyModel_->index(currentIndex_.row() + 1, 0);
     else
       index = proxyModel_->index(0, 0);
-    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-    if(info) {
-      FmPath* path = fm_file_info_get_path(info);
-      loadImage(path, index);
-    }
+    const auto info = proxyModel_->fileInfoFromIndex(index);
+    if(info)
+      loadImage(info->path(), index);
   }
 }
 
@@ -415,59 +387,51 @@ void MainWindow::on_actionPrevious_triggered() {
       index = proxyModel_->index(currentIndex_.row() - 1, 0);
     else
       index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
-    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-    if(info) {
-      FmPath* path = fm_file_info_get_path(info);
-      loadImage(path, index);
-    }
+    const auto info = proxyModel_->fileInfoFromIndex(index);
+    if(info)
+      loadImage(info->path(), index);
   }
 }
 
 void MainWindow::on_actionFirst_triggered() {
   QModelIndex index = proxyModel_->index(0, 0);
   if(index.isValid()) {
-    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-    if(info) {
-      FmPath* path = fm_file_info_get_path(info);
-      loadImage(path, index);
-    }
+    const auto info = proxyModel_->fileInfoFromIndex(index);
+    if(info)
+      loadImage(info->path(), index);
   }
 }
 
 void MainWindow::on_actionLast_triggered() {
   QModelIndex index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
   if(index.isValid()) {
-    FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-    if(info) {
-      FmPath* path = fm_file_info_get_path(info);;
-      loadImage(path, index);
-    }
+    const auto info = proxyModel_->fileInfoFromIndex(index);
+    if(info)
+      loadImage(info->path(), index);
   }
 }
 
-void MainWindow::loadFolder(FmPath* newFolderPath) {
+void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
   if(folder_) { // an folder is already loaded
-    if(fm_path_equal(newFolderPath, folderPath_)) // same folder, ignore
+    if(newFolderPath == folderPath_) // same folder, ignore
       return;
-    // free current folder
-    g_signal_handlers_disconnect_by_func(folder_, gpointer(_onFolderLoaded), this);
-    g_object_unref(folder_);
-    fm_path_unref(folderPath_);
+    disconnect(folder_.get(), nullptr, this, nullptr); // disconnect from all signals
   }
 
-  folderPath_ = fm_path_ref(newFolderPath);
-  folder_ = fm_folder_from_path(newFolderPath);
-  g_signal_connect(folder_, "finish-loading", G_CALLBACK(_onFolderLoaded), this);
+  folderPath_ = newFolderPath;
+  folder_ = Fm::Folder::fromPath(folderPath_);
+  connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
 
   folderModel_->setFolder(folder_);
   currentIndex_ = QModelIndex(); // set current index to invalid
 }
 
 // the image is loaded (the method is only called if the loading is not cancelled)
-void MainWindow::onImageLoaded(LoadImageJob* job) {
+void MainWindow::onImageLoaded() {
+  image_ = loadJob_->image();
+
   loadJob_ = nullptr; // the job object will be freed later automatically
 
-  image_ = job->image();
   ui.view->setAutoZoomFit(true);
   ui.view->setImage(image_);
 
@@ -476,18 +440,13 @@ void MainWindow::onImageLoaded(LoadImageJob* job) {
 
   updateUI();
 
-  if(job->error()) {
-    // if there are errors
-    // TODO: show a info bar?
-  }
-
   /* we resized and moved the window without showing
      it in updateUI(), so we need to show it here */
   show();
 }
 
-void MainWindow::onImageSaved(SaveImageJob* job) {
-  if(!job->error()) {
+void MainWindow::onImageSaved() {
+  if(!saveJob_->failed()) {
     setModified(false);
   }
   saveJob_ = nullptr;
@@ -537,16 +496,16 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
   return QObject::eventFilter(watched, event);
 }
 
-QModelIndex MainWindow::indexFromPath(FmPath* filePath) {
+QModelIndex MainWindow::indexFromPath(const Fm::FilePath & filePath) {
   // if the folder is already loaded, figure out our index
   // otherwise, it will be done again in onFolderLoaded() when the folder is fully loaded.
-  if(folder_ && fm_folder_is_loaded(folder_)) {
+  if(folder_ && folder_->isLoaded()) {
     QModelIndex index;
     int count = proxyModel_->rowCount();
     for(int row = 0; row < count; ++row) {
       index = proxyModel_->index(row, 0);
-      FmFileInfo* info = proxyModel_->fileInfoFromIndex(index);
-      if(info && fm_path_equal(filePath, fm_file_info_get_path(info))) {
+      const auto info = proxyModel_->fileInfoFromIndex(index);
+      if(info && filePath == info->path()) {
         return index;
       }
     }
@@ -566,19 +525,19 @@ void MainWindow::updateUI() {
 
   QString title;
   if(currentFile_) {
-    char* dispName = fm_path_display_basename(currentFile_);
+    const Fm::CStrPtr dispName = currentFile_.displayName();
     if(loadJob_) { // if loading is in progress
       title = tr("[*]%1 (Loading...) - Image Viewer")
-                .arg(QString::fromUtf8(dispName));
+                .arg(QString::fromUtf8(dispName.get()));
     }
     else {
       if(image_.isNull()) {
         title = tr("[*]%1 (Failed to Load) - Image Viewer")
-                  .arg(QString::fromUtf8(dispName));
+                  .arg(QString::fromUtf8(dispName.get()));
       }
       else {
         title = tr("[*]%1 (%2x%3) - Image Viewer")
-                  .arg(QString::fromUtf8(dispName))
+                  .arg(QString::fromUtf8(dispName.get()))
                   .arg(image_.width())
                   .arg(image_.height());
         /* Here we try to implement the following behavior as far as possible:
@@ -610,7 +569,6 @@ void MainWindow::updateUI() {
         }
       }
     }
-    g_free(dispName);
     // TODO: update status bar, show current index in the folder
   }
   else {
@@ -622,7 +580,7 @@ void MainWindow::updateUI() {
 
 // Load the specified image file asynchronously in a worker thread.
 // When the loading is finished, onImageLoaded() will be called.
-void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
+void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   // cancel loading of current image
   if(loadJob_) {
     loadJob_->cancel(); // the job object will be freed automatically later
@@ -635,14 +593,12 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   }
 
   currentIndex_ = index;
-  if(currentFile_)
-    fm_path_unref(currentFile_);
-  currentFile_ = fm_path_ref(filePath);
+  currentFile_ = filePath;
   // clear current image, but do not update the view now to prevent flickers
   image_ = QImage();
 
-  const char* basename = fm_path_get_basename(currentFile_);
-  char* mime_type = g_content_type_guess(basename, NULL, 0, NULL);
+  const Fm::CStrPtr basename = currentFile_.baseName();
+  char* mime_type = g_content_type_guess(basename.get(), NULL, 0, NULL);
   QString mimeType;
   if (mime_type) {
     mimeType = QString(mime_type);
@@ -650,33 +606,47 @@ void MainWindow::loadImage(FmPath* filePath, QModelIndex index) {
   }
   if(mimeType == "image/gif"
      || mimeType == "image/svg+xml" || mimeType == "image/svg+xml-compressed") {
-    char *file_name = fm_path_to_str(currentFile_);
-    QString fileName(file_name);
-    g_free(file_name);
+    const Fm::CStrPtr file_name = currentFile_.toString();
     ui.view->setAutoZoomFit(true); // like in onImageLoaded()
     if(mimeType == "image/gif")
-      ui.view->setGifAnimation(fileName);
+      ui.view->setGifAnimation(QString{file_name.get()});
     else
-      ui.view->setSVG(fileName);
+      ui.view->setSVG(QString{file_name.get()});
     image_ = ui.view->image();
     updateUI();
     show();
   }
   else {
     // start a new gio job to load the specified image
-    loadJob_ = new LoadImageJob(this, filePath);
-    loadJob_->start();
+    loadJob_ = new LoadImageJob(currentFile_);
+    connect(loadJob_, &Fm::Job::finished, this, &MainWindow::onImageLoaded);
+    connect(loadJob_, &Fm::Job::error, this
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+          {
+            // TODO: show a info bar?
+            qWarning().noquote() << "lximage-qt:" << err.message();
+          }
+        , Qt::BlockingQueuedConnection);
+    loadJob_->runAsync();
 
     updateUI();
   }
 }
 
-void MainWindow::saveImage(FmPath* filePath) {
+void MainWindow::saveImage(const Fm::FilePath & filePath) {
   if(saveJob_) // do not launch a new job if the current one is still in progress
     return;
   // start a new gio job to save current image to the specified path
-  saveJob_ = new SaveImageJob(this, filePath);
-  saveJob_->start();
+  saveJob_ = new SaveImageJob(image_, filePath);
+  connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
+  connect(saveJob_, &Fm::Job::error, this
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        {
+          // TODO: show a info bar?
+          qWarning().noquote() << "lximage-qt:" << err.message();
+        }
+      , Qt::BlockingQueuedConnection);
+  saveJob_->runAsync();
   // FIXME: add a cancel button to the UI? update status bar?
 }
 
@@ -980,14 +950,14 @@ void MainWindow::onExitFullscreen() {
     showNormal();
 }
 
-void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QItemSelection& deselected) {
+void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QItemSelection& /*deselected*/) {
   // the selected item of thumbnail view is changed
   if(!selected.isEmpty()) {
     QModelIndex index = selected.first().topLeft();
     if(index.isValid() && index != currentIndex_) {
-      FmFileInfo* file = proxyModel_->fileInfoFromIndex(index);
+      const auto file = proxyModel_->fileInfoFromIndex(index);
       if(file)
-        loadImage(fm_file_info_get_path(file), index);
+        loadImage(file->path(), index);
     }
   }
 }

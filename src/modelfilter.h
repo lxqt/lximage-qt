@@ -28,7 +28,7 @@ namespace LxImage {
 class ModelFilter: public Fm::ProxyFolderModelFilter {
 public:
   ModelFilter();
-  virtual bool filterAcceptsRow(const Fm::ProxyFolderModel* model, FmFileInfo* info) const;
+  virtual bool filterAcceptsRow(const Fm::ProxyFolderModel* model, const std::shared_ptr<const Fm::FileInfo>& info) const override;
   virtual ~ModelFilter();
 };
 

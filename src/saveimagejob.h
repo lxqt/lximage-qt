@@ -21,39 +21,39 @@
 #ifndef LXIMAGE_SAVEIMAGEJOB_H
 #define LXIMAGE_SAVEIMAGEJOB_H
 
-#include <gio/gio.h>
-#include <libfm/fm.h>
+#include <libfm-qt/core/job.h>
+#include <libfm-qt/core/filepath.h>
 #include <QImage>
-#include "job.h"
 
 namespace LxImage {
 
-class MainWindow;
-
-class SaveImageJob : public Job {
+class SaveImageJob : public Fm::Job {
 
 public:
-  SaveImageJob(MainWindow* window, FmPath* filePath);
+  SaveImageJob(const QImage & image, const Fm::FilePath & filePath);
 
   QImage image() const {
     return image_;
   }
 
-  FmPath* filePath() const {
+  const Fm::FilePath & filePath() const {
     return path_;
   }
 
+  bool failed() const
+  {
+      return failed_;
+  }
+
 protected:
-  virtual bool run();
-  virtual void finish();
+  virtual void exec() override;
 
 private:
   ~SaveImageJob(); // prevent direct deletion
 
-public:
-  MainWindow* mainWindow_;
-  FmPath* path_;
-  QImage image_;
+  const Fm::FilePath path_;
+  const QImage image_;
+  bool failed_;
 };
 
 }

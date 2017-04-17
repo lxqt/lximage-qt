@@ -21,37 +21,31 @@
 #ifndef LXIMAGE_LOADIMAGEJOB_H
 #define LXIMAGE_LOADIMAGEJOB_H
 
-#include <gio/gio.h>
-#include <libfm/fm.h>
+#include <libfm-qt/core/filepath.h>
 #include <QImage>
-#include "job.h"
+#include <libfm-qt/core/job.h>
 
 namespace LxImage {
 
-class MainWindow;
-
-class LoadImageJob : public Job {
+class LoadImageJob : public Fm::Job {
 
 public:
-  LoadImageJob(MainWindow* window, FmPath* filePath);
+  LoadImageJob(const Fm::FilePath & filePath);
 
   QImage image() const {
     return image_;
   }
 
-  FmPath* filePath() const {
+  const Fm::FilePath & filePath() const {
     return path_;
   }
 
 private:
   ~LoadImageJob(); // prevent direct deletion
 
-  virtual bool run();
-  virtual void finish();
+  virtual void exec() override;
 
-public:
-  MainWindow* mainWindow_;
-  FmPath* path_;
+  const Fm::FilePath path_;
   QImage image_;
 };
 
