@@ -57,22 +57,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="530"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Ładowanie…) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="535"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Ładowanie nie powiodło się) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="539"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="576"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Przeglądarka obrazów</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
@@ -196,12 +196,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="263"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Down</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="279"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Up</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="289"/>
@@ -236,7 +236,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="332"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="342"/>
