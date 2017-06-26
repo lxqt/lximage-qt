@@ -428,21 +428,27 @@ void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
 
 // the image is loaded (the method is only called if the loading is not cancelled)
 void MainWindow::onImageLoaded() {
-  image_ = loadJob_->image();
+  // Note: As the signal finished() is emitted from different thread,
+  // we can get it even after canceling the job (and setting the loadJob_
+  // to nullptr). This simple check should be enough.
+  if (sender() == loadJob_)
+  {
+    image_ = loadJob_->image();
 
-  loadJob_ = nullptr; // the job object will be freed later automatically
+    loadJob_ = nullptr; // the job object will be freed later automatically
 
-  ui.view->setAutoZoomFit(true);
-  ui.view->setImage(image_);
+    ui.view->setAutoZoomFit(true);
+    ui.view->setImage(image_);
 
-  if(!currentIndex_.isValid())
-    currentIndex_ = indexFromPath(currentFile_);
+    if(!currentIndex_.isValid())
+      currentIndex_ = indexFromPath(currentFile_);
 
-  updateUI();
+    updateUI();
 
-  /* we resized and moved the window without showing
-     it in updateUI(), so we need to show it here */
-  show();
+    /* we resized and moved the window without showing
+       it in updateUI(), so we need to show it here */
+    show();
+  }
 }
 
 void MainWindow::onImageSaved() {
