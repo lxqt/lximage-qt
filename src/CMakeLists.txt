@@ -66,7 +66,7 @@ include(LXQtTranslateDesktop)
 
 file(GLOB desktop_files_in ../data/*.desktop.in)
 lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in})
-install(FILES ${desktop_files} DESTINATION share/applications)
+install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
 
 add_executable(lximage-qt
     ${lximage-qt_SRCS}
@@ -76,7 +76,7 @@ add_executable(lximage-qt
 )
 
 add_definitions(
-    -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
+    -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_DATAROOTDIR}/lximage-qt"
     -DLXIMAGE_VERSION="${LXIMAGE_VERSION}"
 )
 
@@ -90,4 +90,4 @@ target_link_libraries(lximage-qt
     ${XFIXES_LIBRARIES}
 )
 
-install(TARGETS lximage-qt RUNTIME DESTINATION bin)
+install(TARGETS lximage-qt RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
