@@ -23,7 +23,7 @@ find_package(Qt5Svg REQUIRED QUIET)
 find_package(fm-qt REQUIRED QUIET)
 find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 find_package(Exif REQUIRED QUIET)
-message(STATUS "Building with Qt ${Qt5Core_VERSION_STRING}")
+message(STATUS "Building with Qt ${Qt5Core_VERSION}")
 
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
