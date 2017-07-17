@@ -42,7 +42,8 @@ ImageView::ImageView(QWidget* parent):
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
-  isSVG(false) {
+  isSVG_(false),
+  isLoading_(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -176,9 +177,10 @@ void ImageView::zoomOriginal() {
 }
 
 void ImageView::setImage(QImage image, bool show) {
-  if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
+  isLoading_ = true;
+  if(show && (gifMovie_ || isSVG_)) { // a gif animation or SVG file was shown before
     scene_->clear();
-    isSVG = false;
+    isSVG_ = false;
     if(gifMovie_) { // should be deleted explicitly
       delete gifMovie_;
       gifMovie_ = nullptr;
@@ -259,7 +261,7 @@ void ImageView::setSVG(QString fileName) {
   else {
     scene_->clear();
     imageItem_ = nullptr;
-    isSVG = true;
+    isSVG_ = true;
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
     scene_->addItem(svgItem);
     scene_->setSceneRect(svgItem->boundingRect());
@@ -311,7 +313,7 @@ void ImageView::queueGenerateCache() {
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
   // no cache for gif animations or SVG images either
-  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
+  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG_) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
@@ -326,7 +328,7 @@ void ImageView::queueGenerateCache() {
     connect(cacheTimer_, &QTimer::timeout, this, &ImageView::generateCache);
   }
   if(cacheTimer_)
-    cacheTimer_->start(200); // restart the timer
+    cacheTimer_->start(isLoading_ ? 0 : 200); // restart the timer
 }
 
 // really generate the cache
@@ -336,6 +338,8 @@ void ImageView::generateCache() {
   cacheTimer_ = nullptr;
 
   if(!imageItem_ || image_.isNull()) return;
+
+  isLoading_ = false;
 
   // generate a cache for "the visible part" of the scaled image
   // rectangle of the whole image in viewport coordinate
