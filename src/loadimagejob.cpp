@@ -58,14 +58,14 @@ void LoadImageJob::exec() {
       gssize readSize = g_input_stream_read(inputStream,
                                             buffer, 4096,
                                             cancellable().get(), &error);
-      if(readSize == -1 || readSize == 0) // error or EOF
+      if(readSize == -1 || readSize == 0){ // error or EOF
         break;
       // append the bytes read to the image buffer
         imageBuffer.append(buffer, readSize);
     }
     g_input_stream_close(inputStream, NULL, NULL);
 
-    if (!error)
+    if (!error){
       break; // everything read or cancel requested
 
     act = emitError(error);
