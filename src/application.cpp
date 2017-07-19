@@ -67,7 +67,7 @@ bool Application::init(int argc, char** argv) {
 
     connect(this, &Application::aboutToQuit, this, &Application::onAboutToQuit);
 
-    if(settings_.useFallbackIconTheme())
+    if(settings_.useFallbackIconTheme()){
       QIcon::setThemeName(settings_.fallbackIconTheme());
   }
   else {
@@ -122,9 +122,9 @@ bool Application::parseCommandLineArgs() {
     // call the primary instance via dbus to do operations
     QDBusConnection dbus = QDBusConnection::sessionBus();
     QDBusInterface iface(serviceName, "/Application", ifaceName, dbus, this);
-    if(screenshotTool)
+    if(screenshotTool){
       iface.call("screenshot");
-    else
+    }else{
       iface.call("newWindow", paths);
   }
   return keepRunning;
@@ -142,7 +142,8 @@ void Application::newWindow(QStringList files) {
     window = createWindow();
 
     window->resize(settings_.windowWidth(), settings_.windowHeight());
-    if(settings_.windowMaximized())
+  }
+    if(settings_.windowMaximized()){
       window->setWindowState(window->windowState() | Qt::WindowMaximized);
 
     window->show();
@@ -153,7 +154,7 @@ void Application::newWindow(QStringList files) {
       window->openImageFile(fileName);
 
       window->resize(settings_.windowWidth(), settings_.windowHeight());
-      if(settings_.windowMaximized())
+      if(settings_.windowMaximized()){
         window->setWindowState(window->windowState() | Qt::WindowMaximized);
 
       /* when there's an image, we show the window AFTER resizing
