@@ -43,6 +43,7 @@
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
+#include <libfm-qt/folderitemdelegate.h>
 
 using namespace LxImage;
 
@@ -849,8 +850,10 @@ void MainWindow::setShowThumbnails(bool show) {
       listView->installEventFilter(this);
       // FIXME: optimize the size of the thumbnail view
       // FIXME if the thumbnail view is docked elsewhere, update the settings.
-      int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-      thumbnailsView_->setFixedHeight(listView->gridSize().height() + scrollHeight);
+      if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
+        int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+        thumbnailsView_->setFixedHeight(delegate->itemSize().height() + scrollHeight);
+      }
       thumbnailsView_->setModel(proxyModel_);
       proxyModel_->setShowThumbnails(true);
       if (currentFile_) { // select the loaded image
