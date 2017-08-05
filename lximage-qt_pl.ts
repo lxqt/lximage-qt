@@ -11,7 +11,7 @@
     <message>
         <location filename="../../application.cpp" line="93"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[PLIK1, PLIK2,...]</translation>
+        <translation>[PLIK1, PLIK2,…]</translation>
     </message>
 </context>
 <context>
@@ -76,7 +76,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="vanished">%1 (Wczytywanie...) - Przeglądarka obrazów</translation>
+        <translation type="vanished">%1 (Wczytywanie…) - Przeglądarka obrazów</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
