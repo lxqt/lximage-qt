@@ -76,7 +76,7 @@ add_executable(lximage-qt
 )
 
 add_definitions(
-    -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lximage-qt"
+    -DLXIMAGE_DATA_DIR="${CMAKE_INSTALL_FULL_DATAROOTDIR}/lximage-qt"
     -DLXIMAGE_VERSION="${LXIMAGE_VERSION}"
 )
 
