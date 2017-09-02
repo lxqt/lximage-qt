@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../../application.cpp" line="89"/>
+        <location filename="../../application.cpp" line="91"/>
         <source>Take a screenshot</source>
         <translation>スクリーンショットを撮る</translation>
     </message>
     <message>
-        <location filename="../../application.cpp" line="93"/>
+        <location filename="../../application.cpp" line="95"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[ファイル1, ファイル2,...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="148"/>
+        <location filename="../../mainwindow.cpp" line="143"/>
         <source>About</source>
         <translation>このアプリケーションについて</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="149"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,38 +39,43 @@ LXDE Project: http://lxde.org/
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="242"/>
+        <location filename="../../mainwindow.cpp" line="253"/>
         <source>Open File</source>
         <translation>ファイルを開く</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="243"/>
-        <location filename="../../mainwindow.cpp" line="264"/>
+        <location filename="../../mainwindow.cpp" line="254"/>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Image files (%1)</source>
         <translation>画像ファイル (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="264"/>
+        <location filename="../../mainwindow.cpp" line="260"/>
+        <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Save File</source>
         <translation>ファイルの保存</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="530"/>
+        <location filename="../../mainwindow.cpp" line="537"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="535"/>
+        <location filename="../../mainwindow.cpp" line="542"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="539"/>
+        <location filename="../../mainwindow.cpp" line="546"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="576"/>
+        <location filename="../../mainwindow.cpp" line="582"/>
         <source>[*]Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -91,7 +96,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">画像ビューワ</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="819"/>
+        <location filename="../../mainwindow.cpp" line="842"/>
         <source>Thumbnails</source>
         <translation type="unfinished"></translation>
     </message>
@@ -104,78 +109,77 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>画像ビューワ</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="159"/>
+        <location filename="../../mainwindow.ui" line="160"/>
         <source>&amp;About</source>
         <translation>このアプリケーションについて(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="169"/>
+        <location filename="../../mainwindow.ui" line="170"/>
         <source>&amp;Open File</source>
         <translation>ファイルを開く(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="172"/>
+        <location filename="../../mainwindow.ui" line="173"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="182"/>
+        <location filename="../../mainwindow.ui" line="183"/>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="185"/>
+        <location filename="../../mainwindow.ui" line="186"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="195"/>
+        <location filename="../../mainwindow.ui" line="196"/>
         <source>Save &amp;As</source>
         <translation>名前を付けて保存(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="198"/>
+        <location filename="../../mainwindow.ui" line="199"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="208"/>
+        <location filename="../../mainwindow.ui" line="209"/>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="211"/>
+        <location filename="../../mainwindow.ui" line="212"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="221"/>
+        <location filename="../../mainwindow.ui" line="222"/>
         <source>Zoom &amp;In</source>
         <translation>拡大(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="224"/>
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="234"/>
+        <location filename="../../mainwindow.ui" line="235"/>
         <source>Zoom &amp;Out</source>
         <translation>縮小(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="237"/>
+        <location filename="../../mainwindow.ui" line="238"/>
         <source>Ctrl+-</source>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="247"/>
+        <location filename="../../mainwindow.ui" line="248"/>
         <source>&amp;Copy to Clipboard</source>
         <translation>クリップボードへコピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="257"/>
-        <location filename="../../mainwindow.ui" line="260"/>
+        <location filename="../../mainwindow.ui" line="258"/>
+        <location filename="../../mainwindow.ui" line="261"/>
         <source>Next File</source>
         <translation>次のファイル</translation>
     </message>
@@ -184,8 +188,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">右</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="273"/>
-        <location filename="../../mainwindow.ui" line="276"/>
+        <location filename="../../mainwindow.ui" line="274"/>
+        <location filename="../../mainwindow.ui" line="277"/>
         <source>Previous File</source>
         <translation>前のファイル</translation>
     </message>
@@ -194,133 +198,153 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">左</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="263"/>
+        <location filename="../../mainwindow.ui" line="225"/>
+        <source>Ctrl+=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.ui" line="264"/>
         <source>PgDown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="279"/>
+        <location filename="../../mainwindow.ui" line="280"/>
         <source>PgUp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="289"/>
+        <location filename="../../mainwindow.ui" line="290"/>
         <source>Original Size</source>
         <translation>原寸大</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="299"/>
+        <location filename="../../mainwindow.ui" line="293"/>
+        <source>Ctrl+0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.ui" line="303"/>
         <source>&amp;Fit</source>
         <translation>フィット(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="309"/>
+        <location filename="../../mainwindow.ui" line="313"/>
         <source>&amp;Rotate Clockwise</source>
         <translation>時計方向に回転(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="319"/>
+        <location filename="../../mainwindow.ui" line="323"/>
         <source>Rotate &amp;Counterclockwise</source>
         <translation>反時計方向に回転(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="324"/>
+        <location filename="../../mainwindow.ui" line="328"/>
         <source>P&amp;references</source>
         <translation>設定(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="329"/>
+        <location filename="../../mainwindow.ui" line="333"/>
         <source>&amp;Print</source>
         <translation>印刷(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="332"/>
+        <location filename="../../mainwindow.ui" line="336"/>
         <source>Ctrl+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="342"/>
+        <location filename="../../mainwindow.ui" line="346"/>
         <source>First File</source>
         <translation>最初のファイル</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="345"/>
+        <location filename="../../mainwindow.ui" line="349"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="355"/>
+        <location filename="../../mainwindow.ui" line="359"/>
         <source>Last File</source>
         <translation>最後のファイル</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="358"/>
+        <location filename="../../mainwindow.ui" line="362"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="368"/>
+        <location filename="../../mainwindow.ui" line="372"/>
         <source>&amp;New Window</source>
         <translation>新規ウィンドウ(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="371"/>
+        <location filename="../../mainwindow.ui" line="375"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="376"/>
+        <location filename="../../mainwindow.ui" line="380"/>
         <source>Flip &amp;Horizontally</source>
         <translation>水平方向に反転(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="386"/>
+        <location filename="../../mainwindow.ui" line="390"/>
         <source>Capture Screenshot</source>
         <translation>スクリーンショットを撮る</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="394"/>
+        <location filename="../../mainwindow.ui" line="398"/>
         <source>F&amp;ull Screen</source>
         <translation>全画面(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="397"/>
+        <location filename="../../mainwindow.ui" line="401"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="402"/>
+        <location filename="../../mainwindow.ui" line="406"/>
         <source>Flip &amp;Vertically</source>
         <translation>垂直方向に反転(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="412"/>
+        <location filename="../../mainwindow.ui" line="416"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>クリップボードからペースト(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="425"/>
+        <location filename="../../mainwindow.ui" line="429"/>
         <source>&amp;Slide Show</source>
         <translation>スライドショー(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="435"/>
+        <location filename="../../mainwindow.ui" line="439"/>
         <source>&amp;Delete</source>
         <translation>削除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="438"/>
+        <location filename="../../mainwindow.ui" line="442"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="446"/>
+        <location filename="../../mainwindow.ui" line="450"/>
         <source>Show Thumbnails</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="451"/>
+        <location filename="../../mainwindow.ui" line="455"/>
         <source>File Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.ui" line="463"/>
+        <source>Open &amp;Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.ui" line="466"/>
+        <source>Ctrl+D</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -329,27 +353,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>ファイル(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="71"/>
+        <location filename="../../mainwindow.ui" line="72"/>
         <source>&amp;Help</source>
         <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="77"/>
+        <location filename="../../mainwindow.ui" line="78"/>
         <source>Go</source>
         <translation>移動</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="86"/>
+        <location filename="../../mainwindow.ui" line="87"/>
         <source>&amp;View</source>
         <translation>表示(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="100"/>
+        <location filename="../../mainwindow.ui" line="101"/>
         <source>&amp;Edit</source>
         <translation>編集(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="120"/>
+        <location filename="../../mainwindow.ui" line="121"/>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
@@ -411,42 +435,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>スクリーンショット</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="28"/>
+        <location filename="../../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
         <translation>スクリーンショットを撮る</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="35"/>
+        <location filename="../../screenshotdialog.ui" line="34"/>
         <source>Region</source>
         <translation>領域</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="41"/>
+        <location filename="../../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
         <translation>画面全体</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="51"/>
+        <location filename="../../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
         <translation>現在のウィンドウのみ</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="61"/>
+        <location filename="../../screenshotdialog.ui" line="57"/>
+        <source>Capture an area of the screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
         <translation>マウスカーソルを含む</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="68"/>
+        <location filename="../../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
         <translation> 秒</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="85"/>
+        <location filename="../../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
         <translation>遅延:</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="95"/>
+        <location filename="../../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
         <translation>ウィンドウのタイトルと枠を含む</translation>
     </message>

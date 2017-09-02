@@ -228,6 +228,10 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <source>[*]Image Viewer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -273,10 +277,6 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     </message>
     <message>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl++</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -427,6 +427,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <source>File Properties</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Ctrl+=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open &amp;Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PreferencesDialog</name>
@@ -491,6 +507,10 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     </message>
     <message>
         <source>Include window title and frame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Capture an area of the screen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

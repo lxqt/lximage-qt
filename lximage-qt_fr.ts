@@ -4,12 +4,12 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../../application.cpp" line="89"/>
+        <location filename="../../application.cpp" line="91"/>
         <source>Take a screenshot</source>
         <translation>Faire une copie d&apos;écran</translation>
     </message>
     <message>
-        <location filename="../../application.cpp" line="93"/>
+        <location filename="../../application.cpp" line="95"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[FICHIER1,FICHIER2,...]</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="150"/>
+        <location filename="../../mainwindow.cpp" line="143"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="151"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -39,48 +39,48 @@ Auteurs:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="268"/>
+        <location filename="../../mainwindow.cpp" line="253"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="269"/>
-        <location filename="../../mainwindow.cpp" line="296"/>
+        <location filename="../../mainwindow.cpp" line="254"/>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Image files (%1)</source>
         <translation>Fichier image (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="275"/>
+        <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
         <translation>Ouvrir le répertoire</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="296"/>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Save File</source>
         <translation>Enregistrer un fichier</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="569"/>
+        <location filename="../../mainwindow.cpp" line="537"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Chargement...) - Visionneur d&apos;image</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="574"/>
+        <location filename="../../mainwindow.cpp" line="542"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Échec de chargement) - Visionneur d&apos;image</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="578"/>
+        <location filename="../../mainwindow.cpp" line="546"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visionneur d&apos;image</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="615"/>
+        <location filename="../../mainwindow.cpp" line="582"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visionneur d&apos;image</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="863"/>
+        <location filename="../../mainwindow.cpp" line="842"/>
         <source>Thumbnails</source>
         <translation>Miniatures</translation>
     </message>
@@ -391,42 +391,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Copie d&apos;écran</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="28"/>
+        <location filename="../../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
         <translation>Faire une copie d&apos;écran</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="35"/>
+        <location filename="../../screenshotdialog.ui" line="34"/>
         <source>Region</source>
         <translation>Région</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="41"/>
+        <location filename="../../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
         <translation>Écran entier</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="51"/>
+        <location filename="../../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
         <translation>Fenêtre courante seule</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="61"/>
+        <location filename="../../screenshotdialog.ui" line="57"/>
+        <source>Capture an area of the screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
         <translation>Inclure le pointeur de souris</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="68"/>
+        <location filename="../../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
         <translation> secondes</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="85"/>
+        <location filename="../../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
         <translation>Délai :</translation>
     </message>
     <message>
-        <location filename="../../screenshotdialog.ui" line="95"/>
+        <location filename="../../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
         <translation>Inclurela barre de titre et le cadre</translation>
     </message>
