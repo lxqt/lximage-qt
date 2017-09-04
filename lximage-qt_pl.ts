@@ -52,7 +52,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz katalog</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="281"/>
@@ -200,7 +200,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="264"/>
@@ -220,7 +220,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="303"/>
@@ -230,17 +230,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="313"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Obróć &amp;zgodnie z ruchem wskazówek zegara</translation>
+        <translation>Ob&amp;róć zgodnie z ruchem wskazówek zegara</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="323"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Ob&amp;róć przeciwnie do ruchu wskazówek zegara</translation>
+        <translation>Obróć prze&amp;ciwnie do ruchu wskazówek zegara</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="328"/>
         <source>P&amp;references</source>
-        <translation>Pre&amp;ferencje</translation>
+        <translation>P&amp;referencje</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="333"/>
@@ -315,7 +315,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="429"/>
         <source>&amp;Slide Show</source>
-        <translation>Pokaz s&amp;lajdów</translation>
+        <translation>Pokaz &amp;slajdów</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="439"/>
@@ -340,12 +340,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="463"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz &amp;katalog</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -457,7 +457,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Przechwyć fragment ekranu</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
