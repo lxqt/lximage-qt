@@ -58,6 +58,13 @@ lxqt_translate_ts(QM_FILES
     TRANSLATIONS_REFSPEC
         ${TRANSLATIONS_REFSPEC}
 )
+
+include(Qt5TranslationLoader)
+qt5_translation_loader(lximage-qt_QM_LOADER
+    "${CMAKE_INSTALL_FULL_DATAROOTDIR}/${PROJECT_NAME}/translations"
+    ${PROJECT_NAME}
+)
+
 # prevent the generated files from being deleted during make clean
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM true)
 
@@ -72,6 +79,7 @@ add_executable(lximage-qt
     ${lximage-qt_SRCS}
     ${lximage-qt_UI_H}
     ${desktop_files}
+    ${lximage-qt_QM_LOADER}
     ${QM_FILES}
 )
 
