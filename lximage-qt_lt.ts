@@ -52,7 +52,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Atverti katalogą</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="281"/>
@@ -149,7 +149,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl(Vald)+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="235"/>
@@ -196,7 +196,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl(Vald)+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="303"/>
@@ -316,12 +316,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="463"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Atverti &amp;katalogą</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl(Vald)+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -417,7 +417,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Fotografuoti ekrano sritį</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
