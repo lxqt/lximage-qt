@@ -53,7 +53,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri cartella</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="281"/>
@@ -122,8 +122,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="173"/>
         <source>Ctrl+O</source>
-        <translatorcomment>Shortcuts werden automatisch übersetzt</translatorcomment>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="183"/>
@@ -138,7 +137,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="196"/>
         <source>Save &amp;As</source>
-        <translation>Salva &amp;come</translation>
+        <translation>Salva con &amp;nome</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="199"/>
@@ -199,7 +198,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="280"/>
@@ -214,7 +213,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="303"/>
@@ -335,12 +334,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="463"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri &amp;cartella</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -416,12 +415,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Catturta schermata</translation>
+        <translation>Cattura schermata</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation>Regione</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="40"/>
@@ -436,7 +435,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Area selezionata</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
