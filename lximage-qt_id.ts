@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="id">
+<TS version="2.0" language="id">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -30,12 +30,12 @@ LXDE Project: http://lxde.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage - suatu penampil gambar yang sederhana dan cepat
+        <translation>LXImage - penampil gambar yang sederhana dan cepat
 
 Hak cipta (C) 2013
-Projek LXDE: http://lxde.org/
+Proyek LXDE: http://lxde.org/
 
-Penulis:
+Pembuat:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
@@ -52,7 +52,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka direktori</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="281"/>
@@ -62,43 +62,43 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="537"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Memuat...) - Penampil Gambar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="542"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Gagal Dimuat) - Penampil Gambar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="546"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Penampil Gambar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="582"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Penampil Gambar</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation type="vanished">%1 (Memuat...) - Penampil Gambar</translation>
+        <translation>%1 (Memuat...) - Penampil Gambar</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation type="vanished">%1 (Gagal Dimuat) - Penampil Gambar</translation>
+        <translation>%1 (Gagal Dimuat) - Penampil Gambar</translation>
     </message>
     <message>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation type="vanished">%1 (%2x%3) - Penampil Gambar</translation>
+        <translation>%1 (%2x%3) - Penampil Gambar</translation>
     </message>
     <message>
         <source>Image Viewer</source>
-        <translation type="vanished">Penampil Gambar</translation>
+        <translation>Penampil Gambar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="842"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar kecil</translation>
     </message>
 </context>
 <context>
@@ -160,12 +160,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Ctrl++</source>
-        <translation type="vanished">Ctrl++</translation>
+        <translation>Ctrl++</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="235"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Per&amp;kecil</translation>
+        <translation>Per&amp;kecil</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="238"/>
@@ -181,11 +181,11 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../../mainwindow.ui" line="258"/>
         <location filename="../../mainwindow.ui" line="261"/>
         <source>Next File</source>
-        <translation>Berkas Selanjutnya</translation>
+        <translation>Berkas Berikutnya</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Kanan</translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="274"/>
@@ -195,22 +195,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Kiri</translation>
+        <translation>Kiri</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="264"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="280"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="290"/>
@@ -220,7 +220,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="303"/>
@@ -250,7 +250,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="336"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="346"/>
@@ -260,8 +260,9 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="349"/>
         <source>Home</source>
-        <translatorcomment>asumsi: nama tombol</translatorcomment>
-        <translation>Home</translation>
+        <translatorcomment>asumsi: nama tombol
+</translatorcomment>
+        <translation>Rumah</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="359"/>
@@ -271,8 +272,9 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="362"/>
         <source>End</source>
-        <translatorcomment>asumsi: nama tombol</translatorcomment>
-        <translation>End</translation>
+        <translatorcomment>asumsi: nama tombol
+</translatorcomment>
+        <translation>Akhir</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="372"/>
@@ -332,22 +334,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="450"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan Gambar Kecil</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="455"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Properti Berkas</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="463"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka &amp;Direktori</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -377,7 +379,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="121"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilah alat</translation>
     </message>
     <message>
         <source>toolBar</source>
@@ -394,39 +396,39 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema ikon:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna latar belakang normal:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Warna latar belakang layar penuh:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Interval salindia (detik):</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Umum</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation type="vanished">TODO: Tambahkan opsi konfigurasi di sini</translation>
+        <translation>TODO: Tambahkan opsi konfigurasi di sini</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation type="vanished">Tab 1</translation>
+        <translation>Tab 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation type="vanished">Tab 2</translation>
+        <translation>Tab 2</translation>
     </message>
 </context>
 <context>
@@ -459,7 +461,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangkap area layar</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
@@ -474,7 +476,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation>Tundaan:</translation>
+        <translation>Tunda:</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="101"/>
