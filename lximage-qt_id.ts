@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="id">
+<TS version="2.1" language="id">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -81,19 +81,19 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
-        <translation>%1 (Memuat...) - Penampil Gambar</translation>
+        <translation type="vanished">%1 (Memuat...) - Penampil Gambar</translation>
     </message>
     <message>
         <source>%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (Gagal Dimuat) - Penampil Gambar</translation>
+        <translation type="vanished">%1 (Gagal Dimuat) - Penampil Gambar</translation>
     </message>
     <message>
         <source>%1 (%2x%3) - Image Viewer</source>
-        <translation>%1 (%2x%3) - Penampil Gambar</translation>
+        <translation type="vanished">%1 (%2x%3) - Penampil Gambar</translation>
     </message>
     <message>
         <source>Image Viewer</source>
-        <translation>Penampil Gambar</translation>
+        <translation type="vanished">Penampil Gambar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="842"/>
@@ -160,7 +160,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="235"/>
@@ -185,7 +185,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Kanan</translation>
+        <translation type="vanished">Kanan</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="274"/>
@@ -195,7 +195,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Kiri</translation>
+        <translation type="vanished">Kiri</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
@@ -420,15 +420,15 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
-        <translation>TODO: Tambahkan opsi konfigurasi di sini</translation>
+        <translation type="vanished">TODO: Tambahkan opsi konfigurasi di sini</translation>
     </message>
     <message>
         <source>Tab 1</source>
-        <translation>Tab 1</translation>
+        <translation type="vanished">Tab 1</translation>
     </message>
     <message>
         <source>Tab 2</source>
-        <translation>Tab 2</translation>
+        <translation type="vanished">Tab 2</translation>
     </message>
 </context>
 <context>
