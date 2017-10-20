@@ -108,6 +108,8 @@
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
     <addaction name="separator"/>
+    <addaction name="actionUpload"/>
+    <addaction name="separator"/>
     <addaction name="actionPreferences"/>
    </widget>
    <addaction name="menu_File"/>
@@ -464,6 +466,17 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionUpload">
+   <property name="icon">
+    <iconset theme="upload-media"/>
+   </property>
+   <property name="text">
+    <string>Upload</string>
+   </property>
+   <property name="toolTip">
+    <string>Upload the image</string>
    </property>
   </action>
  </widget>

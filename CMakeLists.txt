@@ -15,6 +15,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Network REQUIRED)
 find_package(Qt5DBus REQUIRED)
 find_package(Qt5PrintSupport REQUIRED)
 find_package(Qt5X11Extras REQUIRED)
