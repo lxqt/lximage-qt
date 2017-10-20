@@ -630,7 +630,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     loadJob_ = new LoadImageJob(currentFile_);
     connect(loadJob_, &Fm::Job::finished, this, &MainWindow::onImageLoaded);
     connect(loadJob_, &Fm::Job::error, this
-        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        , [] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
           {
             // TODO: show a info bar?
             qWarning().noquote() << "lximage-qt:" << err.message();
@@ -649,7 +649,7 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   saveJob_ = new SaveImageJob(image_, filePath);
   connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
   connect(saveJob_, &Fm::Job::error, this
-        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        , [] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
         {
           // TODO: show a info bar?
           qWarning().noquote() << "lximage-qt:" << err.message();

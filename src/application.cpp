@@ -41,7 +41,10 @@ Application::Application(int& argc, char** argv):
 }
 
 bool Application::init(int argc, char** argv) {
-    setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+  Q_UNUSED(argc)
+  Q_UNUSED(argv)
+
+  setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
   // install the translations built-into Qt itself
   qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
