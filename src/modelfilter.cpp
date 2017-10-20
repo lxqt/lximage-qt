@@ -32,6 +32,8 @@ ModelFilter::~ModelFilter() {
 
 bool ModelFilter::filterAcceptsRow(const Fm::ProxyFolderModel* model, const std::shared_ptr<const Fm::FileInfo>& info) const
 {
+  Q_UNUSED(model)
+
   // filter out non-image files and formats that we don't support.
   return info && info->isImage();
 }

@@ -158,6 +158,6 @@ private:
   SaveImageJob* saveJob_;
 };
 
-};
+}
 
 #endif // LXIMAGE_MAINWINDOW_H
