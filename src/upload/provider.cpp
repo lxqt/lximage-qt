@@ -18,3 +18,7 @@
 */
 
 #include "provider.h"
+
+using namespace LxImage;
+
+QNetworkAccessManager Provider::sManager;

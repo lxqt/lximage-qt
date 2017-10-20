@@ -35,8 +35,8 @@ ImgurProvider gImgurProvider;
 
 UploadDialog::UploadDialog(QWidget *parent, const QString &filename)
     : QDialog(parent),
-      mFile(filename),
       mState(SelectProvider),
+      mFile(filename),
       mUpload(nullptr)
 {
     ui.setupUi(this);

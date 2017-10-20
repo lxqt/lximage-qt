@@ -21,6 +21,7 @@
 #define LXIMAGE_PROVIDER_H
 
 #include <QIODevice>
+#include <QNetworkAccessManager>
 #include <QObject>
 
 namespace LxImage {
@@ -42,6 +43,10 @@ public:
      * @return newly created upload
      */
     virtual Upload *upload(QIODevice *device) = 0;
+
+protected:
+
+    static QNetworkAccessManager sManager;
 };
 
 }

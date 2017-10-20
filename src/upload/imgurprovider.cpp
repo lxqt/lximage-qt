@@ -38,5 +38,5 @@ Upload *ImgurProvider::upload(QIODevice *device)
     request.setRawHeader("Authorization", gAuthHeader);
 
     // Start the request and wrap it in an ImgurUpload
-    return new ImgurUpload(mManager.post(request, device));
+    return new ImgurUpload(sManager.post(request, device));
 }
