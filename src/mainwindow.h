@@ -103,6 +103,7 @@ private Q_SLOTS:
   void on_actionFlipHorizontal_triggered();
   void on_actionCopy_triggered();
   void on_actionPaste_triggered();
+  void on_actionUpload_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);

@@ -45,6 +45,8 @@
 #include <libfm-qt/fileoperation.h>
 #include <libfm-qt/folderitemdelegate.h>
 
+#include "upload/uploaddialog.h"
+
 using namespace LxImage;
 
 MainWindow::MainWindow():
@@ -730,6 +732,13 @@ void MainWindow::on_actionPaste_triggered() {
   if(!image.isNull()) {
     pasteImage(image);
   }
+}
+
+void MainWindow::on_actionUpload_triggered()
+{
+    if (currentFile_.isValid()) {
+        UploadDialog(this, currentFile_.localPath().get()).exec();
+    }
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
