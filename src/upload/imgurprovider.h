@@ -20,8 +20,6 @@
 #ifndef LXIMAGE_IMGURPROVIDER_H
 #define LXIMAGE_IMGURPROVIDER_H
 
-#include <QNetworkAccessManager>
-
 #include "provider.h"
 
 namespace LxImage {
@@ -36,10 +34,6 @@ class ImgurProvider : public Provider
 public:
 
     virtual Upload *upload(QIODevice *device);
-
-private:
-
-    QNetworkAccessManager mManager;
 };
 
 }
