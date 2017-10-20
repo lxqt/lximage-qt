@@ -96,6 +96,7 @@ void UploadDialog::start()
 
     // Destroy the upload when it completes
     connect(mUpload, &Upload::finished, [this]() {
+        mFile.close();
         mUpload->deleteLater();
         mUpload = nullptr;
     });
