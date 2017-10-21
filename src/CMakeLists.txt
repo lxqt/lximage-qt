@@ -24,6 +24,8 @@ set(lximage-qt_SRCS
     settings.cpp
     graphicsscene.cpp
 
+    upload/imageshackprovider.cpp
+    upload/imageshackupload.cpp
     upload/imgurprovider.cpp
     upload/imgurupload.cpp
     upload/provider.cpp
