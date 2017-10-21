@@ -1,7 +1,41 @@
 
-lximage-qt-0.5.1 / 2016-12-21
+lximage-qt-0.6.0 / 2017-10-21
 =============================
 
+  * Add ImageShack upload provider.
+  * Fix warnings issued by GCC and Clang.
+  * Ensure file is closed when upload finishes.
+  * Make image URL read-only.
+  * Update copyright in initial file comment for new additions.
+  * Make QNetworkAccessManager static and fix initialization order in UploadDialog.
+  * Add support for uploading files (fixes #98).
+  * Bump versions
+  * Don't export github templates
+  * Don't use hardcoded install dir
+  * Update CMakeLists.txt
+  * Fix regression in thumbnail view
+  * Add Lithuanian .desktop files
+  * liblxqt don't fit here
+  * Copied issue-template
+  * Drops Qt5Core_VERSION_STRING
+  * set Qt::AA_UseHighDpiPixmaps to true
+  * MainWindow: Fix crash for quick image changes
+  * Use GNUInstallDirs
+  * jobs: Do proper error handling
+  * Adapt to changes in libfm-qt(the c++11 port)
+  * Use the new lxqt-build-tools new FindExif CMake module
+  * Simpler code for ScreenshotSelectAreaGraphicsView class.
+  * Change Screenshot select area green color by actual hightlight color. Use lximage-qt private variables style.
+  * Adapt to C++11 and RAM improvements.
+  * Screenshot captures an area of the screen.
+  * Use const iterators
+  * Bump year
+  * File and folder DND Fixes https://github.com/lxde/lximage-qt/issues/69.
+
+0.5.1 / 2016-12-21
+==================
+
+  * Release 0.5.1: Update changelog
   * Bump patch version and (#82)
   * Create lximage-qt-screenshot_it.desktop (#83)
   * Add *da.desktop files
