@@ -181,6 +181,20 @@
     </message>
 </context>
 <context>
+    <name>LxImage::ImageShackUpload</name>
+    <message>
+        <source>unknown error response</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LxImage::ImgurUpload</name>
+    <message>
+        <source>unknown error response</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LxImage::MainWindow</name>
     <message>
         <source>About</source>
@@ -230,6 +244,33 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     </message>
     <message>
         <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LxImage::UploadDialog</name>
+    <message>
+        <source>Imgur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ImageShack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -443,6 +484,14 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <source>Ctrl+D</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Upload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upload the image</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PreferencesDialog</name>
@@ -511,6 +560,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     </message>
     <message>
         <source>Capture an area of the screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UploadDialog</name>
+    <message>
+        <source>Upload</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
