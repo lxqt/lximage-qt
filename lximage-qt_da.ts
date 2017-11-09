@@ -434,7 +434,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Diasshow interval (sekunder):</translation>
+        <translation>Interval for diasshow (sekunder):</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="24"/>
@@ -467,7 +467,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation>Kun aktuelt vindue</translation>
+        <translation>Kun nuværende vindue</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
