@@ -33,13 +33,15 @@ set(lximage-qt_SRCS
     upload/uploaddialog.cpp
 )
 
-qt5_add_dbus_adaptor(lximage-qt_SRCS
+qt5_add_dbus_adaptor(lximage-qt_DBUS_SRCS
     org.lxde.LxImage.Application.xml
     application.h
     LxImage::Application
     applicationadaptor
     ApplicationAdaptor
 )
+set_property(SOURCE ${lximage-qt_DBUS_SRCS} PROPERTY SKIP_AUTOGEN ON)
+list(APPEND lximage-qt_SRCS "${lximage-qt_DBUS_SRCS}")
 
 set(lximage-qt_UIS
     mainwindow.ui
@@ -48,7 +50,6 @@ set(lximage-qt_UIS
 
     upload/uploaddialog.ui
 )
-qt5_wrap_ui(lximage-qt_UI_H ${lximage-qt_UIS})
 
 # add translation for lximage-qt
 include(LXQtTranslateTs)
@@ -80,7 +81,7 @@ install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applica
 
 add_executable(lximage-qt
     ${lximage-qt_SRCS}
-    ${lximage-qt_UI_H}
+    ${lximage-qt_UIS}
     ${desktop_files}
     ${QM_FILES}
 )
