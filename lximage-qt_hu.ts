@@ -4,41 +4,25 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../../application.cpp" line="94"/>
+        <location filename="../../application.cpp" line="91"/>
         <source>Take a screenshot</source>
         <translation>Képernyőkép</translation>
     </message>
     <message>
-        <location filename="../../application.cpp" line="98"/>
+        <location filename="../../application.cpp" line="95"/>
         <source>[FILE1, FILE2,...]</source>
         <translation></translation>
     </message>
 </context>
 <context>
-    <name>LxImage::ImageShackUpload</name>
-    <message>
-        <location filename="../../upload/imageshackupload.cpp" line="49"/>
-        <source>unknown error response</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>LxImage::ImgurUpload</name>
-    <message>
-        <location filename="../../upload/imgurupload.cpp" line="46"/>
-        <source>unknown error response</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="145"/>
+        <location filename="../../mainwindow.cpp" line="143"/>
         <source>About</source>
         <translation>Rólunk</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="146"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -55,45 +39,45 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="253"/>
         <source>Open File</source>
         <translation>Fájl megnyitás</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="256"/>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="254"/>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Image files (%1)</source>
         <translation>Képfájlok (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="262"/>
+        <location filename="../../mainwindow.cpp" line="260"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Könyvtár nyitás</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="281"/>
         <source>Save File</source>
         <translation>Fájl mentés</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="539"/>
+        <location filename="../../mainwindow.cpp" line="537"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Betöltés...) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="544"/>
+        <location filename="../../mainwindow.cpp" line="542"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Betöltés sikertelen) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="548"/>
+        <location filename="../../mainwindow.cpp" line="546"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3.) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="584"/>
+        <location filename="../../mainwindow.cpp" line="582"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Képnéző</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
@@ -112,42 +96,9 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="851"/>
+        <location filename="../../mainwindow.cpp" line="842"/>
         <source>Thumbnails</source>
         <translation>Bélyegképek</translation>
-    </message>
-</context>
-<context>
-    <name>LxImage::UploadDialog</name>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="47"/>
-        <source>Imgur</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="48"/>
-        <source>ImageShack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="124"/>
-        <source>Start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="127"/>
-        <source>Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="130"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../upload/uploaddialog.cpp" line="137"/>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -158,240 +109,230 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="162"/>
+        <location filename="../../mainwindow.ui" line="160"/>
         <source>&amp;About</source>
         <translation>Ról&amp;am</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="172"/>
+        <location filename="../../mainwindow.ui" line="170"/>
         <source>&amp;Open File</source>
         <translation>&amp;Fájlnyitás</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="175"/>
+        <location filename="../../mainwindow.ui" line="173"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="185"/>
+        <location filename="../../mainwindow.ui" line="183"/>
         <source>&amp;Save</source>
         <translation>&amp;Ment</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="188"/>
+        <location filename="../../mainwindow.ui" line="186"/>
         <source>Ctrl+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="198"/>
+        <location filename="../../mainwindow.ui" line="196"/>
         <source>Save &amp;As</source>
         <translation>&amp;Másként ment</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="201"/>
+        <location filename="../../mainwindow.ui" line="199"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="211"/>
+        <location filename="../../mainwindow.ui" line="209"/>
         <source>&amp;Close</source>
         <translation>&amp;Bezár</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="214"/>
+        <location filename="../../mainwindow.ui" line="212"/>
         <source>Ctrl+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="224"/>
+        <location filename="../../mainwindow.ui" line="222"/>
         <source>Zoom &amp;In</source>
         <translation>&amp;Nagyít</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="237"/>
+        <location filename="../../mainwindow.ui" line="235"/>
         <source>Zoom &amp;Out</source>
         <translation>&amp;Kicsinyít</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="240"/>
+        <location filename="../../mainwindow.ui" line="238"/>
         <source>Ctrl+-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="250"/>
+        <location filename="../../mainwindow.ui" line="248"/>
         <source>&amp;Copy to Clipboard</source>
         <translation>&amp;Vágólapra másol</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="260"/>
-        <location filename="../../mainwindow.ui" line="263"/>
+        <location filename="../../mainwindow.ui" line="258"/>
+        <location filename="../../mainwindow.ui" line="261"/>
         <source>Next File</source>
         <translation>Következő fájl</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="276"/>
-        <location filename="../../mainwindow.ui" line="279"/>
+        <location filename="../../mainwindow.ui" line="274"/>
+        <location filename="../../mainwindow.ui" line="277"/>
         <source>Previous File</source>
         <translation>Előző fájl</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="266"/>
+        <location filename="../../mainwindow.ui" line="264"/>
         <source>PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="227"/>
+        <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="282"/>
+        <location filename="../../mainwindow.ui" line="280"/>
         <source>PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="292"/>
+        <location filename="../../mainwindow.ui" line="290"/>
         <source>Original Size</source>
         <translation>Eredeti méret</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="295"/>
+        <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="305"/>
+        <location filename="../../mainwindow.ui" line="303"/>
         <source>&amp;Fit</source>
         <translation>&amp;Kitölt</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="315"/>
+        <location filename="../../mainwindow.ui" line="313"/>
         <source>&amp;Rotate Clockwise</source>
         <translation>&amp;Jobbra forgat</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="325"/>
+        <location filename="../../mainwindow.ui" line="323"/>
         <source>Rotate &amp;Counterclockwise</source>
         <translation>&amp;Balra forgat</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="330"/>
+        <location filename="../../mainwindow.ui" line="328"/>
         <source>P&amp;references</source>
         <translation>&amp;Beállítások</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="335"/>
+        <location filename="../../mainwindow.ui" line="333"/>
         <source>&amp;Print</source>
         <translation>&amp;Nyomtat</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="338"/>
+        <location filename="../../mainwindow.ui" line="336"/>
         <source>Ctrl+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="348"/>
+        <location filename="../../mainwindow.ui" line="346"/>
         <source>First File</source>
         <translation>Első fájl</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="351"/>
+        <location filename="../../mainwindow.ui" line="349"/>
         <source>Home</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="361"/>
+        <location filename="../../mainwindow.ui" line="359"/>
         <source>Last File</source>
         <translation>Utolsó fájl</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="364"/>
+        <location filename="../../mainwindow.ui" line="362"/>
         <source>End</source>
         <translation>Vége</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="374"/>
+        <location filename="../../mainwindow.ui" line="372"/>
         <source>&amp;New Window</source>
         <translation>&amp;Új ablak</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="377"/>
+        <location filename="../../mainwindow.ui" line="375"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="382"/>
+        <location filename="../../mainwindow.ui" line="380"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Vízszintesen átfordít</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="392"/>
+        <location filename="../../mainwindow.ui" line="390"/>
         <source>Capture Screenshot</source>
         <translation>Képernyókép készítés</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="400"/>
+        <location filename="../../mainwindow.ui" line="398"/>
         <source>F&amp;ull Screen</source>
         <translation>&amp;Teljes kép</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="403"/>
+        <location filename="../../mainwindow.ui" line="401"/>
         <source>F11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="408"/>
+        <location filename="../../mainwindow.ui" line="406"/>
         <source>Flip &amp;Vertically</source>
         <translation>&amp;Fejtetőre állít</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="418"/>
+        <location filename="../../mainwindow.ui" line="416"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>Vágóla&amp;pról beilleszt</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="431"/>
+        <location filename="../../mainwindow.ui" line="429"/>
         <source>&amp;Slide Show</source>
         <translation>&amp;Diavetítés</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="441"/>
+        <location filename="../../mainwindow.ui" line="439"/>
         <source>&amp;Delete</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="444"/>
+        <location filename="../../mainwindow.ui" line="442"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="452"/>
+        <location filename="../../mainwindow.ui" line="450"/>
         <source>Show Thumbnails</source>
         <translation>Bélyegképek</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="457"/>
+        <location filename="../../mainwindow.ui" line="455"/>
         <source>File Properties</source>
         <translation>Fájljellemzők</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="465"/>
+        <location filename="../../mainwindow.ui" line="463"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mappa &amp;Megnyitása</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="468"/>
+        <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../mainwindow.ui" line="476"/>
-        <source>Upload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../mainwindow.ui" line="479"/>
-        <source>Upload the image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -420,7 +361,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>&amp;Szerkeszt</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.ui" line="123"/>
+        <location filename="../../mainwindow.ui" line="121"/>
         <source>Toolbar</source>
         <translation>Eszközsáv</translation>
     </message>
@@ -488,7 +429,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Képernyőrész kiválasztás</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
@@ -509,14 +450,6 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
         <translation>Ablakkeret és fejléc is</translation>
-    </message>
-</context>
-<context>
-    <name>UploadDialog</name>
-    <message>
-        <location filename="../../upload/uploaddialog.ui" line="14"/>
-        <source>Upload</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
