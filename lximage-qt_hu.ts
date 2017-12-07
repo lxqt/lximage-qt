@@ -193,7 +193,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="225"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="280"/>
@@ -208,7 +208,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="293"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="303"/>
@@ -273,12 +273,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="380"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Vízszintesen átfordít</translation>
+        <translation>Vízsz&amp;intesen átfordít</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="390"/>
         <source>Capture Screenshot</source>
-        <translation>Képernyókép készítés</translation>
+        <translation>Képernyőkép készítés</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="398"/>
@@ -333,7 +333,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="466"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
