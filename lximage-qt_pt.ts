@@ -19,7 +19,7 @@
     <message>
         <location filename="../../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="262"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir diretório</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="283"/>
@@ -122,32 +122,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Parar</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fechar</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="227"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="266"/>
@@ -269,7 +269,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="295"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="305"/>
@@ -389,22 +389,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="465"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir &amp;diretório</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="468"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="476"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="479"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar esta imagem</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -516,7 +516,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Capturar uma área do ecrã</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
@@ -544,7 +544,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar</translation>
     </message>
 </context>
 </TS>
