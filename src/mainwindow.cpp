@@ -906,7 +906,8 @@ void MainWindow::changeEvent(QEvent* event) {
       // is disabled. We needs to add the actions to the main window manually to enable the
       // shortcuts again.
       ui.menubar->hide();
-      Q_FOREACH(QAction* action, ui.menubar->actions()) {
+      const auto actions = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions)) {
         if(!action->shortcut().isEmpty())
           addAction(action);
       }
@@ -917,7 +918,8 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
       // now we're going to re-enable the menu, so remove the actions previously added.
-      Q_FOREACH(QAction* action, ui.menubar->actions()) {
+      const auto actions_ = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions_)) {
         if(!action->shortcut().isEmpty())
           removeAction(action);
       }
