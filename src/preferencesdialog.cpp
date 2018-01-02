@@ -58,7 +58,8 @@ void PreferencesDialog::accept() {
       settings.setFallbackIconTheme(newIconTheme);
       QIcon::setThemeName(newIconTheme);
       // update the UI by emitting a style change event
-      Q_FOREACH(QWidget *widget, QApplication::allWidgets()) {
+      const auto allWidgets = QApplication::allWidgets();
+      for(QWidget *widget : allWidgets) {
         QEvent event(QEvent::StyleChange);
         QApplication::sendEvent(widget, &event);
       }
@@ -76,9 +77,9 @@ void PreferencesDialog::accept() {
 
 static void findIconThemesInDir(QHash<QString, QString>& iconThemes, QString dirName) {
   QDir dir(dirName);
-  QStringList subDirs = dir.entryList(QDir::AllDirs);
+  const QStringList subDirs = dir.entryList(QDir::AllDirs);
   GKeyFile* kf = g_key_file_new();
-  Q_FOREACH(QString subDir, subDirs) {
+  for(QString subDir : subDirs) {
     QString indexFile = dirName % '/' % subDir % "/index.theme";
     if(g_key_file_load_from_file(kf, indexFile.toLocal8Bit().constData(), GKeyFileFlags(0), NULL)) {
       // FIXME: skip hidden ones

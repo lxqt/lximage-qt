@@ -104,7 +104,7 @@ bool Application::parseCommandLineArgs() {
   const bool screenshotTool = parser.isSet(screenshotOption);
 
   QStringList paths;
-  Q_FOREACH(QString arg, args) {
+  for(const QString& arg : args) {
     QFileInfo info(arg);
     paths.push_back(info.absoluteFilePath());
   }
@@ -151,7 +151,7 @@ void Application::newWindow(QStringList files) {
     window->show();
   }
   else {
-    Q_FOREACH(QString fileName, files) {
+    for(const QString& fileName : qAsConst(files)) {
       window = createWindow();
       window->openImageFile(fileName);
 
@@ -167,7 +167,8 @@ void Application::newWindow(QStringList files) {
 }
 
 void Application::applySettings() {
-  Q_FOREACH(QWidget* window, topLevelWidgets()) {
+  const auto windows = topLevelWidgets();
+  for(QWidget* window : windows) {
     if(window->inherits("LxImage::MainWindow"))
       static_cast<MainWindow*>(window)->applySettings();
   }
