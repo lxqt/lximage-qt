@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="lt">
+<TS version="2.1" language="lt">
 <context>
     <name>LxImage::Application</name>
     <message>
@@ -193,7 +193,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <source>Ctrl++</source>
-        <translation>Ctrl(Vald)++</translation>
+        <translation type="vanished">Ctrl(Vald)++</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="227"/>
