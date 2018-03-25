@@ -42,14 +42,14 @@
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
-LXDE Project: http://lxde.org/
+LXQt Project: http://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage - un visualitzador d&apos;imatges senzill i ràpid
 
 Copyright (C) 2013
-Projecte LXDE: http://lxde.org/
+Projecte LXQt: http://lxqt.org/
 
 Autors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>

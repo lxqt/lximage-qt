@@ -42,14 +42,14 @@
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
-LXDE Project: http://lxde.org/
+LXQt Project: http://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>صور لكسكيوت - عارض صور بسيط وسريع
 
 الحقوق محفوظة © 2013
-مشروع لكسدي: http://lxde.org/ ‎
+مشروع لكسدي: http://lxqt.org/ ‎
 
 المؤلّفون:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
