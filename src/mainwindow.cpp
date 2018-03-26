@@ -143,9 +143,9 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_actionAbout_triggered() {
   QMessageBox::about(this, tr("About"),
-                     tr("LXImage - a simple and fast image viewer\n\n"
+                     tr("LXImage-Qt - a simple and fast image viewer\n\n"
                      "Copyright (C) 2013\n"
-                     "LXDE Project: http://lxde.org/\n\n"
+                     "LXQt Project: https://lxqt.org/\n\n"
                      "Authors:\n"
                      "Hong Jen Yee (PCMan) <pcman.tw@gmail.com>"));
 }

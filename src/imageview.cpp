@@ -346,7 +346,7 @@ void ImageView::generateCache() {
   // convert to the coordinate of the original image
   cachedSceneRect_ = viewportToScene(cachedRect_);
   // create a sub image of the visible without real data copy
-  // Reference: http://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
+  // Reference: https://stackoverflow.com/questions/12681554/dividing-qimage-to-smaller-pieces
   QRect subRect = image_.rect().intersected(cachedSceneRect_);
   const uchar* bits = image_.constBits();
   unsigned int offset = subRect.x() * image_.depth() / 8 + subRect.y() * image_.bytesPerLine();

@@ -89,7 +89,7 @@ void LoadImageJob::exec() {
         exif_loader.reset();
         if (exif_data) {
           /* reference for EXIF orientation tag:
-          * http://www.impulseadventure.com/photo/exif-orientation.html */
+          * https://www.impulseadventure.com/photo/exif-orientation.html */
           ExifEntry* orient_ent = exif_data_get_entry(exif_data.get(), EXIF_TAG_ORIENTATION);
           if(orient_ent) { /* orientation flag found in EXIF */
             gushort orient;
