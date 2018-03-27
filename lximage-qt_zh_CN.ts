@@ -42,14 +42,14 @@
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
-LXQt Project: http://lxqt.org/
+LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage - 一款简单快速的图像查看器
 
 版权所有 (C) 2013
-LXQt 项目：http://lxqt.org/
+LXQt 项目：https://lxqt.org/
 
 作者：
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
