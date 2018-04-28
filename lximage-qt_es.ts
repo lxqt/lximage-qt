@@ -19,7 +19,7 @@
     <message>
         <location filename="../../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>respuesta de error desconocido</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>respuesta de error desconocido</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="262"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir directorio</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="283"/>
@@ -78,22 +78,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="539"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Cargando...) - Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="544"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (La carga ha fallado) – Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="548"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="584"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Visor de imágenes</translation>
     </message>
     <message>
         <source>%1 (Loading...) - Image Viewer</source>
@@ -114,7 +114,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="851"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Miniaturas</translation>
     </message>
 </context>
 <context>
@@ -122,32 +122,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Empezar</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Detener</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
 </context>
 <context>
@@ -249,17 +249,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="227"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="266"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Av Pág</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="282"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Re Pág</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="292"/>
@@ -269,7 +269,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="295"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="305"/>
@@ -294,12 +294,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="335"/>
         <source>&amp;Print</source>
-        <translation>&amp;Imprimir</translation>
+        <translation>Im&amp;primir</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="338"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="348"/>
@@ -379,32 +379,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="452"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar miniaturas</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="457"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del archivo</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="465"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir &amp;directorio</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="468"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="476"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Subir</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="479"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Subir la imagen</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="55"/>
@@ -434,7 +434,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="123"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de herramientas</translation>
     </message>
     <message>
         <source>toolBar</source>
@@ -451,27 +451,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema de iconos:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fondo normal:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fondo a pantalla completa:</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de presentación de diapositivas (segundos):</translation>
     </message>
     <message>
         <location filename="../../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <source>TODO: Add configuration options here</source>
@@ -516,7 +516,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Capturar un área de la pantalla</translation>
     </message>
     <message>
         <location filename="../../screenshotdialog.ui" line="67"/>
@@ -544,7 +544,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Subir</translation>
     </message>
 </context>
 </TS>
