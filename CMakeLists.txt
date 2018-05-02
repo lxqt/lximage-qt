@@ -8,7 +8,7 @@ set(MINOR_VERSION 6)
 set(PATCH_VERSION 0)
 set(LXIMAGE_VERSION ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
 
-set(LXQTBT_MINIMUM_VERSION "0.4.1")
+set(LXQTBT_MINIMUM_VERSION "0.5.0")
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -27,6 +27,7 @@ find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 find_package(Exif REQUIRED)
 message(STATUS "Building with Qt ${Qt5Core_VERSION}")
 
+include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 
 # TODO: make the X11 stuff optional.
