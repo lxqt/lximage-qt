@@ -309,6 +309,9 @@
    <property name="text">
     <string>&amp;Rotate Clockwise</string>
    </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
   </action>
   <action name="actionRotateCounterclockwise">
    <property name="icon">
@@ -317,6 +320,9 @@
    </property>
    <property name="text">
     <string>Rotate &amp;Counterclockwise</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
    </property>
   </action>
   <action name="actionPreferences">
@@ -372,6 +378,9 @@
    <property name="text">
     <string>Flip &amp;Horizontally</string>
    </property>
+   <property name="shortcut">
+    <string>H</string>
+   </property>
   </action>
   <action name="actionScreenshot">
    <property name="icon">
@@ -396,6 +405,9 @@
   <action name="actionFlipVertical">
    <property name="text">
     <string>Flip &amp;Vertically</string>
+   </property>
+   <property name="shortcut">
+    <string>V</string>
    </property>
   </action>
   <action name="actionPaste">
@@ -437,6 +449,9 @@
    </property>
    <property name="text">
     <string>Show Thumbnails</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
    </property>
   </action>
   <action name="actionFileProperties">
