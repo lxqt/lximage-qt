@@ -48,7 +48,7 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage: un visor de imágenes sencillo y rápido
 
-Copyright © 2013
+Copyright (C) 2013
 Proyecto LXQt: https://lxqt.org/
 
 Autores:
@@ -68,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="262"/>
         <source>Open directory</source>
-        <translation>Abrir directorio</translation>
+        <translation>Abrir un directorio</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="283"/>
@@ -83,7 +83,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.cpp" line="544"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (La carga ha fallado) – Visor de imágenes</translation>
+        <translation>%1 (La carga ha fallado) - Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="548"/>
@@ -122,12 +122,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../../upload/uploaddialog.cpp" line="124"/>
@@ -324,7 +324,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="374"/>
         <source>&amp;New Window</source>
-        <translation>Ventana &amp;nueva</translation>
+        <translation>&amp;Nueva ventana</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="377"/>
@@ -389,7 +389,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../../mainwindow.ui" line="465"/>
         <source>Open &amp;Directory</source>
-        <translation>Abrir &amp;directorio</translation>
+        <translation>Abrir un &amp;directorio</translation>
     </message>
     <message>
         <location filename="../../mainwindow.ui" line="468"/>
