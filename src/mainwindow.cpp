@@ -39,7 +39,6 @@
 #include <QDesktopWidget>
 #include <QGraphicsSvgItem>
 #include "application.h"
-#include <libfm-qt/path.h>
 #include <libfm-qt/folderview.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
