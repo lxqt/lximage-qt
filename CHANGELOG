@@ -1,7 +1,22 @@
 
-lximage-qt-0.6.0 / 2017-10-21
+lximage-qt-0.7.0 / 2018-05-21
 =============================
 
+  * Bumped minor version to 7
+  * Spanish translation update
+  * Just made it compilable again
+  * Removed not needed release.sh
+  * CMake: Prevent in-source builds
+  * fix some http->https
+  * Fix some mentions of LXDE
+  * Drop Qt foreach
+  * cmake: Handle CMP0071
+  * Add Spanish desktop entries
+
+0.6.0 / 2017-10-21
+==================
+
+  * Release 0.6.0: Update changelog
   * Add ImageShack upload provider.
   * Fix warnings issued by GCC and Clang.
   * Ensure file is closed when upload finishes.
@@ -30,7 +45,7 @@ lximage-qt-0.6.0 / 2017-10-21
   * Screenshot captures an area of the screen.
   * Use const iterators
   * Bump year
-  * File and folder DND Fixes https://github.com/lxqt/lximage-qt/issues/69.
+  * File and folder DND Fixes https://github.com/lxde/lximage-qt/issues/69.
 
 0.5.1 / 2016-12-21
 ==================
@@ -54,7 +69,7 @@ lximage-qt-0.6.0 / 2017-10-21
   * Bump version to 0.5.0 (#67)
   * Remove Core and Qt from Categories in desktop file (#64)
   * Extend README.md
-  * Fix broken compatibility introduced by libfm-qt API changes. This closes lxqt/lximage-qt#63.
+  * Fix broken compatibility introduced by libfm-qt API changes. This closes lxde/lximage-qt#63.
   * Add Catalan translations
   * Quieten compiler warning
   * Code cleanup
@@ -79,7 +94,7 @@ lximage-qt-0.6.0 / 2017-10-21
   * Add Russian translation
   * Italian translation update
   * CMake: Adapt to libfm-qt Targets
-  * Turn on C++11 support. This closes bug lxqt/lximage-qt #36.
+  * Turn on C++11 support. This closes bug lxde/lximage-qt #36.
   * Exec should have an argument
   * all GPL files are (or any later)
   * Add release script
@@ -124,7 +139,7 @@ lximage-qt-0.6.0 / 2017-10-21
   * Rename preferencedialog.ui to preferencesdialog.ui
   * Ignore build dir.
   * debian: enable qt5 by default
-  * Fix lxqt/lxqt #269 - Screenshots are not saved aedequately unless file extension is chosen manually.
+  * Fix lxde/lxde-qt #269 - Screenshots are not saved aedequately unless file extension is chosen manually.
   * Support Qt5 and libfm-qt5.
   * Make sure all enums are handled in switch
 
