@@ -201,16 +201,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>LXImage - a simple and fast image viewer
-
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
-
-Authors:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Open File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -244,6 +234,16 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     </message>
     <message>
         <source>Open directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LXImage-Qt - a simple and fast image viewer
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

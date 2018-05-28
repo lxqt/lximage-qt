@@ -33,12 +33,11 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="145"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="146"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -46,7 +45,7 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished">LXImage - basit ve hızlı bir resim gösterici
+        <translation type="obsolete">LXImage - basit ve hızlı bir resim gösterici
 
 Telif Hakkı (C) 2013
 LXQt Projesi: https://lxqt.org/
@@ -55,48 +54,59 @@ Yazarlar:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="145"/>
+        <source>LXImage-Qt - a simple and fast image viewer
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.cpp" line="254"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="256"/>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Image files (%1)</source>
         <translation>Resim dosyaları (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="262"/>
+        <location filename="../../mainwindow.cpp" line="261"/>
         <source>Open directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="539"/>
+        <location filename="../../mainwindow.cpp" line="538"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Yükleniyor...) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="544"/>
+        <location filename="../../mainwindow.cpp" line="543"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Yükleme Başarısız Oldu) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="548"/>
+        <location filename="../../mainwindow.cpp" line="547"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="584"/>
+        <location filename="../../mainwindow.cpp" line="583"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="851"/>
+        <location filename="../../mainwindow.cpp" line="850"/>
         <source>Thumbnails</source>
         <translation>Küçükresimler</translation>
     </message>

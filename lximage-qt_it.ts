@@ -33,12 +33,11 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="145"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>About</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="146"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -47,7 +46,7 @@ LXQt Project: https://lxqt.org/
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translatorcomment>need update...</translatorcomment>
-        <translation>LXImage - un visualizzatore immagini semplice e veloce
+        <translation type="vanished">LXImage - un visualizzatore immagini semplice e veloce
 
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
@@ -56,43 +55,54 @@ Autori:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="145"/>
+        <source>LXImage-Qt - a simple and fast image viewer
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.cpp" line="254"/>
         <source>Open File</source>
         <translation>Apri file</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="256"/>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Image files (%1)</source>
         <translation>File immagini (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="262"/>
+        <location filename="../../mainwindow.cpp" line="261"/>
         <source>Open directory</source>
         <translation>Apri cartella</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="539"/>
+        <location filename="../../mainwindow.cpp" line="538"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (caricando...) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="544"/>
+        <location filename="../../mainwindow.cpp" line="543"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (caricamento non riuscito...) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="548"/>
+        <location filename="../../mainwindow.cpp" line="547"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="584"/>
+        <location filename="../../mainwindow.cpp" line="583"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualizzatore immagini</translation>
     </message>
@@ -113,7 +123,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="851"/>
+        <location filename="../../mainwindow.cpp" line="850"/>
         <source>Thumbnails</source>
         <translation>Miniature</translation>
     </message>

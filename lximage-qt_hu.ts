@@ -33,12 +33,11 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../../mainwindow.cpp" line="145"/>
+        <location filename="../../mainwindow.cpp" line="144"/>
         <source>About</source>
         <translation>Rólunk</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="146"/>
         <source>LXImage - a simple and fast image viewer
 
 Copyright (C) 2013
@@ -46,7 +45,7 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage - az egyszerű és gyors képnéző
+        <translation type="vanished">LXImage - az egyszerű és gyors képnéző
 
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
@@ -55,43 +54,54 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="145"/>
+        <source>LXImage-Qt - a simple and fast image viewer
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../mainwindow.cpp" line="254"/>
         <source>Open File</source>
         <translation>Fájl megnyitás</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="256"/>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="255"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Image files (%1)</source>
         <translation>Képfájlok (%1)</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="262"/>
+        <location filename="../../mainwindow.cpp" line="261"/>
         <source>Open directory</source>
         <translation>Könyvtár nyitás</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="283"/>
+        <location filename="../../mainwindow.cpp" line="282"/>
         <source>Save File</source>
         <translation>Fájl mentés</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="539"/>
+        <location filename="../../mainwindow.cpp" line="538"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Betöltés...) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="544"/>
+        <location filename="../../mainwindow.cpp" line="543"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Betöltés sikertelen) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="548"/>
+        <location filename="../../mainwindow.cpp" line="547"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3.) - Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="584"/>
+        <location filename="../../mainwindow.cpp" line="583"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Képnéző</translation>
     </message>
@@ -112,7 +122,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation type="vanished">Képnéző</translation>
     </message>
     <message>
-        <location filename="../../mainwindow.cpp" line="851"/>
+        <location filename="../../mainwindow.cpp" line="850"/>
         <source>Thumbnails</source>
         <translation>Bélyegképek</translation>
     </message>
