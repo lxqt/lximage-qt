@@ -62,7 +62,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - prosta i szybka przeglądarka obrazów
+
+Prawa autorskie (C) 2013
+Projekt LXQt: https://lxqt.org/
+
+Autorzy:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../../mainwindow.cpp" line="254"/>
