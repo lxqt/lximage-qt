@@ -60,15 +60,8 @@ lxqt_translate_ts(QM_FILES
         ${lximage-qt_UIS}
     INSTALL_DIR
         "${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/translations"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
 )
+
 # prevent the generated files from being deleted during make clean
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM true)
 
