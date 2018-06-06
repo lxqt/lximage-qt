@@ -27,7 +27,6 @@
 #include "imageview.h"
 #include <QImage>
 
-#include <libfm/fm-folder.h>
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
 #include <gio/gio.h>
