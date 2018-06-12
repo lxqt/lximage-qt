@@ -200,7 +200,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>In die &amp;Zwischenablage einfügen</translation>
+        <translation>In die &amp;Zwischenablage kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
