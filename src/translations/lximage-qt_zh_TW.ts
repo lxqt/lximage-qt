@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>未知的錯誤回應</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>未知的錯誤回應</translation>
     </message>
 </context>
 <context>
@@ -46,7 +46,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - 一個簡單又快速的圖像觀測器
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="254"/>
@@ -62,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="261"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>打開資料夾</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
@@ -72,27 +78,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="538"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (讀取中...) - 看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="543"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (讀取失敗) - 看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="547"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - 看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="583"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="850"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>縮圖</translation>
     </message>
 </context>
 <context>
@@ -100,32 +106,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>開始</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>停止</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤</translation>
     </message>
 </context>
 <context>
@@ -183,12 +189,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>Zoom &amp;In</source>
-        <translation>拉近(&amp;I)</translation>
+        <translation>放大(&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">拉遠(&amp;O)</translation>
+        <translation>縮小(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
@@ -215,27 +221,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="227"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="292"/>
         <source>Original Size</source>
-        <translation>原尺寸</translation>
+        <translation>原始尺寸</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="295"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
@@ -265,7 +271,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="338"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
@@ -345,32 +351,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示縮圖</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案屬性</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>打開資料夾(&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>上傳</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="479"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>上傳影像</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>
@@ -400,7 +406,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="123"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>工具列</translation>
     </message>
 </context>
 <context>
@@ -413,27 +419,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Icon 主題</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>預設背影顏色：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>全螢幕背景顏色：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>幻燈片放映間隔（秒）:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>一般</translation>
     </message>
 </context>
 <context>
@@ -441,12 +447,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>螢幕快照</translation>
+        <translation>螢幕截圖</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>拍攝螢幕快照</translation>
+        <translation>拍攝螢幕截圖</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -466,7 +472,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>截圖選取的區域</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -476,7 +482,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
-        <translation>秒</translation>
+        <translation> 秒</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
@@ -494,7 +500,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>上傳</translation>
     </message>
 </context>
 </TS>
