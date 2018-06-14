@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation></translation>
+        <translation>צילום המסך</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation></translation>
+        <translation>תגובת שגיאה בלתי ידועה</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation></translation>
+        <translation>תגובת שגיאה בלתי ידועה</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="144"/>
         <source>About</source>
-        <translation></translation>
+        <translation>על אודות</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="145"/>
@@ -46,53 +46,59 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation></translation>
+        <translation>LXImage-Qt - מציג תמונות פשוט ומהיר
+
+כל הזכויות שמורות (C) 2013
+מיזם LXQt:‏ https://lxqt.org/‎
+
+יוצרים:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="254"/>
         <source>Open File</source>
-        <translation></translation>
+        <translation>פתיחת קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="255"/>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>Image files (%1)</source>
-        <translation></translation>
+        <translation>קובצי תמונה (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="261"/>
         <source>Open directory</source>
-        <translation></translation>
+        <translation>פתיחת תיקייה</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>Save File</source>
-        <translation></translation>
+        <translation>שמירת קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="538"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation></translation>
+        <translation>[*]%1 (בטעינה…) - מציג תמונות</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="543"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation></translation>
+        <translation>[*]%1 (הטעינה נכשלה) - מציג תמונות</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="547"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation></translation>
+        <translation>[*]%1 (%2x%3) - מציג תמונות</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="583"/>
         <source>[*]Image Viewer</source>
-        <translation></translation>
+        <translation>[*]מציג תמונות</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="850"/>
         <source>Thumbnails</source>
-        <translation></translation>
+        <translation>תמונות ממוזערות</translation>
     </message>
 </context>
 <context>
@@ -110,22 +116,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation></translation>
+        <translation>התחלה</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation></translation>
+        <translation>עצירה</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation></translation>
+        <translation>סגירה</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>שגיאה</translation>
     </message>
 </context>
 <context>
@@ -133,17 +139,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation></translation>
+        <translation>מציג תמונות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="162"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>על &amp;אודות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="172"/>
         <source>&amp;Open File</source>
-        <translation></translation>
+        <translation>&amp;פתיחת קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
@@ -153,7 +159,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>&amp;Save</source>
-        <translation></translation>
+        <translation>&amp;שמירה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
@@ -163,7 +169,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="198"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>שמירה &amp;בשם</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="201"/>
@@ -173,7 +179,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="211"/>
         <source>&amp;Close</source>
-        <translation></translation>
+        <translation>&amp;סגירה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
@@ -183,7 +189,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>Zoom &amp;In</source>
-        <translation></translation>
+        <translation>הת&amp;קרבות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="227"/>
@@ -193,7 +199,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>Zoom &amp;Out</source>
-        <translation></translation>
+        <translation>הת&amp;רחקות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
@@ -203,13 +209,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation></translation>
+        <translation>ה&amp;עתקה ללוח גזירים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
         <location filename="../mainwindow.ui" line="263"/>
         <source>Next File</source>
-        <translation></translation>
+        <translation>הקובץ הבא</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
@@ -220,7 +226,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../mainwindow.ui" line="276"/>
         <location filename="../mainwindow.ui" line="279"/>
         <source>Previous File</source>
-        <translation></translation>
+        <translation>הקובץ הקודם</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
@@ -230,7 +236,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="292"/>
         <source>Original Size</source>
-        <translation></translation>
+        <translation>גודל מקורי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="295"/>
@@ -240,27 +246,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
         <source>&amp;Fit</source>
-        <translation></translation>
+        <translation>הת&amp;אמה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation></translation>
+        <translation>הטייה &amp;עם כיוון השעון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation></translation>
+        <translation>הטייה &amp;נגד כיוון השעון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="330"/>
         <source>P&amp;references</source>
-        <translation></translation>
+        <translation>ה&amp;עדפות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="335"/>
         <source>&amp;Print</source>
-        <translation></translation>
+        <translation>ה&amp;דפסה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="338"/>
@@ -270,7 +276,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>First File</source>
-        <translation></translation>
+        <translation>קובץ ראשון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
@@ -280,7 +286,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="361"/>
         <source>Last File</source>
-        <translation></translation>
+        <translation>קובץ אחרון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
@@ -290,7 +296,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="374"/>
         <source>&amp;New Window</source>
-        <translation></translation>
+        <translation>&amp;חלון חדש</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
@@ -300,17 +306,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="382"/>
         <source>Flip &amp;Horizontally</source>
-        <translation></translation>
+        <translation>היפוך &amp;אופקי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>Capture Screenshot</source>
-        <translation></translation>
+        <translation>צילום המסך</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>F&amp;ull Screen</source>
-        <translation></translation>
+        <translation>מ&amp;סך מלא</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
@@ -320,22 +326,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <source>Flip &amp;Vertically</source>
-        <translation></translation>
+        <translation>היפוך א&amp;נכי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation></translation>
+        <translation>ה&amp;דבקה מלוח הגזירים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>&amp;Slide Show</source>
-        <translation></translation>
+        <translation>מ&amp;צגת</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>מ&amp;חיקה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="444"/>
@@ -345,17 +351,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>Show Thumbnails</source>
-        <translation></translation>
+        <translation>הצגת תמונות ממוזערות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>File Properties</source>
-        <translation></translation>
+        <translation>מאפייני קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>Open &amp;Directory</source>
-        <translation></translation>
+        <translation>פתיחת &amp;תיקייה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
@@ -365,42 +371,42 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>Upload</source>
-        <translation></translation>
+        <translation>העלאה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="479"/>
         <source>Upload the image</source>
-        <translation></translation>
+        <translation>העלאת התמונה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>ע&amp;זרה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="78"/>
         <source>Go</source>
-        <translation></translation>
+        <translation>קדימה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;View</source>
-        <translation></translation>
+        <translation>ת&amp;צוגה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;עריכה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="123"/>
         <source>Toolbar</source>
-        <translation></translation>
+        <translation>סרגל כלים</translation>
     </message>
 </context>
 <context>
@@ -408,32 +414,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation></translation>
+        <translation>העדפות</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation></translation>
+        <translation>ערכת סמלים:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation></translation>
+        <translation>צבע רקע כרגיל:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation></translation>
+        <translation>צבע רקע מסך מלא:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation></translation>
+        <translation>זמן בין החלפת תמונות (שניות):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation></translation>
+        <translation>כללי</translation>
     </message>
 </context>
 <context>
@@ -441,52 +447,52 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation></translation>
+        <translation>צילום מסך</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation></translation>
+        <translation>צילום המסך</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation></translation>
+        <translation>אזור</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation></translation>
+        <translation>המסך כולו</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation></translation>
+        <translation>החלון הנוכחי בלבד</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation></translation>
+        <translation>צילום אזור מסוים מהמסך</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation></translation>
+        <translation>כולל סמן העכבר</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
-        <translation></translation>
+        <translation> שניות</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation></translation>
+        <translation>השהיה:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation></translation>
+        <translation>כולל הכותרת והמסגרת של החלון</translation>
     </message>
 </context>
 <context>
@@ -494,7 +500,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation></translation>
+        <translation>העלאה</translation>
     </message>
 </context>
 </TS>
