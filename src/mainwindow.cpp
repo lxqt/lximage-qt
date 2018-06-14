@@ -284,12 +284,17 @@ QString MainWindow::saveFileName(QString defaultName) {
   }
   // FIXME: should we generate better filter strings? one format per item?
 
-  QString fileName = QFileDialog::getSaveFileName(
-    this, tr("Save File"), defaultName, tr("Image files (%1)").arg(filterStr));
+  QString fileName;
+  QFileDialog diag(this, tr("Save File"), defaultName, 
+               tr("Image files (%1)").arg(filterStr));
+  diag.setAcceptMode(QFileDialog::AcceptMode::AcceptSave);
+  diag.setFileMode(QFileDialog::FileMode::AnyFile);
+  diag.setDefaultSuffix("png");
+  
+  if (diag.exec()) {
+    fileName = diag.selectedFiles().at(0);
+  }
 
-  // use png format by default if the extension is not set
-  if(!fileName.isEmpty() && fileName.indexOf('.') == -1)
-    fileName += ".png";
   return fileName;
 }
 
