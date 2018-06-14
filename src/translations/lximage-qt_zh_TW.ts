@@ -419,7 +419,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Icon 主題</translation>
+        <translation>Icon 主題：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
