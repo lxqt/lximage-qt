@@ -109,13 +109,17 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipVertical);
   contextMenu_->addAction(ui.actionFlipVertical);
 
-  // create shortcuts
+  // create keyboard shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
+  shortcut = new QShortcut(Qt::Key_Backspace, this);
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
   shortcut = new QShortcut(Qt::Key_Right, this);
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
+  shortcut = new QShortcut(Qt::Key_Space, this);
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
   shortcut = new QShortcut(Qt::Key_Escape, this);
-  connect(shortcut, &QShortcut::activated, this, &MainWindow::onExitFullscreen);
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::onKeyboardEscape);
 }
 
 MainWindow::~MainWindow() {
@@ -964,9 +968,11 @@ void MainWindow::onContextMenu(QPoint pos) {
   contextMenu_->exec(ui.view->mapToGlobal(pos));
 }
 
-void MainWindow::onExitFullscreen() {
+void MainWindow::onKeyboardEscape() {
   if(isFullScreen())
-    showNormal();
+    ui.actionFullScreen->trigger(); // will also "uncheck" the menu entry
+  else
+    on_actionClose_triggered();
 }
 
 void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QItemSelection& /*deselected*/) {

@@ -119,7 +119,7 @@ private Q_SLOTS:
   void on_actionZoomFit_triggered();
 
   void onContextMenu(QPoint pos);
-  void onExitFullscreen();
+  void onKeyboardEscape();
 
   void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
 
