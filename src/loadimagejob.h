@@ -24,6 +24,7 @@
 #include <libfm-qt/core/filepath.h>
 #include <QImage>
 #include <libfm-qt/core/job.h>
+#include <QMap>
 
 namespace LxImage {
 
@@ -40,10 +41,15 @@ public:
     return path_;
   }
 
+  QMap<QString, QString> getExifData() {
+    return exifData_;
+  }
+
 private:
   ~LoadImageJob(); // prevent direct deletion
 
   virtual void exec() override;
+  QMap<QString, QString> exifData_;
 
   const Fm::FilePath path_;
   QImage image_;

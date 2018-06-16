@@ -100,9 +100,11 @@
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
     <addaction name="actionShowThumbnails"/>
+    <addaction name="actionShowExifData"/>
     <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -481,6 +483,14 @@
    </property>
    <property name="toolTip">
     <string>Upload the image</string>
+   </property>
+  </action>
+  <action name="actionShowExifData">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show EXIF Data</string>
    </property>
   </action>
  </widget>
