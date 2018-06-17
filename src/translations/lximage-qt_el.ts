@@ -464,7 +464,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>Χρώμα παρασκηνίου πλήρους οθόνης: </translation>
+        <translation>Χρώμα παρασκηνίου πλήρους οθόνης:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
