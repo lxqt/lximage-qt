@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannter Fehler Antwort</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannter Fehler Antwort</translation>
     </message>
 </context>
 <context>
@@ -46,7 +46,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - ein einfacher und schneller Bildbetrachter
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Authoren:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="260"/>
@@ -62,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -105,32 +111,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Start</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Schließen</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
 </context>
 <context>
@@ -227,7 +233,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
@@ -242,7 +248,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="294"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
@@ -393,7 +399,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="482"/>
@@ -504,7 +510,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildschirmbereich erfassen</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
