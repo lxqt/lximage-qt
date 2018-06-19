@@ -40,39 +40,39 @@ public:
     return useFallbackIconTheme_;
   };
 
-  QString fallbackIconTheme() {
+  QString fallbackIconTheme() const {
     return fallbackIconTheme_;
   }
   void setFallbackIconTheme(QString value) {
     fallbackIconTheme_ = value;
   }
 
-  QColor bgColor() {
+  QColor bgColor() const {
     return bgColor_;
   }
   void setBgColor(QColor color) {
     bgColor_ = color;
   }
 
-  QColor fullScreenBgColor() {
+  QColor fullScreenBgColor() const {
     return fullScreenBgColor_;
   }
   void setFullScreenBgColor(QColor color) {
     fullScreenBgColor_ = color;
   }
 
-  bool showThumbnails() {
+  bool showThumbnails() const {
     return showThumbnails_;
   }
   void setShowThumbnails(bool show) {
     showThumbnails_ = show;
   }
 
-  bool showSidePane() {
+  bool showSidePane() const {
     return showSidePane_;
   }
 
-  int slideShowInterval() {
+  int slideShowInterval() const {
     return slideShowInterval_;
   }
   void setSlideShowInterval(int interval) {
