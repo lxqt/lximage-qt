@@ -457,7 +457,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Symboldesign:</translation>
+        <translation>Symbolthema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
