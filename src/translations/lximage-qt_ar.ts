@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[الملفّ1، الملفّ2،...]</translation>
+        <translation>[الملفّ1، الملفّ2، ...]</translation>
     </message>
 </context>
 <context>
@@ -149,12 +149,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>&amp;عن</translation>
+        <translation>عن</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
         <source>&amp;Open File</source>
-        <translation>ا&amp;فتح ملفًّا</translation>
+        <translation>افتح ملفًّا</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="183"/>
@@ -164,7 +164,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="192"/>
         <source>&amp;Save</source>
-        <translation>ا&amp;حفظ</translation>
+        <translation>احفظ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
@@ -174,7 +174,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>Save &amp;As</source>
-        <translation>احفظ &amp;ك‍</translation>
+        <translation>احفظ ك‍</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -184,7 +184,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Close</source>
-        <translation>أ&amp;غلق</translation>
+        <translation>أغلق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -194,7 +194,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>Zoom &amp;In</source>
-        <translation>&amp;قرّب</translation>
+        <translation>قرّب</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
@@ -204,7 +204,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Zoom &amp;Out</source>
-        <translation>ب&amp;عّد</translation>
+        <translation>بعّد</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
@@ -214,7 +214,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>ا&amp;نسخ إلى الحافظة</translation>
+        <translation>انسخ إلى الحافظة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="261"/>
@@ -251,12 +251,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>&amp;Fit</source>
-        <translation>لا&amp;ئم</translation>
+        <translation>لائم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;دوّر مع عقارب السّاعة</translation>
+        <translation>دوّر مع عقارب السّاعة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
@@ -266,7 +266,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="324"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>دوّر عكس ع&amp;قارب السّاعة</translation>
+        <translation>دوّر عكس عقارب السّاعة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -276,12 +276,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
         <source>P&amp;references</source>
-        <translation>التّف&amp;ضيلات</translation>
+        <translation>التّفضيلات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
         <source>&amp;Print</source>
-        <translation>ا&amp;طبع</translation>
+        <translation>اطبع</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
@@ -311,7 +311,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="373"/>
         <source>&amp;New Window</source>
-        <translation>نافذة &amp;جديدة</translation>
+        <translation>نافذة جديدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
@@ -321,7 +321,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>اقلب أ&amp;فقيًّا</translation>
+        <translation>اقلب أفقيًّا</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="384"/>
@@ -336,7 +336,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>F&amp;ull Screen</source>
-        <translation>ملء ال&amp;شّاشة</translation>
+        <translation>ملء الشّاشة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
@@ -346,7 +346,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>Flip &amp;Vertically</source>
-        <translation>اقلب &amp;رأسيًّا</translation>
+        <translation>اقلب رأسيًّا</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
@@ -356,17 +356,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>أل&amp;صق من الحافظة</translation>
+        <translation>ألصق من الحافظة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="433"/>
         <source>&amp;Slide Show</source>
-        <translation>عر&amp;ض شرائح</translation>
+        <translation>عرض شرائح</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>&amp;Delete</source>
-        <translation>اح&amp;ذف</translation>
+        <translation>حذف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -416,12 +416,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation>&amp;ملفّ</translation>
+        <translation>ملفّ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>م&amp;ساعدة</translation>
+        <translation>مساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -436,7 +436,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>&amp;Edit</source>
-        <translation>&amp;تحرير</translation>
+        <translation>تحرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
@@ -454,17 +454,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>سمة الأيقونات:</translation>
+        <translation>سمة الأيقونات :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation>لون الخلفيّة في الوضع العاديّ:</translation>
+        <translation>لون الخلفيّة في الوضع العاديّ :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>لون الخلفيّة في وضع ملء الشّاشة:</translation>
+        <translation>لون الخلفيّة في وضع ملء الشّاشة :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
