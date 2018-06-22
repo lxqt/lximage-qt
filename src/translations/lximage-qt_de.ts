@@ -538,7 +538,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Hochladen</translation>
     </message>
 </context>
 </TS>
