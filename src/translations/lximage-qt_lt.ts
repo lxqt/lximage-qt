@@ -366,7 +366,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Ištrinti</translation>
+        <translation>Iš&amp;trinti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -421,7 +421,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>Ž&amp;inynas</translation>
+        <translation>Ži&amp;nynas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
