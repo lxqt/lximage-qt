@@ -261,7 +261,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>R</source>
-        <translation>R</translation>
+        <translation>ע</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="324"/>
@@ -271,7 +271,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
         <source>L</source>
-        <translation>L</translation>
+        <translation>נ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
@@ -321,12 +321,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>היפוך &amp;אופקי</translation>
+        <translation>היפוך או&amp;פקי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="384"/>
         <source>H</source>
-        <translation>H</translation>
+        <translation>פ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="393"/>
@@ -351,7 +351,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
         <source>V</source>
-        <translation>V</translation>
+        <translation>נ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
@@ -381,7 +381,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
         <source>T</source>
-        <translation>T</translation>
+        <translation>ז</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="461"/>
