@@ -103,7 +103,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos EXIF</translation>
     </message>
 </context>
 <context>
@@ -411,7 +411,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los datos EXIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
