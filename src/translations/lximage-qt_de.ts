@@ -477,7 +477,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation>Allgemein</translation>
+        <translation>Allgemeines</translation>
     </message>
 </context>
 <context>
