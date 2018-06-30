@@ -186,7 +186,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Close</source>
-        <translation>Sch&amp;ließen</translation>
+        <translation>&amp;Schließen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
