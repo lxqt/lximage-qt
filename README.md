@@ -32,3 +32,10 @@ as usual.
 Official binary packages are available in Arch Linux, Debian (as of Debian stretch),
 Fedora and openSUSE (Leap 42.1 and Tumbleweed). Just use the distributions'
 package manager to search for string 'lximage'.
+
+
+### Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lximage-qt/">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lximage-qt/multi-auto.svg" alt="Translation status" />
+</a>
