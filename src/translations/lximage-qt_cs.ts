@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Udělat snímek obrazovky</translation>
+        <translation>Pořídit snímek obrazovky</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[SOUBOR1, SOUBOR2,...]</translation>
+        <translation>[SOUBOR1, SOUBOR2,…]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>neznámá chybová odpověď</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>neznámá chybová odpověď</translation>
     </message>
 </context>
 <context>
@@ -46,7 +46,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt – jednoduchý a rychlý prohlížeč obrázků
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Autoři:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="260"/>
@@ -62,7 +68,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít složku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -72,17 +78,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="554"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (nahrává se...) - prohlížeč obrázků</translation>
+        <translation>[*]%1 (načítání…) – prohlížeč obrázků</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="559"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (nepodařilo se nahrát) - prohlížeč obrázků</translation>
+        <translation>[*]%1 (nepodařilo se načíst) – prohlížeč obrázků</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="563"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - prohlížeč obrázků</translation>
+        <translation>[*]%1 (%2x%3) – prohlížeč obrázků</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="599"/>
@@ -97,7 +103,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF data</translation>
     </message>
 </context>
 <context>
@@ -115,22 +121,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustit</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Zastavit</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="130"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zavřít</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
 </context>
 <context>
@@ -168,7 +174,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>Save &amp;As</source>
-        <translation>Uložit &amp;jako</translation>
+        <translation>Uložit j&amp;ako</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -188,7 +194,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>Zoom &amp;In</source>
-        <translation>&amp;Přiblížit</translation>
+        <translation>Přiblíž&amp;it</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
@@ -250,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Otočit po směru hodinových ručiček</translation>
+        <translation>Otočit po smě&amp;ru hodinových ručiček</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
@@ -270,7 +276,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
         <source>P&amp;references</source>
-        <translation>&amp;Nastavení</translation>
+        <translation>&amp;Předvolby</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
@@ -325,12 +331,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="393"/>
         <source>Capture Screenshot</source>
-        <translation>Udělat snímek obrazovky</translation>
+        <translation>Pořídit snímek obrazovky</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>F&amp;ull Screen</source>
-        <translation>Na celou &amp;obrazovku</translation>
+        <translation>Na celo&amp;u obrazovku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
@@ -355,7 +361,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="433"/>
         <source>&amp;Slide Show</source>
-        <translation>&amp;Promítání snímků</translation>
+        <translation>Promítání &amp;snímků</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
@@ -385,7 +391,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="470"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít &amp;Složku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
@@ -395,17 +401,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="482"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahrát</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahrát obrázek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit EXIF data</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -443,7 +449,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>Nastavení</translation>
+        <translation>Předvolby</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
@@ -481,7 +487,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Udělat snímek obrazovky</translation>
+        <translation>Pořídit snímek obrazovky</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -496,17 +502,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation>Pouze nynější okno</translation>
+        <translation>Pouze stávající okno</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zachytit oblast obrazovky</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Zahrnout ukazovátko myši</translation>
+        <translation>Zahrnout ukazatel myši</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
@@ -529,7 +535,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahrát</translation>
     </message>
 </context>
 </TS>
