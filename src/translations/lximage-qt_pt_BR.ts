@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Capturar uma imagem da tela</translation>
+        <translation>Capturar a imagem da tela</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[FILE1, FILE2,...]</translation>
+        <translation>[Arquivo1, Arquivo2,...]</translation>
     </message>
 </context>
 <context>
@@ -57,7 +57,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../mainwindow.cpp" line="261"/>
         <location filename="../mainwindow.cpp" line="289"/>
         <source>Image files (%1)</source>
-        <translation>Arquivos de Images (1%)</translation>
+        <translation>Arquivos de imagens (1%)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
@@ -143,12 +143,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>So&amp;bre</translation>
+        <translation>&amp;Sobre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
         <source>&amp;Open File</source>
-        <translation>Abrir &amp;Arquivo</translation>
+        <translation>&amp;Abrir Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="183"/>
@@ -168,7 +168,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>Save &amp;As</source>
-        <translation>Sal&amp;var Como</translation>
+        <translation>&amp;Salvar Como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -178,7 +178,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Close</source>
-        <translation>Fe&amp;char</translation>
+        <translation>&amp;Fechar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -188,12 +188,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>Zoom &amp;In</source>
-        <translation>Ampl&amp;iar</translation>
+        <translation>&amp;Ampliar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Zoom &amp;Out</source>
-        <translation>Redu&amp;zir</translation>
+        <translation>&amp;Reduzir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
@@ -220,7 +220,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
