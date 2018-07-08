@@ -436,7 +436,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>&amp;Edit</source>
-        <translation>&amp;עריכה</translation>
+        <translation>ע&amp;ריכה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
