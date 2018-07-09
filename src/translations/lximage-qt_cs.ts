@@ -366,7 +366,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>&amp;Delete</source>
-        <translation>S&amp;mazat</translation>
+        <translation>&amp;Smazat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -421,12 +421,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>Nápo&amp;věda</translation>
+        <translation>&amp;Nápověda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
         <source>Go</source>
-        <translation>Pohyb</translation>
+        <translation>Jít na</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -454,7 +454,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Podoba ikon:</translation>
+        <translation>Vzhled ikon:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
