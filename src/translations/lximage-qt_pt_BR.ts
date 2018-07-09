@@ -422,7 +422,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
+        <translation>Aj&amp;uda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -432,7 +432,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;View</source>
-        <translation>&amp;Exibir</translation>
+        <translation>E&amp;xibir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
