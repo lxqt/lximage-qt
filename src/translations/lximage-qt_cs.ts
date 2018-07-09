@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Pořídit snímek obrazovky</translation>
+        <translation>Udělat snímek obrazovky</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[SOUBOR1, SOUBOR2,…]</translation>
+        <translation>[SOUBOR1, SOUBOR2, …]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation>neznámá chybová odpověď</translation>
+        <translation>Odpověď: neznámá chyba</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation>neznámá chybová odpověď</translation>
+        <translation>Odpověď: neznámá chyba</translation>
     </message>
 </context>
 <context>
