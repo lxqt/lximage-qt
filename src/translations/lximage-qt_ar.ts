@@ -426,7 +426,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
         <source>Go</source>
-        <translation>انتقال</translation>
+        <translation>تنقّل إلى</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
