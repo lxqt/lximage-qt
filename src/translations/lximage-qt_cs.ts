@@ -149,7 +149,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>&amp;O programu</translation>
+        <translation>&amp;O aplikaci</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
