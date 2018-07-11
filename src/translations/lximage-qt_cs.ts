@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Udělat snímek obrazovky</translation>
+        <translation>Pořídit snímek obrazovky</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
@@ -346,7 +346,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Převrátit &amp;svisle</translation>
+        <translation>Převrátit s&amp;visle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
@@ -522,7 +522,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation>Zpoždění:</translation>
+        <translation>Prodleva:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
