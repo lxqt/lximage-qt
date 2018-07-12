@@ -48,7 +48,7 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage-Qt – jednoduchý a rychlý prohlížeč obrázků
 
-Copyright (C) 2013
+Autorské právo © 2013
 LXQt Project: https://lxqt.org/
 
 Autoři:
@@ -63,7 +63,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.cpp" line="261"/>
         <location filename="../mainwindow.cpp" line="289"/>
         <source>Image files (%1)</source>
-        <translation>Obrázkové soubory (%1)</translation>
+        <translation>Soubory s obrázky (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
@@ -149,7 +149,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>&amp;O aplikaci</translation>
+        <translation>&amp;O programu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
@@ -220,7 +220,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="261"/>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Next File</source>
-        <translation>Další soubor</translation>
+        <translation>Následující soubor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
@@ -256,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Otočit po smě&amp;ru hodinových ručiček</translation>
+        <translation>Otočit vp&amp;ravo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
@@ -266,7 +266,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="324"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Otočit &amp;proti směru hodinových ručiček</translation>
+        <translation>Otočit &amp;vlevo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -376,7 +376,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>Show Thumbnails</source>
-        <translation>Ukázat náhledy</translation>
+        <translation>Zobrazit náhledy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
@@ -469,7 +469,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Změna obrázku při promítání snímků (s):</translation>
+        <translation>Interval změny obrázku při promítání snímků (s):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -512,7 +512,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Zahrnout ukazatel myši</translation>
+        <translation>Zahrnout ukazovátko myši</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
