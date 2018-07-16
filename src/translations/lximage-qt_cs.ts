@@ -35,7 +35,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="150"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>O aplikaci</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="151"/>
@@ -49,7 +49,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage-Qt – jednoduchý a rychlý prohlížeč obrázků
 
 Autorské právo © 2013
-LXQt Project: https://lxqt.org/
+LXQt projekt: https://lxqt.org/
 
 Autoři:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
@@ -149,7 +149,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>&amp;O programu</translation>
+        <translation>O &amp;aplikaci</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
@@ -214,7 +214,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Kopírovat do schránky</translation>
+        <translation>&amp;Zkopírovat do schránky</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="261"/>
@@ -431,7 +431,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;View</source>
-        <translation>&amp;Pohled</translation>
+        <translation>&amp;Zobrazení</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
@@ -512,7 +512,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Zahrnout ukazovátko myši</translation>
+        <translation>Zahrnout ukazatel myši</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
