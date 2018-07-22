@@ -126,7 +126,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="127"/>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation>Anhalten</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="130"/>
