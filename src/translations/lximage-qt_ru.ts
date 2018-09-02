@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>неизвестная ошибка</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>неизвестная ошибка</translation>
     </message>
 </context>
 <context>
@@ -46,7 +46,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - простой и быстрый просмотрщик изображений
+
+Copyright (C) 2013
+Проект LXQt: https://lxqt.org/
+
+Авторы:
+Хон Джене (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="260"/>
@@ -97,7 +103,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Данные EXIF</translation>
     </message>
 </context>
 <context>
@@ -105,12 +111,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
@@ -405,7 +411,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать данные EXIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -415,7 +421,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>&amp;Помощь</translation>
+        <translation>&amp;Справка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -430,7 +436,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Редактировать</translation>
+        <translation>&amp;Правка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
@@ -501,7 +507,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Захват области экрана</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -529,7 +535,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished">Загрузить</translation>
+        <translation>Загрузить на сервер</translation>
     </message>
 </context>
 </TS>
