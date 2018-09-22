@@ -111,12 +111,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
-        <translation>Imgur</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImageShack</source>
-        <translation>ImageShack</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="124"/>
