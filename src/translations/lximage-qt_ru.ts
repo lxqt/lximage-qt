@@ -149,7 +149,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>О &amp;программе</translation>
+        <translation>&amp;О программе</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
