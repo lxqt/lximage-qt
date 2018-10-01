@@ -367,7 +367,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Deletar</translation>
+        <translation>&amp;Excluir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -422,7 +422,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
         <source>&amp;Help</source>
-        <translation>Aj&amp;uda</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -432,7 +432,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;View</source>
-        <translation>E&amp;xibir</translation>
+        <translation>&amp;Exibir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
