@@ -91,7 +91,7 @@ target_link_libraries(lximage-qt
     ${QT_LIBRARIES}
     ${EXIF_LIBRARIES}
     ${X11_LIBRARIES}
-    ${XFIXES_LIBRARIES}
+    ${XFIXES_LDFLAGS}
 )
 
 install(TARGETS lximage-qt RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
