@@ -72,6 +72,16 @@ public:
   // if set to true, hides the cursor after 3s of inactivity
   void hideCursor(bool enable);
 
+  // Annotation tools
+  enum Tool {
+    ToolNone,
+    ToolArrow,
+    ToolRectangle,
+    ToolCircle,
+    ToolNumber
+  };
+  void activateTool(Tool tool);
+
 Q_SIGNALS:
   void fileDropped(const QString file);
 
@@ -89,6 +99,12 @@ private:
   void queueGenerateCache();
   QRect viewportToScene(const QRect& rect);
   QRect sceneToViewport(const QRectF& rect);
+
+  void drawArrow(QPainter &painter,
+                 const QPoint &start,
+                 const QPoint &end,
+                 qreal tipAngle,
+                 int tipLen) const;
 
 private Q_SLOTS:
   void onFileDropped(const QString file);
@@ -108,6 +124,9 @@ private:
   double scaleFactor_;
   bool autoZoomFit_;
   bool isSVG; // is the image an SVG file?
+  Tool currentTool; // currently selected tool
+  QPoint startPoint; // starting point for the tool
+  int nextNumber;
 };
 
 }

@@ -31,6 +31,8 @@ set(lximage-qt_SRCS
     upload/provider.cpp
     upload/upload.cpp
     upload/uploaddialog.cpp
+
+    resource.qrc
 )
 
 qt5_add_dbus_adaptor(lximage-qt_DBUS_SRCS
