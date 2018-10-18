@@ -124,6 +124,12 @@ private Q_SLOTS:
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
 
+  void on_actionDrawNone_triggered();
+  void on_actionDrawArrow_triggered();
+  void on_actionDrawRectangle_triggered();
+  void on_actionDrawCircle_triggered();
+  void on_actionDrawNumber_triggered();
+
   void onContextMenu(QPoint pos);
   void onKeyboardEscape();
 

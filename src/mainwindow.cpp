@@ -19,6 +19,7 @@
  */
 
 #include "mainwindow.h"
+#include <QActionGroup>
 #include <QDir>
 #include <QFileInfo>
 #include <QMessageBox>
@@ -111,6 +112,15 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipVertical);
   contextMenu_->addAction(ui.actionFlipVertical);
 
+  // Create an action group for the annotation tools
+  QActionGroup *annotationGroup = new QActionGroup(this);
+  annotationGroup->addAction(ui.actionDrawNone);
+  annotationGroup->addAction(ui.actionDrawArrow);
+  annotationGroup->addAction(ui.actionDrawRectangle);
+  annotationGroup->addAction(ui.actionDrawCircle);
+  annotationGroup->addAction(ui.actionDrawNumber);
+  ui.actionDrawNone->setChecked(true);
+
   // create keyboard shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
@@ -174,6 +184,27 @@ void MainWindow::on_actionZoomOut_triggered() {
   ui.view->setAutoZoomFit(false);
   ui.view->zoomOut();
 }
+
+void MainWindow::on_actionDrawNone_triggered() {
+  ui.view->activateTool(ImageView::ToolNone);
+}
+
+void MainWindow::on_actionDrawArrow_triggered() {
+  ui.view->activateTool(ImageView::ToolArrow);
+}
+
+void MainWindow::on_actionDrawRectangle_triggered() {
+  ui.view->activateTool(ImageView::ToolRectangle);
+}
+
+void MainWindow::on_actionDrawCircle_triggered() {
+  ui.view->activateTool(ImageView::ToolCircle);
+}
+
+void MainWindow::on_actionDrawNumber_triggered() {
+  ui.view->activateTool(ImageView::ToolNumber);
+}
+
 
 void MainWindow::onFolderLoaded() {
   // if currently we're showing a file, get its index in the folder now
@@ -667,7 +698,7 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   if(saveJob_) // do not launch a new job if the current one is still in progress
     return;
   // start a new gio job to save current image to the specified path
-  saveJob_ = new SaveImageJob(image_, filePath);
+  saveJob_ = new SaveImageJob(ui.view->image(), filePath);
   connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
   connect(saveJob_, &Fm::Job::error, this
         , [] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)

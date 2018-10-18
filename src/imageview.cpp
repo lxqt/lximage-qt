@@ -28,6 +28,9 @@
 #include <QLabel>
 #include <QGraphicsProxyWidget>
 #include <QGraphicsSvgItem>
+#include <QPainter>
+#include <QPainterPath>
+#include <QtMath>
 
 #define CURSOR_HIDE_DELY 3000
 
@@ -42,7 +45,8 @@ ImageView::ImageView(QWidget* parent):
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
-  isSVG(false) {
+  isSVG(false),
+  currentTool(ToolNone) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -101,13 +105,71 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
 }
 
 void ImageView::mousePressEvent(QMouseEvent * event) {
-  QGraphicsView::mousePressEvent(event);
-  if(cursorTimer_) cursorTimer_->stop();
+  if (currentTool == ToolNone) {
+    QGraphicsView::mousePressEvent(event);
+    if(cursorTimer_) cursorTimer_->stop();
+  } else {
+    startPoint = mapToScene(event->pos()).toPoint();
+  }
 }
 
 void ImageView::mouseReleaseEvent(QMouseEvent* event) {
-  QGraphicsView::mouseReleaseEvent(event);
-  if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
+  if (currentTool == ToolNone) {
+    QGraphicsView::mouseReleaseEvent(event);
+    if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
+  } else if (!image_.isNull()) {
+    QPoint endPoint = mapToScene(event->pos()).toPoint();
+
+    QPainter painter(&image_);
+    painter.setPen(QPen(Qt::red, 5));
+
+    switch (currentTool) {
+    case ToolArrow:
+      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
+      break;
+    case ToolRectangle:
+      painter.drawRect(QRect(startPoint, endPoint));
+      break;
+    case ToolCircle:
+      painter.drawEllipse(QRect(startPoint, endPoint));
+      break;
+    case ToolNumber:
+    {
+      // Set the font
+      QFont font;
+      font.setPixelSize(32);
+      painter.setFont(font);
+
+      // Calculate the dimensions of the text
+      QString text = QString("%1").arg(nextNumber++);
+      QRectF textRect = painter.boundingRect(image_.rect(), 0, text);
+      textRect.moveTo(endPoint);
+
+      // Calculate the dimensions of the circle
+      qreal radius = qSqrt(textRect.width() * textRect.width() +
+                           textRect.height() * textRect.height()) / 2;
+      QRectF circleRect(textRect.left() + (textRect.width() / 2 - radius),
+                        textRect.top() + (textRect.height() / 2 - radius),
+                        radius * 2, radius * 2);
+
+      // Draw the path
+      QPainterPath path;
+      path.addEllipse(circleRect);
+      painter.fillPath(path, Qt::red);
+      painter.drawPath(path);
+
+      // Draw the text
+      painter.setPen(Qt::white);
+      painter.drawText(textRect.bottomLeft(), text);
+
+      break;
+    }
+    default:
+      break;
+    }
+    painter.end();
+    generateCache();
+  }
 }
 
 void ImageView::mouseMoveEvent(QMouseEvent* event) {
@@ -208,6 +270,9 @@ void ImageView::setImage(QImage image, bool show) {
   if(autoZoomFit_)
     zoomFit();
   queueGenerateCache();
+
+  // clear the numbering
+  nextNumber = 1;
 }
 
 void ImageView::setGifAnimation(QString fileName) {
@@ -399,6 +464,41 @@ void ImageView::hideCursor(bool enable) {
     if(viewport()->cursor().shape() == Qt::BlankCursor)
         viewport()->setCursor(Qt::OpenHandCursor);
   }
+}
+
+void ImageView::activateTool(Tool tool) {
+  currentTool = tool;
+  viewport()->setCursor(tool == ToolNone ?
+                            Qt::OpenHandCursor :
+                            Qt::CrossCursor);
+}
+
+void ImageView::drawArrow(QPainter &painter,
+                          const QPoint &start,
+                          const QPoint &end,
+                          qreal tipAngle,
+                          int tipLen) const
+{
+  // Draw the line
+  painter.drawLine(start, end);
+
+  // Calculate the angle of the line
+  QPoint delta = end - start;
+  qreal angle = qAtan2(-delta.y(), delta.x()) - M_PI / 2;
+
+  // Calculate the points of the lines that converge at the tip
+  QPoint tip1(
+    static_cast<int>(qSin(angle + tipAngle) * tipLen),
+    static_cast<int>(qCos(angle + tipAngle) * tipLen)
+  );
+  QPoint tip2(
+    static_cast<int>(qSin(angle - tipAngle) * tipLen),
+    static_cast<int>(qCos(angle - tipAngle) * tipLen)
+  );
+
+  // Draw the two lines
+  painter.drawLine(end, end + tip1);
+  painter.drawLine(end, end + tip2);
 }
 
 } // namespace LxImage
