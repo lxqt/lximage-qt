@@ -46,7 +46,7 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt -un visor de imaxes sinxelo e rápido
+        <translation>LXImage-Qt - Un visor de imaxes sinxelo e rápido
 
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
@@ -256,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Xirar en sentido &amp;horario</translation>
+        <translation>Rotar en sentido &amp;horario</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
@@ -266,7 +266,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="324"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Xirar en sentido &amp;antihorario</translation>
+        <translation>Rotar en sentido &amp;antihorario</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -507,7 +507,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Capturar unha área de la pantalla</translation>
+        <translation>Capturar unha área da pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
