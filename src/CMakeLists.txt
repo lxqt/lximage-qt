@@ -26,6 +26,8 @@ set(lximage-qt_SRCS
 
     upload/imageshackprovider.cpp
     upload/imageshackupload.cpp
+    upload/imgbbprovider.cpp
+    upload/imgbbupload.cpp
     upload/imgurprovider.cpp
     upload/imgurupload.cpp
     upload/provider.cpp
