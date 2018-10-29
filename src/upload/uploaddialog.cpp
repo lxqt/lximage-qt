@@ -17,7 +17,9 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
+#include <QClipboard>
 #include <QComboBox>
+#include <QGuiApplication>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QProgressBar>
@@ -65,6 +67,11 @@ void UploadDialog::on_actionButton_clicked()
     }
 }
 
+void UploadDialog::on_copyButton_clicked()
+{
+    QGuiApplication::clipboard()->setText(ui.linkLineEdit->text());
+}
+
 void UploadDialog::start()
 {
     // Attempt to open the file
@@ -87,6 +94,7 @@ void UploadDialog::start()
     // If the request completes, show the link to the user
     connect(mUpload, &Upload::completed, [this](const QString &url) {
         ui.linkLineEdit->setText(url);
+        ui.linkLineEdit->selectAll();
 
         mState = Completed;
         updateUi();
@@ -114,6 +122,7 @@ void UploadDialog::updateUi()
     ui.providerComboBox->setVisible(mState == SelectProvider);
     ui.progressBar->setVisible(mState == UploadInProgress);
     ui.linkLineEdit->setVisible(mState == Completed);
+    ui.copyButton->setVisible(mState == Completed);
 
     // Reset the progress bar to zero
     ui.progressBar->setValue(0);
