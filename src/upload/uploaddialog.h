@@ -49,6 +49,7 @@ public:
 private Q_SLOTS:
 
     void on_actionButton_clicked();
+    void on_copyButton_clicked();
 
 private:
 
