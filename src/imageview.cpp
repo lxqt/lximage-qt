@@ -121,6 +121,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
     QPoint endPoint = mapToScene(event->pos()).toPoint();
 
     QPainter painter(&image_);
+    painter.setRenderHint(QPainter::Antialiasing, true);
     painter.setPen(QPen(Qt::red, 5));
 
     switch (currentTool) {
@@ -160,7 +161,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
 
       // Draw the text
       painter.setPen(Qt::white);
-      painter.drawText(textRect.bottomLeft(), text);
+      painter.drawText(textRect, Qt::AlignCenter, text);
 
       break;
     }
