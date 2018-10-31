@@ -47,6 +47,7 @@
 #include <libfm-qt/fileoperation.h>
 #include <libfm-qt/folderitemdelegate.h>
 
+#include "mrumenu.h"
 #include "upload/uploaddialog.h"
 
 using namespace LxImage;
@@ -111,6 +112,9 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
   contextMenu_->addAction(ui.actionFlipVertical);
+
+  // Open images when MRU items are clicked
+  connect(ui.menuRecently_Opened_Files, &MruMenu::itemClicked, this, &MainWindow::onFileDropped);
 
   // Create an action group for the annotation tools
   QActionGroup *annotationGroup = new QActionGroup(this);
@@ -483,6 +487,9 @@ void MainWindow::onImageLoaded() {
   // to nullptr). This simple check should be enough.
   if (sender() == loadJob_)
   {
+    // Add to the MRU menu
+    ui.menuRecently_Opened_Files->addItem(loadJob_->filePath().localPath().get());
+
     image_ = loadJob_->image();
     exifData_ = loadJob_->getExifData();
 

@@ -23,6 +23,7 @@ set(lximage-qt_SRCS
     screenshotselectareagraphicsview.cpp
     settings.cpp
     graphicsscene.cpp
+    mrumenu.cpp
 
     upload/imageshackprovider.cpp
     upload/imageshackupload.cpp

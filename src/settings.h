@@ -22,6 +22,7 @@
 #define LXIMAGE_SETTINGS_H
 
 #include <QString>
+#include <QStringList>
 #include <qcache.h>
 #include <QColor>
 
@@ -77,6 +78,14 @@ public:
   }
   void setSlideShowInterval(int interval) {
     slideShowInterval_ = interval;
+  }
+
+  QStringList recentlyOpenedFiles() const {
+    return recentlyOpenedFiles_;
+  }
+
+  void setRecentlyOpenedFiles(const QStringList &recentlyOpenedFiles) {
+    recentlyOpenedFiles_ = recentlyOpenedFiles;
   }
 
   bool rememberWindowSize() const {
@@ -144,6 +153,7 @@ private:
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;
+  QStringList recentlyOpenedFiles_;
 
   bool rememberWindowSize_;
   int fixedWindowWidth_;
