@@ -50,6 +50,7 @@ bool Settings::load() {
   // showThumbnails_;
   // showSidePane_;
   slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
+  recentlyOpenedFiles_ = settings.value("recentlyOpenedFiles").toStringList();
 
   settings.beginGroup("Window");
   fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
@@ -70,6 +71,7 @@ bool Settings::save() {
   settings.setValue("bgColor", bgColor_);
   settings.setValue("fullScreenBgColor", fullScreenBgColor_);
   settings.setValue("slideShowInterval", slideShowInterval_);
+  settings.setValue("recentlyOpenedFiles", recentlyOpenedFiles_);
 
   settings.beginGroup("Window");
   settings.setValue("FixedWidth", fixedWindowWidth_);

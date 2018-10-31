@@ -62,9 +62,15 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <widget class="LxImage::MruMenu" name="menuRecently_Opened_Files">
+     <property name="title">
+      <string>&amp;Recently Opened Files</string>
+     </property>
+    </widget>
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
     <addaction name="actionOpenDirectory"/>
+    <addaction name="menuRecently_Opened_Files"/>
     <addaction name="actionReload"/>
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
@@ -604,6 +610,11 @@
    <class>LxImage::ImageView</class>
    <extends>QGraphicsView</extends>
    <header>imageview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LxImage::MruMenu</class>
+   <extends>QMenu</extends>
+   <header>mrumenu.h</header>
   </customwidget>
  </customwidgets>
  <resources>
