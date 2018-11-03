@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Obter captura de ecrã</translation>
+        <translation>Obter captura de tela</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[Ficheiro1, ficheiro2,...]</translation>
+        <translation>[ARQUIVO1, ARQUIVO2,...]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="49"/>
         <source>unknown error response</source>
-        <translation>erro desconhecido</translation>
+        <translation>resposta de erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="46"/>
         <source>unknown error response</source>
-        <translation>erro desconhecido</translation>
+        <translation>resposta de erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -46,24 +46,24 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - um visualizador de imagens simples e rápido
+        <translation>LXImage-Qt - um simples e rápido visualizador de imagem
 
-Copyright (C) 2013-2018
-Projeto LXQtt: https://lxqt.org/
+Copyright (C) 2013
+Projeto LXQt: https://lxqt.org/
 
 Autores:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
+Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="260"/>
         <source>Open File</source>
-        <translation>Abrir ficheiro</translation>
+        <translation>Abrir Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="261"/>
         <location filename="../mainwindow.cpp" line="289"/>
         <source>Image files (%1)</source>
-        <translation>Ficheiros de imagem (%1)</translation>
+        <translation>Arquivos de imagem (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
@@ -73,27 +73,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
         <source>Save File</source>
-        <translation>Guardar ficheiro</translation>
+        <translation>Salvar Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="554"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (a carregar...) - Visualizador de imagens</translation>
+        <translation>[*]%1 (Carregando...) - Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="559"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (falha ao carregar...) - Visualizador de imagens</translation>
+        <translation>[*]%1 (Falha ao Carregar...) - Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="563"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
+        <translation>[*]%1 (%2x%3) - Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="599"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Visualizador de imagens</translation>
+        <translation>[*]Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="874"/>
@@ -144,7 +144,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation>Visualizador de imagens</translation>
+        <translation>Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
@@ -154,7 +154,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
         <source>&amp;Open File</source>
-        <translation>A&amp;brir ficheiro</translation>
+        <translation>&amp;Abrir Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="183"/>
@@ -164,7 +164,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="192"/>
         <source>&amp;Save</source>
-        <translation>&amp;Guardar</translation>
+        <translation>&amp;Salvar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
@@ -174,7 +174,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>Save &amp;As</source>
-        <translation>Guardar &amp;como</translation>
+        <translation>Salvar &amp;Como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -184,7 +184,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Close</source>
-        <translation>Fe&amp;char</translation>
+        <translation>&amp;Fechar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -209,19 +209,19 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Copiar para a área de transferência</translation>
+        <translation>&amp;Copiar para Área de transferência</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="261"/>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Next File</source>
-        <translation>Ficheiro seguinte</translation>
+        <translation>Próximo Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <location filename="../mainwindow.ui" line="279"/>
         <source>Previous File</source>
-        <translation>Ficheiro anterior</translation>
+        <translation>Arquivo Anterior</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
@@ -241,7 +241,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="291"/>
         <source>Original Size</source>
-        <translation>Tamanho original</translation>
+        <translation>Tamanho Original</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="294"/>
@@ -256,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Rodar à direita</translation>
+        <translation>&amp;Girar no Sentido horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
@@ -266,7 +266,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="324"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Rodar à &amp;esquerda</translation>
+        <translation>Girar no &amp;Sentido anti-horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -291,17 +291,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
         <source>First File</source>
-        <translation>Primeiro ficheiro</translation>
+        <translation>Primeiro Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>Home</source>
-        <translation>Home</translation>
+        <translation>Pasta pessoal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="361"/>
         <source>Last File</source>
-        <translation>Último ficheiro</translation>
+        <translation>Último Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
@@ -311,7 +311,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="373"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Nova janela</translation>
+        <translation>&amp;Nova Janela</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
@@ -321,7 +321,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Inversão &amp;horizontal</translation>
+        <translation>Girar &amp;Horizontalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="384"/>
@@ -331,12 +331,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="393"/>
         <source>Capture Screenshot</source>
-        <translation>Captura de ecrã</translation>
+        <translation>Captura de Tela</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>F&amp;ull Screen</source>
-        <translation>Ecrã co&amp;mpleto</translation>
+        <translation>Tela C&amp;heia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
@@ -346,7 +346,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Inversão &amp;vertical</translation>
+        <translation>Girar &amp;Verticalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
@@ -356,17 +356,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>Colar da área de tran&amp;sferência</translation>
+        <translation>Colar da Área de tran&amp;sferência</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="433"/>
         <source>&amp;Slide Show</source>
-        <translation>Apre&amp;sentação</translation>
+        <translation>Apresentação de &amp;Slide</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Apagar</translation>
+        <translation>&amp;Excluir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -376,7 +376,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>Show Thumbnails</source>
-        <translation>Mostrar miniaturas</translation>
+        <translation>Exibir Miniaturas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
@@ -386,12 +386,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="461"/>
         <source>File Properties</source>
-        <translation>Propriedades do ficheiro</translation>
+        <translation>Propriedades do Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="470"/>
         <source>Open &amp;Directory</source>
-        <translation>Abrir &amp;diretório</translation>
+        <translation>Abrir &amp;Diretório</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
@@ -406,17 +406,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>Upload the image</source>
-        <translation>Enviar esta imagem</translation>
+        <translation>Enviar a imagem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>Show EXIF Data</source>
-        <translation>Mostrar dados EXIF</translation>
+        <translation>Visualizar dados EXIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation>&amp;Ficheiro</translation>
+        <translation>&amp;Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
@@ -431,7 +431,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;View</source>
-        <translation>&amp;Ver</translation>
+        <translation>&amp;Exibir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
@@ -441,7 +441,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
         <source>Toolbar</source>
-        <translation>Barra de ferramentas</translation>
+        <translation>Barra de ferramenta</translation>
     </message>
 </context>
 <context>
@@ -454,7 +454,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Tema de ícones:</translation>
+        <translation>Tema de Ícones:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -464,12 +464,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>Cor de fundo em ecrã completo:</translation>
+        <translation>Cor de fundo em tela cheia:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Intervalo entre imagens (segundos):</translation>
+        <translation>Intervalo da apresentação de slide (segundos):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -482,12 +482,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>Captura de ecrã</translation>
+        <translation>Captura de Tela</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Obter captura de ecrã</translation>
+        <translation>Obter captura de tela</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -497,7 +497,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation>Todo o ecrã</translation>
+        <translation>Tela inteira</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
@@ -507,12 +507,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Capturar uma área do ecrã</translation>
+        <translation>Capturar uma área da tela</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Incluir cursor do rato</translation>
+        <translation>Incluir cursor do mouse</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
