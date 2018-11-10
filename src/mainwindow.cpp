@@ -285,12 +285,12 @@ QString MainWindow::saveFileName(QString defaultName) {
   // FIXME: should we generate better filter strings? one format per item?
 
   QString fileName;
-  QFileDialog diag(this, tr("Save File"), defaultName, 
+  QFileDialog diag(this, tr("Save File"), defaultName,
                tr("Image files (%1)").arg(filterStr));
   diag.setAcceptMode(QFileDialog::AcceptMode::AcceptSave);
   diag.setFileMode(QFileDialog::FileMode::AnyFile);
   diag.setDefaultSuffix("png");
-  
+
   if (diag.exec()) {
     fileName = diag.selectedFiles().at(0);
   }
@@ -454,8 +454,8 @@ void MainWindow::onImageLoaded() {
     ui.view->setAutoZoomFit(true);
     ui.view->setImage(image_);
 
-    if(!currentIndex_.isValid())
-      currentIndex_ = indexFromPath(currentFile_);
+   // currentIndex_ should be corrected after loading
+   currentIndex_ = indexFromPath(currentFile_);
 
     updateUI();
 
@@ -1043,8 +1043,9 @@ void MainWindow::onKeyboardEscape() {
 void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QItemSelection& /*deselected*/) {
   // the selected item of thumbnail view is changed
   if(!selected.isEmpty()) {
-    QModelIndex index = selected.first().topLeft();
-    if(index.isValid() && index != currentIndex_) {
+    QModelIndex index = selected.indexes().first();
+    if(index.isValid()) {
+      // WARNING: Adding the condition index != currentIndex_ would be wrong because currentIndex_ may not be updated yet
       const auto file = proxyModel_->fileInfoFromIndex(index);
       if(file)
         loadImage(file->path(), index);
