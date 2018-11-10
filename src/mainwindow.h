@@ -92,6 +92,7 @@ private Q_SLOTS:
 
   void on_actionOpenFile_triggered();
   void on_actionOpenDirectory_triggered();
+  void on_actionReload_triggered();
   void on_actionNewWindow_triggered();
   void on_actionSave_triggered();
   void on_actionSaveAs_triggered();

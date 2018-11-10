@@ -312,6 +312,12 @@ void MainWindow::on_actionOpenDirectory_triggered() {
   }
 }
 
+void MainWindow::on_actionReload_triggered() {
+  if (currentFile_) {
+    loadImage(currentFile_);
+  }
+}
+
 void MainWindow::on_actionNewWindow_triggered() {
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = new MainWindow();
