@@ -65,6 +65,7 @@
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
     <addaction name="actionOpenDirectory"/>
+    <addaction name="actionReload"/>
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
@@ -148,6 +149,7 @@
    <addaction name="actionNext"/>
    <addaction name="separator"/>
    <addaction name="actionOpenFile"/>
+   <addaction name="actionReload"/>
    <addaction name="actionSaveAs"/>
    <addaction name="actionCopy"/>
    <addaction name="actionPaste"/>
@@ -181,6 +183,18 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="icon">
+    <iconset theme="view-refresh">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reload File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
   <action name="actionSave">
