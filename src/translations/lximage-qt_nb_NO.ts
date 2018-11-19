@@ -103,7 +103,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>EXIF Data</source>
-        <translation></translation>
+        <translation>EXIF-data</translation>
     </message>
 </context>
 <context>
@@ -426,7 +426,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
         <source>Go</source>
-        <translation>Gå</translation>
+        <translation>Dra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
