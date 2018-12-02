@@ -159,7 +159,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
         <source>Go</source>
-        <translation>Aller</translation>
+        <translation>Aller à</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -179,7 +179,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="171"/>
         <source>&amp;About</source>
-        <translation>À &amp;propos</translation>
+        <translation>&amp;À propos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="180"/>
