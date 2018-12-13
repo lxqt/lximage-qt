@@ -209,7 +209,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Farklı Kaydet</translation>
+        <translation>Farklı K&amp;aydet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
@@ -406,7 +406,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
@@ -516,7 +516,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation>G&amp;örünüm</translation>
+        <translation>&amp;Görünüm</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
