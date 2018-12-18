@@ -36,7 +36,7 @@ Upload *ImgBBProvider::upload(QIODevice *device)
     filePart.setBodyDevice(device);
     filePart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        "form-data; name=\"source\"; filename=\"upload.jpg\""
+        R"(form-data; name="source"; filename="upload.jpg")"
     );
 
     // Create the parts for the two parameters
