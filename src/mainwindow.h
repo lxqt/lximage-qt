@@ -56,7 +56,7 @@ public:
   MainWindow();
   virtual ~MainWindow();
 
-  void openImageFile(QString fileName);
+  void openImageFile(const QString& fileName);
 
   QImage image() const {
     return image_;
@@ -78,7 +78,7 @@ protected:
   void loadFolder(const Fm::FilePath & newFolderPath);
   QString openFileName();
   QString openDirectory();
-  QString saveFileName(QString defaultName = QString());
+  QString saveFileName(const QString& defaultName = QString());
   virtual void changeEvent(QEvent * event);
   virtual void resizeEvent(QResizeEvent *event);
   virtual void closeEvent(QCloseEvent *event);

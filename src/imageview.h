@@ -41,9 +41,9 @@ public:
   ImageView(QWidget* parent = 0);
   virtual ~ImageView();
 
-  void setImage(QImage image, bool show = true);
-  void setGifAnimation(QString fileName);
-  void setSVG(QString fileName);
+  void setImage(const QImage& image, bool show = true);
+  void setGifAnimation(const QString& fileName);
+  void setSVG(const QString& fileName);
 
   QImage image() {
     return image_;
