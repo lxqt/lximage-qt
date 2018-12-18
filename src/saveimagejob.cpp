@@ -53,7 +53,7 @@ void SaveImageJob::exec() {
   while (act == ErrorAction::RETRY && !isCancelled())
   {
     error.reset();
-    if (nullptr == (fileStream = g_file_replace(path_.gfile().get(), NULL, false, G_FILE_CREATE_NONE, cancellable().get(), &error)))
+    if (nullptr == (fileStream = g_file_replace(path_.gfile().get(), nullptr, false, G_FILE_CREATE_NONE, cancellable().get(), &error)))
     {
       act = emitError(error);
       continue;
@@ -66,10 +66,10 @@ void SaveImageJob::exec() {
       g_output_stream_write_all(outputStream,
                                 imageBuffer.data().constData(),
                                 imageBuffer.size(),
-                                NULL,
+                                nullptr,
                                 cancellable().get(),
                                 &error);
-      g_output_stream_close(outputStream, NULL, NULL);
+      g_output_stream_close(outputStream, nullptr, nullptr);
       if (!error)
       {
         // successfully written
