@@ -45,7 +45,7 @@ Upload *ImageShackProvider::upload(QIODevice *device)
     filePart.setBodyDevice(device);
     filePart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        "form-data; name=\"file\"; filename=\"upload.jpg\""
+        R"(form-data; name="file"; filename="upload.jpg")"
     );
 
     // Create the multipart and append the file part
