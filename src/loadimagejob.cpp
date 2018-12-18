@@ -76,7 +76,7 @@ void LoadImageJob::exec() {
       // append the bytes read to the image buffer
         imageBuffer.append(buffer, readSize);
     }
-    g_input_stream_close(inputStream, NULL, NULL);
+    g_input_stream_close(inputStream, nullptr, nullptr);
 
     if (!error)
       break; // everything read or cancel requested
@@ -92,7 +92,7 @@ void LoadImageJob::exec() {
       // check if this file is a jpeg file
       // FIXME: can we use FmFileInfo instead if it's available?
       const Fm::CStrPtr basename = path_.baseName();
-      const Fm::CStrPtr mime_type{g_content_type_guess(basename.get(), NULL, 0, NULL)};
+      const Fm::CStrPtr mime_type{g_content_type_guess(basename.get(), nullptr, 0, nullptr)};
       if(mime_type && strcmp(mime_type.get(), "image/jpeg") == 0) { // this is a jpeg file
         // use libexif to extract additional info embedded in jpeg files
         std::unique_ptr<ExifLoader, decltype (&exif_loader_unref)> exif_loader{exif_loader_new(), &exif_loader_unref};

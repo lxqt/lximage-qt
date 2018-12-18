@@ -92,7 +92,7 @@ QRect ScreenshotDialog::windowFrame(WId wid) {
     Atom atom = XInternAtom(QX11Info::display(), "_NET_FRAME_EXTENTS", false);
     unsigned long type, resultLen, rest;
     int format;
-    unsigned char* data = NULL;
+    unsigned char* data = nullptr;
     if(XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
       XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
     }
@@ -114,7 +114,7 @@ WId ScreenshotDialog::activeWindowId() {
   unsigned long type, resultLen, rest;
   int format;
   WId result = 0;
-  unsigned char* data = NULL;
+  unsigned char* data = nullptr;
   if(XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
       XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
     result = *reinterpret_cast<long*>(data);

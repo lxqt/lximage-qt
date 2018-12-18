@@ -666,7 +666,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   image_ = QImage();
 
   const Fm::CStrPtr basename = currentFile_.baseName();
-  char* mime_type = g_content_type_guess(basename.get(), NULL, 0, NULL);
+  char* mime_type = g_content_type_guess(basename.get(), nullptr, 0, nullptr);
   QString mimeType;
   if (mime_type) {
     mimeType = QString(mime_type);
