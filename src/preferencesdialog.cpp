@@ -75,11 +75,11 @@ void PreferencesDialog::accept() {
   app->applySettings();
 }
 
-static void findIconThemesInDir(QHash<QString, QString>& iconThemes, QString dirName) {
+static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QString& dirName) {
   QDir dir(dirName);
   const QStringList subDirs = dir.entryList(QDir::AllDirs);
   GKeyFile* kf = g_key_file_new();
-  for(QString subDir : subDirs) {
+  for(const QString& subDir : subDirs) {
     QString indexFile = dirName % '/' % subDir % "/index.theme";
     if(g_key_file_load_from_file(kf, indexFile.toLocal8Bit().constData(), GKeyFileFlags(0), nullptr)) {
       // FIXME: skip hidden ones
