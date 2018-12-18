@@ -74,7 +74,7 @@ void LoadImageJob::exec() {
       if(readSize == -1 || readSize == 0) // error or EOF
         break;
       // append the bytes read to the image buffer
-        imageBuffer.append(buffer, readSize);
+      imageBuffer.append(buffer, readSize);
     }
     g_input_stream_close(inputStream, nullptr, nullptr);
 
