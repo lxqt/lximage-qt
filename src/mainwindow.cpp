@@ -226,7 +226,7 @@ void MainWindow::onFolderLoaded() {
     on_actionFirst_triggered();
 }
 
-void MainWindow::openImageFile(QString fileName) {
+void MainWindow::openImageFile(const QString& fileName) {
   const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // the same file! do not load it again
   if(currentFile_ && currentFile_ == path)
@@ -304,7 +304,7 @@ QString MainWindow::openDirectory() {
 }
 
 // popup a file dialog and retrieve the selected image file name
-QString MainWindow::saveFileName(QString defaultName) {
+QString MainWindow::saveFileName(const QString& defaultName) {
   QString filterStr;
   QList<QByteArray> formats = QImageWriter::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
@@ -985,7 +985,7 @@ void MainWindow::setShowExifData(bool show) {
     exifDataContentTable_->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     // Write the EXIF Data to the table
-    for (QString key : exifData_.keys()) {
+    for (const QString& key : exifData_.keys()) {
       int rowCount = exifDataContentTable_->rowCount();
 
       exifDataContentTable_->insertRow(rowCount);

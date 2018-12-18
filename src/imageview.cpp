@@ -238,7 +238,7 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
-void ImageView::setImage(QImage image, bool show) {
+void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
     isSVG = false;
@@ -276,7 +276,7 @@ void ImageView::setImage(QImage image, bool show) {
   nextNumber = 1;
 }
 
-void ImageView::setGifAnimation(QString fileName) {
+void ImageView::setGifAnimation(const QString& fileName) {
   /* the built-in gif reader gives the first frame, which won't
      be shown but is used for tracking position and dimensions */
   image_ = QImage(fileName);
@@ -313,7 +313,7 @@ void ImageView::setGifAnimation(QString fileName) {
   queueGenerateCache(); // deletes the cache timer in this case
 }
 
-void ImageView::setSVG(QString fileName) {
+void ImageView::setSVG(const QString& fileName) {
   image_ = QImage(fileName); // for tracking position and dimensions
   if(image_.isNull()) {
     if(imageItem_) {
