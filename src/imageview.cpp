@@ -238,7 +238,7 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
-void ImageView::setImage(QImage image, bool show) {
+void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
     isSVG = false;
