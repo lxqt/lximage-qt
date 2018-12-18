@@ -139,12 +139,9 @@ MainWindow::MainWindow():
 }
 
 MainWindow::~MainWindow() {
-  if(slideShowTimer_)
-    delete slideShowTimer_;
-  if(thumbnailsView_)
-    delete thumbnailsView_;
-  if(thumbnailsDock_)
-    delete thumbnailsDock_;
+  delete slideShowTimer_;
+  delete thumbnailsView_;
+  delete thumbnailsDock_;
 
   if(loadJob_) {
     loadJob_->cancel();

@@ -238,7 +238,7 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
-void ImageView::setImage(const QImage& image, bool show) {
+void ImageView::setImage(QImage image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
     isSVG = false;
@@ -451,7 +451,7 @@ void ImageView::blankCursor() {
 
 void ImageView::hideCursor(bool enable) {
   if(enable) {
-    if(cursorTimer_) delete cursorTimer_;
+    delete cursorTimer_;
     cursorTimer_ = new QTimer(this);
     cursorTimer_->setSingleShot(true);
     connect(cursorTimer_, &QTimer::timeout, this, &ImageView::blankCursor);
