@@ -352,7 +352,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>&amp;New Window</source>
-        <translation>Новое &amp;окно</translation>
+        <translation>&amp;Новое окно</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
