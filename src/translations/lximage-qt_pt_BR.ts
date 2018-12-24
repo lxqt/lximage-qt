@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">Resposta de erro desconhecido</translation>
+        <translation>Resposta de erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -65,7 +65,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
         <source>Open File</source>
-        <translation>Abrir Arquivo</translation>
+        <translation>Abrir arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="296"/>
@@ -81,7 +81,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <source>Save File</source>
-        <translation>Salvar Arquivo</translation>
+        <translation>Salvar arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="598"/>
@@ -91,7 +91,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Falha ao Carregar) - Visualizador de Imagens</translation>
+        <translation>[*]%1 (Falha no carregamento) - Visualizador de Imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
@@ -119,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Limpar</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -175,7 +175,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>&amp;Open File</source>
-        <translation>A&amp;brir</translation>
+        <translation>&amp;Abrir arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -236,13 +236,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="297"/>
         <location filename="../mainwindow.ui" line="300"/>
         <source>Next File</source>
-        <translation>Próximo Arquivo</translation>
+        <translation>Próximo arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <location filename="../mainwindow.ui" line="315"/>
         <source>Previous File</source>
-        <translation>Arquivo Anterior</translation>
+        <translation>Arquivo anterior</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
@@ -252,22 +252,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos &amp;recentes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>toolbar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Recarregar arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
@@ -282,7 +282,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
         <source>Original Size</source>
-        <translation>Tamanho Original</translation>
+        <translation>Tamanho original</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="330"/>
@@ -297,7 +297,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Rotacionar em sentido &amp;horário</translation>
+        <translation>Girar em sentido &amp;horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
@@ -307,7 +307,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Rotacionar em sentido &amp;anti-horário</translation>
+        <translation>Girar em sentido &amp;anti-horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
@@ -458,52 +458,52 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem ferramentas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Desselecionar todas as ferramentas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar Seta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar uma seta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar Retângulo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar um retângulo sem preenchimento</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar Círculo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar um círculo sem preenchimento</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar Número</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar números que se incrementam</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -513,7 +513,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
+        <translation>Aj&amp;uda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
@@ -528,12 +528,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Editar</translation>
+        <translation>E&amp;ditar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
         <source>Toolbar</source>
-        <translation>Barra de Ferramentas</translation>
+        <translation>Barra de ferramentas</translation>
     </message>
 </context>
 <context>
@@ -632,7 +632,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
 </context>
 </TS>
