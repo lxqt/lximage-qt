@@ -15,7 +15,9 @@ lximage-qt-0.14.0 / 2018-12-01
     - Add copy button to upload dialog
     - Implement MRU list
   * Fixed implementations:
-    - Settings: add const to getters 
+    - Several codestyle improvements like null pointers as nullptr,
+      const references, indent fixes
+    - Settings: add const to getters
     - Fixed a FTBFS due to libfm header inclusion
     - Update copyright block in source files
     - Fixed thumbnail selection (with deletion)
