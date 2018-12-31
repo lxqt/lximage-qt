@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[Datei1, Datei2,...]</translation>
+        <translation>[DATEI1, DATEI2, ...]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation>Unbekannter Fehler Antwort</translation>
+        <translation>unbekannte Fehlerantwort</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">Unbekannter Fehler Antwort</translation>
+        <translation>unbekannte Fehlerantwort</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation>Unbekannter Fehler Antwort</translation>
+        <translation>unbekannte Fehlerantwort</translation>
     </message>
 </context>
 <context>
@@ -57,9 +57,9 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage-Qt - ein einfacher und schneller Bildbetrachter
 
 Copyright (C) 2013
-LXQt Project: https://lxqt.org/
+LXQt-Projekt: https://lxqt.org/
 
-Authoren:
+Autoren:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
@@ -111,7 +111,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
         <source>EXIF Data</source>
-        <translation>EXIF Daten</translation>
+        <translation>EXIF-Daten</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Lös&amp;chen</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -232,7 +232,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>In die &amp;Zwischenablage kopieren</translation>
+        <translation>In die Zwischenablage &amp;kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="297"/>
@@ -244,17 +244,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="312"/>
         <location filename="../mainwindow.ui" line="315"/>
         <source>Previous File</source>
-        <translation>Vorige Datei</translation>
+        <translation>Vorherige Datei</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>PgDown</source>
-        <translation>Bild auf</translation>
+        <translation>Bild ab</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zuletzt geöffnete Dateien</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
@@ -264,12 +264,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei &amp;neu laden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
@@ -279,7 +279,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
         <source>PgUp</source>
-        <translation>Bild ab</translation>
+        <translation>Bild auf</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -294,12 +294,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="339"/>
         <source>&amp;Fit</source>
-        <translation>Passen&amp;d</translation>
+        <translation>&amp;Passend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Im &amp;Uhrzeigersinn drehen</translation>
+        <translation>Im Uhrzeigersinn &amp;drehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
@@ -374,7 +374,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>Capture Screenshot</source>
-        <translation>Bildschirmfoto erstellen</translation>
+        <translation>Bildschirmfoto aufnehmen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
@@ -399,7 +399,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Aus Zwischenablage einfügen</translation>
+        <translation>Aus Zwischenablage &amp;einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
@@ -419,7 +419,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
         <source>Show Thumbnails</source>
-        <translation>Miniaturen anzeigen</translation>
+        <translation>Vorschaubilder anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
@@ -435,7 +435,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="506"/>
         <source>Open &amp;Directory</source>
-        <translation>Öffnen &amp;Verzeichnis</translation>
+        <translation>&amp;Verzeichnis öffnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
@@ -455,57 +455,57 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show EXIF Data</source>
-        <translation>Zeige EXIF Daten</translation>
+        <translation>EXIF-Daten anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein Werkzeug</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Zeichenwerkzeuge abwählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Pfeil zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Einen Pfeil zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechteck zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein hohles Rechteck zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreis zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Einen hohlen Kreis zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Zahl zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Inkrementierende Zahlen zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -563,12 +563,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Diaschau Bildwechsel (Sekunden):</translation>
+        <translation>Diaschau-Intervall (Sekunden):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation>Allgemeines</translation>
+        <translation>Allgemein</translation>
     </message>
 </context>
 <context>
@@ -581,7 +581,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Bildschirmfoto erstellen</translation>
+        <translation>Bildschirmfoto machen</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -601,7 +601,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Bildschirmbereich erfassen</translation>
+        <translation>Bildschirmbereich aufnehmen</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -634,7 +634,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieren</translation>
     </message>
 </context>
 </TS>
