@@ -201,7 +201,7 @@
      <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
-    <string>&amp;Open File</string>
+    <string>&amp;File</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
