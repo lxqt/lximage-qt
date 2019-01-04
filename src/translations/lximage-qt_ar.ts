@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">استجابة خطأ مجهولة</translation>
+        <translation>استجابة خطأ مجهولة</translation>
     </message>
 </context>
 <context>
