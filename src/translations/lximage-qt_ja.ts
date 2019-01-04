@@ -246,7 +246,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>最近開いたファイル(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
