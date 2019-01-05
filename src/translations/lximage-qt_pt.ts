@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">resposta de erro desconhecido</translation>
+        <translation>resposta de erro desconhecido</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Limpar</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -252,22 +252,22 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiros &amp;recentes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de ferramentas 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Recarregar ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
@@ -457,52 +457,52 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem ferramenta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Desmarcar todas as ferramentas de desenho</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Seta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar uma seta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Retângulo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar um retângulo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Círculo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar um círculo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar números por incremento</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -631,7 +631,7 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
 </context>
 </TS>
