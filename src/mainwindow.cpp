@@ -1008,6 +1008,7 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.view->setFrameStyle(QFrame::NoFrame);
       ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
       ui.toolBar->hide();
+      ui.annotationsToolBar->hide();
       ui.statusBar->hide();
       if(thumbnailsDock_)
         thumbnailsDock_->hide();
@@ -1034,6 +1035,7 @@ void MainWindow::changeEvent(QEvent* event) {
       }
       ui.menubar->show();
       ui.toolBar->show();
+      ui.annotationsToolBar->show();
       ui.statusBar->show();
       if(thumbnailsDock_)
         thumbnailsDock_->show();
