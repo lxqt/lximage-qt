@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">неизвестная ошибка</translation>
+        <translation>неизвестная ошибка</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@ Copyright (C) 2013
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
