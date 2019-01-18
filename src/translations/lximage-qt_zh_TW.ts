@@ -262,7 +262,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>重新載入檔案(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
