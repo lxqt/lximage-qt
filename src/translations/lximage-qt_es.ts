@@ -91,7 +91,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>%1 (La carga ha fallado) - Visor de imágenes</translation>
+        <translation>[*]%1 (La carga ha fallado) - Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
