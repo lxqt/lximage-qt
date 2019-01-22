@@ -119,7 +119,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Очистить</translation>
     </message>
 </context>
 <context>
