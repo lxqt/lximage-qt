@@ -1,6 +1,6 @@
 
-lximage-qt-0.14.0 / 2018-12-01
-=============================
+lximage-qt-0.14.0 / 2019-01-15
+==============================
 
   * Bumped version to 0.14.0 - the big bump was needed
     to prevent packaging conflicts with the merged back
@@ -45,7 +45,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * cmake: Handle CMP0071
   * Add Spanish desktop entries
 
-0.6.0 / 2017-10-21
+lximage-qt-0.6.0 / 2017-10-21
 ==================
 
   * Release 0.6.0: Update changelog
@@ -79,7 +79,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * Bump year
   * File and folder DND Fixes https://github.com/lxde/lximage-qt/issues/69.
 
-0.5.1 / 2016-12-21
+lximage-qt-0.5.1 / 2016-12-21
 ==================
 
   * Release 0.5.1: Update changelog
@@ -94,7 +94,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * Fixed A Cast (#71)
   * Remove cpack (#70)
 
-0.5.0 / 2016-09-24
+lximage-qt-0.5.0 / 2016-09-24
 ==================
 
   * Release 0.5.0: Add changelog
@@ -146,7 +146,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * Hungarian translations added
   * save and restore window size and maximized state
 
-0.4.0 / 2015-02-18
+lximage-qt-0.4.0 / 2015-02-18
 ==================
 
   * Release v0.4.0
@@ -164,7 +164,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * Use proper naming conventions for translations
   * Clean up CMakeLists, dropping support for Qt 5
 
-0.3.0 / 2014-10-15
+lximage-qt-0.3.0 / 2014-10-15
 ==================
 
   * Release v0.3.0
@@ -175,7 +175,7 @@ lximage-qt-0.7.0 / 2018-05-21
   * Support Qt5 and libfm-qt5.
   * Make sure all enums are handled in switch
 
-0.2.0 / 2014-05-09
+lximage-qt-0.2.0 / 2014-05-09
 ==================
 
   * Release 0.2.0
