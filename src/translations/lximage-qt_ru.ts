@@ -76,7 +76,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.cpp" line="302"/>
         <source>Open directory</source>
-        <translation>Открыть папку</translation>
+        <translation>Открыть каталог</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
