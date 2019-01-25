@@ -252,22 +252,22 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Последние файлы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Пере&amp;загрузить файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
@@ -302,7 +302,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="351"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
@@ -312,7 +312,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="363"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
@@ -367,7 +367,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="420"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
@@ -392,7 +392,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
@@ -422,7 +422,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="492"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
@@ -457,52 +457,52 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Без инструмента</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить выбор инструмента рисования</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать стрелку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать стрелку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать прямоугольник</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать прямоугольник (без заливки)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать окружность</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать окружность</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать число</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Нарисовать число (с увеличением счётчика)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -631,7 +631,7 @@ Copyright (C) 2013
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Копировать</translation>
     </message>
 </context>
 </TS>
