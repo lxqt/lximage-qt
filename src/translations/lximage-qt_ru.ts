@@ -432,7 +432,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="506"/>
         <source>Open &amp;Directory</source>
-        <translation>Открыть &amp;папку</translation>
+        <translation>Открыть &amp;каталог</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
