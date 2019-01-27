@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[File1, File2,...]</translation>
+        <translation>[FILE1, FILE2,...]</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - un semplice e veloce visualizzatore di immagini 
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Autori:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
@@ -251,7 +257,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>toolBar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
@@ -437,12 +443,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica l&apos;immagine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
@@ -452,12 +458,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuno strumento</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished">Deselezionato tutti</translation>
+        <translation>Deseleziona tutti gli strumenti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
@@ -621,7 +627,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
