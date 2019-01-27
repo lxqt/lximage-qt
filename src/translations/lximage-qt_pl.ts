@@ -502,7 +502,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation>Narysuj zwiększające się liczby</translation>
+        <translation>Narysuj rosnące liczby</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
