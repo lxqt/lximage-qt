@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[FILE1, FILE2,...]</translation>
+        <translation>[DOSYA1, DOSYA2,...]</translation>
     </message>
 </context>
 <context>
@@ -106,7 +106,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>Thumbnails</source>
-        <translation>Küçükresimler</translation>
+        <translation>Önizleme</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
