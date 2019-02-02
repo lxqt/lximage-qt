@@ -412,7 +412,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Slett</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
@@ -517,7 +517,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation>Dra</translation>
+        <translation>Gå</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
@@ -527,7 +527,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Rediger</translation>
+        <translation>R&amp;ediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
