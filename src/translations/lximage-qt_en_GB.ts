@@ -301,7 +301,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation></translation>
+        <translation>Rotate &amp;Anticlockwise</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
@@ -544,12 +544,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation></translation>
+        <translation>Normal background colour:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation></translation>
+        <translation>Fullscreen background colour:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
