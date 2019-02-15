@@ -257,7 +257,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation>barraFerramentas_2</translation>
+        <translation>Barra de ferramentas 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
