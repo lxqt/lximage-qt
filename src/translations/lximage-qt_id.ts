@@ -411,7 +411,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="478"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Hapus</translation>
+        <translation>Hapus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
@@ -511,27 +511,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation>&amp;Berkas</translation>
+        <translation>Berkas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation>B&amp;antuan</translation>
+        <translation>Bantuan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation>Pergi</translation>
+        <translation>Ke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation>&amp;Lihat</translation>
+        <translation>Lihat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Sunting</translation>
+        <translation>Sunting</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
