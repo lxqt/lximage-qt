@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">未知的错误反应</translation>
+        <translation>未知的错误响应</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - 一个简单又快速的看图程序
+
+Copyright (C) 2013
+LXQt网站： https://lxqt.org/
+
+作者：
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
@@ -105,7 +111,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF数据</translation>
     </message>
 </context>
 <context>
@@ -113,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>清除(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -126,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -246,22 +252,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>最近打开的文件(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>toolBar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>重新载入文件(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
@@ -296,7 +302,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
@@ -306,7 +312,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
@@ -361,7 +367,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
@@ -386,7 +392,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
@@ -416,7 +422,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
@@ -446,57 +452,57 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>显示EXIF数据</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>无工具</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>取消选择所有绘图工具</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>画箭头</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>画一个箭头</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>画矩形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>画一个中空的矩形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>画圆形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>画一个中空的圆形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>画数字</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>画递增的数字</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -625,7 +631,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>复制</translation>
     </message>
 </context>
 </TS>
