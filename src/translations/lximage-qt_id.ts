@@ -339,7 +339,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <source>Home</source>
         <translatorcomment>asumsi: nama tombol
 </translatorcomment>
-        <translation>Rumah</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
@@ -351,7 +351,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <source>End</source>
         <translatorcomment>asumsi: nama tombol
 </translatorcomment>
-        <translation>Akhir</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
