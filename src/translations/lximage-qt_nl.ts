@@ -91,7 +91,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Laden ist fehlgeschlagen) - Bildbetrachter</translation>
+        <translation>[*]%1 (Laden mislukt) - Afbeeldingenkijker</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
@@ -132,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -254,7 +254,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Onlangs Geopend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
@@ -264,7 +264,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Herlaad Bestand</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -379,7 +379,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>F&amp;ull Screen</source>
-        <translation>&amp;Gesamter Bildschirm</translation>
+        <translation>&amp;Volledig Scherm</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
