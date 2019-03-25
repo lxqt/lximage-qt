@@ -407,7 +407,7 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="478"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Excluir</translation>
+        <translation>&amp;Apagar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
