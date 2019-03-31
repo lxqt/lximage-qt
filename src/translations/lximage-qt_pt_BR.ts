@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Capturar a imagem da tela</translation>
+        <translation>Fazer uma captura de tela</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
@@ -170,12 +170,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;About</source>
-        <translation>&amp;Sobre</translation>
+        <translation>S&amp;obre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>&amp;Open File</source>
-        <translation>&amp;Abrir arquivo</translation>
+        <translation>Abrir arquiv&amp;o</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -195,7 +195,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Save &amp;As</source>
-        <translation>Sa&amp;lvar como</translation>
+        <translation>S&amp;alvar como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
@@ -205,7 +205,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
-        <translation>&amp;Fechar</translation>
+        <translation>Fe&amp;char</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
@@ -215,12 +215,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Zoom &amp;In</source>
-        <translation>Ampl&amp;iar</translation>
+        <translation>Ampl&amp;iar zoom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>Zoom &amp;Out</source>
-        <translation>&amp;Diminuir zoom</translation>
+        <translation>Diminuir z&amp;oom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
@@ -297,7 +297,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Girar em sentido &amp;horário</translation>
+        <translation>Gi&amp;rar em sentido horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
@@ -307,7 +307,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Girar em sentido &amp;anti-horário</translation>
+        <translation>Girar em sentid&amp;o anti-horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
@@ -362,7 +362,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Espelhar &amp;horizontalmente</translation>
+        <translation>Inverter &amp;horizontalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
@@ -377,7 +377,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>F&amp;ull Screen</source>
-        <translation>&amp;Tela cheia</translation>
+        <translation>Tela &amp;cheia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -387,7 +387,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Espelhar &amp;verticalmente</translation>
+        <translation>Inverter &amp;verticalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
@@ -408,7 +408,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="478"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Excluir</translation>
+        <translation>Exc&amp;luir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
@@ -463,7 +463,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation>Desselecionar todas as ferramentas</translation>
+        <translation>Desmarcar todas as ferramentas de desenho</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
@@ -503,7 +503,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation>Desenhar números que se incrementam</translation>
+        <translation>Desenhar números crescentes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -579,7 +579,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Capturar a tela</translation>
+        <translation>Fazer uma Captura de tela</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -589,7 +589,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation>Toda a tela</translation>
+        <translation>Tela inteira</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
