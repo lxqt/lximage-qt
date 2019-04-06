@@ -119,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Leeg maken</translation>
     </message>
 </context>
 <context>
@@ -269,7 +269,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
@@ -460,52 +460,52 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen gereedschap</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Deselecteer alle tekengereedschappen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken pijl</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken een pijl</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken rechthoek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken een rechthoek zonder inhoud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken cirkel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken een cirkel zonder inhoud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken getal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken ophogende nummers</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -634,7 +634,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren</translation>
     </message>
 </context>
 </TS>
