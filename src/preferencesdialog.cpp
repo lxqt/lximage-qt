@@ -38,6 +38,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.bgColor->setColor(settings.bgColor());
   ui.fullScreenBgColor->setColor(settings.fullScreenBgColor());
   ui.slideShowInterval->setValue(settings.slideShowInterval());
+  ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
 }
 
 PreferencesDialog::~PreferencesDialog() {
@@ -69,6 +70,7 @@ void PreferencesDialog::accept() {
   settings.setBgColor(ui.bgColor->color());
   settings.setFullScreenBgColor(ui.fullScreenBgColor->color());
   settings.setSlideShowInterval(ui.slideShowInterval->value());
+  settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
 
   settings.save();
   QDialog::accept();

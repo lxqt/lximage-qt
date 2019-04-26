@@ -36,7 +36,8 @@ Settings::Settings():
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
   lastWindowHeight_(480),
-  lastWindowMaximized_(false) {
+  lastWindowMaximized_(false),
+  showAnnotationsToolbar_(false) {
 }
 
 Settings::~Settings() {
@@ -59,6 +60,7 @@ bool Settings::load() {
   lastWindowHeight_ = settings.value("LastWindowHeight", 480).toInt();
   lastWindowMaximized_ = settings.value("LastWindowMaximized", false).toBool();
   rememberWindowSize_ = settings.value("RememberWindowSize", true).toBool();
+  showAnnotationsToolbar_ = settings.value("ShowAnnotationsToolbar", false).toBool();
   settings.endGroup();
 
   return true;
@@ -80,6 +82,7 @@ bool Settings::save() {
   settings.setValue("LastWindowHeight", lastWindowHeight_);
   settings.setValue("LastWindowMaximized", lastWindowMaximized_);
   settings.setValue("RememberWindowSize", rememberWindowSize_);
+  settings.setValue("ShowAnnotationsToolbar", showAnnotationsToolbar_);
   settings.endGroup();
 
   return true;

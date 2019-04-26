@@ -145,6 +145,14 @@ public:
       lastWindowMaximized_ = lastWindowMaximized;
   }
 
+  bool isAnnotationsToolbarShown() const {
+    return showAnnotationsToolbar_;
+  }
+
+  void showAnnotationsToolbar(bool show) {
+    showAnnotationsToolbar_ = show;
+  }
+
 private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
@@ -161,6 +169,7 @@ private:
   int lastWindowWidth_;
   int lastWindowHeight_;
   bool lastWindowMaximized_;
+  bool showAnnotationsToolbar_;
 };
 
 }
