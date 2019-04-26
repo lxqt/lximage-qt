@@ -96,6 +96,20 @@ MainWindow::MainWindow():
   if(settings.showThumbnails())
     setShowThumbnails(true);
 
+  ui.annotationsToolBar->setVisible(settings.isAnnotationsToolbarShown());
+  ui.actionAnnotations->setChecked(settings.isAnnotationsToolbarShown());
+  connect(ui.actionAnnotations, &QAction::triggered, [this](int checked) {
+    if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
+      ui.annotationsToolBar->setVisible(checked);
+    }
+  });
+  // annotations toolbar visibility can change in its context menu
+  connect(ui.annotationsToolBar, &QToolBar::visibilityChanged, [this](int visible) {
+    if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
+      ui.actionAnnotations->setChecked(visible);
+    }
+  });
+
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
   contextMenu_->addSeparator();
@@ -106,6 +120,7 @@ MainWindow::MainWindow():
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
+  contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
@@ -1035,7 +1050,9 @@ void MainWindow::changeEvent(QEvent* event) {
       }
       ui.menubar->show();
       ui.toolBar->show();
-      ui.annotationsToolBar->show();
+      if(ui.actionAnnotations->isChecked()){
+          ui.annotationsToolBar->show();
+      }
       ui.statusBar->show();
       if(thumbnailsDock_)
         thumbnailsDock_->show();
