@@ -234,8 +234,9 @@ void MainWindow::onFolderLoaded() {
     }
   }
   // this is used to open the first image of a folder
-  else if (!currentFile_)
+  else if (!currentFile_) {
     on_actionFirst_triggered();
+  }
 }
 
 void MainWindow::openImageFile(const QString& fileName) {
@@ -260,7 +261,8 @@ void MainWindow::openImageFile(const QString& fileName) {
 
     currentFile_ = Fm::FilePath{};
     loadFolder(path);
-  } else {
+  }
+  else {
     // load the image file asynchronously
     loadImage(path);
     loadFolder(path.parent());
@@ -303,15 +305,29 @@ QString MainWindow::openFileName() {
       break;
   }
 
+  QString curFileName;
+  if(currentFile_) {
+    curFileName = QString::fromUtf8(currentFile_.displayName().get());
+  }
+  else {
+    curFileName = QString::fromUtf8(Fm::FilePath::homeDir().toString().get());
+  }
   QString fileName = QFileDialog::getOpenFileName(
-    this, tr("Open File"), QString(),
+    this, tr("Open File"), curFileName,
           tr("Image files (%1)").arg(filterStr));
   return fileName;
 }
 
 QString MainWindow::openDirectory() {
+  QString curDirName;
+  if(currentFile_ && currentFile_.parent()) {
+    curDirName = QString::fromUtf8(currentFile_.parent().displayName().get());
+  }
+  else {
+    curDirName = QString::fromUtf8(Fm::FilePath::homeDir().toString().get());
+  }
   QString directory = QFileDialog::getExistingDirectory(this,
-          tr("Open directory"), QString());
+          tr("Open directory"), curDirName);
   return directory;
 }
 
@@ -391,11 +407,12 @@ void MainWindow::on_actionSave_triggered() {
 void MainWindow::on_actionSaveAs_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
-  QString baseName;
-  if(currentFile_)
-    baseName = QString::fromUtf8(currentFile_.displayName().get());
+  QString curFileName;
+  if(currentFile_) {
+    curFileName = QString::fromUtf8(currentFile_.displayName().get());
+  }
 
-  QString fileName = saveFileName(baseName);
+  QString fileName = saveFileName(curFileName);
   if(!fileName.isEmpty()) {
     const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // save the image file asynchronously
@@ -479,17 +496,20 @@ void MainWindow::on_actionLast_triggered() {
 
 void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
   if(folder_) { // an folder is already loaded
-    if(newFolderPath == folderPath_) // same folder, ignore
+    if(newFolderPath == folderPath_) { // same folder, ignore
       return;
+    }
     disconnect(folder_.get(), nullptr, this, nullptr); // disconnect from all signals
   }
 
   folderPath_ = newFolderPath;
   folder_ = Fm::Folder::fromPath(folderPath_);
-  connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
-
-  folderModel_->setFolder(folder_);
   currentIndex_ = QModelIndex(); // set current index to invalid
+  folderModel_->setFolder(folder_);
+  if(folder_->isLoaded()) { // the folder may be already loaded elsewhere
+      onFolderLoaded();
+  }
+  connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
 }
 
 // the image is loaded (the method is only called if the loading is not cancelled)
