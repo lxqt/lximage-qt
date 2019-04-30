@@ -31,7 +31,7 @@ class Settings;
 class PreferencesDialog : public QDialog {
   Q_OBJECT
 public:
-  explicit PreferencesDialog(QWidget* parent = 0);
+  explicit PreferencesDialog(QWidget* parent = nullptr);
   virtual ~PreferencesDialog();
 
   virtual void accept();

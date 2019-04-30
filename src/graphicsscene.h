@@ -31,7 +31,7 @@ class GraphicsScene : public QGraphicsScene
   Q_OBJECT
 
 public:
-  GraphicsScene(QObject *parent = 0);
+  GraphicsScene(QObject *parent = nullptr);
 
 protected:
   virtual void dragEnterEvent(QGraphicsSceneDragDropEvent *event);

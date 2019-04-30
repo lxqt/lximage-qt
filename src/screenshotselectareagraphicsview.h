@@ -32,7 +32,7 @@ namespace LxImage {
 class ScreenshotSelectAreaGraphicsView : public QGraphicsView {
   Q_OBJECT
 public:
-  ScreenshotSelectAreaGraphicsView(QGraphicsScene* scene, QWidget* parent = 0);
+  ScreenshotSelectAreaGraphicsView(QGraphicsScene* scene, QWidget* parent = nullptr);
 
 Q_SIGNALS:
     void selectedArea(QRect rect);

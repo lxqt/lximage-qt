@@ -38,7 +38,7 @@ class ImageView : public QGraphicsView {
   Q_OBJECT
 
 public:
-  ImageView(QWidget* parent = 0);
+  ImageView(QWidget* parent = nullptr);
   virtual ~ImageView();
 
   void setImage(const QImage& image, bool show = true);
