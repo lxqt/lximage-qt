@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta en skärmdump</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[FILE1, FILE2,...]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>okänt felmeddelande</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>okänt felmeddelande</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>okänt felmeddelande</translation>
     </message>
 </context>
 <context>
@@ -43,38 +43,38 @@
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="296"/>
         <location filename="../mainwindow.cpp" line="324"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildfiler (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Spara fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Tumnaglar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF Data</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="598"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Laddar...) - Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
