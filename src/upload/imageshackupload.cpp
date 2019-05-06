@@ -38,14 +38,14 @@ void ImageShackUpload::processReply(const QByteArray &data)
     QJsonObject object(QJsonDocument::fromJson(data).object());
 
     // Attempt to retrieve the link
-    bool success = object.value("success").toBool();
-    QString link = object.value("result").toObject().value("images").toArray()
-            .at(0).toObject().value("direct_link").toString();
+    bool success = object.value(QStringLiteral("success")).toBool();
+    QString link = object.value(QStringLiteral("result")).toObject().value(QStringLiteral("images")).toArray()
+            .at(0).toObject().value(QStringLiteral("direct_link")).toString();
 
     // Check for success
     if (!success || link.isNull()) {
-        QString errorMessage = object.value("error").toObject()
-                .value("error_message").toString();
+        QString errorMessage = object.value(QStringLiteral("error")).toObject()
+                .value(QStringLiteral("error_message")).toString();
         if (errorMessage.isNull()) {
             errorMessage = tr("unknown error response");
         }

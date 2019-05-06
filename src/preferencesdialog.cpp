@@ -112,7 +112,7 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
       findIconThemesInDir(iconThemes, QString(*dataDir) % "/icons");
     }
 
-    iconThemes.remove("hicolor"); // remove hicolor, which is only a fallback
+    iconThemes.remove(QStringLiteral("hicolor")); // remove hicolor, which is only a fallback
     QHash<QString, QString>::const_iterator it;
     for(it = iconThemes.constBegin(); it != iconThemes.constEnd(); ++it) {
       ui.iconTheme->addItem(it.value(), it.key());

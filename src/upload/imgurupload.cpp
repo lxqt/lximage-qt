@@ -36,10 +36,10 @@ void ImgurUpload::processReply(const QByteArray &data)
     QJsonObject object(QJsonDocument::fromJson(data).object());
 
     // Attempt to retrieve the value for "success" and "data->link"
-    bool success = object.value("success").toBool();
-    QJsonObject dataObject = object.value("data").toObject();
-    QString dataLink = dataObject.value("link").toString();
-    QString dataError = dataObject.value("error").toString();
+    bool success = object.value(QStringLiteral("success")).toBool();
+    QJsonObject dataObject = object.value(QStringLiteral("data")).toObject();
+    QString dataLink = dataObject.value(QStringLiteral("link")).toString();
+    QString dataError = dataObject.value(QStringLiteral("error")).toString();
 
     // Ensure that "success" is true & link is valid, otherwise throw an error
     if (!success || dataLink.isNull()) {

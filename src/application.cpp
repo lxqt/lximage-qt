@@ -66,7 +66,7 @@ bool Application::init(int argc, char** argv) {
     setQuitOnLastWindowClosed(false); // do not quit even when there're no windows
 
     new ApplicationAdaptor(this);
-    dbus.registerObject("/Application", this);
+    dbus.registerObject(QStringLiteral("/Application"), this);
 
     connect(this, &Application::aboutToQuit, this, &Application::onAboutToQuit);
 
@@ -90,13 +90,13 @@ bool Application::parseCommandLineArgs() {
   parser.addVersionOption();
 
   QCommandLineOption screenshotOption(
-    QStringList() << "s" << "screenshot",
+    QStringList() << QStringLiteral("s") << QStringLiteral("screenshot"),
     tr("Take a screenshot")
   );
   parser.addOption(screenshotOption);
 
   const QString files = tr("[FILE1, FILE2,...]");
-  parser.addPositionalArgument("files", files, files);
+  parser.addPositionalArgument(QStringLiteral("files"), files, files);
 
   parser.process(*this);
 
@@ -124,11 +124,11 @@ bool Application::parseCommandLineArgs() {
     // we're not the primary instance.
     // call the primary instance via dbus to do operations
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    QDBusInterface iface(serviceName, "/Application", ifaceName, dbus, this);
+    QDBusInterface iface(serviceName, QStringLiteral("/Application"), ifaceName, dbus, this);
     if(screenshotTool)
-      iface.call("screenshot");
+      iface.call(QStringLiteral("screenshot"));
     else
-      iface.call("newWindow", paths);
+      iface.call(QStringLiteral("newWindow"), paths);
   }
   return keepRunning;
 }

@@ -25,13 +25,13 @@
 using namespace LxImage;
 
 Settings::Settings():
-  useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == "hicolor"),
+  useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == QLatin1String("hicolor")),
   bgColor_(255, 255, 255),
   fullScreenBgColor_(0, 0, 0),
   showThumbnails_(false),
   showSidePane_(false),
   slideShowInterval_(5),
-  fallbackIconTheme_("oxygen"),
+  fallbackIconTheme_(QStringLiteral("oxygen")),
   fixedWindowWidth_(640),
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
@@ -44,45 +44,45 @@ Settings::~Settings() {
 }
 
 bool Settings::load() {
-  QSettings settings("lximage-qt", "settings");
-  fallbackIconTheme_ = settings.value("fallbackIconTheme", fallbackIconTheme_).toString();
-  bgColor_ = settings.value("bgColor", bgColor_).value<QColor>();
-  fullScreenBgColor_ = settings.value("fullScreenBgColor", fullScreenBgColor_).value<QColor>();
+  QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
+  fallbackIconTheme_ = settings.value(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_).toString();
+  bgColor_ = settings.value(QStringLiteral("bgColor"), bgColor_).value<QColor>();
+  fullScreenBgColor_ = settings.value(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_).value<QColor>();
   // showThumbnails_;
   // showSidePane_;
-  slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
-  recentlyOpenedFiles_ = settings.value("recentlyOpenedFiles").toStringList();
+  slideShowInterval_ = settings.value(QStringLiteral("slideShowInterval"), slideShowInterval_).toInt();
+  recentlyOpenedFiles_ = settings.value(QStringLiteral("recentlyOpenedFiles")).toStringList();
 
-  settings.beginGroup("Window");
-  fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
-  fixedWindowHeight_ = settings.value("FixedHeight", 480).toInt();
-  lastWindowWidth_ = settings.value("LastWindowWidth", 640).toInt();
-  lastWindowHeight_ = settings.value("LastWindowHeight", 480).toInt();
-  lastWindowMaximized_ = settings.value("LastWindowMaximized", false).toBool();
-  rememberWindowSize_ = settings.value("RememberWindowSize", true).toBool();
-  showAnnotationsToolbar_ = settings.value("ShowAnnotationsToolbar", false).toBool();
+  settings.beginGroup(QStringLiteral("Window"));
+  fixedWindowWidth_ = settings.value(QStringLiteral("FixedWidth"), 640).toInt();
+  fixedWindowHeight_ = settings.value(QStringLiteral("FixedHeight"), 480).toInt();
+  lastWindowWidth_ = settings.value(QStringLiteral("LastWindowWidth"), 640).toInt();
+  lastWindowHeight_ = settings.value(QStringLiteral("LastWindowHeight"), 480).toInt();
+  lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
+  rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
+  showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   settings.endGroup();
 
   return true;
 }
 
 bool Settings::save() {
-  QSettings settings("lximage-qt", "settings");
+  QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
 
-  settings.setValue("fallbackIconTheme", fallbackIconTheme_);
-  settings.setValue("bgColor", bgColor_);
-  settings.setValue("fullScreenBgColor", fullScreenBgColor_);
-  settings.setValue("slideShowInterval", slideShowInterval_);
-  settings.setValue("recentlyOpenedFiles", recentlyOpenedFiles_);
+  settings.setValue(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_);
+  settings.setValue(QStringLiteral("bgColor"), bgColor_);
+  settings.setValue(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_);
+  settings.setValue(QStringLiteral("slideShowInterval"), slideShowInterval_);
+  settings.setValue(QStringLiteral("recentlyOpenedFiles"), recentlyOpenedFiles_);
 
-  settings.beginGroup("Window");
-  settings.setValue("FixedWidth", fixedWindowWidth_);
-  settings.setValue("FixedHeight", fixedWindowHeight_);
-  settings.setValue("LastWindowWidth", lastWindowWidth_);
-  settings.setValue("LastWindowHeight", lastWindowHeight_);
-  settings.setValue("LastWindowMaximized", lastWindowMaximized_);
-  settings.setValue("RememberWindowSize", rememberWindowSize_);
-  settings.setValue("ShowAnnotationsToolbar", showAnnotationsToolbar_);
+  settings.beginGroup(QStringLiteral("Window"));
+  settings.setValue(QStringLiteral("FixedWidth"), fixedWindowWidth_);
+  settings.setValue(QStringLiteral("FixedHeight"), fixedWindowHeight_);
+  settings.setValue(QStringLiteral("LastWindowWidth"), lastWindowWidth_);
+  settings.setValue(QStringLiteral("LastWindowHeight"), lastWindowHeight_);
+  settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
+  settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
+  settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
   settings.endGroup();
 
   return true;

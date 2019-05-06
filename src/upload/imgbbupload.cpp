@@ -35,11 +35,11 @@ void ImgBBUpload::processReply(const QByteArray &data)
     QJsonObject object(QJsonDocument::fromJson(data).object());
 
     // Attempt to retrieve the image->url value
-    QString url = object.value("image").toObject().value("url").toString();
+    QString url = object.value(QStringLiteral("image")).toObject().value(QStringLiteral("url")).toString();
 
     // Check for success
     if (url.isNull()) {
-        QString message = object.value("error").toObject().value("message").toString();
+        QString message = object.value(QStringLiteral("error")).toObject().value(QStringLiteral("message")).toString();
         if (message.isNull()) {
             message = tr("unknown error response");
         }

@@ -27,7 +27,7 @@
 
 using namespace LxImage;
 
-const QUrl gUploadURL("https://imgbb.com/json");
+const QUrl gUploadURL(QStringLiteral("https://imgbb.com/json"));
 
 Upload *ImgBBProvider::upload(QIODevice *device)
 {

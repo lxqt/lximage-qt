@@ -29,14 +29,14 @@
 
 using namespace LxImage;
 
-const QString gUploadURL = "https://api.imageshack.com/v2/images";
+const QString gUploadURL = QStringLiteral("https://api.imageshack.com/v2/images");
 const QByteArray gAPIKey = "4DINORVXbcbda9ac64b424a0e6b37caed4cf3b8b";
 
 Upload *ImageShackProvider::upload(QIODevice *device)
 {
     // Construct the URL that will be used for the upload
     QUrlQuery query;
-    query.addQueryItem("api_key", gAPIKey);
+    query.addQueryItem(QStringLiteral("api_key"), gAPIKey);
     QUrl url(gUploadURL);
     url.setQuery(query);
 
