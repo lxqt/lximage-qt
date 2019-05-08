@@ -36,7 +36,7 @@ Upload *ImageShackProvider::upload(QIODevice *device)
 {
     // Construct the URL that will be used for the upload
     QUrlQuery query;
-    query.addQueryItem(QStringLiteral("api_key"), gAPIKey);
+    query.addQueryItem(QStringLiteral("api_key"), QString::fromUtf8(gAPIKey));
     QUrl url(gUploadURL);
     url.setQuery(query);
 
@@ -45,7 +45,7 @@ Upload *ImageShackProvider::upload(QIODevice *device)
     filePart.setBodyDevice(device);
     filePart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        R"(form-data; name="file"; filename="upload.jpg")"
+        QString::fromLatin1(R"(form-data; name="file"; filename="upload.jpg")")
     );
 
     // Create the multipart and append the file part

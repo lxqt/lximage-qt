@@ -36,21 +36,21 @@ Upload *ImgBBProvider::upload(QIODevice *device)
     filePart.setBodyDevice(device);
     filePart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        R"(form-data; name="source"; filename="upload.jpg")"
+        QStringLiteral(R"(form-data; name="source"; filename="upload.jpg")")
     );
 
     // Create the parts for the two parameters
     QHttpPart typePart;
-    typePart.setBody("file");
+    typePart.setBody(QByteArrayLiteral("file"));
     typePart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        "form-data; name=\"type\""
+        QStringLiteral("form-data; name=\"type\"")
     );
     QHttpPart actionPart;
-    actionPart.setBody("upload");
+    actionPart.setBody(QByteArrayLiteral("upload"));
     actionPart.setHeader(
         QNetworkRequest::ContentDispositionHeader,
-        "form-data; name=\"action\""
+        QStringLiteral("form-data; name=\"action\"")
     );
 
     // Create the multipart and append the parts

@@ -82,7 +82,7 @@ static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QStri
   const QStringList subDirs = dir.entryList(QDir::AllDirs);
   GKeyFile* kf = g_key_file_new();
   for(const QString& subDir : subDirs) {
-    QString indexFile = dirName % '/' % subDir % "/index.theme";
+    QString indexFile = dirName + QLatin1Char('/') + subDir + QStringLiteral("/index.theme");
     if(g_key_file_load_from_file(kf, indexFile.toLocal8Bit().constData(), GKeyFileFlags(0), nullptr)) {
       // FIXME: skip hidden ones
       // icon theme must have this key, so it has icons if it has this key
@@ -90,7 +90,7 @@ static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QStri
       if(g_key_file_has_key(kf, "Icon Theme", "Directories", nullptr)) {
         char* dispName = g_key_file_get_locale_string(kf, "Icon Theme", "Name", nullptr, nullptr);
         // char* comment = g_key_file_get_locale_string(kf, "Icon Theme", "Comment", NULL, NULL);
-        iconThemes[subDir] = dispName;
+        iconThemes[subDir] = QString::fromUtf8(dispName);
         g_free(dispName);
       }
     }
@@ -104,12 +104,12 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
     // load xdg icon themes and select the current one
     QHash<QString, QString> iconThemes;
     // user customed icon themes
-    findIconThemesInDir(iconThemes, QString(g_get_home_dir()) % "/.icons");
+    findIconThemesInDir(iconThemes, QString::fromUtf8(g_get_home_dir()) + QStringLiteral("/.icons"));
 
     // search for icons in system data dir
     const char* const* dataDirs = g_get_system_data_dirs();
     for(const char* const* dataDir = dataDirs; *dataDir; ++dataDir) {
-      findIconThemesInDir(iconThemes, QString(*dataDir) % "/icons");
+      findIconThemesInDir(iconThemes, QString::fromUtf8((*dataDir)) + QStringLiteral("/icons"));
     }
 
     iconThemes.remove(QStringLiteral("hicolor")); // remove hicolor, which is only a fallback

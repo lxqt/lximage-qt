@@ -51,6 +51,6 @@ void ImageShackUpload::processReply(const QByteArray &data)
         }
         Q_EMIT error(errorMessage);
     } else {
-        Q_EMIT completed("https://" + link);
+        Q_EMIT completed(QStringLiteral("https://") + link);
     }
 }

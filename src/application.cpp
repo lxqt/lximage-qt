@@ -37,7 +37,7 @@ Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
   libFm(),
   windowCount_(0) {
-  setApplicationVersion(LXIMAGE_VERSION);
+  setApplicationVersion(QStringLiteral(LXIMAGE_VERSION));
 }
 
 bool Application::init(int argc, char** argv) {
@@ -47,19 +47,19 @@ bool Application::init(int argc, char** argv) {
   setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
   // install the translations built-into Qt itself
-  qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+  qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
   installTranslator(&qtTranslator);
 
   // install libfm-qt translator
   installTranslator(libFm.translator());
 
   // install our own tranlations
-  translator.load("lximage-qt_" + QLocale::system().name(), LXIMAGE_DATA_DIR "/translations");
+  translator.load(QStringLiteral("lximage-qt_") + QLocale::system().name(), QStringLiteral(LXIMAGE_DATA_DIR) + QStringLiteral("/translations"));
   installTranslator(&translator);
 
   // initialize dbus
   QDBusConnection dbus = QDBusConnection::sessionBus();
-  if(dbus.registerService(serviceName)) {
+  if(dbus.registerService(QLatin1String(serviceName))) {
     settings_.load(); // load settings
     // we successfully registered the service
     isPrimaryInstance = true;
@@ -124,7 +124,7 @@ bool Application::parseCommandLineArgs() {
     // we're not the primary instance.
     // call the primary instance via dbus to do operations
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    QDBusInterface iface(serviceName, QStringLiteral("/Application"), ifaceName, dbus, this);
+    QDBusInterface iface(QLatin1String(serviceName), QStringLiteral("/Application"), QLatin1String(ifaceName), dbus, this);
     if(screenshotTool)
       iface.call(QStringLiteral("screenshot"));
     else
