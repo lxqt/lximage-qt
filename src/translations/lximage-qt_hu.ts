@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>ismeretlen hibajelenség</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>ismeretlen hibajelenség</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>ismeretlen hibajelenség</translation>
     </message>
 </context>
 <context>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source>About</source>
-        <translation>Rólunk</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="165"/>
@@ -54,12 +54,28 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt 
+ egyszerű és gyors képmegjelenítő
+
+Az LXQt Project honlapja: 
+ https://lxqt.org/
+
+Copyright (C) 2013-2019
+ Hong Jen Yee (PCMan) 
+ &lt;pcman.tw@gmail.com&gt;
+
+Licenc:
+ 
+           -----  Ez a szoftver a -----    
+GNU GENERAL PUBLIC LICENSE Version 2
+jogi feltételeinek megfelelően használható
+
+ -----  http://www.gnu.org/licenses/ -----</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
         <source>Open File</source>
-        <translation>Fájl megnyitás</translation>
+        <translation>Fájl megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="296"/>
@@ -70,32 +86,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="302"/>
         <source>Open directory</source>
-        <translation>Könyvtár nyitás</translation>
+        <translation>Mappa megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <source>Save File</source>
-        <translation>Fájl mentés</translation>
+        <translation>Mentés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="598"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Betöltés...) - Képnéző</translation>
+        <translation>[*]%1 (Betöltés...) - Képmegjelenítő</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Betöltés sikertelen) - Képnéző</translation>
+        <translation>[*]%1 (Betöltés sikertelen) - Képmegjelenítő</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3.) - Képnéző</translation>
+        <translation>[*]%1 (%2x%3.) - Képmegjelenítő</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="643"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Képnéző</translation>
+        <translation>[*]Képmegjelenítő</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
@@ -105,7 +121,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF Metaadatok</translation>
     </message>
 </context>
 <context>
@@ -113,7 +129,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Törlés</translation>
     </message>
 </context>
 <context>
@@ -136,12 +152,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Indítás</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Megállítás</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
@@ -151,7 +167,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba</translation>
     </message>
 </context>
 <context>
@@ -159,17 +175,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation>Képnéző</translation>
+        <translation>Képmegjelenítő</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;About</source>
-        <translation>Ról&amp;am</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>&amp;Open File</source>
-        <translation>&amp;Fájlnyitás</translation>
+        <translation>&amp;Fájl Megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -179,7 +195,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Save</source>
-        <translation>&amp;Ment</translation>
+        <translation>&amp;Mentés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
@@ -189,7 +205,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Másként ment</translation>
+        <translation>Mentés Másként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
@@ -199,7 +215,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
-        <translation>&amp;Bezárás</translation>
+        <translation>&amp;Kilépés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
@@ -246,7 +262,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Előzmények</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
@@ -256,7 +272,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Frissítés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -286,12 +302,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="339"/>
         <source>&amp;Fit</source>
-        <translation>&amp;Kitölt</translation>
+        <translation>&amp;Kitöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Jobbra forgat</translation>
+        <translation>&amp;Jobbra forgatás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
@@ -301,7 +317,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>&amp;Balra forgat</translation>
+        <translation>&amp;Balra forgatás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
@@ -316,7 +332,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="373"/>
         <source>&amp;Print</source>
-        <translation>&amp;Nyomtat</translation>
+        <translation>&amp;Nyomtatás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
@@ -366,12 +382,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>Capture Screenshot</source>
-        <translation>Képernyőkép készítés</translation>
+        <translation>Képernyőkép készítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>F&amp;ull Screen</source>
-        <translation>&amp;Teljes kép</translation>
+        <translation>&amp;Teljes képernyő</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -436,17 +452,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Feltöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép feltöltése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF Metaadatok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
@@ -456,47 +472,47 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Rajzeszközök elvetése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyíl rajzoló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyíl rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Négyszög rajzoló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Négyszög rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kör rajzoló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kör rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Szám rajzoló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Szám rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -620,12 +636,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Feltöltés</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Másolás</translation>
     </message>
 </context>
 </TS>
