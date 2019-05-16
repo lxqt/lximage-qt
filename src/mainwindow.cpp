@@ -252,7 +252,7 @@ void MainWindow::openImageFile(const QString& fileName) {
     QList<QByteArray> formats = QImageReader::supportedImageFormats();
     QStringList formatsFilters;
     for (const QByteArray& format: formats)
-      formatsFilters << QString("*.") + format;
+      formatsFilters << QStringLiteral("*.") + QString::fromUtf8(format);
     QDir dir(fileName);
     dir.setNameFilters(formatsFilters);
     dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
@@ -296,11 +296,11 @@ QString MainWindow::openFileName() {
   QList<QByteArray> formats = QImageReader::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
   for(;;) {
-    filterStr += "*.";
-    filterStr += (*it).toLower();
+    filterStr += QLatin1String("*.");
+    filterStr += QString::fromUtf8((*it).toLower());
     ++it;
     if(it != formats.end())
-      filterStr += ' ';
+      filterStr += QLatin1Char(' ');
     else
       break;
   }
@@ -337,11 +337,11 @@ QString MainWindow::saveFileName(const QString& defaultName) {
   QList<QByteArray> formats = QImageWriter::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
   for(;;) {
-    filterStr += "*.";
-    filterStr += (*it).toLower();
+    filterStr += QLatin1String("*.");
+    filterStr += QString::fromUtf8((*it).toLower());
     ++it;
     if(it != formats.end())
-      filterStr += ' ';
+      filterStr += QLatin1Char(' ');
     else
       break;
   }
@@ -352,7 +352,7 @@ QString MainWindow::saveFileName(const QString& defaultName) {
                tr("Image files (%1)").arg(filterStr));
   diag.setAcceptMode(QFileDialog::AcceptMode::AcceptSave);
   diag.setFileMode(QFileDialog::FileMode::AnyFile);
-  diag.setDefaultSuffix("png");
+  diag.setDefaultSuffix(QStringLiteral("png"));
 
   if (diag.exec()) {
     fileName = diag.selectedFiles().at(0);
@@ -520,7 +520,7 @@ void MainWindow::onImageLoaded() {
   if (sender() == loadJob_)
   {
     // Add to the MRU menu
-    ui.menuRecently_Opened_Files->addItem(loadJob_->filePath().localPath().get());
+    ui.menuRecently_Opened_Files->addItem(QString::fromUtf8(loadJob_->filePath().localPath().get()));
 
     image_ = loadJob_->image();
     exifData_ = loadJob_->getExifData();
@@ -701,17 +701,17 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   char* mime_type = g_content_type_guess(basename.get(), nullptr, 0, nullptr);
   QString mimeType;
   if (mime_type) {
-    mimeType = QString(mime_type);
+    mimeType = QString::fromUtf8(mime_type);
     g_free(mime_type);
   }
-  if(mimeType == "image/gif"
-     || mimeType == "image/svg+xml" || mimeType == "image/svg+xml-compressed") {
+  if(mimeType == QLatin1String("image/gif")
+     || mimeType == QLatin1String("image/svg+xml") || mimeType == QLatin1String("image/svg+xml-compressed")) {
     const Fm::CStrPtr file_name = currentFile_.toString();
     ui.view->setAutoZoomFit(true); // like in onImageLoaded()
-    if(mimeType == "image/gif")
-      ui.view->setGifAnimation(QString{file_name.get()});
+    if(mimeType == QLatin1String("image/gif"))
+      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()));
     else
-      ui.view->setSVG(QString{file_name.get()});
+      ui.view->setSVG(QString::fromUtf8(file_name.get()));
     image_ = ui.view->image();
     updateUI();
     show();
@@ -828,7 +828,7 @@ void MainWindow::on_actionPaste_triggered() {
 void MainWindow::on_actionUpload_triggered()
 {
     if (currentFile_.isValid()) {
-        UploadDialog(this, currentFile_.localPath().get()).exec();
+        UploadDialog(this, QString::fromUtf8(currentFile_.localPath().get())).exec();
     }
 }
 
@@ -923,13 +923,13 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
     Application* app = static_cast<Application*>(qApp);
     slideShowTimer_->start(app->settings().slideShowInterval() * 1000);
     // showFullScreen();
-    ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-stop"));
+    ui.actionSlideShow->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-stop")));
   }
   else {
     if(slideShowTimer_) {
       delete slideShowTimer_;
       slideShowTimer_ = nullptr;
-      ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-start"));
+      ui.actionSlideShow->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
     }
   }
 }

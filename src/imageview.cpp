@@ -142,7 +142,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.setFont(font);
 
       // Calculate the dimensions of the text
-      QString text = QString("%1").arg(nextNumber++);
+      QString text = QStringLiteral("%1").arg(nextNumber++);
       QRectF textRect = painter.boundingRect(image_.rect(), 0, text);
       textRect.moveTo(endPoint);
 

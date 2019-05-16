@@ -38,8 +38,8 @@ void readExifEntry(ExifEntry* ee, void* user_data) {
     QMap<QString, QString>& exifData = *reinterpret_cast<QMap<QString, QString>*>(user_data);
     char c[100];
     auto ifd = exif_entry_get_ifd(ee);
-    QString key = exif_tag_get_title_in_ifd(ee->tag, ifd);
-    QString value = exif_entry_get_value(ee, c, 100);
+    QString key = QString::fromUtf8(exif_tag_get_title_in_ifd(ee->tag, ifd));
+    QString value = QString::fromUtf8(exif_entry_get_value(ee, c, 100));
     exifData.insert(key, value);
 }
 
