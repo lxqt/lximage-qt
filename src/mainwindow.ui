@@ -107,6 +107,7 @@
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
     <addaction name="actionShowThumbnails"/>
+    <addaction name="actionShowOutline"/>
     <addaction name="actionShowExifData"/>
     <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
@@ -614,6 +615,20 @@
    </property>
    <property name="toolTip">
     <string>Annotations Toolbar</string>
+   </property>
+  </action>
+  <action name="actionShowOutline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Outline</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Outline</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
    </property>
   </action>
  </widget>

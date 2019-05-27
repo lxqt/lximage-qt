@@ -92,6 +92,9 @@ MainWindow::MainWindow():
   // install an event filter on the image view
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+  ui.view->updateOutline();
+  ui.view->showOutline(settings.isOutlineShown());
+  ui.actionShowOutline->setChecked(settings.isOutlineShown());
 
   if(settings.showThumbnails())
     setShowThumbnails(true);
@@ -120,6 +123,7 @@ MainWindow::MainWindow():
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
+  contextMenu_->addAction(ui.actionShowOutline);
   contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
@@ -706,6 +710,11 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   }
   if(mimeType == QLatin1String("image/gif")
      || mimeType == QLatin1String("image/svg+xml") || mimeType == QLatin1String("image/svg+xml-compressed")) {
+    if(!currentIndex_.isValid()) {
+      // since onImageLoaded is not called here,
+      // currentIndex_ should be set
+      currentIndex_ = indexFromPath(currentFile_);
+    }
     const Fm::CStrPtr file_name = currentFile_.toString();
     ui.view->setAutoZoomFit(true); // like in onImageLoaded()
     if(mimeType == QLatin1String("image/gif"))
@@ -750,16 +759,26 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   // FIXME: add a cancel button to the UI? update status bar?
 }
 
-QGraphicsItem* MainWindow::getGraphicsItem() {
-  if(!ui.view->items().isEmpty())
+QGraphicsItem* MainWindow::getImageGraphicsItem() {
+  if(!ui.view->items().isEmpty()) {
+    return (ui.view->items().size() > 1
+            ? ui.view->items().at(1) // the first item is outline (the uppermost item)
+            : ui.view->items().at(0));
+  }
+  return nullptr;
+}
+
+QGraphicsItem* MainWindow::getOutlineGraphicsItem() {
+  if(ui.view->items().size() > 1) {
     return ui.view->items().at(0);
+  }
   return nullptr;
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *graphItem = getGraphicsItem();
-  bool isGifOrSvg (graphItem->isWidget() // we have gif animation
-                   || dynamic_cast<QGraphicsSvgItem*>(graphItem)); // an SVG image;
+  QGraphicsItem *imageItem = getImageGraphicsItem();
+  bool isGifOrSvg (imageItem->isWidget() // we have gif animation
+                   || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(90.0);
@@ -772,19 +791,24 @@ void MainWindow::on_actionRotateClockwise_triggered() {
 
   if(isGifOrSvg) {
     QTransform transform;
-    transform.translate(graphItem->sceneBoundingRect().height(), 0);
+    transform.translate(imageItem->sceneBoundingRect().height(), 0);
     transform.rotate(90);
     // we need to apply transformations in the reverse order
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    // apply transformations to the outline item too
+    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  QGraphicsItem *graphItem = getGraphicsItem();
-  bool isGifOrSvg (graphItem->isWidget()
-                   || dynamic_cast<QGraphicsSvgItem*>(graphItem));
+  QGraphicsItem *imageItem = getImageGraphicsItem();
+  bool isGifOrSvg (imageItem->isWidget()
+                   || dynamic_cast<QGraphicsSvgItem*>(imageItem));
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(-90.0);
@@ -795,11 +819,15 @@ void MainWindow::on_actionRotateCounterclockwise_triggered() {
 
   if(isGifOrSvg) {
     QTransform transform;
-    transform.translate(0, graphItem->sceneBoundingRect().width());
+    transform.translate(0, imageItem->sceneBoundingRect().width());
     transform.rotate(-90);
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
 }
 
@@ -834,14 +862,18 @@ void MainWindow::on_actionUpload_triggered()
 
 void MainWindow::on_actionFlipVertical_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+  if(QGraphicsItem *imageItem = getImageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(1, -1);
-    transform.translate(0, -graphItem->sceneBoundingRect().height());
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    transform.translate(0, -imageItem->sceneBoundingRect().height());
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
   if(!image_.isNull()) {
     image_ = image_.mirrored(false, true);
@@ -852,14 +884,18 @@ void MainWindow::on_actionFlipVertical_triggered() {
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+  if(QGraphicsItem *imageItem = getImageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(-1, 1);
-    transform.translate(-graphItem->sceneBoundingRect().width(), 0);
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    transform.translate(-imageItem->sceneBoundingRect().width(), 0);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
   if(!image_.isNull()) {
     image_ = image_.mirrored(true, true);
@@ -880,6 +916,7 @@ void MainWindow::applySettings() {
     ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
   else
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+  ui.view->updateOutline();
 }
 
 void MainWindow::on_actionPrint_triggered() {
@@ -936,6 +973,10 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
   setShowThumbnails(checked);
+}
+
+void MainWindow::on_actionShowOutline_triggered(bool checked) {
+  ui.view->showOutline(checked);
 }
 
 void MainWindow::on_actionShowExifData_triggered(bool checked) {
@@ -1044,6 +1085,7 @@ void MainWindow::changeEvent(QEvent* event) {
     if(isFullScreen()) { // changed to fullscreen mode
       ui.view->setFrameStyle(QFrame::NoFrame);
       ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
+      ui.view->updateOutline();
       ui.toolBar->hide();
       ui.annotationsToolBar->hide();
       ui.statusBar->hide();
@@ -1064,6 +1106,7 @@ void MainWindow::changeEvent(QEvent* event) {
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
+      ui.view->updateOutline();
       // now we're going to re-enable the menu, so remove the actions previously added.
       const auto actions_ = ui.menubar->actions();
       for(QAction* action : qAsConst(actions_)) {

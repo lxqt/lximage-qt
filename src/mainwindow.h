@@ -110,6 +110,7 @@ private Q_SLOTS:
   void on_actionUpload_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
+  void on_actionShowOutline_triggered(bool checked);
   void on_actionShowExifData_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
   void on_actionSlideShow_triggered(bool checked);
@@ -142,7 +143,8 @@ private:
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
-  QGraphicsItem* getGraphicsItem();
+  QGraphicsItem* getImageGraphicsItem();
+  QGraphicsItem* getOutlineGraphicsItem();
 
 private:
   Ui::MainWindow ui;
