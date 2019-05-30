@@ -153,6 +153,14 @@ public:
     showAnnotationsToolbar_ = show;
   }
 
+  bool wheelChangesImage() const {
+    return wheelChangesImage_;
+  }
+
+  void wheelChangesImage(bool active) {
+    wheelChangesImage_ = active;
+  }
+
 private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
@@ -170,6 +178,7 @@ private:
   int lastWindowHeight_;
   bool lastWindowMaximized_;
   bool showAnnotationsToolbar_;
+  bool wheelChangesImage_;
 };
 
 }

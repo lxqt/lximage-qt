@@ -553,6 +553,11 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
   if(watched == ui.view) { // we got an event for the image view
     switch(event->type()) {
       case QEvent::Wheel: { // mouse wheel event
+        Application* app = static_cast<Application*>(qApp);
+        Settings& settings = app->settings();
+        if(!settings.wheelChangesImage())
+          break;
+
         QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
         if(wheelEvent->modifiers() == 0) {
           int delta = wheelEvent->delta();

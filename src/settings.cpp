@@ -61,6 +61,7 @@ bool Settings::load() {
   lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
+  wheelChangesImage_ = settings.value(QStringLiteral("WheelChangesImage"), true).toBool();
   settings.endGroup();
 
   return true;
@@ -83,6 +84,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
+  settings.setValue(QStringLiteral("WheelChangesImage"), wheelChangesImage_);
   settings.endGroup();
 
   return true;
