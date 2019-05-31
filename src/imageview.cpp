@@ -424,7 +424,7 @@ void ImageView::generateCache() {
     subImage.setColorTable(colorTable);
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.width(), cachedRect_.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.width() * devicePixelRatioF(), cachedRect_.height() * devicePixelRatioF(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
