@@ -457,7 +457,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished">不使用註解工具</translation>
+        <translation>不使用註解工具</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
