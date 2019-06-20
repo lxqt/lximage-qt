@@ -54,12 +54,12 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished">LXImage-Qt - シンプルで軽量な画像ビューアー
+        <translation type="unfinished">LXImage-Qt - シンプルで高速な画像ビューアー
 
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
 
-Authors:
+作者:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
