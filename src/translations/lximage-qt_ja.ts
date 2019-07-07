@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">未知のエラー</translation>
+        <translation>未知のエラー</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished">LXImage-Qt - シンプルで高速な画像ビューアー
+        <translation>LXImage-Qt - シンプルで高速な画像ビューアー
 
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
@@ -86,22 +86,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="598"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (ロード中...) - イメージビューア</translation>
+        <translation>[*]%1 (ロード中...) - 画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (ロードに失敗) - イメージビューア</translation>
+        <translation>[*]%1 (ロードに失敗) - 画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - イメージビューア</translation>
+        <translation>[*]%1 (%2x%3) - 画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="643"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]イメージビューア</translation>
+        <translation>[*]画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
@@ -132,7 +132,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished">ImgBB(画像共有サイト)</translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -165,7 +165,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation>画像ビューワ</translation>
+        <translation>画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
@@ -257,12 +257,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished">toolBar_2</translation>
+        <translation>toolBar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation>ファイルの再読み込み(＆R)</translation>
+        <translation>ファイルの再読み込み(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
@@ -377,7 +377,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>F&amp;ull Screen</source>
-        <translation>全画面(&amp;U)</translation>
+        <translation>全画面表示(&amp;U)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
@@ -397,7 +397,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>クリップボードからペースト(&amp;P)</translation>
+        <translation>クリップボードから貼り付け(&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
@@ -417,7 +417,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
         <source>Show Thumbnails</source>
-        <translation>サムネイルを表示</translation>
+        <translation>サムネイルの表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
@@ -447,22 +447,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Upload the image</source>
-        <translation>画像をアップロード</translation>
+        <translation>画像をアップロードする</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show EXIF Data</source>
-        <translation>EXIFデータを表示</translation>
+        <translation>EXIF データの表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>No Tool</source>
-        <translation type="unfinished">ツールがない</translation>
+        <translation>ツールがありません</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation>すべての描画ツールの選択を解除</translation>
+        <translation>すべての描画ツールの選択を解除する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
@@ -555,7 +555,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>フルスクリーン時の背景色:</translation>
+        <translation>全画面表示の背景色:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
@@ -598,7 +598,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>スクリーンの範囲をキャプチャーする</translation>
+        <translation>画面の範囲をキャプチャーする</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -613,7 +613,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation>遅延:</translation>
+        <translation>待ち時間:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
