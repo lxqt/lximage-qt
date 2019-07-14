@@ -37,6 +37,7 @@ Settings::Settings():
   lastWindowWidth_(640),
   lastWindowHeight_(480),
   lastWindowMaximized_(false),
+  showOutline_(false),
   showAnnotationsToolbar_(false) {
 }
 
@@ -60,6 +61,7 @@ bool Settings::load() {
   lastWindowHeight_ = settings.value(QStringLiteral("LastWindowHeight"), 480).toInt();
   lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
+  showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   settings.endGroup();
 
@@ -82,6 +84,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("LastWindowHeight"), lastWindowHeight_);
   settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
+  settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
   settings.endGroup();
 

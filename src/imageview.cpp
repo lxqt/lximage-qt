@@ -40,13 +40,15 @@ ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
   scene_(new GraphicsScene(this)),
   imageItem_(new QGraphicsRectItem()),
+  outlineItem_(new QGraphicsRectItem()),
   gifMovie_(nullptr),
   cacheTimer_(nullptr),
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
   isSVG(false),
-  currentTool(ToolNone) {
+  currentTool(ToolNone),
+  showOutline_(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -57,6 +59,10 @@ ImageView::ImageView(QWidget* parent):
   imageItem_->hide();
   imageItem_->setPen(QPen(Qt::NoPen)); // remove the border
   scene_->addItem(imageItem_);
+
+  outlineItem_->hide();
+  outlineItem_->setPen(QPen(Qt::NoPen));
+  scene_->addItem(outlineItem_);
 }
 
 ImageView::~ImageView() {
@@ -251,12 +257,19 @@ void ImageView::setImage(const QImage& image, bool show) {
     imageItem_->hide();
     imageItem_->setPen(QPen(Qt::NoPen));
     scene_->addItem(imageItem_);
+    // outline
+    outlineItem_ = new QGraphicsRectItem();
+    outlineItem_->hide();
+    outlineItem_->setPen(QPen(Qt::NoPen));
+    scene_->addItem(outlineItem_);
   }
 
   image_ = image;
   if(image.isNull()) {
     imageItem_->hide();
     imageItem_->setBrush(QBrush());
+    outlineItem_->hide();
+    outlineItem_->setBrush(QBrush());
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
@@ -264,6 +277,17 @@ void ImageView::setImage(const QImage& image, bool show) {
       imageItem_->setRect(0, 0, image_.width(), image_.height());
       imageItem_->setBrush(image_);
       imageItem_->show();
+      // outline
+      outlineItem_->setRect(0, 0, image_.width(), image_.height());
+      QColor col = QColor(Qt::black);
+      if (qGray(backgroundBrush().color().rgb()) < 127)
+        col = QColor(Qt::white);
+      QPen outline(col, 1, Qt::DashLine);
+      outline.setCosmetic(true);
+      outlineItem_->setPen(outline);
+      outlineItem_->setBrush(Qt::NoBrush);
+      outlineItem_->setVisible(showOutline_);
+      outlineItem_->setZValue(1);
     }
     scene_->setSceneRect(0, 0, image_.width(), image_.height());
   }
@@ -284,6 +308,10 @@ void ImageView::setGifAnimation(const QString& fileName) {
     if(imageItem_) {
       imageItem_->hide();
       imageItem_->setBrush(QBrush());
+    }
+    if(outlineItem_) {
+      outlineItem_->hide();
+      outlineItem_->setBrush(QBrush());
     }
     scene_->setSceneRect(0, 0, 0, 0);
   }
@@ -306,6 +334,20 @@ void ImageView::setGifAnimation(const QString& fileName) {
     gifMovie_->start();
     scene_->addItem(gifItem);
     scene_->setSceneRect(gifItem->boundingRect());
+
+    // outline
+    outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
+    outlineItem_->setRect(gifItem->boundingRect());
+    QColor col = QColor(Qt::black);
+    if (qGray(backgroundBrush().color().rgb()) < 127)
+      col = QColor(Qt::white);
+    QPen outline(col, 1, Qt::DashLine);
+    outline.setCosmetic(true);
+    outlineItem_->setPen(outline);
+    outlineItem_->setBrush(Qt::NoBrush);
+    outlineItem_->setVisible(showOutline_);
+    outlineItem_->setZValue(1);
+    scene_->addItem(outlineItem_);
   }
 
   if(autoZoomFit_)
@@ -320,6 +362,10 @@ void ImageView::setSVG(const QString& fileName) {
       imageItem_->hide();
       imageItem_->setBrush(QBrush());
     }
+    if(outlineItem_) {
+      outlineItem_->hide();
+      outlineItem_->setBrush(QBrush());
+    }
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
@@ -329,6 +375,20 @@ void ImageView::setSVG(const QString& fileName) {
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
     scene_->addItem(svgItem);
     scene_->setSceneRect(svgItem->boundingRect());
+
+    // outline
+    outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
+    outlineItem_->setRect(svgItem->boundingRect());
+    QColor col = QColor(Qt::black);
+    if (qGray(backgroundBrush().color().rgb()) < 127)
+      col = QColor(Qt::white);
+    QPen outline(col, 1, Qt::DashLine);
+    outline.setCosmetic(true);
+    outlineItem_->setPen(outline);
+    outlineItem_->setBrush(Qt::NoBrush);
+    outlineItem_->setVisible(showOutline_);
+    outlineItem_->setZValue(1);
+    scene_->addItem(outlineItem_);
   }
 
   if(autoZoomFit_)
@@ -342,6 +402,27 @@ void ImageView::setScaleFactor(double factor) {
     resetTransform();
     scale(factor, factor);
     queueGenerateCache();
+  }
+}
+
+void ImageView::showOutline(bool show) {
+  if(outlineItem_) {
+    outlineItem_->setVisible(show);
+    // the viewport may not be updated automatically
+    viewport()->update();
+  }
+  showOutline_ = show;
+}
+
+void ImageView::updateOutline() {
+  if(outlineItem_) {
+    QColor col = QColor(Qt::black);
+    if (qGray(backgroundBrush().color().rgb()) < 127)
+      col = QColor(Qt::white);
+    QPen outline = outlineItem_->pen();
+    outline.setColor(col);
+    outlineItem_->setPen(outline);
+    viewport()->update();
   }
 }
 
@@ -361,6 +442,15 @@ void ImageView::paintEvent(QPaintEvent* event) {
         QPainter painter(viewport());
         painter.fillRect(event->rect(), backgroundBrush());
         painter.drawPixmap(repaintImageRect, cachedPixmap_);
+        // outline
+        if(showOutline_) {
+            QColor col = QColor(Qt::black);
+            if (qGray(backgroundBrush().color().rgb()) < 127)
+              col = QColor(Qt::white);
+            QPen outline(col, 1, Qt::DashLine);
+            painter.setPen(outline);
+            painter.drawRect(repaintImageRect);
+        }
         return;
       }
     }

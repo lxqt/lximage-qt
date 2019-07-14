@@ -81,6 +81,8 @@ public:
     ToolNumber
   };
   void activateTool(Tool tool);
+  void showOutline(bool show);
+  void updateOutline();
 
 Q_SIGNALS:
   void fileDropped(const QString file);
@@ -114,6 +116,7 @@ private Q_SLOTS:
 private:
   GraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
+  QGraphicsRectItem* outlineItem_; // the rect to draw the image outline
   QImage image_; // image to show
   QMovie *gifMovie_; // gif animation to show (should be deleted explicitly)
   QPixmap cachedPixmap_; // caching of current viewport content (high quality scaled image)
@@ -127,6 +130,7 @@ private:
   Tool currentTool; // currently selected tool
   QPoint startPoint; // starting point for the tool
   int nextNumber;
+  bool showOutline_;
 };
 
 }

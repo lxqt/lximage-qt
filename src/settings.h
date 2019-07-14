@@ -145,6 +145,14 @@ public:
       lastWindowMaximized_ = lastWindowMaximized;
   }
 
+  bool isOutlineShown() const {
+    return showOutline_;
+  }
+
+  void showOutline(bool show) {
+    showOutline_ = show;
+  }
+
   bool isAnnotationsToolbarShown() const {
     return showAnnotationsToolbar_;
   }
@@ -169,6 +177,7 @@ private:
   int lastWindowWidth_;
   int lastWindowHeight_;
   bool lastWindowMaximized_;
+  bool showOutline_;
   bool showAnnotationsToolbar_;
 };
 
