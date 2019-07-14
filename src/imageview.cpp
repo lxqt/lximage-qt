@@ -30,9 +30,11 @@
 #include <QGraphicsSvgItem>
 #include <QPainter>
 #include <QPainterPath>
+#include <QGuiApplication>
 #include <QtMath>
 
 #define CURSOR_HIDE_DELY 3000
+#define GRAY 127
 
 namespace LxImage {
 
@@ -207,7 +209,8 @@ void ImageView::zoomFit() {
   if(!image_.isNull()) {
     // if the image is smaller than our view, use its original size
     // instead of scaling it up.
-    if(image_.width() <= width() && image_.height() <= height()) {
+    if(static_cast<int>(image_.width() / qApp->devicePixelRatio()) <= width()
+       && static_cast<int>(image_.height() / qApp->devicePixelRatio()) <= height()) {
       zoomOriginal();
       return;
     }
@@ -244,6 +247,18 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
+void ImageView::drawOutline() {
+  QColor col = QColor(Qt::black);
+  if (qGray(backgroundBrush().color().rgb()) < GRAY)
+    col = QColor(Qt::white);
+  QPen outline(col, 1, Qt::DashLine);
+  outline.setCosmetic(true);
+  outlineItem_->setPen(outline);
+  outlineItem_->setBrush(Qt::NoBrush);
+  outlineItem_->setVisible(showOutline_);
+  outlineItem_->setZValue(1);
+}
+
 void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
@@ -265,6 +280,7 @@ void ImageView::setImage(const QImage& image, bool show) {
   }
 
   image_ = image;
+  QRectF r(QPointF(0, 0), image_.size() / qApp->devicePixelRatio());
   if(image.isNull()) {
     imageItem_->hide();
     imageItem_->setBrush(QBrush());
@@ -274,22 +290,15 @@ void ImageView::setImage(const QImage& image, bool show) {
   }
   else {
     if(show) {
-      imageItem_->setRect(0, 0, image_.width(), image_.height());
+      image_.setDevicePixelRatio(qApp->devicePixelRatio());
+      imageItem_->setRect(r);
       imageItem_->setBrush(image_);
       imageItem_->show();
       // outline
-      outlineItem_->setRect(0, 0, image_.width(), image_.height());
-      QColor col = QColor(Qt::black);
-      if (qGray(backgroundBrush().color().rgb()) < 127)
-        col = QColor(Qt::white);
-      QPen outline(col, 1, Qt::DashLine);
-      outline.setCosmetic(true);
-      outlineItem_->setPen(outline);
-      outlineItem_->setBrush(Qt::NoBrush);
-      outlineItem_->setVisible(showOutline_);
-      outlineItem_->setZValue(1);
+      outlineItem_->setRect(r);
+      drawOutline();
     }
-    scene_->setSceneRect(0, 0, image_.width(), image_.height());
+    scene_->setSceneRect(r);
   }
 
   if(autoZoomFit_)
@@ -323,9 +332,11 @@ void ImageView::setGifAnimation(const QString& fileName) {
       gifMovie_ = nullptr;
     }
     QPixmap pix(image_.size());
+    pix.setDevicePixelRatio(qApp->devicePixelRatio());
     pix.fill(Qt::transparent);
     QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
     QLabel *gifLabel = new QLabel();
+    gifLabel->setMaximumSize(pix.size() / qApp->devicePixelRatio()); // show gif with its real size
     gifMovie_ = new QMovie(fileName);
     QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
     gifLabel->setAttribute(Qt::WA_NoSystemBackground);
@@ -338,15 +349,7 @@ void ImageView::setGifAnimation(const QString& fileName) {
     // outline
     outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
     outlineItem_->setRect(gifItem->boundingRect());
-    QColor col = QColor(Qt::black);
-    if (qGray(backgroundBrush().color().rgb()) < 127)
-      col = QColor(Qt::white);
-    QPen outline(col, 1, Qt::DashLine);
-    outline.setCosmetic(true);
-    outlineItem_->setPen(outline);
-    outlineItem_->setBrush(Qt::NoBrush);
-    outlineItem_->setVisible(showOutline_);
-    outlineItem_->setZValue(1);
+    drawOutline();
     scene_->addItem(outlineItem_);
   }
 
@@ -373,21 +376,17 @@ void ImageView::setSVG(const QString& fileName) {
     imageItem_ = nullptr;
     isSVG = true;
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
+    svgItem->setScale(1 / qApp->devicePixelRatio()); // show scg with its real size
     scene_->addItem(svgItem);
-    scene_->setSceneRect(svgItem->boundingRect());
+    QRectF r(svgItem->boundingRect());
+    r.setBottomRight(r.bottomRight() / qApp->devicePixelRatio());
+    r.setTopLeft(r.topLeft() / qApp->devicePixelRatio());
+    scene_->setSceneRect(r);
 
     // outline
     outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
-    outlineItem_->setRect(svgItem->boundingRect());
-    QColor col = QColor(Qt::black);
-    if (qGray(backgroundBrush().color().rgb()) < 127)
-      col = QColor(Qt::white);
-    QPen outline(col, 1, Qt::DashLine);
-    outline.setCosmetic(true);
-    outlineItem_->setPen(outline);
-    outlineItem_->setBrush(Qt::NoBrush);
-    outlineItem_->setVisible(showOutline_);
-    outlineItem_->setZValue(1);
+    outlineItem_->setRect(r);
+    drawOutline();
     scene_->addItem(outlineItem_);
   }
 
@@ -417,7 +416,7 @@ void ImageView::showOutline(bool show) {
 void ImageView::updateOutline() {
   if(outlineItem_) {
     QColor col = QColor(Qt::black);
-    if (qGray(backgroundBrush().color().rgb()) < 127)
+    if (qGray(backgroundBrush().color().rgb()) < GRAY)
       col = QColor(Qt::white);
     QPen outline = outlineItem_->pen();
     outline.setColor(col);
@@ -445,11 +444,11 @@ void ImageView::paintEvent(QPaintEvent* event) {
         // outline
         if(showOutline_) {
             QColor col = QColor(Qt::black);
-            if (qGray(backgroundBrush().color().rgb()) < 127)
+            if (qGray(backgroundBrush().color().rgb()) < GRAY)
               col = QColor(Qt::white);
             QPen outline(col, 1, Qt::DashLine);
             painter.setPen(outline);
-            painter.drawRect(repaintImageRect);
+            painter.drawRect(viewportImageRect);
         }
         return;
       }
@@ -514,7 +513,7 @@ void ImageView::generateCache() {
     subImage.setColorTable(colorTable);
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.width(), cachedRect_.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
@@ -524,8 +523,10 @@ void ImageView::generateCache() {
 // convert viewport coordinate to the original image (not scaled).
 QRect ImageView::viewportToScene(const QRect& rect) {
   // QPolygon poly = mapToScene(imageItem_->rect());
-  QPoint topLeft = mapToScene(rect.topLeft()).toPoint();
-  QPoint bottomRight = mapToScene(rect.bottomRight()).toPoint();
+  /* NOTE: The scene rectangle is shrunken by qApp->devicePixelRatio()
+     but we want the coordinates with respect to the original image. */
+  QPoint topLeft = (mapToScene(rect.topLeft()) * qApp->devicePixelRatio()).toPoint();
+  QPoint bottomRight = (mapToScene(rect.bottomRight()) * qApp->devicePixelRatio()).toPoint();
   return QRect(topLeft, bottomRight);
 }
 

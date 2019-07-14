@@ -102,6 +102,8 @@ private:
   QRect viewportToScene(const QRect& rect);
   QRect sceneToViewport(const QRectF& rect);
 
+  void drawOutline();
+
   void drawArrow(QPainter &painter,
                  const QPoint &start,
                  const QPoint &end,
