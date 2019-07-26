@@ -135,6 +135,7 @@ private Q_SLOTS:
   void onKeyboardEscape();
 
   void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
+  void onFilesRemoved(const Fm::FileInfoList& files);
 
   void onFileDropped(const QString path);
 

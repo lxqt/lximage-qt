@@ -514,6 +514,7 @@ void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
       onFolderLoaded();
   }
   connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
+  connect(folder_.get(), &Fm::Folder::filesRemoved, this, &MainWindow::onFilesRemoved);
 }
 
 // the image is loaded (the method is only called if the loading is not cancelled)
@@ -1172,8 +1173,39 @@ void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QIt
     if(index.isValid()) {
       // WARNING: Adding the condition index != currentIndex_ would be wrong because currentIndex_ may not be updated yet
       const auto file = proxyModel_->fileInfoFromIndex(index);
-      if(file)
+      if(file) {
         loadImage(file->path(), index);
+        return;
+      }
+    }
+  }
+  // no image to show; reload to show a blank view and update variables
+  on_actionReload_triggered();
+}
+
+void MainWindow::onFilesRemoved(const Fm::FileInfoList& files) {
+  if(thumbnailsView_) {
+    return; // onThumbnailSelChanged() will do the job
+  }
+  for(auto& file : files) {
+    if(file->path() == currentFile_) {
+      if(proxyModel_->rowCount() >= 1 && currentIndex_.isValid()) {
+        QModelIndex index;
+        if(currentIndex_.row() < proxyModel_->rowCount()) {
+          index = currentIndex_;
+        }
+        else {
+          index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+        }
+        const auto info = proxyModel_->fileInfoFromIndex(index);
+        if(info) {
+          loadImage(info->path(), index);
+          return;
+        }
+      }
+      // no image to show; reload to show a blank view
+      on_actionReload_triggered();
+      return;
     }
   }
 }
