@@ -256,9 +256,7 @@ void ScreenshotDialog::cmdTopShotToDir(const QString &path) {
 
     WId activeWid = activeWindowId();
     const QRect rect = (activeWid) ? windowFrame(activeWid) : QRect{0, 0, -1, -1};
-    if (!activeWid)
-        activeWid = QApplication::desktop()->winId();
-    QImage img{takeScreenshot(activeWid, rect, false)};
+    QImage img{takeScreenshot(QApplication::desktop()->winId(), rect, false)};
 
     const QString filename = path % QString::fromLatin1("/") % getWindowName(activeWid) % QString::fromUtf8("_") % buildNumericFnPart();
     QDir d;
