@@ -209,46 +209,47 @@ static QString buildNumericFnPart() {
 }
 
 static QString getWindowName(WId wid) {
-    static const char* atoms[] = {
-        "WM_NAME",
-        "_NET_WM_NAME",
-        "STRING",
-        "UTF8_STRING",
-    };
-
-
-    const auto display = QX11Info::display();
-
-    Atom a = None, type;
     QString result;
+    if (wid) {
+        static const char* atoms[] = {
+            "WM_NAME",
+            "_NET_WM_NAME",
+            "STRING",
+            "UTF8_STRING",
+        };
 
-    for (const auto& c : atoms) {
-        if ( None != (a = XInternAtom(display, c, true))) {
-            int form;
-            unsigned long remain, len;
-            unsigned char *list;
 
-            errno = 0;
-            if (XGetWindowProperty(display,wid, a,0,1024,False,XA_STRING,
-                                   &type,&form,&len,&remain,&list) == Success) {
+        const auto display = QX11Info::display();
 
-                if (list && *list) {
+        Atom a = None, type;
 
-                    std::string dump((const char*)list);
-                    std::stringstream ss;
-                    for(const auto& sym : dump)
-                    {
-                        if (std::isalnum(sym))
-                            ss.put(sym);
+
+        for (const auto& c : atoms) {
+            if ( None != (a = XInternAtom(display, c, true))) {
+                int form;
+                unsigned long remain, len;
+                unsigned char *list;
+
+                errno = 0;
+                if (XGetWindowProperty(display,wid, a,0,1024,False,XA_STRING,
+                                       &type,&form,&len,&remain,&list) == Success) {
+
+                    if (list && *list) {
+
+                        std::string dump((const char*)list);
+                        std::stringstream ss;
+                        for(const auto& sym : dump) {
+                            if (std::isalnum(sym))
+                                ss.put(sym);
+                        }
+                        result = QString::fromStdString(ss.str());
+                        break;
                     }
-                    result = QString::fromStdString(ss.str());
-                    break;
                 }
-            }
 
+            }
         }
     }
-
     return (result.isEmpty())?QString::fromUtf8("UKNOWN"):result;
 }
 
@@ -267,6 +268,6 @@ void ScreenshotDialog::cmdTopShotToDir(const QString &path) {
     //most unlikelly this will happen ... but user might change system clock or so and we dont want to overwrite file
     for(int counter = 0; QFile::exists(finalName) && counter < 5000; ++counter)
         finalName = filename % QString::fromUtf8("_") % QString::number(counter) % QString::fromUtf8(".png");
-    std::cout << finalName.toStdString() << std::endl;
+    //std::cout << finalName.toStdString() << std::endl;
     img.save(finalName);
 }
