@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Ta en skärmdump</translation>
+        <translation>Ta skärmbild</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[FILE1, FILE2,...]</translation>
+        <translation>[FIL1, FIL2,...]</translation>
     </message>
 </context>
 <context>
@@ -79,22 +79,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Det gick inte att ladda) - Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[*]%1 (%2x%3) - Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="643"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*] Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="302"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna katalog</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="165"/>
@@ -105,7 +105,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - en enkel och snabb bildvisare
+
+Copyright (C) 2013
+LXQt-projekt: https://lxqt.org/
+
+Författare:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
 </context>
 <context>
@@ -113,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rensa</translation>
     </message>
 </context>
 <context>
@@ -121,37 +127,37 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppa</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel</translation>
     </message>
 </context>
 <context>
@@ -159,174 +165,174 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nyligen öppnade filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>toolBar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Om</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <source>&amp;Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Öppna fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ladda om filen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spara</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;para som</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Stän&amp;g</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Zooma &amp;in</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Zooma &amp;ut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiera till urklipp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="297"/>
         <location filename="../mainwindow.ui" line="300"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Nästa fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <location filename="../mainwindow.ui" line="315"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Föregående fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ursprunglig storlek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="339"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Anpassa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rotera medurs</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotera m&amp;oturs</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;nställningar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="373"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriv &amp;ut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Första filen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Hem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Sista filen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Slut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nytt fönster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
