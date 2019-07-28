@@ -95,6 +95,13 @@ bool Application::parseCommandLineArgs() {
   );
   parser.addOption(screenshotOption);
 
+
+  QCommandLineOption screenshotOptionDir(
+    QStringList() << QStringLiteral("d") << QStringLiteral("dirscreenshot"),
+    tr("Take a screenshot to folder without gui"), QString::fromUtf8("folder_to_save_files")
+  );
+  parser.addOption(screenshotOptionDir);
+
   const QString files = tr("[FILE1, FILE2,...]");
   parser.addPositionalArgument(QStringLiteral("files"), files, files);
 
@@ -109,6 +116,13 @@ bool Application::parseCommandLineArgs() {
     paths.push_back(info.absoluteFilePath());
   }
 
+
+  //silent no-gui screenshot
+  if (parser.isSet(screenshotOptionDir)) {
+      ScreenshotDialog::cmdTopShotToDir(parser.value(screenshotOptionDir));
+      return false;
+  }
+
   bool keepRunning = false;
   if(isPrimaryInstance) {
     settings_.load();
@@ -116,9 +130,8 @@ bool Application::parseCommandLineArgs() {
     if(screenshotTool) {
       screenshot();
     }
-    else {
-      newWindow(paths);
-    }
+    else
+        newWindow(paths);
   }
   else {
     // we're not the primary instance.

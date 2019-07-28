@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.9.1, 2019-07-28T21:36:52. -->
+<!-- Written by QtCreator 4.9.1, 2019-07-29T00:47:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -62,7 +62,7 @@
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Arch</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Arch</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{ba7ccb00-8809-4934-a36f-f8bb46b553ba}</value>
-   <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
+   <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">1</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
@@ -354,7 +354,7 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">lximage-qt</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.lximage-qt
 /home/alex/Work/OpenSource/lximage-qt/src/</value>
-    <value type="QString" key="RunConfiguration.Arguments">--screenshot</value>
+    <value type="QString" key="RunConfiguration.Arguments">--dirscreenshot ~/screenshots</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
@@ -362,7 +362,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/alex/Work/OpenSource/build-lximage-qt-Arch-Default/src</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/alex/Work/OpenSource/build-lximage-qt-Arch-Debug/src</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
