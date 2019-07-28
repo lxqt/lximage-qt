@@ -35,157 +35,183 @@
 
 using namespace LxImage;
 
-ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(parent, f) {
-  ui.setupUi(this);
-
-  Application* app = static_cast<Application*>(qApp);
-  app->addWindow();
-
-  int event_base, error_base;
-  hasXfixes_ = XFixesQueryExtension(QX11Info::display(), &event_base, &error_base) ? true : false;
-  if(!hasXfixes_)
-    ui.includeCursor->hide();
+static bool hasXFixes()
+{
+    int event_base, error_base;
+    return XFixesQueryExtension(QX11Info::display(), &event_base, &error_base);
 }
 
-ScreenshotDialog::~ScreenshotDialog() {
-  Application* app = static_cast<Application*>(qApp);
-  app->removeWindow();
+ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(parent, f), hasXfixes_(hasXFixes())
+{
+    ui.setupUi(this);
+    Application* app = static_cast<Application*>(qApp);
+    app->addWindow();
+    if (!hasXfixes_)
+        ui.includeCursor->hide();
 }
 
-void ScreenshotDialog::done(int r) {
-  if(r == QDialog::Accepted) {
-    hide();
-    QDialog::done(r);
-    XSync(QX11Info::display(), 0); // is this useful?
+ScreenshotDialog::~ScreenshotDialog()
+{
+    Application* app = static_cast<Application*>(qApp);
+    app->removeWindow();
+}
 
-    int delay = ui.delay->value();
-    if(delay == 0) {
-      // NOTE:
-      // Well, we need to give X and the window manager some time to
-      // really hide our own dialog from the screen.
-      // Nobody knows how long it will take, and there is no reliable
-      // way to ensure that. Let's wait for 400 ms here for it.
-      delay = 400;
+void ScreenshotDialog::done(int r)
+{
+    if (r == QDialog::Accepted)
+    {
+        hide();
+        QDialog::done(r);
+        XSync(QX11Info::display(), 0); // is this useful?
+
+        int delay = ui.delay->value();
+        if (delay == 0)
+        {
+            // NOTE:
+            // Well, we need to give X and the window manager some time to
+            // really hide our own dialog from the screen.
+            // Nobody knows how long it will take, and there is no reliable
+            // way to ensure that. Let's wait for 400 ms here for it.
+            delay = 400;
+        }
+        else
+            delay *= 1000;
+        // the dialog object will be deleted in doScreenshot().
+        QTimer::singleShot(delay, this, SLOT(doScreenshot()));
     }
     else
-      delay *= 1000;
-    // the dialog object will be deleted in doScreenshot().
-    QTimer::singleShot(delay, this, SLOT(doScreenshot()));
-  }
-  else {
-    deleteLater();
-  }
+        deleteLater();
 }
 
-QRect ScreenshotDialog::windowFrame(WId wid) {
-  QRect result;
-  XWindowAttributes wa;
-  if(XGetWindowAttributes(QX11Info::display(), wid, &wa)) {
-    Window child;
-    int x, y;
-    // translate to root coordinate
-    XTranslateCoordinates(QX11Info::display(), wid, wa.root, 0, 0, &x, &y, &child);
-    //qDebug("%d, %d, %d, %d", x, y, wa.width, wa.height);
-    result.setRect(x, y, wa.width, wa.height);
+QRect ScreenshotDialog::windowFrame(WId wid)
+{
+    QRect result;
+    XWindowAttributes wa;
+    if (XGetWindowAttributes(QX11Info::display(), wid, &wa))
+    {
+        Window child;
+        int x, y;
+        // translate to root coordinate
+        XTranslateCoordinates(QX11Info::display(), wid, wa.root, 0, 0, &x, &y, &child);
+        //qDebug("%d, %d, %d, %d", x, y, wa.width, wa.height);
+        result.setRect(x, y, wa.width, wa.height);
 
-    // get the frame widths added by the window manager
-    Atom atom = XInternAtom(QX11Info::display(), "_NET_FRAME_EXTENTS", false);
+        // get the frame widths added by the window manager
+        Atom atom = XInternAtom(QX11Info::display(), "_NET_FRAME_EXTENTS", false);
+        unsigned long type, resultLen, rest;
+        int format;
+        unsigned char* data = nullptr;
+        if (XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
+                               XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success)
+        {
+        }
+        if (data)  // left, right, top, bottom
+        {
+            long* offsets = reinterpret_cast<long*>(data);
+            result.setLeft(result.left() - offsets[0]);
+            result.setRight(result.right() + offsets[1]);
+            result.setTop(result.top() - offsets[2]);
+            result.setBottom(result.bottom() + offsets[3]);
+            XFree(data);
+        }
+    }
+    return result;
+}
+
+WId ScreenshotDialog::activeWindowId()
+{
+    WId root = WId(QX11Info::appRootWindow());
+    Atom atom = XInternAtom(QX11Info::display(), "_NET_ACTIVE_WINDOW", false);
     unsigned long type, resultLen, rest;
     int format;
+    WId result = 0;
     unsigned char* data = nullptr;
-    if(XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
-      XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
+    if (XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
+                           XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success)
+    {
+        result = *reinterpret_cast<long*>(data);
+        XFree(data);
     }
-    if(data) { // left, right, top, bottom
-      long* offsets = reinterpret_cast<long*>(data);
-      result.setLeft(result.left() - offsets[0]);
-      result.setRight(result.right() + offsets[1]);
-      result.setTop(result.top() - offsets[2]);
-      result.setBottom(result.bottom() + offsets[3]);
-      XFree(data);
-    }
-  }
-  return result;
+    return result;
 }
 
-WId ScreenshotDialog::activeWindowId() {
-  WId root = WId(QX11Info::appRootWindow());
-  Atom atom = XInternAtom(QX11Info::display(), "_NET_ACTIVE_WINDOW", false);
-  unsigned long type, resultLen, rest;
-  int format;
-  WId result = 0;
-  unsigned char* data = nullptr;
-  if(XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
-      XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
-    result = *reinterpret_cast<long*>(data);
-    XFree(data);
-  }
-  return result;
-}
+QImage ScreenshotDialog::takeScreenshot(const WId& wid, const QRect& rect, bool takeCursor)
+{
+    QImage image;
+    QScreen *screen = QGuiApplication::primaryScreen();
+    if (screen)
+    {
+        QPixmap pixmap = screen->grabWindow(wid, rect.x(), rect.y(), rect.width(), rect.height());
+        image = pixmap.toImage();
 
-void ScreenshotDialog::doScreenshot() {
-  WId wid = 0;
-  int x = 0, y = 0, width = -1, height = -1;
-  wid = QApplication::desktop()->winId(); // get desktop window
-  if(ui.currentWindow->isChecked()) {
-    WId activeWid = activeWindowId();
-    if(activeWid) {
-      if(ui.includeFrame->isChecked()) {
-        QRect rect = windowFrame(activeWid);
-        x = rect.x();
-        y = rect.y();
-        width = rect.width();
-        height = rect.height();
-      }
-      else
-        wid = activeWid;
-    }
-  }
-
-  QImage image;
-  QScreen *screen = QGuiApplication::primaryScreen();
-  if(screen) {
-    QPixmap pixmap = screen->grabWindow(wid, x, y, width, height);
-    image = pixmap.toImage();
-
-    if(hasXfixes_ && ui.includeCursor->isChecked()) {
-      // capture the cursor if needed
-      XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
-      if(cursor) {
-        if(cursor->pixels) { // pixles should be an ARGB array
-          QImage cursorImage;
-          if(sizeof(long) == 4) {
-            // FIXME: will we encounter byte-order problems here?
-            cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
-          }
-          else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
-            long len = cursor->width * cursor->height;
-            quint32* buf = new quint32[len];
-            for(long i = 0; i < len; ++i)
-              buf[i] = (quint32)cursor->pixels[i];
-            cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) { delete[] (quint32*)b; }, buf);
-          }
-          // paint the cursor on the current image
-          QPainter painter(&image);
-          painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
+        if (takeCursor &&  hasXFixes())
+        {
+            // capture the cursor if needed
+            XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
+            if (cursor)
+            {
+                if (cursor->pixels)  // pixles should be an ARGB array
+                {
+                    QImage cursorImage;
+                    if (sizeof(long) == 4)
+                    {
+                        // FIXME: will we encounter byte-order problems here?
+                        cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
+                    }
+                    else   // XFixes returns long integers which is not 32 bit on 64 bit systems.
+                    {
+                        long len = cursor->width * cursor->height;
+                        quint32* buf = new quint32[len];
+                        for (long i = 0; i < len; ++i)
+                            buf[i] = (quint32)cursor->pixels[i];
+                        cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b)
+                        {
+                            delete[] (quint32*)b;
+                        }, buf);
+                    }
+                    // paint the cursor on the current image
+                    QPainter painter(&image);
+                    painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
+                }
+                XFree(cursor);
+            }
         }
-        XFree(cursor);
-      }
     }
-  }
+    return image;
+}
 
-  if(ui.screenArea->isChecked() && !image.isNull()) {
-    ScreenshotSelectArea selectArea(image);
-    if(QDialog::Accepted == selectArea.exec()) {
-      image = image.copy(selectArea.selectedArea());
+void ScreenshotDialog::doScreenshot()
+{
+    WId wid = 0;
+    QRect rect{0, 0, -1, -1};
+
+    wid = QApplication::desktop()->winId(); // get desktop window
+    if (ui.currentWindow->isChecked())
+    {
+        WId activeWid = activeWindowId();
+        if (activeWid)
+        {
+            if (ui.includeFrame->isChecked())
+                rect = windowFrame(activeWid);
+            else
+                wid = activeWid;
+        }
     }
-  }
 
-  Application* app = static_cast<Application*>(qApp);
-  MainWindow* window = app->createWindow();
-  if(!image.isNull())
-    window->pasteImage(image);
-  window->show();
+    QImage image{takeScreenshot(wid, rect, hasXfixes_ && ui.includeCursor->isChecked())};
 
-  deleteLater(); // destroy ourself
+    if (ui.screenArea->isChecked() && !image.isNull())
+    {
+        ScreenshotSelectArea selectArea(image);
+        if (QDialog::Accepted == selectArea.exec())
+            image = image.copy(selectArea.selectedArea());
+    }
+
+    Application* app = static_cast<Application*>(qApp);
+    MainWindow* window = app->createWindow();
+    if (!image.isNull())
+        window->pasteImage(image);
+    window->show();
+
+    deleteLater(); // destroy ourself
 }

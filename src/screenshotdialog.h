@@ -24,27 +24,31 @@
 #include <QDialog>
 #include "ui_screenshotdialog.h"
 
-namespace LxImage {
+namespace LxImage
+{
 
-class ScreenshotDialog : public QDialog {
-  Q_OBJECT
-public:
-  explicit ScreenshotDialog(QWidget* parent = nullptr, Qt::WindowFlags f = 0);
-  virtual ~ScreenshotDialog();
+    class ScreenshotDialog : public QDialog
+    {
+        Q_OBJECT
+    public:
+        explicit ScreenshotDialog(QWidget* parent = nullptr, Qt::WindowFlags f = 0);
+        virtual ~ScreenshotDialog();
 
-  virtual void done(int r);
+        virtual void done(int r);
 
-private:
-  WId activeWindowId();
-  QRect windowFrame(WId wid);
+        QImage static takeScreenshot(const WId &wid, const QRect &rect, bool takeCursor = false);
 
-private Q_SLOTS:
-  void doScreenshot();
+    private:
+        WId activeWindowId();
+        QRect windowFrame(WId wid);
 
-private:
-  Ui::ScreenshotDialog ui;
-  bool hasXfixes_;
-};
+    private Q_SLOTS:
+        void doScreenshot();
+
+    private:
+        Ui::ScreenshotDialog ui;
+        const bool hasXfixes_;
+    };
 
 }
 
