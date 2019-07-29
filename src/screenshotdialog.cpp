@@ -47,6 +47,7 @@
 --add-braces
 --break-elseifs
 --indent=spaces=2
+--unpad-paren
  * */
 using namespace LxImage;
 
@@ -59,7 +60,7 @@ ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(
   ui.setupUi(this);
   Application* app = static_cast<Application*>(qApp);
   app->addWindow();
-  if (!hasXfixes_) {
+  if(!hasXfixes_) {
     ui.includeCursor->hide();
   }
 }
@@ -70,13 +71,13 @@ ScreenshotDialog::~ScreenshotDialog() {
 }
 
 void ScreenshotDialog::done(int r) {
-  if (r == QDialog::Accepted) {
+  if(r == QDialog::Accepted) {
     hide();
     QDialog::done(r);
     XSync(QX11Info::display(), 0); // is this useful?
 
     int delay = ui.delay->value();
-    if (delay == 0) {
+    if(delay == 0) {
       // NOTE:
       // Well, we need to give X and the window manager some time to
       // really hide our own dialog from the screen.
@@ -98,7 +99,7 @@ void ScreenshotDialog::done(int r) {
 QRect ScreenshotDialog::windowFrame(WId wid) {
   QRect result;
   XWindowAttributes wa;
-  if (XGetWindowAttributes(QX11Info::display(), wid, &wa)) {
+  if(XGetWindowAttributes(QX11Info::display(), wid, &wa)) {
     Window child;
     int x, y;
     // translate to root coordinate
@@ -111,10 +112,10 @@ QRect ScreenshotDialog::windowFrame(WId wid) {
     unsigned long type, resultLen, rest;
     int format;
     unsigned char* data = nullptr;
-    if (XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
-                           XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
+    if(XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
+                          XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
     }
-    if (data) { // left, right, top, bottom
+    if(data) {  // left, right, top, bottom
       long* offsets = reinterpret_cast<long*>(data);
       result.setLeft(result.left() - offsets[0]);
       result.setRight(result.right() + offsets[1]);
@@ -133,8 +134,8 @@ WId ScreenshotDialog::activeWindowId() {
   int format;
   WId result = 0;
   unsigned char* data = nullptr;
-  if (XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
-                         XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
+  if(XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
+                        XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
     result = *reinterpret_cast<long*>(data);
     XFree(data);
   }
@@ -144,29 +145,29 @@ WId ScreenshotDialog::activeWindowId() {
 QImage ScreenshotDialog::takeScreenshot(const WId& wid, const QRect& rect, bool takeCursor) {
   QImage image;
   QScreen *screen = QGuiApplication::primaryScreen();
-  if (screen) {
+  if(screen) {
     QPixmap pixmap = screen->grabWindow(wid, rect.x(), rect.y(), rect.width(), rect.height());
     image = pixmap.toImage();
 
     //call to hasXFixes() maybe executed here from cmd line with no gui mode (some day though, currently ignore cursor)
-    if (takeCursor &&  hasXFixes()) {
+    if(takeCursor &&  hasXFixes()) {
       // capture the cursor if needed
       XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
-      if (cursor) {
-        if (cursor->pixels) { // pixles should be an ARGB array
+      if(cursor) {
+        if(cursor->pixels) {  // pixles should be an ARGB array
           QImage cursorImage;
-          if (sizeof(long) == 4) {
+          if(sizeof(long) == 4) {
             // FIXME: will we encounter byte-order problems here?
             cursorImage = QImage((uchar*)cursor->pixels, cursor->width, cursor->height, QImage::Format_ARGB32);
           }
           else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
             long len = cursor->width * cursor->height;
             quint32* buf = new quint32[len];
-            for (long i = 0; i < len; ++i) {
+            for(long i = 0; i < len; ++i) {
               buf[i] = (quint32)cursor->pixels[i];
             }
             cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) {
-              delete[] (quint32*)b;
+              delete[](quint32*)b;
             }, buf);
           }
           // paint the cursor on the current image
@@ -185,10 +186,10 @@ void ScreenshotDialog::doScreenshot() {
   QRect rect{0, 0, -1, -1};
 
   wid = QApplication::desktop()->winId(); // get desktop window
-  if (ui.currentWindow->isChecked()) {
+  if(ui.currentWindow->isChecked()) {
     WId activeWid = activeWindowId();
-    if (activeWid) {
-      if (ui.includeFrame->isChecked()) {
+    if(activeWid) {
+      if(ui.includeFrame->isChecked()) {
         rect = windowFrame(activeWid);
       }
       else {
@@ -200,16 +201,16 @@ void ScreenshotDialog::doScreenshot() {
   //using stored hasXfixes_ so avoid extra call to function later
   QImage image{takeScreenshot(wid, rect, hasXfixes_ && ui.includeCursor->isChecked())};
 
-  if (ui.screenArea->isChecked() && !image.isNull()) {
+  if(ui.screenArea->isChecked() && !image.isNull()) {
     ScreenshotSelectArea selectArea(image);
-    if (QDialog::Accepted == selectArea.exec()) {
+    if(QDialog::Accepted == selectArea.exec()) {
       image = image.copy(selectArea.selectedArea());
     }
   }
 
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = app->createWindow();
-  if (!image.isNull()) {
+  if(!image.isNull()) {
     window->pasteImage(image);
   }
   window->show();
@@ -227,7 +228,7 @@ static QString buildNumericFnPart() {
 
 static QString getWindowName(WId wid) {
   QString result;
-  if (wid) {
+  if(wid) {
     static const char* atoms[] = {
       "WM_NAME",
       "_NET_WM_NAME",
@@ -241,22 +242,22 @@ static QString getWindowName(WId wid) {
     Atom a = None, type;
 
 
-    for (const auto& c : atoms) {
-      if ( None != (a = XInternAtom(display, c, true))) {
+    for(const auto& c : atoms) {
+      if(None != (a = XInternAtom(display, c, true))) {
         int form;
         unsigned long remain, len;
         unsigned char *list;
 
         errno = 0;
-        if (XGetWindowProperty(display,wid, a,0,1024,False,XA_STRING,
-                               &type,&form,&len,&remain,&list) == Success) {
+        if(XGetWindowProperty(display,wid, a,0,1024,False,XA_STRING,
+                              &type,&form,&len,&remain,&list) == Success) {
 
-          if (list && *list) {
+          if(list && *list) {
 
             std::string dump((const char*)list);
             std::stringstream ss;
             for(const auto& sym : dump) {
-              if (std::isalnum(sym)) {
+              if(std::isalnum(sym)) {
                 ss.put(sym);
               }
             }
