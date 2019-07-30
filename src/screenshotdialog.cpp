@@ -31,6 +31,7 @@
 #include <QDateTime>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 
 #include <QX11Info>
 #include <X11/Xlib.h>
@@ -272,15 +273,20 @@ static QString getWindowName(WId wid) {
   return (result.isEmpty()) ? QStringLiteral("UKNOWN") : result;
 }
 
-void ScreenshotDialog::cmdTopShotToDir(const QString &path) {
+void ScreenshotDialog::cmdTopShotToDir(QString path) {
 
   WId activeWid = activeWindowId();
   const QRect rect = (activeWid) ? windowFrame(activeWid) : QRect{0, 0, -1, -1};
   QImage img{takeScreenshot(QApplication::desktop()->winId(), rect, false)};
 
-  const QString filename = QStringLiteral("%1/%2_%3").arg(path).arg(getWindowName(activeWid)).arg(buildNumericFnPart());
   QDir d;
   d.mkpath(path);
+  QFileInfo fi(path);
+  if(!fi.exists() || !fi.isDir() || !fi.isWritable()) {
+    path = QDir::homePath();
+  }
+  const QString filename = QStringLiteral("%1/%2_%3").arg(path).arg(getWindowName(activeWid)).arg(buildNumericFnPart());
+
   const auto static png = QStringLiteral(".png");
   QString finalName = filename % png;
 

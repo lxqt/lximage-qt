@@ -33,7 +33,7 @@ class ScreenshotDialog : public QDialog {
   virtual ~ScreenshotDialog();
 
   virtual void done(int r);
-  static void cmdTopShotToDir(const QString& path);
+  static void cmdTopShotToDir(QString path);
  private Q_SLOTS:
   void doScreenshot();
 
