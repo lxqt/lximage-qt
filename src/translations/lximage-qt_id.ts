@@ -170,7 +170,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;About</source>
-        <translation>&amp;Tentang</translation>
+        <translation>Tentang</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
