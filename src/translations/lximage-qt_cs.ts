@@ -517,7 +517,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation>Jít na</translation>
+        <translation>Přejít na</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
@@ -527,7 +527,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Upravit</translation>
+        <translation>&amp;Úpravy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
