@@ -337,7 +337,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>Home</source>
-        <translation>Ev</translation>
+        <translation>Ev Dizini</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
@@ -417,7 +417,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
         <source>Show Thumbnails</source>
-        <translation>Küçükresimleri Göster</translation>
+        <translation>Önizlemeleri Göster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
@@ -545,7 +545,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Simge seti teması:</translation>
+        <translation>Simge teması:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -603,7 +603,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Fare imlecini de al</translation>
+        <translation>Fare imlecini dahil et</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
