@@ -119,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation>%Vyčistit</translation>
+        <translation>&amp;Vyčistit</translation>
     </message>
 </context>
 <context>
@@ -442,7 +442,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>Upload</source>
-        <translation>Nahrát</translation>
+        <translation>Nahrát na sdílení</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
@@ -560,7 +560,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Interval změny obrázku při promítání snímků (s):</translation>
+        <translation>Interval výměny obrázku při promítání snímků (s):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -626,7 +626,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation>Nahrát</translation>
+        <translation>Nahrát na</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
