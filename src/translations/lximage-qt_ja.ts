@@ -462,7 +462,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation>すべての描画ツールの選択を解除する</translation>
+        <translation>描画ツールの選択をすべて解除する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
