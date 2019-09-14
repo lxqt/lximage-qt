@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Capturar pantalla</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[FICHERU1, FICHERU2,...]</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>desconozse la rempuesta del fallu</translation>
     </message>
 </context>
 <context>
@@ -27,7 +27,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>desconozse la rempuesta del fallu</translation>
     </message>
 </context>
 <context>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>desconozse la rempuesta del fallu</translation>
     </message>
 </context>
 <context>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocante a</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="165"/>
@@ -54,58 +54,64 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - un visor d&apos;imáxenes cenciellu y rápidu
+
+Copyright (C) 2013
+Proyeutu LXQt: https://lxqt.org/
+
+Autores:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="295"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Apertura de ficheros</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="296"/>
         <location filename="../mainwindow.cpp" line="324"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheros d&apos;imaxe (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="302"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Apertura d&apos;un direutoriu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardáu d&apos;un ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="598"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Cargando...) - Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Fallu al cargar) - Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="607"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="643"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Miniatures</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="966"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos EXIF</translation>
     </message>
 </context>
 <context>
@@ -113,7 +119,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Llimpiar</translation>
     </message>
 </context>
 <context>
@@ -121,37 +127,37 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Aniciar</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Parar</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zarrar</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallu</translation>
     </message>
 </context>
 <context>
@@ -159,22 +165,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheros abiertos a&amp;pocayá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="175"/>
         <source>toolBar_2</source>
-        <translation type="unfinished"></translation>
+        <translation>toolBar_2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tocante a</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -184,17 +190,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="216"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Recargar el ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
@@ -204,58 +210,58 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar &amp;como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="243"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zarrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;verar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="267"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;lloñar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar al cartafueyu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="297"/>
         <location filename="../mainwindow.ui" line="300"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheru siguiente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
@@ -266,7 +272,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../mainwindow.ui" line="312"/>
         <location filename="../mainwindow.ui" line="315"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheru anterior</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
@@ -276,17 +282,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamañu orixinal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="330"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="339"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Axustar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
@@ -311,7 +317,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;referencies</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="373"/>
@@ -321,22 +327,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Primer ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Aniciu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Últimu ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
@@ -346,17 +352,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventana &amp;nueva</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Voltiar &amp;horizontalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
@@ -366,22 +372,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Facer una captura</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla com&amp;pleta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Voltiar &amp;verticalmente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
@@ -391,7 +397,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;pegar del cartafueyu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
@@ -401,7 +407,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="478"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Desaniciar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
@@ -421,7 +427,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedaes del ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="506"/>
@@ -431,7 +437,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
@@ -446,7 +452,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar los datos EXIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
@@ -466,7 +472,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Dibuxar una flecha</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="571"/>
@@ -501,32 +507,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ficheru</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ayuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Dir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ver</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="118"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de ferramientes</translation>
     </message>
 </context>
 <context>
@@ -534,22 +540,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencies</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilu d&apos;iconos:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color del fondu normal:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color del fondu a pantalla completa:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
@@ -559,7 +565,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Xeneral</translation>
     </message>
 </context>
 <context>
@@ -567,52 +573,52 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Captura de pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Captura de pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Rexón</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Tola pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Namái la ventana actual</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Capturar un área de la pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Incluyir el cursor del mur</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> segundos</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Retrasu:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Incluyir el títulu de les ventanes y el marcu</translation>
     </message>
 </context>
 <context>
@@ -625,7 +631,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
 </context>
 </TS>
