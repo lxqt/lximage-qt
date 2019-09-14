@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Capturar pantalla</translation>
+        <translation>Fai una captura de pantalla</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="98"/>
@@ -266,7 +266,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>AvPáx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
@@ -277,7 +277,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>RePáx</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="327"/>
@@ -297,22 +297,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Voltiar a la drecha</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Voltiar a la &amp;esquierda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="368"/>
@@ -412,17 +412,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Des</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Amosar miniatures</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
@@ -432,7 +432,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="506"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir un &amp;direutoriu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
@@ -442,7 +442,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Xubir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
@@ -462,7 +462,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Deseleicionar toles ferramientes de dibuxu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="556"/>
@@ -482,7 +482,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dibuxar un rectángulu güecu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="586"/>
@@ -492,7 +492,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dibuxar un círulu güecu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="601"/>
@@ -578,7 +578,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Captura de pantalla</translation>
+        <translation>Fechura d&apos;una captura de pantalla</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -626,7 +626,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Xuba</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
