@@ -191,7 +191,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aç…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
