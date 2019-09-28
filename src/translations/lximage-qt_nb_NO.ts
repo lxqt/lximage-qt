@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta et skjermbilde til en mappe uten GUI</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -106,7 +106,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="680"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Bildeviser</translation>
+        <translation>[*] Bildeviser</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="992"/>
@@ -124,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Fjern</translation>
+        <translation>&amp;Slett</translation>
     </message>
 </context>
 <context>
@@ -186,12 +186,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Verktøylinje for notater</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Åpne…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -261,7 +261,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Kopier til utklippstavlen</translation>
+        <translation>&amp;Kopier til utklippsboken</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
@@ -353,7 +353,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>End</source>
-        <translation>Slutt</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
@@ -403,7 +403,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Lim inn fra utklippsbok</translation>
+        <translation>&amp;Lim inn fra utklippsboken</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="471"/>
@@ -418,7 +418,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
         <source>Del</source>
-        <translation>Slett</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
@@ -513,18 +513,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Verktøylinje for notater</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis omriss</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -587,12 +587,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis bildeomriss som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis verktøylinje for notater som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
