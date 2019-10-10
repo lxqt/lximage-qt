@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Tire uma captura de tela para a pasta sem uma interface gráfica</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -176,12 +176,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de Anotações</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>&amp;About</source>
-        <translation>S&amp;obre</translation>
+        <translation>&amp;Sobre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -201,7 +201,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Save &amp;As</source>
-        <translation>S&amp;alvar como</translation>
+        <translation>Salvar &amp;como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -211,7 +211,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Close</source>
-        <translation>Fe&amp;char</translation>
+        <translation>&amp;Fechar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -221,12 +221,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>Zoom &amp;In</source>
-        <translation>Ampl&amp;iar zoom</translation>
+        <translation>Ampliar &amp;zoom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="278"/>
         <source>Zoom &amp;Out</source>
-        <translation>Diminuir z&amp;oom</translation>
+        <translation>Diminuir &amp;zoom</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="281"/>
@@ -263,7 +263,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abrir…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -298,12 +298,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="341"/>
         <source>&amp;Fit</source>
-        <translation>A&amp;justar à tela</translation>
+        <translation>&amp;Ajustar à tela</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Gi&amp;rar em sentido horário</translation>
+        <translation>&amp;Girar em sentido horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
@@ -313,7 +313,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Girar em sentid&amp;o anti-horário</translation>
+        <translation>Girar em sentido &amp;anti-horário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
@@ -328,7 +328,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="375"/>
         <source>&amp;Print</source>
-        <translation>Im&amp;primir</translation>
+        <translation>&amp;Imprimir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
@@ -414,7 +414,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
         <source>&amp;Delete</source>
-        <translation>Exc&amp;luir</translation>
+        <translation>&amp;Excluir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
@@ -424,7 +424,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Exibir miniaturas</translation>
+        <translation>Mostrar Miniaturas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
@@ -514,18 +514,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Barra de Anotações</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar contorno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -535,7 +535,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation>Aj&amp;uda</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
@@ -550,7 +550,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation>E&amp;ditar</translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
@@ -588,12 +588,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar contorno da imagem por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar barra de anotações por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
