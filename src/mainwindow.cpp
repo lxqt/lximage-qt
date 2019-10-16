@@ -40,6 +40,7 @@
 #include <QDesktopWidget>
 #include <QGraphicsSvgItem>
 #include <QHeaderView>
+#include <QX11Info>
 
 #include "application.h"
 #include <libfm-qt/folderview.h>
@@ -76,7 +77,12 @@ MainWindow::MainWindow():
   Settings& settings = app->settings();
 
   ui.setupUi(this);
-  connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
+  if(QX11Info::isPlatformX11()) {
+    connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
+  }
+  else {
+    ui.actionScreenshot->setVisible(false);
+  }
   connect(ui.actionPreferences, &QAction::triggered, app , &Application::editPreferences);
 
   proxyModel_->addFilter(modelFilter_);
