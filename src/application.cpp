@@ -23,6 +23,7 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 #include <QPixmapCache>
+#include <QX11Info>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
 #include "preferencesdialog.h"
@@ -89,18 +90,24 @@ bool Application::parseCommandLineArgs() {
   parser.addHelpOption();
   parser.addVersionOption();
 
+  const bool isX11 = QX11Info::isPlatformX11();
+
   QCommandLineOption screenshotOption(
     QStringList() << QStringLiteral("s") << QStringLiteral("screenshot"),
     tr("Take a screenshot")
   );
-  parser.addOption(screenshotOption);
+  if(isX11) {
+    parser.addOption(screenshotOption);
+  }
 
 
   QCommandLineOption screenshotOptionDir(
     QStringList() << QStringLiteral("d") << QStringLiteral("dirscreenshot"),
     tr("Take a screenshot to folder without gui"), QString::fromUtf8("folder_to_save_files")
   );
-  parser.addOption(screenshotOptionDir);
+  if(isX11) {
+    parser.addOption(screenshotOptionDir);
+  }
 
   const QString files = tr("[FILE1, FILE2,...]");
   parser.addPositionalArgument(QStringLiteral("files"), files, files);
@@ -108,7 +115,9 @@ bool Application::parseCommandLineArgs() {
   parser.process(*this);
 
   const QStringList args = parser.positionalArguments();
-  const bool screenshotTool = parser.isSet(screenshotOption);
+  bool screenshotTool = false;
+  if(isX11)
+    screenshotTool = parser.isSet(screenshotOption);
 
   QStringList paths;
   for(const QString& arg : args) {
@@ -118,9 +127,11 @@ bool Application::parseCommandLineArgs() {
 
 
   //silent no-gui screenshot
-  if (parser.isSet(screenshotOptionDir)) {
-      ScreenshotDialog::cmdTopShotToDir(parser.value(screenshotOptionDir));
-      return false;
+  if(isX11) {
+    if (parser.isSet(screenshotOptionDir)) {
+        ScreenshotDialog::cmdTopShotToDir(parser.value(screenshotOptionDir));
+        return false;
+    }
   }
 
   bool keepRunning = false;
