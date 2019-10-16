@@ -46,6 +46,13 @@ public:
      */
     void addItem(const QString &filename);
 
+    /**
+     * @brief Set maximum number of items
+     *
+     * The last item will be removed if the number is exceeded.
+     */
+    void setMaxItems(int m);
+
 Q_SIGNALS:
 
     /**
@@ -69,6 +76,8 @@ private:
 
     QAction *mSeparator;
     QAction *mClearAction;
+
+    int mMaxItems;
 };
 
 }
