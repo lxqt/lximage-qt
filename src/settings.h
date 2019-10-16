@@ -88,6 +88,13 @@ public:
     recentlyOpenedFiles_ = recentlyOpenedFiles;
   }
 
+  int maxRecentFiles() const {
+    return maxRecentFiles_;
+  }
+  void setMaxRecentFiles(int m) {
+    maxRecentFiles_ = m;
+  }
+
   bool rememberWindowSize() const {
     return rememberWindowSize_;
   }
@@ -170,6 +177,7 @@ private:
   int slideShowInterval_;
   QString fallbackIconTheme_;
   QStringList recentlyOpenedFiles_;
+  int maxRecentFiles_;
 
   bool rememberWindowSize_;
   int fixedWindowWidth_;

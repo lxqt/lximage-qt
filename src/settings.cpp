@@ -32,6 +32,7 @@ Settings::Settings():
   showSidePane_(false),
   slideShowInterval_(5),
   fallbackIconTheme_(QStringLiteral("oxygen")),
+  maxRecentFiles_(5),
   fixedWindowWidth_(640),
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
@@ -52,6 +53,7 @@ bool Settings::load() {
   // showThumbnails_;
   // showSidePane_;
   slideShowInterval_ = settings.value(QStringLiteral("slideShowInterval"), slideShowInterval_).toInt();
+  maxRecentFiles_ = settings.value(QStringLiteral("maxRecentFiles"), maxRecentFiles_).toInt();
   recentlyOpenedFiles_ = settings.value(QStringLiteral("recentlyOpenedFiles")).toStringList();
 
   settings.beginGroup(QStringLiteral("Window"));
@@ -75,6 +77,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("bgColor"), bgColor_);
   settings.setValue(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_);
   settings.setValue(QStringLiteral("slideShowInterval"), slideShowInterval_);
+  settings.setValue(QStringLiteral("maxRecentFiles"), maxRecentFiles_);
   settings.setValue(QStringLiteral("recentlyOpenedFiles"), recentlyOpenedFiles_);
 
   settings.beginGroup(QStringLiteral("Window"));

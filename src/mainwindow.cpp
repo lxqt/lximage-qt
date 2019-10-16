@@ -139,6 +139,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipVertical);
 
   // Open images when MRU items are clicked
+  ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
   connect(ui.menuRecently_Opened_Files, &MruMenu::itemClicked, this, &MainWindow::onFileDropped);
 
   // Create an action group for the annotation tools
@@ -924,6 +925,7 @@ void MainWindow::applySettings() {
   else
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
   ui.view->updateOutline();
+  ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 }
 
 void MainWindow::on_actionPrint_triggered() {

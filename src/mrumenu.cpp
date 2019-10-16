@@ -25,17 +25,21 @@
 #include "mrumenu.h"
 #include "settings.h"
 
-const int MaxItems = 5;
-
 using namespace LxImage;
 
 MruMenu::MruMenu(QWidget *parent)
-    : QMenu(parent),
-      mFilenames(static_cast<Application*>(qApp)->settings().recentlyOpenedFiles())
+    : QMenu(parent)
 {
+    auto settings = static_cast<Application*>(qApp)->settings();
+    mMaxItems = qMin(qMax(settings.maxRecentFiles(), 0), 100);
+    mFilenames = settings.recentlyOpenedFiles();
+    while (mFilenames.count() > mMaxItems) { // the config file may have been incorrectly edited
+        mFilenames.removeLast();
+    }
     for (QStringList::const_iterator i = mFilenames.constBegin(); i != mFilenames.constEnd(); ++i) {
         addAction(createAction(*i));
     }
+    setEnabled(mMaxItems != 0);
 
     // Add a separator and hide it if there are no items in the list
     mSeparator = addSeparator();
@@ -50,6 +54,10 @@ MruMenu::MruMenu(QWidget *parent)
 
 void MruMenu::addItem(const QString &filename)
 {
+    if (mMaxItems == 0) {
+        return;
+    }
+
     if (mFilenames.isEmpty()) {
         mSeparator->setVisible(true);
         mClearAction->setEnabled(true);
@@ -66,11 +74,26 @@ void MruMenu::addItem(const QString &filename)
     mFilenames.push_front(filename);
     insertAction(actions().first(), createAction(filename));
 
-    // If the list contains more than MaxItems, remove the last one
-    if (mFilenames.count() > MaxItems) {
+    // If the list contains more than mMaxItems, remove the last one
+    while (mFilenames.count() > mMaxItems) {
+        destroyAction(mFilenames.count() - 1);
         mFilenames.removeLast();
-        destroyAction(MaxItems - 1);
     }
+
+    updateSettings();
+}
+
+void MruMenu::setMaxItems(int m) {
+    m = qMin(qMax(m, 0), 100);
+    if (m == mMaxItems) {
+        return;
+    }
+    while (mFilenames.count() > m) {
+        destroyAction(mFilenames.count() - 1);
+        mFilenames.removeLast();
+    }
+    setEnabled(m != 0);
+    mMaxItems = m;
 
     updateSettings();
 }

@@ -37,6 +37,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   initIconThemes(settings);
   ui.bgColor->setColor(settings.bgColor());
   ui.fullScreenBgColor->setColor(settings.fullScreenBgColor());
+  ui.maxRecentFiles->setValue(settings.maxRecentFiles());
   ui.slideShowInterval->setValue(settings.slideShowInterval());
   ui.oulineBox->setChecked(settings.isOutlineShown());
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
@@ -70,6 +71,7 @@ void PreferencesDialog::accept() {
 
   settings.setBgColor(ui.bgColor->color());
   settings.setFullScreenBgColor(ui.fullScreenBgColor->color());
+  settings.setMaxRecentFiles(ui.maxRecentFiles->value());
   settings.setSlideShowInterval(ui.slideShowInterval->value());
   settings.showOutline(ui.oulineBox->isChecked());
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
