@@ -25,6 +25,7 @@
 #include <libfm-qt/libfmqt.h>
 #include "mainwindow.h"
 #include "settings.h"
+#include "preferencesdialog.h"
 
 namespace LxImage {
 
@@ -69,6 +70,7 @@ private:
   QTranslator qtTranslator;
   Settings settings_;
   int windowCount_;
+  QPointer<PreferencesDialog> preferencesDialog_;
 };
 
 }

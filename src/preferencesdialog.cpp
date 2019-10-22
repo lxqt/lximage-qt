@@ -29,6 +29,7 @@ using namespace LxImage;
 PreferencesDialog::PreferencesDialog(QWidget* parent):
   QDialog(parent) {
   ui.setupUi(this);
+  setAttribute(Qt::WA_DeleteOnClose);
 
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();

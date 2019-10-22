@@ -26,7 +26,6 @@
 #include <QX11Info>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
-#include "preferencesdialog.h"
 #include "mainwindow.h"
 
 using namespace LxImage;
@@ -204,8 +203,13 @@ void Application::screenshot() {
 }
 
 void Application::editPreferences() {
-  PreferencesDialog* dlg = new PreferencesDialog();
-  dlg->show();
+  // open preference dialog
+  if(preferencesDialog_ == nullptr) {
+    preferencesDialog_ = new PreferencesDialog();
+  }
+  preferencesDialog_.data()->show();
+  preferencesDialog_.data()->raise();
+  preferencesDialog_.data()->activateWindow();
 }
 
 void Application::onAboutToQuit() {
