@@ -40,6 +40,8 @@
 #include <QDesktopWidget>
 #include <QGraphicsSvgItem>
 #include <QHeaderView>
+#include <QStandardPaths>
+#include <QDateTime>
 #include <QX11Info>
 
 #include "application.h"
@@ -429,7 +431,7 @@ void MainWindow::on_actionSaveAs_triggered() {
     // save the image file asynchronously
     saveImage(path);
 
-    if(!currentFile_) { // if we haven't load any file yet
+    if(!currentFile_) { // if we haven't loaded any file yet
       currentFile_ = path;
       loadFolder(path.parent());
     }
@@ -863,8 +865,30 @@ void MainWindow::on_actionPaste_triggered() {
 
 void MainWindow::on_actionUpload_triggered()
 {
-    if (currentFile_.isValid()) {
-        UploadDialog(this, QString::fromUtf8(currentFile_.localPath().get())).exec();
+    if(currentFile_.isValid()) {
+      UploadDialog(this, QString::fromUtf8(currentFile_.localPath().get())).exec();
+    }
+    // if there is no open file, save the image to "/tmp" and delete it after upload
+    else if(!ui.view->image().isNull()) {
+      QString tmpFileName;
+      QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
+      if(!tmp.isEmpty()) {
+        QDir tmpDir(tmp);
+        if(tmpDir.exists()) {
+          const QString curTime = QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
+          tmpFileName = tmp + QStringLiteral("/lximage-") + curTime + QStringLiteral(".png");
+        }
+      }
+      if(!tmpFileName.isEmpty() && saveJob_ == nullptr) {
+        const Fm::FilePath filePath = Fm::FilePath::fromPathStr(qPrintable(tmpFileName));
+        saveJob_ = new SaveImageJob(ui.view->image(), filePath);
+        connect(saveJob_, &Fm::Job::finished, this, [this, tmpFileName] {
+          saveJob_ = nullptr;
+          UploadDialog(this, tmpFileName).exec();
+          QFile::remove(tmpFileName);
+        });
+        saveJob_->runAsync();
+      }
     }
 }
 
