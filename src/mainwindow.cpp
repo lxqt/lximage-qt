@@ -95,6 +95,8 @@ MainWindow::MainWindow():
 
   connect(ui.view, &ImageView::fileDropped, this, &MainWindow::onFileDropped);
 
+  connect(ui.view, &ImageView::zooming, this, &MainWindow::onZooming);
+
   // install an event filter on the image view
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
@@ -118,6 +120,11 @@ MainWindow::MainWindow():
       ui.actionAnnotations->setChecked(visible);
     }
   });
+
+  auto aGroup = new QActionGroup(this);
+  ui.actionZoomFit->setActionGroup(aGroup);
+  ui.actionOriginalSize->setActionGroup(aGroup);
+  ui.actionZoomFit->setChecked(true);
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
@@ -193,23 +200,36 @@ void MainWindow::on_actionAbout_triggered() {
 }
 
 void MainWindow::on_actionOriginalSize_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomOriginal();
+  if(ui.actionOriginalSize->isChecked()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomOriginal();
+  }
 }
 
 void MainWindow::on_actionZoomFit_triggered() {
-  ui.view->setAutoZoomFit(true);
-  ui.view->zoomFit();
+  if(ui.actionZoomFit->isChecked()) {
+    ui.view->setAutoZoomFit(true);
+    ui.view->zoomFit();
+  }
 }
 
 void MainWindow::on_actionZoomIn_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomIn();
+  if(!ui.view->image().isNull()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomIn();
+  }
 }
 
 void MainWindow::on_actionZoomOut_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomOut();
+  if(!ui.view->image().isNull()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomOut();
+  }
+}
+
+void MainWindow::onZooming() {
+  ui.actionZoomFit->setChecked(false);
+  ui.actionOriginalSize->setChecked(false);
 }
 
 void MainWindow::on_actionDrawNone_triggered() {
@@ -296,7 +316,10 @@ void MainWindow::pasteImage(QImage newImage) {
 
   image_ = newImage;
   ui.view->setImage(image_);
-  ui.view->zoomOriginal();
+  // always fit the image on pasting
+  ui.actionZoomFit->setChecked(true);
+  ui.view->setAutoZoomFit(true);
+  ui.view->zoomFit();
 
   updateUI();
 }
@@ -539,7 +562,10 @@ void MainWindow::onImageLoaded() {
 
     loadJob_ = nullptr; // the job object will be freed later automatically
 
-    ui.view->setAutoZoomFit(true);
+    ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
+    if(ui.actionOriginalSize->isChecked()) {
+      ui.view->zoomOriginal();
+    }
     ui.view->setImage(image_);
 
    // currentIndex_ should be corrected after loading
@@ -724,7 +750,13 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
       currentIndex_ = indexFromPath(currentFile_);
     }
     const Fm::CStrPtr file_name = currentFile_.toString();
-    ui.view->setAutoZoomFit(true); // like in onImageLoaded()
+
+    // like in onImageLoaded()
+    ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
+    if(ui.actionOriginalSize->isChecked()) {
+      ui.view->zoomOriginal();
+    }
+
     if(mimeType == QLatin1String("image/gif"))
       ui.view->setGifAnimation(QString::fromUtf8(file_name.get()));
     else

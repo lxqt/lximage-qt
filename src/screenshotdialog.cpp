@@ -211,6 +211,7 @@ void ScreenshotDialog::doScreenshot() {
 
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = app->createWindow();
+  window->resize(app->settings().windowWidth(), app->settings().windowHeight());
   if(!image.isNull()) {
     window->pasteImage(image);
   }

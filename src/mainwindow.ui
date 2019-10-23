@@ -321,6 +321,9 @@
    </property>
   </action>
   <action name="actionOriginalSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="zoom-original">
      <normaloff>.</normaloff>.</iconset>
@@ -333,6 +336,9 @@
    </property>
   </action>
   <action name="actionZoomFit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="zoom-fit-best">
      <normaloff>.</normaloff>.</iconset>
