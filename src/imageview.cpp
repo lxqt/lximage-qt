@@ -227,6 +227,7 @@ void ImageView::zoomIn() {
     scaleFactor_ *= 1.1;
     scale(scaleFactor_, scaleFactor_);
     queueGenerateCache();
+    Q_EMIT zooming();
   }
 }
 
@@ -237,6 +238,7 @@ void ImageView::zoomOut() {
     scaleFactor_ /= 1.1;
     scale(scaleFactor_, scaleFactor_);
     queueGenerateCache();
+    Q_EMIT zooming();
   }
 }
 

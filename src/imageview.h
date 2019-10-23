@@ -86,6 +86,7 @@ public:
 
 Q_SIGNALS:
   void fileDropped(const QString file);
+  void zooming();
 
 protected:
   virtual void wheelEvent(QWheelEvent* event);
