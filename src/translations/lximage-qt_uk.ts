@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Зробити знімок до каталогу без показу інтерфейсу</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>відповідь сервера містить помилку без опису</translation>
     </message>
 </context>
 <context>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>відповідь сервера містить помилку без опису</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>відповідь сервера містить помилку без опису</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - простий і швидкий переглядач зображень
+
+Copyright (C) 2013
+Проєкт LXQt: https://lxqt.org/
+
+Автори:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="320"/>
@@ -75,7 +81,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="334"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити каталог</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="355"/>
@@ -110,7 +116,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="1042"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Дані EXIF</translation>
     </message>
 </context>
 <context>
@@ -118,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Очистити</translation>
     </message>
 </context>
 <context>
@@ -126,37 +132,37 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Почати</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Зупинити</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
 </context>
 <context>
@@ -170,7 +176,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель анотацій</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -247,27 +253,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Нещодавні файли</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Відкрити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Перезавантажити файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
@@ -287,7 +293,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="341"/>
@@ -302,7 +308,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
@@ -312,7 +318,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
@@ -367,7 +373,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
@@ -392,7 +398,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="450"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
@@ -422,7 +428,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="499"/>
@@ -432,93 +438,93 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити &amp;Каталог</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Вивантажити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="523"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Вивантажити це зображення</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="531"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати дані EXIF</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="543"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Не малювати</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Скасувати вибір інструменту малювання</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Стрілка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Малювати стрілку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="573"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Прямокутник</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="576"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Малювати прямокутну раму</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="588"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Коло</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="591"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Малювати еліптичну раму</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Цифри</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="606"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Малювати цифри у зростаючому порядку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Панель анотацій</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Показувати контур</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -581,12 +587,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Типово показувати контур</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Типово показувати панель анотацій</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -624,7 +630,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Захопити частину екрану</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -652,12 +658,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Вивантажити</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Копіювати</translation>
     </message>
 </context>
 </TS>
