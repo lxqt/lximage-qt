@@ -79,6 +79,10 @@ MainWindow::MainWindow():
   Settings& settings = app->settings();
 
   ui.setupUi(this);
+
+  lbImageInfo_ = new QLabel(QString());
+  ui.statusBar->addPermanentWidget(lbImageInfo_);
+
   if(QX11Info::isPlatformX11()) {
     connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
   }
@@ -674,12 +678,11 @@ void MainWindow::updateUI() {
       if(image_.isNull()) {
         title = tr("[*]%1 (Failed to Load) - Image Viewer")
                   .arg(QString::fromUtf8(dispName.get()));
+        lbImageInfo_->setText(tr("Failed to load"));
       }
       else {
-        title = tr("[*]%1 (%2x%3) - Image Viewer")
-                  .arg(QString::fromUtf8(dispName.get()))
-                  .arg(image_.width())
-                  .arg(image_.height());
+        title = tr("[*]%1 - Image Viewer")
+                  .arg(QString::fromUtf8(dispName.get()));
         /* Here we try to implement the following behavior as far as possible:
              (1) A minimum size of 400x400 is assumed;
              (2) The window is scaled to fit the image;
@@ -709,7 +712,10 @@ void MainWindow::updateUI() {
         }
       }
     }
-    // TODO: update status bar, show current index in the folder
+
+    lbImageInfo_->setText(tr("%1x%2")
+                  .arg(image_.width())
+                  .arg(image_.height()));
   }
   else {
     title = tr("[*]Image Viewer");
@@ -721,10 +727,12 @@ void MainWindow::updateUI() {
 // Load the specified image file asynchronously in a worker thread.
 // When the loading is finished, onImageLoaded() will be called.
 void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
+  lbImageInfo_->setText(tr("Loading..."));
   // cancel loading of current image
   if(loadJob_) {
     loadJob_->cancel(); // the job object will be freed automatically later
     loadJob_ = nullptr;
+    lbImageInfo_->setText(QString());
   }
   if(imageModified_) {
     // TODO: ask the user to save the modified image?

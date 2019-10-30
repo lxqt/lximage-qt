@@ -153,6 +153,7 @@ private:
   Ui::MainWindow ui;
   QMenu* contextMenu_;
   QTimer* slideShowTimer_;
+  QLabel* lbImageInfo_;
 
   QImage image_; // the image currently shown
   Fm::FilePath currentFile_; // path to current image file
