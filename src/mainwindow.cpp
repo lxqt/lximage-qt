@@ -43,6 +43,7 @@
 #include <QStandardPaths>
 #include <QDateTime>
 #include <QX11Info>
+#include <QtDebug>
 
 #include "application.h"
 #include <libfm-qt/folderview.h>
@@ -140,6 +141,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFullScreen);
   contextMenu_->addAction(ui.actionShowOutline);
   contextMenu_->addAction(ui.actionAnnotations);
+  contextMenu_->addAction(ui.actionCompact);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
@@ -171,6 +173,9 @@ MainWindow::MainWindow():
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
   shortcut = new QShortcut(Qt::Key_Escape, this);
   connect(shortcut, &QShortcut::activated, this, &MainWindow::onKeyboardEscape);
+
+  ui.actionCompact->setChecked(settings.isCompactInterface());
+  on_actionCompact_triggered(settings.isCompactInterface());
 }
 
 MainWindow::~MainWindow() {
@@ -1034,6 +1039,13 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
       ui.actionSlideShow->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
     }
   }
+}
+
+void MainWindow::on_actionCompact_triggered(bool checked){
+  ui.menubar->setVisible(!checked);
+  ui.toolBar->setVisible(!checked);
+  ui.annotationsToolBar->setVisible(!checked);
+  ui.statusBar->setVisible(!checked);
 }
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {

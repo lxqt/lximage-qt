@@ -114,6 +114,7 @@ private Q_SLOTS:
   void on_actionShowExifData_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
   void on_actionSlideShow_triggered(bool checked);
+  void on_actionCompact_triggered(bool checked);
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();

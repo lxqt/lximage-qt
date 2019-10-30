@@ -103,6 +103,13 @@
          </property>
         </widget>
        </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QCheckBox" name="compactBox">
+         <property name="text">
+          <string>Use compact interface</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </widget>

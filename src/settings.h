@@ -168,6 +168,14 @@ public:
     showAnnotationsToolbar_ = show;
   }
 
+  bool isCompactInterface() const {
+    return compactInterface_;
+  }
+
+  void setCompactInterface(bool active) {
+    compactInterface_ = active;
+  }
+
 private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
@@ -187,6 +195,7 @@ private:
   bool lastWindowMaximized_;
   bool showOutline_;
   bool showAnnotationsToolbar_;
+  bool compactInterface_;
 };
 
 }

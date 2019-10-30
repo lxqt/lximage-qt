@@ -39,7 +39,8 @@ Settings::Settings():
   lastWindowHeight_(480),
   lastWindowMaximized_(false),
   showOutline_(false),
-  showAnnotationsToolbar_(false) {
+  showAnnotationsToolbar_(false),
+  compactInterface_(false) {
 }
 
 Settings::~Settings() {
@@ -65,6 +66,7 @@ bool Settings::load() {
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
+  compactInterface_ = settings.value(QStringLiteral("CompactInterface"), false).toBool();
   settings.endGroup();
 
   return true;
@@ -89,6 +91,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
+  settings.setValue(QStringLiteral("CompactInterface"), compactInterface_);
   settings.endGroup();
 
   return true;

@@ -114,6 +114,7 @@
     <addaction name="actionSlideShow"/>
     <addaction name="separator"/>
     <addaction name="actionAnnotations"/>
+    <addaction name="actionCompact"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -621,6 +622,20 @@
    </property>
    <property name="toolTip">
     <string>Annotations Toolbar</string>
+   </property>
+  </action>
+  <action name="actionCompact">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Compact Interface</string>
+   </property>
+   <property name="toolTip">
+    <string>Compact Interface</string>
+   </property>
+   <property name="shortcut">
+    <string>Tab</string>
    </property>
   </action>
   <action name="actionShowOutline">
