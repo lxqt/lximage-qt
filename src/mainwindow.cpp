@@ -43,7 +43,6 @@
 #include <QStandardPaths>
 #include <QDateTime>
 #include <QX11Info>
-#include <QtDebug>
 
 #include "application.h"
 #include <libfm-qt/folderview.h>
