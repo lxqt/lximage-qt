@@ -519,7 +519,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished">Mostrar el contorno</translation>
+        <translation>Mostrar el contorno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
