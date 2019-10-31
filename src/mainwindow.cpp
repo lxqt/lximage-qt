@@ -1041,27 +1041,11 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
 }
 
 void MainWindow::on_actionCompact_triggered(bool checked){
-  
   ui.menubar->setVisible(!checked);
   ui.toolBar->setVisible(!checked);
   ui.annotationsToolBar->setVisible(!checked);
   ui.statusBar->setVisible(!checked);
-
-  if(checked){
-      const auto actions = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions)) {
-        if(!action->shortcut().isEmpty())
-          addAction(action);
-      }
-      addActions(ui.menubar->actions());
-  }else{
-      const auto actions_ = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions_)) {
-        if(!action->shortcut().isEmpty())
-          removeAction(action);
-      }
-  }
-
+  toggleActions(checked);
 }
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
@@ -1183,30 +1167,23 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.statusBar->hide();
       if(thumbnailsDock_)
         thumbnailsDock_->hide();
+    
       // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
       // is disabled. We needs to add the actions to the main window manually to enable the
       // shortcuts again.
       ui.menubar->hide();
-      const auto actions = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions)) {
-        if(!action->shortcut().isEmpty())
-          addAction(action);
-      }
-      addActions(ui.menubar->actions());
+      toggleActions(false); 
+    
       ui.view->hideCursor(true);
-
       ui.actionCompact->setDisabled(true);
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
       ui.view->updateOutline();
+    
       // now we're going to re-enable the menu, so remove the actions previously added.
-      const auto actions_ = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions_)) {
-        if(!action->shortcut().isEmpty())
-          removeAction(action);
-      }
+      toggleActions(false); 
       
       if(!ui.actionCompact->isChecked()){
         ui.menubar->show();
@@ -1310,4 +1287,21 @@ void MainWindow::onFilesRemoved(const Fm::FileInfoList& files) {
 
 void MainWindow::onFileDropped(const QString path) {
     openImageFile(path);
+}
+
+void MainWindow::toggleActions(bool remove){
+  if(remove){
+      const auto actions = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions)) {
+        if(!action->shortcut().isEmpty())
+          addAction(action);
+      }
+      addActions(ui.menubar->actions());
+  }else{
+      const auto actions_ = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions_)) {
+        if(!action->shortcut().isEmpty())
+          removeAction(action);
+      }
+  }
 }

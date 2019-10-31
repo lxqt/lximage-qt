@@ -149,6 +149,7 @@ private:
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
   QGraphicsItem* getImageGraphicsItem();
   QGraphicsItem* getOutlineGraphicsItem();
+  void toggleActions(bool remove);
 
 private:
   Ui::MainWindow ui;
