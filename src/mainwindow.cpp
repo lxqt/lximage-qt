@@ -1041,10 +1041,27 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
 }
 
 void MainWindow::on_actionCompact_triggered(bool checked){
+  
   ui.menubar->setVisible(!checked);
   ui.toolBar->setVisible(!checked);
   ui.annotationsToolBar->setVisible(!checked);
   ui.statusBar->setVisible(!checked);
+
+  if(checked){
+      const auto actions = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions)) {
+        if(!action->shortcut().isEmpty())
+          addAction(action);
+      }
+      addActions(ui.menubar->actions());
+  }else{
+      const auto actions_ = ui.menubar->actions();
+      for(QAction* action : qAsConst(actions_)) {
+        if(!action->shortcut().isEmpty())
+          removeAction(action);
+      }
+  }
+
 }
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
@@ -1155,7 +1172,6 @@ void MainWindow::setShowExifData(bool show) {
 }
 
 void MainWindow::changeEvent(QEvent* event) {
-  // TODO: hide menu/toolbars in full screen mode and make the background black.
   if(event->type() == QEvent::WindowStateChange) {
     Application* app = static_cast<Application*>(qApp);
     if(isFullScreen()) { // changed to fullscreen mode
@@ -1178,6 +1194,8 @@ void MainWindow::changeEvent(QEvent* event) {
       }
       addActions(ui.menubar->actions());
       ui.view->hideCursor(true);
+
+      ui.actionCompact->setDisabled(true);
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
@@ -1189,15 +1207,20 @@ void MainWindow::changeEvent(QEvent* event) {
         if(!action->shortcut().isEmpty())
           removeAction(action);
       }
-      ui.menubar->show();
-      ui.toolBar->show();
-      if(ui.actionAnnotations->isChecked()){
+      
+      if(!ui.actionCompact->isChecked()){
+        ui.menubar->show();
+        ui.toolBar->show();
+        if(ui.actionAnnotations->isChecked()){
           ui.annotationsToolBar->show();
+        }
+        ui.statusBar->show();
+        if(thumbnailsDock_){
+          thumbnailsDock_->show();
+        }
       }
-      ui.statusBar->show();
-      if(thumbnailsDock_)
-        thumbnailsDock_->show();
       ui.view->hideCursor(false);
+      ui.actionCompact->setDisabled(false);
     }
   }
   QWidget::changeEvent(event);

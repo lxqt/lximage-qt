@@ -635,7 +635,7 @@
     <string>Compact Interface</string>
    </property>
    <property name="shortcut">
-    <string>Tab</string>
+    <string>C</string>
    </property>
   </action>
   <action name="actionShowOutline">
