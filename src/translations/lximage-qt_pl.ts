@@ -423,7 +423,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Pokaż miniaturki</translation>
+        <translation>Pokaż miniatury</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
