@@ -62,6 +62,11 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <widget class="QMenu" name="openWithMenu">
+     <property name="title">
+      <string>Open &amp;With...</string>
+     </property>
+    </widget>
     <widget class="LxImage::MruMenu" name="menuRecently_Opened_Files">
      <property name="title">
       <string>&amp;Recently Opened Files</string>
@@ -70,6 +75,9 @@
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
     <addaction name="actionOpenDirectory"/>
+    <addaction name="separator"/>
+    <addaction name="openWithMenu"/>
+    <addaction name="separator"/>
     <addaction name="menuRecently_Opened_Files"/>
     <addaction name="actionReload"/>
     <addaction name="actionScreenshot"/>

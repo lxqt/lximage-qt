@@ -32,6 +32,7 @@
 
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
+#include <libfm-qt/filemenu.h>
 #include <gio/gio.h>
 
 #include "modelfilter.h"
@@ -141,6 +142,10 @@ private Q_SLOTS:
 
   void onFileDropped(const QString path);
 
+  void fileMenuAboutToShow();
+  void createOpenWithMenu();
+  void deleteOpenWithMenu();
+
 private:
   void onFolderLoaded();
   void updateUI();
@@ -181,6 +186,8 @@ private:
   // multi-threading loading of images
   LoadImageJob* loadJob_;
   SaveImageJob* saveJob_;
+
+  QPointer<Fm::FileMenu> fileMenu_;
 };
 
 }
