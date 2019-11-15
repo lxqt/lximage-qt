@@ -69,7 +69,8 @@ MainWindow::MainWindow():
   thumbnailsDock_(nullptr),
   thumbnailsView_(nullptr),
   loadJob_(nullptr),
-  saveJob_(nullptr) {
+  saveJob_(nullptr),
+  fileMenu_(nullptr) {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
 
@@ -159,6 +160,11 @@ MainWindow::MainWindow():
   annotationGroup->addAction(ui.actionDrawCircle);
   annotationGroup->addAction(ui.actionDrawNumber);
   ui.actionDrawNone->setChecked(true);
+
+  // the "Open With..." menu
+  connect(ui.menu_File, &QMenu::aboutToShow, this, &MainWindow::fileMenuAboutToShow);
+  connect(ui.openWithMenu, &QMenu::aboutToShow, this, &MainWindow::createOpenWithMenu);
+  connect(ui.openWithMenu, &QMenu::aboutToHide, this, &MainWindow::deleteOpenWithMenu);
 
   // create keyboard shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
@@ -1276,4 +1282,41 @@ void MainWindow::onFilesRemoved(const Fm::FileInfoList& files) {
 
 void MainWindow::onFileDropped(const QString path) {
     openImageFile(path);
+}
+
+void MainWindow::fileMenuAboutToShow() {
+  // the "Open With..." submenu of Fm::FileMenu is shown
+  // only if there is a file with a valid mime type
+  if(currentIndex_.isValid()) {
+    if(const auto file = proxyModel_->fileInfoFromIndex(currentIndex_)) {
+      if(file->mimeType()) {
+        ui.openWithMenu->setEnabled(true);
+        return;
+      }
+    }
+  }
+  ui.openWithMenu->setEnabled(false);
+}
+
+void MainWindow::createOpenWithMenu() {
+  if(currentIndex_.isValid()) {
+    if(const auto file = proxyModel_->fileInfoFromIndex(currentIndex_)) {
+      if(file->mimeType()) {
+        // We want the "Open With..." submenu. It will be deleted alongside
+        // fileMenu_ when openWithMenu hides (-> deleteOpenWithMenu)
+        Fm::FileInfoList files;
+        files.push_back(file);
+        fileMenu_ = new Fm::FileMenu(files, file, Fm::FilePath());
+        if(QMenu* menu = fileMenu_->openWithMenuAction()->menu()) {
+          ui.openWithMenu->addActions(menu->actions());
+        }
+      }
+    }
+  }
+}
+
+void MainWindow::deleteOpenWithMenu() {
+  if(fileMenu_) {
+    fileMenu_->deleteLater();
+  }
 }
