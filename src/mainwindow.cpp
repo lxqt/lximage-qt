@@ -991,7 +991,27 @@ void MainWindow::on_actionPrint_triggered() {
   if(dlg.exec() == QDialog::Accepted) {
     QPainter painter;
     painter.begin(&printer);
-    QRect pageRect = printer.pageRect();
+
+    // fit the target rectangle into the viewport if needed and center it
+    const QRectF viewportRect = painter.viewport();
+    QRectF targetRect = image_.rect();
+    if(viewportRect.width() < targetRect.width()) {
+      targetRect.setSize(QSize(viewportRect.width(), targetRect.height() * (viewportRect.width() / targetRect.width())));
+    }
+    if(viewportRect.height() < targetRect.height()) {
+      targetRect.setSize(QSize(targetRect.width() * (viewportRect.height() / targetRect.height()), viewportRect.height()));
+    }
+    targetRect.moveCenter(viewportRect.center());
+
+    // set the viewport and window of the painter and paint the image
+    painter.setViewport(targetRect.toRect());
+    painter.setWindow(image_.rect());
+    painter.drawImage(0, 0, image_);
+
+    painter.end();
+
+    // FIXME: The following code divides the image into columns and could be used later as an option.
+    /*QRect pageRect = printer.pageRect();
     int cols = (image_.width() / pageRect.width()) + (image_.width() % pageRect.width() ? 1 : 0);
     int rows = (image_.height() / pageRect.height()) + (image_.height() % pageRect.height() ? 1 : 0);
     for(int row = 0; row < rows; ++row) {
@@ -1003,7 +1023,7 @@ void MainWindow::on_actionPrint_triggered() {
         printer.newPage();
       }
     }
-    painter.end();
+    painter.end();*/
   }
 }
 
