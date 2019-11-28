@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation>Tire uma captura de tela para a pasta sem uma interface gráfica</translation>
+        <translation>Tire uma captura de tela para a pasta sem interface gráfica</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -424,7 +424,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Mostrar Miniaturas</translation>
+        <translation>Exibir Miniaturas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
@@ -514,13 +514,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Barra de Anotações</translation>
+        <translation>Barra de &amp;Anotações</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation>Mostrar contorno</translation>
+        <translation>Exibir Esboço</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -588,12 +588,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation>Mostrar contorno da imagem por padrão</translation>
+        <translation>Exibir contorno da imagem por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Mostrar barra de anotações por padrão</translation>
+        <translation>Exibir barra de anotações por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
