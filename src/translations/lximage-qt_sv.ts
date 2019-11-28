@@ -377,7 +377,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ta bort</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
@@ -458,27 +458,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hjälp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Gå</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Visa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Redigera</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
