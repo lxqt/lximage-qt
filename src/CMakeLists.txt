@@ -89,15 +89,6 @@ add_definitions(
     -DLXIMAGE_VERSION="${LXIMAGE_VERSION}"
 )
 
-target_compile_definitions(lximage-qt
-    PRIVATE
-        "QT_USE_QSTRINGBUILDER"
-        "QT_NO_CAST_FROM_ASCII"
-        "QT_NO_CAST_TO_ASCII"
-        "QT_NO_URL_CAST_FROM_STRING"
-        "QT_NO_CAST_FROM_BYTEARRAY"
-)
-
 set(QT_LIBRARIES Qt5::Widgets Qt5::Network Qt5::Core Qt5::DBus Qt5::PrintSupport Qt5::X11Extras Qt5::Svg)
 
 target_link_libraries(lximage-qt
