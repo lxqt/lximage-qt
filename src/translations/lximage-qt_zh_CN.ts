@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>截屏没有GUI的到文件夹</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -176,7 +176,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>工具栏注释</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -263,7 +263,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;打开…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -513,13 +513,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;工具栏注释</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>显示大纲</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -587,12 +587,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认显示图像轮廓</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>默认显示工具栏注释</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
