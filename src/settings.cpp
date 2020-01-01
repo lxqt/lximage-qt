@@ -21,6 +21,7 @@
 #include "settings.h"
 #include <QSettings>
 #include <QIcon>
+#include <QKeySequence>
 
 using namespace LxImage;
 
@@ -65,6 +66,16 @@ bool Settings::load() {
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
+  prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
+  settings.endGroup();
+
+  // shortcuts
+  settings.beginGroup(QStringLiteral("Shortcuts"));
+  const QStringList actions = settings.childKeys();
+  for(const auto& action : actions) {
+    QString str = settings.value(action).toString();
+    addShortcut(action, str);
+  }
   settings.endGroup();
 
   return true;
@@ -89,6 +100,19 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
+  settings.setValue(QStringLiteral("PrefSize"), prefSize_);
+  settings.endGroup();
+
+  // shortcuts
+  settings.beginGroup(QStringLiteral("Shortcuts"));
+  for(int i = 0; i < removedActions_.size(); ++i) {
+    settings.remove(removedActions_.at (i));
+  }
+  QHash<QString, QString>::const_iterator it = actions_.constBegin();
+  while(it != actions_.constEnd()) {
+    settings.setValue(it.key(), it.value());
+    ++it;
+  }
   settings.endGroup();
 
   return true;

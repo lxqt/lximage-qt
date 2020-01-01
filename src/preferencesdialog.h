@@ -22,11 +22,36 @@
 #define LXIMAGE_PREFERENCESDIALOG_H
 
 #include <QDialog>
+#include <QStyledItemDelegate>
+#include <QKeySequenceEdit>
 #include "ui_preferencesdialog.h"
 
 namespace LxImage {
 
 class Settings;
+
+class KeySequenceEdit : public QKeySequenceEdit {
+  Q_OBJECT
+public:
+  KeySequenceEdit(QWidget* parent = nullptr): QKeySequenceEdit(parent) {}
+
+protected:
+  virtual void keyPressEvent(QKeyEvent* event);
+};
+
+class Delegate : public QStyledItemDelegate
+{
+  Q_OBJECT
+public:
+  Delegate (QObject *parent = nullptr) : QStyledItemDelegate(parent) {}
+
+  virtual QWidget* createEditor(QWidget* parent,
+                                const QStyleOptionViewItem&,
+                                const QModelIndex&) const;
+
+protected:
+  virtual bool eventFilter(QObject* object, QEvent *event);
+};
 
 class PreferencesDialog : public QDialog {
   Q_OBJECT
@@ -37,11 +62,21 @@ public:
   virtual void accept();
   virtual void done(int r);
 
+protected:
+  virtual void showEvent(QShowEvent* event);
+
+private Q_SLOTS:
+  void onShortcutChange(QTableWidgetItem* item);
+  void restoreDefaultShortcuts();
+
 private:
   void initIconThemes(Settings& settings);
+  void initShortcuts();
+  void applyNewShortcuts();
 
 private:
   Ui::PreferencesDialog ui;
+  QHash<QString, QString> modifiedShortcuts_;
 };
 
 }

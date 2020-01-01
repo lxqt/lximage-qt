@@ -989,6 +989,21 @@ void MainWindow::applySettings() {
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
   ui.view->updateOutline();
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
+
+  // also, update shortcuts
+  QHash<QString, QString> ca = settings.customShortcutActions();
+  const auto defaultShortcuts = app->defaultShortcuts();
+  const auto actions = findChildren<QAction*>();
+  for(const auto& action : actions) {
+     const QString objectName = action->objectName();
+     if(ca.contains(objectName)) {
+       // custom shortcuts are saved in the PortableText format
+       action->setShortcut(QKeySequence(ca.value(objectName), QKeySequence::PortableText));
+     }
+     else { // default shortcuts include all actions
+       action->setShortcut(defaultShortcuts.value(objectName).shortcut);
+     }
+  }
 }
 
 void MainWindow::on_actionPrint_triggered() {
