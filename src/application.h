@@ -33,6 +33,12 @@ class Application : public QApplication {
   Q_OBJECT
 
 public:
+  // an Action-Shortcut pair that can be displayed in Preferences
+  struct ShortcutDescription {
+    QString displayText;
+    QKeySequence shortcut;
+  };
+
   Application(int& argc, char** argv);
   bool init(int argc, char** argv);
   bool parseCommandLineArgs();
@@ -56,6 +62,10 @@ public:
 
   void applySettings();
 
+  QHash<QString, ShortcutDescription> defaultShortcuts() const {
+    return defaultShortcuts_;
+  }
+
 public Q_SLOTS:
   void editPreferences();
   void screenshot();
@@ -71,6 +81,7 @@ private:
   Settings settings_;
   int windowCount_;
   QPointer<PreferencesDialog> preferencesDialog_;
+  QHash<QString, ShortcutDescription> defaultShortcuts_; // needed for restoring shortcuts
 };
 
 }

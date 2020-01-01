@@ -159,6 +159,34 @@ bool Application::parseCommandLineArgs() {
 MainWindow* Application::createWindow() {
   LxImage::MainWindow* window;
   window = new LxImage::MainWindow();
+
+  // get default shortcuts from the first window
+  if(defaultShortcuts_.isEmpty()) {
+    const auto actions = window->findChildren<QAction*>();
+    for(const auto& action : actions) {
+      QKeySequence seq = action->shortcut();
+      ShortcutDescription s;
+      s.displayText = action->text().remove QStringLiteral("&"); // without mnemonics
+      s.shortcut = seq;
+      defaultShortcuts_.insert(action->objectName(), s);
+    }
+  }
+
+  // apply custom shortcuts to this window
+  QHash<QString, QString> ca = settings_.customShortcutActions();
+  const auto actions = window->findChildren<QAction*>();
+  for(const auto& action : actions) {
+    const QString objectName = action->objectName();
+    if(ca.contains(objectName)) {
+      auto shortcut = ca.take(objectName);
+      // custom shortcuts are saved in the PortableText format.
+      action->setShortcut(QKeySequence(shortcut, QKeySequence::PortableText));
+    }
+    if(ca.isEmpty()) {
+      break;
+    }
+  }
+
   return window;
 }
 
@@ -192,8 +220,9 @@ void Application::newWindow(QStringList files) {
 void Application::applySettings() {
   const auto windows = topLevelWidgets();
   for(QWidget* window : windows) {
-    if(window->inherits("LxImage::MainWindow"))
+    if(window->inherits("LxImage::MainWindow")) {
       static_cast<MainWindow*>(window)->applySettings();
+    }
   }
 }
 
@@ -203,7 +232,10 @@ void Application::screenshot() {
 }
 
 void Application::editPreferences() {
-  // open preference dialog
+  // open Preferences dialog only if default shortcuts are known
+  if(defaultShortcuts_.isEmpty()) {
+    return;
+  }
   if(preferencesDialog_ == nullptr) {
     preferencesDialog_ = new PreferencesDialog();
   }
