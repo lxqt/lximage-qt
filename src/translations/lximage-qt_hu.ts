@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Képernyőkép</translation>
+        <translation type="unfinished">Képernyőkép készítése</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
@@ -142,17 +142,17 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
@@ -186,12 +186,12 @@ jogi feltételeinek megfelelően használható
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Jegyzetek eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>&amp;About</source>
-        <translation>Névjegy</translation>
+        <translation>&amp;Névjegy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -211,7 +211,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Save &amp;As</source>
-        <translation>Mentés Másként</translation>
+        <translation>Mentés másként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -221,7 +221,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Close</source>
-        <translation>&amp;Kilépés</translation>
+        <translation>&amp;Bezárás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -231,12 +231,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>Zoom &amp;In</source>
-        <translation>&amp;Nagyít</translation>
+        <translation>&amp;Nagyítás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="278"/>
         <source>Zoom &amp;Out</source>
-        <translation>&amp;Kicsinyít</translation>
+        <translation>&amp;Kicsinyítés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="281"/>
@@ -246,7 +246,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Vágólapra másol</translation>
+        <translation>&amp;Másolás vágólapra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
@@ -268,12 +268,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation>Előzmények</translation>
+        <translation>&amp;Legutóbb megnyitott fájlok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Megnyitás…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -283,7 +283,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
@@ -313,22 +313,22 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Jobbra forgatás</translation>
+        <translation>&amp;Forgatás jobbra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>&amp;Balra forgatás</translation>
+        <translation>&amp;Forgatás balra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
@@ -378,12 +378,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="419"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Vízsz&amp;intesen átfordít</translation>
+        <translation>&amp;Vízszintes tükrözés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
@@ -403,17 +403,17 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="447"/>
         <source>Flip &amp;Vertically</source>
-        <translation>&amp;Fejtetőre állít</translation>
+        <translation>&amp;Függőleges tükrözés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="450"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>Vágóla&amp;pról beilleszt</translation>
+        <translation>Be&amp;illesztés vágólapról</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="471"/>
@@ -438,12 +438,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="494"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="499"/>
         <source>File Properties</source>
-        <translation>Fájljellemzők</translation>
+        <translation>Fájl jellemzői</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
@@ -473,7 +473,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="543"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs eszköz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
@@ -483,7 +483,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Draw Arrow</source>
-        <translation>Nyíl rajzoló</translation>
+        <translation>Nyíl rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
@@ -493,7 +493,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="573"/>
         <source>Draw Rectangle</source>
-        <translation>Négyszög rajzoló</translation>
+        <translation>Négyszög rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="576"/>
@@ -503,7 +503,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="588"/>
         <source>Draw Circle</source>
-        <translation>Kör rajzoló</translation>
+        <translation>Kör rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="591"/>
@@ -513,28 +513,28 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Draw Number</source>
-        <translation>Szám rajzoló</translation>
+        <translation>Szám rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="606"/>
         <source>Draw incrementing numbers</source>
-        <translation>Szám rajzolása</translation>
+        <translation>Növekvő számok rajzolása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Jegyzetek eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Körvonal mutatása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -544,7 +544,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation>&amp;Segítség</translation>
+        <translation>&amp;Súgó</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
@@ -559,12 +559,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Szerkeszt</translation>
+        <translation>&amp;Szerkesztés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
         <source>Toolbar</source>
-        <translation>Eszközsáv</translation>
+        <translation>Eszköztár</translation>
     </message>
 </context>
 <context>
@@ -582,12 +582,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation>Normál háttérszín:</translation>
+        <translation>Alap háttérszín:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>Teljeskép háttérszín:</translation>
+        <translation>Teljes képernyős háttérszín:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
@@ -597,12 +597,12 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Körvonal mutatása alapértelmezettként</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzések eszköztár mutatása alapértelmezettként</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -620,7 +620,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Képernyőfénykép</translation>
+        <translation>Képernyőkép készítése</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -630,7 +630,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation>Teljes kép</translation>
+        <translation>Teljes képernyő</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
@@ -640,7 +640,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Képernyőrész kiválasztás</translation>
+        <translation>Képernyőrész kiválasztása</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
