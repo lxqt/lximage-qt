@@ -263,7 +263,7 @@ Copyright (C) 2013
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Открыть</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -519,7 +519,7 @@ Copyright (C) 2013
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать контур</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -587,12 +587,12 @@ Copyright (C) 2013
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показывать контур изображения по умолчанию</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать панель инструментов комментирования по умолчанию</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
