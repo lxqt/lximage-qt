@@ -102,7 +102,7 @@ bool Application::parseCommandLineArgs() {
 
   QCommandLineOption screenshotOptionDir(
     QStringList() << QStringLiteral("d") << QStringLiteral("dirscreenshot"),
-    tr("Take a screenshot to folder without gui"), QString::fromUtf8("folder_to_save_files")
+    tr("Take a screenshot and save it to the directory without showing the GUI"), tr("DIR")
   );
   if(isX11) {
     parser.addOption(screenshotOptionDir);
