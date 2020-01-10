@@ -211,7 +211,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Save &amp;As</source>
-        <translation>Mentés másként</translation>
+        <translation type="unfinished">Me&amp;ntés másként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -433,7 +433,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Bélyegképek</translation>
+        <translation>Bélyegképek megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
