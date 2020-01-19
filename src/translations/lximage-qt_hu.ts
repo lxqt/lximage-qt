@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Képernyőkép készítése mappába, grafikus felület nélkül</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation></translation>
+        <translation>[FÁJL1, FÁJL2,...]</translation>
     </message>
 </context>
 <context>
@@ -59,23 +59,13 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt 
- egyszerű és gyors képmegjelenítő
-
-Az LXQt Project honlapja: 
- https://lxqt.org/
+        <translation>LXImage-Qt - egyszerű és gyors képmegjelenítő
 
 Copyright (C) 2013-2019
- Hong Jen Yee (PCMan) 
- &lt;pcman.tw@gmail.com&gt;
+LXQt Project: https://lxqt.org/
 
-Licenc:
- 
-           -----  Ez a szoftver a -----    
-GNU GENERAL PUBLIC LICENSE Version 2
-jogi feltételeinek megfelelően használható
-
- -----  http://www.gnu.org/licenses/ -----</translation>
+Szerzők: 
+Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="320"/>
@@ -142,7 +132,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished">Imgur</translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
@@ -278,7 +268,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation>&amp;Frissítés</translation>
+        <translation>&amp;Újratöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
@@ -363,7 +353,7 @@ jogi feltételeinek megfelelően használható
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>End</source>
-        <translation>Vége</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
