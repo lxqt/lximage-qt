@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambil dan simpan tangkapan layar ke dalam direktori tanpa GUI</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -176,7 +176,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Keterangan Bilah Alat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -263,7 +263,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Buka…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -517,18 +517,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keterangan Bilah alat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan Garis Besar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -591,12 +591,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan garis besar gambar sebagai standar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan keterangan Bilah alat sebagai standar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
