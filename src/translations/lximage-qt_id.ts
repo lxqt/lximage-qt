@@ -533,7 +533,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation>Berkas</translation>
+        <translation>&amp;Berkas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
