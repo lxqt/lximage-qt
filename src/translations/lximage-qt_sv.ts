@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Spara skärmbild till en mapp utan grafiskt gränssnitt</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="644"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished">[*]%1 (%2x%3) - Bildvisare</translation>
+        <translation>[*]%1 (%2x%3) - Bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="680"/>
