@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать снимок экрана и сохранить его в каталог без показа GUI</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
