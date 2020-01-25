@@ -116,7 +116,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1042"/>
         <source>EXIF Data</source>
-        <translation>EXIF Metaadatok</translation>
+        <translation>EXIF metaadatok</translation>
     </message>
 </context>
 <context>
@@ -468,7 +468,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Deselect all drawing tools</source>
-        <translation>Rajzeszközök elvetése</translation>
+        <translation type="unfinished">Rajzeszközök elvetése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
@@ -519,7 +519,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation>Körvonal mutatása</translation>
+        <translation>Körvonal megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -587,12 +587,12 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation>Körvonal mutatása alapértelmezettként</translation>
+        <translation>Körvonal megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Megjegyzések eszköztár mutatása alapértelmezettként</translation>
+        <translation>Jegyzetet eszköztár megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
