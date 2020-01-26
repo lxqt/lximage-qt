@@ -201,7 +201,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished">Me&amp;ntés másként</translation>
+        <translation>Me&amp;ntés másként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -288,7 +288,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>Original Size</source>
-        <translation>Eredeti méret</translation>
+        <translation type="unfinished">Eredeti méret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
@@ -313,7 +313,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>&amp;Forgatás balra</translation>
+        <translation>Forgatás &amp;balra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
@@ -433,12 +433,12 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="499"/>
         <source>File Properties</source>
-        <translation>Fájl jellemzői</translation>
+        <translation>Fájltulajdonságok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Open &amp;Directory</source>
-        <translation>Mappa &amp;Megnyitása</translation>
+        <translation>Mappa Me&amp;gnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -513,7 +513,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Jegyzetek eszköztár</translation>
+        <translation type="unfinished">&amp;Jegyzetek eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
@@ -587,12 +587,12 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation>Körvonal megjelenítése alapértelmezetten</translation>
+        <translation type="unfinished">Körvonal megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Jegyzetet eszköztár megjelenítése alapértelmezetten</translation>
+        <translation type="unfinished">Jegyzetek eszköztár megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -630,7 +630,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Képernyőrész kiválasztása</translation>
+        <translation>Terület kijelölése</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
