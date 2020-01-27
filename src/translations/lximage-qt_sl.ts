@@ -6,17 +6,17 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Zajemi posnetek zaslona</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Neposredno shrani posnetek zaslona v mapo</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[DATOTEKA1, DATOTEKA2, ...]</translation>
     </message>
 </context>
 <context>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Strežnik je vrnil neznano napako</translation>
     </message>
 </context>
 <context>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Strežnik je vrnil neznano napako</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Strežnik je vrnil neznano napako</translation>
     </message>
 </context>
 <context>
@@ -48,7 +48,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="180"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O pregledovalniku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="181"/>
@@ -59,58 +59,64 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - preprost in hiter pregledovalnik slik
+
+Copyright (C) 2013
+Projekt LXQt (https://lxqt.org)
+
+Avtor:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="320"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri datoteko</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="321"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Slikovne datoteke (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="334"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri mapo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="355"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Shrani datoteko</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="635"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Nalagam...) - Pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="640"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Napaka pri nalaganju) - Pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="644"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="680"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="992"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Sličice</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1042"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Podatki EXIF</translation>
     </message>
 </context>
 <context>
@@ -118,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;čisti</translation>
     </message>
 </context>
 <context>
@@ -126,37 +132,37 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Začni</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Končaj</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapri</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri nalaganju</translation>
     </message>
 </context>
 <context>
@@ -164,245 +170,245 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedavno odp&amp;rte datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;O pregledovalniku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodna vrstica s pripombami</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odpri…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;onovno naloži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Shrani</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="233"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Shrani &amp;kot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zapri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Pr&amp;ibližaj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="278"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Oddalji</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="281"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiraj v odložišče</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
         <location filename="../mainwindow.ui" line="302"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednja datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <location filename="../mainwindow.ui" line="317"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Prejšnja datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvirna velikost</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="341"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Prila&amp;godi oknu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni v &amp;smeri urinega kazalca</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni v &amp;nasprotni smeri urinega kazalca</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nastavitve</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="375"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Na&amp;tisni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="390"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="399"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadnja datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Novo okno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni &amp;vodoravno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Zajemi posnetek zaslona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;el zaslon</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="447"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni &amp;navpično</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="450"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prilepi iz odložišča</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="471"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diaprojekcija</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
