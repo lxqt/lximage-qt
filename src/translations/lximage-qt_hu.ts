@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished">Képernyőkép készítése</translation>
+        <translation>Képernyőkép készítése</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
@@ -288,7 +288,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>Original Size</source>
-        <translation type="unfinished">Eredeti méret</translation>
+        <translation>Eredeti méret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
