@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Take a screenshot</source>
-        <translation>Schermafdruk maken</translation>
+        <translation>Maak een schermafdruk</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak een schermafdruk in een map zonder GUI</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -32,7 +32,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">&apos;onbekende fout&apos;-antwoord</translation>
+        <translation>antwoord met onbekende fout</translation>
     </message>
 </context>
 <context>
@@ -124,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Leeg maken</translation>
+        <translation>Maak &amp;leeg</translation>
     </message>
 </context>
 <context>
@@ -147,17 +147,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation>Beginnen</translation>
+        <translation>Begin</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation>Stoppen</translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Sluit</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
@@ -176,7 +176,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantekeningenwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -264,7 +264,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Open…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -394,7 +394,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="447"/>
         <source>Flip &amp;Vertically</source>
-        <translation>&amp;Verticaal spiegelen</translation>
+        <translation>Spiegel &amp;verticaal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="450"/>
@@ -404,7 +404,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Plakken vanuit klembord</translation>
+        <translation>&amp;Plak vanuit klembord</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="471"/>
@@ -414,7 +414,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Wissen</translation>
+        <translation>&amp;Wis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
@@ -424,7 +424,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Miniaturen tonen</translation>
+        <translation>Toon miniaturen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
@@ -440,7 +440,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Open &amp;Directory</source>
-        <translation>Map openen</translation>
+        <translation>Open map</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -515,18 +515,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aantekeningenwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon contour</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -589,12 +589,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon standaard afbeeldingcontour</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon standaard aantekeningenwerkbalk</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
