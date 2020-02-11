@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>Fai uno screenshot nella cartella senza gui</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -181,7 +181,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>&amp;About</source>
-        <translation>Inform&amp;azioni</translation>
+        <translation>&amp;Informazioni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -263,7 +263,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Apri…
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -514,13 +515,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Barra degli strumenti delle annotazioni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra contorno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
