@@ -61,7 +61,7 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage-Qt - egyszerű és gyors képmegjelenítő
 
-Copyright (C) 2013-2019
+Copyright (C) 2013
 LXQt Project: https://lxqt.org/
 
 Szerzők: 
@@ -176,7 +176,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation>Jegyzetek eszköztár</translation>
+        <translation>Rajz eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -263,7 +263,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation>&amp;Megnyitás…</translation>
+        <translation>Me&amp;gnyitás…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
@@ -288,7 +288,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>Original Size</source>
-        <translation>Eredeti méret</translation>
+        <translation>Normál méret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
@@ -328,7 +328,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="375"/>
         <source>&amp;Print</source>
-        <translation>&amp;Nyomtatás</translation>
+        <translation>Nyom&amp;tatás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
@@ -423,7 +423,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Bélyegképek megjelenítése</translation>
+        <translation>Bélyegképek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
@@ -513,7 +513,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished">&amp;Jegyzetek eszköztár</translation>
+        <translation type="unfinished">&amp;Rajz eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
@@ -592,7 +592,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished">Jegyzetek eszköztár megjelenítése alapértelmezetten</translation>
+        <translation type="unfinished">Rajz eszköztár megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
