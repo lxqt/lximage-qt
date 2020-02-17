@@ -60,12 +60,11 @@ LXQt Project: https://lxqt.org/
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <translation>LXImage-Qt - egyszerű és gyors képmegjelenítő
-
 Copyright (C) 2013
 LXQt Project: https://lxqt.org/
 
-Szerzők: 
-Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
+Készítők:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="320"/>
@@ -549,7 +548,7 @@ Hong Jen Yee (PCMan)  &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Szerkesztés</translation>
+        <translation>S&amp;zerkesztés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
