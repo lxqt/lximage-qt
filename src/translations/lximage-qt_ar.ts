@@ -191,7 +191,7 @@ Hong Jen Yee (PCMan) ‏&lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>ا&amp;فتح…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -201,7 +201,7 @@ Hong Jen Yee (PCMan) ‏&lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation>&amp;إعادة تحميل الملف</translation>
+        <translation>أ&amp;عِد تحميل الملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
