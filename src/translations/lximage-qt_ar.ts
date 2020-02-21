@@ -534,7 +534,7 @@ Hong Jen Yee (PCMan) ‏&lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation>&amp;مساعدة</translation>
+        <translation>م&amp;ساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
@@ -544,12 +544,12 @@ Hong Jen Yee (PCMan) ‏&lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation>&amp;منظور</translation>
+        <translation>من&amp;ظور</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation>&amp;تحرير</translation>
+        <translation>ت&amp;حرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
