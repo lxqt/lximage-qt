@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished">Képernyőkép készítése mappába, grafikus felület nélkül</translation>
+        <translation type="unfinished">Képernyőkép mentése mappába, grafikus felület nélkül</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -467,7 +467,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished">Rajzeszközök elvetése</translation>
+        <translation>Rajzeszközök elvetése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
@@ -512,7 +512,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished">&amp;Rajz eszköztár</translation>
+        <translation>&amp;Rajz eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
@@ -586,12 +586,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished">Körvonal megjelenítése alapértelmezetten</translation>
+        <translation>Körvonal megjelenítése</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished">Rajz eszköztár megjelenítése alapértelmezetten</translation>
+        <translation>Rajz eszköztár megjelenítése</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
