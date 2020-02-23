@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished">Képernyőkép mentése mappába, grafikus felület nélkül</translation>
+        <translation>Képernyőkép mentése mappába, grafikus felület nélkül</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -467,7 +467,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Deselect all drawing tools</source>
-        <translation>Rajzeszközök elvetése</translation>
+        <translation>Nincs kijelölve rajzeszköz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
