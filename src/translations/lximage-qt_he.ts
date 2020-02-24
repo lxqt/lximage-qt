@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot to folder without gui</source>
-        <translation type="unfinished"></translation>
+        <translation>צילום המסך לתיקייה ללא מנשק משתמש</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -124,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mrumenu.cpp" line="45"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;פינוי</translation>
     </message>
 </context>
 <context>
@@ -137,7 +137,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
@@ -175,7 +175,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>קבצים שנפתחו ל&amp;אחרונה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -186,12 +186,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלי סימון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;פתיחה…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -201,12 +201,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;רענון קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
@@ -463,68 +463,68 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../mainwindow.ui" line="543"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>אין כלי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>ביטול בחירת כל כלי הציור</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור חץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור חץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="573"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור מרובע</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="576"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור מרובע חלול</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="588"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור עיגול</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="591"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור עיגול חלול</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור מספר</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="606"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>ציור מספרים בסדר עולה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלי &amp;סימון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת מתאר</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -587,12 +587,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת המתאר של התמונה כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת סרגל כלי הסימון כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -663,7 +663,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>העתקה</translation>
     </message>
 </context>
 </TS>
