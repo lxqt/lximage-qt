@@ -32,7 +32,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished">תגובת שגיאה בלתי ידועה</translation>
+        <translation>תגובת שגיאה בלתי ידועה</translation>
     </message>
 </context>
 <context>
