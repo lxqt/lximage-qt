@@ -257,7 +257,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>&amp;Recently Opened Files</source>
-        <translation>&amp;Legutóbb megnyitott fájlok</translation>
+        <translation>N&amp;emrég megnyitott fájlok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -267,7 +267,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>&amp;Reload File</source>
-        <translation>&amp;Újratöltés</translation>
+        <translation>Új&amp;ratöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
@@ -302,7 +302,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>&amp;Forgatás jobbra</translation>
+        <translation>Forgatás &amp;jobbra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
@@ -327,7 +327,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="375"/>
         <source>&amp;Print</source>
-        <translation>Nyom&amp;tatás</translation>
+        <translation>N&amp;yomtatás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
@@ -357,7 +357,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Új ablak</translation>
+        <translation>Ú&amp;j ablak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
@@ -402,7 +402,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>Be&amp;illesztés vágólapról</translation>
+        <translation>B&amp;eillesztés vágólapról</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="471"/>
