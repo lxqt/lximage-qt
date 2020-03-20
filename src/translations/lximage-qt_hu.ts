@@ -357,7 +357,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <source>&amp;New Window</source>
-        <translation>Ú&amp;j ablak</translation>
+        <translation>Új &amp;ablak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
