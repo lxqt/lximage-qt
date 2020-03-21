@@ -587,7 +587,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="85"/>
         <source>Show image outline by default</source>
-        <translation>Amosa de xeito predeterminado o bordo da imaxe</translation>
+        <translation>Amosar o bordo da imaxe de xeito predeterminado</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="92"/>
