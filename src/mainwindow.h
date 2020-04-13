@@ -164,6 +164,8 @@ private:
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
   bool imageModified_; // the current image is modified by rotation, flip, or others and needs to be saved
 
+  bool startMaximized_;
+
   // folder browsing
   std::shared_ptr<Fm::Folder> folder_;
   Fm::FilePath folderPath_;
