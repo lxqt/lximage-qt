@@ -180,7 +180,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>&amp;About</source>
-        <translation>&amp;O pregledovalniku</translation>
+        <translation>&amp;O programu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="177"/>
@@ -413,37 +413,37 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;zbriši</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaži sličice</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="499"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Lastnosti datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri &amp;mapo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
@@ -519,7 +519,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="625"/>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaži okvir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -529,32 +529,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;moč</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="93"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Pojdi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pogled</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="142"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodna vrstica</translation>
     </message>
 </context>
 <context>
@@ -562,12 +562,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikonska tema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -640,12 +640,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> seconds</source>
-        <translation type="unfinished"></translation>
+        <translation> sekund</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakasnitev:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
