@@ -131,6 +131,7 @@
     <addaction name="actionRotateCounterclockwise"/>
     <addaction name="actionFlipHorizontal"/>
     <addaction name="actionFlipVertical"/>
+    <addaction name="actionResize"/>
     <addaction name="separator"/>
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
@@ -643,6 +644,15 @@
    </property>
    <property name="shortcut">
     <string>O</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="icon">
+    <iconset theme="itmages-resize">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Resize</string>
    </property>
   </action>
  </widget>

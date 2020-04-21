@@ -51,6 +51,7 @@
 #include <libfm-qt/folderitemdelegate.h>
 
 #include "mrumenu.h"
+#include "resizeimagedialog.h"
 #include "upload/uploaddialog.h"
 
 using namespace LxImage;
@@ -988,6 +989,19 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
     ui.view->setImage(image_, !hasQGraphicsItem);
     setModified(true);
   }
+}
+
+void MainWindow::on_actionResize_triggered() {
+    ResizeImageDialog* dialog = new ResizeImageDialog(this);
+    dialog->setOriginalSize(image_.size());
+    if (dialog->exec() == QDialog::Accepted)
+    {   
+        QSize newSize = dialog->size();
+        image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+        ui.view->setImage(image_);
+        setModified(true);
+    }
+    dialog->deleteLater();
 }
 
 void MainWindow::setModified(bool modified) {
