@@ -16,6 +16,7 @@ lximage-qt-0.15.0 / 2020-04-21
   * Keep zooming state on switching image.
   * Removed deprecated `QDesktopWidget`.
   * Added "Open With.." to File menu.
+  * Added shortcut editor to Preferences.
   * Fixed maximization at startup with SVG and GIF images.
 
 lximage-qt-0.14.1 / 2019-02-25
