@@ -1,3 +1,23 @@
+lximage-qt-0.15.0 / 2020-04-21
+==============================
+  * Hide annotations toolbar by default (it's buggy) but add an option to show/hide it on startup.
+  * No auto-selection in thumbnail view.
+  * Fixed showing the first image on loading a directory.
+  * String optimizations.
+  * Optionally show image outline.
+  * More complete transformation based on EXIF.
+  * Prevent blurry images with HDPI.
+  * Jump forward when the image is deleted/renamed.
+  * Added command-line option `-d` to take a screenshot and save it to the directory  without showing the GUI.
+  * Remove X11 screenshot under Wayland.
+  * Made maximum number of recent files configurable.
+  * Support uploading of unsaved images.
+  * No multiple Preferences dialogs.
+  * Keep zooming state on switching image.
+  * Removed deprecated `QDesktopWidget`.
+  * Added "Open With.." to File menu.
+  * Fixed maximization at startup with SVG and GIF images.
+
 lximage-qt-0.14.1 / 2019-02-25
 ==============================
 
