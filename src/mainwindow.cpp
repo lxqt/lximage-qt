@@ -992,16 +992,15 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
 }
 
 void MainWindow::on_actionResize_triggered() {
-    ResizeImageDialog* dialog = new ResizeImageDialog(this);
-    dialog->setOriginalSize(image_.size());
-    if (dialog->exec() == QDialog::Accepted)
-    {   
-        QSize newSize = dialog->size();
-        image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-        ui.view->setImage(image_);
-        setModified(true);
-    }
-    dialog->deleteLater();
+  ResizeImageDialog *dialog = new ResizeImageDialog(this);
+  dialog->setOriginalSize(image_.size());
+  if (dialog->exec() == QDialog::Accepted) {
+    QSize newSize = dialog->size();
+    image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui.view->setImage(image_);
+    setModified(true);
+  }
+  dialog->deleteLater();
 }
 
 void MainWindow::setModified(bool modified) {

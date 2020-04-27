@@ -66,103 +66,103 @@ ResizeImageDialog::~ResizeImageDialog() {
 
 void ResizeImageDialog::setOriginalSize(const QSize& size)
 {
-    originalSize_ = size;
-    ui.mOriginalWidthLabel->setText(QString::number(size.width()) + QStringLiteral(" px"));
-    ui.mOriginalHeightLabel->setText(QString::number(size.height()) + QStringLiteral(" px"));
-    ui.mWidthSpinBox->setValue(size.width());
-    ui.mHeightSpinBox->setValue(size.height());
+  originalSize_ = size;
+  ui.mOriginalWidthLabel->setText(QString::number(size.width()) + QStringLiteral(" px"));
+  ui.mOriginalHeightLabel->setText(QString::number(size.height()) + QStringLiteral(" px"));
+  ui.mWidthSpinBox->setValue(size.width());
+  ui.mHeightSpinBox->setValue(size.height());
 }
 
 QSize ResizeImageDialog::size() const
 {
-    return QSize(
-               ui.mWidthSpinBox->value(),
-               ui.mHeightSpinBox->value()
-           );
+  return QSize (
+    ui.mWidthSpinBox->value(),
+    ui.mHeightSpinBox->value()
+  );
 }
 
 void ResizeImageDialog::slotWidthChanged(int width)
 {
-    // Update width percentage to match width, only if this was a manual adjustment
-    if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
-        updateFromSizeOrPercentage_ = true;
-        ui.mWidthPercentSpinBox->setValue((double(width) / originalSize_.width()) * 100);
-        updateFromSizeOrPercentage_ = false;
-    }
+  // Update width percentage to match width, only if this was a manual adjustment
+  if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
+    updateFromSizeOrPercentage_ = true;
+    ui.mWidthPercentSpinBox->setValue((double(width) / originalSize_.width()) * 100);
+    updateFromSizeOrPercentage_ = false;
+  }
 
-    if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
-        return;
-    }
+  if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
+    return;
+  }
 
-    // Update height to keep ratio, only if ratio locked and this was a manual adjustment
-    updateFromRatio_ = true;
-    ui.mHeightSpinBox->setValue(originalSize_.height() * width / originalSize_.width());
-    updateFromRatio_ = false;
+  // Update height to keep ratio, only if ratio locked and this was a manual adjustment
+  updateFromRatio_ = true;
+  ui.mHeightSpinBox->setValue(originalSize_.height() * width / originalSize_.width());
+  updateFromRatio_ = false;
 }
 
 void ResizeImageDialog::slotHeightChanged(int height)
 {
-    // Update height percentage to match height, only if this was a manual adjustment
-    if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
-        updateFromSizeOrPercentage_ = true;
-        ui.mHeightPercentSpinBox->setValue((double(height) / originalSize_.height()) * 100);
-        updateFromSizeOrPercentage_ = false;
-    }
+  // Update height percentage to match height, only if this was a manual adjustment
+  if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
+    updateFromSizeOrPercentage_ = true;
+    ui.mHeightPercentSpinBox->setValue((double(height) / originalSize_.height()) * 100);
+    updateFromSizeOrPercentage_ = false;
+  }
 
-    if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
-        return;
-    }
+  if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
+    return;
+  }
 
-    // Update width to keep ratio, only if ratio locked and this was a manual adjustment
-    updateFromRatio_ = true;
-    ui.mWidthSpinBox->setValue(originalSize_.width() * height / originalSize_.height());
-    updateFromRatio_ = false;
+  // Update width to keep ratio, only if ratio locked and this was a manual adjustment
+  updateFromRatio_ = true;
+  ui.mWidthSpinBox->setValue(originalSize_.width() * height / originalSize_.height());
+  updateFromRatio_ = false;
 }
 
 void ResizeImageDialog::slotWidthPercentChanged(double widthPercent)
 {
-    // Update width to match width percentage, only if this was a manual adjustment
-    if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
-        updateFromSizeOrPercentage_ = true;
-        ui.mWidthSpinBox->setValue((widthPercent / 100) * originalSize_.width());
-        updateFromSizeOrPercentage_ = false;
-    }
+  // Update width to match width percentage, only if this was a manual adjustment
+  if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
+    updateFromSizeOrPercentage_ = true;
+    ui.mWidthSpinBox->setValue((widthPercent / 100) * originalSize_.width());
+    updateFromSizeOrPercentage_ = false;
+  }
 
-    if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
-        return;
-    }
+  if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
+    return;
+  }
 
-    // Keep height percentage in sync with width percentage, only if ratio locked and this was a manual adjustment
-    updateFromRatio_ = true;
-    ui.mHeightPercentSpinBox->setValue(ui.mWidthPercentSpinBox->value());
-    updateFromRatio_ = false;
+  // Keep height percentage in sync with width percentage, only if ratio locked and this was a manual adjustment
+  updateFromRatio_ = true;
+  ui.mHeightPercentSpinBox->setValue(ui.mWidthPercentSpinBox->value());
+  updateFromRatio_ = false;
 }
 
 void ResizeImageDialog::slotHeightPercentChanged(double heightPercent)
 {
-    // Update height to match height percentage, only if this was a manual adjustment
-    if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
-        updateFromSizeOrPercentage_ = true;
-        ui.mHeightSpinBox->setValue((heightPercent / 100) * originalSize_.height());
-        updateFromSizeOrPercentage_ = false;
-    }
+  // Update height to match height percentage, only if this was a manual adjustment
+  if (!updateFromSizeOrPercentage_ && !updateFromRatio_) {
+    updateFromSizeOrPercentage_ = true;
+    ui.mHeightSpinBox->setValue((heightPercent / 100) * originalSize_.height());
+    updateFromSizeOrPercentage_ = false;
+  }
 
-    if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
-        return;
-    }
+  if (!ui.mKeepAspectCheckBox->isChecked() || updateFromRatio_) {
+    return;
+  }
 
-    // Keep height percentage in sync with width percentage, only if ratio locked and this was a manual adjustment
-    updateFromRatio_ = true;
-    ui.mWidthPercentSpinBox->setValue(ui.mHeightPercentSpinBox->value());
-    updateFromRatio_ = false;
+  // Keep height percentage in sync with width percentage, only if ratio locked and this was a manual adjustment
+  updateFromRatio_ = true;
+  ui.mWidthPercentSpinBox->setValue(ui.mHeightPercentSpinBox->value());
+  updateFromRatio_ = false;
 }
 
 void ResizeImageDialog::slotKeepAspectChanged(bool value)
 {
-    if (value) {
-        updateFromSizeOrPercentage_ = true;
-        slotWidthChanged(ui.mWidthSpinBox->value());
-        slotWidthPercentChanged(ui.mWidthPercentSpinBox->value());
-        updateFromSizeOrPercentage_ = false;
-    }
+  if (value) {
+    updateFromSizeOrPercentage_ = true;
+    slotWidthChanged(ui.mWidthSpinBox->value());
+    slotWidthPercentChanged(ui.mWidthPercentSpinBox->value());
+    updateFromSizeOrPercentage_ = false;
+  }
 }
