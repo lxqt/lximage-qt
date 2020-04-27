@@ -24,6 +24,7 @@ set(lximage-qt_SRCS
     settings.cpp
     graphicsscene.cpp
     mrumenu.cpp
+    statusbar.cpp
 
     upload/imageshackprovider.cpp
     upload/imageshackupload.cpp
