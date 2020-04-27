@@ -135,6 +135,8 @@
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
     <addaction name="separator"/>
+    <addaction name="actionCopyPath"/>
+    <addaction name="separator"/>
     <addaction name="actionUpload"/>
     <addaction name="separator"/>
     <addaction name="actionPreferences"/>
@@ -643,6 +645,17 @@
    </property>
    <property name="shortcut">
     <string>O</string>
+   </property>
+  </action>
+  <action name="actionCopyPath">
+   <property name="icon">
+    <iconset theme="edit-copy"/>
+   </property>
+   <property name="text">
+    <string>Copy Pa&amp;th</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy path</string>
    </property>
   </action>
  </widget>
