@@ -55,7 +55,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>22</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -648,7 +648,7 @@
   </action>
   <action name="actionResize">
    <property name="icon">
-    <iconset theme="itmages-resize">
+    <iconset>
      <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
