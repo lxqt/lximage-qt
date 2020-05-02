@@ -915,6 +915,13 @@ void MainWindow::on_actionCopy_triggered() {
   clipboard->setImage(copiedImage);
 }
 
+void MainWindow::on_actionCopyPath_triggered() {
+  if(currentFile_) {
+    const Fm::CStrPtr dispName = currentFile_.displayName();
+    QApplication::clipboard()->setText(QString::fromUtf8(dispName.get()));
+  }
+}
+
 void MainWindow::on_actionPaste_triggered() {
   QClipboard *clipboard = QApplication::clipboard();
   QImage image = clipboard->image();
