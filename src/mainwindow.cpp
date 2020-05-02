@@ -681,17 +681,22 @@ void MainWindow::updateUI() {
     if(loadJob_) { // if loading is in progress
       title = tr("[*]%1 (Loading...) - Image Viewer")
                 .arg(QString::fromUtf8(dispName.get()));
+      ui.statusBar->setText();
     }
     else {
       if(image_.isNull()) {
         title = tr("[*]%1 (Failed to Load) - Image Viewer")
                   .arg(QString::fromUtf8(dispName.get()));
+        ui.statusBar->setText();
       }
       else {
+        const QString filePath = QString::fromUtf8(dispName.get());
         title = tr("[*]%1 (%2x%3) - Image Viewer")
-                  .arg(QString::fromUtf8(dispName.get()))
+                  .arg(filePath)
                   .arg(image_.width())
                   .arg(image_.height());
+        ui.statusBar->setText(QStringLiteral("%1×%2").arg(image_.width()).arg(image_.height()),
+                              filePath);
         if (!isVisible()) {
           /* Here we try to implement the following behavior as far as possible:
               (1) A minimum size of 400x400 is assumed;
@@ -730,6 +735,7 @@ void MainWindow::updateUI() {
   }
   else {
     title = tr("[*]Image Viewer");
+    ui.statusBar->setText();
   }
   setWindowTitle(title);
   setWindowModified(imageModified_);

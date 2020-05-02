@@ -179,7 +179,7 @@
    <addaction name="separator"/>
    <addaction name="actionSlideShow"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="LxImage::StatusBar" name="statusBar"/>
   <widget class="QToolBar" name="annotationsToolBar">
    <property name="windowTitle">
     <string>Annotations Toolbar</string>
@@ -656,6 +656,12 @@
    <class>LxImage::MruMenu</class>
    <extends>QMenu</extends>
    <header>mrumenu.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LxImage::StatusBar</class>
+   <extends>QStatusBar</extends>
+   <header>statusbar.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>
