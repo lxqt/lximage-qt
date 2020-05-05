@@ -992,6 +992,13 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
 }
 
 void MainWindow::on_actionResize_triggered() {
+  QGraphicsItem *imageItem = getImageGraphicsItem();
+  bool isGifOrSvg (imageItem->isWidget() // we have gif animation
+                   || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
+  if (isGifOrSvg) {
+    QMessageBox::warning(this, tr("Cannot resize SVG and GIF Images"), tr("LxImage-qt can't properly resize SVG and GIF Images, sorry"));
+    return;
+  }
   ResizeImageDialog *dialog = new ResizeImageDialog(this);
   dialog->setOriginalSize(image_.size());
   if (dialog->exec() == QDialog::Accepted) {
