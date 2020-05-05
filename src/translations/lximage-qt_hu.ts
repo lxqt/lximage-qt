@@ -59,11 +59,12 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - egyszerű és gyors képmegjelenítő
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
+        <translation>LXimage-Qt - egy egyszerű és gyors képmegjelenítő
 
-Készítők:
+Copyright (C) 2013
+LXQt Projekt: https://lxqt.org/
+
+Szerzők:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
@@ -172,10 +173,9 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Képmegjelenítő</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="177"/>
-        <location filename="../mainwindow.ui" line="617"/>
-        <source>Annotations Toolbar</source>
-        <translation>Rajz eszköztár</translation>
+        <location filename="../mainwindow.ui" line="67"/>
+        <source>&amp;Recently Opened Files</source>
+        <translation>Nem&amp;rég megnyitott fájlok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -183,9 +183,30 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>&amp;Névjegy</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="177"/>
+        <location filename="../mainwindow.ui" line="617"/>
+        <source>Annotations Toolbar</source>
+        <translation>Rajz eszköztár</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="206"/>
+        <source>&amp;Open…</source>
+        <translation>&amp;Megnyitás...</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="218"/>
+        <source>&amp;Reload File</source>
+        <translation>Ú&amp;jratöltés</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="221"/>
+        <source>Ctrl+R</source>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
@@ -205,7 +226,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
@@ -215,12 +236,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>Ctrl+W</source>
-        <translation></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>Zoom &amp;In</source>
         <translation>&amp;Nagyítás</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="269"/>
+        <source>Ctrl+=</source>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="278"/>
@@ -230,7 +256,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="281"/>
         <source>Ctrl+-</source>
-        <translation></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
@@ -244,45 +270,20 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Következő fájl</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="305"/>
+        <source>PgDown</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="314"/>
         <location filename="../mainwindow.ui" line="317"/>
         <source>Previous File</source>
         <translation>Előző fájl</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="305"/>
-        <source>PgDown</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="67"/>
-        <source>&amp;Recently Opened Files</source>
-        <translation>N&amp;emrég megnyitott fájlok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="206"/>
-        <source>&amp;Open…</source>
-        <translation>Me&amp;gnyitás…</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="218"/>
-        <source>&amp;Reload File</source>
-        <translation>Új&amp;ratöltés</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="221"/>
-        <source>Ctrl+R</source>
-        <translation>Ctrl+R</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="269"/>
-        <source>Ctrl+=</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>PgUp</source>
-        <translation></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="329"/>
@@ -292,12 +293,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
         <source>Ctrl+0</source>
-        <translation></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="341"/>
         <source>&amp;Fit</source>
-        <translation>&amp;Kitöltés</translation>
+        <translation>Ki&amp;töltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
@@ -332,7 +333,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
         <source>Ctrl+P</source>
-        <translation></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
@@ -342,7 +343,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="390"/>
         <source>Home</source>
-        <translation></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="399"/>
@@ -362,7 +363,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
@@ -387,7 +388,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>F11</source>
-        <translation></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="447"/>
@@ -417,12 +418,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Show Thumbnails</source>
-        <translation>Bélyegképek</translation>
+        <translation>Bélyegképek megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="494"/>
@@ -437,12 +438,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Open &amp;Directory</source>
-        <translation>Mappa Me&amp;gnyitása</translation>
+        <translation>Ma&amp;ppa Megnyitása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>Ctrl+D</source>
-        <translation></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
