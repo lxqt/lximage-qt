@@ -137,10 +137,14 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
       break;
     case ToolRectangle:
+      // Draw the rectangle in the image and scene at the same time
       painter.drawRect(QRect(startPoint, endPoint));
+      scene_->addRect(QRect(startPoint, endPoint), painter.pen());
       break;
     case ToolCircle:
+      // Draw the circle in the image and scene at the same time
       painter.drawEllipse(QRect(startPoint, endPoint));
+      scene_->addEllipse(QRect(startPoint, endPoint), painter.pen());
       break;
     case ToolNumber:
     {
@@ -161,15 +165,21 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
                         textRect.top() + (textRect.height() / 2 - radius),
                         radius * 2, radius * 2);
 
-      // Draw the path
+      // Draw the path in the image
       QPainterPath path;
       path.addEllipse(circleRect);
       painter.fillPath(path, Qt::red);
       painter.drawPath(path);
+      // Draw the path in the sence
+      scene_->addPath(path, painter.pen(), QBrush(Qt::red));
 
-      // Draw the text
+      // Draw the text in the image
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
+      // Draw the text in the sence
+      QGraphicsTextItem *textItem = scene_->addText(text, painter.font());
+      textItem->setPos(textRect.x() - textRect.width() / 8 , textRect.y() - textRect.height() / 8);
+      textItem->setDefaultTextColor(Qt::white);
 
       break;
     }
@@ -573,8 +583,10 @@ void ImageView::drawArrow(QPainter &painter,
                           qreal tipAngle,
                           int tipLen) const
 {
-  // Draw the line
+  // Draw the line in the inmage
   painter.drawLine(start, end);
+  // Draw the line in the scene
+  scene_->addLine(QLine(start, end), painter.pen());
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -590,9 +602,12 @@ void ImageView::drawArrow(QPainter &painter,
     static_cast<int>(qCos(angle - tipAngle) * tipLen)
   );
 
-  // Draw the two lines
+  // Draw the two lines in the image
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
+  // Draw the two lines in the scene
+  scene_->addLine(QLine(end, end+tip1), painter.pen());
+  scene_->addLine(QLine(end, end+tip2), painter.pen());
 }
 
 } // namespace LxImage
