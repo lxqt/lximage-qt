@@ -109,7 +109,8 @@ private:
                  const QPoint &start,
                  const QPoint &end,
                  qreal tipAngle,
-                 int tipLen) const;
+                 int tipLen,
+                 QList<QGraphicsItem *> *annotations) const;
 
 private Q_SLOTS:
   void onFileDropped(const QString file);
@@ -132,6 +133,7 @@ private:
   bool isSVG; // is the image an SVG file?
   Tool currentTool; // currently selected tool
   QPoint startPoint; // starting point for the tool
+  QList<QGraphicsItem *> annotations;	//annotation items which have been drawn in the scene
   int nextNumber;
   bool showOutline_;
 };

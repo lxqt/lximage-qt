@@ -134,17 +134,17 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
 
     switch (currentTool) {
     case ToolArrow:
-      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
+      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25, &annotations);
       break;
     case ToolRectangle:
       // Draw the rectangle in the image and scene at the same time
       painter.drawRect(QRect(startPoint, endPoint));
-      scene_->addRect(QRect(startPoint, endPoint), painter.pen());
+      annotations.append(scene_->addRect(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolCircle:
       // Draw the circle in the image and scene at the same time
       painter.drawEllipse(QRect(startPoint, endPoint));
-      scene_->addEllipse(QRect(startPoint, endPoint), painter.pen());
+      annotations.append(scene_->addEllipse(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolNumber:
     {
@@ -171,7 +171,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.fillPath(path, Qt::red);
       painter.drawPath(path);
       // Draw the path in the sence
-      scene_->addPath(path, painter.pen(), QBrush(Qt::red));
+      annotations.append(scene_->addPath(path, painter.pen(), QBrush(Qt::red)));
 
       // Draw the text in the image
       painter.setPen(Qt::white);
@@ -180,6 +180,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       QGraphicsTextItem *textItem = scene_->addText(text, painter.font());
       textItem->setPos(textRect.x() - textRect.width() / 8 , textRect.y() - textRect.height() / 8);
       textItem->setDefaultTextColor(Qt::white);
+      annotations.append(textItem);
 
       break;
     }
@@ -317,8 +318,11 @@ void ImageView::setImage(const QImage& image, bool show) {
     zoomFit();
   queueGenerateCache();
 
-  // clear the numbering
+  // clear the numbering and annotation items in the scene
   nextNumber = 1;
+  for (QGraphicsItem *annotation : annotations){
+      scene_->removeItem(annotation);
+  }
 }
 
 void ImageView::setGifAnimation(const QString& fileName) {
@@ -581,12 +585,13 @@ void ImageView::drawArrow(QPainter &painter,
                           const QPoint &start,
                           const QPoint &end,
                           qreal tipAngle,
-                          int tipLen) const
+                          int tipLen,
+                          QList<QGraphicsItem *> *annotations) const
 {
   // Draw the line in the inmage
   painter.drawLine(start, end);
   // Draw the line in the scene
-  scene_->addLine(QLine(start, end), painter.pen());
+  annotations->append(scene_->addLine(QLine(start, end), painter.pen()));
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -606,8 +611,8 @@ void ImageView::drawArrow(QPainter &painter,
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
   // Draw the two lines in the scene
-  scene_->addLine(QLine(end, end+tip1), painter.pen());
-  scene_->addLine(QLine(end, end+tip2), painter.pen());
+  annotations->append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
+  annotations->append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
 }
 
 } // namespace LxImage
