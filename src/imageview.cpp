@@ -275,6 +275,9 @@ void ImageView::drawOutline() {
 void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
+    // all annotations have been removed and delete by scene_->clear()
+    // so we clear annotations list
+    annotations.clear();
     isSVG = false;
     if(gifMovie_) { // should be deleted explicitly
       delete gifMovie_;
@@ -290,6 +293,18 @@ void ImageView::setImage(const QImage& image, bool show) {
     outlineItem_->hide();
     outlineItem_->setPen(QPen(Qt::NoPen));
     scene_->addItem(outlineItem_);
+  }
+  else {
+    if (!annotations.isEmpty()){
+      // remove all annotations in the scene one by one
+      for (const auto &annotation : annotations){
+        scene_->removeItem(annotation);
+      }
+      // scene_->removeItem() just remove the items from the scene
+      // here we delete all items to prevent a memory leak
+      qDeleteAll(annotations.begin(), annotations.end());
+      annotations.clear();
+    }
   }
 
   image_ = image;
@@ -318,11 +333,8 @@ void ImageView::setImage(const QImage& image, bool show) {
     zoomFit();
   queueGenerateCache();
 
-  // clear the numbering and annotation items in the scene
+  // clear the numbering
   nextNumber = 1;
-  for (QGraphicsItem *annotation : annotations){
-      scene_->removeItem(annotation);
-  }
 }
 
 void ImageView::setGifAnimation(const QString& fileName) {
