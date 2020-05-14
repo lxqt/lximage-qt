@@ -137,10 +137,14 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
       break;
     case ToolRectangle:
+      // Draw the rectangle in the image and scene at the same time
       painter.drawRect(QRect(startPoint, endPoint));
+      annotations.append(scene_->addRect(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolCircle:
+      // Draw the circle in the image and scene at the same time
       painter.drawEllipse(QRect(startPoint, endPoint));
+      annotations.append(scene_->addEllipse(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolNumber:
     {
@@ -161,15 +165,24 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
                         textRect.top() + (textRect.height() / 2 - radius),
                         radius * 2, radius * 2);
 
-      // Draw the path
+      // Draw the path in the image
       QPainterPath path;
       path.addEllipse(circleRect);
       painter.fillPath(path, Qt::red);
       painter.drawPath(path);
+      // Draw the path in the sence
+      annotations.append(scene_->addPath(path, painter.pen(), QBrush(Qt::red)));
 
-      // Draw the text
+      // Draw the text in the image
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
+      // Draw the text in the sence
+      QGraphicsSimpleTextItem *textItem = new QGraphicsSimpleTextItem(text);
+      textItem->setFont(font);
+      textItem->setBrush(Qt::white);
+      textItem->setPos(textRect.topLeft());
+      scene_->addItem(textItem);
+      annotations.append(textItem);
 
       break;
     }
@@ -264,6 +277,9 @@ void ImageView::drawOutline() {
 void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
+    // all annotations have been removed and delete by scene_->clear()
+    // so we clear annotations list
+    annotations.clear();
     isSVG = false;
     if(gifMovie_) { // should be deleted explicitly
       delete gifMovie_;
@@ -279,6 +295,18 @@ void ImageView::setImage(const QImage& image, bool show) {
     outlineItem_->hide();
     outlineItem_->setPen(QPen(Qt::NoPen));
     scene_->addItem(outlineItem_);
+  }
+  else {
+    if (!annotations.isEmpty()){
+      // remove all annotations in the scene one by one
+      for (const auto &annotation : annotations){
+        scene_->removeItem(annotation);
+      }
+      // scene_->removeItem() just remove the items from the scene
+      // here we delete all items to prevent a memory leak
+      qDeleteAll(annotations.begin(), annotations.end());
+      annotations.clear();
+    }
   }
 
   image_ = image;
@@ -571,10 +599,12 @@ void ImageView::drawArrow(QPainter &painter,
                           const QPoint &start,
                           const QPoint &end,
                           qreal tipAngle,
-                          int tipLen) const
+                          int tipLen)
 {
-  // Draw the line
+  // Draw the line in the inmage
   painter.drawLine(start, end);
+  // Draw the line in the scene
+  annotations.append(scene_->addLine(QLine(start, end), painter.pen()));
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -590,9 +620,12 @@ void ImageView::drawArrow(QPainter &painter,
     static_cast<int>(qCos(angle - tipAngle) * tipLen)
   );
 
-  // Draw the two lines
+  // Draw the two lines in the image
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
+  // Draw the two lines in the scene
+  annotations.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
+  annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
 }
 
 } // namespace LxImage
