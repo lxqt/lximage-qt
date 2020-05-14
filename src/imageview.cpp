@@ -113,19 +113,25 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
 }
 
 void ImageView::mousePressEvent(QMouseEvent * event) {
-  if (currentTool == ToolNone) {
+  if(currentTool == ToolNone) {
     QGraphicsView::mousePressEvent(event);
-    if(cursorTimer_) cursorTimer_->stop();
-  } else {
+    if(cursorTimer_) {
+      cursorTimer_->stop();
+    }
+  }
+  else {
     startPoint = mapToScene(event->pos()).toPoint();
   }
 }
 
 void ImageView::mouseReleaseEvent(QMouseEvent* event) {
-  if (currentTool == ToolNone) {
+  if(currentTool == ToolNone) {
     QGraphicsView::mouseReleaseEvent(event);
-    if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
-  } else if (!image_.isNull()) {
+    if(cursorTimer_) {
+      cursorTimer_->start(CURSOR_HIDE_DELY);
+    }
+  }
+  else if(!image_.isNull()) {
     QPoint endPoint = mapToScene(event->pos()).toPoint();
 
     QPainter painter(&image_);
@@ -177,7 +183,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
       // Draw the text in the sence
-      QGraphicsSimpleTextItem *textItem = new QGraphicsSimpleTextItem(text);
+      QGraphicsSimpleTextItem* textItem = new QGraphicsSimpleTextItem(text);
       textItem->setFont(font);
       textItem->setBrush(Qt::white);
       textItem->setPos(textRect.topLeft());
@@ -277,7 +283,7 @@ void ImageView::drawOutline() {
 void ImageView::setImage(const QImage& image, bool show) {
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
-    // all annotations have been removed and delete by scene_->clear()
+    // all annotations have been removed and deleted by scene_->clear()
     // so we clear annotations list
     annotations.clear();
     isSVG = false;
@@ -297,9 +303,9 @@ void ImageView::setImage(const QImage& image, bool show) {
     scene_->addItem(outlineItem_);
   }
   else {
-    if (!annotations.isEmpty()){
+    if(!annotations.isEmpty()) {
       // remove all annotations in the scene one by one
-      for (const auto &annotation : annotations){
+      for(const auto& annotation : qAsConst(annotations)) {
         scene_->removeItem(annotation);
       }
       // scene_->removeItem() just remove the items from the scene
@@ -576,15 +582,17 @@ void ImageView::hideCursor(bool enable) {
     cursorTimer_ = new QTimer(this);
     cursorTimer_->setSingleShot(true);
     connect(cursorTimer_, &QTimer::timeout, this, &ImageView::blankCursor);
-    if(viewport()->cursor().shape() == Qt::OpenHandCursor)
-        cursorTimer_->start(CURSOR_HIDE_DELY);
+    if(viewport()->cursor().shape() == Qt::OpenHandCursor) {
+      cursorTimer_->start(CURSOR_HIDE_DELY);
+    }
   }
   else if (cursorTimer_) {
     cursorTimer_->stop();
     delete cursorTimer_;
     cursorTimer_ = nullptr;
-    if(viewport()->cursor().shape() == Qt::BlankCursor)
-        viewport()->setCursor(Qt::OpenHandCursor);
+    if(viewport()->cursor().shape() == Qt::BlankCursor) {
+      viewport()->setCursor(Qt::OpenHandCursor);
+    }
   }
 }
 
