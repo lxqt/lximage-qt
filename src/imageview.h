@@ -109,8 +109,7 @@ private:
                  const QPoint &start,
                  const QPoint &end,
                  qreal tipAngle,
-                 int tipLen,
-                 QList<QGraphicsItem *> *annotations) const;
+                 int tipLen);
 
 private Q_SLOTS:
   void onFileDropped(const QString file);

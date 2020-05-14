@@ -134,7 +134,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
 
     switch (currentTool) {
     case ToolArrow:
-      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25, &annotations);
+      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
       break;
     case ToolRectangle:
       // Draw the rectangle in the image and scene at the same time
@@ -599,13 +599,12 @@ void ImageView::drawArrow(QPainter &painter,
                           const QPoint &start,
                           const QPoint &end,
                           qreal tipAngle,
-                          int tipLen,
-                          QList<QGraphicsItem *> *annotations) const
+                          int tipLen)
 {
   // Draw the line in the inmage
   painter.drawLine(start, end);
   // Draw the line in the scene
-  annotations->append(scene_->addLine(QLine(start, end), painter.pen()));
+  annotations.append(scene_->addLine(QLine(start, end), painter.pen()));
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -625,8 +624,8 @@ void ImageView::drawArrow(QPainter &painter,
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
   // Draw the two lines in the scene
-  annotations->append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
-  annotations->append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
+  annotations.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
+  annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
 }
 
 } // namespace LxImage
