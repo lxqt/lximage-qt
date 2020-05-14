@@ -177,9 +177,11 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
       // Draw the text in the sence
-      QGraphicsTextItem *textItem = scene_->addText(text, painter.font());
-      textItem->setPos(textRect.x() - textRect.width() / 8 , textRect.y() - textRect.height() / 8);
-      textItem->setDefaultTextColor(Qt::white);
+      QGraphicsSimpleTextItem *textItem = new QGraphicsSimpleTextItem(text);
+      textItem->setFont(font);
+      textItem->setBrush(Qt::white);
+      textItem->setPos(textRect.topLeft());
+      scene_->addItem(textItem);
       annotations.append(textItem);
 
       break;
