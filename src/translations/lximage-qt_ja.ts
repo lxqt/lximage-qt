@@ -11,12 +11,13 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリーンショットを撮り GUI を表示せずに 
+ディレクトリDIR に保存する</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -101,7 +102,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="688"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (ロードに失敗) - 画像ビューアー</translation>
+        <translation>[*]%1 (読み込めません) - 画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="694"/>
@@ -137,12 +138,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>サイズ:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>パス:</translation>
     </message>
 </context>
 <context>
@@ -276,7 +277,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>アプリケーションで開く(&amp;W)...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -466,7 +467,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="527"/>
         <source>Ctrl+D</source>
-        <translation>Ctrl+O</translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="536"/>
@@ -486,7 +487,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="559"/>
         <source>No Tool</source>
-        <translation>ツールがありません</translation>
+        <translation>ツール解除</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="562"/>
@@ -552,12 +553,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>パスのコピー(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>パスのコピー</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -615,7 +616,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>最近使用したファイルの最大数:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -625,32 +626,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation>既定は画像の枠線を表示する</translation>
+        <translation>既定では画像の枠線を表示する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
         <source>Show annotations toolbar by default</source>
-        <translation>既定は注釈ツールバーを表示する</translation>
+        <translation>既定では注釈ツールバーを表示する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>動作</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定値</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -698,7 +699,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> 秒</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
