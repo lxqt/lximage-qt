@@ -281,11 +281,9 @@ void ImageView::drawOutline() {
 }
 
 void ImageView::setImage(const QImage& image, bool show) {
+  removeAnnotations();
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
-    // all annotations have been removed and deleted by scene_->clear()
-    // so we clear annotations list
-    annotations.clear();
     isSVG = false;
     if(gifMovie_) { // should be deleted explicitly
       delete gifMovie_;
@@ -301,18 +299,6 @@ void ImageView::setImage(const QImage& image, bool show) {
     outlineItem_->hide();
     outlineItem_->setPen(QPen(Qt::NoPen));
     scene_->addItem(outlineItem_);
-  }
-  else {
-    if(!annotations.isEmpty()) {
-      // remove all annotations in the scene one by one
-      for(const auto& annotation : qAsConst(annotations)) {
-        scene_->removeItem(annotation);
-      }
-      // scene_->removeItem() just remove the items from the scene
-      // here we delete all items to prevent a memory leak
-      qDeleteAll(annotations.begin(), annotations.end());
-      annotations.clear();
-    }
   }
 
   image_ = image;
@@ -346,6 +332,7 @@ void ImageView::setImage(const QImage& image, bool show) {
 }
 
 void ImageView::setGifAnimation(const QString& fileName) {
+  removeAnnotations();
   /* the built-in gif reader gives the first frame, which won't
      be shown but is used for tracking position and dimensions */
   image_ = QImage(fileName);
@@ -395,6 +382,7 @@ void ImageView::setGifAnimation(const QString& fileName) {
 }
 
 void ImageView::setSVG(const QString& fileName) {
+  removeAnnotations();
   image_ = QImage(fileName); // for tracking position and dimensions
   if(image_.isNull()) {
     if(imageItem_) {
@@ -634,6 +622,18 @@ void ImageView::drawArrow(QPainter &painter,
   // Draw the two lines in the scene
   annotations.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
   annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
+}
+
+void ImageView::removeAnnotations() {
+  if(!annotations.isEmpty()) {
+    if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
+      for(const auto& annotation : qAsConst(annotations)) {
+        scene_->removeItem(annotation);
+      }
+      qDeleteAll(annotations.begin(), annotations.end());
+    }
+    annotations.clear();
+  }
 }
 
 } // namespace LxImage
