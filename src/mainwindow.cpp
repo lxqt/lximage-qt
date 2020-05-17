@@ -1005,19 +1005,51 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
 }
 
 void MainWindow::on_actionResize_triggered() {
-  QGraphicsItem *imageItem = getImageGraphicsItem();
-  bool isGifOrSvg (imageItem->isWidget() // we have gif animation
-                   || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
-  if (isGifOrSvg) {
-    QMessageBox::warning(this, tr("Cannot resize SVG and GIF Images"), tr("LxImage-qt can't properly resize SVG and GIF Images, sorry"));
+  if(image_.isNull()) {
     return;
   }
+  QGraphicsItem *imageItem = getImageGraphicsItem();
+  bool isSVG(dynamic_cast<QGraphicsSvgItem*>(imageItem));
+  bool isGifOrSvg(imageItem->isWidget() || isSVG);
+  QSize imgSize(image_.size());
   ResizeImageDialog *dialog = new ResizeImageDialog(this);
   dialog->setOriginalSize(image_.size());
   if (dialog->exec() == QDialog::Accepted) {
     QSize newSize = dialog->size();
-    image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui.view->setImage(image_);
+    if(!isSVG) {
+      image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+      ui.view->setImage(image_, isGifOrSvg ? false : true);
+    }
+    if(isGifOrSvg) {
+      qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
+      qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
+
+      QTransform transform;
+      transform.scale(sx, sy);
+      // we need to apply transformations in the reverse order
+      QTransform prevTrans = imageItem->transform();
+      imageItem->setTransform(transform, false);
+      imageItem->setTransform(prevTrans, true);
+      // apply transformations to the outline item too
+      if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()) {
+        outlineItem->setTransform(transform, false);
+        outlineItem->setTransform(prevTrans, true);
+      }
+
+      if(isSVG) {
+        // create and set a sharp scaled image with SVG
+        QPixmap pixmap(newSize.width(), newSize.height());
+        pixmap.fill(Qt::transparent);
+        QPainter painter(&pixmap);
+        painter.scale(sx,sy);
+        painter.setRenderHint(QPainter::Antialiasing);
+        QStyleOptionGraphicsItem opt;
+        imageItem->paint(&painter, &opt);
+        image_ = pixmap.toImage();
+        ui.view->setImage(image_, false);
+      }
+    }
+
     setModified(true);
   }
   dialog->deleteLater();
