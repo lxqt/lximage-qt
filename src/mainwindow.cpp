@@ -819,10 +819,15 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   saveJob_ = new SaveImageJob(ui.view->image(), filePath);
   connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
   connect(saveJob_, &Fm::Job::error, this
-        , [] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity severity, Fm::Job::ErrorAction & /*response*/)
         {
           // TODO: show a info bar?
-          qWarning().noquote() << "lximage-qt:" << err.message();
+          if(severity > Fm::Job::ErrorSeverity::MODERATE) {
+            QMessageBox::critical(this, QObject::tr("Error"), err.message());
+          }
+          else {
+            qWarning().noquote() << "lximage-qt:" << err.message();
+          }
         }
       , Qt::BlockingQueuedConnection);
   saveJob_->runAsync();
@@ -831,9 +836,7 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
 
 QGraphicsItem* MainWindow::getImageGraphicsItem() {
   if(!ui.view->items().isEmpty()) {
-    return (ui.view->items().size() > 1
-            ? ui.view->items().at(1) // the first item is outline (the uppermost item)
-            : ui.view->items().at(0));
+    return (ui.view->items().last()); // the lowermost item
   }
   return nullptr;
 }
