@@ -45,7 +45,17 @@ void SaveImageJob::exec() {
     ++format;
 
   QBuffer imageBuffer;
-  image_.save(&imageBuffer, format); // save the image to buffer
+  // save the image to buffer
+  if(!image_.save(&imageBuffer, format)) {
+    // do not create an empty file when the format is not supported
+    Fm::GErrorPtr err = Fm::GErrorPtr {
+                            G_IO_ERROR,
+                            G_IO_ERROR_NOT_SUPPORTED,
+                            tr("Cannot save with this image format!")
+    };
+    emitError(err, Fm::Job::ErrorSeverity::SEVERE);
+    return;
+  }
 
   GFileOutputStream* fileStream = nullptr;
   Fm::GErrorPtr error;
