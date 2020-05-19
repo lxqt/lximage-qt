@@ -835,23 +835,9 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   // FIXME: add a cancel button to the UI? update status bar?
 }
 
-QGraphicsItem* MainWindow::getImageGraphicsItem() {
-  if(!ui.view->items().isEmpty()) {
-    return (ui.view->items().last()); // the lowermost item
-  }
-  return nullptr;
-}
-
-QGraphicsItem* MainWindow::getOutlineGraphicsItem() {
-  if(ui.view->items().size() > 1) {
-    return ui.view->items().at(0);
-  }
-  return nullptr;
-}
-
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *imageItem = getImageGraphicsItem();
-  bool isGifOrSvg (imageItem->isWidget() // we have gif animation
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
+  bool isGifOrSvg ((imageItem && imageItem->isWidget()) // we have gif animation
                    || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
   if(!image_.isNull()) {
     QTransform transform;
@@ -872,7 +858,7 @@ void MainWindow::on_actionRotateClockwise_triggered() {
     imageItem->setTransform(transform, false);
     imageItem->setTransform(prevTrans, true);
     // apply transformations to the outline item too
-    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
       outlineItem->setTransform(transform, false);
       outlineItem->setTransform(prevTrans, true);
     }
@@ -880,8 +866,8 @@ void MainWindow::on_actionRotateClockwise_triggered() {
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  QGraphicsItem *imageItem = getImageGraphicsItem();
-  bool isGifOrSvg (imageItem->isWidget()
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
+  bool isGifOrSvg ((imageItem && imageItem->isWidget())
                    || dynamic_cast<QGraphicsSvgItem*>(imageItem));
   if(!image_.isNull()) {
     QTransform transform;
@@ -898,7 +884,7 @@ void MainWindow::on_actionRotateCounterclockwise_triggered() {
     QTransform prevTrans = imageItem->transform();
     imageItem->setTransform(transform, false);
     imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
       outlineItem->setTransform(transform, false);
       outlineItem->setTransform(prevTrans, true);
     }
@@ -965,7 +951,7 @@ void MainWindow::on_actionUpload_triggered()
 
 void MainWindow::on_actionFlipVertical_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *imageItem = getImageGraphicsItem()) {
+  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(1, -1);
@@ -973,7 +959,7 @@ void MainWindow::on_actionFlipVertical_triggered() {
     QTransform prevTrans = imageItem->transform();
     imageItem->setTransform(transform, false);
     imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
       outlineItem->setTransform(transform, false);
       outlineItem->setTransform(prevTrans, true);
     }
@@ -987,7 +973,7 @@ void MainWindow::on_actionFlipVertical_triggered() {
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *imageItem = getImageGraphicsItem()) {
+  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(-1, 1);
@@ -995,7 +981,7 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
     QTransform prevTrans = imageItem->transform();
     imageItem->setTransform(transform, false);
     imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()){
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
       outlineItem->setTransform(transform, false);
       outlineItem->setTransform(prevTrans, true);
     }
@@ -1011,40 +997,37 @@ void MainWindow::on_actionResize_triggered() {
   if(image_.isNull()) {
     return;
   }
-  QGraphicsItem *imageItem = getImageGraphicsItem();
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
   bool isSVG(dynamic_cast<QGraphicsSvgItem*>(imageItem));
-  bool isGifOrSvg(imageItem->isWidget() || isSVG);
+  bool isGifOrSvg(isSVG || (imageItem && imageItem->isWidget()));
   QSize imgSize(image_.size());
   ResizeImageDialog *dialog = new ResizeImageDialog(this);
   dialog->setOriginalSize(image_.size());
-  if (dialog->exec() == QDialog::Accepted) {
-    QSize newSize = dialog->size();
-    if(!isSVG) {
+  if(dialog->exec() == QDialog::Accepted) {
+    QSize newSize = dialog->scaledSize();
+    if(!isSVG) { // with SVG, we get a sharp image below
       image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
       ui.view->setImage(image_, isGifOrSvg ? false : true);
     }
     if(isGifOrSvg) {
       qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
       qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
-
       QTransform transform;
       transform.scale(sx, sy);
-      // we need to apply transformations in the reverse order
       QTransform prevTrans = imageItem->transform();
       imageItem->setTransform(transform, false);
       imageItem->setTransform(prevTrans, true);
-      // apply transformations to the outline item too
-      if(QGraphicsItem *outlineItem = getOutlineGraphicsItem()) {
+      if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()) {
         outlineItem->setTransform(transform, false);
         outlineItem->setTransform(prevTrans, true);
       }
 
       if(isSVG) {
         // create and set a sharp scaled image with SVG
-        QPixmap pixmap(newSize.width(), newSize.height());
+        QPixmap pixmap(newSize);
         pixmap.fill(Qt::transparent);
         QPainter painter(&pixmap);
-        painter.scale(sx,sy);
+        painter.setTransform(imageItem->transform());
         painter.setRenderHint(QPainter::Antialiasing);
         QStyleOptionGraphicsItem opt;
         imageItem->paint(&painter, &opt);

@@ -55,7 +55,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>29</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -648,15 +648,6 @@
     <string>O</string>
    </property>
   </action>
-  <action name="actionResize">
-   <property name="icon">
-    <iconset>
-     <normaloff>.</normaloff>.</iconset>
-   </property>
-   <property name="text">
-    <string>Resize</string>
-   </property>
-  </action>
   <action name="actionCopyPath">
    <property name="icon">
     <iconset theme="edit-copy"/>
@@ -666,6 +657,15 @@
    </property>
    <property name="toolTip">
     <string>Copy path</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Resize</string>
    </property>
   </action>
  </widget>

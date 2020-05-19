@@ -1,7 +1,7 @@
 /*
  * LXImage-Qt - a simple and fast image viewer
  * Copyright (C) 2013  PCMan <pcman.tw@gmail.com>
- * 
+ *
  * Resize feature inspired by Gwenview's one
  * Copyright 2010 Aurélien Gâteau <agateau@kde.org>
  * adjam refactored
@@ -27,7 +27,7 @@
 #define LXIMAGE_RESIZEIMAGEDIALOG_H
 
 #include <QDialog>
-#include "ui_resizeimagewidget.h"
+#include "ui_resizeimagedialog.h"
 
 namespace LxImage {
 
@@ -39,17 +39,17 @@ public:
   virtual ~ResizeImageDialog();
 
   void setOriginalSize(const QSize&);
-  QSize size() const;
+  QSize scaledSize() const;
 
 private Q_SLOTS:
-  void slotWidthChanged(int);
-  void slotHeightChanged(int);
-  void slotWidthPercentChanged(double);
-  void slotHeightPercentChanged(double);
-  void slotKeepAspectChanged(bool);
+  void onWidthChanged(int);
+  void onHeightChanged(int);
+  void onWidthPercentChanged(double);
+  void onHeightPercentChanged(double);
+  void onKeepAspectChanged(bool);
 
 private:
-  Ui::ResizeImageWidget ui;
+  Ui::ResizeImageDialog ui;
   bool updateFromRatio_;
   bool updateFromSizeOrPercentage_;
   QSize originalSize_;

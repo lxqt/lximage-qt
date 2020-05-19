@@ -153,8 +153,6 @@ private:
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
-  QGraphicsItem* getImageGraphicsItem();
-  QGraphicsItem* getOutlineGraphicsItem();
 
 private:
   Ui::MainWindow ui;

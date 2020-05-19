@@ -81,6 +81,18 @@ ImageView::~ImageView() {
   }
 }
 
+QGraphicsItem* ImageView::imageGraphicsItem() const {
+  if(!items().isEmpty()) {
+    return (items().last()); // the lowermost item
+  }
+  return nullptr;
+}
+
+QGraphicsItem* ImageView::outlineGraphicsItem() const {
+  return outlineItem_;
+}
+
+
 void ImageView::onFileDropped(const QString file) {
     Q_EMIT fileDropped(file);
 }
@@ -270,14 +282,15 @@ void ImageView::zoomOriginal() {
 
 void ImageView::drawOutline() {
   QColor col = QColor(Qt::black);
-  if (qGray(backgroundBrush().color().rgb()) < GRAY)
+  if(qGray(backgroundBrush().color().rgb()) < GRAY) {
     col = QColor(Qt::white);
+  }
   QPen outline(col, 1, Qt::DashLine);
   outline.setCosmetic(true);
   outlineItem_->setPen(outline);
   outlineItem_->setBrush(Qt::NoBrush);
   outlineItem_->setVisible(showOutline_);
-  outlineItem_->setZValue(1);
+  outlineItem_->setZValue(1); // to be drawn on top of all other items
 }
 
 void ImageView::setImage(const QImage& image, bool show) {
@@ -400,7 +413,7 @@ void ImageView::setSVG(const QString& fileName) {
     imageItem_ = nullptr;
     isSVG = true;
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
-    svgItem->setScale(1 / qApp->devicePixelRatio()); // show scg with its real size
+    svgItem->setScale(1 / qApp->devicePixelRatio()); // show svg with its real size
     scene_->addItem(svgItem);
     QRectF r(svgItem->boundingRect());
     r.setBottomRight(r.bottomRight() / qApp->devicePixelRatio());
@@ -440,8 +453,9 @@ void ImageView::showOutline(bool show) {
 void ImageView::updateOutline() {
   if(outlineItem_) {
     QColor col = QColor(Qt::black);
-    if (qGray(backgroundBrush().color().rgb()) < GRAY)
+    if(qGray(backgroundBrush().color().rgb()) < GRAY) {
       col = QColor(Qt::white);
+    }
     QPen outline = outlineItem_->pen();
     outline.setColor(col);
     outlineItem_->setPen(outline);
@@ -468,8 +482,9 @@ void ImageView::paintEvent(QPaintEvent* event) {
         // outline
         if(showOutline_) {
             QColor col = QColor(Qt::black);
-            if (qGray(backgroundBrush().color().rgb()) < GRAY)
+            if(qGray(backgroundBrush().color().rgb()) < GRAY) {
               col = QColor(Qt::white);
+            }
             QPen outline(col, 1, Qt::DashLine);
             painter.setPen(outline);
             painter.drawRect(viewportImageRect);
@@ -533,8 +548,9 @@ void ImageView::generateCache() {
 
   // If the original image has a color table, also use it for the subImage
   QVector<QRgb> colorTable = image_.colorTable();
-  if (!colorTable.empty())
+  if(!colorTable.empty()) {
     subImage.setColorTable(colorTable);
+  }
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
   QImage scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -574,7 +590,7 @@ void ImageView::hideCursor(bool enable) {
       cursorTimer_->start(CURSOR_HIDE_DELY);
     }
   }
-  else if (cursorTimer_) {
+  else if(cursorTimer_) {
     cursorTimer_->stop();
     delete cursorTimer_;
     cursorTimer_ = nullptr;
