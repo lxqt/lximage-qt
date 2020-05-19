@@ -55,7 +55,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>22</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -131,6 +131,7 @@
     <addaction name="actionRotateCounterclockwise"/>
     <addaction name="actionFlipHorizontal"/>
     <addaction name="actionFlipVertical"/>
+    <addaction name="actionResize"/>
     <addaction name="separator"/>
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
@@ -645,6 +646,15 @@
    </property>
    <property name="shortcut">
     <string>O</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Resize</string>
    </property>
   </action>
   <action name="actionCopyPath">
