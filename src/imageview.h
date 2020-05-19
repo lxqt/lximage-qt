@@ -111,6 +111,8 @@ private:
                  qreal tipAngle,
                  int tipLen);
 
+  void removeAnnotations();
+
 private Q_SLOTS:
   void onFileDropped(const QString file);
   void generateCache();
