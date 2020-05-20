@@ -41,17 +41,20 @@ public:
   ImageView(QWidget* parent = nullptr);
   virtual ~ImageView();
 
+  QGraphicsItem* imageGraphicsItem() const;
+  QGraphicsItem* outlineGraphicsItem() const;
+
   void setImage(const QImage& image, bool show = true);
   void setGifAnimation(const QString& fileName);
   void setSVG(const QString& fileName);
 
-  QImage image() {
+  QImage image() const {
     return image_;
   }
 
   void setScaleFactor(double scale);
 
-  double scaleFactor() {
+  double scaleFactor() const {
     return scaleFactor_;
   }
 
@@ -60,7 +63,7 @@ public:
   void zoomFit();
   void zoomOriginal();
 
-  bool autoZoomFit() {
+  bool autoZoomFit() const {
     return autoZoomFit_;
   }
 
