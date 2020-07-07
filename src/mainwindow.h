@@ -32,6 +32,7 @@
 
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
+#include <libfm-qt/filemenu.h>
 #include <gio/gio.h>
 
 #include "modelfilter.h"
@@ -105,11 +106,14 @@ private Q_SLOTS:
   void on_actionRotateCounterclockwise_triggered();
   void on_actionFlipVertical_triggered();
   void on_actionFlipHorizontal_triggered();
+  void on_actionResize_triggered();
   void on_actionCopy_triggered();
+  void on_actionCopyPath_triggered();
   void on_actionPaste_triggered();
   void on_actionUpload_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
+  void on_actionShowOutline_triggered(bool checked);
   void on_actionShowExifData_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
   void on_actionSlideShow_triggered(bool checked);
@@ -124,6 +128,8 @@ private Q_SLOTS:
   void on_actionOriginalSize_triggered();
   void on_actionZoomFit_triggered();
 
+  void onZooming();
+
   void on_actionDrawNone_triggered();
   void on_actionDrawArrow_triggered();
   void on_actionDrawRectangle_triggered();
@@ -134,15 +140,19 @@ private Q_SLOTS:
   void onKeyboardEscape();
 
   void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
+  void onFilesRemoved(const Fm::FileInfoList& files);
 
   void onFileDropped(const QString path);
+
+  void fileMenuAboutToShow();
+  void createOpenWithMenu();
+  void deleteOpenWithMenu();
 
 private:
   void onFolderLoaded();
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
-  QGraphicsItem* getGraphicsItem();
 
 private:
   Ui::MainWindow ui;
@@ -153,6 +163,8 @@ private:
   Fm::FilePath currentFile_; // path to current image file
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
   bool imageModified_; // the current image is modified by rotation, flip, or others and needs to be saved
+
+  bool startMaximized_;
 
   // folder browsing
   std::shared_ptr<Fm::Folder> folder_;
@@ -176,6 +188,8 @@ private:
   // multi-threading loading of images
   LoadImageJob* loadJob_;
   SaveImageJob* saveJob_;
+
+  QPointer<Fm::FileMenu> fileMenu_;
 };
 
 }

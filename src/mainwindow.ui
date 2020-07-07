@@ -62,6 +62,11 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <widget class="QMenu" name="openWithMenu">
+     <property name="title">
+      <string>Open &amp;With...</string>
+     </property>
+    </widget>
     <widget class="LxImage::MruMenu" name="menuRecently_Opened_Files">
      <property name="title">
       <string>&amp;Recently Opened Files</string>
@@ -70,6 +75,9 @@
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
     <addaction name="actionOpenDirectory"/>
+    <addaction name="separator"/>
+    <addaction name="openWithMenu"/>
+    <addaction name="separator"/>
     <addaction name="menuRecently_Opened_Files"/>
     <addaction name="actionReload"/>
     <addaction name="actionScreenshot"/>
@@ -107,11 +115,13 @@
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
     <addaction name="actionShowThumbnails"/>
+    <addaction name="actionShowOutline"/>
     <addaction name="actionShowExifData"/>
     <addaction name="separator"/>
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
     <addaction name="separator"/>
+    <addaction name="actionAnnotations"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -121,9 +131,12 @@
     <addaction name="actionRotateCounterclockwise"/>
     <addaction name="actionFlipHorizontal"/>
     <addaction name="actionFlipVertical"/>
+    <addaction name="actionResize"/>
     <addaction name="separator"/>
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopyPath"/>
     <addaction name="separator"/>
     <addaction name="actionUpload"/>
     <addaction name="separator"/>
@@ -169,7 +182,7 @@
    <addaction name="separator"/>
    <addaction name="actionSlideShow"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="LxImage::StatusBar" name="statusBar"/>
   <widget class="QToolBar" name="annotationsToolBar">
    <property name="windowTitle">
     <string>Annotations Toolbar</string>
@@ -201,7 +214,7 @@
      <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
-    <string>&amp;File</string>
+    <string>&amp;Open…</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -319,6 +332,9 @@
    </property>
   </action>
   <action name="actionOriginalSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="zoom-original">
      <normaloff>.</normaloff>.</iconset>
@@ -331,6 +347,9 @@
    </property>
   </action>
   <action name="actionZoomFit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="zoom-fit-best">
      <normaloff>.</normaloff>.</iconset>
@@ -604,6 +623,51 @@
     <string>Draw incrementing numbers</string>
    </property>
   </action>
+  <action name="actionAnnotations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Annotations Toolbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Annotations Toolbar</string>
+   </property>
+  </action>
+  <action name="actionShowOutline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Outline</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Outline</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionCopyPath">
+   <property name="icon">
+    <iconset theme="edit-copy"/>
+   </property>
+   <property name="text">
+    <string>Copy Pa&amp;th</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy path</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="icon">
+    <iconset>
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Resize</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -615,6 +679,12 @@
    <class>LxImage::MruMenu</class>
    <extends>QMenu</extends>
    <header>mrumenu.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LxImage::StatusBar</class>
+   <extends>QStatusBar</extends>
+   <header>statusbar.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

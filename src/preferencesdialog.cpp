@@ -22,13 +22,51 @@
 #include "application.h"
 #include <QDir>
 #include <QStringBuilder>
+#include <QKeyEvent>
+#include <QWindow>
+#include <QScreen>
 #include <glib.h>
 
 using namespace LxImage;
 
+static QHash<QString, QString> ACTION_DISPLAY_NAMES;
+
+void KeySequenceEdit::keyPressEvent(QKeyEvent* event) {
+    // by not allowing multiple shortcuts,
+    // the Qt bug that makes Meta a non-modifier is worked around
+    clear();
+    QKeySequenceEdit::keyPressEvent (event);
+}
+
+QWidget* Delegate::createEditor(QWidget* parent,
+                                const QStyleOptionViewItem& /*option*/,
+                                const QModelIndex& /*index*/) const {
+  return new KeySequenceEdit(parent);
+}
+
+bool Delegate::eventFilter(QObject* object, QEvent* event) {
+  QWidget* editor = qobject_cast<QWidget*>(object);
+  if(editor && event->type() == QEvent::KeyPress) {
+    int k = static_cast<QKeyEvent *>(event)->key();
+    if (k == Qt::Key_Return || k == Qt::Key_Enter) {
+      Q_EMIT QAbstractItemDelegate::commitData(editor);
+      Q_EMIT QAbstractItemDelegate::closeEditor(editor);
+      return true;
+    }
+  }
+  return QStyledItemDelegate::eventFilter(object, event);
+}
+/*************************/
 PreferencesDialog::PreferencesDialog(QWidget* parent):
   QDialog(parent) {
   ui.setupUi(this);
+  setAttribute(Qt::WA_DeleteOnClose);
+
+  Delegate *del = new Delegate(ui.tableWidget);
+  ui.tableWidget->setItemDelegate(del);
+  ui.tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+  ui.tableWidget->horizontalHeader()->setSectionsClickable(true);
+  ui.tableWidget->sortByColumn(0, Qt::AscendingOrder);
 
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();
@@ -37,12 +75,30 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   initIconThemes(settings);
   ui.bgColor->setColor(settings.bgColor());
   ui.fullScreenBgColor->setColor(settings.fullScreenBgColor());
+  ui.maxRecentFiles->setValue(settings.maxRecentFiles());
   ui.slideShowInterval->setValue(settings.slideShowInterval());
+  ui.oulineBox->setChecked(settings.isOutlineShown());
+  ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
+
+  // shortcuts
+  initShortcuts();
 }
 
 PreferencesDialog::~PreferencesDialog() {
   Application* app = static_cast<Application*>(qApp);
   app->removeWindow();
+}
+
+void PreferencesDialog::showEvent(QShowEvent* event) {
+  QSize prefSize = static_cast<Application*>(qApp)->settings().getPrefSize();
+  if(QWindow *window = windowHandle()) {
+    if(QScreen *sc = window->screen()) {
+      prefSize = prefSize.boundedTo(sc->availableGeometry().size() - QSize(50, 100));
+    }
+  }
+  resize(prefSize);
+
+  QDialog::showEvent(event);
 }
 
 void PreferencesDialog::accept() {
@@ -68,8 +124,12 @@ void PreferencesDialog::accept() {
 
   settings.setBgColor(ui.bgColor->color());
   settings.setFullScreenBgColor(ui.fullScreenBgColor->color());
+  settings.setMaxRecentFiles(ui.maxRecentFiles->value());
   settings.setSlideShowInterval(ui.slideShowInterval->value());
+  settings.showOutline(ui.oulineBox->isChecked());
+  settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
 
+  applyNewShortcuts();
   settings.save();
   QDialog::accept();
   app->applySettings();
@@ -80,7 +140,7 @@ static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QStri
   const QStringList subDirs = dir.entryList(QDir::AllDirs);
   GKeyFile* kf = g_key_file_new();
   for(const QString& subDir : subDirs) {
-    QString indexFile = dirName % '/' % subDir % "/index.theme";
+    QString indexFile = dirName + QLatin1Char('/') + subDir + QStringLiteral("/index.theme");
     if(g_key_file_load_from_file(kf, indexFile.toLocal8Bit().constData(), GKeyFileFlags(0), nullptr)) {
       // FIXME: skip hidden ones
       // icon theme must have this key, so it has icons if it has this key
@@ -88,7 +148,7 @@ static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QStri
       if(g_key_file_has_key(kf, "Icon Theme", "Directories", nullptr)) {
         char* dispName = g_key_file_get_locale_string(kf, "Icon Theme", "Name", nullptr, nullptr);
         // char* comment = g_key_file_get_locale_string(kf, "Icon Theme", "Comment", NULL, NULL);
-        iconThemes[subDir] = dispName;
+        iconThemes[subDir] = QString::fromUtf8(dispName);
         g_free(dispName);
       }
     }
@@ -102,15 +162,15 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
     // load xdg icon themes and select the current one
     QHash<QString, QString> iconThemes;
     // user customed icon themes
-    findIconThemesInDir(iconThemes, QString(g_get_home_dir()) % "/.icons");
+    findIconThemesInDir(iconThemes, QString::fromUtf8(g_get_home_dir()) + QStringLiteral("/.icons"));
 
     // search for icons in system data dir
     const char* const* dataDirs = g_get_system_data_dirs();
     for(const char* const* dataDir = dataDirs; *dataDir; ++dataDir) {
-      findIconThemesInDir(iconThemes, QString(*dataDir) % "/icons");
+      findIconThemesInDir(iconThemes, QString::fromUtf8((*dataDir)) + QStringLiteral("/icons"));
     }
 
-    iconThemes.remove("hicolor"); // remove hicolor, which is only a fallback
+    iconThemes.remove(QStringLiteral("hicolor")); // remove hicolor, which is only a fallback
     QHash<QString, QString>::const_iterator it;
     for(it = iconThemes.constBegin(); it != iconThemes.constEnd(); ++it) {
       ui.iconTheme->addItem(it.value(), it.key());
@@ -136,7 +196,131 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
   }
 }
 
+void PreferencesDialog::initShortcuts() {
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+
+  // pair display and object names together (to get the latter from the former)
+  if(ACTION_DISPLAY_NAMES.isEmpty()) {
+    QHash<QString, Application::ShortcutDescription>::const_iterator iter = app->defaultShortcuts().constBegin();
+    while (iter != app->defaultShortcuts().constEnd()) {
+      ACTION_DISPLAY_NAMES.insert(iter.value().displayText, iter.key());
+      ++ iter;
+    }
+  }
+
+  // fill the table widget
+  ui.tableWidget->setRowCount(ACTION_DISPLAY_NAMES.size());
+  ui.tableWidget->setSortingEnabled(false);
+  int index = 0;
+  QHash<QString, QString> ca = settings.customShortcutActions();
+  QHash<QString, QString>::const_iterator iter = ACTION_DISPLAY_NAMES.constBegin();
+  while(iter != ACTION_DISPLAY_NAMES.constEnd()) {
+    // add the action item
+    QTableWidgetItem *item = new QTableWidgetItem(iter.key());
+    item->setFlags(item->flags() & ~Qt::ItemIsEditable & ~Qt::ItemIsSelectable);
+    ui.tableWidget->setItem(index, 0, item);
+
+    // NOTE: Shortcuts are saved in the PortableText format but
+    // their texts should be added to the table in the NativeText format.
+    QString shortcut;
+    if(ca.contains(iter.value())) { // a cusrom shortcut
+      shortcut = ca.value(iter.value());
+      QKeySequence keySeq(shortcut, QKeySequence::PortableText);
+      shortcut = keySeq.toString(QKeySequence::NativeText);
+    }
+    else { // a default shortcut
+      shortcut = app->defaultShortcuts().value(iter.value()).shortcut.toString(QKeySequence::NativeText);
+    }
+    ui.tableWidget->setItem(index, 1, new QTableWidgetItem(shortcut));
+
+    ++ iter;
+    ++ index;
+  }
+  ui.tableWidget->setSortingEnabled(true);
+  ui.tableWidget->setCurrentCell(0, 1);
+
+  connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
+  connect(ui.defaultButton, &QAbstractButton::clicked, this, &PreferencesDialog::restoreDefaultShortcuts);
+  ui.defaultButton->setDisabled(ca.isEmpty());
+}
+
+void PreferencesDialog::onShortcutChange(QTableWidgetItem* item) {
+  QString desc = ui.tableWidget->item(ui.tableWidget->currentRow(), 0)->text();
+  QString txt = item->text();
+  if(!txt.isEmpty()) {
+    // NOTE: The QKeySequenceEdit text is in the NativeText format but
+    // it should be converted into the PortableText format for saving.
+    QKeySequence keySeq(txt, QKeySequence::NativeText);
+    txt = keySeq.toString(QKeySequence::PortableText);
+  }
+  modifiedShortcuts_.insert(ACTION_DISPLAY_NAMES.value(desc), txt);
+
+  // also set the state of the Default button
+  Application* app = static_cast<Application*>(qApp);
+  for(int i = 0; i < ui.tableWidget->rowCount(); ++i) {
+    const QString objectName = ACTION_DISPLAY_NAMES.value(ui.tableWidget->item(i, 0)->text());
+    if(app->defaultShortcuts().value(objectName).shortcut.toString(QKeySequence::PortableText)
+       != ui.tableWidget->item(i, 1)->text()) {
+      ui.defaultButton->setEnabled(true);
+      return;
+    }
+  }
+  ui.defaultButton->setEnabled(false);
+}
+
+void PreferencesDialog::restoreDefaultShortcuts() {
+  Application* app = static_cast<Application*>(qApp);
+  if (modifiedShortcuts_.isEmpty()
+      && app->settings().customShortcutActions().isEmpty()) {
+    // do nothing if there's no custom shortcut
+    return;
+  }
+  disconnect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
+  int cur = ui.tableWidget->currentColumn() == 0 ? 0 : ui.tableWidget->currentRow();
+  ui.tableWidget->setSortingEnabled(false);
+
+  // consider all shortcuts modified
+  QHash<QString, Application::ShortcutDescription>::const_iterator iter = app->defaultShortcuts().constBegin();
+  while (iter != app->defaultShortcuts().constEnd()) {
+    modifiedShortcuts_.insert(iter.key(), iter.value().shortcut.toString(QKeySequence::PortableText));
+    ++ iter;
+  }
+
+  // restore default shortcuts in the GUI
+  for(int i = 0; i < ui.tableWidget->rowCount(); ++i) {
+    const QString objectName = ACTION_DISPLAY_NAMES.value(ui.tableWidget->item(i, 0)->text());
+    QString s = app->defaultShortcuts().value(objectName).shortcut.toString(QKeySequence::PortableText);
+    ui.tableWidget->item(i, 1)->setText(s);
+  }
+
+  ui.tableWidget->setSortingEnabled(true);
+  ui.tableWidget->setCurrentCell(cur, 1);
+  connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
+  ui.defaultButton->setEnabled(false);
+}
+
+void PreferencesDialog::applyNewShortcuts() {
+  // remember the modified shortcuts if they are different from the default ones
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+  QHash<QString, QString>::const_iterator it = modifiedShortcuts_.constBegin();
+  while(it != modifiedShortcuts_.constEnd()) {
+    if(app->defaultShortcuts().value(it.key()).shortcut.toString(QKeySequence::PortableText) == it.value()) {
+      settings.removeShortcut(it.key());
+    }
+    else {
+      settings.addShortcut(it.key(), it.value());
+    }
+    ++it;
+  }
+}
+
 void PreferencesDialog::done(int r) {
+  // remember size
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+  settings.setPrefSize(size());
+
   QDialog::done(r);
   deleteLater();
 }

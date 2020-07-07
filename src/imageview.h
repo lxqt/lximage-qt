@@ -38,20 +38,23 @@ class ImageView : public QGraphicsView {
   Q_OBJECT
 
 public:
-  ImageView(QWidget* parent = 0);
+  ImageView(QWidget* parent = nullptr);
   virtual ~ImageView();
+
+  QGraphicsItem* imageGraphicsItem() const;
+  QGraphicsItem* outlineGraphicsItem() const;
 
   void setImage(const QImage& image, bool show = true);
   void setGifAnimation(const QString& fileName);
   void setSVG(const QString& fileName);
 
-  QImage image() {
+  QImage image() const {
     return image_;
   }
 
   void setScaleFactor(double scale);
 
-  double scaleFactor() {
+  double scaleFactor() const {
     return scaleFactor_;
   }
 
@@ -60,7 +63,7 @@ public:
   void zoomFit();
   void zoomOriginal();
 
-  bool autoZoomFit() {
+  bool autoZoomFit() const {
     return autoZoomFit_;
   }
 
@@ -81,9 +84,12 @@ public:
     ToolNumber
   };
   void activateTool(Tool tool);
+  void showOutline(bool show);
+  void updateOutline();
 
 Q_SIGNALS:
   void fileDropped(const QString file);
+  void zooming();
 
 protected:
   virtual void wheelEvent(QWheelEvent* event);
@@ -100,11 +106,15 @@ private:
   QRect viewportToScene(const QRect& rect);
   QRect sceneToViewport(const QRectF& rect);
 
+  void drawOutline();
+
   void drawArrow(QPainter &painter,
                  const QPoint &start,
                  const QPoint &end,
                  qreal tipAngle,
-                 int tipLen) const;
+                 int tipLen);
+
+  void removeAnnotations();
 
 private Q_SLOTS:
   void onFileDropped(const QString file);
@@ -114,6 +124,7 @@ private Q_SLOTS:
 private:
   GraphicsScene* scene_; // the topmost container of all graphic items
   QGraphicsRectItem* imageItem_; // the rect item used to draw the image
+  QGraphicsRectItem* outlineItem_; // the rect to draw the image outline
   QImage image_; // image to show
   QMovie *gifMovie_; // gif animation to show (should be deleted explicitly)
   QPixmap cachedPixmap_; // caching of current viewport content (high quality scaled image)
@@ -126,7 +137,9 @@ private:
   bool isSVG; // is the image an SVG file?
   Tool currentTool; // currently selected tool
   QPoint startPoint; // starting point for the tool
+  QList<QGraphicsItem *> annotations;	//annotation items which have been drawn in the scene
   int nextNumber;
+  bool showOutline_;
 };
 
 }

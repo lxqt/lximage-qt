@@ -25,6 +25,7 @@
 #include <QStringList>
 #include <qcache.h>
 #include <QColor>
+#include <QSize>
 
 namespace LxImage {
 
@@ -88,6 +89,13 @@ public:
     recentlyOpenedFiles_ = recentlyOpenedFiles;
   }
 
+  int maxRecentFiles() const {
+    return maxRecentFiles_;
+  }
+  void setMaxRecentFiles(int m) {
+    maxRecentFiles_ = m;
+  }
+
   bool rememberWindowSize() const {
     return rememberWindowSize_;
   }
@@ -145,6 +153,40 @@ public:
       lastWindowMaximized_ = lastWindowMaximized;
   }
 
+  bool isOutlineShown() const {
+    return showOutline_;
+  }
+
+  void showOutline(bool show) {
+    showOutline_ = show;
+  }
+
+  bool isAnnotationsToolbarShown() const {
+    return showAnnotationsToolbar_;
+  }
+
+  void showAnnotationsToolbar(bool show) {
+    showAnnotationsToolbar_ = show;
+  }
+
+  QSize getPrefSize() const {
+    return prefSize_;
+  }
+  void setPrefSize(const QSize &s) {
+    prefSize_ = s;
+  }
+
+  QHash<QString, QString> customShortcutActions() const {
+    return actions_;
+  }
+  void addShortcut(const QString &action, const QString &shortcut) {
+    actions_.insert (action, shortcut);
+  }
+  void removeShortcut(const QString &action) {
+    actions_.remove(action);
+    removedActions_ << action;
+  }
+
 private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
@@ -154,6 +196,7 @@ private:
   int slideShowInterval_;
   QString fallbackIconTheme_;
   QStringList recentlyOpenedFiles_;
+  int maxRecentFiles_;
 
   bool rememberWindowSize_;
   int fixedWindowWidth_;
@@ -161,6 +204,13 @@ private:
   int lastWindowWidth_;
   int lastWindowHeight_;
   bool lastWindowMaximized_;
+  bool showOutline_;
+  bool showAnnotationsToolbar_;
+
+  QSize prefSize_;
+
+  QHash<QString, QString> actions_;
+  QStringList removedActions_;
 };
 
 }

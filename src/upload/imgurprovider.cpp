@@ -27,7 +27,7 @@
 
 using namespace LxImage;
 
-const QUrl gUploadURL("https://api.imgur.com/3/upload.json");
+const QUrl gUploadURL(QStringLiteral("https://api.imgur.com/3/upload.json"));
 const QByteArray gAuthHeader = "Client-ID 63ff047cd8bcf9e";
 const QByteArray gTypeHeader = "application/x-www-form-urlencoded";
 

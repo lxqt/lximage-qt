@@ -30,9 +30,11 @@
 #include <QGraphicsSvgItem>
 #include <QPainter>
 #include <QPainterPath>
+#include <QGuiApplication>
 #include <QtMath>
 
 #define CURSOR_HIDE_DELY 3000
+#define GRAY 127
 
 namespace LxImage {
 
@@ -40,13 +42,15 @@ ImageView::ImageView(QWidget* parent):
   QGraphicsView(parent),
   scene_(new GraphicsScene(this)),
   imageItem_(new QGraphicsRectItem()),
+  outlineItem_(new QGraphicsRectItem()),
   gifMovie_(nullptr),
   cacheTimer_(nullptr),
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
   isSVG(false),
-  currentTool(ToolNone) {
+  currentTool(ToolNone),
+  showOutline_(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -57,6 +61,10 @@ ImageView::ImageView(QWidget* parent):
   imageItem_->hide();
   imageItem_->setPen(QPen(Qt::NoPen)); // remove the border
   scene_->addItem(imageItem_);
+
+  outlineItem_->hide();
+  outlineItem_->setPen(QPen(Qt::NoPen));
+  scene_->addItem(outlineItem_);
 }
 
 ImageView::~ImageView() {
@@ -72,6 +80,18 @@ ImageView::~ImageView() {
     delete cursorTimer_;
   }
 }
+
+QGraphicsItem* ImageView::imageGraphicsItem() const {
+  if(!items().isEmpty()) {
+    return (items().last()); // the lowermost item
+  }
+  return nullptr;
+}
+
+QGraphicsItem* ImageView::outlineGraphicsItem() const {
+  return outlineItem_;
+}
+
 
 void ImageView::onFileDropped(const QString file) {
     Q_EMIT fileDropped(file);
@@ -105,19 +125,25 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
 }
 
 void ImageView::mousePressEvent(QMouseEvent * event) {
-  if (currentTool == ToolNone) {
+  if(currentTool == ToolNone) {
     QGraphicsView::mousePressEvent(event);
-    if(cursorTimer_) cursorTimer_->stop();
-  } else {
+    if(cursorTimer_) {
+      cursorTimer_->stop();
+    }
+  }
+  else {
     startPoint = mapToScene(event->pos()).toPoint();
   }
 }
 
 void ImageView::mouseReleaseEvent(QMouseEvent* event) {
-  if (currentTool == ToolNone) {
+  if(currentTool == ToolNone) {
     QGraphicsView::mouseReleaseEvent(event);
-    if(cursorTimer_) cursorTimer_->start(CURSOR_HIDE_DELY);
-  } else if (!image_.isNull()) {
+    if(cursorTimer_) {
+      cursorTimer_->start(CURSOR_HIDE_DELY);
+    }
+  }
+  else if(!image_.isNull()) {
     QPoint endPoint = mapToScene(event->pos()).toPoint();
 
     QPainter painter(&image_);
@@ -129,10 +155,14 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
       break;
     case ToolRectangle:
+      // Draw the rectangle in the image and scene at the same time
       painter.drawRect(QRect(startPoint, endPoint));
+      annotations.append(scene_->addRect(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolCircle:
+      // Draw the circle in the image and scene at the same time
       painter.drawEllipse(QRect(startPoint, endPoint));
+      annotations.append(scene_->addEllipse(QRect(startPoint, endPoint), painter.pen()));
       break;
     case ToolNumber:
     {
@@ -142,7 +172,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.setFont(font);
 
       // Calculate the dimensions of the text
-      QString text = QString("%1").arg(nextNumber++);
+      QString text = QStringLiteral("%1").arg(nextNumber++);
       QRectF textRect = painter.boundingRect(image_.rect(), 0, text);
       textRect.moveTo(endPoint);
 
@@ -153,15 +183,24 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
                         textRect.top() + (textRect.height() / 2 - radius),
                         radius * 2, radius * 2);
 
-      // Draw the path
+      // Draw the path in the image
       QPainterPath path;
       path.addEllipse(circleRect);
       painter.fillPath(path, Qt::red);
       painter.drawPath(path);
+      // Draw the path in the sence
+      annotations.append(scene_->addPath(path, painter.pen(), QBrush(Qt::red)));
 
-      // Draw the text
+      // Draw the text in the image
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
+      // Draw the text in the sence
+      QGraphicsSimpleTextItem* textItem = new QGraphicsSimpleTextItem(text);
+      textItem->setFont(font);
+      textItem->setBrush(Qt::white);
+      textItem->setPos(textRect.topLeft());
+      scene_->addItem(textItem);
+      annotations.append(textItem);
 
       break;
     }
@@ -201,7 +240,8 @@ void ImageView::zoomFit() {
   if(!image_.isNull()) {
     // if the image is smaller than our view, use its original size
     // instead of scaling it up.
-    if(image_.width() <= width() && image_.height() <= height()) {
+    if(static_cast<int>(image_.width() / qApp->devicePixelRatio()) <= width()
+       && static_cast<int>(image_.height() / qApp->devicePixelRatio()) <= height()) {
       zoomOriginal();
       return;
     }
@@ -218,6 +258,7 @@ void ImageView::zoomIn() {
     scaleFactor_ *= 1.1;
     scale(scaleFactor_, scaleFactor_);
     queueGenerateCache();
+    Q_EMIT zooming();
   }
 }
 
@@ -228,6 +269,7 @@ void ImageView::zoomOut() {
     scaleFactor_ /= 1.1;
     scale(scaleFactor_, scaleFactor_);
     queueGenerateCache();
+    Q_EMIT zooming();
   }
 }
 
@@ -238,7 +280,21 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
+void ImageView::drawOutline() {
+  QColor col = QColor(Qt::black);
+  if(qGray(backgroundBrush().color().rgb()) < GRAY) {
+    col = QColor(Qt::white);
+  }
+  QPen outline(col, 1, Qt::DashLine);
+  outline.setCosmetic(true);
+  outlineItem_->setPen(outline);
+  outlineItem_->setBrush(Qt::NoBrush);
+  outlineItem_->setVisible(showOutline_);
+  outlineItem_->setZValue(1); // to be drawn on top of all other items
+}
+
 void ImageView::setImage(const QImage& image, bool show) {
+  removeAnnotations();
   if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
     scene_->clear();
     isSVG = false;
@@ -251,21 +307,33 @@ void ImageView::setImage(const QImage& image, bool show) {
     imageItem_->hide();
     imageItem_->setPen(QPen(Qt::NoPen));
     scene_->addItem(imageItem_);
+    // outline
+    outlineItem_ = new QGraphicsRectItem();
+    outlineItem_->hide();
+    outlineItem_->setPen(QPen(Qt::NoPen));
+    scene_->addItem(outlineItem_);
   }
 
   image_ = image;
+  QRectF r(QPointF(0, 0), image_.size() / qApp->devicePixelRatio());
   if(image.isNull()) {
     imageItem_->hide();
     imageItem_->setBrush(QBrush());
+    outlineItem_->hide();
+    outlineItem_->setBrush(QBrush());
     scene_->setSceneRect(0, 0, 0, 0);
   }
   else {
     if(show) {
-      imageItem_->setRect(0, 0, image_.width(), image_.height());
+      image_.setDevicePixelRatio(qApp->devicePixelRatio());
+      imageItem_->setRect(r);
       imageItem_->setBrush(image_);
       imageItem_->show();
+      // outline
+      outlineItem_->setRect(r);
+      drawOutline();
     }
-    scene_->setSceneRect(0, 0, image_.width(), image_.height());
+    scene_->setSceneRect(r);
   }
 
   if(autoZoomFit_)
@@ -277,6 +345,7 @@ void ImageView::setImage(const QImage& image, bool show) {
 }
 
 void ImageView::setGifAnimation(const QString& fileName) {
+  removeAnnotations();
   /* the built-in gif reader gives the first frame, which won't
      be shown but is used for tracking position and dimensions */
   image_ = QImage(fileName);
@@ -284,6 +353,10 @@ void ImageView::setGifAnimation(const QString& fileName) {
     if(imageItem_) {
       imageItem_->hide();
       imageItem_->setBrush(QBrush());
+    }
+    if(outlineItem_) {
+      outlineItem_->hide();
+      outlineItem_->setBrush(QBrush());
     }
     scene_->setSceneRect(0, 0, 0, 0);
   }
@@ -295,9 +368,11 @@ void ImageView::setGifAnimation(const QString& fileName) {
       gifMovie_ = nullptr;
     }
     QPixmap pix(image_.size());
+    pix.setDevicePixelRatio(qApp->devicePixelRatio());
     pix.fill(Qt::transparent);
     QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
     QLabel *gifLabel = new QLabel();
+    gifLabel->setMaximumSize(pix.size() / qApp->devicePixelRatio()); // show gif with its real size
     gifMovie_ = new QMovie(fileName);
     QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
     gifLabel->setAttribute(Qt::WA_NoSystemBackground);
@@ -306,6 +381,12 @@ void ImageView::setGifAnimation(const QString& fileName) {
     gifMovie_->start();
     scene_->addItem(gifItem);
     scene_->setSceneRect(gifItem->boundingRect());
+
+    // outline
+    outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
+    outlineItem_->setRect(gifItem->boundingRect());
+    drawOutline();
+    scene_->addItem(outlineItem_);
   }
 
   if(autoZoomFit_)
@@ -314,11 +395,16 @@ void ImageView::setGifAnimation(const QString& fileName) {
 }
 
 void ImageView::setSVG(const QString& fileName) {
+  removeAnnotations();
   image_ = QImage(fileName); // for tracking position and dimensions
   if(image_.isNull()) {
     if(imageItem_) {
       imageItem_->hide();
       imageItem_->setBrush(QBrush());
+    }
+    if(outlineItem_) {
+      outlineItem_->hide();
+      outlineItem_->setBrush(QBrush());
     }
     scene_->setSceneRect(0, 0, 0, 0);
   }
@@ -327,8 +413,18 @@ void ImageView::setSVG(const QString& fileName) {
     imageItem_ = nullptr;
     isSVG = true;
     QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
+    svgItem->setScale(1 / qApp->devicePixelRatio()); // show svg with its real size
     scene_->addItem(svgItem);
-    scene_->setSceneRect(svgItem->boundingRect());
+    QRectF r(svgItem->boundingRect());
+    r.setBottomRight(r.bottomRight() / qApp->devicePixelRatio());
+    r.setTopLeft(r.topLeft() / qApp->devicePixelRatio());
+    scene_->setSceneRect(r);
+
+    // outline
+    outlineItem_ = new QGraphicsRectItem(); // deleted by clear()
+    outlineItem_->setRect(r);
+    drawOutline();
+    scene_->addItem(outlineItem_);
   }
 
   if(autoZoomFit_)
@@ -342,6 +438,28 @@ void ImageView::setScaleFactor(double factor) {
     resetTransform();
     scale(factor, factor);
     queueGenerateCache();
+  }
+}
+
+void ImageView::showOutline(bool show) {
+  if(outlineItem_) {
+    outlineItem_->setVisible(show);
+    // the viewport may not be updated automatically
+    viewport()->update();
+  }
+  showOutline_ = show;
+}
+
+void ImageView::updateOutline() {
+  if(outlineItem_) {
+    QColor col = QColor(Qt::black);
+    if(qGray(backgroundBrush().color().rgb()) < GRAY) {
+      col = QColor(Qt::white);
+    }
+    QPen outline = outlineItem_->pen();
+    outline.setColor(col);
+    outlineItem_->setPen(outline);
+    viewport()->update();
   }
 }
 
@@ -361,6 +479,16 @@ void ImageView::paintEvent(QPaintEvent* event) {
         QPainter painter(viewport());
         painter.fillRect(event->rect(), backgroundBrush());
         painter.drawPixmap(repaintImageRect, cachedPixmap_);
+        // outline
+        if(showOutline_) {
+            QColor col = QColor(Qt::black);
+            if(qGray(backgroundBrush().color().rgb()) < GRAY) {
+              col = QColor(Qt::white);
+            }
+            QPen outline(col, 1, Qt::DashLine);
+            painter.setPen(outline);
+            painter.drawRect(viewportImageRect);
+        }
         return;
       }
     }
@@ -420,11 +548,12 @@ void ImageView::generateCache() {
 
   // If the original image has a color table, also use it for the subImage
   QVector<QRgb> colorTable = image_.colorTable();
-  if (!colorTable.empty())
+  if(!colorTable.empty()) {
     subImage.setColorTable(colorTable);
+  }
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.width(), cachedRect_.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
@@ -434,8 +563,10 @@ void ImageView::generateCache() {
 // convert viewport coordinate to the original image (not scaled).
 QRect ImageView::viewportToScene(const QRect& rect) {
   // QPolygon poly = mapToScene(imageItem_->rect());
-  QPoint topLeft = mapToScene(rect.topLeft()).toPoint();
-  QPoint bottomRight = mapToScene(rect.bottomRight()).toPoint();
+  /* NOTE: The scene rectangle is shrunken by qApp->devicePixelRatio()
+     but we want the coordinates with respect to the original image. */
+  QPoint topLeft = (mapToScene(rect.topLeft()) * qApp->devicePixelRatio()).toPoint();
+  QPoint bottomRight = (mapToScene(rect.bottomRight()) * qApp->devicePixelRatio()).toPoint();
   return QRect(topLeft, bottomRight);
 }
 
@@ -455,15 +586,17 @@ void ImageView::hideCursor(bool enable) {
     cursorTimer_ = new QTimer(this);
     cursorTimer_->setSingleShot(true);
     connect(cursorTimer_, &QTimer::timeout, this, &ImageView::blankCursor);
-    if(viewport()->cursor().shape() == Qt::OpenHandCursor)
-        cursorTimer_->start(CURSOR_HIDE_DELY);
+    if(viewport()->cursor().shape() == Qt::OpenHandCursor) {
+      cursorTimer_->start(CURSOR_HIDE_DELY);
+    }
   }
-  else if (cursorTimer_) {
+  else if(cursorTimer_) {
     cursorTimer_->stop();
     delete cursorTimer_;
     cursorTimer_ = nullptr;
-    if(viewport()->cursor().shape() == Qt::BlankCursor)
-        viewport()->setCursor(Qt::OpenHandCursor);
+    if(viewport()->cursor().shape() == Qt::BlankCursor) {
+      viewport()->setCursor(Qt::OpenHandCursor);
+    }
   }
 }
 
@@ -478,10 +611,12 @@ void ImageView::drawArrow(QPainter &painter,
                           const QPoint &start,
                           const QPoint &end,
                           qreal tipAngle,
-                          int tipLen) const
+                          int tipLen)
 {
-  // Draw the line
+  // Draw the line in the inmage
   painter.drawLine(start, end);
+  // Draw the line in the scene
+  annotations.append(scene_->addLine(QLine(start, end), painter.pen()));
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -497,9 +632,24 @@ void ImageView::drawArrow(QPainter &painter,
     static_cast<int>(qCos(angle - tipAngle) * tipLen)
   );
 
-  // Draw the two lines
+  // Draw the two lines in the image
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
+  // Draw the two lines in the scene
+  annotations.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
+  annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
+}
+
+void ImageView::removeAnnotations() {
+  if(!annotations.isEmpty()) {
+    if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
+      for(const auto& annotation : qAsConst(annotations)) {
+        scene_->removeItem(annotation);
+      }
+      qDeleteAll(annotations.begin(), annotations.end());
+    }
+    annotations.clear();
+  }
 }
 
 } // namespace LxImage

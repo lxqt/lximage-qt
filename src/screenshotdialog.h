@@ -28,22 +28,22 @@ namespace LxImage {
 
 class ScreenshotDialog : public QDialog {
   Q_OBJECT
-public:
-  explicit ScreenshotDialog(QWidget* parent = 0, Qt::WindowFlags f = 0);
+ public:
+  explicit ScreenshotDialog(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
   virtual ~ScreenshotDialog();
 
   virtual void done(int r);
-
-private:
-  WId activeWindowId();
-  QRect windowFrame(WId wid);
-
-private Q_SLOTS:
+  static void cmdTopShotToDir(QString path);
+ private Q_SLOTS:
   void doScreenshot();
 
-private:
+ private:
   Ui::ScreenshotDialog ui;
-  bool hasXfixes_;
+  const bool hasXfixes_;
+
+  QImage static takeScreenshot(const WId &wid, const QRect &rect, bool takeCursor = false);
+  static WId activeWindowId();
+  static QRect windowFrame(WId wid);
 };
 
 }

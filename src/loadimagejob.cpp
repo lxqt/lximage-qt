@@ -38,8 +38,8 @@ void readExifEntry(ExifEntry* ee, void* user_data) {
     QMap<QString, QString>& exifData = *reinterpret_cast<QMap<QString, QString>*>(user_data);
     char c[100];
     auto ifd = exif_entry_get_ifd(ee);
-    QString key = exif_tag_get_title_in_ifd(ee->tag, ifd);
-    QString value = exif_entry_get_value(ee, c, 100);
+    QString key = QString::fromUtf8(exif_tag_get_title_in_ifd(ee->tag, ifd));
+    QString value = QString::fromUtf8(exif_entry_get_value(ee, c, 100));
     exifData.insert(key, value);
 }
 
@@ -109,25 +109,41 @@ void LoadImageJob::exec() {
             ExifByteOrder bo = exif_data_get_byte_order(exif_data.get());
             /* bo == EXIF_BYTE_ORDER_INTEL ; */
             orient = exif_get_short (orient_ent->data, bo);
-            qreal rotate_degrees = 0.0;
+            QMatrix m;
             switch(orient) {
               case 1: /* no rotation */
                 break;
-              case 8:
-                rotate_degrees = 270.0;
+              case 2:
+                // mirror horizontally
+                m.scale(-1, 1);
                 break;
               case 3:
-                rotate_degrees = 180.0;
+                m.rotate(180);
+                break;
+              case 4:
+                // mirror vertically
+                m.scale(1, -1);
+                break;
+              case 5:
+                // transpose
+                m.rotate(-90);
+                m.scale(1, -1);
                 break;
               case 6:
-                rotate_degrees = 90.0;
+                m.rotate(90);
+                break;
+              case 7:
+                // transverse
+                m.rotate(90);
+                m.scale(1, -1);
+                break;
+              case 8:
+                m.rotate(270);
                 break;
             }
             // rotate the image according to EXIF orientation tag
-            if(rotate_degrees != 0.0) {
-              QTransform transform;
-              transform.rotate(rotate_degrees);
-              image_ = image_.transformed(transform, Qt::SmoothTransformation);
+            if(!m.isIdentity()) {
+              image_ = image_.transformed(m);
             }
           }
 

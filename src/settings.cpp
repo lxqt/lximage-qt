@@ -21,65 +21,98 @@
 #include "settings.h"
 #include <QSettings>
 #include <QIcon>
+#include <QKeySequence>
 
 using namespace LxImage;
 
 Settings::Settings():
-  useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == "hicolor"),
+  useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == QLatin1String("hicolor")),
   bgColor_(255, 255, 255),
   fullScreenBgColor_(0, 0, 0),
   showThumbnails_(false),
   showSidePane_(false),
   slideShowInterval_(5),
-  fallbackIconTheme_("oxygen"),
+  fallbackIconTheme_(QStringLiteral("oxygen")),
+  maxRecentFiles_(5),
   fixedWindowWidth_(640),
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
   lastWindowHeight_(480),
-  lastWindowMaximized_(false) {
+  lastWindowMaximized_(false),
+  showOutline_(false),
+  showAnnotationsToolbar_(false) {
 }
 
 Settings::~Settings() {
 }
 
 bool Settings::load() {
-  QSettings settings("lximage-qt", "settings");
-  fallbackIconTheme_ = settings.value("fallbackIconTheme", fallbackIconTheme_).toString();
-  bgColor_ = settings.value("bgColor", bgColor_).value<QColor>();
-  fullScreenBgColor_ = settings.value("fullScreenBgColor", fullScreenBgColor_).value<QColor>();
+  QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
+  fallbackIconTheme_ = settings.value(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_).toString();
+  bgColor_ = settings.value(QStringLiteral("bgColor"), bgColor_).value<QColor>();
+  fullScreenBgColor_ = settings.value(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_).value<QColor>();
   // showThumbnails_;
   // showSidePane_;
-  slideShowInterval_ = settings.value("slideShowInterval", slideShowInterval_).toInt();
-  recentlyOpenedFiles_ = settings.value("recentlyOpenedFiles").toStringList();
+  slideShowInterval_ = settings.value(QStringLiteral("slideShowInterval"), slideShowInterval_).toInt();
+  maxRecentFiles_ = settings.value(QStringLiteral("maxRecentFiles"), maxRecentFiles_).toInt();
+  recentlyOpenedFiles_ = settings.value(QStringLiteral("recentlyOpenedFiles")).toStringList();
 
-  settings.beginGroup("Window");
-  fixedWindowWidth_ = settings.value("FixedWidth", 640).toInt();
-  fixedWindowHeight_ = settings.value("FixedHeight", 480).toInt();
-  lastWindowWidth_ = settings.value("LastWindowWidth", 640).toInt();
-  lastWindowHeight_ = settings.value("LastWindowHeight", 480).toInt();
-  lastWindowMaximized_ = settings.value("LastWindowMaximized", false).toBool();
-  rememberWindowSize_ = settings.value("RememberWindowSize", true).toBool();
+  settings.beginGroup(QStringLiteral("Window"));
+  fixedWindowWidth_ = settings.value(QStringLiteral("FixedWidth"), 640).toInt();
+  fixedWindowHeight_ = settings.value(QStringLiteral("FixedHeight"), 480).toInt();
+  lastWindowWidth_ = settings.value(QStringLiteral("LastWindowWidth"), 640).toInt();
+  lastWindowHeight_ = settings.value(QStringLiteral("LastWindowHeight"), 480).toInt();
+  lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
+  rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
+  showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
+  showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
+  prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
+  settings.endGroup();
+
+  // shortcuts
+  settings.beginGroup(QStringLiteral("Shortcuts"));
+  const QStringList actions = settings.childKeys();
+  for(const auto& action : actions) {
+    QString str = settings.value(action).toString();
+    addShortcut(action, str);
+  }
   settings.endGroup();
 
   return true;
 }
 
 bool Settings::save() {
-  QSettings settings("lximage-qt", "settings");
+  QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
 
-  settings.setValue("fallbackIconTheme", fallbackIconTheme_);
-  settings.setValue("bgColor", bgColor_);
-  settings.setValue("fullScreenBgColor", fullScreenBgColor_);
-  settings.setValue("slideShowInterval", slideShowInterval_);
-  settings.setValue("recentlyOpenedFiles", recentlyOpenedFiles_);
+  settings.setValue(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_);
+  settings.setValue(QStringLiteral("bgColor"), bgColor_);
+  settings.setValue(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_);
+  settings.setValue(QStringLiteral("slideShowInterval"), slideShowInterval_);
+  settings.setValue(QStringLiteral("maxRecentFiles"), maxRecentFiles_);
+  settings.setValue(QStringLiteral("recentlyOpenedFiles"), recentlyOpenedFiles_);
 
-  settings.beginGroup("Window");
-  settings.setValue("FixedWidth", fixedWindowWidth_);
-  settings.setValue("FixedHeight", fixedWindowHeight_);
-  settings.setValue("LastWindowWidth", lastWindowWidth_);
-  settings.setValue("LastWindowHeight", lastWindowHeight_);
-  settings.setValue("LastWindowMaximized", lastWindowMaximized_);
-  settings.setValue("RememberWindowSize", rememberWindowSize_);
+  settings.beginGroup(QStringLiteral("Window"));
+  settings.setValue(QStringLiteral("FixedWidth"), fixedWindowWidth_);
+  settings.setValue(QStringLiteral("FixedHeight"), fixedWindowHeight_);
+  settings.setValue(QStringLiteral("LastWindowWidth"), lastWindowWidth_);
+  settings.setValue(QStringLiteral("LastWindowHeight"), lastWindowHeight_);
+  settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
+  settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
+  settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
+  settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
+  settings.setValue(QStringLiteral("PrefSize"), prefSize_);
+  settings.endGroup();
+
+  // shortcuts
+  settings.beginGroup(QStringLiteral("Shortcuts"));
+  for(int i = 0; i < removedActions_.size(); ++i) {
+    settings.remove(removedActions_.at (i));
+  }
+  QHash<QString, QString>::const_iterator it = actions_.constBegin();
+  while(it != actions_.constEnd()) {
+    settings.setValue(it.key(), it.value());
+    ++it;
+  }
   settings.endGroup();
 
   return true;

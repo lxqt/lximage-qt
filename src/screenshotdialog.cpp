@@ -24,27 +24,46 @@
 #include <QPixmap>
 #include <QImage>
 #include <QPainter>
+
 #include "application.h"
 #include <QDesktopWidget>
 #include <QScreen>
+#include <QDateTime>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
 
 #include <QX11Info>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/extensions/Xfixes.h>
+#include <sstream>
+#include <iostream>
 
+/*
+ * Used options for Artistic Style to format:
+--style=google
+--break-closing-braces
+--break-one-line-headers
+--add-braces
+--break-elseifs
+--indent=spaces=2
+--unpad-paren
+ * */
 using namespace LxImage;
 
-ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(parent, f) {
-  ui.setupUi(this);
+static bool hasXFixes() {
+  int event_base, error_base;
+  return XFixesQueryExtension(QX11Info::display(), &event_base, &error_base);
+}
 
+ScreenshotDialog::ScreenshotDialog(QWidget* parent, Qt::WindowFlags f): QDialog(parent, f), hasXfixes_(hasXFixes()) {
+  ui.setupUi(this);
   Application* app = static_cast<Application*>(qApp);
   app->addWindow();
-
-  int event_base, error_base;
-  hasXfixes_ = XFixesQueryExtension(QX11Info::display(), &event_base, &error_base) ? true : false;
-  if(!hasXfixes_)
+  if(!hasXfixes_) {
     ui.includeCursor->hide();
+  }
 }
 
 ScreenshotDialog::~ScreenshotDialog() {
@@ -67,8 +86,9 @@ void ScreenshotDialog::done(int r) {
       // way to ensure that. Let's wait for 400 ms here for it.
       delay = 400;
     }
-    else
+    else {
       delay *= 1000;
+    }
     // the dialog object will be deleted in doScreenshot().
     QTimer::singleShot(delay, this, SLOT(doScreenshot()));
   }
@@ -94,9 +114,9 @@ QRect ScreenshotDialog::windowFrame(WId wid) {
     int format;
     unsigned char* data = nullptr;
     if(XGetWindowProperty(QX11Info::display(), wid, atom, 0, G_MAXLONG, false,
-      XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
+                          XA_CARDINAL, &type, &format, &resultLen, &rest, &data) == Success) {
     }
-    if(data) { // left, right, top, bottom
+    if(data) {  // left, right, top, bottom
       long* offsets = reinterpret_cast<long*>(data);
       result.setLeft(result.left() - offsets[0]);
       result.setRight(result.right() + offsets[1]);
@@ -116,43 +136,26 @@ WId ScreenshotDialog::activeWindowId() {
   WId result = 0;
   unsigned char* data = nullptr;
   if(XGetWindowProperty(QX11Info::display(), root, atom, 0, 1, false,
-      XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
+                        XA_WINDOW, &type, &format, &resultLen, &rest, &data) == Success) {
     result = *reinterpret_cast<long*>(data);
     XFree(data);
   }
   return result;
 }
 
-void ScreenshotDialog::doScreenshot() {
-  WId wid = 0;
-  int x = 0, y = 0, width = -1, height = -1;
-  wid = QApplication::desktop()->winId(); // get desktop window
-  if(ui.currentWindow->isChecked()) {
-    WId activeWid = activeWindowId();
-    if(activeWid) {
-      if(ui.includeFrame->isChecked()) {
-        QRect rect = windowFrame(activeWid);
-        x = rect.x();
-        y = rect.y();
-        width = rect.width();
-        height = rect.height();
-      }
-      else
-        wid = activeWid;
-    }
-  }
-
+QImage ScreenshotDialog::takeScreenshot(const WId& wid, const QRect& rect, bool takeCursor) {
   QImage image;
   QScreen *screen = QGuiApplication::primaryScreen();
   if(screen) {
-    QPixmap pixmap = screen->grabWindow(wid, x, y, width, height);
+    QPixmap pixmap = screen->grabWindow(wid, rect.x(), rect.y(), rect.width(), rect.height());
     image = pixmap.toImage();
 
-    if(hasXfixes_ && ui.includeCursor->isChecked()) {
+    //call to hasXFixes() maybe executed here from cmd line with no gui mode (some day though, currently ignore cursor)
+    if(takeCursor &&  hasXFixes()) {
       // capture the cursor if needed
       XFixesCursorImage* cursor = XFixesGetCursorImage(QX11Info::display());
       if(cursor) {
-        if(cursor->pixels) { // pixles should be an ARGB array
+        if(cursor->pixels) {  // pixles should be an ARGB array
           QImage cursorImage;
           if(sizeof(long) == 4) {
             // FIXME: will we encounter byte-order problems here?
@@ -161,9 +164,12 @@ void ScreenshotDialog::doScreenshot() {
           else { // XFixes returns long integers which is not 32 bit on 64 bit systems.
             long len = cursor->width * cursor->height;
             quint32* buf = new quint32[len];
-            for(long i = 0; i < len; ++i)
+            for(long i = 0; i < len; ++i) {
               buf[i] = (quint32)cursor->pixels[i];
-            cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) { delete[] (quint32*)b; }, buf);
+            }
+            cursorImage = QImage((uchar*)buf, cursor->width, cursor->height, QImage::Format_ARGB32, [](void* b) {
+              delete[](quint32*)b;
+            }, buf);
           }
           // paint the cursor on the current image
           QPainter painter(&image);
@@ -173,6 +179,28 @@ void ScreenshotDialog::doScreenshot() {
       }
     }
   }
+  return image;
+}
+
+void ScreenshotDialog::doScreenshot() {
+  WId wid = 0;
+  QRect rect{0, 0, -1, -1};
+
+  wid = QApplication::desktop()->winId(); // get desktop window
+  if(ui.currentWindow->isChecked()) {
+    WId activeWid = activeWindowId();
+    if(activeWid) {
+      if(ui.includeFrame->isChecked()) {
+        rect = windowFrame(activeWid);
+      }
+      else {
+        wid = activeWid;
+      }
+    }
+  }
+
+  //using stored hasXfixes_ so avoid extra call to function later
+  QImage image{takeScreenshot(wid, rect, hasXfixes_ && ui.includeCursor->isChecked())};
 
   if(ui.screenArea->isChecked() && !image.isNull()) {
     ScreenshotSelectArea selectArea(image);
@@ -183,9 +211,90 @@ void ScreenshotDialog::doScreenshot() {
 
   Application* app = static_cast<Application*>(qApp);
   MainWindow* window = app->createWindow();
-  if(!image.isNull())
+  window->resize(app->settings().windowWidth(), app->settings().windowHeight());
+  if(!image.isNull()) {
     window->pasteImage(image);
+  }
   window->show();
 
   deleteLater(); // destroy ourself
+}
+
+static QString buildNumericFnPart() {
+  //we may have many copies running with no gui, for example user presses hot keys fast
+  //so they must have different file names to save, lets do it time + pid
+  const auto now = QDateTime::currentDateTime().toMSecsSinceEpoch();
+  const auto pid = getpid();
+  return QStringLiteral("%1_%2").arg(now).arg(pid);
+}
+
+static QString getWindowName(WId wid) {
+  QString result;
+  if(wid) {
+    static const char* atoms[] = {
+      "WM_NAME",
+      "_NET_WM_NAME",
+      "STRING",
+      "UTF8_STRING",
+    };
+
+
+    const auto display = QX11Info::display();
+
+    Atom a = None, type;
+
+
+    for(const auto& c : atoms) {
+      if(None != (a = XInternAtom(display, c, true))) {
+        int form;
+        unsigned long remain, len;
+        unsigned char *list;
+
+        errno = 0;
+        if(XGetWindowProperty(display, wid, a, 0, 1024, False, XA_STRING,
+                              &type, &form, &len, &remain, &list) == Success) {
+
+          if(list && *list) {
+
+            std::string dump((const char*)list);
+            std::stringstream ss;
+            for(const auto& sym : dump) {
+              if(std::isalnum(sym)) {
+                ss.put(sym);
+              }
+            }
+            result = QString::fromStdString(ss.str());
+            break;
+          }
+        }
+
+      }
+    }
+  }
+  return (result.isEmpty()) ? QStringLiteral("UKNOWN") : result;
+}
+
+void ScreenshotDialog::cmdTopShotToDir(QString path) {
+
+  WId activeWid = activeWindowId();
+  const QRect rect = (activeWid) ? windowFrame(activeWid) : QRect{0, 0, -1, -1};
+  QImage img{takeScreenshot(QApplication::desktop()->winId(), rect, false)};
+
+  QDir d;
+  d.mkpath(path);
+  QFileInfo fi(path);
+  if(!fi.exists() || !fi.isDir() || !fi.isWritable()) {
+    path = QDir::homePath();
+  }
+  const QString filename = QStringLiteral("%1/%2_%3").arg(path).arg(getWindowName(activeWid)).arg(buildNumericFnPart());
+
+  const auto static png = QStringLiteral(".png");
+  QString finalName = filename % png;
+
+  //most unlikelly this will happen ... but user might change system clock or so and we dont want to overwrite file
+  for(int counter = 0; QFile::exists(finalName) && counter < 5000; ++counter) {
+    finalName = QStringLiteral("%1_%2%3").arg(filename).arg(counter).arg(png);
+  }
+  //std::cout << finalName.toStdString() << std::endl;
+  img.save(finalName);
 }

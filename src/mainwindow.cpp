@@ -34,12 +34,15 @@
 #include <QWheelEvent>
 #include <QMouseEvent>
 #include <QTimer>
+#include <QScreen>
 #include <QShortcut>
 #include <QDockWidget>
 #include <QScrollBar>
-#include <QDesktopWidget>
 #include <QGraphicsSvgItem>
 #include <QHeaderView>
+#include <QStandardPaths>
+#include <QDateTime>
+#include <QX11Info>
 
 #include "application.h"
 #include <libfm-qt/folderview.h>
@@ -48,6 +51,7 @@
 #include <libfm-qt/folderitemdelegate.h>
 
 #include "mrumenu.h"
+#include "resizeimagedialog.h"
 #include "upload/uploaddialog.h"
 
 using namespace LxImage;
@@ -59,6 +63,7 @@ MainWindow::MainWindow():
   image_(),
   // currentFileInfo_(nullptr),
   imageModified_(false),
+  startMaximized_(false),
   folder_(nullptr),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
@@ -66,7 +71,8 @@ MainWindow::MainWindow():
   thumbnailsDock_(nullptr),
   thumbnailsView_(nullptr),
   loadJob_(nullptr),
-  saveJob_(nullptr) {
+  saveJob_(nullptr),
+  fileMenu_(nullptr) {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
 
@@ -76,7 +82,12 @@ MainWindow::MainWindow():
   Settings& settings = app->settings();
 
   ui.setupUi(this);
-  connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
+  if(QX11Info::isPlatformX11()) {
+    connect(ui.actionScreenshot, &QAction::triggered, app, &Application::screenshot);
+  }
+  else {
+    ui.actionScreenshot->setVisible(false);
+  }
   connect(ui.actionPreferences, &QAction::triggered, app , &Application::editPreferences);
 
   proxyModel_->addFilter(modelFilter_);
@@ -89,12 +100,36 @@ MainWindow::MainWindow():
 
   connect(ui.view, &ImageView::fileDropped, this, &MainWindow::onFileDropped);
 
+  connect(ui.view, &ImageView::zooming, this, &MainWindow::onZooming);
+
   // install an event filter on the image view
   ui.view->installEventFilter(this);
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+  ui.view->updateOutline();
+  ui.view->showOutline(settings.isOutlineShown());
+  ui.actionShowOutline->setChecked(settings.isOutlineShown());
 
   if(settings.showThumbnails())
     setShowThumbnails(true);
+
+  ui.annotationsToolBar->setVisible(settings.isAnnotationsToolbarShown());
+  ui.actionAnnotations->setChecked(settings.isAnnotationsToolbarShown());
+  connect(ui.actionAnnotations, &QAction::triggered, [this](int checked) {
+    if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
+      ui.annotationsToolBar->setVisible(checked);
+    }
+  });
+  // annotations toolbar visibility can change in its context menu
+  connect(ui.annotationsToolBar, &QToolBar::visibilityChanged, [this](int visible) {
+    if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
+      ui.actionAnnotations->setChecked(visible);
+    }
+  });
+
+  auto aGroup = new QActionGroup(this);
+  ui.actionZoomFit->setActionGroup(aGroup);
+  ui.actionOriginalSize->setActionGroup(aGroup);
+  ui.actionZoomFit->setChecked(true);
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
@@ -106,6 +141,8 @@ MainWindow::MainWindow():
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
+  contextMenu_->addAction(ui.actionShowOutline);
+  contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
@@ -114,6 +151,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFlipVertical);
 
   // Open images when MRU items are clicked
+  ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
   connect(ui.menuRecently_Opened_Files, &MruMenu::itemClicked, this, &MainWindow::onFileDropped);
 
   // Create an action group for the annotation tools
@@ -124,6 +162,11 @@ MainWindow::MainWindow():
   annotationGroup->addAction(ui.actionDrawCircle);
   annotationGroup->addAction(ui.actionDrawNumber);
   ui.actionDrawNone->setChecked(true);
+
+  // the "Open With..." menu
+  connect(ui.menu_File, &QMenu::aboutToShow, this, &MainWindow::fileMenuAboutToShow);
+  connect(ui.openWithMenu, &QMenu::aboutToShow, this, &MainWindow::createOpenWithMenu);
+  connect(ui.openWithMenu, &QMenu::aboutToHide, this, &MainWindow::deleteOpenWithMenu);
 
   // create keyboard shortcuts
   QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
@@ -167,23 +210,36 @@ void MainWindow::on_actionAbout_triggered() {
 }
 
 void MainWindow::on_actionOriginalSize_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomOriginal();
+  if(ui.actionOriginalSize->isChecked()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomOriginal();
+  }
 }
 
 void MainWindow::on_actionZoomFit_triggered() {
-  ui.view->setAutoZoomFit(true);
-  ui.view->zoomFit();
+  if(ui.actionZoomFit->isChecked()) {
+    ui.view->setAutoZoomFit(true);
+    ui.view->zoomFit();
+  }
 }
 
 void MainWindow::on_actionZoomIn_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomIn();
+  if(!ui.view->image().isNull()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomIn();
+  }
 }
 
 void MainWindow::on_actionZoomOut_triggered() {
-  ui.view->setAutoZoomFit(false);
-  ui.view->zoomOut();
+  if(!ui.view->image().isNull()) {
+    ui.view->setAutoZoomFit(false);
+    ui.view->zoomOut();
+  }
+}
+
+void MainWindow::onZooming() {
+  ui.actionZoomFit->setChecked(false);
+  ui.actionOriginalSize->setChecked(false);
 }
 
 void MainWindow::on_actionDrawNone_triggered() {
@@ -219,8 +275,9 @@ void MainWindow::onFolderLoaded() {
     }
   }
   // this is used to open the first image of a folder
-  else if (!currentFile_)
+  else if (!currentFile_) {
     on_actionFirst_triggered();
+  }
 }
 
 void MainWindow::openImageFile(const QString& fileName) {
@@ -236,7 +293,7 @@ void MainWindow::openImageFile(const QString& fileName) {
     QList<QByteArray> formats = QImageReader::supportedImageFormats();
     QStringList formatsFilters;
     for (const QByteArray& format: formats)
-      formatsFilters << QString("*.") + format;
+      formatsFilters << QStringLiteral("*.") + QString::fromUtf8(format);
     QDir dir(fileName);
     dir.setNameFilters(formatsFilters);
     dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
@@ -245,7 +302,8 @@ void MainWindow::openImageFile(const QString& fileName) {
 
     currentFile_ = Fm::FilePath{};
     loadFolder(path);
-  } else {
+  }
+  else {
     // load the image file asynchronously
     loadImage(path);
     loadFolder(path.parent());
@@ -268,7 +326,10 @@ void MainWindow::pasteImage(QImage newImage) {
 
   image_ = newImage;
   ui.view->setImage(image_);
-  ui.view->zoomOriginal();
+  // always fit the image on pasting
+  ui.actionZoomFit->setChecked(true);
+  ui.view->setAutoZoomFit(true);
+  ui.view->zoomFit();
 
   updateUI();
 }
@@ -279,24 +340,38 @@ QString MainWindow::openFileName() {
   QList<QByteArray> formats = QImageReader::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
   for(;;) {
-    filterStr += "*.";
-    filterStr += (*it).toLower();
+    filterStr += QLatin1String("*.");
+    filterStr += QString::fromUtf8((*it).toLower());
     ++it;
     if(it != formats.end())
-      filterStr += ' ';
+      filterStr += QLatin1Char(' ');
     else
       break;
   }
 
+  QString curFileName;
+  if(currentFile_) {
+    curFileName = QString::fromUtf8(currentFile_.displayName().get());
+  }
+  else {
+    curFileName = QString::fromUtf8(Fm::FilePath::homeDir().toString().get());
+  }
   QString fileName = QFileDialog::getOpenFileName(
-    this, tr("Open File"), QString(),
+    this, tr("Open File"), curFileName,
           tr("Image files (%1)").arg(filterStr));
   return fileName;
 }
 
 QString MainWindow::openDirectory() {
+  QString curDirName;
+  if(currentFile_ && currentFile_.parent()) {
+    curDirName = QString::fromUtf8(currentFile_.parent().displayName().get());
+  }
+  else {
+    curDirName = QString::fromUtf8(Fm::FilePath::homeDir().toString().get());
+  }
   QString directory = QFileDialog::getExistingDirectory(this,
-          tr("Open directory"), QString());
+          tr("Open directory"), curDirName);
   return directory;
 }
 
@@ -306,11 +381,11 @@ QString MainWindow::saveFileName(const QString& defaultName) {
   QList<QByteArray> formats = QImageWriter::supportedImageFormats();
   QList<QByteArray>::iterator it = formats.begin();
   for(;;) {
-    filterStr += "*.";
-    filterStr += (*it).toLower();
+    filterStr += QLatin1String("*.");
+    filterStr += QString::fromUtf8((*it).toLower());
     ++it;
     if(it != formats.end())
-      filterStr += ' ';
+      filterStr += QLatin1Char(' ');
     else
       break;
   }
@@ -321,7 +396,7 @@ QString MainWindow::saveFileName(const QString& defaultName) {
                tr("Image files (%1)").arg(filterStr));
   diag.setAcceptMode(QFileDialog::AcceptMode::AcceptSave);
   diag.setFileMode(QFileDialog::FileMode::AnyFile);
-  diag.setDefaultSuffix("png");
+  diag.setDefaultSuffix(QStringLiteral("png"));
 
   if (diag.exec()) {
     fileName = diag.selectedFiles().at(0);
@@ -376,17 +451,18 @@ void MainWindow::on_actionSave_triggered() {
 void MainWindow::on_actionSaveAs_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
-  QString baseName;
-  if(currentFile_)
-    baseName = QString::fromUtf8(currentFile_.displayName().get());
+  QString curFileName;
+  if(currentFile_) {
+    curFileName = QString::fromUtf8(currentFile_.displayName().get());
+  }
 
-  QString fileName = saveFileName(baseName);
+  QString fileName = saveFileName(curFileName);
   if(!fileName.isEmpty()) {
     const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // save the image file asynchronously
     saveImage(path);
 
-    if(!currentFile_) { // if we haven't load any file yet
+    if(!currentFile_) { // if we haven't loaded any file yet
       currentFile_ = path;
       loadFolder(path.parent());
     }
@@ -464,17 +540,21 @@ void MainWindow::on_actionLast_triggered() {
 
 void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
   if(folder_) { // an folder is already loaded
-    if(newFolderPath == folderPath_) // same folder, ignore
+    if(newFolderPath == folderPath_) { // same folder, ignore
       return;
+    }
     disconnect(folder_.get(), nullptr, this, nullptr); // disconnect from all signals
   }
 
   folderPath_ = newFolderPath;
   folder_ = Fm::Folder::fromPath(folderPath_);
-  connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
-
-  folderModel_->setFolder(folder_);
   currentIndex_ = QModelIndex(); // set current index to invalid
+  folderModel_->setFolder(folder_);
+  if(folder_->isLoaded()) { // the folder may be already loaded elsewhere
+      onFolderLoaded();
+  }
+  connect(folder_.get(), &Fm::Folder::finishLoading, this, &MainWindow::onFolderLoaded);
+  connect(folder_.get(), &Fm::Folder::filesRemoved, this, &MainWindow::onFilesRemoved);
 }
 
 // the image is loaded (the method is only called if the loading is not cancelled)
@@ -485,14 +565,17 @@ void MainWindow::onImageLoaded() {
   if (sender() == loadJob_)
   {
     // Add to the MRU menu
-    ui.menuRecently_Opened_Files->addItem(loadJob_->filePath().localPath().get());
+    ui.menuRecently_Opened_Files->addItem(QString::fromUtf8(loadJob_->filePath().localPath().get()));
 
     image_ = loadJob_->image();
     exifData_ = loadJob_->getExifData();
 
     loadJob_ = nullptr; // the job object will be freed later automatically
 
-    ui.view->setAutoZoomFit(true);
+    ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
+    if(ui.actionOriginalSize->isChecked()) {
+      ui.view->zoomOriginal();
+    }
     ui.view->setImage(image_);
 
    // currentIndex_ should be corrected after loading
@@ -502,7 +585,12 @@ void MainWindow::onImageLoaded() {
 
     /* we resized and moved the window without showing
        it in updateUI(), so we need to show it here */
-    show();
+    if(!isVisible()) {
+      if(startMaximized_) {
+        setWindowState(windowState() | Qt::WindowMaximized);
+      }
+      show();
+    }
   }
 }
 
@@ -594,40 +682,50 @@ void MainWindow::updateUI() {
     if(loadJob_) { // if loading is in progress
       title = tr("[*]%1 (Loading...) - Image Viewer")
                 .arg(QString::fromUtf8(dispName.get()));
+      ui.statusBar->setText();
     }
     else {
       if(image_.isNull()) {
         title = tr("[*]%1 (Failed to Load) - Image Viewer")
                   .arg(QString::fromUtf8(dispName.get()));
+        ui.statusBar->setText();
       }
       else {
+        const QString filePath = QString::fromUtf8(dispName.get());
         title = tr("[*]%1 (%2x%3) - Image Viewer")
-                  .arg(QString::fromUtf8(dispName.get()))
+                  .arg(filePath)
                   .arg(image_.width())
                   .arg(image_.height());
-        /* Here we try to implement the following behavior as far as possible:
-             (1) A minimum size of 400x400 is assumed;
-             (2) The window is scaled to fit the image;
-             (3) But for too big images, the window is scaled down;
-             (4) The window is centered on the screen. */
+        ui.statusBar->setText(QStringLiteral("%1×%2").arg(image_.width()).arg(image_.height()),
+                              filePath);
         if (!isVisible()) {
-          /* To have a correct position, we should move the window BEFORE
-             it's shown but we also need to know the dimensions of its view.
-             Therefore, we use show() without really showing the window. */
+          /* Here we try to implement the following behavior as far as possible:
+              (1) A minimum size of 400x400 is assumed;
+              (2) The window is scaled to fit the image;
+              (3) But for too big images, the window is scaled down;
+              (4) The window is centered on the screen.
+
+             To have a correct position, we should move the window BEFORE
+             it's shown and we also need to know the dimensions of its view.
+             Therefore, we first use show() without really showing the window. */
+
+          // the maximization setting may be lost in resizeEvent because we resize the window below
+          startMaximized_ = static_cast<Application*>(qApp)->settings().windowMaximized();
           setAttribute(Qt::WA_DontShowOnScreen);
           show();
           int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
           QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
-          QRect ag = QApplication::desktop()->availableGeometry();
+          const QScreen *primaryScreen = QGuiApplication::primaryScreen();
+          const QRect ag = primaryScreen ? primaryScreen->availableGeometry() : QRect();
           // since the window isn't decorated yet, we have to assume a max thickness for its frame
           QSize maxFrame = QSize(50, 100);
-          if (newSize.width() > ag.width() - maxFrame.width() || newSize.height() > ag.height() - maxFrame.height())
-            newSize.scale (ag.width() - maxFrame.width(), ag.height() - maxFrame.height(), Qt::KeepAspectRatio);
-          // a minimum size of 400x400 is good
-          if (newSize.width() < 400) newSize.rwidth() = 400;
-          if (newSize.height() < 400 ) newSize.rheight() = 400;
-          move (ag.x() + (ag.width() - newSize.width())/2,
-                ag.y() + (ag.height() - newSize.height())/2);
+          if(newSize.width() > ag.width() - maxFrame.width()
+             || newSize.height() > ag.height() - maxFrame.height()) {
+            newSize.scale(ag.width() - maxFrame.width(), ag.height() - maxFrame.height(), Qt::KeepAspectRatio);
+          }
+          newSize = newSize.expandedTo(QSize(400, 400)); // a minimum size of 400x400 is good
+          move(ag.x() + (ag.width() - newSize.width())/2,
+               ag.y() + (ag.height() - newSize.height())/2);
           resize(newSize);
           hide(); // hide it to show it again later, at onImageLoaded()
           setAttribute(Qt::WA_DontShowOnScreen, false);
@@ -638,6 +736,7 @@ void MainWindow::updateUI() {
   }
   else {
     title = tr("[*]Image Viewer");
+    ui.statusBar->setText();
   }
   setWindowTitle(title);
   setWindowModified(imageModified_);
@@ -666,20 +765,36 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   char* mime_type = g_content_type_guess(basename.get(), nullptr, 0, nullptr);
   QString mimeType;
   if (mime_type) {
-    mimeType = QString(mime_type);
+    mimeType = QString::fromUtf8(mime_type);
     g_free(mime_type);
   }
-  if(mimeType == "image/gif"
-     || mimeType == "image/svg+xml" || mimeType == "image/svg+xml-compressed") {
+  if(mimeType == QLatin1String("image/gif")
+     || mimeType == QLatin1String("image/svg+xml") || mimeType == QLatin1String("image/svg+xml-compressed")) {
+    if(!currentIndex_.isValid()) {
+      // since onImageLoaded is not called here,
+      // currentIndex_ should be set
+      currentIndex_ = indexFromPath(currentFile_);
+    }
     const Fm::CStrPtr file_name = currentFile_.toString();
-    ui.view->setAutoZoomFit(true); // like in onImageLoaded()
-    if(mimeType == "image/gif")
-      ui.view->setGifAnimation(QString{file_name.get()});
+
+    // like in onImageLoaded()
+    ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
+    if(ui.actionOriginalSize->isChecked()) {
+      ui.view->zoomOriginal();
+    }
+
+    if(mimeType == QLatin1String("image/gif"))
+      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()));
     else
-      ui.view->setSVG(QString{file_name.get()});
+      ui.view->setSVG(QString::fromUtf8(file_name.get()));
     image_ = ui.view->image();
     updateUI();
-    show();
+    if(!isVisible()) {
+      if(startMaximized_) {
+        setWindowState(windowState() | Qt::WindowMaximized);
+      }
+      show();
+    }
   }
   else {
     // start a new gio job to load the specified image
@@ -705,26 +820,25 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
   saveJob_ = new SaveImageJob(ui.view->image(), filePath);
   connect(saveJob_, &Fm::Job::finished, this, &MainWindow::onImageSaved);
   connect(saveJob_, &Fm::Job::error, this
-        , [] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity /*severity*/, Fm::Job::ErrorAction & /*response*/)
+        , [this] (const Fm::GErrorPtr & err, Fm::Job::ErrorSeverity severity, Fm::Job::ErrorAction & /*response*/)
         {
           // TODO: show a info bar?
-          qWarning().noquote() << "lximage-qt:" << err.message();
+          if(severity > Fm::Job::ErrorSeverity::MODERATE) {
+            QMessageBox::critical(this, QObject::tr("Error"), err.message());
+          }
+          else {
+            qWarning().noquote() << "lximage-qt:" << err.message();
+          }
         }
       , Qt::BlockingQueuedConnection);
   saveJob_->runAsync();
   // FIXME: add a cancel button to the UI? update status bar?
 }
 
-QGraphicsItem* MainWindow::getGraphicsItem() {
-  if(!ui.view->items().isEmpty())
-    return ui.view->items().at(0);
-  return nullptr;
-}
-
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *graphItem = getGraphicsItem();
-  bool isGifOrSvg (graphItem->isWidget() // we have gif animation
-                   || dynamic_cast<QGraphicsSvgItem*>(graphItem)); // an SVG image;
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
+  bool isGifOrSvg ((imageItem && imageItem->isWidget()) // we have gif animation
+                   || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(90.0);
@@ -737,19 +851,24 @@ void MainWindow::on_actionRotateClockwise_triggered() {
 
   if(isGifOrSvg) {
     QTransform transform;
-    transform.translate(graphItem->sceneBoundingRect().height(), 0);
+    transform.translate(imageItem->sceneBoundingRect().height(), 0);
     transform.rotate(90);
     // we need to apply transformations in the reverse order
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    // apply transformations to the outline item too
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  QGraphicsItem *graphItem = getGraphicsItem();
-  bool isGifOrSvg (graphItem->isWidget()
-                   || dynamic_cast<QGraphicsSvgItem*>(graphItem));
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
+  bool isGifOrSvg ((imageItem && imageItem->isWidget())
+                   || dynamic_cast<QGraphicsSvgItem*>(imageItem));
   if(!image_.isNull()) {
     QTransform transform;
     transform.rotate(-90.0);
@@ -760,11 +879,15 @@ void MainWindow::on_actionRotateCounterclockwise_triggered() {
 
   if(isGifOrSvg) {
     QTransform transform;
-    transform.translate(0, graphItem->sceneBoundingRect().width());
+    transform.translate(0, imageItem->sceneBoundingRect().width());
     transform.rotate(-90);
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
 }
 
@@ -782,6 +905,13 @@ void MainWindow::on_actionCopy_triggered() {
   clipboard->setImage(copiedImage);
 }
 
+void MainWindow::on_actionCopyPath_triggered() {
+  if(currentFile_) {
+    const Fm::CStrPtr dispName = currentFile_.displayName();
+    QApplication::clipboard()->setText(QString::fromUtf8(dispName.get()));
+  }
+}
+
 void MainWindow::on_actionPaste_triggered() {
   QClipboard *clipboard = QApplication::clipboard();
   QImage image = clipboard->image();
@@ -792,21 +922,47 @@ void MainWindow::on_actionPaste_triggered() {
 
 void MainWindow::on_actionUpload_triggered()
 {
-    if (currentFile_.isValid()) {
-        UploadDialog(this, currentFile_.localPath().get()).exec();
+    if(currentFile_.isValid()) {
+      UploadDialog(this, QString::fromUtf8(currentFile_.localPath().get())).exec();
+    }
+    // if there is no open file, save the image to "/tmp" and delete it after upload
+    else if(!ui.view->image().isNull()) {
+      QString tmpFileName;
+      QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
+      if(!tmp.isEmpty()) {
+        QDir tmpDir(tmp);
+        if(tmpDir.exists()) {
+          const QString curTime = QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
+          tmpFileName = tmp + QStringLiteral("/lximage-") + curTime + QStringLiteral(".png");
+        }
+      }
+      if(!tmpFileName.isEmpty() && saveJob_ == nullptr) {
+        const Fm::FilePath filePath = Fm::FilePath::fromPathStr(qPrintable(tmpFileName));
+        saveJob_ = new SaveImageJob(ui.view->image(), filePath);
+        connect(saveJob_, &Fm::Job::finished, this, [this, tmpFileName] {
+          saveJob_ = nullptr;
+          UploadDialog(this, tmpFileName).exec();
+          QFile::remove(tmpFileName);
+        });
+        saveJob_->runAsync();
+      }
     }
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(1, -1);
-    transform.translate(0, -graphItem->sceneBoundingRect().height());
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    transform.translate(0, -imageItem->sceneBoundingRect().height());
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
   if(!image_.isNull()) {
     image_ = image_.mirrored(false, true);
@@ -817,20 +973,72 @@ void MainWindow::on_actionFlipVertical_triggered() {
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
   bool hasQGraphicsItem(false);
-  if(QGraphicsItem *graphItem = getGraphicsItem()) {
+  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
     hasQGraphicsItem = true;
     QTransform transform;
     transform.scale(-1, 1);
-    transform.translate(-graphItem->sceneBoundingRect().width(), 0);
-    QTransform prevTrans = graphItem->transform();
-    graphItem->setTransform(transform, false);
-    graphItem->setTransform(prevTrans, true);
+    transform.translate(-imageItem->sceneBoundingRect().width(), 0);
+    QTransform prevTrans = imageItem->transform();
+    imageItem->setTransform(transform, false);
+    imageItem->setTransform(prevTrans, true);
+    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
+      outlineItem->setTransform(transform, false);
+      outlineItem->setTransform(prevTrans, true);
+    }
   }
   if(!image_.isNull()) {
     image_ = image_.mirrored(true, true);
     ui.view->setImage(image_, !hasQGraphicsItem);
     setModified(true);
   }
+}
+
+void MainWindow::on_actionResize_triggered() {
+  if(image_.isNull()) {
+    return;
+  }
+  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
+  bool isSVG(dynamic_cast<QGraphicsSvgItem*>(imageItem));
+  bool isGifOrSvg(isSVG || (imageItem && imageItem->isWidget()));
+  QSize imgSize(image_.size());
+  ResizeImageDialog *dialog = new ResizeImageDialog(this);
+  dialog->setOriginalSize(image_.size());
+  if(dialog->exec() == QDialog::Accepted) {
+    QSize newSize = dialog->scaledSize();
+    if(!isSVG) { // with SVG, we get a sharp image below
+      image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+      ui.view->setImage(image_, isGifOrSvg ? false : true);
+    }
+    if(isGifOrSvg) {
+      qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
+      qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
+      QTransform transform;
+      transform.scale(sx, sy);
+      QTransform prevTrans = imageItem->transform();
+      imageItem->setTransform(transform, false);
+      imageItem->setTransform(prevTrans, true);
+      if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()) {
+        outlineItem->setTransform(transform, false);
+        outlineItem->setTransform(prevTrans, true);
+      }
+
+      if(isSVG) {
+        // create and set a sharp scaled image with SVG
+        QPixmap pixmap(newSize);
+        pixmap.fill(Qt::transparent);
+        QPainter painter(&pixmap);
+        painter.setTransform(imageItem->transform());
+        painter.setRenderHint(QPainter::Antialiasing);
+        QStyleOptionGraphicsItem opt;
+        imageItem->paint(&painter, &opt);
+        image_ = pixmap.toImage();
+        ui.view->setImage(image_, false);
+      }
+    }
+
+    setModified(true);
+  }
+  dialog->deleteLater();
 }
 
 void MainWindow::setModified(bool modified) {
@@ -845,6 +1053,23 @@ void MainWindow::applySettings() {
     ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
   else
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+  ui.view->updateOutline();
+  ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
+
+  // also, update shortcuts
+  QHash<QString, QString> ca = settings.customShortcutActions();
+  const auto defaultShortcuts = app->defaultShortcuts();
+  const auto actions = findChildren<QAction*>();
+  for(const auto& action : actions) {
+     const QString objectName = action->objectName();
+     if(ca.contains(objectName)) {
+       // custom shortcuts are saved in the PortableText format
+       action->setShortcut(QKeySequence(ca.value(objectName), QKeySequence::PortableText));
+     }
+     else { // default shortcuts include all actions
+       action->setShortcut(defaultShortcuts.value(objectName).shortcut);
+     }
+  }
 }
 
 void MainWindow::on_actionPrint_triggered() {
@@ -854,7 +1079,27 @@ void MainWindow::on_actionPrint_triggered() {
   if(dlg.exec() == QDialog::Accepted) {
     QPainter painter;
     painter.begin(&printer);
-    QRect pageRect = printer.pageRect();
+
+    // fit the target rectangle into the viewport if needed and center it
+    const QRectF viewportRect = painter.viewport();
+    QRectF targetRect = image_.rect();
+    if(viewportRect.width() < targetRect.width()) {
+      targetRect.setSize(QSize(viewportRect.width(), targetRect.height() * (viewportRect.width() / targetRect.width())));
+    }
+    if(viewportRect.height() < targetRect.height()) {
+      targetRect.setSize(QSize(targetRect.width() * (viewportRect.height() / targetRect.height()), viewportRect.height()));
+    }
+    targetRect.moveCenter(viewportRect.center());
+
+    // set the viewport and window of the painter and paint the image
+    painter.setViewport(targetRect.toRect());
+    painter.setWindow(image_.rect());
+    painter.drawImage(0, 0, image_);
+
+    painter.end();
+
+    // FIXME: The following code divides the image into columns and could be used later as an option.
+    /*QRect pageRect = printer.pageRect();
     int cols = (image_.width() / pageRect.width()) + (image_.width() % pageRect.width() ? 1 : 0);
     int rows = (image_.height() / pageRect.height()) + (image_.height() % pageRect.height() ? 1 : 0);
     for(int row = 0; row < rows; ++row) {
@@ -866,7 +1111,7 @@ void MainWindow::on_actionPrint_triggered() {
         printer.newPage();
       }
     }
-    painter.end();
+    painter.end();*/
   }
 }
 
@@ -888,19 +1133,23 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
     Application* app = static_cast<Application*>(qApp);
     slideShowTimer_->start(app->settings().slideShowInterval() * 1000);
     // showFullScreen();
-    ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-stop"));
+    ui.actionSlideShow->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-stop")));
   }
   else {
     if(slideShowTimer_) {
       delete slideShowTimer_;
       slideShowTimer_ = nullptr;
-      ui.actionSlideShow->setIcon(QIcon::fromTheme("media-playback-start"));
+      ui.actionSlideShow->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
     }
   }
 }
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
   setShowThumbnails(checked);
+}
+
+void MainWindow::on_actionShowOutline_triggered(bool checked) {
+  ui.view->showOutline(checked);
 }
 
 void MainWindow::on_actionShowExifData_triggered(bool checked) {
@@ -914,6 +1163,8 @@ void MainWindow::setShowThumbnails(bool show) {
       thumbnailsDock_->setFeatures(QDockWidget::NoDockWidgetFeatures); // FIXME: should use DockWidgetClosable
       thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
       thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
+      thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(64, 64));
+      thumbnailsView_->setAutoSelectionDelay(0);
       thumbnailsDock_->setWidget(thumbnailsView_);
       addDockWidget(Qt::BottomDockWidgetArea, thumbnailsDock_);
       QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
@@ -1007,6 +1258,7 @@ void MainWindow::changeEvent(QEvent* event) {
     if(isFullScreen()) { // changed to fullscreen mode
       ui.view->setFrameStyle(QFrame::NoFrame);
       ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
+      ui.view->updateOutline();
       ui.toolBar->hide();
       ui.annotationsToolBar->hide();
       ui.statusBar->hide();
@@ -1027,6 +1279,7 @@ void MainWindow::changeEvent(QEvent* event) {
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
+      ui.view->updateOutline();
       // now we're going to re-enable the menu, so remove the actions previously added.
       const auto actions_ = ui.menubar->actions();
       for(QAction* action : qAsConst(actions_)) {
@@ -1035,7 +1288,9 @@ void MainWindow::changeEvent(QEvent* event) {
       }
       ui.menubar->show();
       ui.toolBar->show();
-      ui.annotationsToolBar->show();
+      if(ui.actionAnnotations->isChecked()){
+          ui.annotationsToolBar->show();
+      }
       ui.statusBar->show();
       if(thumbnailsDock_)
         thumbnailsDock_->show();
@@ -1090,12 +1345,80 @@ void MainWindow::onThumbnailSelChanged(const QItemSelection& selected, const QIt
     if(index.isValid()) {
       // WARNING: Adding the condition index != currentIndex_ would be wrong because currentIndex_ may not be updated yet
       const auto file = proxyModel_->fileInfoFromIndex(index);
-      if(file)
+      if(file) {
         loadImage(file->path(), index);
+        return;
+      }
+    }
+  }
+  // no image to show; reload to show a blank view and update variables
+  on_actionReload_triggered();
+}
+
+void MainWindow::onFilesRemoved(const Fm::FileInfoList& files) {
+  if(thumbnailsView_) {
+    return; // onThumbnailSelChanged() will do the job
+  }
+  for(auto& file : files) {
+    if(file->path() == currentFile_) {
+      if(proxyModel_->rowCount() >= 1 && currentIndex_.isValid()) {
+        QModelIndex index;
+        if(currentIndex_.row() < proxyModel_->rowCount()) {
+          index = currentIndex_;
+        }
+        else {
+          index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+        }
+        const auto info = proxyModel_->fileInfoFromIndex(index);
+        if(info) {
+          loadImage(info->path(), index);
+          return;
+        }
+      }
+      // no image to show; reload to show a blank view
+      on_actionReload_triggered();
+      return;
     }
   }
 }
 
 void MainWindow::onFileDropped(const QString path) {
     openImageFile(path);
+}
+
+void MainWindow::fileMenuAboutToShow() {
+  // the "Open With..." submenu of Fm::FileMenu is shown
+  // only if there is a file with a valid mime type
+  if(currentIndex_.isValid()) {
+    if(const auto file = proxyModel_->fileInfoFromIndex(currentIndex_)) {
+      if(file->mimeType()) {
+        ui.openWithMenu->setEnabled(true);
+        return;
+      }
+    }
+  }
+  ui.openWithMenu->setEnabled(false);
+}
+
+void MainWindow::createOpenWithMenu() {
+  if(currentIndex_.isValid()) {
+    if(const auto file = proxyModel_->fileInfoFromIndex(currentIndex_)) {
+      if(file->mimeType()) {
+        // We want the "Open With..." submenu. It will be deleted alongside
+        // fileMenu_ when openWithMenu hides (-> deleteOpenWithMenu)
+        Fm::FileInfoList files;
+        files.push_back(file);
+        fileMenu_ = new Fm::FileMenu(files, file, Fm::FilePath());
+        if(QMenu* menu = fileMenu_->openWithMenuAction()->menu()) {
+          ui.openWithMenu->addActions(menu->actions());
+        }
+      }
+    }
+  }
+}
+
+void MainWindow::deleteOpenWithMenu() {
+  if(fileMenu_) {
+    fileMenu_->deleteLater();
+  }
 }

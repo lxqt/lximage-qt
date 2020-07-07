@@ -33,7 +33,7 @@ namespace LxImage {
 class ScreenshotSelectArea : public QDialog {
   Q_OBJECT
 public:
-  ScreenshotSelectArea(const QImage & image, QWidget* parent = 0);
+  ScreenshotSelectArea(const QImage & image, QWidget* parent = nullptr);
   QRect selectedArea();
 
 private Q_SLOTS:

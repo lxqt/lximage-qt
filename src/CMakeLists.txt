@@ -18,12 +18,14 @@ set(lximage-qt_SRCS
     modelfilter.cpp
     loadimagejob.cpp
     saveimagejob.cpp
+    resizeimagedialog.cpp
     screenshotdialog.cpp
     screenshotselectarea.cpp
     screenshotselectareagraphicsview.cpp
     settings.cpp
     graphicsscene.cpp
     mrumenu.cpp
+    statusbar.cpp
 
     upload/imageshackprovider.cpp
     upload/imageshackupload.cpp
@@ -51,6 +53,7 @@ list(APPEND lximage-qt_SRCS "${lximage-qt_DBUS_SRCS}")
 set(lximage-qt_UIS
     mainwindow.ui
     preferencesdialog.ui
+    resizeimagedialog.ui
     screenshotdialog.ui
 
     upload/uploaddialog.ui
