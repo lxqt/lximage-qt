@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>Fai uno screenshot e salvalo nella cartella senza mostrare la GUI</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -137,12 +137,12 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Percorso:</translation>
     </message>
 </context>
 <context>
@@ -194,7 +194,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../mainwindow.ui" line="187"/>
         <location filename="../mainwindow.ui" line="633"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra degli strumenti delle annotazioni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="207"/>
@@ -276,7 +276,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri &amp;con...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -549,17 +549,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.ui" line="647"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia &amp;percorso</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia percorso</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -617,7 +617,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero massimo di file recenti:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -627,32 +627,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mostra sempre il contorno dell&apos;immagine</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sempre la barra degli strumenti delle annotazioni</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorciatoie</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Azione</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorciatoia</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripristina</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -700,7 +700,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sec</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
