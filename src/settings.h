@@ -180,7 +180,7 @@ public:
     return actions_;
   }
   void addShortcut(const QString &action, const QString &shortcut) {
-    actions_.insert (action, shortcut);
+    actions_.insert(action, shortcut);
   }
   void removeShortcut(const QString &action) {
     actions_.remove(action);

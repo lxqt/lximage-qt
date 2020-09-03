@@ -106,7 +106,7 @@ bool Settings::save() {
   // shortcuts
   settings.beginGroup(QStringLiteral("Shortcuts"));
   for(int i = 0; i < removedActions_.size(); ++i) {
-    settings.remove(removedActions_.at (i));
+    settings.remove(removedActions_.at(i));
   }
   QHash<QString, QString>::const_iterator it = actions_.constBegin();
   while(it != actions_.constEnd()) {
