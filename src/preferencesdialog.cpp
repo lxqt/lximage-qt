@@ -336,6 +336,9 @@ void PreferencesDialog::restoreDefaultShortcuts() {
     // do nothing if there's no custom shortcut
     return;
   }
+
+  showWarning(QString());
+
   disconnect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
   int cur = ui.tableWidget->currentColumn() == 0 ? 0 : ui.tableWidget->currentRow();
   ui.tableWidget->setSortingEnabled(false);
