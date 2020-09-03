@@ -24,6 +24,7 @@
 #include <QDialog>
 #include <QStyledItemDelegate>
 #include <QKeySequenceEdit>
+#include <QTimer>
 #include "ui_preferencesdialog.h"
 
 namespace LxImage {
@@ -73,10 +74,14 @@ private:
   void initIconThemes(Settings& settings);
   void initShortcuts();
   void applyNewShortcuts();
+  void showWarning(const QString& text, bool temporary = true);
 
 private:
   Ui::PreferencesDialog ui;
   QHash<QString, QString> modifiedShortcuts_;
+  QHash<QString, QString> allShortcuts_; // only used for checking ambiguity
+  QString permanentWarning_;
+  QTimer *warningTimer_;
 };
 
 }

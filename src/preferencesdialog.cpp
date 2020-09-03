@@ -62,11 +62,16 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.setupUi(this);
   setAttribute(Qt::WA_DeleteOnClose);
 
+  ui.warningLabel->setStyleSheet(QStringLiteral("QLabel {background-color: #7d0000; color: white; border-radius: 3px; margin: 2px; padding: 5px;}"));
+  ui.warningLabel->hide();
+  warningTimer_ = nullptr;
+
   Delegate *del = new Delegate(ui.tableWidget);
   ui.tableWidget->setItemDelegate(del);
   ui.tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
   ui.tableWidget->horizontalHeader()->setSectionsClickable(true);
   ui.tableWidget->sortByColumn(0, Qt::AscendingOrder);
+  ui.tableWidget->setToolTip(tr("Use a modifier key to clear a shortcut\nin the editing mode."));
 
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();
@@ -85,6 +90,11 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
 }
 
 PreferencesDialog::~PreferencesDialog() {
+  if(warningTimer_) {
+    warningTimer_->stop();
+    delete warningTimer_;
+    warningTimer_ = nullptr;
+  }
   Application* app = static_cast<Application*>(qApp);
   app->removeWindow();
 }
@@ -196,6 +206,32 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
   }
 }
 
+void PreferencesDialog::showWarning(const QString& text, bool temporary) {
+  if(text.isEmpty()) {
+    permanentWarning_.clear();
+    ui.warningLabel->clear();
+    ui.warningLabel->hide();
+  }
+  else {
+    ui.warningLabel->setText(text);
+    ui.warningLabel->show();
+    if(!temporary) {
+      permanentWarning_ = text;
+    }
+    else {
+      if(warningTimer_ == nullptr) {
+        warningTimer_ = new QTimer();
+        warningTimer_->setSingleShot (true);
+        connect(warningTimer_, &QTimer::timeout, [this] {
+          ui.warningLabel->setText(permanentWarning_);
+          ui.warningLabel->setVisible(!permanentWarning_.isEmpty());
+        });
+      }
+      warningTimer_->start(2500);
+    }
+  }
+}
+
 void PreferencesDialog::initShortcuts() {
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();
@@ -233,12 +269,21 @@ void PreferencesDialog::initShortcuts() {
       shortcut = app->defaultShortcuts().value(iter.value()).shortcut.toString(QKeySequence::NativeText);
     }
     ui.tableWidget->setItem(index, 1, new QTableWidgetItem(shortcut));
+    allShortcuts_.insert(iter.key(), shortcut);
 
     ++ iter;
     ++ index;
   }
   ui.tableWidget->setSortingEnabled(true);
   ui.tableWidget->setCurrentCell(0, 1);
+
+  const auto shortcuts = allShortcuts_.values();
+  for(int i = 0; i < shortcuts.size(); ++i) {
+    if(!shortcuts.at(i).isEmpty() && shortcuts.indexOf(shortcuts.at(i), i + 1) > -1) {
+      showWarning(tr("<b>Warning: Ambiguous shortcut detected!</b>"), false);
+      break;
+    }
+  }
 
   connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
   connect(ui.defaultButton, &QAbstractButton::clicked, this, &PreferencesDialog::restoreDefaultShortcuts);
@@ -248,6 +293,21 @@ void PreferencesDialog::initShortcuts() {
 void PreferencesDialog::onShortcutChange(QTableWidgetItem* item) {
   QString desc = ui.tableWidget->item(ui.tableWidget->currentRow(), 0)->text();
   QString txt = item->text();
+
+  const auto shortcuts = allShortcuts_.values();
+  for(const auto& s : shortcuts) {
+    if(!s.isEmpty() && s == txt) {
+      showWarning(tr("<b>Ambiguous shortcut not accepted.</b>"));
+      disconnect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
+      item->setText(allShortcuts_.value (desc)); // restore the previous shortcut
+      connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
+      return;
+    }
+  }
+  showWarning(QString()); // ambiguous shortcuts might have been added manually
+
+  allShortcuts_.insert(desc, txt);
+
   if(!txt.isEmpty()) {
     // NOTE: The QKeySequenceEdit text is in the NativeText format but
     // it should be converted into the PortableText format for saving.

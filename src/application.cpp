@@ -164,6 +164,9 @@ MainWindow* Application::createWindow() {
   if(defaultShortcuts_.isEmpty()) {
     const auto actions = window->findChildren<QAction*>();
     for(const auto& action : actions) {
+      if(action->objectName().isEmpty() || action->text().isEmpty()) {
+        continue;
+      }
       QKeySequence seq = action->shortcut();
       ShortcutDescription s;
       s.displayText = action->text().remove QStringLiteral("&"); // without mnemonics
