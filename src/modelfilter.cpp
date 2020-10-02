@@ -19,6 +19,7 @@
  */
 
 #include "modelfilter.h"
+#include <QImageReader>
 
 using namespace LxImage;
 
@@ -34,7 +35,9 @@ bool ModelFilter::filterAcceptsRow(const Fm::ProxyFolderModel* model, const std:
 {
   Q_UNUSED(model)
 
-  // filter out non-image files and formats that we don't support.
-  return info && info->isImage();
+  // Filter out formats that we don't support but don't use FileInfo::isImage() because
+  // it only checks if the mimetype starts with "image/" while Qt may support more.
+  static const QList<QByteArray> mimeTypes = QImageReader::supportedMimeTypes();
+  return info && mimeTypes.contains(info->mimeType()->name());
 }
 
