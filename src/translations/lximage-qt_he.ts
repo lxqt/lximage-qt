@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>צילום המסך ושמירתו לתיקייה מבלי להציג מנשק גרפי</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -138,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>ניתן להשתמש במקש החלפה כדי לפנות
+מקש קיצור במצב עריכה.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;אזהרה: התגלה קיצור מקשים דו־משמעי!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;קיצור מקשים דו־משמעי לא התקבל.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -579,12 +580,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>העתקת &amp;נתיב</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>העתקת נתיב</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
@@ -647,7 +648,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>מספר הקבצים האחרונים המרבי:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -740,7 +741,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>שמירה על יחס תצוגה</translation>
     </message>
 </context>
 <context>
