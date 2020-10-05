@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>Pořídit snímek obrazovky a uložit jej do adresáře bez ukázání uživatelského rozhraní</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>ADRESÁŘ</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
