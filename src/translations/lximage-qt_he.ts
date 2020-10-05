@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -156,7 +156,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן לשמור בפורמט תמונה זה!</translation>
     </message>
 </context>
 <context>
@@ -164,12 +164,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>גודל:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>נתיב:</translation>
     </message>
 </context>
 <context>
@@ -236,7 +236,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>פתיחה ב&amp;אמצעות...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
@@ -589,7 +589,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>שינוי גודל</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -667,22 +667,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצורי דרך</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>פעולה</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>קיצור דרך</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>ברירת המחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -695,7 +695,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="827"/>
         <source>Error</source>
-        <translation type="unfinished">שגיאה</translation>
+        <translation>שגיאה</translation>
     </message>
 </context>
 <context>
@@ -703,39 +703,39 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>שינוי גודל התמונה</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>רוחב</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>גובה</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>הגודל הנוכחי:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>הגודל החדש:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> פיקסלים</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
@@ -783,7 +783,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> שנ׳</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
