@@ -660,7 +660,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished">Mostra sempre il contorno dell&apos;immagine</translation>
+        <translation>Mostra sempre il contorno dell&apos;immagine</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
