@@ -34,8 +34,10 @@ Fedora and openSUSE (Leap 42.1 and Tumbleweed). Just use the distributions'
 package manager to search for string 'lximage'.
 
 
-### Translation (Weblate)
+### Translation
 
-<a href="https://weblate.lxqt.org/projects/lxqt/lximage-qt/">
-<img src="https://weblate.lxqt.org/widgets/lxqt/-/lximage-qt/multi-auto.svg" alt="Translation status" />
+Translations can be done in [LXQt-Weblate](https://translate.lxqt-project.org/projects/lxqt-desktop/lximage-qt/).
+
+<a href="https://translate.lxqt-project.org/projects/lxqt-desktop/lximage-qt/">
+<img src="https://translate.lxqt-project.org/widgets/lxqt-desktop/-/lximage-qt/multi-auto.svg" alt="Stato traduzione" />
 </a>
