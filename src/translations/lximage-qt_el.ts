@@ -143,12 +143,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Προσοχή: Εντοπίστηκε ασαφής συντόμευση!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Μη αποδεκτή ασαφής συντόμευση&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -156,7 +156,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεν είναι δυνατή η αποθήκευση με αυτόν τον τύπο εικόνας!</translation>
     </message>
 </context>
 <context>
@@ -164,12 +164,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μονοπάτι:</translation>
     </message>
 </context>
 <context>
@@ -518,7 +518,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="563"/>
         <source>Deselect all drawing tools</source>
-        <translation> Αποεπιλογή όλων των εργαλείων σχεδίασης</translation>
+        <translation>Αποεπιλογή όλων των εργαλείων σχεδίασης</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
@@ -584,12 +584,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιγραφή μονοπατιού</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Αλλαγή μεγέθους</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -647,7 +647,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγιστος αριθμός πρόσφατων αρχείων:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -667,22 +667,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντομεύσεις</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενέργεια</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Συντόμευση</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Προεπιλογή</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -703,27 +703,27 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Αλλαγή μεγέθους εικόνας</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Πλάτος</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Ύψος</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Τωρινό μέγεθος:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Νέο μέγεθος:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
@@ -740,7 +740,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Διατήρηση αναλογίας διαστάσεων</translation>
     </message>
 </context>
 <context>
@@ -783,7 +783,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> δευτ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
