@@ -72,7 +72,7 @@ void MruMenu::addItem(const QString &filename)
 
     // Insert the action at the beginning of the list
     mFilenames.push_front(filename);
-    insertAction(actions().first(), createAction(filename));
+    insertAction(actions().constFirst(), createAction(filename));
 
     // If the list contains more than mMaxItems, remove the last one
     while (mFilenames.count() > mMaxItems) {
