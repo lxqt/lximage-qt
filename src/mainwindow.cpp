@@ -290,7 +290,7 @@ void MainWindow::openImageFile(const QString& fileName) {
     if(path == folderPath_)
       return;
 
-    QList<QByteArray> formats = QImageReader::supportedImageFormats();
+    const QList<QByteArray> formats = QImageReader::supportedImageFormats();
     QStringList formatsFilters;
     for (const QByteArray& format: formats)
       formatsFilters << QStringLiteral("*.") + QString::fromUtf8(format);
@@ -1233,7 +1233,8 @@ void MainWindow::setShowExifData(bool show) {
     exifDataContentTable_->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     // Write the EXIF Data to the table
-    for (const QString& key : exifData_.keys()) {
+    const auto keys =exifData_.keys();
+    for (const QString& key : keys) {
       int rowCount = exifDataContentTable_->rowCount();
 
       exifDataContentTable_->insertRow(rowCount);

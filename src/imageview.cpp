@@ -83,7 +83,7 @@ ImageView::~ImageView() {
 
 QGraphicsItem* ImageView::imageGraphicsItem() const {
   if(!items().isEmpty()) {
-    return (items().last()); // the lowermost item
+    return (items().constLast()); // the lowermost item
   }
   return nullptr;
 }
