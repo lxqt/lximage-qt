@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать снимок экрана и сохранить его в директорию не показывая графический интерфейс</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>ДИРЕКТОРИЯ</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -138,7 +138,8 @@ Copyright (C) 2013
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Используйте клавишу-модификатор, чтобы очистить
+комбинацию клавиш в режиме редактирования.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
