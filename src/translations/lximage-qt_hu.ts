@@ -242,7 +242,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>&amp;Open…</source>
-        <translation>&amp;Megnyitás...</translation>
+        <translation>Megny&amp;itás…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
@@ -349,7 +349,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="358"/>
         <source>&amp;Fit</source>
-        <translation>Ki&amp;töltés</translation>
+        <translation>K&amp;itöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
