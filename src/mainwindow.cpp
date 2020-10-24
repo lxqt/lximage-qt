@@ -715,8 +715,11 @@ void MainWindow::updateUI() {
           show();
           int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
           QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
-          const QScreen *primaryScreen = QGuiApplication::primaryScreen();
-          const QRect ag = primaryScreen ? primaryScreen->availableGeometry() : QRect();
+          QScreen *appScreen = QGuiApplication::screenAt(QCursor::pos());
+          if(appScreen == nullptr) {
+            appScreen = QGuiApplication::primaryScreen();
+          }
+          const QRect ag = appScreen ? appScreen->availableGeometry() : QRect();
           // since the window isn't decorated yet, we have to assume a max thickness for its frame
           QSize maxFrame = QSize(50, 100);
           if(newSize.width() > ag.width() - maxFrame.width()
