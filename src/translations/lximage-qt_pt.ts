@@ -5,18 +5,18 @@
     <name>LxImage::Application</name>
     <message>
         <location filename="../application.cpp" line="96"/>
-        <source>Take a screenshot</source>
-        <translation>Obter captura de ecrã</translation>
-    </message>
-    <message>
-        <location filename="../application.cpp" line="105"/>
-        <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation>Obter captura de ecrã e guardar no diretório sem mostrar a interface</translation>
+        <source>Take a screenshot (deprecated, please use screengrab instead)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
         <translation>Diretório</translation>
+    </message>
+    <message>
+        <location filename="../application.cpp" line="105"/>
+        <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -109,17 +109,17 @@ Hang Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="738"/>
+        <location filename="../mainwindow.cpp" line="741"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1164"/>
+        <location filename="../mainwindow.cpp" line="1167"/>
         <source>Thumbnails</source>
         <translation>Miniaturas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1214"/>
+        <location filename="../mainwindow.cpp" line="1217"/>
         <source>EXIF Data</source>
         <translation>Dados EXIF</translation>
     </message>
@@ -694,7 +694,7 @@ remover o atalho no modo de edição.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="827"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>

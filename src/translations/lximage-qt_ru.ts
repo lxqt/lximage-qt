@@ -5,18 +5,18 @@
     <name>LxImage::Application</name>
     <message>
         <location filename="../application.cpp" line="96"/>
-        <source>Take a screenshot</source>
-        <translation>Сделать снимок экрана</translation>
-    </message>
-    <message>
-        <location filename="../application.cpp" line="105"/>
-        <source>Take a screenshot and save it to the directory without showing the GUI</source>
-        <translation>Сделать снимок экрана и сохранить его в директорию не показывая графический интерфейс</translation>
+        <source>Take a screenshot (deprecated, please use screengrab instead)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
         <translation>ДИРЕКТОРИЯ</translation>
+    </message>
+    <message>
+        <location filename="../application.cpp" line="105"/>
+        <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -109,17 +109,17 @@ Copyright (C) 2013
         <translation>[*]%1 (%2x%3) - Просмотрщик изображений</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="738"/>
+        <location filename="../mainwindow.cpp" line="741"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Просмотрщик изображений</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1164"/>
+        <location filename="../mainwindow.cpp" line="1167"/>
         <source>Thumbnails</source>
         <translation>Эскизы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1214"/>
+        <location filename="../mainwindow.cpp" line="1217"/>
         <source>EXIF Data</source>
         <translation>Данные EXIF</translation>
     </message>
@@ -694,7 +694,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="827"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
         <translation type="unfinished">Ошибка</translation>
     </message>

@@ -5,17 +5,17 @@
     <name>LxImage::Application</name>
     <message>
         <location filename="../application.cpp" line="96"/>
-        <source>Take a screenshot</source>
-        <translation>Pren una captura de pantalla</translation>
-    </message>
-    <message>
-        <location filename="../application.cpp" line="105"/>
-        <source>Take a screenshot and save it to the directory without showing the GUI</source>
+        <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../application.cpp" line="105"/>
+        <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -109,17 +109,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>[*]%1 (%2x%3) - Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="738"/>
+        <location filename="../mainwindow.cpp" line="741"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1164"/>
+        <location filename="../mainwindow.cpp" line="1167"/>
         <source>Thumbnails</source>
         <translation>Miniatures</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1214"/>
+        <location filename="../mainwindow.cpp" line="1217"/>
         <source>EXIF Data</source>
         <translation>Dades EXIF</translation>
     </message>
@@ -693,7 +693,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="827"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
         <translation type="unfinished">Error</translation>
     </message>
