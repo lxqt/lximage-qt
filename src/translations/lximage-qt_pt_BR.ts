@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>Diretório</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -138,12 +138,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use uma tecla modificadora para limpar
+um atalho no modo de edição.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Aviso: Atalho ambíguo detectado!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
