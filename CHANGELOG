@@ -1,3 +1,15 @@
+lximage-qt-0.16.0 / 2020-11-01
+==============================
+  * Added image size and path to statusbar.
+  * Added copy Path action.
+  * Fixed memory leaks in annotations.
+  * Show error message if saving with a format is not supported.
+  * Added resize image feature.
+  * ￼Use QFlags default constructor.
+  * ￼Prevent users from defining ambiguous shortcuts.
+  * ￼￼Consult Qt for supported mimetypes.
+  * ￼￼Start app on screen with mouse cursor when opening image.
+
 lximage-qt-0.15.0 / 2020-04-21
 ==============================
   * Hide annotations toolbar by default (it's buggy) but add an option to show/hide it on startup.
