@@ -9,6 +9,7 @@ lximage-qt-0.16.0 / 2020-11-01
   * ￼Prevent users from defining ambiguous shortcuts.
   * ￼￼Consult Qt for supported mimetypes.
   * ￼￼Start app on screen with mouse cursor when opening image.
+  * ￼￼￼￼￼Added depreciation notice to screenshot command line options.
 
 lximage-qt-0.15.0 / 2020-04-21
 ==============================
