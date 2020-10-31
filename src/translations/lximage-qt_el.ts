@@ -6,17 +6,17 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Λήψη στιγμιότυπου (υπό απόσυρση, παρακαλώ αντί αυτού χρησιμοποιήστε screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>Φάκελος</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Λήψη στιγμιότυπου και αποθήκευση στον φάκελο χωρίς την εμφάνιση του γραφικού περιβάλλοντος (υπό απόσυρση, παρακαλώ αντί αυτού χρησιμοποιήστε screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -138,7 +138,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση ενός πλήκτρου τροποποίησης για την εκκαθάριση μιας συντόμευσης
+στην λειτουργία επεξεργασίας.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
@@ -303,7 +304,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ά&amp;νοιγμα με...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -579,7 +580,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Αντιγραφή &amp;διαδρομής</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -695,7 +696,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished">Σφάλμα</translation>
+        <translation>Σφάλμα</translation>
     </message>
 </context>
 <context>
@@ -729,13 +730,13 @@ in the editing mode.</source>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> εικ</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
