@@ -5,11 +5,11 @@ lximage-qt-0.16.0 / 2020-11-01
   * Fixed memory leaks in annotations.
   * Show error message if saving with a format is not supported.
   * Added resize image feature.
-  * ￼Use QFlags default constructor.
-  * ￼Prevent users from defining ambiguous shortcuts.
-  * ￼￼Consult Qt for supported mimetypes.
-  * ￼￼Start app on screen with mouse cursor when opening image.
-  * ￼￼￼￼￼Added depreciation notice to screenshot command line options.
+  * Use QFlags default constructor.
+  * Prevent users from defining ambiguous shortcuts.
+  * Consult Qt for supported mimetypes.
+  * Start app on screen with mouse cursor when opening image.
+  * Added depreciation notice to screenshot command line options.
 
 lximage-qt-0.15.0 / 2020-04-21
 ==============================
