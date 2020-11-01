@@ -169,7 +169,7 @@ MainWindow* Application::createWindow() {
       }
       QKeySequence seq = action->shortcut();
       ShortcutDescription s;
-      s.displayText = action->text().remove QStringLiteral("&"); // without mnemonics
+      s.displayText = action->text().remove(QLatin1Char('&')); // without mnemonics
       s.shortcut = seq;
       defaultShortcuts_.insert(action->objectName(), s);
     }
