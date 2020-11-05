@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cattura schermata (non più supportato, usare screengrab come alternativa)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cattura una schermata e salvala nella cartella senza mostrare l&apos;interfaccia grafica (non più supportato, usare screengrab come alternativa)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
