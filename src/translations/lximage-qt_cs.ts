@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pořídit snímek obrazovky (zastaralé, použijte místo toho zachytávání obrazovky)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pořiďte snímek obrazovky a uložte jej do adresáře bez zobrazení grafického uživatelského rozhraní (zastaralé, použijte místo toho zachytávání obrazovky)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -252,7 +252,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>&amp;Reload File</source>
-        <translation>Načíst soubo&amp;r znovu</translation>
+        <translation>Nahrát soubo&amp;r znovu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
@@ -610,12 +610,12 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation>&amp;Zobrazit</translation>
+        <translation>&amp;Pohled</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Úpravy</translation>
+        <translation>Úp&amp;ravy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
