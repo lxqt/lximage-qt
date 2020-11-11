@@ -164,7 +164,7 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Storlek:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
@@ -220,7 +220,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna &amp;med...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -260,7 +260,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation>S&amp;para som</translation>
+        <translation>Spara &amp;Som</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
@@ -270,7 +270,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>&amp;Close</source>
-        <translation>Stän&amp;g</translation>
+        <translation>&amp;Stäng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -387,7 +387,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
@@ -397,12 +397,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>H&amp;elskärm</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="464"/>
@@ -412,7 +412,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="467"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
@@ -422,7 +422,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bildspel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
@@ -432,12 +432,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="548"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa EXIF Data</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -503,7 +503,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
@@ -559,32 +559,32 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Öppna…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa Tumnaglar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="516"/>
@@ -594,27 +594,27 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna &amp;Mapp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="528"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda upp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
@@ -627,12 +627,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikontema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -667,7 +667,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Genvägar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
@@ -677,12 +677,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Genväg</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -695,7 +695,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished">Fel</translation>
+        <translation>Fel</translation>
     </message>
 </context>
 <context>
@@ -708,34 +708,34 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Bredd</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Höjd</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuvarande storlek:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny storlek:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
@@ -748,7 +748,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Skärmdump</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
@@ -773,12 +773,12 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Inkludera muspekaren</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
@@ -801,12 +801,12 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda upp</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera</translation>
     </message>
 </context>
 </TS>
