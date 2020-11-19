@@ -77,7 +77,7 @@ set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM true)
 include(LXQtTranslateDesktop)
 
 file(GLOB desktop_files_in ../data/*.desktop.in)
-lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in})
+lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in} USE_YAML)
 install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
 
 add_executable(lximage-qt
