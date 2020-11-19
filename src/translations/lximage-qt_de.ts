@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Screenshot anfertigen (veraltet, bitte screengrab verwenden)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Screenshot anfertigen und im Ordner speichern, ohne die GUI anzuzeigen (veraltet, bitte screengrab verwenden)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -143,12 +143,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Warnung: Doppelte Tastenzuweisung!&lt;b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Doppelte Tastenzuweisung nicht übernommen.&lt;b&gt;</translation>
     </message>
 </context>
 <context>
@@ -156,7 +156,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kann angegebenes Bildformat nicht speichern!</translation>
     </message>
 </context>
 <context>
@@ -649,7 +649,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished">Maximale Anzahl kürzlich geöffneter Dateien:</translation>
+        <translation>Maximale Anzahl zuletzt geöffneter Dateien:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -669,7 +669,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Shortcuts</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
@@ -679,7 +679,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Shortcut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
