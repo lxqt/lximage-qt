@@ -6,17 +6,17 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Padaryti ekrano kopiją (pasenęs, vietoj jo, naudokite screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>KATALOGAS</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Padaryti ekrano kopiją ir įrašyti ją į katalogą nerodant grafinės naudotojo sąsajos (pasenęs, vietoj jo, naudokite screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -164,12 +164,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dydis:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kelias:</translation>
     </message>
 </context>
 <context>
@@ -236,7 +236,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Atverti &amp;naudojant...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
@@ -579,17 +579,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopijuoti &amp;kelią</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopijuoti kelią</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Keisti dydį</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -672,7 +672,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Veiksmas</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
@@ -682,7 +682,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Numatytieji</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -695,7 +695,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished">Klaida</translation>
+        <translation>Klaida</translation>
     </message>
 </context>
 <context>
@@ -703,44 +703,44 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Keisti paveikslo dydį</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Plotis</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukštis</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dabartinis dydis:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naujas dydis:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> piks.</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Išlaikyti proporcijas</translation>
     </message>
 </context>
 <context>
@@ -783,7 +783,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek.</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
