@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazer uma captura de tela (obsoleto, use screengrab em seu lugar)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazer uma captura de tela e salvar no diretório sem exibir a interface (obsoleto, use screengrab em seu lugar)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -149,7 +149,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Atalho ambíguo não aceito.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -157,7 +157,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Não pode salvar com esse formato de imagem!</translation>
     </message>
 </context>
 <context>
@@ -165,12 +165,12 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Caminho:</translation>
     </message>
 </context>
 <context>
@@ -304,7 +304,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir &amp;Com...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -329,12 +329,12 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <source>PgDown</source>
-        <translation></translation>
+        <translation>PageDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>PgUp</source>
-        <translation></translation>
+        <translation>PageUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
@@ -581,17 +581,17 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar Camin&amp;ho</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar caminho</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Redimensionar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -649,7 +649,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Número máximo de arquivos recentes:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -669,22 +669,22 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Atalhos</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ação</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Atalho</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -697,7 +697,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished">Erro</translation>
+        <translation>Erro</translation>
     </message>
 </context>
 <context>
@@ -705,44 +705,44 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Redimensionar Imagem</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho atual:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Novo tamanho:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Manter proporção</translation>
     </message>
 </context>
 <context>
@@ -785,7 +785,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> seg</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
