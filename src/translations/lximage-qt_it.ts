@@ -314,8 +314,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>&amp;Open…</source>
-        <translation>&amp;Apri…
-</translation>
+        <translation>&amp;Apri…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
