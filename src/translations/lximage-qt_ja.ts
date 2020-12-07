@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - シンプルで高速な画像ビューアー
+
+Copyright (C) 2013-2020
+LXQt プロジェクト: https://lxqt-project.org
+
+作者:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
