@@ -59,18 +59,12 @@
         <location filename="../mainwindow.cpp" line="205"/>
         <source>LXImage-Qt - a simple and fast image viewer
 
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
+Copyright (C) 2013-2020
+LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - penampil gambar yang sederhana dan cepat
-
-Hak cipta (C) 2013
-LXQt Project: https://lxqt.org/
-
-Pencipta:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
