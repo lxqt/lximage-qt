@@ -6,22 +6,22 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Снимане на екрана (спряна поддръжка, моля вместо това използвайте screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Снимане на екрана и запазване без показване на графичния интерфейс (неподдържано, моля вместо това използвайте screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[ФАЙЛ1,ФАЙЛ2,...]</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>отговор неизвестна грешка</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>отговор неизвестна грешка</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>отговор неизвестна грешка</translation>
     </message>
 </context>
 <context>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="204"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Относно</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="205"/>
@@ -64,58 +64,64 @@ LXQt Project: https://lxqt.org/
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - опростена и бърза програма за преглеждане на изображенив
+
+Copyright (C) 2013
+LXQt Project: https://lxqt.org/
+
+Автори:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Отваряне на файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="361"/>
         <location filename="../mainwindow.cpp" line="396"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлове с изображения (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="374"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Отваряне на директория</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазване на файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="683"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Зареждане...) - Преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="689"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Зареждане неуспешно) - Преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="695"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1167"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Миниатюри</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1217"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF Данни</translation>
     </message>
 </context>
 <context>
@@ -123,7 +129,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Изчистване</translation>
     </message>
 </context>
 <context>
@@ -132,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Използване на модифициращ клавиш за изчистване на комбинацията
+в режим на редактиране.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Внимание: Повтарящата се комбинация беше изтрита!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Внимание: Повтарящата се комбинация не беше приета!&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -150,7 +157,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазването в този формат не е възможно!</translation>
     </message>
 </context>
 <context>
@@ -158,12 +165,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Път:</translation>
     </message>
 </context>
 <context>
@@ -171,37 +178,37 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Старт</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Стоп</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Затваряне</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка</translation>
     </message>
 </context>
 <context>
@@ -209,411 +216,411 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Последно отваряни файлове</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Относно</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <location filename="../mainwindow.ui" line="634"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Лента с инструменти</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Отваряне &amp;с...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Отваряне…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторно заре&amp;ждане на файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Запазване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазване &amp;като</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>За&amp;тваряне</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Увеличаване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Намаляване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="292"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Копиране в клипборда</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Следващ файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <location filename="../mainwindow.ui" line="328"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Предишен файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Оригинален размер</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="358"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>На&amp;пасване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Завъртване по часовниковата стрелка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Завъртване &amp;обратно на часовниковата стрелка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="382"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Предпочитания</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>Пр&amp;интиране</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Начален файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="407"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Домашна папка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Последен файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Край</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Нов прозорец</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Обърни &amp;хоризонтално</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Снимка на екрана</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>П&amp;ълен екран</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="464"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Обърни &amp;вертикално</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="467"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Поставяне от клипборда</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Про&amp;жекция</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Изтриване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на миниатюри</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="516"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Свойства на файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Отваряне на &amp;директория</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="528"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Качване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Качване на изображение</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="548"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на EXIF данни</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Без инструменти</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="563"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Премахване на всички инструменти за чертане</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на стрелка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="578"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на стрелка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на правоъгълник</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="593"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на празен правоъгълник</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на кръг</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="608"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на празен кръг</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="620"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на число</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="623"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертаене на нарастващи числа</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Инструменти за анота&amp;ции</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="642"/>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на краища</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Копиране на п&amp;ътя</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Копиране на пътя</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Преоразмеряване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Помощ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Отиди</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Изглед</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Редактиране</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Лента с инструменти</translation>
     </message>
 </context>
 <context>
@@ -621,67 +628,67 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Предпочитания</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Икони:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвят на фона в нормален изглед:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвят на фона при пълен екран:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Брой на максимално отворените файлове:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервал между изображенията при прожекция (секунди):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на краища на изображение по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на лента с анотации по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Клавишни комбинации</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Действие</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Комбинация</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>По подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Общи</translation>
     </message>
 </context>
 <context>
@@ -689,7 +696,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Грешка</translation>
     </message>
 </context>
 <context>
@@ -697,44 +704,44 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Преоразмеряване на изображение</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Широчина</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Височина</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текущ размер:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Нов размер:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Запазване на пропорциите</translation>
     </message>
 </context>
 <context>
@@ -742,52 +749,52 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Снимка на екрана</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Създаване на снимка на екрана</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Област</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Целия екран</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Само избрания прозорец</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Избрана област от екрана</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Зключване на показалеца на мишката</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Забавяне:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Включване на заглавие на прозорец и рамка</translation>
     </message>
 </context>
 <context>
@@ -795,12 +802,12 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Качване</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Копиране</translation>
     </message>
 </context>
 </TS>
