@@ -87,6 +87,17 @@
         <translation>[*]%1 (Laddar...) - Bildvisare</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="205"/>
+        <source>LXImage-Qt - a simple and fast image viewer
+
+Copyright (C) 2013-2020
+LXQt Project: https://lxqt-project.org
+
+Authors:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="689"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Det gick inte att ladda) - Bildvisare</translation>
@@ -105,23 +116,6 @@
         <location filename="../mainwindow.cpp" line="374"/>
         <source>Open directory</source>
         <translation>Öppna katalog</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="205"/>
-        <source>LXImage-Qt - a simple and fast image viewer
-
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
-
-Authors:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - en enkel och snabb bildvisare
-
-Copyright (C) 2013
-LXQt-projekt: https://lxqt.org/
-
-Författare:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
 </context>
 <context>
