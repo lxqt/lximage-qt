@@ -663,7 +663,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation>Shortcuts</translation>
+        <translation>Tastenkürzel</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
@@ -673,7 +673,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation>Shortcut</translation>
+        <translation>Tastenkürzel</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
