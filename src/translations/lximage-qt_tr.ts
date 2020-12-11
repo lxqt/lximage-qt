@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran görüntüsü alın (kullanımdan kaldırıldı, bunun yerine lütfen screengrab programını kullanın)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran görüntüsü alın ve GUI&apos;yi göstermeden dizine kaydedin (kullanımdan kaldırıldı, bunun yerine lütfen screengrab&apos;ı kullanın)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - basit ve hızlı bir resim görüntüleyici
+
+Telif Hakkı (C) 2013-2020
+LXQt Projesi: https://lxqt-project.org
+
+Yazarlar:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
