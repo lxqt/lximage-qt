@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - ένας απλός και γρήγορος προβολέας εικόνων
+
+Πνευματικά νδικαιώματα (C) 2013-2020
+Έργο LXQt: https://lxqt-project.org
+
+Δημιουργοί:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
