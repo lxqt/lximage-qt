@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - paprasta ir greita paveikslų žiūryklė
+
+Autorių teisės (C) 2013-2020
+LXQt projektas: https://lxqt-project.org
+
+Autoriai:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -132,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudokite modifikavimo klavišą, kad
+taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="283"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Įspėjimas: Aptiktas dviprasmiškas spartusis klavišas!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="300"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Dviprasmiškas spartusis klavišas nepriimtas.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -150,7 +157,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepavyksta įrašyti naudojant šį paveikslo formatą!</translation>
     </message>
 </context>
 <context>
@@ -641,7 +648,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Didžiausias paskiausiai naudotų failų skaičius:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -661,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="110"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Spartieji klavišai</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="129"/>
@@ -671,7 +678,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Spartusis klavišas</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
