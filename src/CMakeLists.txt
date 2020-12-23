@@ -78,7 +78,6 @@ include(LXQtTranslateDesktop)
 
 file(GLOB desktop_files_in ../data/*.desktop.in)
 lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in} USE_YAML)
-install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
 
 add_executable(lximage-qt
     ${lximage-qt_SRCS}
@@ -102,4 +101,12 @@ target_link_libraries(lximage-qt
     ${XFIXES_LDFLAGS}
 )
 
+add_custom_command(OUTPUT lximage-qt.desktop
+    APPEND
+    COMMAND echo -n "MimeType=" >> ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
+    COMMAND $<TARGET_FILE:lximage-qt> --supportedmimetypes >> ${CMAKE_CURRENT_BINARY_DIR}/lximage-qt.desktop
+    DEPENDS lximage-qt
+)
+
 install(TARGETS lximage-qt RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")

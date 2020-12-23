@@ -24,11 +24,13 @@
 #include <QDBusInterface>
 #include <QPixmapCache>
 #include <QX11Info>
+#include <iostream>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
 #include "mainwindow.h"
 
 using namespace LxImage;
+using namespace std;
 
 static const char* serviceName = "org.lxde.LxImage";
 static const char* ifaceName = "org.lxde.LxImage.Application";
@@ -108,6 +110,12 @@ bool Application::parseCommandLineArgs() {
     parser.addOption(screenshotOptionDir);
   }
 
+  QCommandLineOption supportedMimeTypes(
+    QStringLiteral("supportedmimetypes"),
+    tr("Print an ASCII-encoded, semicolon-separated list of supported image types")
+  );
+  parser.addOption(supportedMimeTypes);
+
   const QString files = tr("[FILE1, FILE2,...]");
   parser.addPositionalArgument(QStringLiteral("files"), files, files);
 
@@ -124,6 +132,17 @@ bool Application::parseCommandLineArgs() {
     paths.push_back(info.absoluteFilePath());
   }
 
+
+  //print supported image types
+  if (parser.isSet(supportedMimeTypes)) {
+    for(const QByteArray& type : QImageReader::supportedMimeTypes()) {
+      //only include image types and not application/pdf
+      if(type.startsWith("image/"))
+        cout << type.constData() << ';';
+    }
+    cout << endl;
+    return false;
+  }
 
   //silent no-gui screenshot
   if(isX11) {
