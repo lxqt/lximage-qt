@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Snimi sliku ekrana (zastarjelo, umjesto toga koristi screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Snimi sliku ekrana i spremi je u mapu bez prikazivanja korisničkog sučelja (zastarjelo, umjesto toga koristi screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt – jednostavan i brz program za prikaz slika
+
+Copyright (C) 2013. - 2020.
+LXQt projekt: https://lxqt-project.org
+
+Autori:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
