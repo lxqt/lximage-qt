@@ -469,7 +469,7 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation>Sil</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
