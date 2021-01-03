@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>400</height>
+    <width>427</width>
+    <height>409</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -100,6 +100,13 @@
         <widget class="QCheckBox" name="annotationBox">
          <property name="text">
           <string>Show annotations toolbar by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QCheckBox" name="forceZoomFitBox">
+         <property name="text">
+          <string>Force zoom to fit when loading images</string>
          </property>
         </widget>
        </item>

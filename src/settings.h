@@ -169,6 +169,14 @@ public:
     showAnnotationsToolbar_ = show;
   }
 
+  bool forceZoomFit() const {
+    return forceZoomFit_;
+  }
+
+  void setForceZoomFit(bool on) {
+    forceZoomFit_ = on;
+  }
+
   QSize getPrefSize() const {
     return prefSize_;
   }
@@ -206,7 +214,8 @@ private:
   bool lastWindowMaximized_;
   bool showOutline_;
   bool showAnnotationsToolbar_;
-
+  bool forceZoomFit_;
+  
   QSize prefSize_;
 
   QHash<QString, QString> actions_;
