@@ -90,27 +90,27 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="683"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Завантаження...) - Переглядач малюнків</translation>
+        <translation>[*]%1 (Завантаження...) — Переглядач зображень</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="689"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Не вдалося завантажити) - Переглядач малюнків</translation>
+        <translation>[*]%1 (Не вдалося завантажити) — Переглядач зображень</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="695"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Переглядач малюнків</translation>
+        <translation>[*]%1 (%2x%3) — Переглядач зображень</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Переглядач малюнків</translation>
+        <translation>[*]Переглядач зображень</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1167"/>
         <source>Thumbnails</source>
-        <translation>Значки</translation>
+        <translation>Ескізи</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1217"/>
@@ -307,7 +307,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>&amp;Open…</source>
-        <translation>&amp;Відкрити</translation>
+        <translation>&amp;Відкрити…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -467,7 +467,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation>Показати значки</translation>
+        <translation>Показати ескізи</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -626,7 +626,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Тема значків:</translation>
+        <translation>Тема піктограм:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -689,7 +689,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>Error</source>
-        <translation type="unfinished">Помилка</translation>
+        <translation>Помилка</translation>
     </message>
 </context>
 <context>
