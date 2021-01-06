@@ -572,27 +572,19 @@ void MainWindow::onImageLoaded() {
 
     loadJob_ = nullptr; // the job object will be freed later automatically
 
-    // set image zoom
-    Application* app = static_cast<Application*>(qApp);
-    Settings& settings = app->settings();
-    
-    if (settings.forceZoomFit()) {
+    // set image zoom, like in loadImage()
+    if(static_cast<Application*>(qApp)->settings().forceZoomFit()) {
       ui.actionZoomFit->setChecked(true);
-      ui.view->setAutoZoomFit(true);
-      ui.view->zoomFit();
     }
-    else {
-      // like in onImageLoaded()
-      ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
-      if(ui.actionOriginalSize->isChecked()) {
-        ui.view->zoomOriginal();
-      }
+    ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
+    if(ui.actionOriginalSize->isChecked()) {
+      ui.view->zoomOriginal();
     }
     
     ui.view->setImage(image_);
 
-   // currentIndex_ should be corrected after loading
-   currentIndex_ = indexFromPath(currentFile_);
+    // currentIndex_ should be corrected after loading
+    currentIndex_ = indexFromPath(currentFile_);
 
     updateUI();
 
@@ -793,23 +785,15 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     }
     const Fm::CStrPtr file_name = currentFile_.toString();
 
-  // set image zoom
-  Application* app = static_cast<Application*>(qApp);
-  Settings& settings = app->settings();
-
-  if (settings.forceZoomFit()) {
-    ui.actionZoomFit->setChecked(true);
-    ui.view->setAutoZoomFit(true);
-    ui.view->zoomFit();
-  }
-  else {
-    // like in onImageLoaded()
+    // set image zoom, like in onImageLoaded()
+    if(static_cast<Application*>(qApp)->settings().forceZoomFit()) {
+      ui.actionZoomFit->setChecked(true);
+    }
     ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
     if(ui.actionOriginalSize->isChecked()) {
       ui.view->zoomOriginal();
     }
-  }
-    
+
     if(mimeType == QLatin1String("image/gif"))
       ui.view->setGifAnimation(QString::fromUtf8(file_name.get()));
     else
