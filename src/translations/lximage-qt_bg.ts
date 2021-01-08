@@ -59,18 +59,12 @@
         <location filename="../mainwindow.cpp" line="205"/>
         <source>LXImage-Qt - a simple and fast image viewer
 
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
+Copyright (C) 2013-2020
+LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - опростена и бърза програма за преглеждане на изображенив
-
-Copyright (C) 2013
-LXQt Project: https://lxqt.org/
-
-Автори:
-Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -94,32 +88,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Запазване на файл</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
+        <location filename="../mainwindow.cpp" line="688"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Зареждане...) - Преглед на изображения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="689"/>
+        <location filename="../mainwindow.cpp" line="694"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Зареждане неуспешно) - Преглед на изображения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="695"/>
+        <location filename="../mainwindow.cpp" line="700"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Преглед на изображения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="741"/>
+        <location filename="../mainwindow.cpp" line="746"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Преглед на изображения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1167"/>
+        <location filename="../mainwindow.cpp" line="1175"/>
         <source>Thumbnails</source>
         <translation>Миниатюри</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1217"/>
+        <location filename="../mainwindow.cpp" line="1225"/>
         <source>EXIF Data</source>
         <translation>EXIF Данни</translation>
     </message>
@@ -142,12 +136,12 @@ in the editing mode.</source>
 в режим на редактиране.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="283"/>
+        <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Внимание: Повтарящата се комбинация беше изтрита!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="300"/>
+        <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Внимание: Повтарящата се комбинация не беше приета!&lt;/b&gt;</translation>
     </message>
@@ -666,22 +660,27 @@ in the editing mode.</source>
         <translation>Показване на лента с анотации по подразбиране</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="110"/>
+        <location filename="../preferencesdialog.ui" line="109"/>
+        <source>Force zoom to fit when loading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="117"/>
         <source>Shortcuts</source>
         <translation>Клавишни комбинации</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="129"/>
+        <location filename="../preferencesdialog.ui" line="136"/>
         <source>Action</source>
         <translation>Действие</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="134"/>
+        <location filename="../preferencesdialog.ui" line="141"/>
         <source>Shortcut</source>
         <translation>Комбинация</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="142"/>
+        <location filename="../preferencesdialog.ui" line="149"/>
         <source>Default</source>
         <translation>По подразбиране</translation>
     </message>
@@ -694,7 +693,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="838"/>
         <source>Error</source>
         <translation>Грешка</translation>
     </message>

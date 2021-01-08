@@ -94,32 +94,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Guardar ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
+        <location filename="../mainwindow.cpp" line="688"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (A carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="689"/>
+        <location filename="../mainwindow.cpp" line="694"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Falha ao carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="695"/>
+        <location filename="../mainwindow.cpp" line="700"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="741"/>
+        <location filename="../mainwindow.cpp" line="746"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1167"/>
+        <location filename="../mainwindow.cpp" line="1175"/>
         <source>Thumbnails</source>
         <translation>Miniaturas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1217"/>
+        <location filename="../mainwindow.cpp" line="1225"/>
         <source>EXIF Data</source>
         <translation>Dados EXIF</translation>
     </message>
@@ -142,12 +142,12 @@ in the editing mode.</source>
 remover o atalho no modo de edição.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="283"/>
+        <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Aviso: detetado um atalho ambíguo!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="300"/>
+        <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Atalho ambíguo não aceite.&lt;/b&gt;</translation>
     </message>
@@ -666,22 +666,27 @@ remover o atalho no modo de edição.</translation>
         <translation>Mostrar barra de anotações, por definição</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="110"/>
+        <location filename="../preferencesdialog.ui" line="109"/>
+        <source>Force zoom to fit when loading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="117"/>
         <source>Shortcuts</source>
         <translation>Atalhos</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="129"/>
+        <location filename="../preferencesdialog.ui" line="136"/>
         <source>Action</source>
         <translation>Ação</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="134"/>
+        <location filename="../preferencesdialog.ui" line="141"/>
         <source>Shortcut</source>
         <translation>Atalho</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="142"/>
+        <location filename="../preferencesdialog.ui" line="149"/>
         <source>Default</source>
         <translation>Repor atalhos para os valores padrão</translation>
     </message>
@@ -694,7 +699,7 @@ remover o atalho no modo de edição.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="838"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
