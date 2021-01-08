@@ -247,7 +247,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
         <source>Ctrl+O</source>
-        <translation>Ctrl(Vald)+O</translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -257,7 +257,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>Ctrl+R</source>
-        <translation>Ctrl(Vald)+R</translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
@@ -267,7 +267,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
         <source>Ctrl+S</source>
-        <translation>Ctrl(Vald)+S</translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
@@ -277,7 +277,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
         <source>Ctrl+A</source>
-        <translation>Ctrl(Vald)+A</translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -287,7 +287,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
         <source>Ctrl+W</source>
-        <translation>Ctrl(Vald)+W</translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -297,7 +297,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>Ctrl+=</source>
-        <translation>Ctrl(Vald)+=</translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -307,7 +307,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="292"/>
         <source>Ctrl+-</source>
-        <translation>Ctrl(Vald)+-</translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -323,7 +323,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <source>PgDown</source>
-        <translation>PgDown(Tolesnis psl)</translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
@@ -334,7 +334,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>PgUp</source>
-        <translation>PgUp(Ankstesnis psl)</translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
@@ -344,7 +344,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <source>Ctrl+0</source>
-        <translation>Ctrl(Vald)+0</translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="358"/>
@@ -384,7 +384,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="395"/>
         <source>Ctrl+P</source>
-        <translation>Ctrl(Vald)+P</translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
@@ -394,7 +394,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="407"/>
         <source>Home</source>
-        <translation>Home(Prad)</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
@@ -404,7 +404,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
         <source>End</source>
-        <translation>End(Pab)</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
@@ -414,7 +414,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Ctrl+N</source>
-        <translation>Ctrl(Vald)+N</translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
@@ -469,7 +469,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation>Del(Šal)</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
@@ -494,7 +494,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="528"/>
         <source>Ctrl+D</source>
-        <translation>Ctrl(Vald)+D</translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
@@ -633,7 +633,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Piktogramų tema:</translation>
+        <translation>Piktogramų apipavidalinimas:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
