@@ -94,32 +94,32 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Datei speichern</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
+        <location filename="../mainwindow.cpp" line="688"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Lade...) - Bildbetrachter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="689"/>
+        <location filename="../mainwindow.cpp" line="694"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Laden ist fehlgeschlagen) - Bildbetrachter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="695"/>
+        <location filename="../mainwindow.cpp" line="700"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Bildbetrachter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="741"/>
+        <location filename="../mainwindow.cpp" line="746"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Bildbetrachter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1167"/>
+        <location filename="../mainwindow.cpp" line="1175"/>
         <source>Thumbnails</source>
         <translation>Miniaturen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1217"/>
+        <location filename="../mainwindow.cpp" line="1225"/>
         <source>EXIF Data</source>
         <translation>EXIF-Daten</translation>
     </message>
@@ -141,12 +141,12 @@ in the editing mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="283"/>
+        <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Warnung: Doppelte Tastenzuweisung!&lt;b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="300"/>
+        <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Doppelte Tastenzuweisung nicht übernommen.&lt;b&gt;</translation>
     </message>
@@ -667,22 +667,27 @@ in the editing mode.</source>
         <translation>Standardmäßig Anmerkungssymbolleiste anzeigen</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="110"/>
+        <location filename="../preferencesdialog.ui" line="109"/>
+        <source>Force zoom to fit when loading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="117"/>
         <source>Shortcuts</source>
         <translation>Tastenkürzel</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="129"/>
+        <location filename="../preferencesdialog.ui" line="136"/>
         <source>Action</source>
         <translation>Aktion</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="134"/>
+        <location filename="../preferencesdialog.ui" line="141"/>
         <source>Shortcut</source>
         <translation>Tastenkürzel</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="142"/>
+        <location filename="../preferencesdialog.ui" line="149"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
@@ -695,7 +700,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="838"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
