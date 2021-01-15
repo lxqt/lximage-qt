@@ -272,7 +272,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation>Įrašyti k&amp;aip</translation>
+        <translation>Įrašyti &amp;kaip</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
@@ -668,7 +668,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Įkeliant paveikslus priverstinai naudoti tokį mastelį, kad jie tilptų</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>

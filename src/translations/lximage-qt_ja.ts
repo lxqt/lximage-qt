@@ -668,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>画像を読み込む時に拡大縮小をフィットにする</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>

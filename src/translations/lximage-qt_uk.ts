@@ -467,7 +467,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation>Показати ескізи</translation>
+        <translation>Показувати ескізи</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -707,39 +707,39 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Висота</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Поточний розмір:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Новий розмір:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Зберігати пропорції</translation>
     </message>
 </context>
 <context>
@@ -747,7 +747,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>Знімок екрану</translation>
+        <translation>Знімок екрана</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
@@ -762,7 +762,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation>Екран цілком</translation>
+        <translation>Весь екран</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
@@ -777,12 +777,12 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Включаючи вказівник миші</translation>
+        <translation>Включити вказівник миші</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> с</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>

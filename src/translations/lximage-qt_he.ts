@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - מציג תמונות פשוט ומהיר
+
+כל הזכויות שמורות (C) 2013‏-2020
+מיזם LXQt:‏ https://lxqt-project.org
+
+יוצרים:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;‎</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -662,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>לאלץ תקריב להתאמה בעת טעינת תמונות</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
