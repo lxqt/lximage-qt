@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Cattura schermata (non più supportato, usare screengrab come alternativa)</translation>
+        <translation>Cattura schermata (non più supportato, usare Screengrab come alternativa)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -669,7 +669,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Adatta zoom alla finestra al prossimo immagine</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
