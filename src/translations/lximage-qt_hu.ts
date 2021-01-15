@@ -64,7 +64,12 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - egy egyszerű és gyors képnézegető
+Copyright (C) 2013-2020
+LXQt projekt: https://lxqt-project.org
+
+Szerzők:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -132,7 +137,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished">Használjon egy módosítóbillentyűt a
+        <translation>Használjon egy módosítóbillentyűt a
 kombináció törléséhez.</translation>
     </message>
     <message>
@@ -143,7 +148,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;A nem egyértelmű gyorsbillentyű nem elfogadható.&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Nem egyértelmű gyorsbillentyű nem elfogadható.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -151,7 +156,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished">Ezzel a képformátummal nem lehet menteni!</translation>
+        <translation>Ebbe a képformátumba nem lehet menteni!</translation>
     </message>
 </context>
 <context>
@@ -192,7 +197,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation>Megállítás</translation>
+        <translation>Leállítás</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
@@ -662,7 +667,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Nagyítás kényszerítése képek betöltésekor</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
