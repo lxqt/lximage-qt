@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished">Prendre une copie d&apos;écran et l&apos;enregistrer dans le répertoire sans l&apos;afficher (déprécié, utilisez screengrab à la place)</translation>
+        <translation>Prendre une copie d&apos;écran et l&apos;enregistrer dans le répertoire sans l&apos;afficher (déconseillé, utilisez screengrab à la place)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - une visionneuse d&apos;images simple et rapide
+
+Copyright (C) 2013-2020
+Projet LXQt : https://lxqt-project.org
+
+Auteurs :
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -138,12 +144,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Avertissement : raccourci ambigu détecté!&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Avertissement : raccourci ambigu détecté!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Raccourcis ambigus non acceptés.&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Raccourcis ambigus non acceptés.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -667,7 +673,7 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Forcer le zoom à s&apos;adapter lors du chargement d&apos;images</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
@@ -723,7 +729,7 @@ en mode édition.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished">Nouvelle taille :</translation>
+        <translation>Nouvelle taille :</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
