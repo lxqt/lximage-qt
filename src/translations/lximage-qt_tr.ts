@@ -668,7 +668,7 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüleri yüklerken yakınlaştırmayı sığdırmaya zorlayın</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
