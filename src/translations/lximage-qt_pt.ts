@@ -668,7 +668,7 @@ remover o atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Forçar o zoom a caber ao carregar imagens</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
