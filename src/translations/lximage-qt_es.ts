@@ -468,7 +468,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation type="unfinished">Supr</translation>
+        <translation>Supr</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
