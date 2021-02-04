@@ -305,7 +305,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Kopier til utklippsboken</translation>
+        <translation>&amp;Kopier til utklippstavlen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -447,7 +447,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Lim inn fra utklippsboken</translation>
+        <translation>&amp;Lim inn fra utklippstavlen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
