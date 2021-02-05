@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - um visualizador de imagens simples e rápido
+
+Copyright (C) 2013-2020
+LXQt Projeto: https://lxqt-project.org
+
+Autores:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -663,7 +669,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Força o zoom para caber ao carregar imagens</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
