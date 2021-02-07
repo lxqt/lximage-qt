@@ -129,7 +129,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation>クリア(&amp;C)</translation>
+        <translation>消去(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -138,8 +138,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>ショートカットをクリアするには、編集モードで
-修飾キー（訳注: Alt,Ctrl,Shift のみ）を押します。</translation>
+        <translation>ショートカットを消去するには、編集モードで
+修飾キー (訳注: Alt, Ctrl, Shift) を押します。</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="285"/>
@@ -668,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation>画像を読み込む時に拡大縮小をフィットにする</translation>
+        <translation>画像の読み込み時に拡大縮小をフィットに強制する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
