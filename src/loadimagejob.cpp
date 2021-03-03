@@ -109,7 +109,7 @@ void LoadImageJob::exec() {
             ExifByteOrder bo = exif_data_get_byte_order(exif_data.get());
             /* bo == EXIF_BYTE_ORDER_INTEL ; */
             orient = exif_get_short (orient_ent->data, bo);
-            QMatrix m;
+            QTransform m;
             switch(orient) {
               case 1: /* no rotation */
                 break;
