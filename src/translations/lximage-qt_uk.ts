@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Зробити знімок екрана (застаріле, замість цього скористайтеся screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Зробити знімок екрана та зберегти його до каталогу, не показуючи графічний інтерфейс (застаріле, скористайтеся screengrab натомість)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lximage-qt — простий і швидкий переглядач зображень
+
+Авторське право (C) 2013-2020
+Проєкт LXQT: https://lxqt-project.org
+
+Автори:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -132,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Застосуйте клавішу-модифікатор, щоб очистити скорочення
+в режимі редагування.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Попередження: виявлено неоднозначну комбінацію клавіш!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Неоднозначну комбінацію клавіш відхилено.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -150,7 +157,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдається зберегти в цьому форматі зображення!</translation>
     </message>
 </context>
 <context>
