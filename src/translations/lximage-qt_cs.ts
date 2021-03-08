@@ -783,7 +783,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Zahrnout ukazatel myši</translation>
+        <translation>Zahrnout ukazovátko myši</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
