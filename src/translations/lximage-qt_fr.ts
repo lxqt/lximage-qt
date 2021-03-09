@@ -241,12 +241,12 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation>&amp;Afficher</translation>
+        <translation>&amp;Vue</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Éditer</translation>
+        <translation>&amp;Editer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
@@ -256,7 +256,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>&amp;About</source>
-        <translation>&amp;À propos</translation>
+        <translation>&amp;A propos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
@@ -302,7 +302,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation>Enregistrer &amp;sous</translation>
+        <translation>E&amp;nregistrer sous</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
@@ -693,7 +693,7 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="149"/>
         <source>Default</source>
-        <translation>Réinitialiser les raccourcis aux valeurs par défaut</translation>
+        <translation>Par défaut</translation>
     </message>
 </context>
 <context>

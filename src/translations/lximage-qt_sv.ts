@@ -254,7 +254,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation>Spara &amp;Som</translation>
+        <translation>Spara &amp;som</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>

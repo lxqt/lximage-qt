@@ -693,7 +693,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation>一般</translation>
+        <translation>全般</translation>
     </message>
 </context>
 <context>

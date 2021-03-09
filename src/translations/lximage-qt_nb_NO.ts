@@ -6,17 +6,17 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Utfør skjermavbildning (foreldet, bruk screengrab istedenfor)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>MAPPE</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Utfør en skjermavbildning og lagre den til mappen uten å vise grensesnittet (foreldet, bruk screengrab istedenfor)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - enkel og rask bildeviser
+
+Opphavsrett © 2013–2021
+LXQt-prosjektet: https://lxqt-project.org
+
+Utviklere:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="360"/>
@@ -132,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bruk en endringstast for å opprette en snarvei
+i redigeringsmodus.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="285"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Advarsel: Tvetydig snarvei oppdaget.&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="302"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tvetydig snarvei godtas ikke.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -150,7 +157,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke lagre i dette bildeformatet.</translation>
     </message>
 </context>
 <context>
@@ -158,12 +165,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Størrelse:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sti:</translation>
     </message>
 </context>
 <context>
@@ -230,7 +237,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne &amp;med …</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
@@ -573,17 +580,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier &amp;sti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier sti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Endre størrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -641,7 +648,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimalt antall nylige filer:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
@@ -661,27 +668,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Force zoom to fit when loading images</source>
-        <translation type="unfinished"></translation>
+        <translation>Påtving forstørrelse til passform ved innlasting av bilder</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Snarveier</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="136"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="141"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Snarvei</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="149"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Forvalg</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -702,44 +709,44 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Endre bildestørrelse</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Bredde</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Høyde</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nåværende størrelse:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny størrelse:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Behold sideforhold</translation>
     </message>
 </context>
 <context>
@@ -782,7 +789,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
