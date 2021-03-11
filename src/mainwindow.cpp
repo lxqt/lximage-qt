@@ -104,13 +104,16 @@ MainWindow::MainWindow():
 
   // install an event filter on the image view
   ui.view->installEventFilter(this);
+
   ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
+
   ui.view->updateOutline();
+
   ui.view->showOutline(settings.isOutlineShown());
   ui.actionShowOutline->setChecked(settings.isOutlineShown());
 
-  if(settings.showThumbnails())
-    setShowThumbnails(true);
+  setShowThumbnails(settings.showThumbnails());
+  ui.actionShowThumbnails->setChecked(settings.showThumbnails());
 
   ui.annotationsToolBar->setVisible(settings.isAnnotationsToolbarShown());
   ui.actionAnnotations->setChecked(settings.isAnnotationsToolbarShown());
@@ -580,7 +583,7 @@ void MainWindow::onImageLoaded() {
     if(ui.actionOriginalSize->isChecked()) {
       ui.view->zoomOriginal();
     }
-    
+
     ui.view->setImage(image_);
 
     // currentIndex_ should be corrected after loading

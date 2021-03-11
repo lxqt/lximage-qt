@@ -26,6 +26,7 @@
 #include <qcache.h>
 #include <QColor>
 #include <QSize>
+#include <libfm-qt/core/thumbnailjob.h>
 
 namespace LxImage {
 
@@ -68,6 +69,14 @@ public:
   }
   void setShowThumbnails(bool show) {
     showThumbnails_ = show;
+  }
+
+  int maxThumbnailFileSize() const {
+    return Fm::ThumbnailJob::maxThumbnailFileSize();
+  }
+
+  void setMaxThumbnailFileSize(int size) {
+    Fm::ThumbnailJob::setMaxThumbnailFileSize(size);
   }
 
   bool showSidePane() const {
@@ -215,7 +224,7 @@ private:
   bool showOutline_;
   bool showAnnotationsToolbar_;
   bool forceZoomFit_;
-  
+
   QSize prefSize_;
 
   QHash<QString, QString> actions_;

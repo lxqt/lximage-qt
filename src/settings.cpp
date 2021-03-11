@@ -52,7 +52,6 @@ bool Settings::load() {
   fallbackIconTheme_ = settings.value(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_).toString();
   bgColor_ = settings.value(QStringLiteral("bgColor"), bgColor_).value<QColor>();
   fullScreenBgColor_ = settings.value(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_).value<QColor>();
-  // showThumbnails_;
   // showSidePane_;
   slideShowInterval_ = settings.value(QStringLiteral("slideShowInterval"), slideShowInterval_).toInt();
   maxRecentFiles_ = settings.value(QStringLiteral("maxRecentFiles"), maxRecentFiles_).toInt();
@@ -78,6 +77,11 @@ bool Settings::load() {
     QString str = settings.value(action).toString();
     addShortcut(action, str);
   }
+  settings.endGroup();
+
+  settings.beginGroup(QStringLiteral("Thumbnail"));
+  showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
+  setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
   settings.endGroup();
 
   return true;
@@ -116,6 +120,11 @@ bool Settings::save() {
     settings.setValue(it.key(), it.value());
     ++it;
   }
+  settings.endGroup();
+
+  settings.beginGroup(QStringLiteral("Thumbnail"));
+  settings.setValue(QStringLiteral("ShowThumbnails"), showThumbnails_);
+  settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
   settings.endGroup();
 
   return true;

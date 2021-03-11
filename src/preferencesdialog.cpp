@@ -85,7 +85,11 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.oulineBox->setChecked(settings.isOutlineShown());
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
-  
+
+  ui.thumbnailBox->setChecked(settings.showThumbnails());
+  // the max. thumbnail size spinbox is in MiB
+  ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
+
   // shortcuts
   initShortcuts();
 }
@@ -140,6 +144,10 @@ void PreferencesDialog::accept() {
   settings.showOutline(ui.oulineBox->isChecked());
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
+
+  settings.setShowThumbnails(ui.thumbnailBox->isChecked());
+  // the max. thumbnail size spinbox is in MiB
+  settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
 
   applyNewShortcuts();
   settings.save();
