@@ -96,7 +96,7 @@ void UploadDialog::start()
     connect(mUpload, &Upload::progress, ui.progressBar, &QProgressBar::setValue);
 
     // If the request completes, show the link to the user
-    connect(mUpload, &Upload::completed, [this](const QString &url) {
+    connect(mUpload, &Upload::completed, this, [this](const QString &url) {
         ui.linkLineEdit->setText(url);
         ui.linkLineEdit->selectAll();
 
@@ -105,12 +105,12 @@ void UploadDialog::start()
     });
 
     // If the request fails, show an error
-    connect(mUpload, &Upload::error, [this](const QString &message) {
+    connect(mUpload, &Upload::error, this, [this](const QString &message) {
         showError(message);
     });
 
     // Destroy the upload when it completes
-    connect(mUpload, &Upload::finished, [this]() {
+    connect(mUpload, &Upload::finished, this, [this]() {
         mFile.close();
         mUpload->deleteLater();
         mUpload = nullptr;

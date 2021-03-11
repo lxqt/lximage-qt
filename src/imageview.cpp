@@ -98,7 +98,9 @@ void ImageView::onFileDropped(const QString file) {
 }
 
 void ImageView::wheelEvent(QWheelEvent* event) {
-  int delta = event->delta();
+  QPoint angleDelta = event->angleDelta();
+  Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+  int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
   // Ctrl key is pressed
   if(event->modifiers() & Qt::ControlModifier) {
     if(delta > 0) { // forward
