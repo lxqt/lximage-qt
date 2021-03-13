@@ -51,12 +51,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="204"/>
+        <location filename="../mainwindow.cpp" line="207"/>
         <source>About</source>
         <translation>このアプリケーションについて</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="205"/>
+        <location filename="../mainwindow.cpp" line="208"/>
         <source>LXImage-Qt - a simple and fast image viewer
 
 Copyright (C) 2013-2020
@@ -73,53 +73,53 @@ LXQt プロジェクト: https://lxqt-project.org
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="360"/>
+        <location filename="../mainwindow.cpp" line="363"/>
         <source>Open File</source>
         <translation>ファイルを開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="361"/>
-        <location filename="../mainwindow.cpp" line="396"/>
+        <location filename="../mainwindow.cpp" line="364"/>
+        <location filename="../mainwindow.cpp" line="399"/>
         <source>Image files (%1)</source>
         <translation>画像ファイル (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="377"/>
         <source>Open directory</source>
         <translation>ディレクトリを開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="395"/>
+        <location filename="../mainwindow.cpp" line="398"/>
         <source>Save File</source>
         <translation>ファイルの保存</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="688"/>
+        <location filename="../mainwindow.cpp" line="691"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (ロード中...) - 画像ビューアー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="694"/>
+        <location filename="../mainwindow.cpp" line="697"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (読み込めません) - 画像ビューアー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="700"/>
+        <location filename="../mainwindow.cpp" line="703"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - 画像ビューアー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="746"/>
+        <location filename="../mainwindow.cpp" line="749"/>
         <source>[*]Image Viewer</source>
         <translation>[*]画像ビューアー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1175"/>
+        <location filename="../mainwindow.cpp" line="1178"/>
         <source>Thumbnails</source>
         <translation>サムネイル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1225"/>
+        <location filename="../mainwindow.cpp" line="1228"/>
         <source>EXIF Data</source>
         <translation>EXIF データ</translation>
     </message>
@@ -142,12 +142,12 @@ in the editing mode.</source>
 修飾キー (訳注: Alt, Ctrl, Shift) を押します。</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="285"/>
+        <location filename="../preferencesdialog.cpp" line="293"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;警告: 複数のショートカットを検出しました！&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="302"/>
+        <location filename="../preferencesdialog.cpp" line="310"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;複数のショートカットには対応しません。&lt;/b&gt;</translation>
     </message>
@@ -667,26 +667,46 @@ in the editing mode.</source>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
-        <source>Force zoom to fit when loading images</source>
-        <translation>画像の読み込み時に拡大縮小をフィットに強制する</translation>
+        <source>Fit images when navigating</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
+        <source>Thumbnails</source>
+        <translation type="unfinished">サムネイル</translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="123"/>
+        <source>Image size limit for built-in thumbnailer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="130"/>
+        <source> MiB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="146"/>
+        <source>Show thumbnails dock by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="154"/>
         <source>Shortcuts</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="136"/>
+        <location filename="../preferencesdialog.ui" line="173"/>
         <source>Action</source>
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="141"/>
+        <location filename="../preferencesdialog.ui" line="178"/>
         <source>Shortcut</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="149"/>
+        <location filename="../preferencesdialog.ui" line="186"/>
         <source>Default</source>
         <translation>既定値</translation>
     </message>
@@ -699,7 +719,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="838"/>
+        <location filename="../mainwindow.cpp" line="841"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>

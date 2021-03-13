@@ -51,12 +51,12 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="204"/>
+        <location filename="../mainwindow.cpp" line="207"/>
         <source>About</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="205"/>
+        <location filename="../mainwindow.cpp" line="208"/>
         <source>LXImage-Qt - a simple and fast image viewer
 
 Copyright (C) 2013-2020
@@ -73,53 +73,53 @@ Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="360"/>
+        <location filename="../mainwindow.cpp" line="363"/>
         <source>Open File</source>
         <translation>Apri file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="361"/>
-        <location filename="../mainwindow.cpp" line="396"/>
+        <location filename="../mainwindow.cpp" line="364"/>
+        <location filename="../mainwindow.cpp" line="399"/>
         <source>Image files (%1)</source>
         <translation>File immagini (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="374"/>
+        <location filename="../mainwindow.cpp" line="377"/>
         <source>Open directory</source>
         <translation>Apri cartella</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="395"/>
+        <location filename="../mainwindow.cpp" line="398"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="688"/>
+        <location filename="../mainwindow.cpp" line="691"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (caricando...) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="694"/>
+        <location filename="../mainwindow.cpp" line="697"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (caricamento non riuscito...) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="700"/>
+        <location filename="../mainwindow.cpp" line="703"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="746"/>
+        <location filename="../mainwindow.cpp" line="749"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualizzatore immagini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1175"/>
+        <location filename="../mainwindow.cpp" line="1178"/>
         <source>Thumbnails</source>
         <translation>Miniature</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1225"/>
+        <location filename="../mainwindow.cpp" line="1228"/>
         <source>EXIF Data</source>
         <translation>Dati EXIF</translation>
     </message>
@@ -142,12 +142,12 @@ in the editing mode.</source>
 scorciatoia in modalità di modifica.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="285"/>
+        <location filename="../preferencesdialog.cpp" line="293"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Attenzione: Scorciatoia presente due volte! rilevata&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="302"/>
+        <location filename="../preferencesdialog.cpp" line="310"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Scorciatoia già in uso - non applicata.&lt;/b&gt;</translation>
     </message>
@@ -668,26 +668,46 @@ scorciatoia in modalità di modifica.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
-        <source>Force zoom to fit when loading images</source>
-        <translation>Adatta zoom alla finestra al prossimo immagine</translation>
+        <source>Fit images when navigating</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
+        <source>Thumbnails</source>
+        <translation type="unfinished">Miniature</translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="123"/>
+        <source>Image size limit for built-in thumbnailer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="130"/>
+        <source> MiB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="146"/>
+        <source>Show thumbnails dock by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="154"/>
         <source>Shortcuts</source>
         <translation>Scorciatoie</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="136"/>
+        <location filename="../preferencesdialog.ui" line="173"/>
         <source>Action</source>
         <translation>Azione</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="141"/>
+        <location filename="../preferencesdialog.ui" line="178"/>
         <source>Shortcut</source>
         <translation>Scorciatoia</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="149"/>
+        <location filename="../preferencesdialog.ui" line="186"/>
         <source>Default</source>
         <translation>Ripristina</translation>
     </message>
@@ -700,7 +720,7 @@ scorciatoia in modalità di modifica.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="838"/>
+        <location filename="../mainwindow.cpp" line="841"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
