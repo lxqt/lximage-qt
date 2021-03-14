@@ -117,13 +117,13 @@ MainWindow::MainWindow():
 
   ui.annotationsToolBar->setVisible(settings.isAnnotationsToolbarShown());
   ui.actionAnnotations->setChecked(settings.isAnnotationsToolbarShown());
-  connect(ui.actionAnnotations, &QAction::triggered, [this](int checked) {
+  connect(ui.actionAnnotations, &QAction::triggered, this, [this](int checked) {
     if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
       ui.annotationsToolBar->setVisible(checked);
     }
   });
   // annotations toolbar visibility can change in its context menu
-  connect(ui.annotationsToolBar, &QToolBar::visibilityChanged, [this](int visible) {
+  connect(ui.annotationsToolBar, &QToolBar::visibilityChanged, this, [this](int visible) {
     if(!isFullScreen()) { // annotations toolbar is hidden in fullscreen
       ui.actionAnnotations->setChecked(visible);
     }
@@ -616,7 +616,9 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
       case QEvent::Wheel: { // mouse wheel event
         QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
         if(wheelEvent->modifiers() == 0) {
-          int delta = wheelEvent->delta();
+          QPoint angleDelta = wheelEvent->angleDelta();
+          Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+          int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
           if(delta < 0)
             on_actionNext_triggered(); // next image
           else
@@ -639,7 +641,9 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
       case QEvent::Wheel: { // mouse wheel event
         QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
         if(wheelEvent->modifiers() == 0) {
-          int delta = wheelEvent->delta();
+          QPoint angleDelta = wheelEvent->angleDelta();
+          Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+          int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
           QScrollBar* hscroll = thumbnailsView_->childView()->horizontalScrollBar();
           if(hscroll)
             hscroll->setValue(hscroll->value() - delta);

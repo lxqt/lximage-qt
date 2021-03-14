@@ -109,41 +109,41 @@ void LoadImageJob::exec() {
             ExifByteOrder bo = exif_data_get_byte_order(exif_data.get());
             /* bo == EXIF_BYTE_ORDER_INTEL ; */
             orient = exif_get_short (orient_ent->data, bo);
-            QTransform m;
+            QTransform t;
             switch(orient) {
               case 1: /* no rotation */
                 break;
               case 2:
                 // mirror horizontally
-                m.scale(-1, 1);
+                t.scale(-1, 1);
                 break;
               case 3:
-                m.rotate(180);
+                t.rotate(180);
                 break;
               case 4:
                 // mirror vertically
-                m.scale(1, -1);
+                t.scale(1, -1);
                 break;
               case 5:
                 // transpose
-                m.rotate(-90);
-                m.scale(1, -1);
+                t.rotate(-90);
+                t.scale(1, -1);
                 break;
               case 6:
-                m.rotate(90);
+                t.rotate(90);
                 break;
               case 7:
                 // transverse
-                m.rotate(90);
-                m.scale(1, -1);
+                t.rotate(90);
+                t.scale(1, -1);
                 break;
               case 8:
-                m.rotate(270);
+                t.rotate(270);
                 break;
             }
             // rotate the image according to EXIF orientation tag
-            if(!m.isIdentity()) {
-              image_ = image_.transformed(m);
+            if(!t.isIdentity()) {
+              image_ = image_.transformed(t);
             }
           }
 
@@ -154,4 +154,3 @@ void LoadImageJob::exec() {
     }
   }
 }
-

@@ -232,7 +232,7 @@ void PreferencesDialog::showWarning(const QString& text, bool temporary) {
       if(warningTimer_ == nullptr) {
         warningTimer_ = new QTimer();
         warningTimer_->setSingleShot (true);
-        connect(warningTimer_, &QTimer::timeout, [this] {
+        connect(warningTimer_, &QTimer::timeout, this, [this] {
           ui.warningLabel->setText(permanentWarning_);
           ui.warningLabel->setVisible(!permanentWarning_.isEmpty());
         });
