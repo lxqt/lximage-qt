@@ -668,27 +668,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσαρμογή εικόνων κατά την πλοήγηση</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Εικόνες επισκόπησης</translation>
+        <translation>Εικόνες επισκόπησης</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Όριο μεγέθους εικόνας για την δημιουργία επισκόπησης:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση εξ ορισμού της αποβάθρας εικόνων επισκόπησης</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
