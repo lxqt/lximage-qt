@@ -679,7 +679,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation>Dimensione massima per generare miniature:</translation>
+        <translation>Limite di dimensione per il generatore miniature interno:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
