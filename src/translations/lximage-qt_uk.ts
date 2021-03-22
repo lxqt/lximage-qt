@@ -474,7 +474,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation>Показувати ескізи</translation>
+        <translation>Показувати мініатюри</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -643,7 +643,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation>Колір тла повного екрану:</translation>
+        <translation>Колір тла повного екрана:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
@@ -678,7 +678,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation>Обмеження розміру зображення вбудованої мініатюри:</translation>
+        <translation>Обмеження розміру зображення для вбудованого створювача мініатюр:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>

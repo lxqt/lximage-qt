@@ -610,7 +610,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished">Copier le chemin</translation>
+        <translation>Copier le c&amp;hemin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -673,27 +673,27 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajuster les images lors de la navigation</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Miniatures</translation>
+        <translation>Miniatures</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite de taille d&apos;image pour la vignette intégrée :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> Mio</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Afficher le dock des miniatures par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
