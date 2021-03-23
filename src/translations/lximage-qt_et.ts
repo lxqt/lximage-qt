@@ -115,7 +115,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="1228"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF-kirjed</translation>
     </message>
 </context>
 <context>
@@ -316,33 +316,33 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="316"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <location filename="../mainwindow.ui" line="328"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Eelmine fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Algne suurus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="358"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mahuta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -382,7 +382,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Esimene fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="407"/>
@@ -392,7 +392,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimane fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
@@ -402,198 +402,198 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uus akne</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Peegelda &amp;horisontaalselt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tee ekraanitõmmis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Täisekraanivaade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="464"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Peegelda &amp;vertikaalselt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="467"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aseta lõikelaualt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Slaidiseanss</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kustuta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita pisipilte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="516"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili omadused</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava &amp;kaust</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="528"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadi veebi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadi pilt üles</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="548"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita EXIF-kirjeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Ühtegi tööriista pole valitud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="563"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Eemalda kõik tööriistad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista nool</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="578"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista üks nool</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista ristkülik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="593"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista üks seest tühi ristkülik</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista ring</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="608"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista üks seest tühi ring</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="620"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista number</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="623"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonista kasvavaid numbreid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Joonistatavate märkmete tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="642"/>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita äärejoont</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopeeri asukoh&amp;t</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopeeri asukoht</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuda suurust</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abiteave</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
@@ -641,22 +641,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiljutiste failide arv:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaidiseansi välp (sekundites):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimis näita pildi äärejoont</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi näita joonistatavate märkmete tööriistariba</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
@@ -666,17 +666,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisipildid</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisipildistaja failisuuruse ülempiir:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
