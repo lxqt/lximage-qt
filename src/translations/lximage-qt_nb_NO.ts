@@ -138,7 +138,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished">Bruk en endringstast for å opprette en snarvei
+        <translation>Bruk en endringstast for å opprette en snarvei
 i redigeringsmodus.</translation>
     </message>
     <message>
@@ -157,7 +157,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Kan ikke lagre i dette bildeformatet.</translation>
+        <translation>Kan ikke lagre i dette bildeformatet!</translation>
     </message>
 </context>
 <context>
@@ -668,27 +668,27 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilpass billedstørrelse ved navigering</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Forhåndsvisninger</translation>
+        <translation>Små ikoner</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maks størrelse for innebygde små-ikoner:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis småikon-dokk som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
@@ -721,7 +721,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="841"/>
         <source>Error</source>
-        <translation type="unfinished">Feil</translation>
+        <translation>Feil</translation>
     </message>
 </context>
 <context>
