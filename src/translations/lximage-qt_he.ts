@@ -668,27 +668,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>להתאים תמונות בזמן הניווט</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">תמונות ממוזערות</translation>
+        <translation>תמונות ממוזערות</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>הגבלת גודל תמונות ממוזערות בממזער המובנה:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>להציג מעגן תמונות ממוזערות כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
