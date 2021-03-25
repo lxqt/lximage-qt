@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tee ekraanitõmmis ja salvesta määratud kausta ilma kasutajaliidest kasutamata (tänaseks on see meetod vananenud ja pigem kasuta rakendust screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - lihtne ja kiire pildinäitaja
+
+Autoriõigused (C) 2013-2020
+LXQt Project: https://lxqt-project.org
+
+Autor:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
@@ -90,22 +96,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mainwindow.cpp" line="691"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Laadin...) - Pildinäitaja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="697"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Laadimine ei õnnestunud) - Pildinäitaja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="703"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Pildinäitaja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="749"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Pildinäitaja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1178"/>
@@ -123,7 +129,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kustuta</translation>
     </message>
 </context>
 <context>
@@ -132,17 +138,18 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirklahvi eemaldamiseks vajuta
+toimetamisvaates muuteklahvi.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="293"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hoiatus: Tegemist on korduva kiirklahviga!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="310"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Korduv kiirklahv jäi salvestamata.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -225,12 +232,12 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="188"/>
         <location filename="../mainwindow.ui" line="634"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Joonistatavate märkmete tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava &amp;rakendusega...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
@@ -387,7 +394,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="407"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Algusesse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
@@ -397,7 +404,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Lõppu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
@@ -507,7 +514,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>No Tool</source>
-        <translation>Ühtegi tööriista pole valitud</translation>
+        <translation>Eemalda valitud tööriistad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="563"/>
@@ -598,22 +605,22 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Liigu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaata</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tööriistariba</translation>
     </message>
 </context>
 <context>
@@ -661,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvamisel mahuta pildid</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
@@ -681,32 +688,32 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi kuva pisipiltide paneeli</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirklahvid</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="173"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegevus</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="178"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiirklahv</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="186"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi väärtused</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Üldseadistused</translation>
     </message>
 </context>
 <context>
@@ -714,7 +721,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="841"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga</translation>
     </message>
 </context>
 <context>
@@ -722,44 +729,44 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuda pildi mõõte</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Laius</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõrgus</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Praegune suurus:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uus suurus:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Säilita proportsioonid</translation>
     </message>
 </context>
 <context>
@@ -767,52 +774,52 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekraanitõmmis</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tee ekraanitõmmis</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Soovin tõmmist</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Tervest ekraanist</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Ainult aktiivsest aknast</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitud alast</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvesta hiirekursor</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivitus:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaasa akna pealkiri ja raam</translation>
     </message>
 </context>
 <context>
@@ -820,12 +827,12 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Laadi üles</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopeeri</translation>
     </message>
 </context>
 </TS>
