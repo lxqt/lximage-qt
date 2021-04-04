@@ -678,7 +678,7 @@ remover o atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation>Limite de tamanho de imagem para miniatura integrada:</translation>
+        <translation>Limitar tamanho de imagens criadas pelo gerador nativo:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
