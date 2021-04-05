@@ -282,7 +282,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>&amp;Close</source>
-        <translation>&amp;Sule</translation>
+        <translation>&amp;Sulge</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -409,7 +409,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Uus akne</translation>
+        <translation>&amp;Uus aken</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
