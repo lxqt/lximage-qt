@@ -667,27 +667,27 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Képek illesztése körbejárás közben</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Bélyegképek</translation>
+        <translation>Bélyegképek</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Képméret-korlát a beépített bélyegkép-készítő számára:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Bélyegképek dokk megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
