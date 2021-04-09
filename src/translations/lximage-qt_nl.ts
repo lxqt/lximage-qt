@@ -6,22 +6,22 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak een schermfoto (verouderd - gebruik hiervoor screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>MAP</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak een schermfoto en sla deze op in de map zonder een venster te tonen (verouderd - gebruik hiervoor screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation>[Bestand1, Bestand2,...]</translation>
+        <translation>[BESTAND1, BESTAND2, …]</translation>
     </message>
 </context>
 <context>
