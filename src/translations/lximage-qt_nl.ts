@@ -680,7 +680,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation>Groottebeperking van ingebouwde miniatuurweergave:</translation>
+        <translation>Groottebeperking van ingebouwde miniatuurmaker:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
