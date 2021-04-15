@@ -469,7 +469,7 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
@@ -668,27 +668,27 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Gezinirken resimleri sığdır</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Önizleme</translation>
+        <translation>KüçükResimler</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerleşik küçük resim için görüntü boyutu sınırı:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılan olarak küçük resimleri göster</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
