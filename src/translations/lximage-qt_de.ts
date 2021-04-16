@@ -138,7 +138,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutze Zusatztaste um die Verknüpfung
+im Bearbeitungsmodus zu löschen.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="293"/>
@@ -581,12 +582,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Pfa&amp;d kopieren</translation>
+        <translation>Kopiere Datei&amp;pfad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation>Pfad kopieren</translation>
+        <translation>Kopiere Dateipfad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
@@ -669,27 +670,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild einpassen bei Steuerung</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Miniaturen</translation>
+        <translation>Bildchen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Größenbegrenzung für eingebaute Miniaturansicht:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige Bildchen-Anker als Standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
