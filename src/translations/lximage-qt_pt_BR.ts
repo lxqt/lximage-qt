@@ -11,12 +11,12 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation>Diretório</translation>
+        <translation>Pasta</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>Fazer uma captura de tela e salvar no diretório sem exibir a interface (obsoleto, use screengrab em seu lugar)</translation>
+        <translation>Fazer uma captura de tela e salvar na pasta sem exibir a interface (obsoleto, use screengrab em seu lugar)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -86,7 +86,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="377"/>
         <source>Open directory</source>
-        <translation>Abrir diretório</translation>
+        <translation>Abrir pasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="398"/>
@@ -96,22 +96,22 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="691"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Carregando...) - Visualizador de Imagens</translation>
+        <translation>[*]%1 (Carregando...) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="697"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Falha no carregamento) - Visualizador de Imagens</translation>
+        <translation>[*]%1 (Falha no carregamento) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="703"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Visualizador de Imagens</translation>
+        <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="749"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Visualizador de Imagens</translation>
+        <translation>[*]Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1178"/>
@@ -216,13 +216,13 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation>Visualizador de Imagens</translation>
+        <translation>Visualizador de imagens</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <location filename="../mainwindow.ui" line="634"/>
         <source>Annotations Toolbar</source>
-        <translation>Barra de Anotações</translation>
+        <translation>Barra de anotações</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
@@ -282,7 +282,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Copiar para a Área de Transferência</translation>
+        <translation>&amp;Copiar para a área de transferência</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -304,7 +304,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>Abrir &amp;Com...</translation>
+        <translation>Abrir &amp;com...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -455,7 +455,7 @@ um atalho no modo de edição.</translation>
         <location filename="../mainwindow.ui" line="476"/>
         <source>&amp;Paste from Clipboard</source>
         <translatorcomment>Has a problem, no similar caracter for shortcut.</translatorcomment>
-        <translation>&amp;Colar da Área de Transferência</translation>
+        <translation>&amp;Colar da área de transferência</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
@@ -475,7 +475,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
         <source>Show Thumbnails</source>
-        <translation>Exibir Miniaturas</translation>
+        <translation>Exibir miniaturas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="511"/>
@@ -490,7 +490,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>Open &amp;Directory</source>
-        <translation>Abrir &amp;diretório</translation>
+        <translation>Abrir &amp;pasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="528"/>
@@ -505,7 +505,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
         <source>Upload the image</source>
-        <translation>Enviar a imagem</translation>
+        <translation>Enviar imagem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="548"/>
@@ -525,7 +525,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
         <source>Draw Arrow</source>
-        <translation>Desenhar Seta</translation>
+        <translation>Desenhar seta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="578"/>
@@ -535,7 +535,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
         <source>Draw Rectangle</source>
-        <translation>Desenhar Retângulo</translation>
+        <translation>Desenhar retângulo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="593"/>
@@ -545,7 +545,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw Circle</source>
-        <translation>Desenhar Círculo</translation>
+        <translation>Desenhar círculo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="608"/>
@@ -555,7 +555,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="620"/>
         <source>Draw Number</source>
-        <translation>Desenhar Número</translation>
+        <translation>Desenhar número</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="623"/>
@@ -565,13 +565,13 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>Barra de &amp;Anotações</translation>
+        <translation>Barra de &amp;anotações</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="642"/>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Show Outline</source>
-        <translation>Exibir Esboço</translation>
+        <translation>Exibir esboço</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
@@ -581,7 +581,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Copiar Camin&amp;ho</translation>
+        <translation>Copiar camin&amp;ho</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -669,7 +669,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished">Ajustar imagens ao navegar</translation>
+        <translation>Ajustar imagens ao navegar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
@@ -679,17 +679,17 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished">Limite de tamanho de imagem para miniaturizador integrado:</translation>
+        <translation>Limite de tamanho de imagem para miniaturizador integrado:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"> MiB</translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished">Mostrar miniaturas por padrão</translation>
+        <translation>Exibir miniaturas por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
@@ -730,7 +730,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation>Redimensionar Imagem</translation>
+        <translation>Redimensionar imagem</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
@@ -780,7 +780,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Fazer uma Captura de tela</translation>
+        <translation>Fazer captura de tela</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -810,7 +810,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation> seg</translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
