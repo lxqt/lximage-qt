@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta en skärmdump (föråldrad, använd screengrab istället)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
@@ -95,7 +95,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation> LXImage-Qt - en snabb och lättanvänd bildvisare
+
+Copyright (C) 2013-2020
+LXQt Project: https://lxqt-project.org
+
+Upphovsman:
+Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="697"/>
@@ -137,12 +143,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="293"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Varning: tvetydig genväg upptäckt!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="310"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tvetydig genväg accepteras inte.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -163,7 +169,7 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sökväg:</translation>
     </message>
 </context>
 <context>
@@ -376,7 +382,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänd och &amp;horisontellt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
@@ -401,7 +407,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="464"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänd &amp;vertikalt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="467"/>
@@ -411,7 +417,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Klistra in från Urklipp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
@@ -436,52 +442,52 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Inget verktyg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="563"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Avmarkera alla ritverktyg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita pil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="578"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita en pil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita rektangel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="593"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita en ihålig rektangel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita cirkel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="608"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita en ihålig cirkel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="620"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita nummer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="623"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita ökande siffror</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="631"/>
@@ -502,17 +508,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera Sö&amp;kväg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera sökväg</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändra storlek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -542,7 +548,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Verktygsfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
@@ -583,7 +589,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="516"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Filegenskaper</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
@@ -613,7 +619,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda upp bilden</translation>
     </message>
 </context>
 <context>
@@ -631,7 +637,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Normal bakgrundsfärg:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
@@ -646,7 +652,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildspelintervall (sekunder):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
@@ -666,7 +672,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Tumnaglar</translation>
+        <translation>Tumnaglar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
@@ -676,7 +682,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
@@ -722,7 +728,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändra storlek på bild</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
@@ -759,7 +765,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Behåll bildförhållandet</translation>
     </message>
 </context>
 <context>
@@ -772,22 +778,22 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished">Ta skärmbild</translation>
+        <translation>Ta en skärmbild</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Region</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Hela skärmen</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Endast nuvarande fönster</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -802,12 +808,12 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fördröjning:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Inkludera fönstertitel och ram</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
