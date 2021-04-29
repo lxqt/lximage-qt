@@ -258,7 +258,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>&amp;Close</source>
-        <translation>S&amp;luiten</translation>
+        <translation>&amp;Sluiten</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -811,7 +811,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation> sec</translation>
+        <translation> sec.</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
