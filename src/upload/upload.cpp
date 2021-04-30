@@ -36,15 +36,9 @@ Upload::Upload(QNetworkReply *reply)
     });
 
     // Emit error() when a socket error occurs
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
     connect(mReply, &QNetworkReply::errorOccurred, this, [this](QNetworkReply::NetworkError) {
         Q_EMIT error(mReply->errorString());
     });
-#else
-    connect(mReply, static_cast<void(QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), this, [this](QNetworkReply::NetworkError) {
-        Q_EMIT error(mReply->errorString());
-    });
-#endif
 
     // Process the request when it finishes
     connect(mReply, &QNetworkReply::finished, this, [this]() {
