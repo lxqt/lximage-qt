@@ -6,17 +6,17 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer una captura de pantalla (obsoleto; utilice screengrab en su lugar)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation>Directorio</translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer una captura de pantalla y guardarla en el directorio sin mostrar la interfaz (obsoleto; utilice screengrab en su lugar)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -64,10 +64,10 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - un visor de imágenes simple y rápido
+        <translation>LXImage-Qt, un visor de imágenes simple y rápido
 
-Copyright (C) 2013-2020
-LXQt Project: https://lxqt-project.org
+Derechos de autor © 2013-2020
+Proyecto LXQt: https://lxqt-project.org
 
 Autores:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
@@ -96,17 +96,17 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     <message>
         <location filename="../mainwindow.cpp" line="691"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Cargando...) - Visor de imágenes</translation>
+        <translation>[*]%1 (Cargando…). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="697"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (La carga ha fallado) - Visor de imágenes</translation>
+        <translation>[*]%1 (Falló la carga). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="703"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Visor de imágenes</translation>
+        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="749"/>
@@ -138,12 +138,13 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice una tecla modificadora para limpiar
+un atajo en el modo de edición.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="293"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;¡Advertencia!: Se detectó un atajo ambiguo&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Atención: se detectó un atajo ambiguo.&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="310"/>
@@ -156,7 +157,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>¡No se puede guardar con ese formato de imagen!</translation>
+        <translation>No se puede guardar con ese formato de imagen.</translation>
     </message>
 </context>
 <context>
@@ -281,7 +282,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Copiar al portapapeles</translation>
+        <translation>&amp;Copiar en el portapapeles</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -408,7 +409,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Nueva ventana</translation>
+        <translation>Ventana &amp;nueva</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
@@ -543,7 +544,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw Circle</source>
-        <translation>Dibujar circunferencia</translation>
+        <translation>Dibujar círculo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="608"/>
@@ -652,42 +653,42 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="81"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Intervalo de presentación de diapositivas (segundos):</translation>
+        <translation>Intervalo de pase de diapositivas (segundos):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation>Mostrar el contorno de la imagen por defecto</translation>
+        <translation>Mostrar el contorno de la imagen de manera predeterminada</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Mostrar la barra de anotaciones por defecto</translation>
+        <translation>Mostrar la barra de anotaciones de manera predeterminada</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Encajar las imágenes al navegar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Miniaturas</translation>
+        <translation>Miniaturas</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite de tamaño de imagen para el miniaturizador integrado:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar miniaturas de manera predeterminada</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
@@ -720,7 +721,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="841"/>
         <source>Error</source>
-        <translation type="unfinished">Error</translation>
+        <translation>Error</translation>
     </message>
 </context>
 <context>
@@ -733,7 +734,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation>Ancho</translation>
+        <translation>Anchura</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
@@ -748,7 +749,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation>Nuevo tamaño:</translation>
+        <translation>Tamaño nuevo:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
