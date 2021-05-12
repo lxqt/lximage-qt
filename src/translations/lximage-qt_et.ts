@@ -203,7 +203,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation>Sule</translation>
+        <translation>Sulge</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
