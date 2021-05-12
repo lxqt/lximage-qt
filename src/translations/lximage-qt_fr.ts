@@ -138,7 +138,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished">Utiliser une touche de modification pour effacer un raccourci
+        <translation>Utiliser une touche de modification pour effacer un raccourci
 en mode édition.</translation>
     </message>
     <message>
