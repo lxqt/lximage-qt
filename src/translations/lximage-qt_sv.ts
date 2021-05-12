@@ -11,7 +11,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>KATALOG</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="105"/>
