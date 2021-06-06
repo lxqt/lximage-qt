@@ -678,12 +678,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ограничение размера изображения эскиза:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
