@@ -64,7 +64,8 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation>LXImage-Qt - jednoduchý a rýchly prehliadač obrázkov
+        <translation>LXImage-Qt - jednoduchý a rýchly
+ prehliadač obrázkov
 
 Copyright (C) 2013-2020
 Projekt LXQt: https://lxqt-project.org
@@ -605,7 +606,7 @@ v režime úpravy.</translation>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
         <source>Go</source>
-        <translation>Ísť</translation>
+        <translation>Prejsť na</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
@@ -658,7 +659,7 @@ v režime úpravy.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation>Vždy zobraziť obrys obrázku</translation>
+        <translation>Vždy zobraziť obrys obrázka</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
@@ -668,7 +669,7 @@ v režime úpravy.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation>Prispôsobiť obrázky pri navigácií</translation>
+        <translation>Prispôsobiť veľkosť pri prepínaní obrázvko</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
