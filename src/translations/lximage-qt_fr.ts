@@ -693,7 +693,7 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished">Afficher le dock des miniatures par défaut</translation>
+        <translation>Afficher les miniatures du dock par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>

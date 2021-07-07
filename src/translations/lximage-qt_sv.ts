@@ -156,7 +156,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte spara bild med detta bildformat!</translation>
     </message>
 </context>
 <context>
