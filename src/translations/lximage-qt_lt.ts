@@ -600,7 +600,7 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Help</source>
-        <translation>Ži&amp;nynas</translation>
+        <translation>Ž&amp;inynas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
@@ -668,27 +668,27 @@ taisymo veiksenoje išvalytumėte spartųjį klavišą.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Naršant, priderinti paveikslus</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Miniatiūros</translation>
+        <translation>Miniatiūros</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paveikslų dydžio riba įtaisytajam miniatiūrų kūrimo įrankiui:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagal numatymą, rodyti miniatiūrų doką</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
