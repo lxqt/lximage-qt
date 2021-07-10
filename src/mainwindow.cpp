@@ -35,6 +35,7 @@
 #include <QMouseEvent>
 #include <QTimer>
 #include <QScreen>
+#include <QWindow>
 #include <QShortcut>
 #include <QDockWidget>
 #include <QScrollBar>
@@ -597,7 +598,7 @@ void MainWindow::onImageLoaded() {
       if(startMaximized_) {
         setWindowState(windowState() | Qt::WindowMaximized);
       }
-      show();
+      showAndRaise();
     }
   }
 }
@@ -811,7 +812,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
       if(startMaximized_) {
         setWindowState(windowState() | Qt::WindowMaximized);
       }
-      show();
+      showAndRaise();
     }
   }
   else {
@@ -1440,4 +1441,15 @@ void MainWindow::deleteOpenWithMenu() {
   if(fileMenu_) {
     fileMenu_->deleteLater();
   }
+}
+
+void MainWindow::showAndRaise() {
+    show();
+    raise();
+    activateWindow();
+    QTimer::singleShot(100, this, [this]() { // steal the focus forcefully
+        if(QWindow *win = windowHandle()) {
+            win->requestActivate();
+        }
+    });
 }
