@@ -153,6 +153,7 @@ private:
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
+  void showAndRaise();
 
 private:
   Ui::MainWindow ui;
