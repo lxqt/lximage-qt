@@ -64,7 +64,13 @@ LXQt Project: https://lxqt-project.org
 
 Authors:
 Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>LXImage-Qt - прост и бърз разглеждач на изображения
+
+Copyright (C) 2013-2020
+LXQt Проект: https://lxqt-project.org
+
+Създатели:
+Хонг Йен Йии (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="363"/>
@@ -662,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Вмести изображенията при навигиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
@@ -672,17 +678,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимална големина на изображение за вграденият създател на миниатюри:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> Мибибайт</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Покажи мястото за поставяне на миниатюри по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
