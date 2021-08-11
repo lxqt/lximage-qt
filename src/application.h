@@ -43,8 +43,8 @@ public:
   bool init(int argc, char** argv);
   bool parseCommandLineArgs();
 
-  void newWindow(QStringList files = QStringList());
-  MainWindow* createWindow();
+  void newWindow(QStringList files = QStringList(), bool fullscreen = false);
+  MainWindow* createWindow(bool fullscreen = false);
 
   void addWindow() { // call this when you create a new toplevel window
     ++windowCount_;

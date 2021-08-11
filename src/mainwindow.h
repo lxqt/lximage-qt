@@ -73,6 +73,11 @@ public:
   void setShowExifData(bool show);
   void applySettings();
 
+  void showAndRaise();
+  void setShowFullScreen(bool value) {
+    showFullScreen_ = value;
+  }
+
 protected:
   void loadImage(const Fm::FilePath & filePath, QModelIndex index = QModelIndex());
   void saveImage(const Fm::FilePath & filePath); // save current image to a file
@@ -153,7 +158,6 @@ private:
   void updateUI();
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
-  void showAndRaise();
 
 private:
   Ui::MainWindow ui;
@@ -191,6 +195,8 @@ private:
   SaveImageJob* saveJob_;
 
   QPointer<Fm::FileMenu> fileMenu_;
+
+  bool showFullScreen_;
 };
 
 }
