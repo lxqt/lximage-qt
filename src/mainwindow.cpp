@@ -73,7 +73,8 @@ MainWindow::MainWindow():
   thumbnailsView_(nullptr),
   loadJob_(nullptr),
   saveJob_(nullptr),
-  fileMenu_(nullptr) {
+  fileMenu_(nullptr),
+  showFullScreen_(false) {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
 
@@ -435,7 +436,7 @@ void MainWindow::on_actionNewWindow_triggered() {
   window->resize(app->settings().windowWidth(), app->settings().windowHeight());
 
   if(app->settings().windowMaximized())
-        window->setWindowState(window->windowState() | Qt::WindowMaximized);
+    window->setWindowState(window->windowState() | Qt::WindowMaximized);
 
   window->show();
 }
@@ -1444,12 +1445,18 @@ void MainWindow::deleteOpenWithMenu() {
 }
 
 void MainWindow::showAndRaise() {
-    show();
+    if(showFullScreen_) {
+      showFullScreen();
+      ui.actionFullScreen->setChecked(true);
+    }
+    else {
+      show();
+    }
     raise();
     activateWindow();
-    QTimer::singleShot(100, this, [this]() { // steal the focus forcefully
-        if(QWindow *win = windowHandle()) {
-            win->requestActivate();
-        }
+    QTimer::singleShot (100, this, [this]() { // steal the focus forcefully
+      if(QWindow *win = windowHandle()){
+        win->requestActivate();
+      }
     });
 }
