@@ -6,6 +6,8 @@
     <method name="newWindow">
       <!-- file paths to open in new windows -->
       <arg type="as" direction="in"/>
+      <!-- whether new window should be full screen -->
+      <arg type="b" direction="in"/>
     </method>
 
     <!-- launch a tool to take a screenshot -->

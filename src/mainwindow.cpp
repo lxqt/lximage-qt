@@ -147,6 +147,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
   contextMenu_->addAction(ui.actionShowOutline);
+  contextMenu_->addAction(ui.actionShowThumbnails);
   contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
@@ -1210,6 +1211,10 @@ void MainWindow::setShowThumbnails(bool show) {
       connect(thumbnailsView_->selectionModel(), &QItemSelectionModel::selectionChanged,
               this, &MainWindow::onThumbnailSelChanged);
     }
+    else if (!thumbnailsDock_->isVisible()) {
+      thumbnailsDock_->show();
+      ui.actionShowThumbnails->setChecked(true);
+    }
   }
   else {
     if(thumbnailsDock_) {
@@ -1283,8 +1288,12 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.toolBar->hide();
       ui.annotationsToolBar->hide();
       ui.statusBar->hide();
-      if(thumbnailsDock_)
+      // It's logical to hide the thumbnail dock on full-screening. The user could show it
+      // in the full-screen mode explicitly.
+      if(thumbnailsDock_) {
         thumbnailsDock_->hide();
+        ui.actionShowThumbnails->setChecked(false);
+      }
       // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
       // is disabled. We needs to add the actions to the main window manually to enable the
       // shortcuts again.
@@ -1313,8 +1322,11 @@ void MainWindow::changeEvent(QEvent* event) {
           ui.annotationsToolBar->show();
       }
       ui.statusBar->show();
-      if(thumbnailsDock_)
+      if(thumbnailsDock_) {
+        // The thumbnail dock exists but was hidden on full-screening. So, it should be restored.
         thumbnailsDock_->show();
+        ui.actionShowThumbnails->setChecked(true);
+      }
       ui.view->hideCursor(false);
     }
   }

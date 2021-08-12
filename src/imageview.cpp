@@ -244,7 +244,9 @@ void ImageView::zoomFit() {
     // instead of scaling it up.
     if(static_cast<int>(image_.width() / qApp->devicePixelRatio()) <= width()
        && static_cast<int>(image_.height() / qApp->devicePixelRatio()) <= height()) {
+      bool tmp = autoZoomFit_; // should be restored because it may be changed below
       zoomOriginal();
+      autoZoomFit_ = tmp;
       return;
     }
   }
