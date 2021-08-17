@@ -679,7 +679,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation>Limite de tamanho de imagem para miniaturizador integrado:</translation>
+        <translation>Limite do tamanho de imagem para o miniaturizador integrado:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
