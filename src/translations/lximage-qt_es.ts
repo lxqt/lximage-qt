@@ -575,7 +575,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="656"/>
