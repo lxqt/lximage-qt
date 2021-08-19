@@ -16,7 +16,7 @@
     <message>
         <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta en skärmdump och spara den till en katalog utan att visa GUI (förlegad, vänligen använd screengrab istället)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -392,7 +392,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Fånga skärmdump</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
@@ -498,7 +498,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="642"/>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa kontur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
@@ -642,7 +642,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="50"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fullskärms bakgrundsfärg:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="71"/>
@@ -657,7 +657,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="95"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa bildkontur som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="102"/>
@@ -697,7 +697,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="173"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="178"/>
@@ -712,7 +712,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allmän</translation>
     </message>
 </context>
 <context>
@@ -818,7 +818,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Fånga ett område av skärmen</translation>
     </message>
 </context>
 <context>
