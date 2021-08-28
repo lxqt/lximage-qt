@@ -469,7 +469,7 @@ u modusu uređivanja.</translation>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>Del</source>
-        <translation>Izbriši</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="508"/>
@@ -668,27 +668,27 @@ u modusu uređivanja.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodi veličinu slika tijekom navigacije</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Sličice</translation>
+        <translation>Sličice</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
         <source>Image size limit for built-in thumbnailer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograničenje veličine slika za ugrađeni alat za generiranje sličica:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardno prikaži ploču sličica</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
