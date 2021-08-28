@@ -668,12 +668,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="109"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштабировать изображения при навигации</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="117"/>
         <source>Thumbnails</source>
-        <translation type="unfinished">Эскизы</translation>
+        <translation>Эскизы</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="123"/>
@@ -683,12 +683,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="130"/>
         <source> MiB</source>
-        <translation type="unfinished"> MiB</translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="146"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображать панель эскизов по умолчанию</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="154"/>
