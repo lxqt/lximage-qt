@@ -121,6 +121,7 @@
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
     <addaction name="separator"/>
+    <addaction name="actionToolbar"/>
     <addaction name="actionAnnotations"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
@@ -621,6 +622,17 @@
    </property>
    <property name="toolTip">
     <string>Draw incrementing numbers</string>
+   </property>
+  </action>
+  <action name="actionToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Main Toolbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Main Toolbar</string>
    </property>
   </action>
   <action name="actionAnnotations">

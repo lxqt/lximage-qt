@@ -178,6 +178,14 @@ public:
     showAnnotationsToolbar_ = show;
   }
 
+  bool isToolbarShown() const {
+    return showToolbar_;
+  }
+
+  void showToolbar(bool show) {
+    showToolbar_ = show;
+  }
+
   bool forceZoomFit() const {
     return forceZoomFit_;
   }
@@ -223,6 +231,7 @@ private:
   bool lastWindowMaximized_;
   bool showOutline_;
   bool showAnnotationsToolbar_;
+  bool showToolbar_;
   bool forceZoomFit_;
 
   QSize prefSize_;
