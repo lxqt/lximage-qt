@@ -84,6 +84,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.slideShowInterval->setValue(settings.slideShowInterval());
   ui.oulineBox->setChecked(settings.isOutlineShown());
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
+  ui.toolbarBox->setChecked(settings.isToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
 
   ui.thumbnailBox->setChecked(settings.showThumbnails());
@@ -143,6 +144,7 @@ void PreferencesDialog::accept() {
   settings.setSlideShowInterval(ui.slideShowInterval->value());
   settings.showOutline(ui.oulineBox->isChecked());
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
+  settings.showToolbar(ui.toolbarBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
 
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());

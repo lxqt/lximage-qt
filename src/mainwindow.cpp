@@ -117,6 +117,20 @@ MainWindow::MainWindow():
   setShowThumbnails(settings.showThumbnails());
   ui.actionShowThumbnails->setChecked(settings.showThumbnails());
 
+  ui.toolBar->setVisible(settings.isToolbarShown());
+  ui.actionToolbar->setChecked(settings.isToolbarShown());
+  connect(ui.actionToolbar, &QAction::triggered, this, [this](int checked) {
+    if(!isFullScreen()) { // toolbar is hidden in fullscreen
+      ui.toolBar->setVisible(checked);
+    }
+  });
+  // toolbar visibility can change in its context menu
+  connect(ui.toolBar, &QToolBar::visibilityChanged, this, [this](int visible) {
+    if(!isFullScreen()) { // toolbar is hidden in fullscreen
+      ui.actionToolbar->setChecked(visible);
+    }
+  });
+
   ui.annotationsToolBar->setVisible(settings.isAnnotationsToolbarShown());
   ui.actionAnnotations->setChecked(settings.isAnnotationsToolbarShown());
   connect(ui.actionAnnotations, &QAction::triggered, this, [this](int checked) {
@@ -148,6 +162,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionFullScreen);
   contextMenu_->addAction(ui.actionShowOutline);
   contextMenu_->addAction(ui.actionShowThumbnails);
+  contextMenu_->addAction(ui.actionToolbar);
   contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionRotateClockwise);
@@ -1317,7 +1332,9 @@ void MainWindow::changeEvent(QEvent* event) {
           removeAction(action);
       }
       ui.menubar->show();
-      ui.toolBar->show();
+      if(ui.actionToolbar->isChecked()){
+          ui.toolBar->show();
+      }
       if(ui.actionAnnotations->isChecked()){
           ui.annotationsToolBar->show();
       }

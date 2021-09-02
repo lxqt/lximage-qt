@@ -97,13 +97,20 @@
         </widget>
        </item>
        <item row="6" column="0" colspan="2">
+        <widget class="QCheckBox" name="toolbarBox">
+         <property name="text">
+          <string>Show main toolbar by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
         <widget class="QCheckBox" name="annotationBox">
          <property name="text">
           <string>Show annotations toolbar by default</string>
          </property>
         </widget>
        </item>
-       <item row="7" column="0" colspan="2">
+       <item row="8" column="0" colspan="2">
         <widget class="QCheckBox" name="forceZoomFitBox">
          <property name="text">
           <string>Fit images when navigating</string>
