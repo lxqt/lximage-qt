@@ -491,9 +491,15 @@ void MainWindow::on_actionSaveAs_triggered() {
 }
 
 void MainWindow::on_actionDelete_triggered() {
-  // delete the current file
-  if(currentFile_)
-    Fm::FileOperation::deleteFiles({currentFile_});
+  // delete or trash the current file
+  if(currentFile_) {
+    if(static_cast<Application*>(qApp)->settings().useTrash()) {
+      Fm::FileOperation::trashFiles({currentFile_}, false);
+    }
+    else {
+      Fm::FileOperation::deleteFiles({currentFile_}, true);
+    }
+  }
 }
 
 void MainWindow::on_actionFileProperties_triggered() {

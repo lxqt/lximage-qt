@@ -42,7 +42,8 @@ Settings::Settings():
   showOutline_(false),
   showAnnotationsToolbar_(false),
   showToolbar_(true),
-  forceZoomFit_(false) {
+  forceZoomFit_(false),
+  useTrash_(true) {
 }
 
 Settings::~Settings() {
@@ -69,6 +70,7 @@ bool Settings::load() {
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   showToolbar_ = settings.value(QStringLiteral("ShowToolbar"), true).toBool();
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
+  useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
   prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
   settings.endGroup();
 
@@ -110,6 +112,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
   settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
+  settings.setValue(QStringLiteral("UseTrash"), useTrash_);
   settings.setValue(QStringLiteral("PrefSize"), prefSize_);
   settings.endGroup();
 

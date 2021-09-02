@@ -86,6 +86,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.toolbarBox->setChecked(settings.isToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
+  ui.useTrashBox->setChecked(settings.useTrash());
 
   ui.thumbnailBox->setChecked(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
@@ -146,6 +147,7 @@ void PreferencesDialog::accept() {
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.showToolbar(ui.toolbarBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
+  settings.setUseTrash(ui.useTrashBox->isChecked());
 
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
   // the max. thumbnail size spinbox is in MiB

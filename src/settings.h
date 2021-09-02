@@ -194,6 +194,13 @@ public:
     forceZoomFit_ = on;
   }
 
+  bool useTrash() const {
+    return useTrash_;
+  }
+  void setUseTrash(bool on) {
+    useTrash_ = on;
+  }
+
   QSize getPrefSize() const {
     return prefSize_;
   }
@@ -233,6 +240,7 @@ private:
   bool showAnnotationsToolbar_;
   bool showToolbar_;
   bool forceZoomFit_;
+  bool useTrash_;
 
   QSize prefSize_;
 
