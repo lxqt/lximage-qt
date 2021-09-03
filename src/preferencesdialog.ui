@@ -131,10 +131,17 @@
        <string>Thumbnails</string>
       </attribute>
       <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0" colspan="2">
+        <widget class="QCheckBox" name="thumbnailBox">
+         <property name="text">
+          <string>Show thumbnails dock by default</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="thumbnailLabel">
          <property name="text">
-          <string>Image size limit for built-in thumbnailer:</string>
+          <string>Thumbnailer file size limit:</string>
          </property>
         </widget>
        </item>
@@ -154,12 +161,15 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0" colspan="2">
-        <widget class="QCheckBox" name="thumbnailBox">
+       <item row="2" column="0">
+        <widget class="QLabel" name="thumbnailSizeLabel">
          <property name="text">
-          <string>Show thumbnails dock by default</string>
+          <string>Thumbnail image dimensions:</string>
          </property>
         </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="thumbnailSizeComboBox"/>
        </item>
       </layout>
      </widget>

@@ -91,6 +91,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.thumbnailBox->setChecked(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
   ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
+  initThumbnailSizes(settings);
 
   // shortcuts
   initShortcuts();
@@ -152,6 +153,7 @@ void PreferencesDialog::accept() {
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
   // the max. thumbnail size spinbox is in MiB
   settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
+  settings.setThumbnailSize(ui.thumbnailSizeComboBox->itemData(ui.thumbnailSizeComboBox->currentIndex()).toInt());
 
   applyNewShortcuts();
   settings.save();
@@ -178,6 +180,17 @@ static void findIconThemesInDir(QHash<QString, QString>& iconThemes, const QStri
     }
   }
   g_key_file_free(kf);
+}
+
+void PreferencesDialog::initThumbnailSizes(Settings& settings) {
+  int i = 0;
+  for(const auto & size : settings.thumbnailSizes()) {
+    ui.thumbnailSizeComboBox->addItem(QStringLiteral("%1 × %1").arg(size), size);
+    if(settings.thumbnailSize() == size) {
+      ui.thumbnailSizeComboBox->setCurrentIndex(i);
+    }
+    ++i;
+  }
 }
 
 void PreferencesDialog::initIconThemes(Settings& settings) {
