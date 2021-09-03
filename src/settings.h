@@ -79,6 +79,17 @@ public:
     Fm::ThumbnailJob::setMaxThumbnailFileSize(size);
   }
 
+  const QList<int>& thumbnailSizes() {
+    static const QList<int> _thumbnailSizes = {256, 224, 192, 160, 128, 96, 64};
+    return _thumbnailSizes;
+  }
+  int thumbnailSize() const {
+    return thumbnailSize_;
+  }
+  void setThumbnailSize(int size) {
+    thumbnailSize_ = size;
+  }
+
   bool showSidePane() const {
     return showSidePane_;
   }
@@ -224,6 +235,7 @@ private:
   QColor bgColor_;
   QColor fullScreenBgColor_;
   bool showThumbnails_;
+  int thumbnailSize_;
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;

@@ -72,6 +72,7 @@ private Q_SLOTS:
 
 private:
   void initIconThemes(Settings& settings);
+  void initThumbnailSizes(Settings& settings);
   void initShortcuts();
   void applyNewShortcuts();
   void showWarning(const QString& text, bool temporary = true);

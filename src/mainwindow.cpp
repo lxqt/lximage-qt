@@ -1205,7 +1205,8 @@ void MainWindow::setShowThumbnails(bool show) {
       thumbnailsDock_->setFeatures(QDockWidget::NoDockWidgetFeatures); // FIXME: should use DockWidgetClosable
       thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
       thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
-      thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(64, 64));
+      Settings& settings = static_cast<Application*>(qApp)->settings();
+      thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(settings.thumbnailSize(), settings.thumbnailSize()));
       thumbnailsView_->setAutoSelectionDelay(0);
       thumbnailsDock_->setWidget(thumbnailsView_);
       addDockWidget(Qt::BottomDockWidgetArea, thumbnailsDock_);
