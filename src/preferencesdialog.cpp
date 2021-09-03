@@ -92,6 +92,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   // the max. thumbnail size spinbox is in MiB
   ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
   initThumbnailSizes(settings);
+  initThumbnailsPositions(settings);
 
   // shortcuts
   initShortcuts();
@@ -151,6 +152,7 @@ void PreferencesDialog::accept() {
   settings.setUseTrash(ui.useTrashBox->isChecked());
 
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
+  settings.setThumbnailsPosition(ui.thumbnailsPositionComboBox->currentText());
   // the max. thumbnail size spinbox is in MiB
   settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
   settings.setThumbnailSize(ui.thumbnailSizeComboBox->itemData(ui.thumbnailSizeComboBox->currentIndex()).toInt());
@@ -191,6 +193,13 @@ void PreferencesDialog::initThumbnailSizes(Settings& settings) {
     }
     ++i;
   }
+}
+
+void PreferencesDialog::initThumbnailsPositions(Settings& settings) {
+  for (auto position : settings.thumbnailsPositions()) {
+    ui.thumbnailsPositionComboBox->addItem(position);
+  }
+  ui.thumbnailsPositionComboBox->setCurrentText(settings.thumbnailsPosition());
 }
 
 void PreferencesDialog::initIconThemes(Settings& settings) {
