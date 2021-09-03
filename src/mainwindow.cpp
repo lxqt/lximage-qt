@@ -659,25 +659,6 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
       default:;
     }
   }
-  else if(thumbnailsView_ && watched == thumbnailsView_->childView()) {
-    // scroll the thumbnail view with mouse wheel
-    switch(event->type()) {
-      case QEvent::Wheel: { // mouse wheel event
-        QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
-        if(wheelEvent->modifiers() == 0) {
-          QPoint angleDelta = wheelEvent->angleDelta();
-          Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
-          int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
-          QScrollBar* hscroll = thumbnailsView_->childView()->horizontalScrollBar();
-          if(hscroll)
-            hscroll->setValue(hscroll->value() - delta);
-          return true;
-        }
-        break;
-      }
-      default:;
-    }
-  }
   return QObject::eventFilter(watched, event);
 }
 
@@ -1199,27 +1180,43 @@ void MainWindow::on_actionShowExifData_triggered(bool checked) {
 }
 
 void MainWindow::setShowThumbnails(bool show) {
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+
   if(show) {
     if(!thumbnailsDock_) {
       thumbnailsDock_ = new QDockWidget(this);
       thumbnailsDock_->setFeatures(QDockWidget::NoDockWidgetFeatures); // FIXME: should use DockWidgetClosable
       thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
       thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
-      Settings& settings = static_cast<Application*>(qApp)->settings();
       thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(settings.thumbnailSize(), settings.thumbnailSize()));
       thumbnailsView_->setAutoSelectionDelay(0);
       thumbnailsDock_->setWidget(thumbnailsView_);
-      addDockWidget(Qt::BottomDockWidgetArea, thumbnailsDock_);
+      addDockWidget(settings.getThumbnailsPosition(), thumbnailsDock_);
       QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
-      listView->setFlow(QListView::TopToBottom);
-      listView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
       listView->setSelectionMode(QAbstractItemView::SingleSelection);
-      listView->installEventFilter(this);
-      // FIXME: optimize the size of the thumbnail view
-      // FIXME if the thumbnail view is docked elsewhere, update the settings.
-      if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
-        int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-        thumbnailsView_->setFixedHeight(delegate->itemSize().height() + scrollHeight);
+      switch (settings.getThumbnailsPosition()) {
+        case Qt::LeftDockWidgetArea:
+        case Qt::RightDockWidgetArea:
+          listView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+          listView->setFlow(QListView::LeftToRight);
+
+          if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
+            int scrollWidth = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+            thumbnailsView_->setFixedWidth(delegate->itemSize().width() + 1.5*scrollWidth);
+          }
+          break;
+
+        case Qt::TopDockWidgetArea:
+        case Qt::BottomDockWidgetArea:
+        default:
+          listView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+          listView->setFlow(QListView::TopToBottom);
+
+          if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
+            int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+            thumbnailsView_->setFixedHeight(delegate->itemSize().height() + 1.5*scrollHeight);
+          }
+          break;
       }
       thumbnailsView_->setModel(proxyModel_);
       proxyModel_->setShowThumbnails(true);

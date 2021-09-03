@@ -31,6 +31,7 @@ Settings::Settings():
   fullScreenBgColor_(0, 0, 0),
   showThumbnails_(false),
   thumbnailSize_(64),
+  thumbnailsPosition_(QStringLiteral("bottom")),
   showSidePane_(false),
   slideShowInterval_(5),
   fallbackIconTheme_(QStringLiteral("oxygen")),
@@ -86,8 +87,9 @@ bool Settings::load() {
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
   showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
+  setThumbnailsPosition(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
   setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
-  thumbnailSize_ = settings.value(QStringLiteral("ThumbnailSize"), 64).toInt();
+  setThumbnailSize(settings.value(QStringLiteral("ThumbnailSize"), 64).toInt());
   settings.endGroup();
 
   return true;
@@ -132,6 +134,7 @@ bool Settings::save() {
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
   settings.setValue(QStringLiteral("ShowThumbnails"), showThumbnails_);
+  settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPosition_);
   settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
   settings.setValue(QStringLiteral("ThumbnailSize"), thumbnailSize_);
   settings.endGroup();

@@ -71,6 +71,37 @@ public:
     showThumbnails_ = show;
   }
 
+  QString thumbnailsPosition() {
+    return thumbnailsPosition_;
+  }
+  void setThumbnailsPosition(const QString& position) {
+    if(!thumbnailsPositions().contains(position)) {
+      thumbnailsPosition_ = QStringLiteral("bottom");
+    }
+    else {
+      thumbnailsPosition_ = position;
+    }
+  }
+  const QStringList& thumbnailsPositions() {
+    static const QStringList _thumbnailsPositions = {QStringLiteral("left"),
+                                                     QStringLiteral("right"),
+                                                     QStringLiteral("top"),
+                                                     QStringLiteral("bottom")};
+    return _thumbnailsPositions;
+  }
+  Qt::DockWidgetArea getThumbnailsPosition() {
+    if(thumbnailsPosition_ == QStringLiteral("left")) {
+      return Qt::LeftDockWidgetArea;
+    }
+    if(thumbnailsPosition_ == QStringLiteral("right")) {
+      return Qt::RightDockWidgetArea;
+    }
+    if(thumbnailsPosition_ == QStringLiteral("top")) {
+      return Qt::TopDockWidgetArea;
+    }
+    return Qt::BottomDockWidgetArea;
+  }
+
   int maxThumbnailFileSize() const {
     return Fm::ThumbnailJob::maxThumbnailFileSize();
   }
@@ -87,7 +118,12 @@ public:
     return thumbnailSize_;
   }
   void setThumbnailSize(int size) {
-    thumbnailSize_ = size;
+    if(!thumbnailSizes().contains(thumbnailSize_)) {
+      thumbnailSize_ = 64;
+    }
+    else {
+      thumbnailSize_ = size;
+    }
   }
 
   bool showSidePane() const {
@@ -236,6 +272,7 @@ private:
   QColor fullScreenBgColor_;
   bool showThumbnails_;
   int thumbnailSize_;
+  QString thumbnailsPosition_;
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;
