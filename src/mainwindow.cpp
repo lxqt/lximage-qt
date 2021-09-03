@@ -1191,9 +1191,9 @@ void MainWindow::setShowThumbnails(bool show) {
 
   if(show) {
     if(!thumbnailsDock_) {
-      thumbnailsDock_ = new QDockWidget(this);
+      thumbnailsDock_ = new QDockWidget(tr("Thumbnails"), this);
+      thumbnailsDock_->setTitleBarWidget(new QWidget); // hide dock titlebar
       thumbnailsDock_->setFeatures(QDockWidget::NoDockWidgetFeatures); // FIXME: should use DockWidgetClosable
-      thumbnailsDock_->setWindowTitle(tr("Thumbnails"));
       thumbnailsView_ = new Fm::FolderView(Fm::FolderView::IconMode);
       thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(settings.thumbnailSize(), settings.thumbnailSize()));
       thumbnailsView_->setAutoSelectionDelay(0);
@@ -1263,6 +1263,7 @@ void MainWindow::setShowExifData(bool show) {
   // Be sure the dock was created before rendering content to it
   if (show && !exifDataDock_) {
     exifDataDock_ = new QDockWidget(tr("EXIF Data"), this);
+    exifDataDock_->setTitleBarWidget(new QWidget); // hide dock titlebar
     exifDataDock_->setFeatures(QDockWidget::NoDockWidgetFeatures);
     addDockWidget(Qt::RightDockWidgetArea, exifDataDock_);
   }
