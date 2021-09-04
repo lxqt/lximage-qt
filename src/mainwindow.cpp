@@ -647,10 +647,19 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
           QPoint angleDelta = wheelEvent->angleDelta();
           Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
           int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
-          if(delta < 0)
-            on_actionNext_triggered(); // next image
-          else
-            on_actionPrevious_triggered(); // previous image
+          // NOTE: Each turn of a mouse wheel can change the image without problem but
+          // touchpads trigger wheel events with much smaller angle deltas. Therefore,
+          // we wait until a threshold is passed. 120 is an appropriate value because
+          // most mouse types create angle deltas that are multiples of 120.
+          static int deltaThreshold = 0;
+          deltaThreshold += abs(delta);
+          if(deltaThreshold >= 120) {
+            deltaThreshold = 0;
+            if(delta < 0)
+              on_actionNext_triggered(); // next image
+            else
+              on_actionPrevious_triggered(); // previous image
+          }
         }
         break;
       }
