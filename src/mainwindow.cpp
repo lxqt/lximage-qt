@@ -638,15 +638,17 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
   if(watched == ui.view) { // we got an event for the image view
     switch(event->type()) {
       case QEvent::Wheel: { // mouse wheel event
-        QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
-        if(wheelEvent->modifiers() == 0) {
-          QPoint angleDelta = wheelEvent->angleDelta();
-          Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
-          int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
-          if(delta < 0)
-            on_actionNext_triggered(); // next image
-          else
-            on_actionPrevious_triggered(); // previous image
+        if (!loadJob_) {
+          QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
+          if(wheelEvent->modifiers() == 0) {
+            QPoint angleDelta = wheelEvent->angleDelta();
+            Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+            int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
+            if(delta < 0)
+              on_actionNext_triggered(); // next image
+            else
+              on_actionPrevious_triggered(); // previous image
+          }
         }
         break;
       }
