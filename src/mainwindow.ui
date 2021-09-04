@@ -138,6 +138,7 @@
     <addaction name="actionPaste"/>
     <addaction name="separator"/>
     <addaction name="actionCopyPath"/>
+    <addaction name="actionRenameFile"/>
     <addaction name="separator"/>
     <addaction name="actionUpload"/>
     <addaction name="separator"/>
@@ -669,6 +670,17 @@
    </property>
    <property name="toolTip">
     <string>Copy path</string>
+   </property>
+  </action>
+  <action name="actionRenameFile">
+   <property name="icon">
+    <iconset theme="edit-rename"/>
+   </property>
+   <property name="text">
+    <string>Rename</string>
+   </property>
+   <property name="toolTip">
+    <string>Rename</string>
    </property>
   </action>
   <action name="actionResize">

@@ -50,6 +50,7 @@
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/fileoperation.h>
 #include <libfm-qt/folderitemdelegate.h>
+#include <libfm-qt/utilities.h>
 
 #include "mrumenu.h"
 #include "resizeimagedialog.h"
@@ -936,6 +937,27 @@ void MainWindow::on_actionCopyPath_triggered() {
   if(currentFile_) {
     const Fm::CStrPtr dispName = currentFile_.displayName();
     QApplication::clipboard()->setText(QString::fromUtf8(dispName.get()));
+  }
+}
+
+void MainWindow::on_actionRenameFile_triggered() {
+  if(!currentFile_) {
+    return;
+  }
+  currentIndex_ = indexFromPath(currentFile_);
+  if (!currentIndex_.isValid()) {
+    return;
+  }
+  if (thumbnailsView_ && thumbnailsView_->isVisible()) {
+    QAbstractItemView* view = thumbnailsView_->childView();
+    view->scrollTo(currentIndex_);
+    view->edit(currentIndex_);
+    return;
+  }
+  if (currentIndex_.isValid()) {
+    auto file = proxyModel_->fileInfoFromIndex(currentIndex_);
+    Fm::renameFile(file, nullptr);
+    return;
   }
 }
 
