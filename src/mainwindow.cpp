@@ -114,6 +114,9 @@ MainWindow::MainWindow():
   ui.view->showOutline(settings.isOutlineShown());
   ui.actionShowOutline->setChecked(settings.isOutlineShown());
 
+  setShowExifData(settings.showExifData());
+  ui.actionShowExifData->setChecked(settings.showExifData());
+
   setShowThumbnails(settings.showThumbnails());
   ui.actionShowThumbnails->setChecked(settings.showThumbnails());
 
@@ -161,6 +164,7 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
   contextMenu_->addAction(ui.actionShowOutline);
+  contextMenu_->addAction(ui.actionShowExifData);
   contextMenu_->addAction(ui.actionShowThumbnails);
   contextMenu_->addAction(ui.actionToolbar);
   contextMenu_->addAction(ui.actionAnnotations);
@@ -1177,6 +1181,9 @@ void MainWindow::on_actionShowOutline_triggered(bool checked) {
 
 void MainWindow::on_actionShowExifData_triggered(bool checked) {
   setShowExifData(checked);
+  if(checked && exifDataDock_) {
+    exifDataDock_->show(); // needed in the full-screen state
+  }
 }
 
 void MainWindow::setShowThumbnails(bool show) {
@@ -1249,7 +1256,7 @@ void MainWindow::setShowThumbnails(bool show) {
 void MainWindow::setShowExifData(bool show) {
   // Close the dock if it exists and show is false
   if (exifDataDock_ && !show) {
-    exifDataDock_->close();
+    delete exifDataDock_;
     exifDataDock_ = nullptr;
   }
 
@@ -1313,6 +1320,10 @@ void MainWindow::changeEvent(QEvent* event) {
         thumbnailsDock_->hide();
         ui.actionShowThumbnails->setChecked(false);
       }
+      if(exifDataDock_) {
+        exifDataDock_->hide();
+        ui.actionShowExifData->setChecked(false);
+      }
       // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
       // is disabled. We needs to add the actions to the main window manually to enable the
       // shortcuts again.
@@ -1347,6 +1358,11 @@ void MainWindow::changeEvent(QEvent* event) {
         // The thumbnail dock exists but was hidden on full-screening. So, it should be restored.
         thumbnailsDock_->show();
         ui.actionShowThumbnails->setChecked(true);
+      }
+      if(exifDataDock_) {
+        // The exif data dock exists but was hidden on full-screening. So, it should be restored.
+        exifDataDock_->show();
+        ui.actionShowExifData->setChecked(true);
       }
       ui.view->hideCursor(false);
     }

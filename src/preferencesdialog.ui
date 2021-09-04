@@ -44,17 +44,17 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Fullscreen background color:</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
         <widget class="Fm::ColorButton" name="bgColor">
          <property name="text">
           <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Fullscreen background color:</string>
          </property>
         </widget>
        </item>
@@ -132,23 +132,30 @@
       </attribute>
       <layout class="QFormLayout" name="formLayout_2">
        <item row="0" column="0">
+        <widget class="QCheckBox" name="exifDataBox">
+         <property name="text">
+          <string>Show Exif data dock by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
         <widget class="QCheckBox" name="thumbnailBox">
          <property name="text">
           <string>Show thumbnails dock by default</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QComboBox" name="thumbnailsPositionComboBox"/>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="thumbnailLabel">
          <property name="text">
           <string>Thumbnailer file size limit:</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QSpinBox" name="thumbnailSpin">
          <property name="suffix">
           <string> MiB</string>
@@ -164,14 +171,14 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="thumbnailSizeLabel">
          <property name="text">
           <string>Thumbnail image dimensions:</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QComboBox" name="thumbnailSizeComboBox"/>
        </item>
       </layout>

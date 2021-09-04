@@ -184,9 +184,6 @@ private:
 
   // EXIF Data
   QDockWidget* exifDataDock_ = nullptr;
-  QWidget* exifDataDockView_;
-  QVBoxLayout* exifDataDockViewContent_;
-  QTableWidget* exifDataContentTable_;
 
   QMap<QString, QString> exifData_;
 
