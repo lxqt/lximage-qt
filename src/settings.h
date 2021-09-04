@@ -64,6 +64,13 @@ public:
     fullScreenBgColor_ = color;
   }
 
+  bool showExifData() const {
+    return showExifData_;
+  }
+  void setShowExifData(bool show) {
+    showExifData_ = show;
+  }
+
   bool showThumbnails() const {
     return showThumbnails_;
   }
@@ -270,6 +277,7 @@ private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
   QColor fullScreenBgColor_;
+  bool showExifData_;
   bool showThumbnails_;
   int thumbnailSize_;
   QString thumbnailsPosition_;

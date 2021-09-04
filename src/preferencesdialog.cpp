@@ -88,6 +88,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
   ui.useTrashBox->setChecked(settings.useTrash());
 
+  ui.exifDataBox->setChecked(settings.showExifData());
   ui.thumbnailBox->setChecked(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
   ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
@@ -151,6 +152,7 @@ void PreferencesDialog::accept() {
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
   settings.setUseTrash(ui.useTrashBox->isChecked());
 
+  settings.setShowExifData(ui.exifDataBox->isChecked());
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
   settings.setThumbnailsPosition(ui.thumbnailsPositionComboBox->currentText());
   // the max. thumbnail size spinbox is in MiB

@@ -29,6 +29,7 @@ Settings::Settings():
   useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == QLatin1String("hicolor")),
   bgColor_(255, 255, 255),
   fullScreenBgColor_(0, 0, 0),
+  showExifData_(false),
   showThumbnails_(false),
   thumbnailSize_(64),
   thumbnailsPosition_(QStringLiteral("bottom")),
@@ -86,6 +87,7 @@ bool Settings::load() {
   settings.endGroup();
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
+  showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
   showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
   setThumbnailsPosition(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
   setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
@@ -133,6 +135,7 @@ bool Settings::save() {
   settings.endGroup();
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
+  settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
   settings.setValue(QStringLiteral("ShowThumbnails"), showThumbnails_);
   settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPosition_);
   settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
