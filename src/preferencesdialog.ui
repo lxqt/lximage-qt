@@ -19,11 +19,11 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="tab_1">
       <attribute name="title">
        <string>General</string>
       </attribute>
-      <layout class="QFormLayout" name="formLayout">
+      <layout class="QFormLayout" name="formLayout_1">
        <property name="fieldGrowthPolicy">
         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
        </property>
@@ -38,115 +38,14 @@
         <widget class="QComboBox" name="iconTheme"/>
        </item>
        <item row="1" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Normal background color:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="Fm::ColorButton" name="bgColor">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Fullscreen background color:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="Fm::ColorButton" name="fullScreenBgColor">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_1">
          <property name="text">
           <string>Maximum number of recent files:</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
-        <widget class="QSpinBox" name="maxRecentFiles"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Slide show interval (seconds):</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QSpinBox" name="slideShowInterval">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="2">
-        <widget class="QCheckBox" name="oulineBox">
-         <property name="text">
-          <string>Show image outline by default</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0" colspan="2">
-        <widget class="QCheckBox" name="toolbarBox">
-         <property name="text">
-          <string>Show main toolbar by default</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0" colspan="2">
-        <widget class="QCheckBox" name="annotationBox">
-         <property name="text">
-          <string>Show annotations toolbar by default</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0" colspan="2">
-        <widget class="QCheckBox" name="forceZoomFitBox">
-         <property name="text">
-          <string>Fit images when navigating</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0" colspan="2">
-        <widget class="QCheckBox" name="useTrashBox">
-         <property name="text">
-          <string>Use system Trash (and do not prompt)</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab_3">
-      <attribute name="title">
-       <string>Thumbnails</string>
-      </attribute>
-      <layout class="QFormLayout" name="formLayout_2">
-       <item row="0" column="0">
-        <widget class="QCheckBox" name="exifDataBox">
-         <property name="text">
-          <string>Show Exif data dock by default</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QCheckBox" name="thumbnailBox">
-         <property name="text">
-          <string>Show thumbnails dock by default</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
-        <widget class="QComboBox" name="thumbnailsPositionComboBox"/>
+        <widget class="QSpinBox" name="maxRecentFiles"/>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="thumbnailLabel">
@@ -181,13 +80,127 @@
        <item row="3" column="1">
         <widget class="QComboBox" name="thumbnailSizeComboBox"/>
        </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="useTrashBox">
+         <property name="text">
+          <string>Use system Trash (and do not prompt)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Window</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_1">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="thumbnailBox">
+         <property name="text">
+          <string>Show thumbnails dock by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="thumbnailsPositionComboBox"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="exifDataBox">
+         <property name="text">
+          <string>Show Exif data dock by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="toolbarBox">
+         <property name="text">
+          <string>Show main toolbar by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="annotationBox">
+         <property name="text">
+          <string>Show annotations toolbar by default</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
+       <string>Image</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout_2">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2a">
+         <property name="text">
+          <string>Normal background color:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="Fm::ColorButton" name="bgColor">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2b">
+         <property name="text">
+          <string>Fullscreen background color:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="Fm::ColorButton" name="fullScreenBgColor">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_2c">
+         <property name="text">
+          <string>Slide show interval (seconds):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="slideShowInterval">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="oulineBox">
+         <property name="text">
+          <string>Show image outline by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="forceZoomFitBox">
+         <property name="text">
+          <string>Fit images when navigating</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
        <string>Shortcuts</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QTableWidget" name="tableWidget">
          <property name="editTriggers">

@@ -71,6 +71,7 @@ bool Settings::load() {
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
+  showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
   showToolbar_ = settings.value(QStringLiteral("ShowToolbar"), true).toBool();
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
   useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
@@ -87,7 +88,6 @@ bool Settings::load() {
   settings.endGroup();
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
-  showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
   showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
   setThumbnailsPosition(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
   setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
@@ -116,6 +116,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
+  settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
   settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
@@ -135,7 +136,6 @@ bool Settings::save() {
   settings.endGroup();
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
-  settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
   settings.setValue(QStringLiteral("ShowThumbnails"), showThumbnails_);
   settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPosition_);
   settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
