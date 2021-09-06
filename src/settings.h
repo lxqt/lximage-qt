@@ -133,6 +133,20 @@ public:
     }
   }
 
+  QString scaleEnlargeSmoothing() const {
+    return scaleEnlargeSmoothing_;
+  }
+  void setScaleEnlargeSmoothing(QString type) {
+    scaleEnlargeSmoothing_ = type;
+  }
+
+  QString scaleShrinkSmoothing() const {
+    return scaleShrinkSmoothing_;
+  }
+  void setScaleShrinkSmoothing(QString type) {
+    scaleShrinkSmoothing_ = type;
+  }
+
   bool showSidePane() const {
     return showSidePane_;
   }
@@ -281,6 +295,8 @@ private:
   bool showThumbnails_;
   int thumbnailSize_;
   QString thumbnailsPosition_;
+  QString scaleEnlargeSmoothing_;
+  QString scaleShrinkSmoothing_;
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;

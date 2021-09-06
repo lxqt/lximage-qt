@@ -50,7 +50,9 @@ ImageView::ImageView(QWidget* parent):
   autoZoomFit_(false),
   isSVG(false),
   currentTool(ToolNone),
-  showOutline_(false) {
+  showOutline_(false),
+  scaleEnlargeSmoothing_(Qt::SmoothTransformation),
+  scaleShrinkSmoothing_(Qt::SmoothTransformation) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -557,7 +559,15 @@ void ImageView::generateCache() {
   }
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled;
+  if (viewportImageRect.width() > subRect.width()) {
+    // zooming in
+    scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, scaleEnlargeSmoothing());
+  }
+  else {
+    // zooming out
+    scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, scaleShrinkSmoothing());
+  }
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);

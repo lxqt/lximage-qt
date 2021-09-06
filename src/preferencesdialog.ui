@@ -166,6 +166,26 @@
          </property>
         </widget>
        </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="scaleEnlargeSmoothingLabel">
+         <property name="text">
+          <string>Zoom-in scale method:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="scaleEnlargeSmoothingComboBox"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="scaleShrinkSmoothingLabel">
+         <property name="text">
+          <string>Zoom-out scale method:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="scaleShrinkSmoothingComboBox"/>
+       </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_2c">
          <property name="text">

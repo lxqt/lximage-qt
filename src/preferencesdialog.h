@@ -74,6 +74,7 @@ private:
   void initIconThemes(Settings& settings);
   void initThumbnailSizes(Settings& settings);
   void initThumbnailsPositions(Settings& settings);
+  void initSmoothingComboBoxes(Settings& settings);
   void initShortcuts();
   void applyNewShortcuts();
   void showWarning(const QString& text, bool temporary = true);

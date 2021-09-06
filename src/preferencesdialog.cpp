@@ -26,6 +26,7 @@
 #include <QWindow>
 #include <QScreen>
 #include <glib.h>
+#include "imageview.h"
 
 using namespace LxImage;
 
@@ -94,6 +95,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
   initThumbnailSizes(settings);
   initThumbnailsPositions(settings);
+  initSmoothingComboBoxes(settings);
 
   // shortcuts
   initShortcuts();
@@ -158,6 +160,8 @@ void PreferencesDialog::accept() {
   // the max. thumbnail size spinbox is in MiB
   settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
   settings.setThumbnailSize(ui.thumbnailSizeComboBox->itemData(ui.thumbnailSizeComboBox->currentIndex()).toInt());
+  settings.setScaleEnlargeSmoothing(ui.scaleEnlargeSmoothingComboBox->currentText());
+  settings.setScaleShrinkSmoothing(ui.scaleShrinkSmoothingComboBox->currentText());
 
   applyNewShortcuts();
   settings.save();
@@ -202,6 +206,15 @@ void PreferencesDialog::initThumbnailsPositions(Settings& settings) {
     ui.thumbnailsPositionComboBox->addItem(position);
   }
   ui.thumbnailsPositionComboBox->setCurrentText(settings.thumbnailsPosition());
+}
+
+void PreferencesDialog::initSmoothingComboBoxes(Settings& settings) {
+  for (auto smoothing : ImageView::scaleSmoothingMethods()) {
+    ui.scaleEnlargeSmoothingComboBox->addItem(smoothing);
+    ui.scaleShrinkSmoothingComboBox->addItem(smoothing);
+  }
+  ui.scaleEnlargeSmoothingComboBox->setCurrentText(settings.scaleEnlargeSmoothing());
+  ui.scaleShrinkSmoothingComboBox->setCurrentText(settings.scaleShrinkSmoothing());
 }
 
 void PreferencesDialog::initIconThemes(Settings& settings) {

@@ -52,6 +52,30 @@ public:
     return image_;
   }
 
+  static const QStringList& scaleSmoothingMethods() {
+    static const QStringList _smoothingMethods = {QStringLiteral("Fast"),
+                                                  QStringLiteral("Smooth")};
+    return _smoothingMethods;
+  }
+  Qt::TransformationMode getSmoothingMethod(QString method) {
+    if(method == QStringLiteral("Fast")) {
+      return Qt::FastTransformation;
+    }
+    return Qt::SmoothTransformation;
+  }
+  Qt::TransformationMode scaleEnlargeSmoothing() const {
+    return scaleEnlargeSmoothing_;
+  }
+  void setScaleEnlargeSmoothing(QString method) {
+    scaleEnlargeSmoothing_ = getSmoothingMethod(method);
+  }
+  Qt::TransformationMode scaleShrinkSmoothing() const {
+    return scaleShrinkSmoothing_;
+  }
+  void setScaleShrinkSmoothing(QString method) {
+    scaleShrinkSmoothing_ = getSmoothingMethod(method);
+  }
+
   void setScaleFactor(double scale);
 
   double scaleFactor() const {
@@ -140,6 +164,8 @@ private:
   QList<QGraphicsItem *> annotations;	//annotation items which have been drawn in the scene
   int nextNumber;
   bool showOutline_;
+  Qt::TransformationMode scaleEnlargeSmoothing_;
+  Qt::TransformationMode scaleShrinkSmoothing_;
 };
 
 }

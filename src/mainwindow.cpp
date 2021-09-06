@@ -1106,6 +1106,8 @@ void MainWindow::applySettings() {
   else
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
   ui.view->updateOutline();
+  ui.view->setScaleEnlargeSmoothing(settings.scaleEnlargeSmoothing());
+  ui.view->setScaleShrinkSmoothing(settings.scaleShrinkSmoothing());
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 
   // also, update shortcuts

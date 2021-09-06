@@ -33,6 +33,8 @@ Settings::Settings():
   showThumbnails_(false),
   thumbnailSize_(64),
   thumbnailsPosition_(QStringLiteral("bottom")),
+  scaleEnlargeSmoothing_(QStringLiteral("Smooth")),
+  scaleShrinkSmoothing_(QStringLiteral("Smooth")),
   showSidePane_(false),
   slideShowInterval_(5),
   fallbackIconTheme_(QStringLiteral("oxygen")),
@@ -78,6 +80,11 @@ bool Settings::load() {
   prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
   settings.endGroup();
 
+  settings.beginGroup(QStringLiteral("Image"));
+  scaleEnlargeSmoothing_ = settings.value(QStringLiteral("ScaleEnlargeSmoothing"), QStringLiteral("Smooth")).toString();
+  scaleShrinkSmoothing_ = settings.value(QStringLiteral("ScaleShrinkSmoothing"), QStringLiteral("Smooth")).toString();
+  settings.endGroup();
+
   // shortcuts
   settings.beginGroup(QStringLiteral("Shortcuts"));
   const QStringList actions = settings.childKeys();
@@ -121,6 +128,11 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
   settings.setValue(QStringLiteral("PrefSize"), prefSize_);
+  settings.endGroup();
+
+  settings.beginGroup(QStringLiteral("Image"));
+  settings.setValue(QStringLiteral("ScaleEnlargeSmoothing"), scaleEnlargeSmoothing_);
+  settings.setValue(QStringLiteral("ScaleShrinkSmoothing"), scaleShrinkSmoothing_);
   settings.endGroup();
 
   // shortcuts
