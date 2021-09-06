@@ -43,8 +43,9 @@ Settings::Settings():
   lastWindowHeight_(480),
   lastWindowMaximized_(false),
   showOutline_(false),
-  showAnnotationsToolbar_(false),
+  showMenubar_(true),
   showToolbar_(true),
+  showAnnotationsToolbar_(false),
   forceZoomFit_(false),
   useTrash_(true) {
 }
@@ -70,9 +71,10 @@ bool Settings::load() {
   lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
-  showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
+  showMenubar_ = settings.value(QStringLiteral("ShowMenubar"), true).toBool();
   showToolbar_ = settings.value(QStringLiteral("ShowToolbar"), true).toBool();
+  showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
   useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
   prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
@@ -115,9 +117,10 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
   settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
+  settings.setValue(QStringLiteral("ShowMenubar"), showMenubar_);
+  settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
   settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
-  settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
   settings.setValue(QStringLiteral("PrefSize"), prefSize_);

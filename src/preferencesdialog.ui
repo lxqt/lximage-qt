@@ -114,6 +114,13 @@
          </property>
         </widget>
        </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="menubarBox">
+         <property name="text">
+          <string>Show menubar by default</string>
+         </property>
+        </widget>
+       </item>
        <item row="3" column="0">
         <widget class="QCheckBox" name="toolbarBox">
          <property name="text">

@@ -121,6 +121,7 @@
     <addaction name="actionFullScreen"/>
     <addaction name="actionSlideShow"/>
     <addaction name="separator"/>
+    <addaction name="actionMenubar"/>
     <addaction name="actionToolbar"/>
     <addaction name="actionAnnotations"/>
    </widget>
@@ -625,6 +626,20 @@
     <string>Draw incrementing numbers</string>
    </property>
   </action>
+  <action name="actionMenubar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Menubar</string>
+   </property>
+   <property name="toolTip">
+    <string>Menubar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
   <action name="actionToolbar">
    <property name="checkable">
     <bool>true</bool>
@@ -681,6 +696,9 @@
    </property>
    <property name="toolTip">
     <string>Rename</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
    </property>
   </action>
   <action name="actionResize">

@@ -83,8 +83,9 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.maxRecentFiles->setValue(settings.maxRecentFiles());
   ui.slideShowInterval->setValue(settings.slideShowInterval());
   ui.oulineBox->setChecked(settings.isOutlineShown());
-  ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
+  ui.menubarBox->setChecked(settings.isMenubarShown());
   ui.toolbarBox->setChecked(settings.isToolbarShown());
+  ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
   ui.useTrashBox->setChecked(settings.useTrash());
 
@@ -147,8 +148,9 @@ void PreferencesDialog::accept() {
   settings.setMaxRecentFiles(ui.maxRecentFiles->value());
   settings.setSlideShowInterval(ui.slideShowInterval->value());
   settings.showOutline(ui.oulineBox->isChecked());
-  settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
+  settings.showMenubar(ui.menubarBox->isChecked());
   settings.showToolbar(ui.toolbarBox->isChecked());
+  settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
   settings.setUseTrash(ui.useTrashBox->isChecked());
 

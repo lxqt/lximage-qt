@@ -224,20 +224,27 @@ public:
     showOutline_ = show;
   }
 
-  bool isAnnotationsToolbarShown() const {
-    return showAnnotationsToolbar_;
-  }
-
-  void showAnnotationsToolbar(bool show) {
-    showAnnotationsToolbar_ = show;
-  }
-
   bool isToolbarShown() const {
     return showToolbar_;
   }
 
   void showToolbar(bool show) {
     showToolbar_ = show;
+  }
+
+  bool isMenubarShown() const {
+    return showMenubar_;
+  }
+  void showMenubar(bool show) {
+    showMenubar_ = show;
+  }
+
+  bool isAnnotationsToolbarShown() const {
+    return showAnnotationsToolbar_;
+  }
+
+  void showAnnotationsToolbar(bool show) {
+    showAnnotationsToolbar_ = show;
   }
 
   bool forceZoomFit() const {
@@ -294,8 +301,9 @@ private:
   int lastWindowHeight_;
   bool lastWindowMaximized_;
   bool showOutline_;
-  bool showAnnotationsToolbar_;
+  bool showMenubar_;
   bool showToolbar_;
+  bool showAnnotationsToolbar_;
   bool forceZoomFit_;
   bool useTrash_;
 
