@@ -138,8 +138,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>Koristi tipkovnički prečac za brisanje prečaca
-u modusu uređivanja.</translation>
+        <translation>Koristi modifikacijsku tipku za brisanje
+prečaca u modusu uređivanja.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="293"/>
