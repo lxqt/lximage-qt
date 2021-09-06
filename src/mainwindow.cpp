@@ -121,6 +121,33 @@ MainWindow::MainWindow():
   setShowThumbnails(settings.showThumbnails());
   ui.actionShowThumbnails->setChecked(settings.showThumbnails());
 
+  addAction(ui.actionMenubar);
+  ui.menubar->setVisible(settings.isMenubarShown());
+  ui.actionMenubar->setChecked(settings.isMenubarShown());
+  connect(ui.actionMenubar, &QAction::triggered, this, [this](int checked) {
+    if(!isFullScreen()) { // menubar is hidden in fullscreen
+      ui.menubar->setVisible(checked);
+    }
+    if(!ui.menubar->isVisible()) {
+      // When menubar is disabled, shortcut keys in the menu are also disabled.
+      // We needs to add the actions manually to enable them again.
+      const auto actions = ui.menubar->actions();
+      for (QAction* action : qAsConst(actions)) {
+       if(!action->shortcut().isEmpty())
+        addAction(action);
+      }
+      addActions(ui.menubar->actions());
+    }
+    else {
+      // when menu is re-enabled, remove the previously added actions.
+      const auto actions_ = ui.menubar->actions();
+      for (QAction* action : qAsConst(actions_)) {
+       if(!action->shortcut().isEmpty())
+        removeAction(action);
+      }
+    }
+  });
+
   ui.toolBar->setVisible(settings.isToolbarShown());
   ui.actionToolbar->setChecked(settings.isToolbarShown());
   connect(ui.actionToolbar, &QAction::triggered, this, [this](int checked) {
@@ -167,6 +194,8 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionShowOutline);
   contextMenu_->addAction(ui.actionShowExifData);
   contextMenu_->addAction(ui.actionShowThumbnails);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionMenubar);
   contextMenu_->addAction(ui.actionToolbar);
   contextMenu_->addAction(ui.actionAnnotations);
   contextMenu_->addSeparator();
@@ -1349,34 +1378,38 @@ void MainWindow::changeEvent(QEvent* event) {
         exifDataDock_->hide();
         ui.actionShowExifData->setChecked(false);
       }
-      // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
-      // is disabled. We needs to add the actions to the main window manually to enable the
-      // shortcuts again.
-      ui.menubar->hide();
-      const auto actions = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions)) {
-        if(!action->shortcut().isEmpty())
-          addAction(action);
+      if(ui.menubar->isVisible()){
+        // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
+        // is disabled. We needs to add the actions to the main window manually to enable the
+        // shortcuts again.  (Unless menubar is already hidden and shortcuts are already enabled.)
+        ui.menubar->hide();
+        const auto actions = ui.menubar->actions();
+        for(QAction* action : qAsConst(actions)) {
+          if(!action->shortcut().isEmpty())
+            addAction(action);
+        }
+        addActions(ui.menubar->actions());
       }
-      addActions(ui.menubar->actions());
       ui.view->hideCursor(true);
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
       ui.view->updateOutline();
-      // now we're going to re-enable the menu, so remove the actions previously added.
-      const auto actions_ = ui.menubar->actions();
-      for(QAction* action : qAsConst(actions_)) {
-        if(!action->shortcut().isEmpty())
-          removeAction(action);
+      if(ui.actionMenubar->isChecked()) {
+        // now we're going to re-enable the menu, so remove the actions previously added.
+        const auto actions_ = ui.menubar->actions();
+        for(QAction* action : qAsConst(actions_)) {
+          if(!action->shortcut().isEmpty())
+            removeAction(action);
+        }
+        ui.menubar->show();
       }
-      ui.menubar->show();
       if(ui.actionToolbar->isChecked()){
-          ui.toolBar->show();
+        ui.toolBar->show();
       }
       if(ui.actionAnnotations->isChecked()){
-          ui.annotationsToolBar->show();
+        ui.annotationsToolBar->show();
       }
       ui.statusBar->show();
       if(thumbnailsDock_) {
