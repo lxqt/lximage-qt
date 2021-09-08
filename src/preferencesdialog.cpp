@@ -88,6 +88,8 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
   ui.useTrashBox->setChecked(settings.useTrash());
+  ui.singleWindowModeBox->setChecked(settings.singleWindowMode());
+  connect(ui.singleWindowModeBox, &QCheckBox::toggled, this, &PreferencesDialog::onSingleWindowModeChange);
 
   ui.exifDataBox->setChecked(settings.showExifData());
   ui.thumbnailBox->setChecked(settings.showThumbnails());
@@ -153,6 +155,7 @@ void PreferencesDialog::accept() {
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
   settings.setUseTrash(ui.useTrashBox->isChecked());
+  settings.setSingleWindowMode(ui.singleWindowModeBox->isChecked());
 
   settings.setShowExifData(ui.exifDataBox->isChecked());
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
@@ -246,7 +249,7 @@ void PreferencesDialog::initIconThemes(Settings& settings) {
   }
 }
 
-void PreferencesDialog::showWarning(const QString& text, bool temporary) {
+void PreferencesDialog::showWarning(const QString& text, int delay) {
   if(text.isEmpty()) {
     permanentWarning_.clear();
     ui.warningLabel->clear();
@@ -255,7 +258,7 @@ void PreferencesDialog::showWarning(const QString& text, bool temporary) {
   else {
     ui.warningLabel->setText(text);
     ui.warningLabel->show();
-    if(!temporary) {
+    if(delay < 1) {
       permanentWarning_ = text;
     }
     else {
@@ -267,8 +270,17 @@ void PreferencesDialog::showWarning(const QString& text, bool temporary) {
           ui.warningLabel->setVisible(!permanentWarning_.isEmpty());
         });
       }
-      warningTimer_->start(2500);
+      warningTimer_->start(delay);
     }
+  }
+}
+
+void PreferencesDialog::onSingleWindowModeChange(bool checked) {
+  if(checked) {
+    showWarning(tr("<b>Single window mode: Only one image will be opened at a time.</b>"), 5000);
+  }
+  else {
+    showWarning(QString());
   }
 }
 
@@ -320,7 +332,7 @@ void PreferencesDialog::initShortcuts() {
   const auto shortcuts = allShortcuts_.values();
   for(int i = 0; i < shortcuts.size(); ++i) {
     if(!shortcuts.at(i).isEmpty() && shortcuts.indexOf(shortcuts.at(i), i + 1) > -1) {
-      showWarning(tr("<b>Warning: Ambiguous shortcut detected!</b>"), false);
+      showWarning(tr("<b>Warning: Ambiguous shortcut detected!</b>"), 0);
       break;
     }
   }

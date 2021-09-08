@@ -47,7 +47,8 @@ Settings::Settings():
   showToolbar_(true),
   showAnnotationsToolbar_(false),
   forceZoomFit_(false),
-  useTrash_(true) {
+  useTrash_(true),
+  singleWindowMode_(false) {
 }
 
 Settings::~Settings() {
@@ -77,6 +78,7 @@ bool Settings::load() {
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
   useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
+  singleWindowMode_ = settings.value(QStringLiteral("SingleWindowMode"), false).toBool();
   prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
   settings.endGroup();
 
@@ -123,6 +125,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
+  settings.setValue(QStringLiteral("SingleWindowMode"), singleWindowMode_);
   settings.setValue(QStringLiteral("PrefSize"), prefSize_);
   settings.endGroup();
 

@@ -80,7 +80,7 @@
        <item row="3" column="1">
         <widget class="QComboBox" name="thumbnailSizeComboBox"/>
        </item>
-       <item row="4" column="0">
+       <item row="4" column="0" colspan="2">
         <widget class="QCheckBox" name="useTrashBox">
          <property name="text">
           <string>Use system Trash (and do not prompt)</string>
@@ -107,31 +107,41 @@
        <item row="0" column="1">
         <widget class="QComboBox" name="thumbnailsPositionComboBox"/>
        </item>
-       <item row="1" column="0">
+       <item row="1" column="0" colspan="2">
         <widget class="QCheckBox" name="exifDataBox">
          <property name="text">
           <string>Show Exif data dock by default</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="2" column="0" colspan="2">
         <widget class="QCheckBox" name="menubarBox">
          <property name="text">
           <string>Show menubar by default</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
+       <item row="3" column="0" colspan="2">
         <widget class="QCheckBox" name="toolbarBox">
          <property name="text">
           <string>Show main toolbar by default</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
+       <item row="4" column="0" colspan="2">
         <widget class="QCheckBox" name="annotationBox">
          <property name="text">
           <string>Show annotations toolbar by default</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QCheckBox" name="singleWindowModeBox">
+         <property name="toolTip">
+          <string>Only one image will be opened at a time</string>
+         </property>
+         <property name="text">
+          <string>Single window mode</string>
          </property>
         </widget>
        </item>
@@ -187,14 +197,14 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="5" column="0" colspan="2">
         <widget class="QCheckBox" name="oulineBox">
          <property name="text">
           <string>Show image outline by default</string>
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
+       <item row="6" column="0" colspan="2">
         <widget class="QCheckBox" name="forceZoomFitBox">
          <property name="text">
           <string>Fit images when navigating</string>

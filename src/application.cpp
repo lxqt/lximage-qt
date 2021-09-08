@@ -202,13 +202,44 @@ MainWindow* Application::createWindow(bool fullscreen) {
 
 void Application::newWindow(QStringList files, bool fullscreen) {
   LxImage::MainWindow* window;
-  if(files.empty()) {
+
+  if(settings_.singleWindowMode()) {
+    MainWindow* window = MainWindow::lastActive();
+    // if there is no last active window, find the last created window
+    if(window == nullptr) {
+      QWidgetList windows = topLevelWidgets();
+      for(int i = 0; i < windows.size(); ++i) {
+        auto win = windows.at(windows.size() - 1 - i);
+        if(win->inherits("LxImage::MainWindow")) {
+          window = static_cast<MainWindow*>(win);
+          break;
+        }
+      }
+    }
+    if(window == nullptr) {
+      window = createWindow(fullscreen);
+      window->resize(settings_.windowWidth(), settings_.windowHeight());
+      if(settings_.windowMaximized()) {
+        window->setWindowState(window->windowState() | Qt::WindowMaximized);
+      }
+      window->showAndRaise();
+    }
+    if(!files.empty()) {
+      window->openImageFile(files.first());
+      window->resize(settings_.windowWidth(), settings_.windowHeight());
+      if(settings_.windowMaximized()) {
+        window->setWindowState(window->windowState() | Qt::WindowMaximized);
+      }
+      /* when there's an image, we show the window AFTER resizing
+         and centering it appropriately at MainWindow::updateUI() */
+    }
+  }
+  else if(files.empty()) {
     window = createWindow(fullscreen);
-
     window->resize(settings_.windowWidth(), settings_.windowHeight());
-    if(settings_.windowMaximized())
+    if(settings_.windowMaximized()) {
       window->setWindowState(window->windowState() | Qt::WindowMaximized);
-
+    }
     window->showAndRaise();
   }
   else {
@@ -217,12 +248,11 @@ void Application::newWindow(QStringList files, bool fullscreen) {
       window->openImageFile(fileName);
 
       window->resize(settings_.windowWidth(), settings_.windowHeight());
-      if(settings_.windowMaximized())
+      if(settings_.windowMaximized()) {
         window->setWindowState(window->windowState() | Qt::WindowMaximized);
-
+      }
       /* when there's an image, we show the window AFTER resizing
          and centering it appropriately at MainWindow::updateUI() */
-      //window->show();
     }
   }
 }

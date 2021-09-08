@@ -58,6 +58,9 @@
 
 using namespace LxImage;
 
+// static
+QPointer<MainWindow> MainWindow::lastActive_;
+
 MainWindow::MainWindow():
   QMainWindow(),
   contextMenu_(new QMenu(this)),
@@ -665,6 +668,16 @@ void MainWindow::onImageSaved() {
     setModified(false);
   }
   saveJob_ = nullptr;
+}
+
+bool MainWindow::event(QEvent* event) {
+    switch(event->type()) {
+    case QEvent::WindowActivate:
+      lastActive_ = this;
+    default:
+      break;
+    }
+    return QMainWindow::event(event);
 }
 
 // filter events of other objects, mainly the image view.
@@ -1441,8 +1454,11 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
   }
 }
 
-void MainWindow::closeEvent(QCloseEvent *event)
-{
+void MainWindow::closeEvent(QCloseEvent *event) {
+  if(lastActive_ == this) {
+    lastActive_ = nullptr;
+  }
+
   QWidget::closeEvent(event);
   Settings& settings = static_cast<Application*>(qApp)->settings();
   if(settings.rememberWindowSize()) {
@@ -1526,6 +1542,14 @@ void MainWindow::fileMenuAboutToShow() {
     }
   }
   ui.openWithMenu->setEnabled(false);
+
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+  if(settings.singleWindowMode()) {
+    ui.actionNewWindow->setEnabled(false);
+  }
+  else {
+    ui.actionNewWindow->setEnabled(true);
+  }
 }
 
 void MainWindow::createOpenWithMenu() {

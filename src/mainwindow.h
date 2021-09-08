@@ -78,7 +78,16 @@ public:
     showFullScreen_ = value;
   }
 
+  static MainWindow* lastActive() {
+    return lastActive_;
+  }
+
+  void showStatus(QString text, int duration = 2500) {
+    ui.statusBar->showMessage(text, duration);
+  }
+
 protected:
+  bool event(QEvent* event) override;
   void loadImage(const Fm::FilePath & filePath, QModelIndex index = QModelIndex());
   void saveImage(const Fm::FilePath & filePath); // save current image to a file
   void loadFolder(const Fm::FilePath & newFolderPath);
@@ -161,6 +170,7 @@ private:
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
 
 private:
+  static QPointer<MainWindow> lastActive_;
   Ui::MainWindow ui;
   QMenu* contextMenu_;
   QTimer* slideShowTimer_;

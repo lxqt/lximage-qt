@@ -262,6 +262,13 @@ public:
     useTrash_ = on;
   }
 
+  bool singleWindowMode() const {
+    return singleWindowMode_;
+  }
+  void setSingleWindowMode(bool singleWindowMode) {
+    singleWindowMode_ = singleWindowMode;
+  }
+
   QSize getPrefSize() const {
     return prefSize_;
   }
@@ -306,6 +313,7 @@ private:
   bool showAnnotationsToolbar_;
   bool forceZoomFit_;
   bool useTrash_;
+  bool singleWindowMode_;
 
   QSize prefSize_;
 

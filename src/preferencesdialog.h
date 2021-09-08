@@ -69,6 +69,7 @@ protected:
 private Q_SLOTS:
   void onShortcutChange(QTableWidgetItem* item);
   void restoreDefaultShortcuts();
+  void onSingleWindowModeChange(bool checked);
 
 private:
   void initIconThemes(Settings& settings);
@@ -76,7 +77,7 @@ private:
   void initThumbnailsPositions(Settings& settings);
   void initShortcuts();
   void applyNewShortcuts();
-  void showWarning(const QString& text, bool temporary = true);
+  void showWarning(const QString& text, int delay = 2500);
 
 private:
   Ui::PreferencesDialog ui;
