@@ -615,7 +615,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Правити</translation>
+        <translation>&amp;Змінити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
