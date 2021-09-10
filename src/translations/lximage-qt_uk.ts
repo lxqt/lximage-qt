@@ -227,7 +227,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>&amp;About</source>
-        <translation>&amp;Про програму</translation>
+        <translation>Про &amp;Стискач</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
@@ -247,7 +247,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Save &amp;As</source>
-        <translation>Зберегти &amp;як</translation>
+        <translation>&amp;Зберегти як</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="256"/>
@@ -257,7 +257,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>&amp;Close</source>
-        <translation>&amp;Закрити</translation>
+        <translation>З&amp;акрити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -464,7 +464,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Delete</source>
-        <translation>В&amp;илучити</translation>
+        <translation>Ви&amp;далити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
@@ -610,12 +610,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation>П&amp;ерегляд</translation>
+        <translation>&amp;Вигляд</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Редагування</translation>
+        <translation>&amp;Змінити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
