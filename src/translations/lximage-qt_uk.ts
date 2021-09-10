@@ -227,7 +227,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>&amp;About</source>
-        <translation>Про &amp;Стискач</translation>
+        <translation>Про &amp;програму</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
