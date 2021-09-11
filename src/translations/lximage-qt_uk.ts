@@ -53,7 +53,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>About</source>
-        <translation>Про програму</translation>
+        <translation>Про</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="208"/>
@@ -227,7 +227,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>&amp;About</source>
-        <translation>Про &amp;Стискач</translation>
+        <translation>&amp;Про</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="220"/>
@@ -610,12 +610,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="110"/>
         <source>&amp;View</source>
-        <translation>&amp;Вигляд</translation>
+        <translation>Пере&amp;гляд</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="128"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Змінити</translation>
+        <translation>З&amp;мінити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
