@@ -93,8 +93,8 @@ QGraphicsItem* ImageView::outlineGraphicsItem() const {
 }
 
 
-void ImageView::onFileDropped(const QString file) {
-    Q_EMIT fileDropped(file);
+void ImageView::onFileDropped(const QStringList pathList) {
+    Q_EMIT fileDropped(pathList);
 }
 
 void ImageView::wheelEvent(QWheelEvent* event) {

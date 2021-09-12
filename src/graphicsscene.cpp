@@ -21,6 +21,7 @@
 #include "graphicsscene.h"
 #include <QMimeData>
 #include <QUrl>
+#include <QDir>
 
 namespace LxImage {
 
@@ -39,10 +40,24 @@ void GraphicsScene::dragMoveEvent(QGraphicsSceneDragDropEvent *event) {
 }
 
 void GraphicsScene::dropEvent(QGraphicsSceneDragDropEvent* event) {
-  QList<QUrl> urlList = event->mimeData()->urls();
-  if(!urlList.isEmpty())
-    Q_EMIT fileDropped(urlList.first().toLocalFile());
-  event->acceptProposedAction();
+  const QMimeData *mimeData = event->mimeData();
+
+  if (mimeData->hasUrls()) {
+    QStringList pathList;
+    QList<QUrl> urlList = mimeData->urls();
+
+    // extract the local paths of the files
+    for (QUrl url : urlList) {
+      if (url.isLocalFile()) {
+        pathList.append(QDir::toNativeSeparators(url.toLocalFile()));
+      }
+    }
+
+    if (!pathList.isEmpty()) {
+      Q_EMIT fileDropped(pathList);
+      event->acceptProposedAction();
+    }
+  }
 }
 
 }

@@ -88,7 +88,7 @@ public:
   void updateOutline();
 
 Q_SIGNALS:
-  void fileDropped(const QString file);
+  void fileDropped(const QStringList pathList);
   void zooming();
 
 protected:
@@ -117,7 +117,7 @@ private:
   void removeAnnotations();
 
 private Q_SLOTS:
-  void onFileDropped(const QString file);
+  void onFileDropped(const QStringList pathList);
   void generateCache();
   void blankCursor();
 

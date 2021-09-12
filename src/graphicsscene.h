@@ -39,7 +39,7 @@ protected:
   virtual void dropEvent(QGraphicsSceneDragDropEvent* event);
 
 Q_SIGNALS:
-  void fileDropped(const QString file);
+  void fileDropped(const QStringList pathList);
 };
 
 }

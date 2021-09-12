@@ -207,7 +207,7 @@ MainWindow::MainWindow():
 
   // Open images when MRU items are clicked
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
-  connect(ui.menuRecently_Opened_Files, &MruMenu::itemClicked, this, &MainWindow::onFileDropped);
+  connect(ui.menuRecently_Opened_Files, &MruMenu::itemClicked, this, &MainWindow::openImageFile);
 
   // Create an action group for the annotation tools
   QActionGroup *annotationGroup = new QActionGroup(this);
@@ -1510,8 +1510,14 @@ void MainWindow::onFilesRemoved(const Fm::FileInfoList& files) {
   }
 }
 
-void MainWindow::onFileDropped(const QString path) {
-    openImageFile(path);
+void MainWindow::onFileDropped(QStringList pathList) {
+  if (!pathList.isEmpty()) {
+    openImageFile(pathList.takeFirst());
+  }
+  if (!pathList.isEmpty()) {
+    Application* app = static_cast<Application*>(qApp);
+    app->newWindow(pathList, showFullScreen_);    
+  }
 }
 
 void MainWindow::fileMenuAboutToShow() {

@@ -148,7 +148,7 @@ private Q_SLOTS:
   void onThumbnailSelChanged(const QItemSelection & selected, const QItemSelection & deselected);
   void onFilesRemoved(const Fm::FileInfoList& files);
 
-  void onFileDropped(const QString path);
+  void onFileDropped(QStringList pathList);
 
   void fileMenuAboutToShow();
   void createOpenWithMenu();
