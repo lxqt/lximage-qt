@@ -6,12 +6,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Opstarten in beeldvullende modus (handig bij gebruik van tegelende vensterbeheerders)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Maak een schermfoto (verouderd - gebruik hiervoor screengrab)</translation>
+        <translation>Schermfoto maken (verouderd - gebruik hiervoor screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -572,22 +572,22 @@ in de bewerkmodus.</translation>
         <location filename="../mainwindow.ui" line="634"/>
         <location filename="../mainwindow.ui" line="637"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menubalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hoofdwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="651"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -619,12 +619,12 @@ in de bewerkmodus.</translation>
         <location filename="../mainwindow.ui" line="695"/>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam wijzigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
@@ -677,7 +677,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsgroottelimiet van minaturen:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -722,17 +722,17 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Miniatuurafmetingen:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Systeemprullenbak gebruiken (en niet om bevestiging vragen)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Venster</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -742,22 +742,22 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Exif-gegevens altijd tonen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Menubalk altijd tonen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdwerkbalk altijd tonen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeelding</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>

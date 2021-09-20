@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Käivita täisekraanivaates (näiteks omab mõtet paaniva aknahalduri puhul)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -570,22 +570,22 @@ toimetamisvaates muuteklahvi.</translation>
         <location filename="../mainwindow.ui" line="634"/>
         <location filename="../mainwindow.ui" line="637"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüüriba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Põhiline tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="651"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Põhiline tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -617,12 +617,12 @@ toimetamisvaates muuteklahvi.</translation>
         <location filename="../mainwindow.ui" line="695"/>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Muuda nime</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
@@ -675,7 +675,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisipildistaja failisuuruse ülempiir:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -720,17 +720,17 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisipiltide mõõdud:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta süsteemi prügikasti (ja ära küsi uuesti)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Aken</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -740,22 +740,22 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi näita Exif-kirjeid</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi näita menüüriba</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi näita põhilist tööriistariba</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilt</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>

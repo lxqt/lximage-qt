@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avvia a schermo intero (potrebbe essere utile con gestori finestre tiling)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -571,22 +571,22 @@ scorciatoia in modalità di modifica.</translation>
         <location filename="../mainwindow.ui" line="634"/>
         <location filename="../mainwindow.ui" line="637"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra dei menu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra degli &amp;strumenti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="651"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra degli strumenti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -618,12 +618,12 @@ scorciatoia in modalità di modifica.</translation>
         <location filename="../mainwindow.ui" line="695"/>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Rinomina</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
@@ -676,7 +676,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione massima delle miniature:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -711,7 +711,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished">Adatta immagini nella navigazione</translation>
+        <translation>Adatta immagini nella navigazione</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -721,17 +721,17 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione delle miniature:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa cestino (senza conferma)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Finestra</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -741,22 +741,22 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sempre il pannello con le data Exif</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sempre la barra del menu</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra sempre la barra degli strumenti</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Immagine</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>

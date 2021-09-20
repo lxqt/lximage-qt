@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Démarrer en plein écran (peut être utile avec les gestionnaires de fenêtres en mosaïque)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -600,22 +600,22 @@ en mode édition.</translation>
         <location filename="../mainwindow.ui" line="634"/>
         <location filename="../mainwindow.ui" line="637"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre de menu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="651"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -647,12 +647,12 @@ en mode édition.</translation>
         <location filename="../mainwindow.ui" line="695"/>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Renommer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
@@ -680,42 +680,42 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser la corbeille du système (et ne pas demander)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenêtre</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le dock de données Exif par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la barre de menus par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la barre d&apos;outils principale par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Image</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
