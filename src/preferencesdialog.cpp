@@ -156,7 +156,7 @@ void PreferencesDialog::accept() {
 
   settings.setShowExifData(ui.exifDataBox->isChecked());
   settings.setShowThumbnails(ui.thumbnailBox->isChecked());
-  settings.setThumbnailsPosition(ui.thumbnailsPositionComboBox->currentText());
+  settings.setThumbnailsPosition(ui.thumbnailsPositionComboBox->itemData(ui.thumbnailsPositionComboBox->currentIndex()).toInt());
   // the max. thumbnail size spinbox is in MiB
   settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
   settings.setThumbnailSize(ui.thumbnailSizeComboBox->itemData(ui.thumbnailSizeComboBox->currentIndex()).toInt());
@@ -200,10 +200,18 @@ void PreferencesDialog::initThumbnailSizes(Settings& settings) {
 }
 
 void PreferencesDialog::initThumbnailsPositions(Settings& settings) {
-  for (auto position : settings.thumbnailsPositions()) {
-    ui.thumbnailsPositionComboBox->addItem(position);
+  ui.thumbnailsPositionComboBox->addItem(tr("Bottom"), Qt::BottomDockWidgetArea);
+  ui.thumbnailsPositionComboBox->addItem(tr("Top"), Qt::TopDockWidgetArea);
+  ui.thumbnailsPositionComboBox->addItem(tr("Left"), Qt::LeftDockWidgetArea);
+
+  Qt::DockWidgetArea pos = settings.thumbnailsPosition();
+  for(int i = 0; i < ui.thumbnailsPositionComboBox->count(); ++i) {
+    if(ui.thumbnailsPositionComboBox->itemData(i).toInt() == pos) {
+      ui.thumbnailsPositionComboBox->setCurrentIndex(i);
+      return;
+    }
   }
-  ui.thumbnailsPositionComboBox->setCurrentText(settings.thumbnailsPosition());
+  ui.thumbnailsPositionComboBox->setCurrentIndex(0);
 }
 
 void PreferencesDialog::initIconThemes(Settings& settings) {

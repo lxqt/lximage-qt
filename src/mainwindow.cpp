@@ -1252,10 +1252,10 @@ void MainWindow::setShowThumbnails(bool show) {
       thumbnailsView_->setIconSize(Fm::FolderView::IconMode, QSize(settings.thumbnailSize(), settings.thumbnailSize()));
       thumbnailsView_->setAutoSelectionDelay(0);
       thumbnailsDock_->setWidget(thumbnailsView_);
-      addDockWidget(settings.getThumbnailsPosition(), thumbnailsDock_);
+      addDockWidget(settings.thumbnailsPosition(), thumbnailsDock_);
       QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
       listView->setSelectionMode(QAbstractItemView::SingleSelection);
-      switch (settings.getThumbnailsPosition()) {
+      switch(settings.thumbnailsPosition()) {
         case Qt::LeftDockWidgetArea:
         case Qt::RightDockWidgetArea:
           listView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1266,7 +1266,6 @@ void MainWindow::setShowThumbnails(bool show) {
             thumbnailsView_->setFixedWidth(delegate->itemSize().width() + 1.5*scrollWidth);
           }
           break;
-
         case Qt::TopDockWidgetArea:
         case Qt::BottomDockWidgetArea:
         default:

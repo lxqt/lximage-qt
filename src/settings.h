@@ -78,36 +78,10 @@ public:
     showThumbnails_ = show;
   }
 
-  QString thumbnailsPosition() {
+  Qt::DockWidgetArea thumbnailsPosition() const {
     return thumbnailsPosition_;
   }
-  void setThumbnailsPosition(const QString& position) {
-    if(!thumbnailsPositions().contains(position)) {
-      thumbnailsPosition_ = QStringLiteral("bottom");
-    }
-    else {
-      thumbnailsPosition_ = position;
-    }
-  }
-  const QStringList& thumbnailsPositions() {
-    static const QStringList _thumbnailsPositions = {QStringLiteral("left"),
-                                                     QStringLiteral("right"),
-                                                     QStringLiteral("top"),
-                                                     QStringLiteral("bottom")};
-    return _thumbnailsPositions;
-  }
-  Qt::DockWidgetArea getThumbnailsPosition() {
-    if(thumbnailsPosition_ == QStringLiteral("left")) {
-      return Qt::LeftDockWidgetArea;
-    }
-    if(thumbnailsPosition_ == QStringLiteral("right")) {
-      return Qt::RightDockWidgetArea;
-    }
-    if(thumbnailsPosition_ == QStringLiteral("top")) {
-      return Qt::TopDockWidgetArea;
-    }
-    return Qt::BottomDockWidgetArea;
-  }
+  void setThumbnailsPosition(int pos);
 
   int maxThumbnailFileSize() const {
     return Fm::ThumbnailJob::maxThumbnailFileSize();
@@ -117,10 +91,7 @@ public:
     Fm::ThumbnailJob::setMaxThumbnailFileSize(size);
   }
 
-  const QList<int>& thumbnailSizes() {
-    static const QList<int> _thumbnailSizes = {256, 224, 192, 160, 128, 96, 64};
-    return _thumbnailSizes;
-  }
+  const QList<int>& thumbnailSizes() const;
   int thumbnailSize() const {
     return thumbnailSize_;
   }
@@ -281,13 +252,17 @@ public:
   }
 
 private:
+  QString thumbnailsPositionToString() const;
+  void thumbnailsPositionFromString(const QString& str);
+
+private:
   bool useFallbackIconTheme_;
   QColor bgColor_;
   QColor fullScreenBgColor_;
   bool showExifData_;
   bool showThumbnails_;
   int thumbnailSize_;
-  QString thumbnailsPosition_;
+  Qt::DockWidgetArea thumbnailsPosition_;
   bool showSidePane_;
   int slideShowInterval_;
   QString fallbackIconTheme_;
