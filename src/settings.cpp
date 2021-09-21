@@ -32,7 +32,7 @@ Settings::Settings():
   showExifData_(false),
   showThumbnails_(false),
   thumbnailSize_(64),
-  thumbnailsPosition_(QStringLiteral("bottom")),
+  thumbnailsPosition_(Qt::BottomDockWidgetArea),
   showSidePane_(false),
   slideShowInterval_(5),
   fallbackIconTheme_(QStringLiteral("oxygen")),
@@ -91,7 +91,7 @@ bool Settings::load() {
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
   showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
-  setThumbnailsPosition(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
+  thumbnailsPositionFromString(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
   setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
   setThumbnailSize(settings.value(QStringLiteral("ThumbnailSize"), 64).toInt());
   settings.endGroup();
@@ -140,7 +140,7 @@ bool Settings::save() {
 
   settings.beginGroup(QStringLiteral("Thumbnail"));
   settings.setValue(QStringLiteral("ShowThumbnails"), showThumbnails_);
-  settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPosition_);
+  settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPositionToString());
   settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
   settings.setValue(QStringLiteral("ThumbnailSize"), thumbnailSize_);
   settings.endGroup();
@@ -148,4 +148,44 @@ bool Settings::save() {
   return true;
 }
 
+const QList<int>& Settings::thumbnailSizes() const {
+  static const QList<int> _thumbnailSizes = {256, 224, 192, 160, 128, 96, 64};
+  return _thumbnailSizes;
+}
+
+void Settings::setThumbnailsPosition(int pos) {
+  switch(pos) {
+    case Qt::TopDockWidgetArea:
+      thumbnailsPosition_ = Qt::TopDockWidgetArea;
+      break;
+    case Qt::LeftDockWidgetArea:
+      thumbnailsPosition_ = Qt::LeftDockWidgetArea;
+      break;
+    default:
+      thumbnailsPosition_ = Qt::BottomDockWidgetArea;
+  }
+}
+
+QString Settings::thumbnailsPositionToString() const {
+  switch(thumbnailsPosition_) {
+    case Qt::TopDockWidgetArea:
+      return QStringLiteral("top");
+    case Qt::LeftDockWidgetArea:
+      return QStringLiteral("left");
+    default:
+      return QStringLiteral("bottom");
+  }
+}
+
+void Settings::thumbnailsPositionFromString(const QString& str) {
+  if(str == QStringLiteral("top")) {
+    thumbnailsPosition_ = Qt::TopDockWidgetArea;
+    return;
+  }
+  if(str == QStringLiteral("left")) {
+    thumbnailsPosition_ = Qt::LeftDockWidgetArea;
+    return;
+  }
+  thumbnailsPosition_ = Qt::BottomDockWidgetArea;
+}
 
