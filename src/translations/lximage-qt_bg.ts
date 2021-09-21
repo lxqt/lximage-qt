@@ -124,7 +124,7 @@ LXQt Проект: https://lxqt-project.org
         <translation>Миниатюри</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1319"/>
+        <location filename="../mainwindow.cpp" line="1320"/>
         <source>EXIF Data</source>
         <translation>EXIF Данни</translation>
     </message>
@@ -147,12 +147,27 @@ in the editing mode.</source>
 в режим на редактиране.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="323"/>
+        <location filename="../preferencesdialog.cpp" line="203"/>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="204"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="205"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="331"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Внимание: Повтарящата се комбинация беше изтрита!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="340"/>
+        <location filename="../preferencesdialog.cpp" line="348"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Внимание: Повтарящата се комбинация не беше приета!&lt;/b&gt;</translation>
     </message>

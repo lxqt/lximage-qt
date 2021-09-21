@@ -124,7 +124,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Gambar Mini</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1319"/>
+        <location filename="../mainwindow.cpp" line="1320"/>
         <source>EXIF Data</source>
         <translation>Data EXIF</translation>
     </message>
@@ -147,12 +147,27 @@ in the editing mode.</source>
 dalam mode pengeditan.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="323"/>
+        <location filename="../preferencesdialog.cpp" line="203"/>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="204"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="205"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="331"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Peringatan: Pintasan ambigu terdeteksi!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="340"/>
+        <location filename="../preferencesdialog.cpp" line="348"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Pintasan yang ambigu tidak diterima.&lt;/b&gt;</translation>
     </message>
