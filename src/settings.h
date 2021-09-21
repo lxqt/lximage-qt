@@ -71,6 +71,13 @@ public:
     showExifData_ = show;
   }
 
+  int exifDatakWidth() const {
+    return exifDatakWidth_;
+  }
+  void setExifDatakWidth(int width) {
+    exifDatakWidth_ = width;
+  }
+
   bool showThumbnails() const {
     return showThumbnails_;
   }
@@ -260,6 +267,7 @@ private:
   QColor bgColor_;
   QColor fullScreenBgColor_;
   bool showExifData_;
+  int exifDatakWidth_;
   bool showThumbnails_;
   int thumbnailSize_;
   Qt::DockWidgetArea thumbnailsPosition_;
