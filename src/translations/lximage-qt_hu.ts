@@ -123,7 +123,7 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
         <translation>Bélyegképek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1319"/>
+        <location filename="../mainwindow.cpp" line="1320"/>
         <source>EXIF Data</source>
         <translation>EXIF metaadatok</translation>
     </message>
@@ -146,12 +146,27 @@ in the editing mode.</source>
 kombináció törléséhez.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="323"/>
+        <location filename="../preferencesdialog.cpp" line="203"/>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="204"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="205"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.cpp" line="331"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Figyelmeztetés: Nem egyértelmű gyorsbillentyű található!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="340"/>
+        <location filename="../preferencesdialog.cpp" line="348"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Nem egyértelmű gyorsbillentyű nem elfogadható.&lt;/b&gt;</translation>
     </message>
