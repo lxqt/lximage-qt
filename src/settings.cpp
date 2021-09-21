@@ -30,6 +30,7 @@ Settings::Settings():
   bgColor_(255, 255, 255),
   fullScreenBgColor_(0, 0, 0),
   showExifData_(false),
+  exifDatakWidth_(250),
   showThumbnails_(false),
   thumbnailSize_(64),
   thumbnailsPosition_(Qt::BottomDockWidgetArea),
@@ -72,6 +73,7 @@ bool Settings::load() {
   rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
+  exifDatakWidth_ = settings.value(QStringLiteral("ExifDatakWidth"), 250).toInt();
   showMenubar_ = settings.value(QStringLiteral("ShowMenubar"), true).toBool();
   showToolbar_ = settings.value(QStringLiteral("ShowToolbar"), true).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
@@ -121,6 +123,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);
   settings.setValue(QStringLiteral("ShowAnnotationsToolbar"), showAnnotationsToolbar_);
   settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
+  settings.setValue(QStringLiteral("ExifDatakWidth"), exifDatakWidth_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
   settings.setValue(QStringLiteral("PrefSize"), prefSize_);
@@ -163,6 +166,7 @@ void Settings::setThumbnailsPosition(int pos) {
       break;
     default:
       thumbnailsPosition_ = Qt::BottomDockWidgetArea;
+      break;
   }
 }
 

@@ -1307,21 +1307,24 @@ void MainWindow::setShowThumbnails(bool show) {
 }
 
 void MainWindow::setShowExifData(bool show) {
+  Settings& settings = static_cast<Application*>(qApp)->settings();
   // Close the dock if it exists and show is false
-  if (exifDataDock_ && !show) {
+  if(exifDataDock_ && !show) {
+    settings.setExifDatakWidth(exifDataDock_->width());
     delete exifDataDock_;
     exifDataDock_ = nullptr;
   }
 
   // Be sure the dock was created before rendering content to it
-  if (show && !exifDataDock_) {
+  if(show && !exifDataDock_) {
     exifDataDock_ = new QDockWidget(tr("EXIF Data"), this);
     exifDataDock_->setFeatures(QDockWidget::NoDockWidgetFeatures);
     addDockWidget(Qt::RightDockWidgetArea, exifDataDock_);
+    resizeDocks({exifDataDock_}, {settings.exifDatakWidth()}, Qt::Horizontal);
   }
 
   // Render the content to the dock
-  if (show) {
+  if(show) {
     QWidget* exifDataDockView_ = new QWidget();
 
     QVBoxLayout* exifDataDockViewContent_ = new QVBoxLayout();
@@ -1338,7 +1341,7 @@ void MainWindow::setShowExifData(bool show) {
 
     // Write the EXIF Data to the table
     const auto keys =exifData_.keys();
-    for (const QString& key : keys) {
+    for(const QString& key : keys) {
       int rowCount = exifDataContentTable_->rowCount();
 
       exifDataContentTable_->insertRow(rowCount);
@@ -1359,10 +1362,10 @@ void MainWindow::setShowExifData(bool show) {
 void MainWindow::changeEvent(QEvent* event) {
   // TODO: hide menu/toolbars in full screen mode and make the background black.
   if(event->type() == QEvent::WindowStateChange) {
-    Application* app = static_cast<Application*>(qApp);
+    Settings& settings = static_cast<Application*>(qApp)->settings();
     if(isFullScreen()) { // changed to fullscreen mode
       ui.view->setFrameStyle(QFrame::NoFrame);
-      ui.view->setBackgroundBrush(QBrush(app->settings().fullScreenBgColor()));
+      ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
       ui.view->updateOutline();
       ui.toolBar->hide();
       ui.annotationsToolBar->hide();
@@ -1374,6 +1377,7 @@ void MainWindow::changeEvent(QEvent* event) {
         ui.actionShowThumbnails->setChecked(false);
       }
       if(exifDataDock_) {
+        settings.setExifDatakWidth(exifDataDock_->width()); // the user may have resized it
         exifDataDock_->hide();
         ui.actionShowExifData->setChecked(false);
       }
@@ -1393,7 +1397,7 @@ void MainWindow::changeEvent(QEvent* event) {
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
-      ui.view->setBackgroundBrush(QBrush(app->settings().bgColor()));
+      ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
       ui.view->updateOutline();
       if(ui.actionMenubar->isChecked()) {
         // now we're going to re-enable the menu, so remove the actions previously added.
@@ -1444,6 +1448,9 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
   QWidget::closeEvent(event);
   Settings& settings = static_cast<Application*>(qApp)->settings();
+  if(exifDataDock_) {
+    settings.setExifDatakWidth(exifDataDock_->width());
+  }
   if(settings.rememberWindowSize()) {
     settings.setLastWindowMaximized(isMaximized());
 
