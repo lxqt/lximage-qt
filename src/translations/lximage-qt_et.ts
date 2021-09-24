@@ -149,17 +149,17 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="203"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>All</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Üleval</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasakul</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="331"/>
