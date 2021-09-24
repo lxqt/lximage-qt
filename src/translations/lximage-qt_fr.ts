@@ -149,17 +149,17 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="203"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Haut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Gauche</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="331"/>
@@ -695,12 +695,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>

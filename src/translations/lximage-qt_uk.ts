@@ -149,17 +149,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="203"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Унизу</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Угорі</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="331"/>

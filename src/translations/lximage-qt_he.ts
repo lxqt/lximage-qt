@@ -6,7 +6,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>פתיחה במסך מלא (שימושי עם מנהלי חלונות מרצפים)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -149,17 +149,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="203"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>למטה</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>למעלה</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>שמאל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="331"/>
@@ -585,22 +585,22 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="634"/>
         <location filename="../mainwindow.ui" line="637"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל תפריטים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל הכלים ה&amp;ראשי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="651"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל הכלים הראשי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="659"/>
@@ -632,12 +632,12 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="695"/>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>שינוי שם</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
@@ -690,7 +690,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>מגבלת גודל מקטין תמונות:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -735,17 +735,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>ממדי תמונה למקטין:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>להשתמש בסל האשפה של המערכת (ולא להודיע)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>חלון</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -755,22 +755,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת מעגן נתוני Exif כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת סרגל תפריטים כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>הצגת סרגל הכלים הראשי כבררת מחדל</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>תמונה</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>

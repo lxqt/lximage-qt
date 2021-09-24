@@ -149,17 +149,17 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="203"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>In basso</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>In alto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>A sinistra</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="331"/>
