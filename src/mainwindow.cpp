@@ -203,7 +203,6 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
-  contextMenu_->addAction(ui.actionFlipVertical);
 
   // Open images when MRU items are clicked
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
@@ -1068,7 +1067,7 @@ void MainWindow::on_actionFlipHorizontal_triggered() {
     }
   }
   if(!image_.isNull()) {
-    image_ = image_.mirrored(true, true);
+    image_ = image_.mirrored(true, false);
     ui.view->setImage(image_, !hasQGraphicsItem);
     setModified(true);
   }
