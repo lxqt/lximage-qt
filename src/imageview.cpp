@@ -28,6 +28,7 @@
 #include <QLabel>
 #include <QGraphicsProxyWidget>
 #include <QGraphicsSvgItem>
+#include <QStyleOptionGraphicsItem>
 #include <QPainter>
 #include <QPainterPath>
 #include <QGuiApplication>
@@ -50,6 +51,7 @@ ImageView::ImageView(QWidget* parent):
   autoZoomFit_(false),
   isSVG(false),
   currentTool(ToolNone),
+  nextNumber(1),
   showOutline_(false) {
 
   setViewportMargins(0, 0, 0, 0);
@@ -87,11 +89,6 @@ QGraphicsItem* ImageView::imageGraphicsItem() const {
   }
   return nullptr;
 }
-
-QGraphicsItem* ImageView::outlineGraphicsItem() const {
-  return outlineItem_;
-}
-
 
 void ImageView::onFileDropped(const QString file) {
     Q_EMIT fileDropped(file);
@@ -185,24 +182,24 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
                         textRect.top() + (textRect.height() / 2 - radius),
                         radius * 2, radius * 2);
 
-      // Draw the path in the image
+      // Draw the circle in the image
       QPainterPath path;
       path.addEllipse(circleRect);
       painter.fillPath(path, Qt::red);
       painter.drawPath(path);
-      // Draw the path in the sence
-      annotations.append(scene_->addPath(path, painter.pen(), QBrush(Qt::red)));
+      // Draw the circle in the sence
+      auto item = scene_->addPath(path, painter.pen(), QBrush(Qt::red));
+      annotations.append(item);
 
       // Draw the text in the image
       painter.setPen(Qt::white);
       painter.drawText(textRect, Qt::AlignCenter, text);
-      // Draw the text in the sence
-      QGraphicsSimpleTextItem* textItem = new QGraphicsSimpleTextItem(text);
+      // Add the text as a child of the circle
+      // NOTE: Not adding it directly to the scene is important with SVG/GIF transformations
+      QGraphicsSimpleTextItem* textItem = new QGraphicsSimpleTextItem(text, item);
       textItem->setFont(font);
       textItem->setBrush(Qt::white);
       textItem->setPos(textRect.topLeft());
-      scene_->addItem(textItem);
-      annotations.append(textItem);
 
       break;
     }
@@ -216,17 +213,19 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
 
 void ImageView::mouseMoveEvent(QMouseEvent* event) {
   QGraphicsView::mouseMoveEvent(event);
-   if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
-                       || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+  if(cursorTimer_
+     && (viewport()->cursor().shape() == Qt::BlankCursor
+         || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
     cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
     viewport()->setCursor(Qt::OpenHandCursor);
-  }
+ }
 }
 
 void ImageView::focusInEvent(QFocusEvent* event) {
   QGraphicsView::focusInEvent(event);
-  if(cursorTimer_ && (viewport()->cursor().shape() == Qt::BlankCursor
-                      || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
+  if(cursorTimer_
+     && (viewport()->cursor().shape() == Qt::BlankCursor
+         || viewport()->cursor().shape() == Qt::OpenHandCursor)) {
     cursorTimer_->start(CURSOR_HIDE_DELY); // restart timer
     viewport()->setCursor(Qt::OpenHandCursor);
   }
@@ -284,6 +283,151 @@ void ImageView::zoomOriginal() {
   queueGenerateCache();
 }
 
+void ImageView::rotateImage(bool clockwise) {
+  if(gifMovie_ || isSVG) {
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+      QTransform transform;
+      if(clockwise) {
+        transform.translate(imageItem->sceneBoundingRect().height(), 0);
+        transform.rotate(90);
+      }
+      else {
+        transform.translate(0, imageItem->sceneBoundingRect().width());
+        transform.rotate(-90);
+      }
+      // we need to apply transformations in the reverse order
+      QTransform prevTrans = imageItem->transform();
+      imageItem->setTransform(transform, false);
+      imageItem->setTransform(prevTrans, true);
+      // apply transformations to the outline item too
+      if(outlineItem_) {
+        outlineItem_->setTransform(transform, false);
+        outlineItem_->setTransform(prevTrans, true);
+      }
+      // Since, in the case of SVG and GIF, annotations are not parts of the QImage and
+      // because they might have been added at any time, they need to be transformed
+      // by considering their previous transformations separately.
+      for(const auto& annotation : qAsConst(annotations)) {
+        prevTrans = annotation->transform();
+        annotation->setTransform(transform, false);
+        annotation->setTransform(prevTrans, true);
+      }
+    }
+  }
+  if(!image_.isNull()) {
+    QTransform transform;
+    transform.rotate(clockwise ? 90.0 : -90.0);
+    image_ = image_.transformed(transform, Qt::SmoothTransformation);
+    int tmp = nextNumber; // restore it (may be restet by setImage())
+    /* when this is GIF or SVG, we need to transform its corresponding QImage
+       without showing it to have right measures for auto-zooming and other things */
+    setImage(image_, !gifMovie_ && !isSVG);
+    nextNumber = tmp;
+  }
+}
+
+void ImageView::flipImage(bool horizontal) {
+  if(gifMovie_ || isSVG) {
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+      QTransform transform;
+      if(horizontal) {
+        transform.scale(-1, 1);
+        transform.translate(-imageItem->sceneBoundingRect().width(), 0);
+      }
+      else {
+        transform.scale(1, -1);
+        transform.translate(0, -imageItem->sceneBoundingRect().height());
+      }
+      QTransform prevTrans = imageItem->transform();
+      imageItem->setTransform(transform, false);
+      imageItem->setTransform(prevTrans, true);
+      if(outlineItem_) {
+        outlineItem_->setTransform(transform, false);
+        outlineItem_->setTransform(prevTrans, true);
+      }
+      for(const auto& annotation : qAsConst(annotations)) {
+        prevTrans = annotation->transform();
+        annotation->setTransform(transform, false);
+        annotation->setTransform(prevTrans, true);
+      }
+    }
+  }
+  if(!image_.isNull()) {
+    if(horizontal) {
+      image_ = image_.mirrored(true, false);
+    }
+    else {
+      image_ = image_.mirrored(false, true);
+    }
+    int tmp = nextNumber;
+    setImage(image_, !gifMovie_ && !isSVG);
+    nextNumber = tmp;
+  }
+}
+
+bool ImageView::resizeImage(const QSize& newSize) {
+  QSize imgSize(image_.size());
+  if(newSize == imgSize) {
+    return false;
+  }
+  int tmp = nextNumber;
+  if(!isSVG) { // with SVG, we get a sharp image below
+    image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    setImage(image_, !gifMovie_);
+  }
+  if(gifMovie_ || isSVG) {
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+      qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
+      qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
+      QTransform transform;
+      transform.scale(sx, sy);
+      QTransform prevTrans = imageItem->transform();
+      imageItem->setTransform(transform, false);
+      imageItem->setTransform(prevTrans, true);
+      if(outlineItem_) {
+        outlineItem_->setTransform(transform, false);
+        outlineItem_->setTransform(prevTrans, true);
+      }
+      for(const auto& annotation : qAsConst(annotations)) {
+        prevTrans = annotation->transform();
+        annotation->setTransform(transform, false);
+        annotation->setTransform(prevTrans, true);
+      }
+
+      if(isSVG) {
+        // create and set a sharp scaled image with SVG
+        QPixmap pixmap(newSize);
+        QPainter painter(&pixmap);
+        painter.setRenderHint(QPainter::Antialiasing);
+        painter.save();
+        painter.setTransform(imageItem->transform());
+        QStyleOptionGraphicsItem opt;
+        imageItem->paint(&painter, &opt);
+        painter.restore();
+        // draw annotations
+        for(const auto& annotation : qAsConst(annotations)) {
+          painter.save();
+          painter.setTransform(annotation->transform());
+          annotation->paint(&painter, &opt);
+          // also draw child annotations (numbers inside circles)
+          const auto children = annotation->childItems();
+          for(const auto& child : children) {
+            painter.save();
+            painter.translate(child->pos());
+            child->paint(&painter, &opt);
+            painter.restore();
+          }
+          painter.restore();
+        }
+        image_ = pixmap.toImage();
+        setImage(image_, false);
+      }
+    }
+  }
+  nextNumber = tmp;
+  return true;
+}
+
 void ImageView::drawOutline() {
   QColor col = QColor(Qt::black);
   if(qGray(backgroundBrush().color().rgb()) < GRAY) {
@@ -298,24 +442,26 @@ void ImageView::drawOutline() {
 }
 
 void ImageView::setImage(const QImage& image, bool show) {
-  removeAnnotations();
-  if(show && (gifMovie_ || isSVG)) { // a gif animation or SVG file was shown before
-    scene_->clear();
-    isSVG = false;
-    if(gifMovie_) { // should be deleted explicitly
-      delete gifMovie_;
-      gifMovie_ = nullptr;
+  if(show) {
+    resetView();
+    if(gifMovie_ || isSVG) { // a gif animation or SVG file was shown before
+      scene_->clear();
+      isSVG = false;
+      if(gifMovie_) { // should be deleted explicitly
+        delete gifMovie_;
+        gifMovie_ = nullptr;
+      }
+      // recreate the rect item
+      imageItem_ = new QGraphicsRectItem();
+      imageItem_->hide();
+      imageItem_->setPen(QPen(Qt::NoPen));
+      scene_->addItem(imageItem_);
+      // outline
+      outlineItem_ = new QGraphicsRectItem();
+      outlineItem_->hide();
+      outlineItem_->setPen(QPen(Qt::NoPen));
+      scene_->addItem(outlineItem_);
     }
-    // recreate the rect item
-    imageItem_ = new QGraphicsRectItem();
-    imageItem_->hide();
-    imageItem_->setPen(QPen(Qt::NoPen));
-    scene_->addItem(imageItem_);
-    // outline
-    outlineItem_ = new QGraphicsRectItem();
-    outlineItem_->hide();
-    outlineItem_->setPen(QPen(Qt::NoPen));
-    scene_->addItem(outlineItem_);
   }
 
   image_ = image;
@@ -343,13 +489,10 @@ void ImageView::setImage(const QImage& image, bool show) {
   if(autoZoomFit_)
     zoomFit();
   queueGenerateCache();
-
-  // clear the numbering
-  nextNumber = 1;
 }
 
 void ImageView::setGifAnimation(const QString& fileName) {
-  removeAnnotations();
+  resetView();
   /* the built-in gif reader gives the first frame, which won't
      be shown but is used for tracking position and dimensions */
   image_ = QImage(fileName);
@@ -374,8 +517,8 @@ void ImageView::setGifAnimation(const QString& fileName) {
     QPixmap pix(image_.size());
     pix.setDevicePixelRatio(qApp->devicePixelRatio());
     pix.fill(Qt::transparent);
-    QGraphicsItem *gifItem = new QGraphicsPixmapItem(pix);
-    QLabel *gifLabel = new QLabel();
+    QGraphicsItem* gifItem = new QGraphicsPixmapItem(pix);
+    QLabel* gifLabel = new QLabel();
     gifLabel->setMaximumSize(pix.size() / qApp->devicePixelRatio()); // show gif with its real size
     gifMovie_ = new QMovie(fileName);
     QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
@@ -399,7 +542,7 @@ void ImageView::setGifAnimation(const QString& fileName) {
 }
 
 void ImageView::setSVG(const QString& fileName) {
-  removeAnnotations();
+  resetView();
   image_ = QImage(fileName); // for tracking position and dimensions
   if(image_.isNull()) {
     if(imageItem_) {
@@ -416,7 +559,7 @@ void ImageView::setSVG(const QString& fileName) {
     scene_->clear();
     imageItem_ = nullptr;
     isSVG = true;
-    QGraphicsSvgItem *svgItem = new QGraphicsSvgItem(fileName);
+    QGraphicsSvgItem* svgItem = new QGraphicsSvgItem(fileName);
     svgItem->setScale(1 / qApp->devicePixelRatio()); // show svg with its real size
     scene_->addItem(svgItem);
     QRectF r(svgItem->boundingRect());
@@ -533,7 +676,10 @@ void ImageView::generateCache() {
   cacheTimer_->deleteLater();
   cacheTimer_ = nullptr;
 
-  if(!imageItem_ || image_.isNull()) return;
+  if(!imageItem_ || image_.isNull()
+     || scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
+    return;
+  }
 
   // generate a cache for "the visible part" of the scaled image
   // rectangle of the whole image in viewport coordinate
@@ -581,7 +727,7 @@ QRect ImageView::sceneToViewport(const QRectF& rect) {
 }
 
 void ImageView::blankCursor() {
-    viewport()->setCursor(Qt::BlankCursor);
+  viewport()->setCursor(Qt::BlankCursor);
 }
 
 void ImageView::hideCursor(bool enable) {
@@ -644,7 +790,15 @@ void ImageView::drawArrow(QPainter &painter,
   annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
 }
 
-void ImageView::removeAnnotations() {
+void ImageView::resetView() {
+  // reset transformation
+  if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+    imageItem->resetTransform();
+    if(outlineItem_) {
+      outlineItem_->resetTransform();
+    }
+  }
+  // remove annotations
   if(!annotations.isEmpty()) {
     if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
       for(const auto& annotation : qAsConst(annotations)) {
@@ -654,6 +808,8 @@ void ImageView::removeAnnotations() {
     }
     annotations.clear();
   }
+  // reset numbering
+  nextNumber = 1;
 }
 
 } // namespace LxImage
