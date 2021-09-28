@@ -590,7 +590,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
