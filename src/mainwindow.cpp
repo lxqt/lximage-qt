@@ -255,11 +255,15 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_actionAbout_triggered() {
   QMessageBox::about(this, tr("About"),
-                     tr("LXImage-Qt - a simple and fast image viewer\n\n"
-                     "Copyright (C) 2013-2020\n"
-                     "LXQt Project: https://lxqt-project.org\n\n"
-                     "Authors:\n"
-                     "Hong Jen Yee (PCMan) <pcman.tw@gmail.com>"));
+                     QStringLiteral("<center><b><big>LXImage-Qt %1</big></b></center><br>").arg(qApp->applicationVersion())
+                     + tr("A simple and fast image viewer")
+                     + QStringLiteral("<br><br>")
+                     + tr("Copyright (C) ") + tr("2013-2021")
+                     + QStringLiteral("<br><a href='https://lxqt-project.org'>")
+                     + tr("LXQt Project")
+                     + QStringLiteral("</a><br><br>")
+                     + tr("Author: ")
+                     + QStringLiteral("<a href='mailto:pcman.tw@gmail.com?Subject=My%20Subject'>Hong Jen Yee (PCMan)</a>"));
 }
 
 void MainWindow::on_actionOriginalSize_triggered() {
