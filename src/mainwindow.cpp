@@ -39,7 +39,6 @@
 #include <QShortcut>
 #include <QDockWidget>
 #include <QScrollBar>
-#include <QGraphicsSvgItem>
 #include <QHeaderView>
 #include <QStandardPaths>
 #include <QDateTime>
@@ -515,11 +514,6 @@ void MainWindow::on_actionSaveAs_triggered() {
     const Fm::FilePath path = Fm::FilePath::fromPathStr(qPrintable(fileName));
     // save the image file asynchronously
     saveImage(path);
-
-    if(!currentFile_) { // if we haven't loaded any file yet
-      currentFile_ = path;
-      loadFolder(path.parent());
-    }
   }
 }
 
@@ -661,7 +655,8 @@ void MainWindow::onImageLoaded() {
 
 void MainWindow::onImageSaved() {
   if(!saveJob_->failed()) {
-    setModified(false);
+    loadImage(saveJob_->filePath());
+    loadFolder(saveJob_->filePath().parent());
   }
   saveJob_ = nullptr;
 }
@@ -901,58 +896,18 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
-  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
-  bool isGifOrSvg ((imageItem && imageItem->isWidget()) // we have gif animation
-                   || dynamic_cast<QGraphicsSvgItem*>(imageItem)); // an SVG image;
   if(!image_.isNull()) {
-    QTransform transform;
-    transform.rotate(90.0);
-    image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    /* when this is GIF or SVG, we need to rotate its corresponding QImage
-       without showing it to have the right measure for auto-zooming */
-    ui.view->setImage(image_, isGifOrSvg ? false : true);
+    ui.view->rotateImage(true);
+    image_ = ui.view->image();
     setModified(true);
-  }
-
-  if(isGifOrSvg) {
-    QTransform transform;
-    transform.translate(imageItem->sceneBoundingRect().height(), 0);
-    transform.rotate(90);
-    // we need to apply transformations in the reverse order
-    QTransform prevTrans = imageItem->transform();
-    imageItem->setTransform(transform, false);
-    imageItem->setTransform(prevTrans, true);
-    // apply transformations to the outline item too
-    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
-      outlineItem->setTransform(transform, false);
-      outlineItem->setTransform(prevTrans, true);
-    }
   }
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
-  bool isGifOrSvg ((imageItem && imageItem->isWidget())
-                   || dynamic_cast<QGraphicsSvgItem*>(imageItem));
   if(!image_.isNull()) {
-    QTransform transform;
-    transform.rotate(-90.0);
-    image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    ui.view->setImage(image_, isGifOrSvg ? false : true);
+    ui.view->rotateImage(false);
+    image_ = ui.view->image();
     setModified(true);
-  }
-
-  if(isGifOrSvg) {
-    QTransform transform;
-    transform.translate(0, imageItem->sceneBoundingRect().width());
-    transform.rotate(-90);
-    QTransform prevTrans = imageItem->transform();
-    imageItem->setTransform(transform, false);
-    imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
-      outlineItem->setTransform(transform, false);
-      outlineItem->setTransform(prevTrans, true);
-    }
   }
 }
 
@@ -1030,45 +985,17 @@ void MainWindow::on_actionUpload_triggered()
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
-  bool hasQGraphicsItem(false);
-  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
-    hasQGraphicsItem = true;
-    QTransform transform;
-    transform.scale(1, -1);
-    transform.translate(0, -imageItem->sceneBoundingRect().height());
-    QTransform prevTrans = imageItem->transform();
-    imageItem->setTransform(transform, false);
-    imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
-      outlineItem->setTransform(transform, false);
-      outlineItem->setTransform(prevTrans, true);
-    }
-  }
   if(!image_.isNull()) {
-    image_ = image_.mirrored(false, true);
-    ui.view->setImage(image_, !hasQGraphicsItem);
+    ui.view->flipImage(false);
+    image_ = ui.view->image();
     setModified(true);
   }
 }
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
-  bool hasQGraphicsItem(false);
-  if(QGraphicsItem *imageItem = ui.view->imageGraphicsItem()) {
-    hasQGraphicsItem = true;
-    QTransform transform;
-    transform.scale(-1, 1);
-    transform.translate(-imageItem->sceneBoundingRect().width(), 0);
-    QTransform prevTrans = imageItem->transform();
-    imageItem->setTransform(transform, false);
-    imageItem->setTransform(prevTrans, true);
-    if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()){
-      outlineItem->setTransform(transform, false);
-      outlineItem->setTransform(prevTrans, true);
-    }
-  }
   if(!image_.isNull()) {
-    image_ = image_.mirrored(true, false);
-    ui.view->setImage(image_, !hasQGraphicsItem);
+    ui.view->flipImage(true);
+    image_ = ui.view->image();
     setModified(true);
   }
 }
@@ -1077,53 +1004,21 @@ void MainWindow::on_actionResize_triggered() {
   if(image_.isNull()) {
     return;
   }
-  QGraphicsItem *imageItem = ui.view->imageGraphicsItem();
-  bool isSVG(dynamic_cast<QGraphicsSvgItem*>(imageItem));
-  bool isGifOrSvg(isSVG || (imageItem && imageItem->isWidget()));
-  QSize imgSize(image_.size());
   ResizeImageDialog *dialog = new ResizeImageDialog(this);
   dialog->setOriginalSize(image_.size());
   if(dialog->exec() == QDialog::Accepted) {
     QSize newSize = dialog->scaledSize();
-    if(!isSVG) { // with SVG, we get a sharp image below
-      image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-      ui.view->setImage(image_, isGifOrSvg ? false : true);
+    if(ui.view->resizeImage(newSize)) {
+      image_ = ui.view->image();
+      setModified(true);
     }
-    if(isGifOrSvg) {
-      qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
-      qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
-      QTransform transform;
-      transform.scale(sx, sy);
-      QTransform prevTrans = imageItem->transform();
-      imageItem->setTransform(transform, false);
-      imageItem->setTransform(prevTrans, true);
-      if(QGraphicsItem *outlineItem = ui.view->outlineGraphicsItem()) {
-        outlineItem->setTransform(transform, false);
-        outlineItem->setTransform(prevTrans, true);
-      }
-
-      if(isSVG) {
-        // create and set a sharp scaled image with SVG
-        QPixmap pixmap(newSize);
-        pixmap.fill(Qt::transparent);
-        QPainter painter(&pixmap);
-        painter.setTransform(imageItem->transform());
-        painter.setRenderHint(QPainter::Antialiasing);
-        QStyleOptionGraphicsItem opt;
-        imageItem->paint(&painter, &opt);
-        image_ = pixmap.toImage();
-        ui.view->setImage(image_, false);
-      }
-    }
-
-    setModified(true);
   }
   dialog->deleteLater();
 }
 
 void MainWindow::setModified(bool modified) {
   imageModified_ = modified;
-  updateUI();
+  updateUI(); // should be done even if imageModified_ is not changed (because of transformations)
 }
 
 void MainWindow::applySettings() {
