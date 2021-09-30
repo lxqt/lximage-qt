@@ -161,6 +161,7 @@ void PreferencesDialog::accept() {
   settings.setMaxThumbnailFileSize(ui.thumbnailSpin->value() * 1024);
   settings.setThumbnailSize(ui.thumbnailSizeComboBox->itemData(ui.thumbnailSizeComboBox->currentIndex()).toInt());
 
+  updateThumbnails();
   applyNewShortcuts();
   settings.save();
   QDialog::accept();
@@ -409,6 +410,15 @@ void PreferencesDialog::restoreDefaultShortcuts() {
   ui.tableWidget->setCurrentCell(cur, 1);
   connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
   ui.defaultButton->setEnabled(false);
+}
+
+void PreferencesDialog::updateThumbnails() {
+  const auto windows = qApp->topLevelWidgets();
+  for(const auto& window : windows) {
+    if(window->inherits("LxImage::MainWindow")) {
+      static_cast<MainWindow*>(window)->updateThumbnails();
+    }
+  }
 }
 
 void PreferencesDialog::applyNewShortcuts() {

@@ -76,6 +76,7 @@ private:
   void initThumbnailsPositions(Settings& settings);
   void initShortcuts();
   void applyNewShortcuts();
+  void updateThumbnails();
   void showWarning(const QString& text, bool temporary = true);
 
 private:

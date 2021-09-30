@@ -70,6 +70,8 @@ public:
   }
 
   void setShowThumbnails(bool show);
+  void updateThumbnails();
+
   void setShowExifData(bool show);
   void applySettings();
 

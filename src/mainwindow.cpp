@@ -1153,15 +1153,17 @@ void MainWindow::setShowThumbnails(bool show) {
       addDockWidget(settings.thumbnailsPosition(), thumbnailsDock_);
       QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
       listView->setSelectionMode(QAbstractItemView::SingleSelection);
+      Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName));
+      int frameWidth = thumbnailsView_->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, thumbnailsView_);
+      int scrollBarExtent = thumbnailsView_->style()->styleHint(QStyle::SH_ScrollBar_Transient, nullptr, thumbnailsView_) ?
+                            0 : thumbnailsView_->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
       switch(settings.thumbnailsPosition()) {
         case Qt::LeftDockWidgetArea:
         case Qt::RightDockWidgetArea:
           listView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           listView->setFlow(QListView::LeftToRight);
-
-          if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
-            int scrollWidth = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-            thumbnailsView_->setFixedWidth(delegate->itemSize().width() + 1.5*scrollWidth);
+          if(delegate) {
+            thumbnailsView_->setFixedWidth(delegate->itemSize().width() + 2 * frameWidth + scrollBarExtent);
           }
           break;
         case Qt::TopDockWidgetArea:
@@ -1169,10 +1171,8 @@ void MainWindow::setShowThumbnails(bool show) {
         default:
           listView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           listView->setFlow(QListView::TopToBottom);
-
-          if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
-            int scrollHeight = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-            thumbnailsView_->setFixedHeight(delegate->itemSize().height() + 1.5*scrollHeight);
+          if(delegate) {
+            thumbnailsView_->setFixedHeight(delegate->itemSize().height() + 2 * frameWidth + scrollBarExtent);
           }
           break;
       }
@@ -1201,6 +1201,31 @@ void MainWindow::setShowThumbnails(bool show) {
       thumbnailsDock_ = nullptr;
     }
     proxyModel_->setShowThumbnails(false);
+  }
+}
+
+void MainWindow::updateThumbnails() {
+  if(thumbnailsView_ == nullptr) {
+    return;
+  }
+  int thumbSize = static_cast<Application*>(qApp)->settings().thumbnailSize();
+  QSize newSize(thumbSize, thumbSize);
+  if(thumbnailsView_->iconSize(Fm::FolderView::IconMode) == newSize) {
+    return;
+  }
+
+  thumbnailsView_->setIconSize(Fm::FolderView::IconMode, newSize);
+  QListView* listView = static_cast<QListView*>(thumbnailsView_->childView());
+  if(Fm::FolderItemDelegate* delegate = static_cast<Fm::FolderItemDelegate*>(listView->itemDelegateForColumn(Fm::FolderModel::ColumnFileName))) {
+    int frameWidth = thumbnailsView_->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, thumbnailsView_);
+    int scrollBarExtent = thumbnailsView_->style()->styleHint(QStyle::SH_ScrollBar_Transient, nullptr, thumbnailsView_) ?
+                          0 : thumbnailsView_->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    if(listView->flow() == QListView::LeftToRight) {
+      thumbnailsView_->setFixedWidth(delegate->itemSize().width() + 2 * frameWidth + scrollBarExtent);
+    }
+    else {
+      thumbnailsView_->setFixedHeight(delegate->itemSize().height() + 2 * frameWidth + scrollBarExtent);
+    }
   }
 }
 
