@@ -65,6 +65,9 @@ public:
   QHash<QString, ShortcutDescription> defaultShortcuts() const {
     return defaultShortcuts_;
   }
+  void setDefaultShortcuts(QHash<QString, ShortcutDescription> shortcuts) {
+    defaultShortcuts_ = shortcuts;
+  }
 
 public Q_SLOTS:
   void editPreferences();

@@ -36,7 +36,6 @@
 #include <QTimer>
 #include <QScreen>
 #include <QWindow>
-#include <QShortcut>
 #include <QDockWidget>
 #include <QScrollBar>
 #include <QHeaderView>
@@ -54,6 +53,7 @@
 #include "mrumenu.h"
 #include "resizeimagedialog.h"
 #include "upload/uploaddialog.h"
+#include "ui_shortcuts.h"
 
 using namespace LxImage;
 
@@ -221,17 +221,31 @@ MainWindow::MainWindow():
   connect(ui.openWithMenu, &QMenu::aboutToShow, this, &MainWindow::createOpenWithMenu);
   connect(ui.openWithMenu, &QMenu::aboutToHide, this, &MainWindow::deleteOpenWithMenu);
 
-  // create keyboard shortcuts
-  QShortcut* shortcut = new QShortcut(Qt::Key_Left, this);
+  // create hard-coded keyboard shortcuts; they are set in setShortcuts() if not ambiguous
+  QShortcut* shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::Key_Left] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
-  shortcut = new QShortcut(Qt::Key_Backspace, this);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::Key_Backspace] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionPrevious_triggered);
-  shortcut = new QShortcut(Qt::Key_Right, this);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::Key_Right] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
-  shortcut = new QShortcut(Qt::Key_Space, this);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::Key_Space] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
-  shortcut = new QShortcut(Qt::Key_Escape, this);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::ALT | Qt::Key_Backspace] = shortcut;
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionFirst_triggered);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::ALT | Qt::Key_Space] = shortcut;
+  connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionLast_triggered);
+  shortcut = new QShortcut(this);
+  hardCodedShortcuts_[Qt::Key_Escape] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::onKeyboardEscape);
+
+  // set custom and hard-coded shortcuts
+  setShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -271,6 +285,25 @@ void MainWindow::on_actionOriginalSize_triggered() {
     ui.view->setAutoZoomFit(false);
     ui.view->zoomOriginal();
   }
+}
+
+void MainWindow::on_actionHiddenShortcuts_triggered() {
+    class HiddenShortcutsDialog : public QDialog {
+    public:
+        explicit HiddenShortcutsDialog(QWidget* parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags())
+            : QDialog(parent, f) {
+            ui.setupUi(this);
+            ui.treeWidget->setRootIsDecorated(false);
+            ui.treeWidget->header()->setSectionResizeMode(QHeaderView::Stretch);
+            ui.treeWidget->header()->setSectionsClickable(true);
+            ui.treeWidget->sortByColumn(0, Qt::AscendingOrder);
+            ui.treeWidget->setSortingEnabled(true);
+        }
+    private:
+        Ui::HiddenShortcutsDialog ui;
+    };
+    HiddenShortcutsDialog dialog(this);
+    dialog.exec();
 }
 
 void MainWindow::on_actionZoomFit_triggered() {
@@ -1036,18 +1069,61 @@ void MainWindow::applySettings() {
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 
   // also, update shortcuts
-  QHash<QString, QString> ca = settings.customShortcutActions();
-  const auto defaultShortcuts = app->defaultShortcuts();
+  setShortcuts(true);
+}
+
+// Sets or updates shortcuts.
+void MainWindow::setShortcuts(bool update) {
+  Application* app = static_cast<Application*>(qApp);
   const auto actions = findChildren<QAction*>();
+
+  // get default shortcuts if this is the first window
+  if(app->defaultShortcuts().isEmpty()) {
+    QHash<QString, Application::ShortcutDescription> defaultShortcuts;
+    for(const auto& action : actions) {
+      if(action->objectName().isEmpty() || action->text().isEmpty()) {
+        continue;
+      }
+      QKeySequence seq = action->shortcut();
+      Application::ShortcutDescription s;
+      s.displayText = action->text().remove(QLatin1Char('&')); // without mnemonics
+      s.shortcut = seq;
+      defaultShortcuts.insert(action->objectName(), s);
+    }
+    app->setDefaultShortcuts(defaultShortcuts);
+  }
+
+  auto hardCodedShortcuts = hardCodedShortcuts_;
+
+  // set custom shortcuts
+  QHash<QString, QString> ca = app->settings().customShortcutActions();
   for(const auto& action : actions) {
-     const QString objectName = action->objectName();
-     if(ca.contains(objectName)) {
-       // custom shortcuts are saved in the PortableText format
-       action->setShortcut(QKeySequence(ca.value(objectName), QKeySequence::PortableText));
-     }
-     else { // default shortcuts include all actions
-       action->setShortcut(defaultShortcuts.value(objectName).shortcut);
-     }
+    const QString objectName = action->objectName();
+    if(ca.contains(objectName)) {
+      // custom shortcuts are saved in the PortableText format
+      auto keySeq = QKeySequence(ca.take(objectName), QKeySequence::PortableText);
+      action->setShortcut(keySeq);
+      if(!hardCodedShortcuts.isEmpty()) {
+        for(int i = 0; i < keySeq.count(); ++i) {
+          if(hardCodedShortcuts.contains(keySeq[i])) { // would be ambiguous
+            hardCodedShortcuts.take(keySeq[i])->setKey(QKeySequence());
+          }
+        }
+      }
+    }
+    else if (update) { // restore default shortcuts
+      action->setShortcut(app->defaultShortcuts().value(objectName).shortcut);
+    }
+    if(!update && ca.isEmpty()) {
+      break;
+    }
+  }
+
+  // set unambiguous hard-coded shortcuts too
+  QMap<int, QShortcut*>::const_iterator it = hardCodedShortcuts.constBegin();
+  while (it != hardCodedShortcuts.constEnd()) {
+    it.value()->setKey(QKeySequence(it.key()));
+    ++it;
   }
 }
 

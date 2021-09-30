@@ -166,37 +166,6 @@ MainWindow* Application::createWindow(bool fullscreen) {
   LxImage::MainWindow* window;
   window = new LxImage::MainWindow();
   window->setShowFullScreen(fullscreen);
-
-  // get default shortcuts from the first window
-  if(defaultShortcuts_.isEmpty()) {
-    const auto actions = window->findChildren<QAction*>();
-    for(const auto& action : actions) {
-      if(action->objectName().isEmpty() || action->text().isEmpty()) {
-        continue;
-      }
-      QKeySequence seq = action->shortcut();
-      ShortcutDescription s;
-      s.displayText = action->text().remove(QLatin1Char('&')); // without mnemonics
-      s.shortcut = seq;
-      defaultShortcuts_.insert(action->objectName(), s);
-    }
-  }
-
-  // apply custom shortcuts to this window
-  QHash<QString, QString> ca = settings_.customShortcutActions();
-  const auto actions = window->findChildren<QAction*>();
-  for(const auto& action : actions) {
-    const QString objectName = action->objectName();
-    if(ca.contains(objectName)) {
-      auto shortcut = ca.take(objectName);
-      // custom shortcuts are saved in the PortableText format.
-      action->setShortcut(QKeySequence(shortcut, QKeySequence::PortableText));
-    }
-    if(ca.isEmpty()) {
-      break;
-    }
-  }
-
   return window;
 }
 

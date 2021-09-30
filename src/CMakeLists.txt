@@ -55,6 +55,7 @@ set(lximage-qt_UIS
     preferencesdialog.ui
     resizeimagedialog.ui
     screenshotdialog.ui
+    shortcuts.ui
 
     upload/uploaddialog.ui
 )
