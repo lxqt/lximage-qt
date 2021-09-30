@@ -235,10 +235,10 @@ MainWindow::MainWindow():
   hardCodedShortcuts_[Qt::Key_Space] = shortcut;
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionNext_triggered);
   shortcut = new QShortcut(this);
-  hardCodedShortcuts_[Qt::ALT | Qt::Key_Backspace] = shortcut;
+  hardCodedShortcuts_[Qt::Key_Home] = shortcut; // already in GUI but will be forced if removed
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionFirst_triggered);
   shortcut = new QShortcut(this);
-  hardCodedShortcuts_[Qt::ALT | Qt::Key_Space] = shortcut;
+  hardCodedShortcuts_[Qt::Key_End] = shortcut; // already in GUI but will be forced if removed
   connect(shortcut, &QShortcut::activated, this, &MainWindow::on_actionLast_triggered);
   shortcut = new QShortcut(this);
   hardCodedShortcuts_[Qt::Key_Escape] = shortcut;
@@ -1120,6 +1120,13 @@ void MainWindow::setShortcuts(bool update) {
   }
 
   // set unambiguous hard-coded shortcuts too
+  // but force Home and End keys if they are not action shortcuts
+  if(hardCodedShortcuts.contains(Qt::Key_Home) && ui.actionFirst->shortcut() == QKeySequence(Qt::Key_Home)) {
+    hardCodedShortcuts.take(Qt::Key_Home)->setKey(QKeySequence());
+  }
+  if(hardCodedShortcuts.contains(Qt::Key_End) && ui.actionLast->shortcut() == QKeySequence(Qt::Key_End)) {
+    hardCodedShortcuts.take(Qt::Key_End)->setKey(QKeySequence());
+  }
   QMap<int, QShortcut*>::const_iterator it = hardCodedShortcuts.constBegin();
   while (it != hardCodedShortcuts.constEnd()) {
     it.value()->setKey(QKeySequence(it.key()));

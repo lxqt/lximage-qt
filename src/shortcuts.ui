@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>These hard coded shortcuts will be overridden if they are also assigned in Preferences → Shortcuts.</string>
+      <string>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -65,7 +65,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Alt+Space</string>
+       <string>End</string>
       </property>
       <property name="text">
        <string>Last image</string>
@@ -89,7 +89,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Alt+Backspace</string>
+       <string>Home</string>
       </property>
       <property name="text">
        <string>First image</string>
