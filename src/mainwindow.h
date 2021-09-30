@@ -29,6 +29,7 @@
 
 #include <QTableWidget>
 #include <QLabel>
+#include <QShortcut>
 
 #include <libfm-qt/foldermodel.h>
 #include <libfm-qt/proxyfoldermodel.h>
@@ -80,6 +81,8 @@ public:
     showFullScreen_ = value;
   }
 
+  void setShortcuts(bool update = false);
+
 protected:
   void loadImage(const Fm::FilePath & filePath, QModelIndex index = QModelIndex());
   void saveImage(const Fm::FilePath & filePath); // save current image to a file
@@ -97,6 +100,7 @@ protected:
   virtual bool eventFilter(QObject* watched, QEvent* event);
 private Q_SLOTS:
   void on_actionAbout_triggered();
+  void on_actionHiddenShortcuts_triggered();
 
   void on_actionOpenFile_triggered();
   void on_actionOpenDirectory_triggered();
@@ -197,6 +201,8 @@ private:
   QPointer<Fm::FileMenu> fileMenu_;
 
   bool showFullScreen_;
+
+  QMap<int, QShortcut*> hardCodedShortcuts_; // may be overriden by custom shortcuts
 };
 
 }

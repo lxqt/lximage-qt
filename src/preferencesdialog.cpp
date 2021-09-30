@@ -276,7 +276,7 @@ void PreferencesDialog::showWarning(const QString& text, bool temporary) {
           ui.warningLabel->setVisible(!permanentWarning_.isEmpty());
         });
       }
-      warningTimer_->start(2500);
+      warningTimer_->start(5000);
     }
   }
 }
