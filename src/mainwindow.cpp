@@ -276,6 +276,8 @@ void MainWindow::on_actionAbout_triggered() {
                      + QStringLiteral("<br><a href='https://lxqt-project.org'>")
                      + tr("LXQt Project")
                      + QStringLiteral("</a><br><br>")
+                     + tr("Development: ")
+                     + QStringLiteral("<a href='https://github.com/lxqt/lximage-qt'>https://github.com/lxqt/lximage-qt</a><br><br>")
                      + tr("Author: ")
                      + QStringLiteral("<a href='mailto:pcman.tw@gmail.com?Subject=My%20Subject'>Hong Jen Yee (PCMan)</a>"));
 }
