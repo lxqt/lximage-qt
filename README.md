@@ -4,10 +4,23 @@
 
 LXImage-Qt is the Qt port of LXImage, a simple and fast image viewer.
 
-In addition it features a tool to take screenshots.
+![LXImage-qt](lximage-qt.png)
 
-It is maintained by the LXQt project but can be used independently from this
-desktop environment.
+
+## Features
+
+* Zoom, rotate, flip and resize images
+* Slideshow
+* Thumbnail bar (left, top or bottom); different thumbnail sizes
+* Exif data bar
+* Inline image renaming
+* Custom shortcuts
+* Image annotations (arrow, rectangle, circle, numbers)
+* Recent files
+* Upload images (Imgur, ImgBB)
+* Take screenshots
+More features can be found when it is used. LXImage-Qt is maintained by the LXQt project
+ but can be used independently from this desktop environment.
 
 ## Installation
 
@@ -27,9 +40,8 @@ as usual.
 
 ### Binary packages
 
-Official binary packages are available in Arch Linux, Debian (as of Debian stretch),
-Fedora and openSUSE (Leap 42.1 and Tumbleweed). Just use the distributions'
-package manager to search for string 'lximage'.
+Official binary packages are available in all major distributions. Just use the distributions'
+package manager to search for string 'lximage-qt'.
 
 
 ### Translation
