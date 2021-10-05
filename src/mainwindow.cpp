@@ -96,6 +96,8 @@ MainWindow::MainWindow():
   proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
 
+  ui.view->setSmoothOnZoom(settings.smoothOnZoom());
+
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
   connect(ui.view, &QWidget::customContextMenuRequested, this, &MainWindow::onContextMenu);
@@ -1068,6 +1070,7 @@ void MainWindow::applySettings() {
   else
     ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
   ui.view->updateOutline();
+  ui.view->setSmoothOnZoom(settings.smoothOnZoom());
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 
   // also, update shortcuts
