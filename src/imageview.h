@@ -69,6 +69,10 @@ public:
     autoZoomFit_ = value;
   }
 
+  void setSmoothOnZoom(bool value) {
+    smoothOnZoom_ = value;
+  }
+
   // transformations
   void rotateImage(bool clockwise);
   void flipImage(bool horizontal);
@@ -137,6 +141,7 @@ private:
   QTimer *cursorTimer_; // for hiding cursor in fullscreen mode
   double scaleFactor_;
   bool autoZoomFit_;
+  bool smoothOnZoom_;
   bool isSVG; // is the image an SVG file?
   Tool currentTool; // currently selected tool
   QPoint startPoint; // starting point for the tool

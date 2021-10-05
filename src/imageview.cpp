@@ -49,6 +49,7 @@ ImageView::ImageView(QWidget* parent):
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
+  smoothOnZoom_(true),
   isSVG(false),
   currentTool(ToolNone),
   nextNumber(1),
@@ -611,6 +612,10 @@ void ImageView::updateOutline() {
 }
 
 void ImageView::paintEvent(QPaintEvent* event) {
+  if (!smoothOnZoom_) {
+    QGraphicsView::paintEvent(event);
+    return;
+  }
   // if the image is scaled and we have a high quality cached image
   if(imageItem_ && scaleFactor_ != 1.0 && !cachedPixmap_.isNull()) {
     // rectangle of the whole image in viewport coordinate
@@ -652,7 +657,7 @@ void ImageView::queueGenerateCache() {
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
   // no cache for gif animations or SVG images either
-  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
+  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG || !smoothOnZoom_) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
@@ -677,7 +682,7 @@ void ImageView::generateCache() {
   cacheTimer_ = nullptr;
 
   if(!imageItem_ || image_.isNull()
-     || scaleFactor_ == 1.0 || gifMovie_ || isSVG) {
+     || scaleFactor_ == 1.0 || gifMovie_ || isSVG || !smoothOnZoom_) {
     return;
   }
 

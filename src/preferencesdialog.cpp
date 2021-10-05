@@ -87,6 +87,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.toolbarBox->setChecked(settings.isToolbarShown());
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
+  ui.smoothOnZoomBox->setChecked(settings.smoothOnZoom());
   ui.useTrashBox->setChecked(settings.useTrash());
 
   ui.exifDataBox->setChecked(settings.showExifData());
@@ -152,6 +153,7 @@ void PreferencesDialog::accept() {
   settings.showToolbar(ui.toolbarBox->isChecked());
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
+  settings.setSmoothOnZoom(ui.smoothOnZoomBox->isChecked());
   settings.setUseTrash(ui.useTrashBox->isChecked());
 
   settings.setShowExifData(ui.exifDataBox->isChecked());

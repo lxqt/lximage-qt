@@ -233,6 +233,13 @@ public:
     forceZoomFit_ = on;
   }
 
+  bool smoothOnZoom() const {
+    return smoothOnZoom_;
+  }
+  void setSmoothOnZoom(bool on) {
+    smoothOnZoom_ = on;
+  }
+
   bool useTrash() const {
     return useTrash_;
   }
@@ -288,6 +295,7 @@ private:
   bool showToolbar_;
   bool showAnnotationsToolbar_;
   bool forceZoomFit_;
+  bool smoothOnZoom_;
   bool useTrash_;
 
   QSize prefSize_;
