@@ -123,31 +123,8 @@ MainWindow::MainWindow():
   ui.actionShowThumbnails->setChecked(settings.showThumbnails());
 
   addAction(ui.actionMenubar);
-  ui.menubar->setVisible(settings.isMenubarShown());
+  on_actionMenubar_triggered(settings.isMenubarShown());
   ui.actionMenubar->setChecked(settings.isMenubarShown());
-  connect(ui.actionMenubar, &QAction::triggered, this, [this](int checked) {
-    if(!isFullScreen()) { // menubar is hidden in fullscreen
-      ui.menubar->setVisible(checked);
-    }
-    if(!ui.menubar->isVisible()) {
-      // When menubar is disabled, shortcut keys in the menu are also disabled.
-      // We needs to add the actions manually to enable them again.
-      const auto actions = ui.menubar->actions();
-      for (QAction* action : qAsConst(actions)) {
-       if(!action->shortcut().isEmpty())
-        addAction(action);
-      }
-      addActions(ui.menubar->actions());
-    }
-    else {
-      // when menu is re-enabled, remove the previously added actions.
-      const auto actions_ = ui.menubar->actions();
-      for (QAction* action : qAsConst(actions_)) {
-       if(!action->shortcut().isEmpty())
-        removeAction(action);
-      }
-    }
-  });
 
   ui.toolBar->setVisible(settings.isToolbarShown());
   ui.actionToolbar->setChecked(settings.isToolbarShown());
@@ -267,6 +244,23 @@ MainWindow::~MainWindow() {
 
   Application* app = static_cast<Application*>(qApp);
   app->removeWindow();
+}
+
+void MainWindow::on_actionMenubar_triggered(bool checked) {
+  if(!checked) {
+    // If menubar is hidden, shortcut keys inside menus will be disabled. Therefore,
+    // we need to add menubar actions manually to enable shortcuts before hiding menubar.
+    addActions(ui.menubar->actions());
+    ui.menubar->setVisible(false);
+  }
+  else if(!isFullScreen()) { // menubar is hidden in fullscreen
+    ui.menubar->setVisible(true);
+    // when menubar is shown again, remove the previously added actions.
+    const auto _actions = ui.menubar->actions();
+    for(const auto& action : _actions) {
+      removeAction(action);
+    }
+  }
 }
 
 void MainWindow::on_actionAbout_triggered() {
@@ -1392,18 +1386,8 @@ void MainWindow::changeEvent(QEvent* event) {
         exifDataDock_->hide();
         ui.actionShowExifData->setChecked(false);
       }
-      if(ui.menubar->isVisible()){
-        // NOTE: in fullscreen mode, all shortcut keys in the menu are disabled since the menu
-        // is disabled. We needs to add the actions to the main window manually to enable the
-        // shortcuts again.  (Unless menubar is already hidden and shortcuts are already enabled.)
-        ui.menubar->hide();
-        const auto actions = ui.menubar->actions();
-        for(QAction* action : qAsConst(actions)) {
-          if(!action->shortcut().isEmpty())
-            addAction(action);
-        }
-        addActions(ui.menubar->actions());
-      }
+      // menubar is hidden in fullscreen mode but we need its menu shortcuts
+      on_actionMenubar_triggered(false);
       ui.view->hideCursor(true);
     }
     else { // restore to normal window mode
@@ -1411,13 +1395,7 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
       ui.view->updateOutline();
       if(ui.actionMenubar->isChecked()) {
-        // now we're going to re-enable the menu, so remove the actions previously added.
-        const auto actions_ = ui.menubar->actions();
-        for(QAction* action : qAsConst(actions_)) {
-          if(!action->shortcut().isEmpty())
-            removeAction(action);
-        }
-        ui.menubar->show();
+        on_actionMenubar_triggered(true);
       }
       if(ui.actionToolbar->isChecked()){
         ui.toolBar->show();
