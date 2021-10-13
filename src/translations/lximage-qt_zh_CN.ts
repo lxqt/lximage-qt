@@ -16,7 +16,7 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation>快捷键</translation>
+        <translation>快捷方式</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation>退出</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation>Space</translation>
+        <translation>空格</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation>End</translation>
+        <translation>结束</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation>Backspace</translation>
+        <translation>后退</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation>Home</translation>
+        <translation>主目录</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation>文件夹</translation>
+        <translation>目录</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation>未知的错误反应</translation>
+        <translation>未知的错误响应</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation>未知的错误反应</translation>
+        <translation>未知的错误响应</translation>
     </message>
 </context>
 <context>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation>Copyright (C) </translation>
+        <translation>版权 (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1328"/>
         <source>EXIF Data</source>
-        <translation>EXIF数据</translation>
+        <translation>EXIF 数据</translation>
     </message>
 </context>
 <context>
@@ -241,8 +241,8 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>使用修饰键清除快捷方式
-在编辑模式下。</translation>
+        <translation>在编辑模式下使用修饰键
+清除快捷方式。</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
@@ -262,12 +262,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;警告：检测到有歧义的快捷方式！&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;警告：检测到指向不明的快捷方式！&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="349"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;不接受有歧义快捷方式。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;不接受指向不明的快捷方式。&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -452,12 +452,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>PgDown</source>
-        <translation></translation>
+        <translation>下一页</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>PgUp</source>
-        <translation></translation>
+        <translation>上一页</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
@@ -517,7 +517,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>Home</source>
-        <translation>起始</translation>
+        <translation>主目录</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
@@ -592,7 +592,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="517"/>
@@ -632,7 +632,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="557"/>
         <source>Show EXIF Data</source>
-        <translation>显示EXIF数据</translation>
+        <translation>显示 EXIF 数据</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="569"/>
@@ -708,7 +708,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;工具栏注释</translation>
+        <translation>工具栏注释（&amp;A）</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="676"/>
@@ -798,12 +798,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation>默认背景颜色:</translation>
+        <translation>默认背景颜色：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation>全屏背景颜色:</translation>
+        <translation>全屏背景颜色：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -833,7 +833,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation> MiB</translation>
+        <translation> 兆</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -858,7 +858,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished">默认显示 Exif 数据坞</translation>
+        <translation>默认显示 Exif 数据坞</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
