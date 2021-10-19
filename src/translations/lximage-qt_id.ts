@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pintasan tersembunyi</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pintasan ini akan ditimpa bila pintasan ini juga diset ke aksi lain di Preferences → Shortcuts.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Pintasan</translation>
+        <translation>Pintasan</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">Aksi</translation>
+        <translation>Aksi</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutup jendela ini atau keluar dari mode layar penuh</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanan</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar selanjutnya</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeda</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation type="unfinished">Akhir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar Terakhir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiri</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar sebelumnya</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Beranda</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar pertama</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mulai dengan layar penuh (bisa berguna dengan window manager lantai)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Penampil gambar nan gegas dan sederhana</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Proyek LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Pengembangan: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Pengarang: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
@@ -247,17 +247,17 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Bawah</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Atas</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiri</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
@@ -345,7 +345,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;About</source>
-        <translation>Tentang</translation>
+        <translation>&amp;Tentang</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -432,7 +432,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pintasan Tersembunyi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -692,22 +692,22 @@ dalam mode pengeditan.</translation>
         <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>PapanMenu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Toolbar &amp;Utama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Toolbar Utama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -739,7 +739,7 @@ dalam mode pengeditan.</translation>
         <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Ganti nama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
@@ -797,7 +797,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Batasan ukuran file di Thumbnailer:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -832,52 +832,52 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesuaikan ukuran gambar ketika berselancar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran thmbnail gambar:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan bak sampah sistem (dan tanpa tanya lagi)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Jendela</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Secara standar, Tunjukkan dok thumbnail</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Secara standar, tunjukkan data Exif</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Secara standar, tunjukkan menubar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Secara standar, tunjukkan toolbar utama</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>
