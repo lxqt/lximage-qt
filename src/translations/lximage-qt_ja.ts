@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>隠しショートカット</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>これらのハードコードされたショートカットは、[環境設定] → [ショートカット] で他のアクションにも割り当てられている場合は上書きされます。</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">ショートカット</translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">動作</translation>
+        <translation>動作</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィンドウを閉じるか全画面表示を終了する</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>次の画像</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Space</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>最後の画像</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>前の画像</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>最初の画像</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>全画面表示で起動する(タイリングウィンドウマネージャーで便利)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>シンプルで高速な画像ビューアー</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt プロジェクト</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>開発: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>作成者: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
@@ -247,17 +247,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>下</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>上</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
@@ -432,7 +432,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカットを隠す(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -688,7 +688,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>メニューバー</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
@@ -698,12 +698,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>メイン ツールバー(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>メイン ツールバー</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -735,12 +735,12 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>名前の変更</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -793,7 +793,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>サムネイルファイルのサイズ制限:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -838,17 +838,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>サムネイル画像の大きさ:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>システムのゴミ箱を使用する(確認ダイアログを表示しません)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>ウィンドウ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -858,22 +858,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定では Exif データのドックを表示する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定ではメニューバーを表示する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定ではメインツールバーを表示する</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>画像</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>
