@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolda genvägar</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Genväg</translation>
+        <translation>Genväg</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">Handling</translation>
+        <translation>Handling</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng fönster eller avsluta fullskärmsläge</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Höger</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Blanksteg</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
@@ -57,18 +57,18 @@
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Sista bilden</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Föregående bild</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Första bilden</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Ta en skärmdump (föråldrad, använd screengrab istället)</translation>
+        <translation>Ta en skärmdump (föråldrad, använd Screengrab istället)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -148,17 +148,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>En snabb och enkel bildvisare</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
@@ -173,7 +173,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Författare: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
