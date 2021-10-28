@@ -36,7 +36,7 @@
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation>Right</translation>
+        <translation>→</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation>Left</translation>
+        <translation>←</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation>全画面表示で起動する(タイリングウィンドウマネージャーで便利)</translation>
+        <translation>全画面表示で起動する(タイリングウィンドウマネージャーで便利です)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>スクリーンショットを撮る(非推奨、代わりにScreengrabを使用して下さい)</translation>
+        <translation>スクリーンショットを撮る(非推奨、代わりに Screengrab を使用して下さい)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>スクリーンショットを作成し、GUIを表示せずにディレクトリに保存します(非推奨、代わりにScreengrabを使用して下さい)</translation>
+        <translation>スクリーンショットを作成し、GUIを表示せずにディレクトリに保存します(非推奨、代わりに Screengrab を使用して下さい)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1328"/>
         <source>EXIF Data</source>
-        <translation>EXIF データ</translation>
+        <translation>Exif データ</translation>
     </message>
 </context>
 <context>
@@ -432,7 +432,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>ショートカットを隠す(&amp;S)</translation>
+        <translation>隠しショートカット(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -632,7 +632,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="557"/>
         <source>Show EXIF Data</source>
-        <translation>EXIF データの表示</translation>
+        <translation>Exif データの表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="569"/>
@@ -698,12 +698,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation>メイン ツールバー(&amp;M)</translation>
+        <translation>メインツールバー(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation>メイン ツールバー</translation>
+        <translation>メインツールバー</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -793,7 +793,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>サムネイルファイルのサイズ制限:</translation>
+        <translation>サムネイル作成のファイルサイズ制限:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
