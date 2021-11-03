@@ -267,7 +267,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="349"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Nejednoznačná zkratka nebyla přijata..&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Nejednoznačná zkratka nebyla přijata.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -724,12 +724,12 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="690"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Kopírovat &amp;cestu</translation>
+        <translation>Kopírova&amp;t popis umístění</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>Copy path</source>
-        <translation>Kopírovat cestu</translation>
+        <translation>Zkopírovat popis umístění</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="701"/>
@@ -883,7 +883,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="227"/>
         <source>Action</source>
-        <translation>Činnost</translation>
+        <translation>Akce</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="232"/>
@@ -989,7 +989,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Zahrnout ukazovátko myši</translation>
+        <translation>Zahrnout ukazatel myši</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
