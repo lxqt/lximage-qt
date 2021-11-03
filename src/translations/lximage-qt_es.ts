@@ -16,22 +16,22 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Atajo</translation>
+        <translation>Atajo</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">Acción</translation>
+        <translation>Acción</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar ventana o salir de la pantalla completa</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">Fin</translation>
+        <translation>Fin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Un visor de fotos simple y rápido</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Project</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Desarrollo: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Autor: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
@@ -247,17 +247,17 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Abajo</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Izquierda</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
@@ -432,7 +432,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Atajos ocultos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -688,22 +688,22 @@ un atajo en el modo de edición.</translation>
         <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de menú</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de herramientas principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de herramientas principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -735,12 +735,12 @@ un atajo en el modo de edición.</translation>
         <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Renombrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -793,7 +793,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite de tamaño del archivo de miniaturas:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -838,17 +838,17 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensiones de la imagen en miniatura:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice la Papelera del sistema (y no solicite)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventana</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -863,12 +863,12 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar la barra de menús por defecto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar la barra de herramientas principal por defecto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
