@@ -26,7 +26,7 @@
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
@@ -42,7 +42,7 @@
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Nästa bild</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">Slut</translation>
+        <translation>Slut</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Blanksteg</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Hem</translation>
+        <translation>Hem</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Utveckling: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
@@ -241,22 +241,23 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd en ändringstangent för att rensa
+en genväg i ändringsläge.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedre</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Övre</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vänster</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
@@ -353,7 +354,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolda &amp;genvägar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -616,7 +617,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
@@ -626,17 +627,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Huvudverktygsfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Huvudverktygsfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Anteckningsverktygsfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="676"/>
@@ -663,12 +664,12 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Byt namn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -709,7 +710,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="192"/>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteckningsverktygsfält</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -792,7 +793,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Storleksgräns för miniatyrbildsfiler:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -807,7 +808,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximalt antal senaste filer:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
@@ -842,12 +843,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd systempapperskorgen (och fråga inte)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Fönster</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -872,7 +873,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>

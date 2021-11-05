@@ -26,7 +26,7 @@
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished">Esc</translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
@@ -858,7 +858,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar el panel de datos Exif por defecto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
@@ -873,7 +873,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>
