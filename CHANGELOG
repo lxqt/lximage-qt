@@ -1,3 +1,27 @@
+lximage-qt-1.0.0 / 2021-11-04
+==============================
+ * Bumped minimum required Qt version to 5.15.
+ * Try best to raise new windows.
+ * Added command-line option for starting in fullscreen.
+ * Fixed bugs in image fitting, especially with thumbnail dock.
+ * Added option to hide/show main toolbar.
+ * Added option to use system Trash.
+ * Added option to change Thumbnail dimensions.
+ * Added option to change Thumbnails dock position.
+ * Add option to show/hide EXIF dock at startup.
+ * Fixed wheel scrolling on image with touchpad.
+ * Reorganized preferences dialog.
+ * Allow direct image renaming (with shortcut).
+ * Added option to show/hide menubar.
+ * Remember EXIF dock width.
+ * Fixed horizontal flipping of resized images.
+ * Fixed several issues in rotation and flipping.
+ * Improved About dialog.
+ * Apply changes to thumbnail size on the fly.
+ * Allow custom shortcuts to override hard-coded shortcuts.
+ * Added option to disable image smoothing on zooming.
+ * Fixed lost shortcuts when app starts without menubar.
+
 lximage-qt-0.17.0 / 2021-04-15
 ==============================
   * Made fitting images on navigating optional.
