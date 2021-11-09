@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Gizli Kısayollar</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
