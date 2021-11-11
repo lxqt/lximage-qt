@@ -765,7 +765,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>&amp;View</source>
-        <translation>&amp;Pohled</translation>
+        <translation>&amp;Zobrazení</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>

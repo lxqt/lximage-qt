@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Dreceres ocultes</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,17 +16,17 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Drecera</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acció</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
@@ -431,7 +431,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Dreceres &amp;ocultes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -702,7 +702,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra d&apos;eines principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -832,7 +832,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
