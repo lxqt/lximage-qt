@@ -73,7 +73,7 @@
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Retrocés</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>

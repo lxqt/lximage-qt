@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрити клавишни комбинации</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Тези твърдо кодирани клавишни комбинации ще бъдат отменени, ако бъдат присвоени и на други действия в Предпочитания → Преки пътища.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Комбинация</translation>
+        <translation>Клавишна комбинация</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">Действие</translation>
+        <translation>Действие</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Затваряне на прозореца или излизане от режим на цял екран</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Дясно</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Следващо изображение</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Space</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">Край</translation>
+        <translation>Край</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Последно изображение</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ляво</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Предишно изображение</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Домашна папка</translation>
+        <translation>Домашна папка</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Първо изображение</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Стартиране на цял екран (може да бъде полезно при мениджъри на прозорци с плочки)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Опростена и бърза програма за преглед на изображения</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Авторски права (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Проекта LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Разработка: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Автор: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="452"/>
@@ -247,27 +247,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Отдолу</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="205"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Отгоре</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ляво</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="332"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Внимание: Повтарящата се комбинация беше изтрита!&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Внимание: Беше засечена повтаряща се комбинация!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="349"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Внимание: Повтарящата се комбинация не беше приета!&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Внимание: Повтарящата се комбинация не беше приета.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -360,7 +360,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Скриване &amp;Клавишни комбинации</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -688,22 +688,22 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Лента с меню</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Главна лента с меню</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Главна лента с меню</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
@@ -735,12 +735,12 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Преименуване</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -793,7 +793,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ограничение за файловият размер на миниатюрите:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -838,17 +838,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер на миниатюрата:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Използване на системното кошче (и без предупреждаване)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Прозорец</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -858,22 +858,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Показване на док за Exif данни по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Покажи ментата с менюта по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Покажи главната лента с инструменти по подразбиране</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Изображение</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="208"/>
