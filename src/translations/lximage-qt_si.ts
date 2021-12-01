@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>සැඟවුනු කෙටිමං</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>කෙටිමග</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>ක්‍රියාමාර්ගය</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -36,13 +36,13 @@
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>දකුණ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>ඊළඟ රූපය</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
@@ -57,18 +57,18 @@
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>අන්තිම රූපය</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>වම</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>පෙර රූපය</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
