@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation>Wbudowane skróty klawiszowe</translation>
+        <translation>Ukryte skróty</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation>Klawisz</translation>
+        <translation>Skrót</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation>Działanie</translation>
+        <translation>Akcja</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -163,12 +163,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projekt LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Rozwój: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
@@ -241,8 +241,8 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>Przypisanie wybranego klawisza
-można usunąć wciskając np. Ctrl.</translation>
+        <translation>Użyj klawisza modyfikującego, aby wyczyścić skrót klawiaturowy
+w trybie edycji.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="204"/>
@@ -432,7 +432,7 @@ można usunąć wciskając np. Ctrl.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>Wbudowane &amp;skróty klawiszowe</translation>
+        <translation>Ukryte &amp;skróty</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
