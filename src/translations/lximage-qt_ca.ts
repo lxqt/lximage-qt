@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="267"/>
         <source>About</source>
         <translation>Quant a</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="273"/>
+        <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
         <translation>Un visualitzador d&apos;imatges senzill i ràpid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
         <translation>Copyright (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
         <translation>2013-2021</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
         <translation>LXQt Project</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
         <translation>Desenvolupament: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
         <translation>Autor: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>Open File</source>
         <translation>Obre un fitxer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
-        <location filename="../mainwindow.cpp" line="488"/>
+        <location filename="../mainwindow.cpp" line="449"/>
+        <location filename="../mainwindow.cpp" line="484"/>
         <source>Image files (%1)</source>
         <translation>Fitxers d&apos;imatges (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Open directory</source>
         <translation>Obre un directori</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="487"/>
+        <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
         <translation>Desa el fitxer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="776"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (s&apos;està carregant...) - Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="778"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (ha fallat la càrrega) - Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="788"/>
+        <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="834"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualitzador d&apos;imatges</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1233"/>
+        <location filename="../mainwindow.cpp" line="1230"/>
         <source>Thumbnails</source>
         <translation>Miniatures</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1328"/>
+        <location filename="../mainwindow.cpp" line="1325"/>
         <source>EXIF Data</source>
         <translation>Dades EXIF</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 una drecera en el mode d&apos;edició.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="204"/>
+        <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
         <translation>A baix</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="205"/>
+        <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
         <translation>A dalt</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
         <translation>Esquerra</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="332"/>
+        <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Avís: S&apos;ha detectat una drecera ambigua!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="349"/>
+        <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;No s&apos;accepta la drecera ambigua.&lt;/b&gt;</translation>
     </message>
@@ -876,22 +876,27 @@ una drecera en el mode d&apos;edició.</translation>
         <translation>Imatge</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="208"/>
+        <location filename="../preferencesdialog.ui" line="207"/>
+        <source>Smooth images on zooming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
         <translation>Dreceres</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="227"/>
+        <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
         <translation>Acció</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="232"/>
+        <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
         <translation>Drecera</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="240"/>
+        <location filename="../preferencesdialog.ui" line="247"/>
         <source>Default</source>
         <translation>Per defecte</translation>
     </message>
@@ -904,7 +909,7 @@ una drecera en el mode d&apos;edició.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="922"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>

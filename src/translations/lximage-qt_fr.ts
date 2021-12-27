@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="267"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="273"/>
+        <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
         <translation>Une visionneuse d&apos;images simple et rapide</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
         <translation>Copyright (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
         <translation>2013-2021</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
         <translation>LXQt Project</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation>Développement : </translation>
+        <translation>Développement&#xa0;: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation>Auteur : </translation>
+        <translation>Auteur&#xa0;: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
-        <location filename="../mainwindow.cpp" line="488"/>
+        <location filename="../mainwindow.cpp" line="449"/>
+        <location filename="../mainwindow.cpp" line="484"/>
         <source>Image files (%1)</source>
         <translation>Fichier image (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Open directory</source>
         <translation>Ouvrir le répertoire</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="487"/>
+        <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
         <translation>Enregistrer un fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="776"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Chargement...) - Visionneuse d&apos;images</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="778"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Échec de chargement) - Visionneuse d&apos;images</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="788"/>
+        <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visionneuse d&apos;images</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="834"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visionneuse d&apos;images</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1233"/>
+        <location filename="../mainwindow.cpp" line="1230"/>
         <source>Thumbnails</source>
         <translation>Miniatures</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1328"/>
+        <location filename="../mainwindow.cpp" line="1325"/>
         <source>EXIF Data</source>
         <translation>Données EXIF</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 en mode édition.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="204"/>
+        <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
         <translation>Bas</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="205"/>
+        <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
         <translation>Haut</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="332"/>
+        <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Avertissement : raccourci ambigu détecté!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="349"/>
+        <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Raccourcis ambigus non acceptés.&lt;/b&gt;</translation>
     </message>
@@ -798,12 +798,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature :</translation>
+        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature :</translation>
+        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -881,22 +881,27 @@ en mode édition.</translation>
         <translation>Afficher les miniatures du dock par défaut</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="208"/>
+        <location filename="../preferencesdialog.ui" line="207"/>
+        <source>Smooth images on zooming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
         <translation>Raccourcis</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="227"/>
+        <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
         <translation>Action</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="232"/>
+        <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
         <translation>Raccourci</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="240"/>
+        <location filename="../preferencesdialog.ui" line="247"/>
         <source>Default</source>
         <translation>Par défaut</translation>
     </message>
@@ -904,7 +909,7 @@ en mode édition.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="922"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>

@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="271"/>
+        <location filename="../mainwindow.cpp" line="267"/>
         <source>About</source>
         <translation>על אודות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="273"/>
+        <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
         <translation>מציג תמונות פשוט ומהיר</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
         <translation>כל הזכויות שמורות (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="275"/>
+        <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
         <translation>2013‏-2021</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
         <translation>מיזם LXQt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
         <translation>פיתוח: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
         <translation>יוצר: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="448"/>
         <source>Open File</source>
         <translation>פתיחת קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
-        <location filename="../mainwindow.cpp" line="488"/>
+        <location filename="../mainwindow.cpp" line="449"/>
+        <location filename="../mainwindow.cpp" line="484"/>
         <source>Image files (%1)</source>
         <translation>קובצי תמונה (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="462"/>
         <source>Open directory</source>
         <translation>פתיחת תיקייה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="487"/>
+        <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
         <translation>שמירת קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="776"/>
+        <location filename="../mainwindow.cpp" line="772"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (בטעינה…) - מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="782"/>
+        <location filename="../mainwindow.cpp" line="778"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (הטעינה נכשלה) - מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="788"/>
+        <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="834"/>
+        <location filename="../mainwindow.cpp" line="830"/>
         <source>[*]Image Viewer</source>
         <translation>[*]מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1233"/>
+        <location filename="../mainwindow.cpp" line="1230"/>
         <source>Thumbnails</source>
         <translation>תמונות ממוזערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1328"/>
+        <location filename="../mainwindow.cpp" line="1325"/>
         <source>EXIF Data</source>
         <translation>נתוני EXIF</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 מקש קיצור במצב עריכה.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="204"/>
+        <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
         <translation>למטה</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="205"/>
+        <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
         <translation>למעלה</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
         <translation>שמאל</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="332"/>
+        <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;אזהרה: התגלה קיצור מקשים דו־משמעי!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="349"/>
+        <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;קיצור מקשים דו־משמעי לא התקבל.&lt;/b&gt;</translation>
     </message>
@@ -876,22 +876,27 @@ in the editing mode.</source>
         <translation>תמונה</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="208"/>
+        <location filename="../preferencesdialog.ui" line="207"/>
+        <source>Smooth images on zooming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
         <translation>קיצורי דרך</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="227"/>
+        <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
         <translation>פעולה</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="232"/>
+        <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
         <translation>קיצור דרך</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="240"/>
+        <location filename="../preferencesdialog.ui" line="247"/>
         <source>Default</source>
         <translation>ברירת המחדל</translation>
     </message>
@@ -904,7 +909,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="926"/>
+        <location filename="../mainwindow.cpp" line="922"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
