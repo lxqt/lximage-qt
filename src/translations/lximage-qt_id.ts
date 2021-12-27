@@ -601,7 +601,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="517"/>
         <source>Show Thumbnails</source>
-        <translation>Tampilkan Gambar Kecil</translation>
+        <translation>Tampilkan Thumbnail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
