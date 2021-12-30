@@ -878,7 +878,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Suumimisel näita pilte sujuvalt</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
