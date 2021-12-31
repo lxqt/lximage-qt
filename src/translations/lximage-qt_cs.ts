@@ -878,7 +878,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyhlazovat obrázky při změně přiblížení</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>

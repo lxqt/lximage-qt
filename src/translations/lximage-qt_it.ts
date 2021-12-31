@@ -879,7 +879,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Liscia immagini se ingranditi</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
