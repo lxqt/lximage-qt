@@ -632,7 +632,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="557"/>
         <source>Show EXIF Data</source>
-        <translation>Vis EXIF-Data</translation>
+        <translation>Vis EXIF-data</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="569"/>
@@ -878,7 +878,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Myk opp bilder ved forstørrelse</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
