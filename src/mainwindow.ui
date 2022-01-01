@@ -554,7 +554,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show EXIF Data</string>
+    <string>Show Exif Data</string>
    </property>
   </action>
   <action name="actionDrawNone">
