@@ -878,7 +878,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Εξομάλυνση εικόνων κατά την εστίαση</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>

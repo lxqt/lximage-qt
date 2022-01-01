@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dessa hårdkodade genvägarna kommer att skrivas över om de också tilldelas till andra handlingar i Inställningar → Genvägar.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta i fullskärm (kan vara användbart med en kaklande fönsterhanterare)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-projektet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
@@ -622,7 +622,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="654"/>
@@ -823,12 +823,12 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa verktygsfältet för annoteringar som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Anpassa bilder vid navigering</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -838,7 +838,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioner för miniatyrbilder:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -853,22 +853,22 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa miniatyrbildsdockan som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa dockan för Exif-data som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa menyfältet som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa huvudverktygsfältet som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
