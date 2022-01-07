@@ -30,8 +30,8 @@
 
 using namespace LxImage;
 
-static const char* serviceName = "org.lxde.LxImage";
-static const char* ifaceName = "org.lxde.LxImage.Application";
+static const char* serviceName = "org.lxqt.LxImage";
+static const char* ifaceName = "org.lxqt.LxImage.Application";
 
 Application::Application(int& argc, char** argv):
   QApplication(argc, argv),
