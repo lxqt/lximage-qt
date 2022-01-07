@@ -41,7 +41,7 @@ set(lximage-qt_SRCS
 )
 
 qt5_add_dbus_adaptor(lximage-qt_DBUS_SRCS
-    org.lxde.LxImage.Application.xml
+    org.lxqt.LxImage.Application.xml
     application.h
     LxImage::Application
     applicationadaptor
