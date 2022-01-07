@@ -83,6 +83,8 @@
     <addaction name="actionScreenshot"/>
     <addaction name="actionSave"/>
     <addaction name="actionSaveAs"/>
+    <addaction name="actionUpload"/>
+    <addaction name="separator"/>
     <addaction name="actionDelete"/>
     <addaction name="separator"/>
     <addaction name="actionFileProperties"/>
@@ -141,8 +143,6 @@
     <addaction name="separator"/>
     <addaction name="actionCopyPath"/>
     <addaction name="actionRenameFile"/>
-    <addaction name="separator"/>
-    <addaction name="actionUpload"/>
     <addaction name="separator"/>
     <addaction name="actionPreferences"/>
    </widget>
@@ -547,6 +547,9 @@
    </property>
    <property name="toolTip">
     <string>Upload the image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
    </property>
   </action>
   <action name="actionShowExifData">
