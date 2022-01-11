@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=lximage-qt --screenshot
-Icon=camera-photo
-Categories=Graphics;Core;Qt;
-StartupNotify=true
