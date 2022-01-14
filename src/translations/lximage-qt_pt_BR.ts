@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Fechar janela ou sair do modo de tela inteira</translation>
+        <translation>Fechar janela ou sair do modo tela cheia</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -879,7 +879,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Suavizar imagens no zoom</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>

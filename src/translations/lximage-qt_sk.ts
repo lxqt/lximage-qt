@@ -878,7 +878,7 @@ v režime úpravy.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť plynulé priblíženie</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
