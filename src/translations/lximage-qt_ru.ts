@@ -878,7 +878,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Сглаживать изображения при масштабировании</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
