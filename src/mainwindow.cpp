@@ -1177,11 +1177,8 @@ void MainWindow::on_actionPrint_triggered() {
 }
 
 // TODO: This can later be used for doing slide show
-void MainWindow::on_actionFullScreen_triggered(bool checked) {
-  if(checked)
-    showFullScreen();
-  else
-    showNormal();
+void MainWindow::on_actionFullScreen_triggered(bool /*checked*/) {
+  setWindowState(windowState() ^ Qt::WindowFullScreen);
 }
 
 void MainWindow::on_actionSlideShow_triggered(bool checked) {
