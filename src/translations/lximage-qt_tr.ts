@@ -878,7 +878,7 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Yakınlaştırma sırasında pürüzsüz görüntü</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
