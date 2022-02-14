@@ -6,22 +6,22 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrite bližnjice</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Te vdelane bližnjice bodo preglašene, če bodo dodeljene drugim dejanjem v Nastavitvah → Bližnjice.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Bližnjica</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Dejanje</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -31,18 +31,18 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapri okno ali zapusti celozaslonski način</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Naslednja slika</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
@@ -57,18 +57,18 @@
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadnja slika</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Prejšnja slika</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Prva slika</translation>
     </message>
 </context>
 <context>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Preprost in hiter pregledovalnik slik</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
@@ -163,17 +163,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Projekt LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Razvoj: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Avtor: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
@@ -246,27 +246,27 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dno</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrh</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Pozor: Zaznana dvoumna bližnjica!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Dvoumna bližnjica zavrnjena.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -274,7 +274,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Slike ni možno shraniti v tem formatu!</translation>
     </message>
 </context>
 <context>
@@ -282,7 +282,7 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
@@ -887,7 +887,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Dejanje</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="239"/>
