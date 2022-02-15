@@ -287,7 +287,7 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pot:</translation>
     </message>
 </context>
 <context>
@@ -354,12 +354,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri &amp;z...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Skrite bližnjične tipke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -374,7 +374,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Reload File</source>
-        <translation>P&amp;onovno naloži</translation>
+        <translation>&amp;Ponovno naloži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
