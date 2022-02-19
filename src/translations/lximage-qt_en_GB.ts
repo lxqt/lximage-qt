@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Hidden Shortcuts</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Shortcut</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Action</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Close window or exit fullscreen mode</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Next image</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Space</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Last image</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Previous image</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Backspace</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>First image</translation>
     </message>
 </context>
 <context>
@@ -91,22 +91,22 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Start in fullscreen (can be useful with tiling window managers)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Take a screenshot (deprecated, please use screengrab instead)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>A simple and fast image viewer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Project</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Development: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Author: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
@@ -241,32 +241,33 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use a modifier key to clear a shortcut
+in the editing mode.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Top</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -274,7 +275,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot save with this image format!</translation>
     </message>
 </context>
 <context>
@@ -282,12 +283,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Size:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Path:</translation>
     </message>
 </context>
 <context>
@@ -349,22 +350,22 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="192"/>
         <location filename="../mainwindow.ui" line="668"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Annotations Toolbar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Open &amp;With...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Hidden &amp;Shortcuts</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Open…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -702,7 +703,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Main Toolbar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="665"/>
