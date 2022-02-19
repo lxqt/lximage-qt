@@ -50,9 +50,8 @@ pkg_check_modules(XFIXES REQUIRED xfixes)
 # add src subdirectory
 add_subdirectory(src)
 
-# install an icon for the application
-install(
-    FILES data/lximage-qt.png
-    DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps"
-)
-
+# install icon and metainfo for the application
+install(FILES data/lximage-qt.png
+    DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps")
+install(FILES data/lximage-qt.metainfo.xml
+    DESTINATION "${CMAKE_INSTALL_DATADIR}/metainfo")
