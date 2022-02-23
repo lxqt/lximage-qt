@@ -17,7 +17,7 @@ LXImage-Qt is the Qt port of LXImage, a simple and fast image viewer.
 * Custom shortcuts
 * Image annotations (arrow, rectangle, circle, numbers)
 * Recent files
-* Upload images (Imgur, ImgBB)
+* Upload images (Imgur)
 * Take screenshots
 
 More features can be found when it is used. LXImage-Qt is maintained by the LXQt project
@@ -27,11 +27,9 @@ but can be used independently from this desktop environment.
 
 ### Compiling source code
 
-Runtime dependencies are qtx11extras and [libfm-qt](https://github.com/lxqt/libfm-qt)
-(LXImage-Qt used to depend on [PCManFM-Qt](https://github.com/lxqt/pcmanfm-qt)
-but the relevant code belongs to what was outsourced in libfm-qt).
-Additional build dependencies are CMake and optionally Git to pull latest VCS
-checkouts.
+Runtime dependencies are qtx11extras and [libfm-qt](https://github.com/lxqt/libfm-qt).
+Additional build dependencies are CMake, [lxqt-build-tools](https://github.com/lxqt/lxqt-build-tools)
+and optionally Git to pull latest VCS checkouts.
 
 Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX`
 has to be set to `/usr` on most operating systems.

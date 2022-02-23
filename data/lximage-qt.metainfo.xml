@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.lxqt.lximage-qt</id>
+  <url type="homepage">https://github.com/lxqt/lximage-qt</url>
+  <url type="bugtracker">https://github.com/lxqt/lximage-qt/issues</url>
+  <content_rating type="oars-1.1"/>
+
+  <name>LXImage-qt</name>
+  <summary>Fast image viewer</summary>
+
+  <metadata_license>CC-BY-4.0</metadata_license>
+  <project_license>GPL-2.0-only</project_license>
+
+  <description>
+    <p>
+    Fast and simple image viewer written in Qt. Among
+    its features are:
+    </p>
+    <ul>
+      <li>Zoom, rotate, flip and resize images</li>
+      <li>Slideshow</li>
+      <li>Thumbnail bar (left, top or bottom); different thumbnail sizes</li>
+      <li>Exif data bar</li>
+      <li>Inline image renaming</li>
+      <li>Custom shortcuts</li>
+      <li>Image annotations (arrow, rectangle, circle, numbers)</li>
+      <li>Recent files</li>
+      <li>Upload images (Imgur)</li>
+      <li>Take screenshots</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">lximage-qt.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://lxqt-project.org/images/screenshots/lximage-qt.png</image>
+    </screenshot>
+  </screenshots>
+</component>
