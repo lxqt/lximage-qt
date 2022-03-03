@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -739,7 +739,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -910,7 +910,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>Error</source>
-        <translation type="unfinished">Napaka pri nalaganju</translation>
+        <translation>Napaka</translation>
     </message>
 </context>
 <context>
@@ -968,7 +968,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished">Zajemi posnetek zaslona</translation>
+        <translation>Zajemi posnetek zaslona</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
