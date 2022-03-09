@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation>&apos;onbekende fout&apos;-antwoord</translation>
+        <translation>Antwoord: onbekende foutmelding</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation>antwoord met onbekende fout</translation>
+        <translation>Antwoord: onbekende foutmelding</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation>&apos;onbekende fout&apos;-antwoord</translation>
+        <translation>Antwoord: onbekende foutmelding</translation>
     </message>
 </context>
 <context>
@@ -275,7 +275,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Het bestand kan niet worden opgeslagen naar dit bestandsformaat!</translation>
+        <translation>Het bestand kan niet worden opgeslagen in dit bestandsformaat!</translation>
     </message>
 </context>
 <context>
@@ -810,7 +810,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation>Maximumaantal onlangs geopende bestanden:</translation>
+        <translation>Maximaal aantal onlangs geopende bestanden:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
