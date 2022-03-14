@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.1" language="de_CH">
 <context>
     <name>HiddenShortcutsDialog</name>
     <message>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Fenster schließen oder Vollbildmodus beenden</translation>
+        <translation>Fenster schliessen oder Vollbildmodus beenden</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -283,7 +283,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation>Größe:</translation>
+        <translation>Grösse:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
@@ -321,7 +321,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation>Schließen</translation>
+        <translation>Schliessen</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
@@ -337,10 +337,9 @@ im Bearbeitungsmodus zu löschen.</translation>
         <translation>Bildbetrachter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="192"/>
-        <location filename="../mainwindow.ui" line="668"/>
-        <source>Annotations Toolbar</source>
-        <translation>Anmerkungssymbolleiste</translation>
+        <location filename="../mainwindow.ui" line="72"/>
+        <source>&amp;Recently Opened Files</source>
+        <translation>&amp;Zuletzt geöffnete Dateien</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
@@ -348,10 +347,40 @@ im Bearbeitungsmodus zu löschen.</translation>
         <translation>&amp;Über</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="192"/>
+        <location filename="../mainwindow.ui" line="668"/>
+        <source>Annotations Toolbar</source>
+        <translation>Anmerkungssymbolleiste</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="67"/>
+        <source>Open &amp;With...</source>
+        <translation>Öffnen &amp;mit...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="217"/>
+        <source>Hidden &amp;Shortcuts</source>
+        <translation>Versteckte &amp;Tastenkürzel</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="226"/>
+        <source>&amp;Open…</source>
+        <translation>&amp;Öffnen…</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Ctrl+O</source>
-        <translatorcomment>Shortcuts are translated automatically. No need to manually translate it to &quot;Strg+O&quot;.</translatorcomment>
         <translation>Strg+O</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="238"/>
+        <source>&amp;Reload File</source>
+        <translation>Datei &amp;neu laden</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="241"/>
+        <source>Ctrl+R</source>
+        <translation>Strg+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
@@ -376,7 +405,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Close</source>
-        <translation>&amp;Schließen</translation>
+        <translation>&amp;Schliessen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -386,7 +415,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>Zoom &amp;In</source>
-        <translation>Ver&amp;größern</translation>
+        <translation>Ver&amp;grössern</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="289"/>
+        <source>Ctrl+=</source>
+        <translation>Strg+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
@@ -410,50 +444,15 @@ im Bearbeitungsmodus zu löschen.</translation>
         <translation>Nächste Datei</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="334"/>
-        <location filename="../mainwindow.ui" line="337"/>
-        <source>Previous File</source>
-        <translation>Vorherige Datei</translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>PgDown</source>
         <translation>Bild ab</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="67"/>
-        <source>Open &amp;With...</source>
-        <translation>Öffnen &amp;mit...</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="72"/>
-        <source>&amp;Recently Opened Files</source>
-        <translation>&amp;Zuletzt geöffnete Dateien</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="217"/>
-        <source>Hidden &amp;Shortcuts</source>
-        <translation>Versteckte &amp;Tastenkürzel</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="226"/>
-        <source>&amp;Open…</source>
-        <translation>&amp;Öffnen…</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="238"/>
-        <source>&amp;Reload File</source>
-        <translation>Datei &amp;neu laden</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="241"/>
-        <source>Ctrl+R</source>
-        <translation>Strg+R</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="289"/>
-        <source>Ctrl+=</source>
-        <translation>Strg+=</translation>
+        <location filename="../mainwindow.ui" line="334"/>
+        <location filename="../mainwindow.ui" line="337"/>
+        <source>Previous File</source>
+        <translation>Vorherige Datei</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
@@ -463,7 +462,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>Original Size</source>
-        <translation>Originalgröße</translation>
+        <translation>Originalgrösse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
@@ -608,7 +607,6 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>File Properties</source>
-        <translatorcomment>Translation of &apos;file&apos; skipped, it is redundant (this is the file menu).</translatorcomment>
         <translation>Eigenschaften</translation>
     </message>
     <message>
@@ -747,7 +745,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
         <source>Resize</source>
-        <translation>Größe ändern</translation>
+        <translation>Grösse ändern</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -795,7 +793,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Begrenzung der Dateigröße für Vorschaubilder:</translation>
+        <translation>Begrenzung der Dateigrösse für Vorschaubilder:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -820,12 +818,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation>Standardmäßig Bildkontur anzeigen</translation>
+        <translation>Standardmässig Bildkontur anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Standardmäßig Anmerkungssymbolleiste anzeigen</translation>
+        <translation>Standardmässig Anmerkungssymbolleiste anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -860,17 +858,17 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>Exif-Datendock standardmäßig anzeigen</translation>
+        <translation>Exif-Datendock standardmässig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation>Menüleiste standardmäßig anzeigen</translation>
+        <translation>Menüleiste standardmässig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>Hauptwerkzeugleiste standardmäßig anzeigen</translation>
+        <translation>Hauptwerkzeugleiste standardmässig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
@@ -921,7 +919,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation>Bildgröße ändern</translation>
+        <translation>Bildgrösse ändern</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
@@ -936,12 +934,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation>Aktuelle Größe:</translation>
+        <translation>Aktuelle Grösse:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation>Neue Größe:</translation>
+        <translation>Neue Grösse:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
@@ -996,7 +994,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Einschließlich Mauszeiger</translation>
+        <translation>Einschliesslich Mauszeiger</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
@@ -1011,7 +1009,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation>Einschließlich Fenstertitel und Rahmen</translation>
+        <translation>Einschliesslich Fenstertitel und Rahmen</translation>
     </message>
 </context>
 <context>
