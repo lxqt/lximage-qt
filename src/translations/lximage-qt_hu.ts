@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejtett gyorsbillentyűk</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -360,7 +360,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejtett &amp;gyorsbillentyűk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -740,7 +740,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -863,22 +863,22 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Menüsor megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Fő eszköztár megjelenítése alapértelmezetten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Simított képek nagyításkor</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
