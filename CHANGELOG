@@ -1,3 +1,9 @@
+lximage-qt-1.1.0 / 2022-04-15
+==============================
+ * Restore maximized state (if any) on un-fullscreening.
+ * Removed the desktop file for taking screenshots.
+ * Fixed capturing an area of a screen that isn't positioned at the top left.
+
 lximage-qt-1.0.0 / 2021-11-04
 ==============================
  * Bumped minimum required Qt version to 5.15.
