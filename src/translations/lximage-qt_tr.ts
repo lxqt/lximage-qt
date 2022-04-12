@@ -217,12 +217,12 @@
         <translation>[*]Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1230"/>
+        <location filename="../mainwindow.cpp" line="1227"/>
         <source>Thumbnails</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1325"/>
+        <location filename="../mainwindow.cpp" line="1322"/>
         <source>EXIF Data</source>
         <translation>EXIF Verileri</translation>
     </message>
@@ -348,7 +348,7 @@ için bir değiştirici tuş kullanın.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="192"/>
-        <location filename="../mainwindow.ui" line="668"/>
+        <location filename="../mainwindow.ui" line="671"/>
         <source>Annotations Toolbar</source>
         <translation>Dipnot Araç Çubuğu</translation>
     </message>
@@ -630,120 +630,125 @@ için bir değiştirici tuş kullanın.</translation>
         <translation>Resim yükle</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="557"/>
+        <location filename="../mainwindow.ui" line="552"/>
+        <source>Ctrl+U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="560"/>
         <source>Show EXIF Data</source>
         <translation>EXIF Verisini Göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="569"/>
+        <location filename="../mainwindow.ui" line="572"/>
         <source>No Tool</source>
         <translation>Araç Yok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="572"/>
+        <location filename="../mainwindow.ui" line="575"/>
         <source>Deselect all drawing tools</source>
         <translation>Tüm çizim araçlarının seçimini kaldır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="584"/>
+        <location filename="../mainwindow.ui" line="587"/>
         <source>Draw Arrow</source>
         <translation>Ok Çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="590"/>
         <source>Draw an arrow</source>
         <translation>Bir ok çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="602"/>
         <source>Draw Rectangle</source>
         <translation>Dikdörtgen Çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="605"/>
         <source>Draw a hollow rectangle</source>
         <translation>Boş bir dikdörtgen çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="617"/>
         <source>Draw Circle</source>
         <translation>Daire Çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
+        <location filename="../mainwindow.ui" line="620"/>
         <source>Draw a hollow circle</source>
         <translation>Boş bir daire çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="629"/>
+        <location filename="../mainwindow.ui" line="632"/>
         <source>Draw Number</source>
         <translation>Sayı Çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="635"/>
         <source>Draw incrementing numbers</source>
         <translation>Artan sayılar çiz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="640"/>
         <location filename="../mainwindow.ui" line="643"/>
+        <location filename="../mainwindow.ui" line="646"/>
         <source>Menubar</source>
         <translation>Menü çubuğu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="646"/>
+        <location filename="../mainwindow.ui" line="649"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="654"/>
+        <location filename="../mainwindow.ui" line="657"/>
         <source>&amp;Main Toolbar</source>
         <translation>&amp;Ana Araç Çubuğu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="657"/>
+        <location filename="../mainwindow.ui" line="660"/>
         <source>Main Toolbar</source>
         <translation>Ana Araç Çubuğu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="665"/>
+        <location filename="../mainwindow.ui" line="668"/>
         <source>&amp;Annotations Toolbar</source>
         <translation>&amp;Dipnot Araç Çubuğu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="676"/>
         <location filename="../mainwindow.ui" line="679"/>
+        <location filename="../mainwindow.ui" line="682"/>
         <source>Show Outline</source>
         <translation>Dış Sınırı Göster</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="682"/>
+        <location filename="../mainwindow.ui" line="685"/>
         <source>O</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="690"/>
+        <location filename="../mainwindow.ui" line="693"/>
         <source>Copy Pa&amp;th</source>
         <translation>&amp;Yolu Kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="693"/>
+        <location filename="../mainwindow.ui" line="696"/>
         <source>Copy path</source>
         <translation>Yolu kopyala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="701"/>
         <location filename="../mainwindow.ui" line="704"/>
+        <location filename="../mainwindow.ui" line="707"/>
         <source>Rename</source>
         <translation>Yeniden Adlandır</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="710"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
+        <location filename="../mainwindow.ui" line="719"/>
         <source>Resize</source>
         <translation>Yeniden Boyutlandır</translation>
     </message>
@@ -753,22 +758,22 @@ için bir değiştirici tuş kullanın.</translation>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="95"/>
+        <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="102"/>
+        <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
         <translation>Git</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="111"/>
+        <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
         <translation>&amp;Görünüm</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="131"/>
+        <location filename="../mainwindow.ui" line="133"/>
         <source>&amp;Edit</source>
         <translation>&amp;Düzenle</translation>
     </message>
