@@ -168,12 +168,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation>Développement&#xa0;: </translation>
+        <translation>Développement : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation>Auteur&#xa0;: </translation>
+        <translation>Auteur : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
@@ -662,7 +662,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -803,12 +803,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
