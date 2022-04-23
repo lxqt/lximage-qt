@@ -634,7 +634,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -721,7 +721,7 @@ im Bearbeitungsmodus zu löschen.</translation>
         <location filename="../mainwindow.ui" line="679"/>
         <location filename="../mainwindow.ui" line="682"/>
         <source>Show Outline</source>
-        <translation>Zeige Umriss</translation>
+        <translation>Umriss anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
@@ -731,12 +731,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Kopiere Datei&amp;pfad</translation>
+        <translation>Pfa&amp;d kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>Copy path</source>
-        <translation>Kopiere Dateipfad</translation>
+        <translation>Pfad kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="704"/>
@@ -815,7 +815,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation>Maximale Anzahl zuletzt geöffneter Dateien:</translation>
+        <translation>Maximale Anzahl der letzten Dateien:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
