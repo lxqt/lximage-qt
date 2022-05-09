@@ -632,7 +632,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -798,7 +798,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thumbnailer fil størrelses grænse:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -843,7 +843,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thumbnail billed dimensioner:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
