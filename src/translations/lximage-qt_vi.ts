@@ -301,12 +301,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
@@ -370,7 +370,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
@@ -380,7 +380,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
@@ -390,7 +390,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
@@ -400,7 +400,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
@@ -410,7 +410,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
@@ -420,7 +420,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
@@ -430,7 +430,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -467,7 +467,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -482,7 +482,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
@@ -492,7 +492,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="396"/>
@@ -507,7 +507,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
@@ -537,7 +537,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
@@ -547,7 +547,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
@@ -562,7 +562,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
@@ -572,7 +572,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
@@ -602,7 +602,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
@@ -617,7 +617,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
@@ -632,7 +632,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -698,7 +698,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="649"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
@@ -724,7 +724,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
@@ -745,7 +745,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="719"/>
@@ -838,7 +838,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -950,13 +950,13 @@ trong chế độ chỉnh sửa.</translation>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
