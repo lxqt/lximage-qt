@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>छिपे हुए शॉर्टकट</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>ये हार्ड-कोडेड शॉर्टकट ओवरराइड हो जाएंगे यदि उन्हें वरीयताएँ → शॉर्टकट में अन्य क्रियाओं के लिए भी असाइन किया गया है.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>शॉर्टकट</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>ऐक्शन</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>विंडो बंद करें या फ़ुलस्क्रीन मोड से बाहर निकलें</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>दाएं</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>अगली छवि</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>स्पेस</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>पिछली छवि</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>बाएं</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>पिछली छवि</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>बैकस्पेस</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>मुख्य पृष्ठ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>पहली छवि</translation>
     </message>
 </context>
 <context>
@@ -91,27 +91,27 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ुलस्क्रीन में प्रारंभ करें (टाइलिंग विंडो प्रबंधक के साथ उपयोगी हो सकता है)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>एक स्क्रीनशॉट लें (बहिष्कृत, कृपया इसके बजाय स्क्रीनग्रैब का उपयोग करें)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DIR</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>एक स्क्रीनशॉट लें और इसे GUI दिखाए बिना डायरेक्टरी में सहेजें (बहिष्कृत, कृपया इसके बजाय स्क्रीनग्रैब का उपयोग करें)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[फ़ाइल1, फ़ाइल2,...]</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>अज्ञात त्रुटि प्रतिक्रिया</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>अज्ञात त्रुटि प्रतिक्रिया</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>अज्ञात त्रुटि प्रतिक्रिया</translation>
     </message>
 </context>
 <context>
@@ -143,58 +143,58 @@
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>परिचय</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>एक सरल और तेज़ छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>कॉपीराइट (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt प्रोजेक्ट</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>विकास : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>लेखक : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ाइल खोलें</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="449"/>
         <location filename="../mainwindow.cpp" line="484"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>छवि फ़ाइलें (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="462"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>डायरेक्टरी खोलें</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ाइल सहेजें</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="772"/>
