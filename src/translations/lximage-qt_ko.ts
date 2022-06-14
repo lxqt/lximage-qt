@@ -106,7 +106,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>스크린샷을 찍어 GUI를 표시하지 않고 디렉토리에 저장합니다(더 이상 사용되지 않음, 대신 screengrab을 사용하십시오)</translation>
+        <translation>스크린샷을 찍어 GUI를 표시하지 않고 디렉터리에 저장합니다(더 이상 사용되지 않음, 대신 screengrab을 사용하십시오)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
@@ -196,7 +196,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
-        <translation>파일 저장</translation>
+        <translation>파일 저장하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="772"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation>지우기(&amp;C)</translation>
+        <translation>비우기(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -243,8 +243,8 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>수정자 키를 사용하여 편집 모드에서
-단축키를 지웁니다.</translation>
+        <translation>편집 모드에서 단축키를 지우는
+ 수정자 키를 사용합니다.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
@@ -362,7 +362,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>단축키 숨김(&amp;S)</translation>
+        <translation>숨겨진 단축키(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -387,7 +387,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Save</source>
-        <translation>저장(&amp;S)</translation>
+        <translation>저장하기(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
@@ -397,7 +397,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Save &amp;As</source>
-        <translation>다른 이름으로 저장(&amp;A)</translation>
+        <translation>다른 이름으로 저장하기(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -437,7 +437,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>클립 보드에 복사(&amp;C)</translation>
+        <translation>클립 보드에 복사하기(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="319"/>
@@ -599,7 +599,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="517"/>
         <source>Show Thumbnails</source>
-        <translation>마중그림 표시</translation>
+        <translation>마중그림 표시하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
@@ -639,7 +639,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>Show EXIF Data</source>
-        <translation>EXIF 데이터 표시</translation>
+        <translation>EXIF 데이터 표시하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="572"/>
@@ -721,7 +721,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="679"/>
         <location filename="../mainwindow.ui" line="682"/>
         <source>Show Outline</source>
-        <translation>윤곽선 표시</translation>
+        <translation>윤곽선 표시하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
@@ -731,12 +731,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>Copy Pa&amp;th</source>
-        <translation>경로 복사(&amp;T)</translation>
+        <translation>경로 복사하기(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>Copy path</source>
-        <translation>경로 복사</translation>
+        <translation>경로 복사하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="704"/>
@@ -777,7 +777,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
         <source>&amp;Edit</source>
-        <translation>편집(&amp;E)</translation>
+        <translation>편집하기(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
@@ -825,12 +825,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation>기본적으로 이미지 윤곽선 표시</translation>
+        <translation>기본으로 이미지 윤곽선 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>기본적으로 주석 도구 모음 표시</translation>
+        <translation>기본으로 주석 도구 모음 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -860,22 +860,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>기본적으로 마중그림 배경 도구모음 표시</translation>
+        <translation>기본으로 마중그림 배경 도구모음 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>기본적으로 Exif 데이터 배경 도구모음 표시</translation>
+        <translation>기본적으로 Exif 데이터 배경 도구모음 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation>기본적으로 메뉴 모음 표시</translation>
+        <translation>기본적으로 메뉴 모음 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>기본적으로 기본 도구 모음 표시</translation>
+        <translation>기본적으로 기본 도구 모음 표시하기</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
@@ -1029,7 +1029,7 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation>복사</translation>
+        <translation>복사하기</translation>
     </message>
 </context>
 </TS>
