@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2&#x202f;×&#x202f;%3). Visor de imágenes</translation>
+        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
@@ -592,7 +592,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>Del</source>
-        <translation>Supr</translation>
+        <translation>Suprimir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="517"/>
