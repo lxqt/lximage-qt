@@ -630,7 +630,7 @@ void ImageView::paintEvent(QPaintEvent* event) {
       if(cachedRect_.contains(repaintImageRect)) {
         QPainter painter(viewport());
         painter.fillRect(event->rect(), backgroundBrush());
-        painter.drawPixmap(repaintImageRect, cachedPixmap_);
+        painter.drawPixmap(cachedRect_, cachedPixmap_);
         // outline
         if(showOutline_) {
             QColor col = QColor(Qt::black);
