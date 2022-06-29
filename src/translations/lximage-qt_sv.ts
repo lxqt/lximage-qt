@@ -883,7 +883,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Mjuka bilder vid förstoring</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
