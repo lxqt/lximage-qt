@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>مجلد</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -148,32 +148,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>عارض صور بسيط وسريع</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>حقوق النشر (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>مشروع LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>تطوير: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>مؤلف: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
@@ -241,32 +241,32 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>استخدم مفتاح التعديل لمسح اختصار في وضع التحرير.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>الأسفل</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>الأعلى</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>يسار</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;تحذير: تم اكتشاف اختصار غامض!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;لم يتم قبول الاختصار الغامض.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -274,7 +274,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>لا يمكن الحفظ بتنسيق الصورة هذا!</translation>
     </message>
 </context>
 <context>
