@@ -16,7 +16,7 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation>الاختصار</translation>
+        <translation>إختصار</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation>البداية</translation>
+        <translation>الرئيسية</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -282,12 +282,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>الحجم:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>المسار:</translation>
     </message>
 </context>
 <context>
@@ -295,7 +295,7 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation>Imgur</translation>
+        <translation>إمكور</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
@@ -349,17 +349,17 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="192"/>
         <location filename="../mainwindow.ui" line="671"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط أدوات التعليقات التوضيحية</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;إفتح بواسطة...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>الاختصارات المخفية</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -394,7 +394,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Save &amp;As</source>
-        <translation>احفظ &amp;كَ‍</translation>
+        <translation>&amp;احفظ كَ‍</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -404,7 +404,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Close</source>
-        <translation>أ&amp;غلِق</translation>
+        <translation>&amp;أغلِق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -445,7 +445,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>PgDown</source>
-        <translation>PgDown</translation>
+        <translation>صفحة للاسفل</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="334"/>
@@ -456,7 +456,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>PgUp</source>
-        <translation>PgUp</translation>
+        <translation>صفحة للأعلى</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
@@ -586,7 +586,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="506"/>
         <source>&amp;Delete</source>
-        <translation>ا&amp;حذف</translation>
+        <translation>&amp;احذف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
@@ -631,7 +631,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -692,64 +692,64 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="643"/>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط القوائم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="649"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;شريط الأدوات الرئيسي</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط الأدوات الرئيسي</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;شريط أدوات التعليقات التوضيحية</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="679"/>
         <location filename="../mainwindow.ui" line="682"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار المخطط</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;انسخ المسار</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>إنسخ المسار</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="704"/>
         <location filename="../mainwindow.ui" line="707"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>غيّر الاسم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="719"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>تغيير الحجم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -759,7 +759,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation>م&amp;ساعدة</translation>
+        <translation>&amp;مساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
@@ -769,12 +769,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation>من&amp;ظور</translation>
+        <translation>&amp;منظور</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
         <source>&amp;Edit</source>
-        <translation>ت&amp;حرير</translation>
+        <translation>&amp;تحرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
@@ -797,7 +797,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>حد حجم الملف المصغر:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -812,7 +812,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>الحد الأقصى لعدد الملفات الحديثة:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
@@ -822,87 +822,87 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار مخطط الصورة بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار شريط أدوات التعليقات التوضيحية بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>تناسب الصور عند التنقل</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>أبعاد الصورة المصغرة:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>استخدم سلة مهملات النظام (ولا تنبه)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>النافذة</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>عرض الصور المصغرة ترسو بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار إرساء بيانات Exif بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار شريط القوائم بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>إظهار شريط الأدوات الرئيسي بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>صورة</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>صور سلسة عند التكبير</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>الاختصارات</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>العمل</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>إختصار</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="247"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -915,7 +915,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.cpp" line="922"/>
         <source>Error</source>
-        <translation type="unfinished">خطأ</translation>
+        <translation>خطأ</translation>
     </message>
 </context>
 <context>
@@ -923,44 +923,44 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>تغيير حجم الصورة</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>عرض</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>ارتفاع</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>الحجم الحالي:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>الحجم الجديد:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> بكسل</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>إبقاء نسبة القياس</translation>
     </message>
 </context>
 <context>
@@ -1003,7 +1003,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> ثا</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
