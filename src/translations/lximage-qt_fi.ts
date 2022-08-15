@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Piilotetut oikopolut</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nämä sisäänkoodatut oikopolut ajetaan yli mikäli ne ovat muihin toimenpiteisiin määrätyt myös kohteessa Asetukset → Oikopolut.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikopolku</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Toiminto</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc-näppäin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sulje ikkuna tai poistu kokoruututilasta</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraava kuva</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Välilyönti</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End-näppäin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimeinen kuva</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasen</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Edellinen kuva</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Askelpalautin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home-näppäin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen kuva</translation>
     </message>
 </context>
 <context>
@@ -91,27 +91,27 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistä kokoruututilassa (hyödyllinen laattanäkymiä hyödyntävissä ikkunanhallintamalleissa)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota kuvakaappaus (vanhentunut toiminto, käytäthän käyttöjärjestelmän omaa kaappausta)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>HAK</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota kuvakaappaus ja tallenna se hakemistoon näyttämättä graafisuutta (vanhentunut, käytäthän käytöjärjestelmän omaa kaappainta)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[TIEDOSTO1, TIEDOSTO2,...]</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imageshackupload.cpp" line="50"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>tuntematon virhevastine</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>tuntematon virhevastine</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>tuntematon virhevastine</translation>
     </message>
 </context>
 <context>
@@ -143,88 +143,88 @@
     <message>
         <location filename="../mainwindow.cpp" line="267"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="269"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksinkertainen ja nopea kuvankatseluohjelma</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Tekijänoikeus (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>Kattaa vuodet 2013-2022</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="273"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt-hanke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitystyö: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Päätekijä: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="448"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="449"/>
         <location filename="../mainwindow.cpp" line="484"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvatiedostot (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="462"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa hakemisto</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="483"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="772"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Lataa...) - Kuvankatselin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="778"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (lataus epäonnistui) - Kuvankatselin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Kuvankatselin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Kuvankatselin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1227"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikkukuvat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1322"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvan EXIF-tietueet</translation>
     </message>
 </context>
 <context>
@@ -232,7 +232,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pyyhi</translation>
     </message>
 </context>
 <context>
@@ -241,32 +241,33 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä muokkainnappia pyyhkiäksesi oikopolun
+muokkaustilassa.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Alaosa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Yläosa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Varoitus: Epäselvä oikopolku havaittu!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Epäselvää oikopolkua ei hyväksytty.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -274,7 +275,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tässä kuvatiedostomuodossa ei voi tallentaa!</translation>
     </message>
 </context>
 <context>
@@ -282,12 +283,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polku:</translation>
     </message>
 </context>
 <context>
@@ -295,37 +296,37 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation>Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation>ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Aloita</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Lopeta</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Sulje</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe</translation>
     </message>
 </context>
 <context>
@@ -333,250 +334,250 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvankatselin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiljattain avatut tiedostot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tietoja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="192"/>
         <location filename="../mainwindow.ui" line="671"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomautusten työkalurivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa &amp;tällä...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Piilotetut &amp;oikopolut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Avaa…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lataa tiedosto uudelleen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tallenna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna &amp;nimellä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sulje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähen &amp;nä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Loito &amp;nna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tallenna leikepöydälle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="319"/>
         <location filename="../mainwindow.ui" line="322"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Seuraava tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>PgDown -siirry näkymässä alaspäin -näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="334"/>
         <location filename="../mainwindow.ui" line="337"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Edellinen tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>PgUp -siirry näkymässä ylöspäin -näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Alkuperäinen koko</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sovita</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kierrä myötäpäivään</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R-näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Kierrä &amp;vastapäivään</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L-näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="396"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;setukset</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tulosta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home -kotiin / alkuun -näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimeinen tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End -loppuun näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uusi ikkuna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännä &amp;vaakatasossa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H-näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaappaa kuva talteen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;okoruutu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11-näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännä &amp;pystysuunnassa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V-näppäin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Liitä leikepöydältä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
