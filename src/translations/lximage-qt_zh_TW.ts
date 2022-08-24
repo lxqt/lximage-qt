@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished">這些固定的快捷鍵，當在「偏好設定」→ 「快捷鍵」內被指定給其他動作時，將會被覆蓋。</translation>
+        <translation>這些固定的快捷鍵，當在「偏好設定」→ 「快捷鍵」內被指定給其他動作時，將會被覆蓋。</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished">以全螢幕模式啟動（在圖塊式視窗管理器下會比較好用）</translation>
+        <translation>以全螢幕模式啟動（在圖塊式視窗管理器下會比較好用）</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -153,7 +153,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>版權所有 (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="271"/>
