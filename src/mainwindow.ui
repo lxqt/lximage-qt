@@ -112,6 +112,16 @@
     <property name="title">
      <string>&amp;View</string>
     </property>
+    <widget class="QMenu" name="menuSorting">
+     <property name="title">
+      <string>Sorting</string>
+     </property>
+     <addaction name="actionByFileName"/>
+     <addaction name="actionByMTime"/>
+     <addaction name="actionByCrTime"/>
+     <addaction name="actionByFileSize"/>
+     <addaction name="actionByFileType"/>
+    </widget>
     <addaction name="actionZoomIn"/>
     <addaction name="actionZoomOut"/>
     <addaction name="actionOriginalSize"/>
@@ -127,6 +137,8 @@
     <addaction name="actionMenubar"/>
     <addaction name="actionToolbar"/>
     <addaction name="actionAnnotations"/>
+    <addaction name="separator"/>
+    <addaction name="menuSorting"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -717,6 +729,61 @@
    </property>
    <property name="text">
     <string>Resize</string>
+   </property>
+  </action>
+  <action name="actionByFileName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;By File Name</string>
+   </property>
+   <property name="toolTip">
+    <string>By File Name</string>
+   </property>
+  </action>
+  <action name="actionByMTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>By &amp;Modification Time</string>
+   </property>
+   <property name="toolTip">
+    <string>By Modification Time</string>
+   </property>
+  </action>
+  <action name="actionByCrTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>By C&amp;reation Time</string>
+   </property>
+   <property name="toolTip">
+    <string>By Creation Time</string>
+   </property>
+  </action>
+  <action name="actionByFileSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>By File &amp;Size</string>
+   </property>
+   <property name="toolTip">
+    <string>By File Size</string>
+   </property>
+  </action>
+  <action name="actionByFileType">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>By File &amp;Type</string>
+   </property>
+   <property name="toolTip">
+    <string>By File Type</string>
    </property>
   </action>
  </widget>

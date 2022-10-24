@@ -149,6 +149,15 @@ private Q_SLOTS:
   void on_actionDrawCircle_triggered();
   void on_actionDrawNumber_triggered();
 
+  void on_actionByFileName_triggered(bool checked);
+  void on_actionByMTime_triggered(bool checked);
+  void on_actionByCrTime_triggered(bool checked);
+  void on_actionByFileSize_triggered(bool checked);
+  void on_actionByFileType_triggered(bool checked);
+
+  void onSortFilterChanged();
+  void sortMenuAboutToShow();
+
   void onContextMenu(QPoint pos);
   void onKeyboardEscape();
 

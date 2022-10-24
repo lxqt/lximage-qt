@@ -25,6 +25,9 @@
 
 using namespace LxImage;
 
+inline static QString sortColumnToString(Fm::FolderModel::ColumnId value);
+inline static Fm::FolderModel::ColumnId sortColumnFromString(const QString& str);
+
 Settings::Settings():
   useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == QLatin1String("hicolor")),
   bgColor_(255, 255, 255),
@@ -49,7 +52,8 @@ Settings::Settings():
   showAnnotationsToolbar_(false),
   forceZoomFit_(false),
   smoothOnZoom_(true),
-  useTrash_(true) {
+  useTrash_(true),
+  sorting_(Fm::FolderModel::ColumnFileName) {
 }
 
 Settings::~Settings() {
@@ -64,6 +68,7 @@ bool Settings::load() {
   slideShowInterval_ = settings.value(QStringLiteral("slideShowInterval"), slideShowInterval_).toInt();
   maxRecentFiles_ = settings.value(QStringLiteral("maxRecentFiles"), maxRecentFiles_).toInt();
   recentlyOpenedFiles_ = settings.value(QStringLiteral("recentlyOpenedFiles")).toStringList();
+  sorting_ = sortColumnFromString(settings.value(QStringLiteral("sorting")).toString());
 
   settings.beginGroup(QStringLiteral("Window"));
   fixedWindowWidth_ = settings.value(QStringLiteral("FixedWidth"), 640).toInt();
@@ -112,6 +117,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("slideShowInterval"), slideShowInterval_);
   settings.setValue(QStringLiteral("maxRecentFiles"), maxRecentFiles_);
   settings.setValue(QStringLiteral("recentlyOpenedFiles"), recentlyOpenedFiles_);
+  settings.setValue(QStringLiteral("sorting"), sortColumnToString(sorting_));
 
   settings.beginGroup(QStringLiteral("Window"));
   settings.setValue(QStringLiteral("FixedWidth"), fixedWindowWidth_);
@@ -194,5 +200,51 @@ void Settings::thumbnailsPositionFromString(const QString& str) {
     return;
   }
   thumbnailsPosition_ = Qt::BottomDockWidgetArea;
+}
+
+static QString sortColumnToString(Fm::FolderModel::ColumnId value) {
+  QString ret;
+  switch(value) {
+  case Fm::FolderModel::ColumnFileName:
+  default:
+    ret = QLatin1String("name");
+    break;
+  case Fm::FolderModel::ColumnFileType:
+    ret = QLatin1String("type");
+    break;
+  case Fm::FolderModel::ColumnFileSize:
+    ret = QLatin1String("size");
+    break;
+  case Fm::FolderModel::ColumnFileMTime:
+    ret = QLatin1String("mtime");
+    break;
+  case Fm::FolderModel::ColumnFileCrTime:
+    ret = QLatin1String("crtime");
+    break;
+  }
+  return ret;
+}
+
+static Fm::FolderModel::ColumnId sortColumnFromString(const QString& str) {
+  Fm::FolderModel::ColumnId ret;
+  if(str == QLatin1String("name")) {
+    ret = Fm::FolderModel::ColumnFileName;
+  }
+  else if(str == QLatin1String("type")) {
+    ret = Fm::FolderModel::ColumnFileType;
+  }
+  else if(str == QLatin1String("size")) {
+    ret = Fm::FolderModel::ColumnFileSize;
+  }
+  else if(str == QLatin1String("mtime")) {
+    ret = Fm::FolderModel::ColumnFileMTime;
+  }
+  else if(str == QLatin1String("crtime")) {
+    ret = Fm::FolderModel::ColumnFileCrTime;
+  }
+  else {
+    ret = Fm::FolderModel::ColumnFileName;
+  }
+  return ret;
 }
 
