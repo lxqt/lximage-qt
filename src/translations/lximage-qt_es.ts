@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Estos atajos difícilmente programados se sobrescribirán si son asignados a otras acciones en Preferencias → Atajos</translation>
+        <translation>Estos atajos codificados se anularán si también se asignan a otras acciones en Preferencias → Atajos</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -365,7 +365,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Save &amp;As</source>
-        <translation>G&amp;uardar como…</translation>
+        <translation>G&amp;uardar como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -632,7 +632,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -883,7 +883,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Suavizar las imágenes al ampliar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
