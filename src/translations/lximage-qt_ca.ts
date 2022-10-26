@@ -632,7 +632,7 @@ una drecera en el mode d&apos;edició.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -883,7 +883,7 @@ una drecera en el mode d&apos;edició.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Suavitza les imatges en ampliar-les</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>

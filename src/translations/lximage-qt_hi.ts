@@ -26,7 +26,7 @@
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished">Esc</translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -199,32 +199,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="772"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (लोडिंग...) - छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="778"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 ( लोडिंग में असफल) - छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1227"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>थंबनेल</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1322"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF डेटा</translation>
     </message>
 </context>
 <context>
@@ -232,7 +232,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>साफ (&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -241,32 +241,33 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>शॉर्टकट साफ़ करने के लिए संशोधक कुंजी का उपयोग 
+संपादन मोड में करें.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="206"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>तल</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="207"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>शीर्ष</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="208"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>बाएँ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="334"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;चेतावनी : अस्पष्ट शॉर्टकट का पता चला!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;अस्पष्ट शॉर्टकट स्वीकार नहीं किया गया.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -274,7 +275,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>इस छवि प्रारूप के साथ सहेज नहीं सकते!</translation>
     </message>
 </context>
 <context>
@@ -282,12 +283,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>आकार :</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>पथ :</translation>
     </message>
 </context>
 <context>
@@ -295,37 +296,37 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imgur</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ImgBB</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>आरंभ</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>रुकें</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="143"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>बंद करें</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="150"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>त्रुटि</translation>
     </message>
 </context>
 <context>
@@ -333,453 +334,453 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>छवि दर्शक</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>हाल ही में खोली गई फ़ाइलें (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>परिचय (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="192"/>
         <location filename="../mainwindow.ui" line="671"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>एनोटेशन टूलबार</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>इससे खोलें... (&amp;W)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>अदृश्य शॉर्टकट (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>खोलें... (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ाइल पुनः लोड करें (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>सहेजें (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>ऐसे सहेजें (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>बंद करें (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>ज़ूम इन (&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>ज़ूम आउट (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>क्लिपबोर्ड पर प्रतिलिपि बनाएँ (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="319"/>
         <location filename="../mainwindow.ui" line="322"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>अगली फ़ाइल</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>पेज-डाउन</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="334"/>
         <location filename="../mainwindow.ui" line="337"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>पिछली फ़ाइल</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>पेज-अप</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>मूल आकार</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़िट (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>दक्षिणावर्त घुमाएँ (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>वामावर्त घुमाएँ (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="396"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>पसंद (&amp;r)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>प्रिंट (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="404"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>पहली फ़ाइल</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>होम</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>अंतिम फ़ाइल</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>अंत</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>नई विंडो (&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="445"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>क्षैतिज रूप से पलटें (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>स्क्रीनशॉट कैप्चर करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>पूर्ण स्क्रीन (&amp;u)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>लंबवत पलटें (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="476"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>क्लिपबोर्ड से चिपकाएं (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>स्लाइड शो (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="506"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>मिटाएँ (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="517"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>थंबनेल दिखाएँ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="520"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="525"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ाइल के गुण</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="534"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>डायरेक्टरी खोलें (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>अपलोड</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="549"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>छवि अपलोड करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF डेटा दिखाएं</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="572"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>कोई टूल नहीं</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="575"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>सभी ड्राइंग टूल्स को अचयनित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="587"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>तीर चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>एक तीर चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="602"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>आयत चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>एक खोखला आयत चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>वृत चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="620"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>एक खोखला वृत्त चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="632"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>अंक चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="635"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>बढ़ती हुई संख्याएँ चित्रित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="643"/>
         <location filename="../mainwindow.ui" line="646"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>मेनूबार</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="649"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="657"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>मुख्य टूलबार (&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>मुख्य टूलबार</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="668"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>एनोटेशन टूलबार (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="679"/>
         <location filename="../mainwindow.ui" line="682"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>रूपरेखा दिखाएं</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>पथ कॉपी करें (&amp;t)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>पथ कॉपी करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="704"/>
         <location filename="../mainwindow.ui" line="707"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>कोई और नाम दें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="710"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="719"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>नया आकार</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>फ़ाइल (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>मदद (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>जाएँ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>देखें (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="133"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>संपादन (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>टूलबार</translation>
     </message>
 </context>
 <context>
@@ -787,107 +788,107 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>पसंद</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>आइकन थीम :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>थंबनेल फ़ाइल आकार सीमा :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>सामान्य पृष्ठभूमि रंग :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>पूर्णस्क्रीन पृष्ठभूमि का रंग :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>हाल की फाइलों की अधिकतम संख्या:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>स्लाइड शो अंतराल (सेकंड) :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से छवि की रूपरेखा दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से एनोटेशन टूलबार दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>नेविगेट करते समय छवियों को फ़िट करें</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>थंबनेल छवि आयाम :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>सिस्टम ट्रैश का उपयोग करें (और संकेत न दें)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>विंडो</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से थंबनेल डॉक दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से Exif डेटा डॉक दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से मेनूबार दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>डिफ़ॉल्ट रूप से मुख्य टूलबार दिखाएं</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>छवि</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>ज़ूम करने पर चिकनी छवियां</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>शॉर्टकट</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="234"/>

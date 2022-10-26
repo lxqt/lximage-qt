@@ -617,7 +617,7 @@ prečaca u modusu uređivanja.</translation>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Ctrl+D</source>
-        <translation>Ctrl+M</translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
@@ -632,7 +632,7 @@ prečaca u modusu uređivanja.</translation>
     <message>
         <location filename="../mainwindow.ui" line="552"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="560"/>
@@ -883,7 +883,7 @@ prečaca u modusu uređivanja.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Zagladi slike pri zumiranju</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
