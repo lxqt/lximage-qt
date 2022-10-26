@@ -27,6 +27,7 @@
 #include <QColor>
 #include <QSize>
 #include <libfm-qt/core/thumbnailjob.h>
+#include <libfm-qt/foldermodel.h>
 
 namespace LxImage {
 
@@ -265,6 +266,13 @@ public:
     removedActions_ << action;
   }
 
+  Fm::FolderModel::ColumnId sorting() const {
+    return sorting_;
+  }
+  void setSorting(Fm::FolderModel::ColumnId sorting) {
+    sorting_ = sorting;
+  }
+
 private:
   QString thumbnailsPositionToString() const;
   void thumbnailsPositionFromString(const QString& str);
@@ -302,6 +310,8 @@ private:
 
   QHash<QString, QString> actions_;
   QStringList removedActions_;
+
+  Fm::FolderModel::ColumnId sorting_;
 };
 
 }

@@ -93,8 +93,9 @@ MainWindow::MainWindow():
   connect(ui.actionPreferences, &QAction::triggered, app , &Application::editPreferences);
 
   proxyModel_->addFilter(modelFilter_);
-  proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
+  proxyModel_->sort(settings.sorting(), Qt::AscendingOrder);
   proxyModel_->setSourceModel(folderModel_);
+  connect(proxyModel_, &Fm::ProxyFolderModel::sortFilterChanged, this, &MainWindow::onSortFilterChanged);
 
   ui.view->setSmoothOnZoom(settings.smoothOnZoom());
 
@@ -181,6 +182,15 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
+
+  auto sortGroup = new QActionGroup(ui.menu_View);
+  sortGroup->setExclusive(true);
+  sortGroup->addAction(ui.actionByFileName);
+  sortGroup->addAction(ui.actionByMTime);
+  sortGroup->addAction(ui.actionByCrTime);
+  sortGroup->addAction(ui.actionByFileSize);
+  sortGroup->addAction(ui.actionByFileType);
+  connect(ui.menu_View, &QMenu::aboutToShow, this, &MainWindow::sortMenuAboutToShow);
 
   // Open images when MRU items are clicked
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
@@ -350,6 +360,63 @@ void MainWindow::on_actionDrawNumber_triggered() {
   ui.view->activateTool(ImageView::ToolNumber);
 }
 
+void MainWindow::on_actionByFileName_triggered(bool /*checked*/) {
+  proxyModel_->sort(Fm::FolderModel::ColumnFileName, Qt::AscendingOrder);
+}
+
+void MainWindow::on_actionByMTime_triggered(bool /*checked*/) {
+  proxyModel_->sort(Fm::FolderModel::ColumnFileMTime, Qt::AscendingOrder);
+}
+
+void MainWindow::on_actionByCrTime_triggered(bool /*checked*/) {
+  proxyModel_->sort(Fm::FolderModel::ColumnFileCrTime, Qt::AscendingOrder);
+}
+
+void MainWindow::on_actionByFileSize_triggered(bool /*checked*/) {
+  proxyModel_->sort(Fm::FolderModel::ColumnFileSize, Qt::AscendingOrder);
+}
+
+void MainWindow::on_actionByFileType_triggered(bool /*checked*/) {
+  proxyModel_->sort(Fm::FolderModel::ColumnFileType, Qt::AscendingOrder);
+}
+
+void MainWindow::onSortFilterChanged() {
+  // update currentIndex_ and scroll to it in thumbnails view
+  if(currentFile_)
+    currentIndex_ = indexFromPath(currentFile_);
+  if(thumbnailsView_ && currentIndex_.isValid()) {
+    thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+  }
+  // remember the sorting if possible
+  static_cast<Application*>(qApp)->settings().setSorting(static_cast<Fm::FolderModel::ColumnId>(proxyModel_->sortColumn()));
+}
+
+// This is needed only because sorting may be changed from inside the thumbnails view.
+void MainWindow::sortMenuAboutToShow() {
+  auto sortColumn = proxyModel_->sortColumn();
+  if(sortColumn == Fm::FolderModel::ColumnFileName) {
+    ui.actionByFileName->setChecked(true);
+  }
+  else if(sortColumn == Fm::FolderModel::ColumnFileMTime) {
+    ui.actionByMTime->setChecked(true);
+  }
+  else if(sortColumn == Fm::FolderModel::ColumnFileCrTime) {
+    ui.actionByCrTime->setChecked(true);
+  }
+  else if(sortColumn == Fm::FolderModel::ColumnFileSize) {
+    ui.actionByFileSize->setChecked(true);
+  }
+  else if(sortColumn == Fm::FolderModel::ColumnFileType) {
+    ui.actionByFileType->setChecked(true);
+  }
+  else { // sorting is not supported
+    ui.actionByFileName->setChecked(false);
+    ui.actionByMTime->setChecked(false);
+    ui.actionByCrTime->setChecked(false);
+    ui.actionByFileSize->setChecked(false);
+    ui.actionByFileType->setChecked(false);
+  }
+}
 
 void MainWindow::onFolderLoaded() {
   // if currently we're showing a file, get its index in the folder now
