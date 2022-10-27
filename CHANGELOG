@@ -1,3 +1,8 @@
+lximage-qt-1.2.0 / 2022-11-05
+==============================
+ * Fixed visual glitches in painting cached images.
+ * Added Sorting sub-menu to View menu.
+
 lximage-qt-1.1.0 / 2022-04-15
 ==============================
  * Restore maximized state (if any) on un-fullscreening.
