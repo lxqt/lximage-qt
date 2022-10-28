@@ -168,12 +168,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation>Développement&#xa0;: </translation>
+        <translation>Développement : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation>Auteur&#xa0;: </translation>
+        <translation>Auteur : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -390,7 +390,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Tri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -759,7 +759,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="697"/>
         <source>O</source>
-        <translation>O.</translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
@@ -790,52 +790,52 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Par nom de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Par nom de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Par date de &amp;modification</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Par date de modification</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Par date de c&amp;réation</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Par date de création</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Par taille de &amp;fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Par taille de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Par &amp;type de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Par type de fichier</translation>
     </message>
 </context>
 <context>
@@ -858,12 +858,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>

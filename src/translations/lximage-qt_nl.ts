@@ -433,7 +433,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorteren op</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -762,52 +762,52 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Wijzigingstijdstip</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Wijzigingstijdstip</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Aan&amp;maakdatum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Aanmaakdatum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand&amp;sgrootte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsgrootte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestands&amp;type</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandstype</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
