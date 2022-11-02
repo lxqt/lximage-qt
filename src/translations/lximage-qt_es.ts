@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Estos atajos codificados se anularán si también se asignan a otras acciones en Preferencias → Atajos</translation>
+        <translation>Estos atajos codificados se anularán si también se asignan a otras acciones en Preferencias → Atajos.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Cerrar ventana o salir de la pantalla completa</translation>
+        <translation>Cerrar la ventana o salir del modo pantalla completa</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -163,7 +163,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
-        <translation>LXQt Project</translation>
+        <translation>Proyecto LXQt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="851"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2&#x202f;×&#x202f;%3). Visor de imágenes</translation>
+        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
@@ -432,12 +432,12 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>Atajos ocultos</translation>
+        <translation>&amp;Atajos ocultos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
@@ -760,52 +760,52 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Por &amp;nombre de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Por nombre de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por &amp;fecha de modificación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por fecha de modificación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por fecha de &amp;creación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por fecha de creación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Por ta&amp;maño de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Por tamaño de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Por &amp;tipo de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Por tipo de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>

@@ -241,7 +241,7 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished">在編輯模式下按下輔助鍵（Alt, Ctrl, Shift）
+        <translation>在編輯模式下按下輔助鍵（Alt, Ctrl, Shift）
 以清除快捷鍵。</translation>
     </message>
     <message>
@@ -267,7 +267,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="351"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;無法處理重複的快捷鍵。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;無法處理重複的快捷鍵。&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -340,7 +340,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="683"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished">標記工具列</translation>
+        <translation>註解工具列</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -432,7 +432,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>排序</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -698,7 +698,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="655"/>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Menubar</source>
-        <translation type="unfinished">選單</translation>
+        <translation>選單列</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
@@ -760,52 +760,52 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>以檔案名稱( &amp;B)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>依照檔名</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>以最後修改時間 (&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>依照修改時間</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>以建立時間 (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>建立時間</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>依照檔案大小 (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>依照檔案大小</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>以檔案型態 (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>依照檔案型態</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -913,17 +913,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>預設顯示縮圖列</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished">預設顯示 Exif 資訊面版</translation>
+        <translation>預設顯示 Exif 資訊面版</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished">預設顯示選單</translation>
+        <translation>預設顯示選單列</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
@@ -938,7 +938,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>縮放圖片時平滑化</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -1016,7 +1016,7 @@ in the editing mode.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished">維持比例</translation>
+        <translation>維持比例</translation>
     </message>
 </context>
 <context>
@@ -1059,7 +1059,7 @@ in the editing mode.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> 秒</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
