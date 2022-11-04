@@ -168,12 +168,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation>Développement : </translation>
+        <translation>Développement&#xa0;: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation>Auteur : </translation>
+        <translation>Auteur&#xa0;: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -858,12 +858,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature :</translation>
+        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature :</translation>
+        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
