@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">Akhir</translation>
+        <translation>Akhir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -432,7 +432,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>pemilahan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -641,7 +641,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="564"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="572"/>
@@ -764,22 +764,22 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Berdasarkan Nama File</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan Nama File</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan &amp;Waktu Modifikasi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Bedasarkan Waktu Modifikasi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
@@ -789,27 +789,27 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Menurut Waktu Penciptaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan File &amp;Ukuran</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan Ukuran File</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan File &amp;Tipe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan Tipe File</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -942,7 +942,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar halus saat diperbesar</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
