@@ -360,7 +360,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>מיון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -760,52 +760,52 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי &amp;שם קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי שם קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי מו&amp;עד שינוי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי מועד שינוי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי מועד י&amp;צירה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי מועד יצירה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי &amp;גודל קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי גודל קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי &amp;סוג קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>לפי סוג קובץ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
