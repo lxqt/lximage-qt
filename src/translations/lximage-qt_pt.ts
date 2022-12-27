@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Estes atalhos codificados serão anulados se forem também atribuídos a outras acções em Preferências → Atalhos.</translation>
+        <translation>Estes atalhos codificados serão anulados se forem também atribuídos a outras ações em Preferências → Atalhos.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Obter captura de ecrã (aplicação descontinuada, utilize screengrab)</translation>
+        <translation>Obter captura de ecrã (aplicação descontinuada, utilize o screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
