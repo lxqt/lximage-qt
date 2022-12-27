@@ -699,22 +699,22 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Efter &amp;modifieringstid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Efter modifieringstid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Efter S&amp;kapande tid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Efter skapande tid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
