@@ -592,7 +592,7 @@ remover o atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Apagar</translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
