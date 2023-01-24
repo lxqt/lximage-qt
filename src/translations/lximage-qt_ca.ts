@@ -597,7 +597,7 @@ una drecera en el mode d&apos;edició.</translation>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Del</source>
-        <translation>Supr</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
