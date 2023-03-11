@@ -53,7 +53,7 @@ bool Application::init(int argc, char** argv) {
   // install libfm-qt translator
   installTranslator(libFm.translator());
 
-  // install our own tranlations
+  // install our own translations
   translator.load(QStringLiteral("lximage-qt_") + QLocale::system().name(), QStringLiteral(LXIMAGE_DATA_DIR) + QStringLiteral("/translations"));
   installTranslator(&translator);
 
