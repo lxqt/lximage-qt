@@ -587,12 +587,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diaesitys</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Poista</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
@@ -672,38 +672,38 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ontto suorakulmio</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="629"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ympyrä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="632"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ontto ympyrä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="644"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä numero</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="647"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä kasvavia numeroja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Valikkopalkki</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="669"/>
@@ -724,22 +724,22 @@ muokkaustilassa.</translation>
         <location filename="../mainwindow.ui" line="691"/>
         <location filename="../mainwindow.ui" line="694"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä ääriviivat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="697"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi &amp;Path</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi polku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
