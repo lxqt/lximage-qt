@@ -888,7 +888,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation>Масштабировать изображения при навигации</translation>
+        <translation>Подгонять изображения при навигации</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -913,7 +913,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Отображать панель эскизов по умолчанию</translation>
+        <translation>Показывать эскизы по умолчанию</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
