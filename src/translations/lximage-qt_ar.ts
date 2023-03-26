@@ -917,7 +917,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>إظهار إرساء بيانات Exif بشكل افتراضي</translation>
+        <translation>إظهار إرساء بيانات EXIF بشكل افتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
