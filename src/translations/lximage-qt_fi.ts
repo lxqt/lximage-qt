@@ -420,7 +420,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;In</source>
-        <translation>Lähen &amp;nä</translation>
+        <translation>Lähen&amp;nä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -430,7 +430,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>Zoom &amp;Out</source>
-        <translation>Loito &amp;nna</translation>
+        <translation>Loit&amp;onna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
@@ -557,7 +557,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>Capture Screenshot</source>
-        <translation>Kaappaa kuva talteen</translation>
+        <translation>Ota kuvakaappaus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
@@ -602,7 +602,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä pikkukuvat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="532"/>
@@ -612,62 +612,62 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto-ominaisuudet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa %Directory</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="549"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä verkkopalveluun</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä kuva verkkopalveluun</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="564"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="572"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä EXIF-tietueet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="584"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei työkalua</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="587"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Epävalitse kaikki piirtotyökalut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="599"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä nuoli</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="602"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä nuoli</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä suorakulmio</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="617"/>
@@ -708,12 +708,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="669"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Päätyökalurivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="672"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Päätyökalurivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
@@ -745,17 +745,17 @@ muokkaustilassa.</translation>
         <location filename="../mainwindow.ui" line="716"/>
         <location filename="../mainwindow.ui" line="719"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleennimeä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="722"/>
         <source>F2</source>
-        <translation type="unfinished">F2-näppäin</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa kokoa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
@@ -810,12 +810,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tiedosto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ohje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
@@ -825,17 +825,17 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Näytä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muokkaa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Työkalurivi</translation>
     </message>
 </context>
 <context>
@@ -843,27 +843,27 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvaketeema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikkukuvatiedoston kokoraja:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Perustaustaväri:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokonäytön taustaväri:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -873,67 +873,67 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Diaesityksen viive (sekunteja):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä kuvan ääriviivat oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä huomautusten työkalurivi oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovita kuvat selatessa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikkukuvan mitat:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä järjestelmän roskakoria (kysymättä)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikkuna</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä pikkukuvapalkki oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä EXIF-tietuepalkki oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä valikkopalkki oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä päätyökalurivi oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuva</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
@@ -943,17 +943,17 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikanäppäimet</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
-        <translation type="unfinished">Toiminto</translation>
+        <translation>Toiminto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Oikopolku</translation>
+        <translation>Pikanäppäin</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="247"/>
@@ -963,7 +963,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleisasetukset</translation>
     </message>
 </context>
 <context>
@@ -971,7 +971,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="989"/>
         <source>Error</source>
-        <translation type="unfinished">Virhe</translation>
+        <translation>Virhe</translation>
     </message>
 </context>
 <context>
@@ -979,44 +979,44 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa kuvan kokoa</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Leveys</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Korkeus</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nykyinen koko:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uusi koko:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Pidä kuvasuhde</translation>
     </message>
 </context>
 <context>
@@ -1024,52 +1024,52 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvakaappaus</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota kuvakaappaus</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Alue</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko näyttö</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Vain nykyinen ikkuna</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaappaa alue näytöltä</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisällytä hiiren kursori</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> s</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Viive:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisällytä ikkunan otsikko ja kehys</translation>
     </message>
 </context>
 <context>
@@ -1077,12 +1077,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä verkkopalveluun</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi</translation>
     </message>
 </context>
 </TS>
