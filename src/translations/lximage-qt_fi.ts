@@ -597,7 +597,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
@@ -607,7 +607,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="532"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation>T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
@@ -718,7 +718,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Huomautusten työkalurivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="691"/>
@@ -820,7 +820,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirry</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
@@ -868,7 +868,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksimimäärä viimeisiä tiedostoja:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
@@ -938,7 +938,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="207"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Pehmennä kuva zoomatessa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -958,7 +958,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="247"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Oletukset</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
