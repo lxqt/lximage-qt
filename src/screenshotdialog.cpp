@@ -271,7 +271,7 @@ static QString getWindowName(WId wid) {
       }
     }
   }
-  return (result.isEmpty()) ? QStringLiteral("UKNOWN") : result;
+  return (result.isEmpty()) ? QStringLiteral("UNKNOWN") : result;
 }
 
 void ScreenshotDialog::cmdTopShotToDir(QString path) {

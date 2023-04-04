@@ -105,7 +105,7 @@ lximage-qt-0.14.0 / 2019-01-15
   * Translation updates
   * Improved cmake scripting
     - Set cmake_minimum_required to 3.1.0
-    - Removed locale compile definitons
+    - Removed locale compile definitions
     - Use XFIXES_LDFLAGS instead of XFIXES_LIBRARIES
   * Moved translations from lxqt-l10n back to lximage-qt
     - Removed obsolete translation fuctionality
@@ -152,7 +152,7 @@ lximage-qt-0.6.0 / 2017-10-21
   * Adapt to changes in libfm-qt(the c++11 port)
   * Use the new lxqt-build-tools new FindExif CMake module
   * Simpler code for ScreenshotSelectAreaGraphicsView class.
-  * Change Screenshot select area green color by actual hightlight color. Use lximage-qt private variables style.
+  * Change Screenshot select area green color by actual highlight color. Use lximage-qt private variables style.
   * Adapt to C++11 and RAM improvements.
   * Screenshot captures an area of the screen.
   * Use const iterators
@@ -339,7 +339,7 @@ lximage-qt-0.2.0 / 2014-05-09
   * Little fix to avoid loading a cancelled image.
   * Supports rotation of images.
   * Use the latest libfm-qt APIs to filter out non-image files. Implement jumping to first and last file in the folder.
-  * Fix incorrect reference couting of GCancellable objects to avoid crashes. Add some shortcut keys to improve usability.
+  * Fix incorrect reference counting of GCancellable objects to avoid crashes. Add some shortcut keys to improve usability.
   * Use glib/gio GInputStream + GIOSchedulerJob to load the images with multi-threading. Refactor, simplify class methods of LxImage::MainWindow.
-  * Use libfm to load folders containing the specified image. Add dependency on libexif for future implementation of EXIF related stuff. Add LxImage::Applcation class to handle application initiation.
+  * Use libfm to load folders containing the specified image. Add dependency on libexif for future implementation of EXIF related stuff. Add LxImage::Application class to handle application initiation.
   * Initial import into git

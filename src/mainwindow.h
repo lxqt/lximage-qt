@@ -212,7 +212,7 @@ private:
 
   bool showFullScreen_;
 
-  QMap<int, QShortcut*> hardCodedShortcuts_; // may be overriden by custom shortcuts
+  QMap<int, QShortcut*> hardCodedShortcuts_; // may be overridden by custom shortcuts
 };
 
 }
