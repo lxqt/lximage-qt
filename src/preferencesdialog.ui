@@ -93,7 +93,7 @@
       <attribute name="title">
        <string>Window</string>
       </attribute>
-      <layout class="QFormLayout" name="formLayout_1">
+      <layout class="QFormLayout" name="formLayout_2">
        <property name="fieldGrowthPolicy">
         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
        </property>
@@ -141,7 +141,7 @@
       <attribute name="title">
        <string>Image</string>
       </attribute>
-      <layout class="QFormLayout" name="formLayout_2">
+      <layout class="QFormLayout" name="formLayout_3">
        <property name="fieldGrowthPolicy">
         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
        </property>
