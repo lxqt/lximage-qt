@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Ces raccourcis codés en dur seront remplacés s&apos;ils sont également affectés à d&apos;autres actions dans Préférences → Raccourcis.</translation>
+        <translation>Ces raccourcis codés en dur seront remplacés s’ils sont également affectés à d’autres actions dans Préférences → Raccourcis.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../application.cpp" line="102"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Copie d&apos;écran (déprécié, utilisez screengrab à la place)</translation>
+        <translation>Copie d’écran (déprécié, utilisez screengrab à la place)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>Prendre une copie d&apos;écran et l&apos;enregistrer dans le répertoire sans l&apos;afficher (déconseillé, utilisez screengrab à la place)</translation>
+        <translation>Prendre une copie d’écran et l’enregistrer dans le répertoire sans l’afficher (déconseillé, utilisez screengrab à la place)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="117"/>
@@ -148,7 +148,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>A simple and fast image viewer</source>
-        <translation>Une visionneuse d&apos;images simple et rapide</translation>
+        <translation>Une visionneuse d’images simple et rapide</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
@@ -168,12 +168,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation>Développement&#xa0;: </translation>
+        <translation>Développement : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation>Auteur&#xa0;: </translation>
+        <translation>Auteur : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -199,22 +199,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="839"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Chargement...) - Visionneuse d&apos;images</translation>
+        <translation>[*]%1 (Chargement...) - Visionneuse d’images</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="845"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Échec de chargement) - Visionneuse d&apos;images</translation>
+        <translation>[*]%1 (Échec de chargement) - Visionneuse d’images</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="851"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Visionneuse d&apos;images</translation>
+        <translation>[*]%1 (%2x%3) - Visionneuse d’images</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
         <source>[*]Image Viewer</source>
-        <translation>[*]Visionneuse d&apos;images</translation>
+        <translation>[*]Visionneuse d’images</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1294"/>
@@ -275,7 +275,7 @@ en mode édition.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Impossible d&apos;enregistrer avec ce format d&apos;image !</translation>
+        <translation>Impossible d’enregistrer avec ce format d’image !</translation>
     </message>
 </context>
 <context>
@@ -296,17 +296,17 @@ en mode édition.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="52"/>
         <source>Imgur</source>
-        <translation>Imgur (hébergement d&apos;images)</translation>
+        <translation>Imgur (hébergement d’images)</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="53"/>
         <source>ImgBB</source>
-        <translation>ImgBB (hébergement d&apos;images)</translation>
+        <translation>ImgBB (hébergement d’images)</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation>ImageShack (hébergement d&apos;images)</translation>
+        <translation>ImageShack (hébergement d’images)</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
@@ -334,7 +334,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation>Visionneuse d&apos;images</translation>
+        <translation>Visionneuse d’images</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -369,7 +369,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
         <source>Toolbar</source>
-        <translation>Barre d&apos;outils</translation>
+        <translation>Barre d’outils</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -380,7 +380,7 @@ en mode édition.</translation>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="683"/>
         <source>Annotations Toolbar</source>
-        <translation>Barre d&apos;annotations</translation>
+        <translation>Barre d’annotations</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -497,7 +497,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
         <source>Original Size</source>
-        <translation>Taille d&apos;origine</translation>
+        <translation>Taille d’origine</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -587,7 +587,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>Capture Screenshot</source>
-        <translation>Capture d&apos;écran</translation>
+        <translation>Capture d’écran</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
@@ -662,7 +662,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
         <source>Upload the image</source>
-        <translation>Transférer l&apos;image</translation>
+        <translation>Transférer l’image</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="564"/>
@@ -738,17 +738,17 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="669"/>
         <source>&amp;Main Toolbar</source>
-        <translation>Barre d&apos;outils principale</translation>
+        <translation>Barre d’outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="672"/>
         <source>Main Toolbar</source>
-        <translation>Barre d&apos;outils principale</translation>
+        <translation>Barre d’outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Barre d&apos;outils d&apos;annotation</translation>
+        <translation>&amp;Barre d’outils d’annotation</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="691"/>
@@ -858,12 +858,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l’image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -888,7 +888,7 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>Afficher la barre d&apos;outils principale par défaut</translation>
+        <translation>Afficher la barre d’outils principale par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
@@ -918,12 +918,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="193"/>
         <source>Show image outline by default</source>
-        <translation>Afficher les contours de l&apos;image par défaut</translation>
+        <translation>Afficher les contours de l’image par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Afficher la barre d&apos;outils d&apos;annotations par défaut</translation>
+        <translation>Afficher la barre d’outils d’annotations par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -979,7 +979,7 @@ en mode édition.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation>Redimensionner l&apos;image</translation>
+        <translation>Redimensionner l’image</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
@@ -1024,12 +1024,12 @@ en mode édition.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>Capture d&apos;écran</translation>
+        <translation>Capture d’écran</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Prendre une capture d&apos;écran</translation>
+        <translation>Prendre une capture d’écran</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
@@ -1049,7 +1049,7 @@ en mode édition.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>Capturer une zone de l&apos;écran</translation>
+        <translation>Capturer une zone de l’écran</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
