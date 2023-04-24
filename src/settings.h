@@ -26,8 +26,8 @@
 #include <qcache.h>
 #include <QColor>
 #include <QSize>
-#include <libfm-qt/core/thumbnailjob.h>
-#include <libfm-qt/foldermodel.h>
+#include <libfm-qt6/core/thumbnailjob.h>
+#include <libfm-qt6/foldermodel.h>
 
 namespace LxImage {
 

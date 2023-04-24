@@ -21,9 +21,9 @@
 #ifndef LXIMAGE_LOADIMAGEJOB_H
 #define LXIMAGE_LOADIMAGEJOB_H
 
-#include <libfm-qt/core/filepath.h>
+#include <libfm-qt6/core/filepath.h>
 #include <QImage>
-#include <libfm-qt/core/job.h>
+#include <libfm-qt6/core/job.h>
 #include <QMap>
 
 namespace LxImage {

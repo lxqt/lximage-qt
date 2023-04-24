@@ -21,8 +21,8 @@
 #ifndef LXIMAGE_SAVEIMAGEJOB_H
 #define LXIMAGE_SAVEIMAGEJOB_H
 
-#include <libfm-qt/core/job.h>
-#include <libfm-qt/core/filepath.h>
+#include <libfm-qt6/core/job.h>
+#include <libfm-qt6/core/filepath.h>
 #include <QImage>
 
 namespace LxImage {

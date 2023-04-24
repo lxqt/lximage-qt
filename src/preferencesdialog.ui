@@ -327,7 +327,7 @@ Reload current image to see the effect.</string>
   <customwidget>
    <class>Fm::ColorButton</class>
    <extends>QPushButton</extends>
-   <header location="global">libfm-qt/colorbutton.h</header>
+   <header location="global">libfm-qt6/colorbutton.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

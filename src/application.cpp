@@ -23,7 +23,6 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 #include <QPixmapCache>
-#include <QX11Info>
 #include "applicationadaptor.h"
 #include "screenshotdialog.h"
 #include "mainwindow.h"
@@ -44,18 +43,18 @@ bool Application::init(int argc, char** argv) {
   Q_UNUSED(argc)
   Q_UNUSED(argv)
 
-  setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
   // install the translations built-into Qt itself
-  qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-  installTranslator(&qtTranslator);
+  if(qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
+      installTranslator(&qtTranslator);
+  }
 
   // install libfm-qt translator
   installTranslator(libFm.translator());
 
   // install our own translations
-  translator.load(QStringLiteral("lximage-qt_") + QLocale::system().name(), QStringLiteral(LXIMAGE_DATA_DIR) + QStringLiteral("/translations"));
-  installTranslator(&translator);
+  if(translator.load(QStringLiteral("lximage-qt_") + QLocale::system().name(), QStringLiteral(LXIMAGE_DATA_DIR) + QStringLiteral("/translations"))) {
+      installTranslator(&translator);
+  }
 
   // initialize dbus
   QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -95,7 +94,7 @@ bool Application::parseCommandLineArgs() {
   );
   parser.addOption(fullscreenOption);
 
-  const bool isX11 = QX11Info::isPlatformX11();
+  const bool isX11 = QGuiApplication::platformName() == QStringLiteral("xcb");
 
   QCommandLineOption screenshotOption(
     QStringList() << QStringLiteral("s") << QStringLiteral("screenshot"),

@@ -23,7 +23,7 @@ LXImage-Qt is the Qt port of LXImage, a simple and fast image viewer.
 More features can be found when it is used. LXImage-Qt is maintained by the LXQt project
 but can be used independently from this desktop environment.
 
-**NOTE:** LXImage-Qt can handle all image formats supported by Qt. `qt5-imageformats` and
+**NOTE:** LXImage-Qt can handle all image formats supported by Qt. `qt6-imageformats` and
 [`kimageformats`](https://api.kde.org/frameworks/kimageformats/html/index.html) extend
 the range of supported formats considerably and without extra dependencies. Their
 installation is recommended.
