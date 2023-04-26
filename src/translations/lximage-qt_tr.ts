@@ -597,7 +597,7 @@ için bir değiştirici tuş kullanın.</translation>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
