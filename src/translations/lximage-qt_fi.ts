@@ -360,7 +360,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation>Lajittele...</translation>
+        <translation>Lajittele</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>

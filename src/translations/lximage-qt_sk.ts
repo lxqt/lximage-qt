@@ -597,7 +597,7 @@ v režime úpravy.</translation>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Vymazať</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
