@@ -627,7 +627,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Upload</source>
-        <translation>Загрузить на сервер</translation>
+        <translation>Отправить</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
@@ -1077,7 +1077,7 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation>Загрузить на сервер</translation>
+        <translation>Отправить</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
