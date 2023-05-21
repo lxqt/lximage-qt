@@ -344,7 +344,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;Tietoja</translation>
+        <translation>&amp;Tietoa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -400,7 +400,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation>Tallenna &amp;nimellä</translation>
+        <translation>&amp;Tallenna nimellä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -410,7 +410,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>&amp;Close</source>
-        <translation>&amp;Sulje</translation>
+        <translation>&amp;Lopeta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
