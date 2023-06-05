@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation>Piilotetut oikopolut</translation>
+        <translation>Piilotetut pikakuvakkeet</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation>Oikopolku</translation>
+        <translation>Pikanäppäin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation>Esc-näppäin</translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
