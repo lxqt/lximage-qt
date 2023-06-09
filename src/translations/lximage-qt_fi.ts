@@ -365,7 +365,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>Piilotetut &amp;oikopolut</translation>
+        <translation>&amp;Piilotetut pikanäppäimet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
@@ -760,7 +760,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation>Tiedosto&amp;nimen mukaan</translation>
+        <translation>&amp;Nimi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
@@ -770,7 +770,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation>&amp;Muokkausajan mukaan</translation>
+        <translation>&amp;Muokkaus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
@@ -780,7 +780,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation>&amp;Luomisajan mukaan</translation>
+        <translation>&amp;Luotu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
@@ -790,7 +790,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation>Tiedosto&amp;koon mukaan</translation>
+        <translation>&amp;Koko</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
@@ -800,7 +800,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation>Tiedostot&amp;yypin mukaan</translation>
+        <translation>&amp;Tyyppi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
