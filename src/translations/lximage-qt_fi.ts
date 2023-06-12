@@ -344,7 +344,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;Tietoa</translation>
+        <translation>&amp;Tietoja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
