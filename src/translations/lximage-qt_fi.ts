@@ -219,7 +219,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1294"/>
         <source>Thumbnails</source>
-        <translation>Pikkukuvat</translation>
+        <translation>Pienoiskuvat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1389"/>
@@ -602,7 +602,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show Thumbnails</source>
-        <translation>Näytä pikkukuvat</translation>
+        <translation>Näytä pienoiskuvat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="532"/>
@@ -853,7 +853,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Pikkukuvatiedoston kokoraja:</translation>
+        <translation>Pienoiskuvatiedoston kokoraja:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -898,7 +898,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Pikkukuvan mitat:</translation>
+        <translation>Pienoiskuvan mitat:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -913,7 +913,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Näytä pikkukuvapalkki oletuksena</translation>
+        <translation>Näytä pienoiskuvapalkki oletuksena</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
