@@ -4,7 +4,7 @@
 
 LXImage-Qt is the Qt port of LXImage, a simple and fast image viewer.
 
-![LXImage-qt](lximage-qt.png)
+![LXImage-Qt](lximage-qt.png)
 
 
 ## Features
