@@ -79,7 +79,11 @@ include(LXQtTranslateDesktop)
 
 file(GLOB desktop_files_in ../data/*.desktop.in)
 lxqt_translate_desktop(desktop_files SOURCES ${desktop_files_in} USE_YAML)
-install(FILES ${desktop_files} DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+
+# Follow freedesktop specifications
+set(DNS_DESKTOP_FILENAME "org.lxqt_project.Lximage_Qt.desktop")
+
+install(FILES ${desktop_files} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications RENAME ${DNS_DESKTOP_FILENAME})
 
 add_executable(lximage-qt
     ${lximage-qt_SRCS}
