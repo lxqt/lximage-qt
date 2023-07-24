@@ -592,7 +592,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>&amp;Delete</source>
-        <translation>&amp; Usuń</translation>
+        <translation>&amp;Usuń</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
