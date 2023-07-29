@@ -232,7 +232,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Xóa</translation>
+        <translation>Xóa (&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -306,7 +306,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="54"/>
         <source>ImageShack</source>
-        <translation type="unfinished">ImageShack</translation>
+        <translation>ImageShack</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
@@ -339,12 +339,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation>Tập tin được mở gần đây</translation>
+        <translation>Tập tin được mở gần đây (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>Về</translation>
+        <translation>Thông tin (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -355,22 +355,22 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>Mở bằng...</translation>
+        <translation>Mở bằng (&amp;W)...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sắp xếp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>Lối tắt ẩn</translation>
+        <translation>Lối tắt ẩn (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Open…</source>
-        <translation>Mở…</translation>
+        <translation>Mở (&amp;O)…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
@@ -380,7 +380,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Reload File</source>
-        <translation>Mở lại tập tin</translation>
+        <translation>Mở lại Tập tin (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
@@ -390,7 +390,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>&amp;Save</source>
-        <translation>Lưu lại</translation>
+        <translation>Lưu lại (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -400,7 +400,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation>Lưu nơi khác</translation>
+        <translation>Lưu nơi khác (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -410,7 +410,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>&amp;Close</source>
-        <translation>Đóng</translation>
+        <translation>Đóng (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -420,7 +420,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;In</source>
-        <translation>Thu nhỏ</translation>
+        <translation>Phóng to (&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -430,7 +430,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>Zoom &amp;Out</source>
-        <translation>Phóng to</translation>
+        <translation>Thu nhỏ (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
@@ -440,18 +440,18 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>Chép vào bộ điệm</translation>
+        <translation>Chép vào Bộ nhớ đệm (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="334"/>
         <source>Next File</source>
-        <translation>Tập tin tiếp theo</translation>
+        <translation>Tập tin Tiếp theo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
         <source>PgDown</source>
-        <translation>Cuộn xuống</translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
@@ -462,7 +462,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>PgUp</source>
-        <translation>Cuộn lên</translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
@@ -477,12 +477,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>&amp;Fit</source>
-        <translation>Làm vừa, khớp</translation>
+        <translation>Vừa khớp (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation>Xoay chiều đồng hồ</translation>
+        <translation>Xoay Theo chiều Đồng hồ (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
@@ -492,7 +492,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation>Xoay ngược đồng hồ</translation>
+        <translation>Xoay Ngược chiều Đồng hồ (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
@@ -502,12 +502,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <source>P&amp;references</source>
-        <translation>Tham chiếu</translation>
+        <translation>Tùy chọn (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>&amp;Print</source>
-        <translation>In</translation>
+        <translation>In (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
@@ -522,7 +522,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>Home</source>
-        <translation>Gốc</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
@@ -532,12 +532,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>End</source>
-        <translation>Kết thúc</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="449"/>
         <source>&amp;New Window</source>
-        <translation>Cửa sổ mới</translation>
+        <translation>Cửa sổ mới (&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
@@ -547,7 +547,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Lật ngang</translation>
+        <translation>Lật ngang (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="460"/>
@@ -562,7 +562,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>F&amp;ull Screen</source>
-        <translation>Toàn màn hình</translation>
+        <translation>Toàn màn hình (&amp;U)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
@@ -572,7 +572,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Lật dọc</translation>
+        <translation>Lật dọc (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
@@ -582,22 +582,22 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>Dán từ bộ điệm</translation>
+        <translation>Dán từ Bộ nhớ đệm (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Slide Show</source>
-        <translation>Trình chiếu</translation>
+        <translation>Trình chiếu (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>&amp;Delete</source>
-        <translation>Xóa</translation>
+        <translation>Xóa (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>Del</source>
-        <translation>Xóa</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
@@ -617,7 +617,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Open &amp;Directory</source>
-        <translation>Mở thư mục</translation>
+        <translation>Mở thư mục (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="549"/>
@@ -692,7 +692,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="647"/>
         <source>Draw incrementing numbers</source>
-        <translation>Vẽ số tăng</translation>
+        <translation>Vẽ các số tăng dần</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
@@ -708,7 +708,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="669"/>
         <source>&amp;Main Toolbar</source>
-        <translation>Thanh công cụ chính</translation>
+        <translation>Thanh công cụ chính (&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="672"/>
@@ -718,7 +718,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>Chú thích thanh công cụ</translation>
+        <translation>Thanh công cụ chú thích (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="691"/>
@@ -734,7 +734,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Chép đường dẫn</translation>
+        <translation>Chép đường dẫn (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
@@ -760,62 +760,62 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Tên Tập tin (&amp;B)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Tên Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Thời gian Sửa đổi (&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Thời gian Sửa đổi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Thời gian Tạo (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Thời gian Tạo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Kích thước Tập tin (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Kích thước Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Kiểu Tập tin (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Theo Kiểu Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation>Tập tin</translation>
+        <translation>Tập tin (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation>Trợ giúp</translation>
+        <translation>Trợ giúp (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
@@ -825,12 +825,12 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation>Xem</translation>
+        <translation>Xem (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation>Chỉnh sửa</translation>
+        <translation>Chỉnh sửa (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
@@ -903,7 +903,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation>Dùng thùng rác (Trash) hệ thống (không hỏi lại)</translation>
+        <translation>Dùng Thùng rác hệ thống (và không hỏi lại)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
