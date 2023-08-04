@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Dessa hårdkodade genvägarna kommer att skrivas över om de också tilldelas till andra handlingar i Inställningar → Genvägar.</translation>
+        <translation>Dessa hårdkodade genvägar kommer att åsidosättas till förmån för genvägarna som är angivna under Inställningar → Genvägar.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -275,7 +275,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Kan inte spara bild med detta bildformat!</translation>
+        <translation>Det går inte att spara med detta bildformat!</translation>
     </message>
 </context>
 <context>
@@ -868,7 +868,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation>Maximalt antal senaste filer:</translation>
+        <translation>Maximalt antal av senaste filer:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
