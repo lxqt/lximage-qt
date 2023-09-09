@@ -27,7 +27,6 @@
 #include <QPushButton>
 #include <QVariant>
 
-#include "imageshackprovider.h"
 #include "imgbbprovider.h"
 #include "imgurprovider.h"
 #include "provider.h"
@@ -38,7 +37,6 @@ using namespace LxImage;
 
 ImgurProvider gImgurProvider;
 ImgBBProvider gImgBBProvider;
-ImageShackProvider gImageShackProvider;
 
 UploadDialog::UploadDialog(QWidget *parent, const QString &filename)
     : QDialog(parent),
@@ -51,7 +49,6 @@ UploadDialog::UploadDialog(QWidget *parent, const QString &filename)
     // Populate the list of providers
     ui.providerComboBox->addItem(tr("Imgur"), QVariant::fromValue(&gImgurProvider));
     ui.providerComboBox->addItem(tr("ImgBB"), QVariant::fromValue(&gImgBBProvider));
-    ui.providerComboBox->addItem(tr("ImageShack"), QVariant::fromValue(&gImageShackProvider));
 
     updateUi();
 }
