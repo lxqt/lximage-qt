@@ -53,7 +53,7 @@ Settings::Settings():
   forceZoomFit_(false),
   smoothOnZoom_(true),
   useTrash_(true),
-  colorSpace_(0),
+  colorSpace_(1),
   sorting_(Fm::FolderModel::ColumnFileName) {
 }
 
@@ -87,7 +87,7 @@ bool Settings::load() {
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
   smoothOnZoom_ = settings.value(QStringLiteral("SmoothOnZoom"), true).toBool();
   useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
-  colorSpace_ = settings.value(QStringLiteral("ColorSpace"), 0).toInt();
+  colorSpace_ = settings.value(QStringLiteral("ColorSpace"), 1).toInt();
   prefSize_ = settings.value(QStringLiteral("PrefSize"), QSize(400, 400)).toSize();
   settings.endGroup();
 
