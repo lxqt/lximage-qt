@@ -248,6 +248,13 @@ public:
     useTrash_ = on;
   }
 
+  int colorSpace() const {
+    return colorSpace_;
+  }
+  void setColorSpace(int cs) {
+    colorSpace_ = cs;
+  }
+
   QSize getPrefSize() const {
     return prefSize_;
   }
@@ -305,6 +312,7 @@ private:
   bool forceZoomFit_;
   bool smoothOnZoom_;
   bool useTrash_;
+  int colorSpace_;
 
   QSize prefSize_;
 
