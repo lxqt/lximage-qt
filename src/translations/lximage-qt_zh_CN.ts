@@ -858,7 +858,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation>默认背景颜色：</translation>
+        <translation>默认背景颜色:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
