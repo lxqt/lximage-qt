@@ -27,6 +27,7 @@
 #include <QImage>
 #include <QImageReader>
 #include <QImageWriter>
+#include <QColorSpace>
 #include <QClipboard>
 #include <QPainter>
 #include <QPrintDialog>
@@ -728,8 +729,15 @@ void MainWindow::onImageLoaded() {
 
     loadJob_ = nullptr; // the job object will be freed later automatically
 
+    Settings& settings = static_cast<Application*>(qApp)->settings();
+
+    int cs = settings.colorSpace();
+    if(cs > 0 && cs < 6) {
+      image_.convertToColorSpace(QColorSpace(static_cast<QColorSpace::NamedColorSpace>(cs)));
+    }
+
     // set image zoom, like in loadImage()
-    if(static_cast<Application*>(qApp)->settings().forceZoomFit()) {
+    if(settings.forceZoomFit()) {
       ui.actionZoomFit->setChecked(true);
     }
     ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());

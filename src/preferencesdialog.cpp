@@ -90,6 +90,13 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.smoothOnZoomBox->setChecked(settings.smoothOnZoom());
   ui.useTrashBox->setChecked(settings.useTrash());
 
+  oldColorSpace_ = qBound(0, settings.colorSpace(), 5);
+  ui.colorSpaceComboBox->setCurrentIndex(oldColorSpace_);
+  connect(ui.colorSpaceComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
+    Settings& settings = static_cast<Application*>(qApp)->settings();
+    settings.setColorSpace(index);
+  });
+
   ui.exifDataBox->setChecked(settings.showExifData());
   ui.thumbnailBox->setChecked(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
@@ -443,6 +450,11 @@ void PreferencesDialog::done(int r) {
   // remember size
   Settings& settings = static_cast<Application*>(qApp)->settings();
   settings.setPrefSize(size());
+
+  if(r == QDialog::Rejected) {
+    // changes in the color space were applied for the user to see their effects
+    settings.setColorSpace(oldColorSpace_);
+  }
 
   QDialog::done(r);
   deleteLater();

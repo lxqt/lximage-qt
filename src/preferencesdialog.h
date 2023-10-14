@@ -85,6 +85,7 @@ private:
   QHash<QString, QString> allShortcuts_; // only used for checking ambiguity
   QString permanentWarning_;
   QTimer *warningTimer_;
+  int oldColorSpace_;
 };
 
 }
