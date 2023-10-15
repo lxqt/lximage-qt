@@ -792,7 +792,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation>Nach Datei$größe</translation>
+        <translation>Nach Datei&amp;größe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
