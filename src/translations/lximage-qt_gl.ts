@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">Fin</translation>
+        <translation>Fin</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -283,12 +283,12 @@ no modo de edición.</translation>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished">Tamaño:</translation>
+        <translation>Tamaño:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished">Ruta:</translation>
+        <translation>Ruta:</translation>
     </message>
 </context>
 <context>
@@ -432,7 +432,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -698,7 +698,7 @@ no modo de edición.</translation>
         <location filename="../mainwindow.ui" line="655"/>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Menubar</source>
-        <translation type="unfinished">Barra de menú</translation>
+        <translation>Barra de menú</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
@@ -713,7 +713,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="672"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished">Barra de ferramentas principal</translation>
+        <translation>Barra de ferramentas principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
@@ -739,7 +739,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
         <source>Copy path</source>
-        <translation type="unfinished">Copiar a ruta</translation>
+        <translation>Copiar a ruta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -750,7 +750,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="722"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
@@ -765,7 +765,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Polo nome do ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
@@ -775,7 +775,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por hora de modificación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
@@ -785,7 +785,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Por Tempo de Creación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -795,7 +795,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Por tamaño do ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
@@ -805,7 +805,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Por tipo de ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -893,7 +893,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"> MiB</translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -908,7 +908,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished">Xanela</translation>
+        <translation>Xanela</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -948,12 +948,12 @@ no modo de edición.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="234"/>
         <source>Action</source>
-        <translation type="unfinished">Acción</translation>
+        <translation>Acción</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="239"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Atallo</translation>
+        <translation>Atallo</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="247"/>
@@ -971,7 +971,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="989"/>
         <source>Error</source>
-        <translation type="unfinished">Erro</translation>
+        <translation>Erro</translation>
     </message>
 </context>
 <context>
@@ -984,12 +984,12 @@ no modo de edición.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished">Largo</translation>
+        <translation>Largo</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished">Alto</translation>
+        <translation>Alto</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
@@ -1005,7 +1005,7 @@ no modo de edición.</translation>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"> px</translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
@@ -1059,7 +1059,7 @@ no modo de edición.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"> seg</translation>
+        <translation> seg</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
