@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>A simple and fast image viewer</source>
         <translation>Basit ve hızlı bir resim görüntüleyici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>Copyright (C) </source>
         <translation>Telif hakkı (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>2013-2021</source>
         <translation>2013-2021</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="284"/>
         <source>LXQt Project</source>
         <translation>LXQt Projesi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
         <translation>Geliştirme: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
         <translation>Yazar: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="516"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="517"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Image files (%1)</source>
         <translation>Resim dosyaları (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Open directory</source>
         <translation>Dizin aç</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="839"/>
+        <location filename="../mainwindow.cpp" line="847"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Yükleniyor...) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="845"/>
+        <location filename="../mainwindow.cpp" line="853"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Yükleme Başarısız Oldu) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="851"/>
+        <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="897"/>
+        <location filename="../mainwindow.cpp" line="905"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1294"/>
+        <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1389"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
         <translation>EXIF Verileri</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 için bir değiştirici tuş kullanın.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
         <translation>Dip</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="207"/>
+        <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
         <translation>Üst</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="208"/>
+        <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="334"/>
+        <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Uyarı: Belirsiz kısayol algılandı!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="351"/>
+        <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Belirsiz kısayol kabul edilmiyor.&lt;/b&gt;</translation>
     </message>
@@ -871,12 +871,12 @@ için bir değiştirici tuş kullanın.</translation>
         <translation>Son kullanılan en fazla dosya sayısı:</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
         <translation>Slayt gösterisi aralığı (saniye):</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="193"/>
+        <location filename="../preferencesdialog.ui" line="242"/>
         <source>Show image outline by default</source>
         <translation>Her zaman resim dış sınırını göster</translation>
     </message>
@@ -886,7 +886,7 @@ için bir değiştirici tuş kullanın.</translation>
         <translation>Her zaman dipnot araç çubuğunu göster</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="200"/>
+        <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
         <translation>Gezinirken resimleri sığdır</translation>
     </message>
@@ -936,27 +936,69 @@ için bir değiştirici tuş kullanın.</translation>
         <translation>Resim</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="207"/>
+        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="190"/>
+        <source>May work only with images which have valid color spaces.
+Reload current image to see the effect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="183"/>
+        <source>Color space:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="195"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="200"/>
+        <source>sRGB (supported by most monitors)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="205"/>
+        <source>Linear sRGB (linear gamma)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="210"/>
+        <source>Adobe RGB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
+        <source>DisplayP3 (wide-gamut screens)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="220"/>
+        <source>ProPhotoRgb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
         <translation>Yakınlaştırma sırasında pürüzsüz görüntü</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="215"/>
+        <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
         <translation>Kısayollar</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="234"/>
+        <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
         <translation>Eylem</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="239"/>
+        <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
         <translation>Kısayol</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="247"/>
+        <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
         <translation>Varsayılan</translation>
     </message>
@@ -969,7 +1011,7 @@ için bir değiştirici tuş kullanın.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="989"/>
+        <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>

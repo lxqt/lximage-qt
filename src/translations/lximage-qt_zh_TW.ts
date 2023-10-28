@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>A simple and fast image viewer</source>
         <translation>簡單快速的圖片檢視器</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>Copyright (C) </source>
         <translation>版權所有 (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>2013-2021</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="284"/>
         <source>LXQt Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="516"/>
         <source>Open File</source>
         <translation>開啟檔案</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="517"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Image files (%1)</source>
         <translation>影像檔案 (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Open directory</source>
         <translation>打開資料夾</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Save File</source>
         <translation>儲存檔案</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="839"/>
+        <location filename="../mainwindow.cpp" line="847"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (讀取中...) - 看圖軟體</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="845"/>
+        <location filename="../mainwindow.cpp" line="853"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (讀取失敗) - 看圖軟體</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="851"/>
+        <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - 看圖軟體</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="897"/>
+        <location filename="../mainwindow.cpp" line="905"/>
         <source>[*]Image Viewer</source>
         <translation>[*]看圖軟體</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1294"/>
+        <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
         <translation>縮圖</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1389"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
         <translation>EXIF資訊</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 以清除快捷鍵。</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
         <translation>↓</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="207"/>
+        <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
         <translation>↑</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="208"/>
+        <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
         <translation>←</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="334"/>
+        <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;警告：重複的快捷鍵！&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="351"/>
+        <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;無法處理重複的快捷鍵。&lt;/b&gt;</translation>
     </message>
@@ -871,12 +871,12 @@ in the editing mode.</source>
         <translation>最近使用的檔案的數量上限:</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
         <translation>幻燈片放映間隔（秒）:</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="193"/>
+        <location filename="../preferencesdialog.ui" line="242"/>
         <source>Show image outline by default</source>
         <translation>預設顯示圖片的框線</translation>
     </message>
@@ -886,7 +886,7 @@ in the editing mode.</source>
         <translation>預設顯示註釋工具列</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="200"/>
+        <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
         <translation>瀏覽時自動調整圖片大小</translation>
     </message>
@@ -936,27 +936,69 @@ in the editing mode.</source>
         <translation>圖片</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="207"/>
+        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="190"/>
+        <source>May work only with images which have valid color spaces.
+Reload current image to see the effect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="183"/>
+        <source>Color space:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="195"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="200"/>
+        <source>sRGB (supported by most monitors)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="205"/>
+        <source>Linear sRGB (linear gamma)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="210"/>
+        <source>Adobe RGB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
+        <source>DisplayP3 (wide-gamut screens)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="220"/>
+        <source>ProPhotoRgb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
         <translation>縮放圖片時平滑化</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="215"/>
+        <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
         <translation>快捷鍵</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="234"/>
+        <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
         <translation>動作</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="239"/>
+        <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
         <translation>快捷鍵</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="247"/>
+        <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
         <translation>預設值</translation>
     </message>
@@ -969,7 +1011,7 @@ in the editing mode.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="989"/>
+        <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
         <translation>錯誤</translation>
     </message>
