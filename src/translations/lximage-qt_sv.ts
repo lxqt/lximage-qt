@@ -141,88 +141,88 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="280"/>
         <source>A simple and fast image viewer</source>
         <translation>En snabb och enkel bildvisare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>Copyright (C) </source>
         <translation>Copyright (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="282"/>
         <source>2013-2021</source>
         <translation>2013-2021</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="284"/>
         <source>LXQt Project</source>
         <translation>LXQt-projektet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
         <translation>Utveckling: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
         <translation>Författare: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="516"/>
         <source>Open File</source>
         <translation>Öppna fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="517"/>
+        <location filename="../mainwindow.cpp" line="552"/>
         <source>Image files (%1)</source>
         <translation>Bildfiler (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Save File</source>
         <translation>Spara fil</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1294"/>
+        <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
         <translation>Tumnaglar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1389"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
         <translation>EXIF Data</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="839"/>
+        <location filename="../mainwindow.cpp" line="847"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Laddar...) - Bildvisare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="845"/>
+        <location filename="../mainwindow.cpp" line="853"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Det gick inte att ladda) - Bildvisare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="851"/>
+        <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Bildvisare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="897"/>
+        <location filename="../mainwindow.cpp" line="905"/>
         <source>[*]Image Viewer</source>
         <translation>[*] Bildvisare</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="530"/>
         <source>Open directory</source>
         <translation>Öppna katalog</translation>
     </message>
@@ -245,27 +245,27 @@ in the editing mode.</source>
 en genväg i ändringsläge.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="206"/>
+        <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
         <translation>Nedre</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="207"/>
+        <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
         <translation>Övre</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="208"/>
+        <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
         <translation>Vänster</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="334"/>
+        <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Varning: tvetydig genväg upptäckt!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="351"/>
+        <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Tvetydig genväg accepteras inte.&lt;/b&gt;</translation>
     </message>
@@ -871,12 +871,12 @@ en genväg i ändringsläge.</translation>
         <translation>Maximalt antal av senaste filer:</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
         <translation>Bildspelintervall (sekunder):</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="193"/>
+        <location filename="../preferencesdialog.ui" line="242"/>
         <source>Show image outline by default</source>
         <translation>Visa bildkontur som standard</translation>
     </message>
@@ -886,7 +886,7 @@ en genväg i ändringsläge.</translation>
         <translation>Visa verktygsfältet för annoteringar som standard</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="200"/>
+        <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
         <translation>Anpassa bilder vid navigering</translation>
     </message>
@@ -936,27 +936,69 @@ en genväg i ändringsläge.</translation>
         <translation>Bild</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="207"/>
+        <location filename="../preferencesdialog.ui" line="179"/>
+        <location filename="../preferencesdialog.ui" line="190"/>
+        <source>May work only with images which have valid color spaces.
+Reload current image to see the effect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="183"/>
+        <source>Color space:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="195"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="200"/>
+        <source>sRGB (supported by most monitors)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="205"/>
+        <source>Linear sRGB (linear gamma)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="210"/>
+        <source>Adobe RGB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="215"/>
+        <source>DisplayP3 (wide-gamut screens)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="220"/>
+        <source>ProPhotoRgb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
         <translation>Mjuka bilder vid förstoring</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="215"/>
+        <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
         <translation>Genvägar</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="234"/>
+        <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
         <translation>Handling</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="239"/>
+        <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
         <translation>Genväg</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.ui" line="247"/>
+        <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
@@ -969,7 +1011,7 @@ en genväg i ändringsläge.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="989"/>
+        <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
         <translation>Fel</translation>
     </message>
