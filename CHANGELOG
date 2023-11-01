@@ -1,3 +1,9 @@
+lximage-qt-1.4.0 / 2023-11-05
+==============================
+ * Added minimal support for color spaces.
+ * Removed ImageShack upload option (ImageShack requires a paid subscription now).
+ * Replaced instances of 'LXImage' with 'LXImage-Qt' in desktop entries.
+
 lximage-qt-1.3.0 / 2023-04-15
 ==============================
  * Added a note on `kimageformats` to README.
