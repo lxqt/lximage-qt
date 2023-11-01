@@ -27,8 +27,6 @@ set(lximage-qt_SRCS
     mrumenu.cpp
     statusbar.cpp
 
-    upload/imageshackprovider.cpp
-    upload/imageshackupload.cpp
     upload/imgbbprovider.cpp
     upload/imgbbupload.cpp
     upload/imgurprovider.cpp
