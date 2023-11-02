@@ -940,42 +940,43 @@ için bir değiştirici tuş kullanın.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Yalnızca geçerli renk aralığına sahip görüntülerle çalışabilir.
+Etkiyi görmek için mevcut resmi yeniden yükleyin.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk aralığı:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (çoğu monitör tarafından desteklenir)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Doğrusal sRGB (doğrusal gama)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (geniş gamlı ekranlar)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
