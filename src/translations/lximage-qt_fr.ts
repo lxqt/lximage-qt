@@ -115,14 +115,6 @@
     </message>
 </context>
 <context>
-    <name>LxImage::ImageShackUpload</name>
-    <message>
-        <location filename="../upload/imageshackupload.cpp" line="50"/>
-        <source>unknown error response</source>
-        <translation>réponse : erreur inconnue</translation>
-    </message>
-</context>
-<context>
     <name>LxImage::ImgBBUpload</name>
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
@@ -168,12 +160,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
-        <translation>Développement : </translation>
+        <translation>Développement&#xa0;: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
-        <translation>Auteur : </translation>
+        <translation>Auteur&#xa0;: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="516"/>
@@ -294,37 +286,32 @@ en mode édition.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="52"/>
+        <location filename="../upload/uploaddialog.cpp" line="50"/>
         <source>Imgur</source>
         <translation>Imgur (hébergement d&apos;images)</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="53"/>
+        <location filename="../upload/uploaddialog.cpp" line="51"/>
         <source>ImgBB</source>
         <translation>ImgBB (hébergement d&apos;images)</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="54"/>
-        <source>ImageShack</source>
-        <translation>ImageShack (hébergement d&apos;images)</translation>
-    </message>
-    <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
         <translation>Démarrer</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
         <translation>Arrêter</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="143"/>
+        <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="150"/>
+        <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
@@ -858,12 +845,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature :</translation>
+        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature :</translation>
+        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
