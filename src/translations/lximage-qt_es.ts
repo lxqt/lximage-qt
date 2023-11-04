@@ -115,14 +115,6 @@
     </message>
 </context>
 <context>
-    <name>LxImage::ImageShackUpload</name>
-    <message>
-        <location filename="../upload/imageshackupload.cpp" line="50"/>
-        <source>unknown error response</source>
-        <translation>respuesta de error desconocido</translation>
-    </message>
-</context>
-<context>
     <name>LxImage::ImgBBUpload</name>
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
@@ -209,7 +201,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
+        <translation>[*]%1 (%2&#x202f;×&#x202f;%3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="905"/>
@@ -294,37 +286,32 @@ un atajo en el modo de edición.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="52"/>
+        <location filename="../upload/uploaddialog.cpp" line="50"/>
         <source>Imgur</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="53"/>
+        <location filename="../upload/uploaddialog.cpp" line="51"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="54"/>
-        <source>ImageShack</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
         <translation>Empezar</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="143"/>
+        <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="150"/>
+        <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>

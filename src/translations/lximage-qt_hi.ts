@@ -115,14 +115,6 @@
     </message>
 </context>
 <context>
-    <name>LxImage::ImageShackUpload</name>
-    <message>
-        <location filename="../upload/imageshackupload.cpp" line="50"/>
-        <source>unknown error response</source>
-        <translation>अज्ञात त्रुटि प्रतिक्रिया</translation>
-    </message>
-</context>
-<context>
     <name>LxImage::ImgBBUpload</name>
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
@@ -294,37 +286,32 @@ in the editing mode.</source>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="52"/>
+        <location filename="../upload/uploaddialog.cpp" line="50"/>
         <source>Imgur</source>
         <translation type="unfinished">Imgur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="53"/>
+        <location filename="../upload/uploaddialog.cpp" line="51"/>
         <source>ImgBB</source>
         <translation type="unfinished">ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="54"/>
-        <source>ImageShack</source>
-        <translation type="unfinished">ImageShack</translation>
-    </message>
-    <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
         <translation>आरंभ</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
         <translation>रुकें</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="143"/>
+        <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
         <translation>बंद करें</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="150"/>
+        <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
