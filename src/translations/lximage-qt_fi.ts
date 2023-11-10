@@ -927,8 +927,8 @@ muokkaustilassa.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished">Kuvan täytyy käyttää kelvollista väriavaruutta, että se voidaan näyttää.
-Lue kuva uudelleen nähdäksesi vaikutuksen.</translation>
+        <translation>Kuvan täytyy käyttää kelvollista väriavaruutta, että se voidaan näyttää.
+Lataa kuva uudelleen nähdäksesi vaikutuksen.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>

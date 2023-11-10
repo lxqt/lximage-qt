@@ -927,12 +927,13 @@ una drecera en el mode d&apos;edició.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pot funcionar només amb imatges que tinguin espais de color vàlids.
+Torna a carregar la imatge actual per veure l&apos;efecte.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Espai de color:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
@@ -942,12 +943,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (admès per la majoria de monitors)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB lineal (gamma lineal)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
@@ -957,7 +958,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (pantalles de gamma àmplia)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
