@@ -145,7 +145,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>Copyright (C) </source>
-        <translation>Derechos de autor (C)</translation>
+        <translation>Derechos de autor (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2&#x202f;×&#x202f;%3). Visor de imágenes</translation>
+        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="905"/>
