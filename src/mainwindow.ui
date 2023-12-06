@@ -409,6 +409,10 @@
    </property>
   </action>
   <action name="actionPrint">
+   <property name="icon">
+    <iconset theme="document-print">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>&amp;Print</string>
    </property>
@@ -453,6 +457,10 @@
    </property>
   </action>
   <action name="actionFlipHorizontal">
+   <property name="icon">
+    <iconset theme="object-flip-horizontal">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>Flip &amp;Horizontally</string>
    </property>
@@ -481,6 +489,10 @@
    </property>
   </action>
   <action name="actionFlipVertical">
+   <property name="icon">
+    <iconset theme="object-flip-vertical">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>Flip &amp;Vertically</string>
    </property>
@@ -533,6 +545,10 @@
    </property>
   </action>
   <action name="actionFileProperties">
+   <property name="icon">
+    <iconset theme="document-properties">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>File Properties</string>
    </property>

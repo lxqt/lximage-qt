@@ -46,7 +46,7 @@ MruMenu::MruMenu(QWidget *parent)
     mSeparator->setVisible(!mFilenames.empty());
 
     // Add the clear action and disable it if there are no items in the list
-    mClearAction = new QAction(tr("&Clear"));
+    mClearAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-clear")), tr("&Clear"));
     mClearAction->setEnabled(!mFilenames.empty());
     connect(mClearAction, &QAction::triggered, this, &MruMenu::onClearTriggered);
     addAction(mClearAction);
