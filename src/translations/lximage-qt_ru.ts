@@ -900,7 +900,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Показывать эскизы по умолчанию</translation>
+        <translation>По умолчанию показывать эскизы в доке</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
@@ -953,7 +953,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation> Adobe RGB</translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -963,7 +963,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation> ProPhotoRgb</translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
@@ -1035,7 +1035,7 @@ Reload current image to see the effect.</source>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation> пикс</translation>
+        <translation> пкс</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
