@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੁਕਵੇਂ ਸ਼ਾਰਟਕੱਟ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -16,74 +16,74 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸ਼ਾਰਟਕੱਟ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਾਰਵਾਈ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Ese</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿੰਡੋ ਬੰਦ ਕਰੋ ਜਾਂ ਪੂਰੀ ਸਕਰੀਨ ਮੋਡ ਵਿੱਚ ਬਾਹਰ ਆਓ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੱਜਾ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਗਲਾ ਚਿੱਤਰ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਪੇਸ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਖਰੀ ਚਿੱਤਰ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੱਬੇ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਿਛਲਾ ਚਿੱਤਰ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>ਬੈਕਸਪੇਸ</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਹਿਲਾਂ ਚਿੱਤਰ</translation>
     </message>
 </context>
 <context>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੂਰੀ ਸਕਰੀਨ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ (ਟਾਇਲਿੰਗ ਵਿੰਡੋ ਮੈਨੇਜਰ ਨਾਲ ਫਾਇਦੇਮੰਦ ਹੈ)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>ਡਾਇ</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਣਪਛਾਤਾ ਗਲਤੀ ਜਵਾਬ</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਣਪਛਾਤਾ ਗਲਤੀ ਜਵਾਬ</translation>
     </message>
 </context>
 <context>
@@ -135,83 +135,83 @@
     <message>
         <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇਸ ਬਾਰੇ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="280"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਰਲ ਅਤੇ ਤੇਜ਼ ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਾਪੀਰਾਈਟ (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="284"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt ਪਰੋਜੈਕਟ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿਕਾਸ: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੇਖਕ: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="516"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="517"/>
         <location filename="../mainwindow.cpp" line="552"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਿੱਤਰ ਫਾਇਲਾਂ (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="530"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>ਡਾਇਰੈਕਟਰੀ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਸੰਭਾਲੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="847"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="853"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (ਲੋਡ ਕਰਨ ਲਈ ਅਸਫ਼ਲ) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="905"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>ਥੰਮਨੇਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮਿਟਾਓ(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -238,17 +238,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹੇਠਾਂ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>ਉੱਤੇ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੱਬੇ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="341"/>
@@ -266,7 +266,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇਸ ਚਿੱਤਰ ਫਾਰਮੈਟ ਵਿੱਚ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ!</translation>
     </message>
 </context>
 <context>
@@ -274,12 +274,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਕਾਰ:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮਾਰਗ:</translation>
     </message>
 </context>
 <context>
@@ -297,22 +297,22 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸ਼ੁਰੂ</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>ਰੋਕੋ</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>ਗਲਤੀ</translation>
     </message>
 </context>
 <context>
@@ -320,7 +320,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -331,7 +331,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇਸ ਬਾਰੇ(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
@@ -341,7 +341,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੰਭਾਲੋ(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -351,7 +351,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>ਇੰਝ ਸੰਭਾਲੋ(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -361,7 +361,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>ਬੰਦ ਕਰੋ(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -371,12 +371,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>ਜ਼ੂਮ ਇਨ(&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>ਜ਼ੂਮ ਆਉਟ(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
@@ -386,19 +386,19 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="334"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਗਲੀ ਫਾਇਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਿਛਲੀ ਫਾਇਥ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
@@ -408,17 +408,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>...ਨਾਲ ਖੋਲ੍ਹੋ(&amp;W)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੱਜਰੀਆਂ ਖੋਲ੍ਹੀਆਂ ਫਾਇਲਾਂ(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੜੀਬੱਧ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -428,12 +428,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>...ਖੋਲ੍ਹੋ(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਮੁੜ-ਲੋਡ ਕਰੋ(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
@@ -453,7 +453,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅਸਲ ਆਕਾਰ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -463,12 +463,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਿੱਟ(&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੱਜੇ ਦਾਅ ਘੁੰਮਾਓ(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
@@ -478,7 +478,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੱਬੇ ਦਾਅ ਘੁੰਮਾਓ(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
@@ -488,12 +488,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਸੰਦਾਂ(&amp;r)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਰਿੰਟ(&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
@@ -503,27 +503,27 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਹਿਲੀ ਫਾਇਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="428"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>ਘਰ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="437"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਖਰੀ ਫਾਇਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="440"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="449"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>ਨਵੀਂ ਵਿੰਡੋ(&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
@@ -533,7 +533,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੇਟਵੇਂ ਰੂਪ ਵਿੱਚ ਪਲਟੋ(&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="460"/>
@@ -543,12 +543,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੂਰੀ ਸਕਰੀਨ(&amp;u)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
@@ -558,7 +558,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>ਲੰਬਕਾਰੀ ਪਲਟੋ(&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
@@ -568,17 +568,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਲਿੱਪਬੋਰਡ ਤੋਂ ਚੇਪੋ(&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਲਾਈਡ ਸ਼ੋਅ(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>ਹਟਾਓ(&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
@@ -588,7 +588,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>ਥੰਮਨੇਲ ਵੇਖਾਓ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="532"/>
@@ -598,12 +598,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>ਡਾਇਰੈਕਟਰੀ ਖੋਲ੍ਹੋ(&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="549"/>
@@ -613,12 +613,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅੱਪਲੋਡ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਿੱਤਰ ਅੱਪਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="564"/>
@@ -633,7 +633,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="584"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕੋਈ ਟੂਲ ਨਹੀਂ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="587"/>
@@ -643,17 +643,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="599"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>ਤੀਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="602"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>ਤੀਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="614"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਤੁਰਭੁਜ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="617"/>
@@ -663,7 +663,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="629"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚੱਕਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="632"/>
@@ -673,7 +673,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="644"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>ਨੰਬਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="647"/>
@@ -684,7 +684,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="655"/>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੇਨੂ-ਬਾਰ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
@@ -699,7 +699,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="672"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੁੱਖ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="680"/>
@@ -731,7 +731,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="716"/>
         <location filename="../mainwindow.ui" line="719"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>ਨਾਂ-ਬਦਲੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="722"/>
@@ -741,7 +741,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਕਾਰ ਬਦਲੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
@@ -751,7 +751,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਨਾਂ ਰਾਹੀਂ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
@@ -796,32 +796,32 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ(&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮਦਦ(&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>ਜਾਓ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵੇਖੋ(&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੋਧੋ(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>ਟੂਲਬਾਰ</translation>
     </message>
 </context>
 <context>
@@ -829,12 +829,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਸੰਦਾਂ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਈਕਾਨ ਥੀਮ:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
@@ -849,7 +849,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੂਰੀ ਸਕਰੀਨ ਦਾ ਬੈਕਗਰਾਉਂਡ ਰੰਗ:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -879,7 +879,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -894,7 +894,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵਿੰਡੋ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -919,7 +919,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਿੱਤਰ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
@@ -971,27 +971,27 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸ਼ਾਰਟਕੱਟ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਾਰਵਾਈ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸ਼ਾਰਟਕੱਟ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੂਲ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਮ</translation>
     </message>
 </context>
 <context>
@@ -999,7 +999,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>ਗਲਤੀ</translation>
     </message>
 </context>
 <context>
@@ -1007,39 +1007,39 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲੋ</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>ਚੌੜਾਈ</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>ਉਚਾਈ</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੌਜੂਦਾ ਆਕਾਰ:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਨਵਾਂ ਆਕਾਰ:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> ਪਿਕਸਲ</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
@@ -1052,7 +1052,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਕਰੀਨਸ਼ਾਟ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
@@ -1062,17 +1062,17 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖੇਤਰ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪੂਰੀ ਸਕਰੀਨ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>ਮੌਜੂਦਾ ਵਿੰਡੋ ਹੀ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
@@ -1087,12 +1087,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> ਸਕਿੰਟ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਦੇਰੂ:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
@@ -1105,12 +1105,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>ਅੱਪਲੋਡ</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>ਕਾਪੀ</translation>
     </message>
 </context>
 </TS>
