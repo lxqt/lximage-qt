@@ -934,27 +934,27 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Farbraum:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Keiner</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (von den meisten Monitoren unterstützt)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineares sRGB (lineares Gamma)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
