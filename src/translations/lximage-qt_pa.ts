@@ -216,7 +216,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF ਡਾਟਾ</translation>
     </message>
 </context>
 <context>
@@ -658,7 +658,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="617"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖਾਲੀ ਆਇਤ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="629"/>
@@ -668,7 +668,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="632"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖਾਲੀ ਚੱਕਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="644"/>
@@ -678,7 +678,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="647"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>ਵੱਧਦੇ ਨੰਬਰ ਵਾਹੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
@@ -710,7 +710,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="691"/>
         <location filename="../mainwindow.ui" line="694"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>ਖਾਕਾ ਵੇਖਾਓ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="697"/>
@@ -720,12 +720,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਾਥ ਕਾਪੀ ਕਰੋ(&amp;t)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>ਪਾਥ ਕਾਪੀ ਕਰੋ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="716"/>
@@ -746,7 +746,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="739"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਨਾਂ ਨਾਲ(&amp;B)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
@@ -756,42 +756,42 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੋਧਣ ਸਮੇਂ ਨਾਲ(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸੋਧਣ ਸਮੇਂ ਨਾਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>ਬਣਾਉਣ ਸਮੇਂ ਨਾਲ(&amp;r)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>ਬਣਾਉਣ ਸਮੇਂ ਨਾਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਆਕਾਰ ਨਾਲ(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਆਕਾਰ ਨਾਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਦੀ ਕਿਸਮ ਨਾਲ(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>ਫਾਇਲ ਦੀ ਕਿਸਮ ਨਾਲ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -844,7 +844,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਧਾਰਨ ਬੈਕਗਰਾਊਂਡ ਰੰਗ:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
@@ -859,7 +859,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਲਾਈਡ ਸ਼ੋਅ ਅੰਤਾਲ (ਸਕਿੰਟਾਂ ਵਿੱਚ):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
@@ -1044,7 +1044,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>ਆਕਾਰ ਅਨੁਪਾਤ ਬਣਾਈ ਰੱਖੋ</translation>
     </message>
 </context>
 <context>
@@ -1057,7 +1057,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>

@@ -11,9 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Enkola ey&apos;amapeesa agagonza emirimu etegekedwa wano mu ngeri ey&apos;enkalakkalira.
-Naye Singa amapeesa agali wano obeera ogawadde emirimu emirala nga okozesa
-Enteekateeka → Mapeesa agagonza emirimu, egyo gimenyawo ebitegekedwa wano.</translation>
+        <translation>By&apos;otegekera mu Enteekateeka → Mapeesa agagonza emirimu bidda mu kifo ky&apos;ebiri wano.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -235,7 +233,9 @@ Enteekateeka → Mapeesa agagonza emirimu, egyo gimenyawo ebitegekedwa wano.</tr
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Okugyamu amapeesa agatekedwa wano koona
+we gawandikidwa olyoke onyige limu ku mapeesa
+agafuula enkola ya gannaago.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="213"/>
@@ -861,7 +861,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Ekiseera ekifaananyi kye kimala nga kikulagibwa mu woleso (sikonda):</translation>
+        <translation>Ekiseera ekifaananyi kye kimala nga kikulagibwa mu mwoleso (sikonda):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
@@ -929,14 +929,14 @@ in the editing mode.</source>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
         <translation>Kino omugaso gwa kyo gukoma ku bifaananyi ebisangidwa
-nga birina engereka ya langi gye byajja nayo.
-Bw&apos;okyusa engereka ya langi wano ekifaanayi ddamu
+nga biriko mapu za langi ezitegeereka.
+Bw&apos;okyusa mapu ya langi wano ekifaanayi ddamu
 okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation>Engereka ya langi:</translation>
+        <translation>Mapu ya langi:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
@@ -946,17 +946,17 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation>eya sRGB (Entimbe eza kompyuta ezisinga zikolagana nayo)</translation>
+        <translation>sRGB (Entimbe eza kompyuta ezisinga zirina eno)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation>eya Linear sRGB (linear gamma)</translation>
+        <translation>Linear sRGB (linear gamma)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation>eya RGB eyakolebwa ba Adobe</translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -966,37 +966,37 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation>eya ProPhotoRgb</translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Seeteeza obujagalala ku bifaananayi ebizimbulukusidwa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Amapeesa agagonza emirimu</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Kikolwa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapeesa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaawo amapeesa agagonza emirimu aga bulijjo</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Ebikola wonna</translation>
     </message>
 </context>
 <context>
@@ -1004,7 +1004,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiremya</translation>
     </message>
 </context>
 <context>
@@ -1012,44 +1012,44 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Kyusa bunene bwa kifaananyi</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Mu bugazi</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Mu busimba</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obunene kakano:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunene obupya:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Tokyusa ngeragerana y&apos;obugazi n&apos;obusimba</translation>
     </message>
 </context>
 <context>
@@ -1057,52 +1057,52 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kukwata kifaananyi ky&apos;ebiri ku lutimbe</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwata ekifaananyi ky&apos;ebiri ku lutimbe</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekikwatibwa</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Lutimbe lwonna</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Ddirisa lya puloguramu eno lyokka</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Kitundu kya lutimbe</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwatiramu akasonga</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> Sikonda</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lindira:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwatiramu mutwe gw&apos;eddirisa</translation>
     </message>
 </context>
 <context>
@@ -1110,12 +1110,12 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Sindika</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwata koppi</translation>
     </message>
 </context>
 </TS>
