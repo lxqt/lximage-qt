@@ -135,7 +135,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
-        <translation>Ebifa ku LXimage-qt</translation>
+        <translation>Ebifa</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="280"/>
@@ -332,7 +332,7 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;Ebifa ku LXimage-qt</translation>
+        <translation>&amp;Ebifa ku LXImage-Qt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -813,12 +813,12 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation>&amp;Endabika</translation>
+        <translation>E&amp;ndabika</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Kyusa</translation>
+        <translation>K&amp;yusa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
