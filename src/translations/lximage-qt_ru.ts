@@ -880,7 +880,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation> МиБ</translation>
+        <translation> МБ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
