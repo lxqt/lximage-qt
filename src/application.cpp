@@ -180,7 +180,7 @@ void Application::newWindow(QStringList files, bool fullscreen) {
     window->showAndRaise();
   }
   else {
-    for(const QString& fileName : qAsConst(files)) {
+    for(const QString& fileName : std::as_const(files)) {
       window = createWindow(fullscreen);
       window->openImageFile(fileName);
 
