@@ -135,7 +135,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
-        <translation>Ebifa</translation>
+        <translation>Kwanjula</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="280"/>
@@ -332,7 +332,7 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;Ebifa ku LXQt-Archiver</translation>
+        <translation>&amp;Okwanjula</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
