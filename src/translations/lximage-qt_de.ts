@@ -929,7 +929,8 @@ im Bearbeitungsmodus zu löschen.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funktioniert nur bei Bildern mit einem gültigen Farbraum.
+ Laden Sie das aktuelle Bild neu, um den Effekt zu sehen.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
@@ -949,7 +950,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation>Lineares sRGB (lineares Gamma)</translation>
+        <translation>Standard RGB (linearer Farbraum)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
@@ -959,12 +960,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>Display-P3 (erweiterter Farbraum)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
