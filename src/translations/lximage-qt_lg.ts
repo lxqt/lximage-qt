@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>wazewo kiremya atategeerese</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>wazewo kiremya atategeerese</translation>
     </message>
 </context>
 <context>
@@ -332,7 +332,7 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;Ebifa ku LXImage-Qt</translation>
+        <translation>&amp;Ebifa ku LXQt-Archiver</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -635,7 +635,7 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="584"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta ebirambisibwa byonna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="587"/>
