@@ -31,9 +31,9 @@
 #include <QLabel>
 #include <QShortcut>
 
-#include <libfm-qt/foldermodel.h>
-#include <libfm-qt/proxyfoldermodel.h>
-#include <libfm-qt/filemenu.h>
+#include <libfm-qt6/foldermodel.h>
+#include <libfm-qt6/proxyfoldermodel.h>
+#include <libfm-qt6/filemenu.h>
 #include <gio/gio.h>
 
 #include "modelfilter.h"

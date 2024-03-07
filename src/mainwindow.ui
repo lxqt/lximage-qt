@@ -37,7 +37,7 @@
     <item>
      <widget class="LxImage::ImageView" name="view">
       <property name="renderHints">
-       <set>QPainter::Antialiasing|QPainter::HighQualityAntialiasing|QPainter::TextAntialiasing</set>
+       <set>QPainter::Antialiasing|QPainter::TextAntialiasing</set>
       </property>
       <property name="dragMode">
        <enum>QGraphicsView::ScrollHandDrag</enum>

@@ -22,7 +22,7 @@
 #define LXIMAGE_APPLICATION_H
 
 #include <QApplication>
-#include <libfm-qt/libfmqt.h>
+#include <libfm-qt6/libfmqt.h>
 #include "mainwindow.h"
 #include "settings.h"
 #include "preferencesdialog.h"

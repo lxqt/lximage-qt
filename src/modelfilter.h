@@ -21,7 +21,7 @@
 #ifndef LXIMAGE_MODELFILTER_H
 #define LXIMAGE_MODELFILTER_H
 
-#include <libfm-qt/proxyfoldermodel.h>
+#include <libfm-qt6/proxyfoldermodel.h>
 
 namespace LxImage {
 

@@ -308,7 +308,7 @@ void ImageView::rotateImage(bool clockwise) {
       // Since, in the case of SVG and GIF, annotations are not parts of the QImage and
       // because they might have been added at any time, they need to be transformed
       // by considering their previous transformations separately.
-      for(const auto& annotation : qAsConst(annotations)) {
+      for(const auto& annotation : std::as_const(annotations)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -346,7 +346,7 @@ void ImageView::flipImage(bool horizontal) {
         outlineItem_->setTransform(transform, false);
         outlineItem_->setTransform(prevTrans, true);
       }
-      for(const auto& annotation : qAsConst(annotations)) {
+      for(const auto& annotation : std::as_const(annotations)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -389,7 +389,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
         outlineItem_->setTransform(transform, false);
         outlineItem_->setTransform(prevTrans, true);
       }
-      for(const auto& annotation : qAsConst(annotations)) {
+      for(const auto& annotation : std::as_const(annotations)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -406,7 +406,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
         imageItem->paint(&painter, &opt);
         painter.restore();
         // draw annotations
-        for(const auto& annotation : qAsConst(annotations)) {
+        for(const auto& annotation : std::as_const(annotations)) {
           painter.save();
           painter.setTransform(annotation->transform());
           annotation->paint(&painter, &opt);
@@ -806,7 +806,7 @@ void ImageView::resetView() {
   // remove annotations
   if(!annotations.isEmpty()) {
     if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
-      for(const auto& annotation : qAsConst(annotations)) {
+      for(const auto& annotation : std::as_const(annotations)) {
         scene_->removeItem(annotation);
       }
       qDeleteAll(annotations.begin(), annotations.end());
