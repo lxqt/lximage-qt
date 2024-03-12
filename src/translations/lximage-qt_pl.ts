@@ -777,7 +777,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
         <source>By File &amp;Size</source>
-        <translation>Według rozmiaru pliku (&amp;S)</translation>
+        <translation>Według roz&amp;miaru pliku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
@@ -787,7 +787,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="783"/>
         <source>By File &amp;Type</source>
-        <translation>Według rodzaju pliku (&amp;T)</translation>
+        <translation>Według ro&amp;dzaju pliku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="786"/>
