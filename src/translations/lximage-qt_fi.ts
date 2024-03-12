@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Sulje ikkuna tai poistu kokoruututilasta</translation>
+        <translation>Sulje ikkuna tai poistu koko näytön tilasta</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="94"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation>Käynnistä kokoruututilassa (hyödyllinen laattanäkymiä hyödyntävissä ikkunanhallintamalleissa)</translation>
+        <translation>Käynnistä koko näytön tilassa (hyödyllinen laattanäkymiä hyödyntävissä ikkunanhallintamalleissa)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="102"/>
@@ -549,7 +549,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>F&amp;ull Screen</source>
-        <translation>K&amp;okoruutu</translation>
+        <translation>K&amp;oko näyttö</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
