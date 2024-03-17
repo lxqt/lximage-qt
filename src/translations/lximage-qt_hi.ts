@@ -1000,7 +1000,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../mainwindow.cpp" line="997"/>
         <source>Error</source>
-        <translation type="unfinished">त्रुटि</translation>
+        <translation>त्रुटि</translation>
     </message>
 </context>
 <context>
