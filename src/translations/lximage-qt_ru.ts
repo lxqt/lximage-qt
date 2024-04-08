@@ -191,17 +191,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="847"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Загружается...) - Просмотрщик изображений</translation>
+        <translation>[*]%1 (Загружается...) — Просмотрщик изображений</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="853"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (Ошибка загрузки) - Просмотрщик изображений</translation>
+        <translation>[*]%1 (Ошибка загрузки) — Просмотрщик изображений</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="859"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Просмотрщик изображений</translation>
+        <translation>[*]%1 (%2x%3) — Просмотрщик изображений</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="905"/>
@@ -757,12 +757,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="750"/>
         <source>By &amp;Modification Time</source>
-        <translation>По времени &amp;изменения</translation>
+        <translation>По дате &amp;изменения</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="753"/>
         <source>By Modification Time</source>
-        <translation>По времени изменения</translation>
+        <translation>По дате изменения</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="761"/>
@@ -772,7 +772,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="764"/>
         <source>By Creation Time</source>
-        <translation>По времени создания</translation>
+        <translation>По дате создания</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -807,7 +807,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
-        <translation>Перейти</translation>
+        <translation>Переход</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
@@ -1035,7 +1035,7 @@ Reload current image to see the effect.</source>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation> пкс</translation>
+        <translation> пикс</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
