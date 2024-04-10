@@ -928,7 +928,8 @@ um atalho no modo de edição.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pode somente funcionar com imagens que tenham um padrão de cor válido.
+Recarregue a imagem para ver o efeito.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
@@ -938,12 +939,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum(a)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (suportado na maioria dos monitores)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>

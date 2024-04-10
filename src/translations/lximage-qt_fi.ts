@@ -604,7 +604,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>Open &amp;Directory</source>
-        <translation>Avaa %Directory</translation>
+        <translation>Avaa %hakemisto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="549"/>
@@ -721,7 +721,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Kopioi &amp;Path</translation>
+        <translation>Kopioi &amp;polku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="708"/>
@@ -1074,7 +1074,7 @@ Lataa kuva uudelleen nähdäksesi vaikutuksen.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation>Vain nykyinen ikkuna</translation>
+        <translation>Nykyinen ikkuna</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
