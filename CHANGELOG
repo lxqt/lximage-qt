@@ -1,3 +1,8 @@
+lximage-qt-2.0.0 / 2024-04-17
+==============================
+ * Ported to Qt6.
+ * Added some menu icons.
+
 lximage-qt-1.4.0 / 2023-11-05
 ==============================
  * Added minimal support for color spaces.
