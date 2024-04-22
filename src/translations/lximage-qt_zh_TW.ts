@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="111"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>條</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="111"/>
@@ -150,22 +150,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="282"/>
         <source>2013-2021</source>
-        <translation type="unfinished"></translation>
+        <translation>2013-2021</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="284"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 計畫</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="286"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>開發 </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>作者： </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="516"/>
@@ -275,7 +275,7 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>大小:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
@@ -624,7 +624,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="564"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="572"/>
@@ -690,7 +690,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="661"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="669"/>
@@ -716,7 +716,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="697"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="705"/>
@@ -927,22 +927,23 @@ in the editing mode.</source>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">May work only with images which have valid color spaces.
+Reload current image to see the effect.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>色彩空間：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>沒有任何</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB(被大部分的螢幕所支持）</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
