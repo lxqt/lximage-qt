@@ -678,8 +678,11 @@ void ImageView::queueGenerateCache() {
 // really generate the cache
 void ImageView::generateCache() {
   // disable the one-shot timer
-  cacheTimer_->deleteLater();
-  cacheTimer_ = nullptr;
+  if(cacheTimer_) {
+    cacheTimer_->stop();
+    delete cacheTimer_;
+    cacheTimer_ = nullptr;
+  }
 
   if(!imageItem_ || image_.isNull()
      || scaleFactor_ == 1.0 || gifMovie_ || isSVG || !smoothOnZoom_) {
