@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="94"/>
+        <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Počni u cjeloekranskom prikazu (može biti korisno za dijeljenje upraviteljača prozora na ekranu)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="102"/>
+        <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Snimi sliku ekrana (zastarjelo, umjesto toga koristi screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
         <translation>MAPA</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Snimi sliku ekrana i spremi je u mapu bez prikazivanja korisničkog sučelja (zastarjelo, umjesto toga koristi screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="117"/>
+        <location filename="../application.cpp" line="116"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[DATOTEKA1, DATOTEKA2,...]</translation>
     </message>
@@ -133,78 +133,73 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="278"/>
+        <location filename="../mainwindow.cpp" line="277"/>
         <source>About</source>
         <translation>Informacije</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../mainwindow.cpp" line="279"/>
         <source>A simple and fast image viewer</source>
         <translation>Jednostavan i brz program za prikaz slika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
+        <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
         <translation>Autorska prava (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
-        <source>2013-2021</source>
-        <translation>2013. – 2021.</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="284"/>
+        <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
         <translation>Projekt LXQt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
         <translation>Razvoj: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="288"/>
+        <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
         <translation>Autor: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="515"/>
         <source>Open File</source>
         <translation>Otvori datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="517"/>
-        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image files (%1)</source>
         <translation>Datoteke slika (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="529"/>
         <source>Open directory</source>
         <translation>Otvori mapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Save File</source>
         <translation>Spremi datoteku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="847"/>
+        <location filename="../mainwindow.cpp" line="846"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Učitavanje …) – Prikazivač slika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="853"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Neuspjelo učitavanje) – Prikazivač slika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="859"/>
+        <location filename="../mainwindow.cpp" line="858"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2 × %3) – Prikazivač slika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
+        <location filename="../mainwindow.cpp" line="904"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Prikazivač slika</translation>
     </message>
@@ -325,7 +320,7 @@ prečaca u modusu uređivanja.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
-        <location filename="../mainwindow.ui" line="683"/>
+        <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
         <translation>Traka s napomenama</translation>
     </message>
@@ -492,305 +487,305 @@ prečaca u modusu uređivanja.</translation>
         <translation>O&amp;sobitosti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="413"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Print</source>
         <translation>Is&amp;pis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="416"/>
+        <location filename="../mainwindow.ui" line="420"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="425"/>
+        <location filename="../mainwindow.ui" line="429"/>
         <source>First File</source>
         <translation>Prva datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="428"/>
+        <location filename="../mainwindow.ui" line="432"/>
         <source>Home</source>
         <translation>Početak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="437"/>
+        <location filename="../mainwindow.ui" line="441"/>
         <source>Last File</source>
         <translation>Zadnja datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="440"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>End</source>
         <translation>Kraj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="449"/>
+        <location filename="../mainwindow.ui" line="453"/>
         <source>&amp;New Window</source>
         <translation>&amp;Novi prozor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="452"/>
+        <location filename="../mainwindow.ui" line="456"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="465"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Preokreni &amp;vodoravno</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="468"/>
         <source>H</source>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="477"/>
         <source>Capture Screenshot</source>
         <translation>Snimi ekran</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="477"/>
+        <location filename="../mainwindow.ui" line="485"/>
         <source>F&amp;ull Screen</source>
         <translation>&amp;Cjeloekranski prikaz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="480"/>
+        <location filename="../mainwindow.ui" line="488"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="485"/>
+        <location filename="../mainwindow.ui" line="497"/>
         <source>Flip &amp;Vertically</source>
         <translation>Preokreni &amp;okomito</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="488"/>
+        <location filename="../mainwindow.ui" line="500"/>
         <source>V</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="497"/>
+        <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>&amp;Umetni iz međuspremnika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="509"/>
+        <location filename="../mainwindow.ui" line="521"/>
         <source>&amp;Slide Show</source>
         <translation>&amp;Prezentacija</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="518"/>
+        <location filename="../mainwindow.ui" line="530"/>
         <source>&amp;Delete</source>
         <translation>&amp;Izbriši</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="521"/>
+        <location filename="../mainwindow.ui" line="533"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="529"/>
+        <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
         <translation>Prikaži sličice</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="544"/>
         <source>T</source>
         <translation>S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="537"/>
+        <location filename="../mainwindow.ui" line="553"/>
         <source>File Properties</source>
         <translation>Svojstva dototeke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="546"/>
+        <location filename="../mainwindow.ui" line="562"/>
         <source>Open &amp;Directory</source>
         <translation>Otvori &amp;mapu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="549"/>
+        <location filename="../mainwindow.ui" line="565"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="558"/>
+        <location filename="../mainwindow.ui" line="574"/>
         <source>Upload</source>
         <translation>Prenesi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="577"/>
         <source>Upload the image</source>
         <translation>Prenesi sliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="580"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="572"/>
+        <location filename="../mainwindow.ui" line="588"/>
         <source>Show EXIF Data</source>
         <translation>Prikaži EFIX podatke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="584"/>
+        <location filename="../mainwindow.ui" line="600"/>
         <source>No Tool</source>
         <translation>Bez alata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
         <translation>Odznači sve alate za crtanje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="615"/>
         <source>Draw Arrow</source>
         <translation>Crtaj strelicu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="618"/>
         <source>Draw an arrow</source>
         <translation>Crtaj strelicu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="630"/>
         <source>Draw Rectangle</source>
         <translation>Crtaj pravokutnik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
+        <location filename="../mainwindow.ui" line="633"/>
         <source>Draw a hollow rectangle</source>
         <translation>Crtaj prazan pravokutnik</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="629"/>
+        <location filename="../mainwindow.ui" line="645"/>
         <source>Draw Circle</source>
         <translation>Crtaj krug</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="648"/>
         <source>Draw a hollow circle</source>
         <translation>Crtaj prazan krug</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="660"/>
         <source>Draw Number</source>
         <translation>Crtaj broj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="647"/>
+        <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
         <translation>Crtaj rastuće brojeve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="655"/>
-        <location filename="../mainwindow.ui" line="658"/>
+        <location filename="../mainwindow.ui" line="671"/>
+        <location filename="../mainwindow.ui" line="674"/>
         <source>Menubar</source>
         <translation>Traka izbornika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="661"/>
+        <location filename="../mainwindow.ui" line="677"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+G</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="669"/>
+        <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
         <translation>&amp;Glavna traka alata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="672"/>
+        <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
         <translation>Glavna traka alata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="680"/>
+        <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
         <translation>&amp;Traka s napomenama</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="691"/>
-        <location filename="../mainwindow.ui" line="694"/>
+        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="710"/>
         <source>Show Outline</source>
         <translation>Prikaži konturu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="697"/>
+        <location filename="../mainwindow.ui" line="713"/>
         <source>O</source>
         <translation>K</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="705"/>
+        <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
         <translation>Kopiraj pu&amp;tanju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="708"/>
+        <location filename="../mainwindow.ui" line="724"/>
         <source>Copy path</source>
         <translation>Kopiraj putanju</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
-        <location filename="../mainwindow.ui" line="719"/>
+        <location filename="../mainwindow.ui" line="732"/>
+        <location filename="../mainwindow.ui" line="735"/>
         <source>Rename</source>
         <translation>Preimenuj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="722"/>
+        <location filename="../mainwindow.ui" line="738"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="731"/>
+        <location filename="../mainwindow.ui" line="747"/>
         <source>Resize</source>
         <translation>Promijeni veličinu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="739"/>
+        <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
         <translation>Prema &amp;imenu datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="742"/>
+        <location filename="../mainwindow.ui" line="758"/>
         <source>By File Name</source>
         <translation>Prema imenu datoteka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="750"/>
+        <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
         <translation>Prema &amp;vremenu promjene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="753"/>
+        <location filename="../mainwindow.ui" line="769"/>
         <source>By Modification Time</source>
         <translation>Prema vremenu promjene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="761"/>
+        <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
         <translation>Prema vremenu &amp;stvaranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="764"/>
+        <location filename="../mainwindow.ui" line="780"/>
         <source>By Creation Time</source>
         <translation>Prema vremenu stvaranja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="772"/>
+        <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
         <translation>Prema veličini &amp;datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="775"/>
+        <location filename="../mainwindow.ui" line="791"/>
         <source>By File Size</source>
         <translation>Prema veličini datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="783"/>
+        <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
         <translation>Prema vrs&amp;ti datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="786"/>
+        <location filename="../mainwindow.ui" line="802"/>
         <source>By File Type</source>
         <translation>Prema vrsti datoteke</translation>
     </message>
@@ -999,7 +994,7 @@ Za prikaz učinka ponovo učitaj trenutačnu sliku.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="997"/>
+        <location filename="../mainwindow.cpp" line="996"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
