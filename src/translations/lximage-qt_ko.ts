@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="94"/>
+        <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>전체 화면에서 시작(바둑판식 배열 창 관리자에 유용할 수 있음)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="102"/>
+        <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>스크린샷 찍기(더 이상 사용되지 않음, 대신 screengrab을 사용하십시오)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
         <translation>DIR</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>스크린샷을 찍어 GUI를 표시하지 않고 디렉터리에 저장합니다(더 이상 사용되지 않음, 대신 screengrab을 사용하십시오)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="117"/>
+        <location filename="../application.cpp" line="116"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[파일1, 파일2,...]</translation>
     </message>
@@ -133,80 +133,75 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="278"/>
+        <location filename="../mainwindow.cpp" line="277"/>
         <source>About</source>
         <translation>정보</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../mainwindow.cpp" line="279"/>
         <source>A simple and fast image viewer</source>
         <translation>단순하고 빠른 이미지 뷰어
 
 한국어 번역: 이정희 &lt;daemul72@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
+        <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
         <translation>Copyright (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
-        <source>2013-2021</source>
-        <translation>2013-2021</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="284"/>
+        <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
         <translation>LXQt 프로젝트</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
         <translation>개발: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="288"/>
+        <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
         <translation>개발자: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="515"/>
         <source>Open File</source>
         <translation>파일 열기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="517"/>
-        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Image files (%1)</source>
         <translation>이미지 파일(%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="529"/>
         <source>Open directory</source>
         <translation>디렉터리 열기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Save File</source>
         <translation>파일 저장하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="847"/>
+        <location filename="../mainwindow.cpp" line="846"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1(불러오는 중...) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="853"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1(불러오기 실패) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="859"/>
+        <location filename="../mainwindow.cpp" line="858"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
+        <location filename="../mainwindow.cpp" line="904"/>
         <source>[*]Image Viewer</source>
         <translation>[*]이미지 뷰어</translation>
     </message>
@@ -337,7 +332,7 @@ in the editing mode.</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
-        <location filename="../mainwindow.ui" line="683"/>
+        <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
         <translation>주석 도구 모음</translation>
     </message>
@@ -494,305 +489,305 @@ in the editing mode.</source>
         <translation>기본 설정(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="413"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Print</source>
         <translation>인쇄(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="416"/>
+        <location filename="../mainwindow.ui" line="420"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="425"/>
+        <location filename="../mainwindow.ui" line="429"/>
         <source>First File</source>
         <translation>첫 번째 파일</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="428"/>
+        <location filename="../mainwindow.ui" line="432"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="437"/>
+        <location filename="../mainwindow.ui" line="441"/>
         <source>Last File</source>
         <translation>마지막 파일</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="440"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="449"/>
+        <location filename="../mainwindow.ui" line="453"/>
         <source>&amp;New Window</source>
         <translation>새 창(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="452"/>
+        <location filename="../mainwindow.ui" line="456"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="465"/>
         <source>Flip &amp;Horizontally</source>
         <translation>수평으로 뒤집기(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="468"/>
         <source>H</source>
         <translation>H</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="477"/>
         <source>Capture Screenshot</source>
         <translation>스크린샷 캡처</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="477"/>
+        <location filename="../mainwindow.ui" line="485"/>
         <source>F&amp;ull Screen</source>
         <translation>전체 화면(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="480"/>
+        <location filename="../mainwindow.ui" line="488"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="485"/>
+        <location filename="../mainwindow.ui" line="497"/>
         <source>Flip &amp;Vertically</source>
         <translation>수직으로 뒤집기(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="488"/>
+        <location filename="../mainwindow.ui" line="500"/>
         <source>V</source>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="497"/>
+        <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>클립보드에서 붙여넣기(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="509"/>
+        <location filename="../mainwindow.ui" line="521"/>
         <source>&amp;Slide Show</source>
         <translation>슬라이드 쇼(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="518"/>
+        <location filename="../mainwindow.ui" line="530"/>
         <source>&amp;Delete</source>
         <translation>삭제하기(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="521"/>
+        <location filename="../mainwindow.ui" line="533"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="529"/>
+        <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
         <translation>마중그림 표시하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="544"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="537"/>
+        <location filename="../mainwindow.ui" line="553"/>
         <source>File Properties</source>
         <translation>파일 속성</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="546"/>
+        <location filename="../mainwindow.ui" line="562"/>
         <source>Open &amp;Directory</source>
         <translation>디렉터리 열기(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="549"/>
+        <location filename="../mainwindow.ui" line="565"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="558"/>
+        <location filename="../mainwindow.ui" line="574"/>
         <source>Upload</source>
         <translation>업로드</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="577"/>
         <source>Upload the image</source>
         <translation>이미지 업로드</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="580"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="572"/>
+        <location filename="../mainwindow.ui" line="588"/>
         <source>Show EXIF Data</source>
         <translation>EXIF 데이터 표시하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="584"/>
+        <location filename="../mainwindow.ui" line="600"/>
         <source>No Tool</source>
         <translation>도구 없음</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
         <translation>모든 그리기 도구 선택 취소</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="615"/>
         <source>Draw Arrow</source>
         <translation>화살표 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="618"/>
         <source>Draw an arrow</source>
         <translation>화살표 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="630"/>
         <source>Draw Rectangle</source>
         <translation>사각형 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
+        <location filename="../mainwindow.ui" line="633"/>
         <source>Draw a hollow rectangle</source>
         <translation>속이 빈 사각형 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="629"/>
+        <location filename="../mainwindow.ui" line="645"/>
         <source>Draw Circle</source>
         <translation>원형 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="648"/>
         <source>Draw a hollow circle</source>
         <translation>속이 빈 원형 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="660"/>
         <source>Draw Number</source>
         <translation>숫자 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="647"/>
+        <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
         <translation>증분 숫자 그리기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="655"/>
-        <location filename="../mainwindow.ui" line="658"/>
+        <location filename="../mainwindow.ui" line="671"/>
+        <location filename="../mainwindow.ui" line="674"/>
         <source>Menubar</source>
         <translation>메뉴 모음</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="661"/>
+        <location filename="../mainwindow.ui" line="677"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="669"/>
+        <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
         <translation>기본 도구 모음(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="672"/>
+        <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
         <translation>기본 도구 모음</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="680"/>
+        <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
         <translation>주석 도구 모음(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="691"/>
-        <location filename="../mainwindow.ui" line="694"/>
+        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="710"/>
         <source>Show Outline</source>
         <translation>윤곽선 표시하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="697"/>
+        <location filename="../mainwindow.ui" line="713"/>
         <source>O</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="705"/>
+        <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
         <translation>경로 복사하기(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="708"/>
+        <location filename="../mainwindow.ui" line="724"/>
         <source>Copy path</source>
         <translation>경로 복사하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
-        <location filename="../mainwindow.ui" line="719"/>
+        <location filename="../mainwindow.ui" line="732"/>
+        <location filename="../mainwindow.ui" line="735"/>
         <source>Rename</source>
         <translation>이름 바꾸기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="722"/>
+        <location filename="../mainwindow.ui" line="738"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="731"/>
+        <location filename="../mainwindow.ui" line="747"/>
         <source>Resize</source>
         <translation>크기 조정</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="739"/>
+        <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
         <translation>파일 이름순(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="742"/>
+        <location filename="../mainwindow.ui" line="758"/>
         <source>By File Name</source>
         <translation>파일 이름순</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="750"/>
+        <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
         <translation>수정 시간순(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="753"/>
+        <location filename="../mainwindow.ui" line="769"/>
         <source>By Modification Time</source>
         <translation>수정 시간순</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="761"/>
+        <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
         <translation>생성 시간순(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="764"/>
+        <location filename="../mainwindow.ui" line="780"/>
         <source>By Creation Time</source>
         <translation>생성 시간순</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="772"/>
+        <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
         <translation>파일 크기순(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="775"/>
+        <location filename="../mainwindow.ui" line="791"/>
         <source>By File Size</source>
         <translation>파일 크기순</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="783"/>
+        <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
         <translation>파일 유형순(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="786"/>
+        <location filename="../mainwindow.ui" line="802"/>
         <source>By File Type</source>
         <translation>파일 유형순</translation>
     </message>
@@ -1001,7 +996,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="997"/>
+        <location filename="../mainwindow.cpp" line="996"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
