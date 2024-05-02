@@ -135,7 +135,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="278"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Um</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="280"/>
