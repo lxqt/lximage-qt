@@ -382,7 +382,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>Скопировать в &amp;буфер обмена</translation>
+        <translation>Копировать в &amp;буфер обмена</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
@@ -716,12 +716,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Скопировать путь</translation>
+        <translation>Ко&amp;пировать путь</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Copy path</source>
-        <translation>Скопировать путь</translation>
+        <translation>Копировать путь</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="732"/>

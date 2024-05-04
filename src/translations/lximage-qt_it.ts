@@ -753,7 +753,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
-        <translation>Per  &amp;data di modifica</translation>
+        <translation>Per &amp;data di modifica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="769"/>
