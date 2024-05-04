@@ -1,3 +1,8 @@
+lximage-qt-2.0.1 / 2024-05-04
+==============================
+ * Fixed a crash on using annotations with Qt ≥ 6.7.
+ * Fix a memory leak.
+
 lximage-qt-2.0.0 / 2024-04-17
 ==============================
  * Ported to Qt6.
