@@ -1079,7 +1079,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Зключване на показалеца на мишката</translation>
+        <translation>Включване на показалеца на мишката</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
