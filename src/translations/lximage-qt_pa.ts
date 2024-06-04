@@ -331,7 +331,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
@@ -341,7 +341,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
@@ -351,7 +351,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
@@ -361,7 +361,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
@@ -376,7 +376,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
@@ -433,12 +433,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
@@ -453,7 +453,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
         <source>Ctrl+0</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
@@ -468,7 +468,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
@@ -478,7 +478,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
         <source>L</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
@@ -493,7 +493,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
@@ -523,7 +523,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
@@ -731,7 +731,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="738"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="747"/>

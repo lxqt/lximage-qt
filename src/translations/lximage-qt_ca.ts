@@ -6,7 +6,7 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation>Dreceres ocultes</translation>
+        <translation>Dreceres amagades</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
-        <translation>Copyright (C) </translation>
+        <translation>Drets d&apos;autor © </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
@@ -933,7 +933,7 @@ Torna a carregar la imatge actual per veure l&apos;efecte.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Cap</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -948,7 +948,7 @@ Torna a carregar la imatge actual per veure l&apos;efecte.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB d&apos;Adobe</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -958,7 +958,7 @@ Torna a carregar la imatge actual per veure l&apos;efecte.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
