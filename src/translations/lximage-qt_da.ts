@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Disse programmerede genveje vil blive tilsidesat hvis de også er tildelt andre handlinger in Indstillinger → Genveje.</translation>
+        <translation>Disse preprogrammerede genveje vil blive tilsidesat hvis de også er tildelt andre handlinger in Indstillinger → Genveje.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Luk vindue og forlad fuld skærm</translation>
+        <translation>Luk vindue eller forlad fuld skærm</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation>Afslut</translation>
+        <translation type="unfinished">End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation>Backspace</translation>
+        <translation>Tilbage</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation>Hjem</translation>
+        <translation type="unfinished">Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -91,22 +91,22 @@
     <message>
         <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation>Start med fuld skærm (kan være nyttigt i tiling window managers)</translation>
+        <translation type="unfinished">Start med fuld skærm (kan være nyttigt i tiling window managers)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>Tag et skærmbillede (udgået, brug venligst screengrab i stedet)</translation>
+        <translation>Tag et skærmbillede (forældet, brug venligst Screengrab i stedet)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
-        <translation>MAPPE</translation>
+        <translation type="unfinished">MAPPE</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>Tag et skærmbillede og gem det i mappen uden at vise brugerfladen (udgået, brug venligst screengrab i stedet)</translation>
+        <translation>Tag et skærmaftryk og gem det i mappen uden at vise brugerfladen (forældet, brug venligst Screengrab i stedet)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="116"/>
@@ -145,22 +145,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
-        <translation>Copyright (C) </translation>
+        <translation>Ophavsret (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
-        <translation>LXQt Project</translation>
+        <translation>LXQt-Project</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation>Udvikling: </translation>
+        <translation type="unfinished">Udvikling: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation>Forfatter: </translation>
+        <translation>Udvikler: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -186,12 +186,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="846"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (indlæser...) - Billedfremviser</translation>
+        <translation>[*]%1 (Indlæser...) - Billedfremviser</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (kunne ikke indlæse) - Billedfremviser</translation>
+        <translation>[*]%1 (Kunne ikke indlæse) - Billedfremviser</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
@@ -321,7 +321,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation>&amp;Seneste åbnede filer</translation>
+        <translation>&amp;Senest åbnede filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -332,7 +332,7 @@ i redigeringstilstanden.</translation>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
-        <translation>Annoteringsværktøjslinje</translation>
+        <translation type="unfinished">Annoteringsværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -347,7 +347,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>Skjulte&amp;Genveje</translation>
+        <translation>Skjulte &amp;Genveje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
@@ -382,7 +382,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation>Gem &amp;som</translation>
+        <translation>Gem &amp;Som</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -402,7 +402,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;In</source>
-        <translation>Zoom &amp;ind</translation>
+        <translation>Zoom &amp;Ind</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -422,7 +422,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>&amp;Kopiér til udklipsholder</translation>
+        <translation>&amp;Kopiér til Udklipsholder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
@@ -469,7 +469,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>R</source>
-        <translation>H</translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
@@ -479,7 +479,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
         <source>L</source>
-        <translation>V</translation>
+        <translation>Skift-R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
@@ -539,7 +539,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>Capture Screenshot</source>
-        <translation>Tag skærmbillede</translation>
+        <translation>Tag skærmaftryk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
@@ -554,17 +554,17 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Vend &amp;lodret</translation>
+        <translation>Spejl &amp;lodret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>V</source>
-        <translation>L</translation>
+        <translation>S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>&amp;Indsæt fra udklipsholder</translation>
+        <translation>&amp;Indsæt fra Udklipsholder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
@@ -579,7 +579,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="533"/>
         <source>Del</source>
-        <translation>Slet</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
@@ -634,7 +634,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
-        <translation>Fravælg alle tegningsværktøjer</translation>
+        <translation type="unfinished">Fravælg alle tegnefunktioner</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="615"/>
@@ -649,17 +649,17 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="630"/>
         <source>Draw Rectangle</source>
-        <translation>Tegn rektangel</translation>
+        <translation>Tegn et rektangel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="633"/>
         <source>Draw a hollow rectangle</source>
-        <translation>Tegn en hul rektangel</translation>
+        <translation>Tegn et hult rektangel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Draw Circle</source>
-        <translation>Tegn cirkel</translation>
+        <translation>Tegn en cirkel</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
@@ -669,12 +669,12 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>Draw Number</source>
-        <translation>Tegn tal</translation>
+        <translation type="unfinished">Tegn et tal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
-        <translation>Tegn stigende tal</translation>
+        <translation type="unfinished">Tegn stigende tal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="671"/>
@@ -690,17 +690,17 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation>&amp;Hoved værktøjslinje</translation>
+        <translation>&amp;Hovedværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
-        <translation>Hoved værtøjslinje</translation>
+        <translation>Hovedværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Annoteringsværktøjslinje</translation>
+        <translation type="unfinished">&amp;Annoteringsværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
@@ -762,7 +762,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation>Ved oprettelse tidspunkt</translation>
+        <translation>Ved op&amp;rettelse tidspunkt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
@@ -812,7 +812,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Rediger</translation>
+        <translation>R&amp;ediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
@@ -835,7 +835,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Thumbnailer fil størrelses grænse:</translation>
+        <translation type="unfinished">Miniature filstørrelsesbegrænsning:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -865,7 +865,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Vis annoteringsværktøjslinje som standard</translation>
+        <translation type="unfinished">Vis annoteringsværktøjslinje som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
@@ -885,7 +885,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation>Brug papirkurv (uden at spørge)</translation>
+        <translation>Brug papirkurv (Spørg ikke brugeren)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
@@ -900,7 +900,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>Vis exif data som standard</translation>
+        <translation>Vis Exif-data som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
@@ -922,7 +922,7 @@ i redigeringstilstanden.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation>Vil måske kun fungere med billeder der har gyldigt farve rum.
+        <translation>Vil måske kun fungere med billeder der har gyldigt farverum.
 Genindlæs nuværende billede for at se effekten.</translation>
     </message>
     <message>
@@ -1049,12 +1049,12 @@ Genindlæs nuværende billede for at se effekten.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>Skærmbillede</translation>
+        <translation>Skærmaftryk</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>Tag et skærmbillede</translation>
+        <translation>Tag et skærmaftryk</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
