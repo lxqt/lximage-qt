@@ -6,84 +6,84 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Faldar Flýtileiðir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation type="unfinished"></translation>
+        <translation>þessar föstu flýtileiðir verða yfirskrifaðar ef þeim er breytt eða beint á aðrar aðgerðir í Valkostir → Flýtileiðir.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Fýtileiðir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aðgerð</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Loka glugga eða hætta að fylla skjá</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Hægri</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="55"/>
         <location filename="../shortcuts.ui" line="63"/>
         <source>Next image</source>
-        <translation type="unfinished"></translation>
+        <translation>Næsta mynd</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="60"/>
         <source>Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Bil</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Endir</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
         <source>Last image</source>
-        <translation type="unfinished"></translation>
+        <translation>Síðasta mynd</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="76"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinstri</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="79"/>
         <location filename="../shortcuts.ui" line="87"/>
         <source>Previous image</source>
-        <translation type="unfinished"></translation>
+        <translation>Fyrri mynd</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="84"/>
         <source>Backspace</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilbaka</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Heim</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
         <source>First image</source>
-        <translation type="unfinished"></translation>
+        <translation>Fyrsta mynd</translation>
     </message>
 </context>
 <context>
@@ -91,27 +91,27 @@
     <message>
         <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished"></translation>
+        <translation>Byrja með fullan skjá (getur verið gott með mósaík gluggastjórum)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Taka Skjámynd (úrelt, notið screengrab í staðinn)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
-        <translation type="unfinished"></translation>
+        <translation>MAPPA</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation type="unfinished"></translation>
+        <translation>Taka skjámynd og vista hana í möppu án þess að sýna hana á skjánum (úrelt, notið screengrab í staðinn)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="116"/>
         <source>[FILE1, FILE2,...]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Skrá1,Skrá2,...]</translation>
     </message>
 </context>
 <context>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>Óþekkt villuskilaboð</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation type="unfinished"></translation>
+        <translation>óþekkt viðbrögð við villu</translation>
     </message>
 </context>
 <context>
@@ -140,78 +140,78 @@
     <message>
         <location filename="../mainwindow.cpp" line="279"/>
         <source>A simple and fast image viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Einfaldur og hraður myndskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
-        <translation type="unfinished"></translation>
+        <translation>Höfundarréttur (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Verkefnið</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation type="unfinished"></translation>
+        <translation>Hönnun: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Höfundur: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Opna skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="516"/>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Image files (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Myndskrár (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="529"/>
         <source>Open directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Opna möppu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="550"/>
         <source>Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="846"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Sæki...) - Myndaskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (Gat ekki sótt) - Myndskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]%1 (%2x%3) - Myndskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="904"/>
         <source>[*]Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>[*]Myndskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Smámyndir</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>EXIF-lýsigögn</translation>
     </message>
 </context>
 <context>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hreinsa</translation>
     </message>
 </context>
 <context>
@@ -228,32 +228,33 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota breytilykil til að hreinsa flýtileið
+í breytiham.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Endir</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Efst</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinstri</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Aðvörun: tvöföld virkni fýtilykils!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Tvöföld flýtileið er ekki samþykkt.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -261,7 +262,7 @@ in the editing mode.</source>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation type="unfinished"></translation>
+        <translation>Get ekki vistað skrá á þessu sniði!</translation>
     </message>
 </context>
 <context>
@@ -269,12 +270,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stærð:</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slóð:</translation>
     </message>
 </context>
 <context>
@@ -292,22 +293,22 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Ræsa</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stöðva</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Loka</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Villa</translation>
     </message>
 </context>
 <context>
@@ -315,85 +316,85 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Image Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Myndaskoðari</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tólastika fyrir athugasemdir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Um</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="241"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vista</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista &amp;sem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Loka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
         <source>Ctrl+W</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+W</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation>Renna &amp;að</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Renna &amp;frá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Ctrl+-</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+-</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Afrita á klippiborð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="334"/>
         <source>Next File</source>
-        <translation type="unfinished"></translation>
+        <translation>Næsta skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Previous File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fyrri skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
@@ -403,42 +404,42 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation type="unfinished"></translation>
+        <translation>Opna &amp;Með...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nýlega opnaðar skrár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Röðun</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Faldir &amp;Flýtilyklar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Open…</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Opna…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
         <source>&amp;Reload File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Endurlesa skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="253"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>Ctrl+=</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+=</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
@@ -448,7 +449,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
         <source>Original Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Upprunaleg stærð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -458,12 +459,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>&amp;Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Láta passa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>&amp;Rotate Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Snúa Réttsælis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
@@ -473,7 +474,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Rotate &amp;Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Snúa Rangsælis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
@@ -483,12 +484,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <source>P&amp;references</source>
-        <translation type="unfinished"></translation>
+        <translation>Valkosti&amp;r</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prenta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
@@ -498,27 +499,27 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>First File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fyrsta skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="432"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>Last File</source>
-        <translation type="unfinished"></translation>
+        <translation>Síðasta skrá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="444"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>&amp;New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nýr gluggi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
@@ -528,22 +529,22 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>Flip &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegla Lárétt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Grípa skjámynd</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>F&amp;ull Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fylla Skjá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
@@ -553,37 +554,37 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
         <source>Flip &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegla lóðrétt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+|</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Líma af klippiborði</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="521"/>
         <source>&amp;Slide Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Mynda&amp;sýning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="530"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eyða</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="533"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Sýna smámyndir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
@@ -593,12 +594,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="553"/>
         <source>File Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Skráareiginleikar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="562"/>
         <source>Open &amp;Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Opna &amp;Möppu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="565"/>
@@ -608,12 +609,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="574"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Sækja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="577"/>
         <source>Upload the image</source>
-        <translation type="unfinished"></translation>
+        <translation>Sækja myndina</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="580"/>
@@ -623,63 +624,63 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="588"/>
         <source>Show EXIF Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Sýna EXIF lýsigögn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="600"/>
         <source>No Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekkert tól</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Afvelja öll teiknitól</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="615"/>
         <source>Draw Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Draga ör</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="618"/>
         <source>Draw an arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna ör</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="630"/>
         <source>Draw Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna ferhyrning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="633"/>
         <source>Draw a hollow rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna auðan ferhyrning</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="645"/>
         <source>Draw Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna hring</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="648"/>
         <source>Draw a hollow circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna auðan hring</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>Draw Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna tölu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Teikna tölur í vaxandi röð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="671"/>
         <location filename="../mainwindow.ui" line="674"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Valslá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="677"/>
@@ -689,23 +690,23 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aðalvalslá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Aðalvalslá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tólaslá fyrir merkingar á mynd</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <location filename="../mainwindow.ui" line="710"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Sýna útlínu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="713"/>
@@ -715,18 +716,18 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Afri&amp;ta Slóð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Afritar slóð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="732"/>
         <location filename="../mainwindow.ui" line="735"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Endurnefna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="738"/>
@@ -736,87 +737,87 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="747"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Breyta stærð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eftir skráarnafni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="758"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir skráarnafni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir breytingartíma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="769"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir því hvenær skránni var síðast breytt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Efti&amp;r stofntíma</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota þann tíma er skráin var búin til</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir &amp;Stærð skráar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="791"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir skráarstærð</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir skráar&amp;Tegund</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="802"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Eftir skráartegund</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;krá</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hjálp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="104"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation>Fara að</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sýna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sýs&amp;l</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
         <source>Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tólaslá</translation>
     </message>
 </context>
 <context>
@@ -824,52 +825,52 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Valkostir</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Táknþema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stærðarmörk smámynda:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Venjulegur bakgrunnslitur:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakgrunnslitur á fylltum skjá:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hámarksfjöldi nýlegra skráa:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
-        <translation type="unfinished"></translation>
+        <translation>Myndasýning tímabil milli mynda (sekúndur):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sýna mörk myndar sjálfkrafa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið sýna tólaslá athugasemda</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Sníðið myndir á flakki</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -879,79 +880,80 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stærðarmörk smámynda:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota ruslafötu kerfis (og ekki spyrja)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Gluggi</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið sýna smámyndabakka</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið sýna Exif gagnabakka</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið sýna valslá</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið sýna aðalvalslá</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Mynd</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Virkar kannski bara með myndum sem hafa gild litasnið. 
+Endursýndu núverandi mynd til að skoða áhrifin.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Litasnið:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekkert</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (stutt af flestum skjáum)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Linulegt sRGB (línulegt litasnið)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (skjáir með vítt litasvið)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
@@ -961,32 +963,32 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Jafna myndir við aðdrátt</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Flýtileiðir</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Aðgerð</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation>Flýtileið</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Sjálfgefið</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allmennt</translation>
     </message>
 </context>
 <context>
@@ -994,7 +996,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../mainwindow.cpp" line="996"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Villa</translation>
     </message>
 </context>
 <context>
@@ -1002,44 +1004,44 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Breyta stærð á mynd</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Breidd</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Hæð</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Núverandi stærð:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ný stærð:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Halda myndhlutfalli</translation>
     </message>
 </context>
 <context>
@@ -1047,52 +1049,52 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Skjámynd</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation>Taka skjámynd</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>
         <source>Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Svæði</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="40"/>
         <source>Whole screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Allur skjárinn</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Aðeins í núverandi glugga</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Grípa svæði af skjánum</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Innifela músarbendilinn</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sek.</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bið:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Innifela gluggatitil og ramma</translation>
     </message>
 </context>
 <context>
@@ -1100,12 +1102,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../upload/uploaddialog.ui" line="14"/>
         <source>Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Senda</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.ui" line="39"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Afrita</translation>
     </message>
 </context>
 </TS>

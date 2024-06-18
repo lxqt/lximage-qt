@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Disse preprogrammerede genveje vil blive tilsidesat hvis de også er tildelt andre handlinger in Indstillinger → Genveje.</translation>
+        <translation>Disse predefinerede genveje vil blive tilsidesat hvis de også er tildelt andre handlinger i Indstillinger → Genveje.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation type="unfinished">End</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation type="unfinished">Start med fuld skærm (kan være nyttigt i tiling window managers)</translation>
+        <translation>Start med fuld skærm (kan være nyttigt ved en flisebelagt vindueshåndtering)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
-        <translation type="unfinished">MAPPE</translation>
+        <translation>MAPPE</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
@@ -150,12 +150,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
         <source>LXQt Project</source>
-        <translation>LXQt-Project</translation>
+        <translation>LXQt Project</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation type="unfinished">Udvikling: </translation>
+        <translation>Udvikling: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
@@ -332,7 +332,7 @@ i redigeringstilstanden.</translation>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
-        <translation type="unfinished">Annoteringsværktøjslinje</translation>
+        <translation>Kommenteringsværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -484,7 +484,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
         <source>P&amp;references</source>
-        <translation>&amp;Præferencer</translation>
+        <translation>&amp;Indstillinger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
@@ -634,7 +634,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
-        <translation type="unfinished">Fravælg alle tegnefunktioner</translation>
+        <translation>Fravælg alle tegnefunktioner</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="615"/>
@@ -669,12 +669,12 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="660"/>
         <source>Draw Number</source>
-        <translation type="unfinished">Tegn et tal</translation>
+        <translation>Indsæt et tal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
-        <translation type="unfinished">Tegn stigende tal</translation>
+        <translation>Indsæt et stigende tal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="671"/>
@@ -700,7 +700,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished">&amp;Annoteringsværktøjslinje</translation>
+        <translation>&amp;Kommenteringsværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
@@ -762,17 +762,17 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation>Ved op&amp;rettelse tidspunkt</translation>
+        <translation>Efter op&amp;rettelsestidspunkt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
         <source>By Creation Time</source>
-        <translation>Ved oprettelse tidspunkt</translation>
+        <translation>Efter oprettelsetidspunkt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
-        <translation>Efter fil &amp;størrelse</translation>
+        <translation>Efter fil&amp;størrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="791"/>
@@ -825,7 +825,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>Præferencer</translation>
+        <translation>Indstillinger</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
@@ -835,7 +835,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished">Miniature filstørrelsesbegrænsning:</translation>
+        <translation>Filstørrelsesgrænse for miniaturer:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -865,7 +865,7 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished">Vis annoteringsværktøjslinje som standard</translation>
+        <translation>Vis kommenteringsværktøjslinje som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
@@ -880,12 +880,12 @@ i redigeringstilstanden.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Thumbnail billed dimensioner:</translation>
+        <translation>Dimensioner på miniaturebillede:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation>Brug papirkurv (Spørg ikke brugeren)</translation>
+        <translation>Brug systemets papirkurv (Spørg ikke brugeren)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
