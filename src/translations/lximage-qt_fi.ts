@@ -933,7 +933,7 @@ Lataa kuva uudelleen nähdäksesi vaikutuksen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished">Tuntematon</translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
