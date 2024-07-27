@@ -584,7 +584,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
-        <translation>Vis forhåndsvisninger</translation>
+        <translation>Vis minibilder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
@@ -807,7 +807,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation>&amp;Visning</translation>
+        <translation>&amp;Vis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
