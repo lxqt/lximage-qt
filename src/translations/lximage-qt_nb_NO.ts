@@ -206,7 +206,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
-        <translation>Forhåndsvisninger</translation>
+        <translation>Minibilder</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
@@ -332,7 +332,7 @@ i redigeringsmodus.</translation>
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="699"/>
         <source>Annotations Toolbar</source>
-        <translation>Verktøylinje for notater</translation>
+        <translation>Verktøylinje for merknader</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -634,7 +634,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
-        <translation>Velg fra alle tegneverktøy</translation>
+        <translation>Fravelg alle tegneverktøy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="615"/>
@@ -690,17 +690,17 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation>&amp;Hovedverktøyfelt</translation>
+        <translation>&amp;Hovedverktøylinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
-        <translation>Hovedverktøyfelt</translation>
+        <translation>Hovedverktøylinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Verktøylinje for notater</translation>
+        <translation>&amp;Verktøylinje for merknader</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
@@ -742,7 +742,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished">&amp;Etter filnavn</translation>
+        <translation>Etter fil&amp;navn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="758"/>
@@ -812,7 +812,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="145"/>
         <source>&amp;Edit</source>
-        <translation>R&amp;ediger</translation>
+        <translation>&amp;Rediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="169"/>
@@ -865,7 +865,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Vis verktøylinje for notater som standard</translation>
+        <translation>Vis verktøylinje for merknader som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
@@ -880,7 +880,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Miniatyrbildedimenasjoner:</translation>
+        <translation>Miniatyrbildedimensjoner:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -895,7 +895,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Vis småikon-dokk som standard</translation>
+        <translation>Vis minibilde-dokk som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
@@ -910,7 +910,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>Vis hovedverktøyfelt som forvalg</translation>
+        <translation>Vis hovedverktøylinje som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
@@ -932,12 +932,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (støttes av de fleste skjermer)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
@@ -1088,12 +1088,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation>Venting:</translation>
+        <translation>Forsinkelse:</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation>Inkluder tittelen på vinduet og rammen</translation>
+        <translation>Inkluder vindustittel og ramme</translation>
     </message>
 </context>
 <context>
