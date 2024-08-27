@@ -78,7 +78,7 @@
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation>Home</translation>
+        <translation>Accueil</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>DIR</source>
-        <translation>Répertoire</translation>
+        <translation>Dossier</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="110"/>
@@ -155,12 +155,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="285"/>
         <source>Development: </source>
-        <translation>Développement&#xa0;: </translation>
+        <translation>Développement : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="287"/>
         <source>Author: </source>
-        <translation>Auteur&#xa0;: </translation>
+        <translation>Auteur : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="515"/>
@@ -840,12 +840,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -933,7 +933,7 @@ Rechargez l&apos;image actuelle pour voir l&apos;effet.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation>Espace chromatique :</translation>
+        <translation>Espace colorimétrique :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
