@@ -145,7 +145,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="281"/>
         <source>Copyright (C) </source>
-        <translation>Copyright (C) </translation>
+        <translation>Prawa autorskie (C) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="283"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1302"/>
         <source>Thumbnails</source>
-        <translation>Miniaturki</translation>
+        <translation>Miniatury</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
@@ -584,7 +584,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
-        <translation>Pokaż miniaturki</translation>
+        <translation>Pokaż miniatury</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
@@ -690,12 +690,12 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation>Pasek &amp;narzędziowy</translation>
+        <translation>&amp;Główny pasek narzędziowy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
-        <translation>Pasek narzędziowy</translation>
+        <translation>Główny pasek narzędziowy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
@@ -835,7 +835,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Ograniczenie miejsca na miniaturki:</translation>
+        <translation>Limit rozmiaru pliku miniatury:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -870,7 +870,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
-        <translation>Przeglądając obrazy, dopasowuj rozmiar</translation>
+        <translation>Dopasuj obrazy podczas przeglądania</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -880,7 +880,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Rozmiar miniaturek:</translation>
+        <translation>Wymiary miniatur:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -895,22 +895,22 @@ w trybie edycji.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Pokazuj domyślnie miniaturki</translation>
+        <translation>Domyślnie pokazuj pasek miniatur</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>Pokazuj domyślnie dane EXIF</translation>
+        <translation>Domyślnie pokazuj panel danych Exif</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation>Pokazuj domyślnie pasek menu</translation>
+        <translation>Domyślnie pokazuj pasek menu</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>Pokazuj domyślnie pasek narzędziowy</translation>
+        <translation>Domyślnie pokazuj główny pasek narzędziowy</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
