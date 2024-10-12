@@ -356,7 +356,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;About</source>
-        <translation>&amp;A propos</translation>
+        <translation>&amp;À propos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="204"/>
@@ -614,7 +614,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="541"/>
         <source>Show Thumbnails</source>
-        <translation>Afficher les miniatures</translation>
+        <translation type="unfinished">Afficher les miniatures</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="544"/>
