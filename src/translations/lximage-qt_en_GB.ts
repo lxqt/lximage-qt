@@ -342,7 +342,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorting</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
@@ -619,7 +619,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../mainwindow.ui" line="580"/>
         <source>Ctrl+U</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+U</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="588"/>
@@ -680,17 +680,17 @@ in the editing mode.</translation>
         <location filename="../mainwindow.ui" line="671"/>
         <location filename="../mainwindow.ui" line="674"/>
         <source>Menubar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menubar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="677"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Main Toolbar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
@@ -700,94 +700,94 @@ in the editing mode.</translation>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Annotations Toolbar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
         <location filename="../mainwindow.ui" line="710"/>
         <source>Show Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>Show Outline</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="713"/>
         <source>O</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy Path</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
         <source>Copy path</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy path</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="732"/>
         <location filename="../mainwindow.ui" line="735"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Rename</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="738"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="747"/>
         <source>Resize</source>
-        <translation type="unfinished"></translation>
+        <translation>Resize</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Name</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="758"/>
         <source>By File Name</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Name</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>By Modification Time</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="769"/>
         <source>By Modification Time</source>
-        <translation type="unfinished"></translation>
+        <translation>By Modification Time</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>By Creation Time</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
         <source>By Creation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>By Creation Time</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Size</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="791"/>
         <source>By File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Size</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Type</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="802"/>
         <source>By File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>By File Type</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -875,7 +875,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -890,7 +890,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
         <source>Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Window</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
@@ -972,12 +972,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
         <source>Action</source>
-        <translation type="unfinished">Action</translation>
+        <translation>Action</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Shortcut</translation>
+        <translation>Shortcut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
@@ -995,7 +995,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../mainwindow.cpp" line="996"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
 </context>
 <context>
@@ -1029,7 +1029,7 @@ Reload current image to see the effect.</source>
         <location filename="../resizeimagedialog.ui" line="93"/>
         <location filename="../resizeimagedialog.ui" line="116"/>
         <source> px</source>
-        <translation type="unfinished"></translation>
+        <translation> px</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="129"/>
@@ -1083,7 +1083,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> sec</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
