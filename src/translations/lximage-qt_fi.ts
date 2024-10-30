@@ -6,12 +6,12 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation>Piilotetut pikakuvakkeet</translation>
+        <translation>Piilotetut pikanäppäimet</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Nämä sisäänkoodatut oikopolut ajetaan yli mikäli ne ovat muihin toimenpiteisiin määrätyt myös kohteessa Asetukset → Oikopolut.</translation>
+        <translation>Nämä kovakoodatut pikanäppäimet ohitetaan, jos ne on määritetty myös muille toiminnoille kohdassa Asetukset → Pikanäppäimet.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>Ota kuvakaappaus ja tallenna se hakemistoon näyttämättä graafisuutta (vanhentunut, käytäthän käytöjärjestelmän omaa kaappainta)</translation>
+        <translation>Ota kuvakaappaus ja tallenna se hakemistoon näyttämättä graafista käyttöliittymää (vanhentunut, käytäthän käyttöjärjestelmän omaa kaappainta)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="116"/>
@@ -249,12 +249,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Varoitus: Epäselvä oikopolku havaittu!&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Varoitus: Epäselvä pikanäppäin havaittu!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Epäselvää oikopolkua ei hyväksytty.&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Epäselvä pikanäppäin hylätty.&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -262,7 +262,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Tässä kuvatiedostomuodossa ei voi tallentaa!</translation>
+        <translation>Tätä kuvatiedostomuodoa ei tueta!</translation>
     </message>
 </context>
 <context>
@@ -337,7 +337,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>Avaa &amp;tällä...</translation>
+        <translation>Avaa &amp;sovelluksessa...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
@@ -382,7 +382,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Tallenna nimellä</translation>
+        <translation>Tallenna &amp;nimellä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -433,7 +433,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="337"/>
         <source>PgDown</source>
-        <translation>PgDown -siirry näkymässä alaspäin -näppäin</translation>
+        <translation>PgDown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="346"/>
@@ -444,7 +444,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="352"/>
         <source>PgUp</source>
-        <translation>PgUp -siirry näkymässä ylöspäin -näppäin</translation>
+        <translation>PgUp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
@@ -469,7 +469,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="391"/>
         <source>R</source>
-        <translation>R-näppäin</translation>
+        <translation>R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
@@ -479,7 +479,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
         <source>L</source>
-        <translation>L-näppäin</translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="408"/>
@@ -504,7 +504,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="432"/>
         <source>Home</source>
-        <translation>Home -kotiin / alkuun -näppäin</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
@@ -514,7 +514,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="444"/>
         <source>End</source>
-        <translation>End -loppuun näppäin</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
@@ -534,7 +534,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="468"/>
         <source>H</source>
-        <translation>H-näppäin</translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
@@ -549,7 +549,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
         <source>F11</source>
-        <translation>F11-näppäin</translation>
+        <translation>F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
@@ -559,7 +559,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="500"/>
         <source>V</source>
-        <translation>V-näppäin</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="509"/>
@@ -599,7 +599,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="562"/>
         <source>Open &amp;Directory</source>
-        <translation>Avaa %hakemisto</translation>
+        <translation>A&amp;vaa hakemisto</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="565"/>
@@ -674,13 +674,13 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="663"/>
         <source>Draw incrementing numbers</source>
-        <translation>Piirrä kasvavia numeroja</translation>
+        <translation>Piirrä kasvavia numeroita</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="671"/>
         <location filename="../mainwindow.ui" line="674"/>
         <source>Menubar</source>
-        <translation>Valikkopalkki</translation>
+        <translation>Valikkorivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="677"/>

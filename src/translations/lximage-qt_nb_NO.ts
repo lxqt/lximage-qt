@@ -830,7 +830,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Symboltema:</translation>
+        <translation>Ikontema:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
