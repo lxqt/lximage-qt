@@ -548,7 +548,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="488"/>
         <source>F11</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">F11</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="497"/>
