@@ -875,7 +875,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
         <source> MiB</source>
-        <translation> МБ</translation>
+        <translation> МиБ</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
@@ -928,7 +928,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation>Цветовое пространство:</translation>
+        <translation>Цветовой охват:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>

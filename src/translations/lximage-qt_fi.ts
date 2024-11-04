@@ -52,7 +52,7 @@
     <message>
         <location filename="../shortcuts.ui" line="68"/>
         <source>End</source>
-        <translation>End-näppäin</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="71"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../shortcuts.ui" line="92"/>
         <source>Home</source>
-        <translation>Home-näppäin</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="95"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1397"/>
         <source>EXIF Data</source>
-        <translation>Kuvan EXIF-tietueet</translation>
+        <translation>EXIF-tietueet</translation>
     </message>
 </context>
 <context>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Pyyhi</translation>
+        <translation>&amp;Tyhjennä</translation>
     </message>
 </context>
 <context>
@@ -228,23 +228,23 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>Käytä muokkainnappia pyyhkiäksesi oikopolun
-muokkaustilassa.</translation>
+        <translation>Käytä muokkainnappia pyyhkiäksesi
+oikopolun muokkaustilassa.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="213"/>
         <source>Bottom</source>
-        <translation>Alaosa</translation>
+        <translation>Alhaalla</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="214"/>
         <source>Top</source>
-        <translation>Yläosa</translation>
+        <translation>Ylhäällä</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="215"/>
         <source>Left</source>
-        <translation>Vasen</translation>
+        <translation>Vasemmalla</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="341"/>
@@ -293,12 +293,12 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
-        <translation>Aloita</translation>
+        <translation>Lähetä</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
-        <translation>Lopeta</translation>
+        <translation>Pysäytä</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="140"/>
@@ -594,7 +594,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="553"/>
         <source>File Properties</source>
-        <translation>Tiedosto-ominaisuudet</translation>
+        <translation>Tiedoston ominaisuudet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="562"/>
@@ -742,7 +742,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
-        <translation>&amp;Nimi</translation>
+        <translation>Tiedosto&amp;nimen mukaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="758"/>
@@ -752,7 +752,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
-        <translation>&amp;Muokkaus</translation>
+        <translation>&amp;Muokkausajan mukaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="769"/>
@@ -762,7 +762,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation>&amp;Luotu</translation>
+        <translation>&amp;Luomisajan mukaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
@@ -772,7 +772,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
-        <translation>&amp;Koko</translation>
+        <translation>&amp;Tiedostokoon mukaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="791"/>
@@ -782,7 +782,7 @@ muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
-        <translation>&amp;Tyyppi</translation>
+        <translation>Tiedosto&amp;tyypin mukaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="802"/>
@@ -1004,7 +1004,7 @@ Lataa kuva uudelleen nähdäksesi vaikutuksen.</translation>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation>Muokkaa kuvan kokoa</translation>
+        <translation>Muuta kuvan kokoa</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
