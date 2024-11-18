@@ -321,7 +321,7 @@ oikopolun muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recently Opened Files</source>
-        <translation>&amp;Hiljattain avatut tiedostot</translation>
+        <translation>&amp;Äskettäin avatut tiedostot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -519,7 +519,7 @@ oikopolun muokkaustilassa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>&amp;New Window</source>
-        <translation>&amp;Uusi ikkuna</translation>
+        <translation>Uusi &amp;ikkuna</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>

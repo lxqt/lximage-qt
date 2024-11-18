@@ -835,7 +835,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thumbnailer file size limit:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -850,7 +850,7 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximum number of recent files:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
@@ -860,17 +860,17 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Show image outline by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show image outline by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show annotations toolbar by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
-        <translation type="unfinished"></translation>
+        <translation>Fit images when navigating</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -880,12 +880,12 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Thumbnail image dimensions:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Use system Wastebasket (and do not prompt)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
@@ -895,79 +895,80 @@ in the editing mode.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show thumbnails dock by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show Exif data dock by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show menubar by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Show main toolbar by default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Image</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="179"/>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>May work only with images which have valid colour spaces.
+Reload current image to see the effect.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Colour space:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (supported by most monitors)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Linear sRGB (linear gamma)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (wide-gamut screens)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
         <source>Smooth images on zooming</source>
-        <translation type="unfinished"></translation>
+        <translation>Smooth images on zooming</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation>Shortcuts</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
@@ -982,7 +983,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Default</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -1003,27 +1004,27 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Resize Image</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Width</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="33"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Height</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Current size:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation type="unfinished"></translation>
+        <translation>New size:</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
@@ -1035,12 +1036,12 @@ Reload current image to see the effect.</source>
         <location filename="../resizeimagedialog.ui" line="129"/>
         <location filename="../resizeimagedialog.ui" line="158"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation> %</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="174"/>
         <source>Keep aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Keep aspect ratio</translation>
     </message>
 </context>
 <context>
