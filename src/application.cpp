@@ -43,6 +43,9 @@ bool Application::init(int argc, char** argv) {
   Q_UNUSED(argc)
   Q_UNUSED(argv)
 
+  // no reason to set an allocation limit because this is an image viewer
+  QImageReader::setAllocationLimit(0);
+
   // install the translations built-into Qt itself
   if(qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
       installTranslator(&qtTranslator);
