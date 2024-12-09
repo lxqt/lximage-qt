@@ -24,6 +24,7 @@
 #include <QIODevice>
 #include <QNetworkAccessManager>
 #include <QObject>
+#include <QPointer>
 
 namespace LxImage {
 
@@ -37,6 +38,8 @@ class Provider : public QObject
     Q_OBJECT
 
 public:
+    Provider(QObject *parent = nullptr);
+    ~Provider();
 
     /**
      * @brief Upload the provided data
@@ -46,8 +49,10 @@ public:
     virtual Upload *upload(QIODevice *device) = 0;
 
 protected:
+    static QPointer<QNetworkAccessManager> sManager;
 
-    static QNetworkAccessManager sManager;
+private:
+    static int ref;
 };
 
 }

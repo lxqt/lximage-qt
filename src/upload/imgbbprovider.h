@@ -29,6 +29,7 @@ class ImgBBProvider : public Provider
     Q_OBJECT
 
 public:
+    ImgBBProvider(QObject *parent = nullptr);
 
     virtual Upload *upload(QIODevice *device);
 };

@@ -29,8 +29,13 @@ using namespace LxImage;
 
 const QUrl gUploadURL(QStringLiteral("https://imgbb.com/json"));
 
+ImgBBProvider::ImgBBProvider(QObject *parent) : Provider(parent) {}
+
 Upload *ImgBBProvider::upload(QIODevice *device)
 {
+    if(!sManager) {
+        return nullptr;
+    }
     // Create the file part of the multipart request
     QHttpPart filePart;
     filePart.setBodyDevice(device);
@@ -60,5 +65,5 @@ Upload *ImgBBProvider::upload(QIODevice *device)
     multiPart->append(filePart);
 
     // Start the request and wrap it in an ImgBBUpload
-    return new ImgBBUpload(sManager.post(QNetworkRequest(gUploadURL), multiPart));
+    return new ImgBBUpload(sManager->post(QNetworkRequest(gUploadURL), multiPart));
 }
