@@ -94,11 +94,11 @@ protected:
   virtual void resizeEvent(QResizeEvent *event);
   virtual void closeEvent(QCloseEvent *event);
 
+  virtual bool eventFilter(QObject* watched, QEvent* event);
+private Q_SLOTS:
   void onImageLoaded();
   void onImageSaved();
 
-  virtual bool eventFilter(QObject* watched, QEvent* event);
-private Q_SLOTS:
   void on_actionMenubar_triggered(bool checked);
   void on_actionAbout_triggered();
   void on_actionHiddenShortcuts_triggered();

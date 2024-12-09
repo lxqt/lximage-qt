@@ -25,6 +25,8 @@
 #include <QFile>
 
 #include "ui_uploaddialog.h"
+#include "imgbbprovider.h"
+#include "imgurprovider.h"
 
 namespace LxImage {
 
@@ -68,6 +70,9 @@ private:
     QFile mFile;
 
     Upload *mUpload;
+
+    ImgurProvider *mImgurProvider;
+    ImgBBProvider *mImgBBProvider;
 };
 
 }
