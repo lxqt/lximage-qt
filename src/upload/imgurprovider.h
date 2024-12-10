@@ -33,6 +33,7 @@ class ImgurProvider : public Provider
     Q_OBJECT
 
 public:
+    ImgurProvider(QObject *parent = nullptr);
 
     virtual Upload *upload(QIODevice *device);
 };

@@ -22,4 +22,19 @@
 
 using namespace LxImage;
 
-QNetworkAccessManager Provider::sManager;
+QPointer<QNetworkAccessManager> Provider::sManager;
+int Provider::ref(0);
+
+Provider::Provider(QObject *parent) : QObject(parent) {
+    ++ref;
+    if(!sManager) {
+        sManager = new QNetworkAccessManager;
+    }
+}
+
+Provider::~Provider() {
+    --ref;
+    if(ref == 0) {
+        delete sManager;
+    }
+}

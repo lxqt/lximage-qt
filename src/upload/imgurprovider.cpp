@@ -31,13 +31,18 @@ const QUrl gUploadURL(QStringLiteral("https://api.imgur.com/3/upload.json"));
 const QByteArray gAuthHeader = "Client-ID 63ff047cd8bcf9e";
 const QByteArray gTypeHeader = "application/x-www-form-urlencoded";
 
+ImgurProvider::ImgurProvider(QObject *parent) : Provider(parent) {}
+
 Upload *ImgurProvider::upload(QIODevice *device)
 {
+    if(!sManager) {
+        return nullptr;
+    }
     // Create the request with the correct HTTP headers
     QNetworkRequest request(gUploadURL);
     request.setHeader(QNetworkRequest::ContentTypeHeader, gTypeHeader);
     request.setRawHeader("Authorization", gAuthHeader);
 
     // Start the request and wrap it in an ImgurUpload
-    return new ImgurUpload(sManager.post(request, device));
+    return new ImgurUpload(sManager->post(request, device));
 }
