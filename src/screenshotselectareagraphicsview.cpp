@@ -36,14 +36,15 @@ void ScreenshotSelectAreaGraphicsView::mousePressEvent(QMouseEvent *event)
     p0_ = QPointF(event->pos());
   } else {
     if(selectedAreaRect_ == nullptr) {
-      QColor highlight = palette().color(QPalette::Active,QPalette::Highlight);
+      QColor highlight = palette().color(QPalette::Active, QPalette::Highlight);
       QPen pen(highlight, 3, Qt::DashDotLine, Qt::RoundCap, Qt::RoundJoin);
       QColor color(highlight);
       color.setAlpha(128);
       QBrush brush(color);
       selectedAreaRect_ = scene()->addRect(QRectF(), pen, brush);
-    } 
-    selectedAreaRect_->setRect(QRectF(p0_,QPointF(event->pos())).normalized());
+    }
+    QPointF pos(event->pos().x() + 1, event->pos().y() + 1);
+    selectedAreaRect_->setRect(QRectF(p0_, pos).normalized());
   }
 }
 
@@ -54,5 +55,6 @@ void ScreenshotSelectAreaGraphicsView::mouseMoveEvent(QMouseEvent *event)
 
 void ScreenshotSelectAreaGraphicsView::mouseReleaseEvent(QMouseEvent *event)
 {
-  Q_EMIT selectedArea(QRectF(p0_,QPointF(event->pos())).normalized().toRect());
+  QPointF pos(event->pos().x() + 1, event->pos().y() + 1);
+  Q_EMIT selectedArea(QRectF(p0_, pos).normalized().toRect());
 }
