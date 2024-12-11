@@ -42,7 +42,7 @@ void ScreenshotSelectAreaGraphicsView::mousePressEvent(QMouseEvent *event)
       color.setAlpha(128);
       QBrush brush(color);
       selectedAreaRect_ = scene()->addRect(QRectF(), pen, brush);
-    } 
+    }
     selectedAreaRect_->setRect(QRectF(p0_,QPointF(event->pos())).normalized());
   }
 }
@@ -54,5 +54,7 @@ void ScreenshotSelectAreaGraphicsView::mouseMoveEvent(QMouseEvent *event)
 
 void ScreenshotSelectAreaGraphicsView::mouseReleaseEvent(QMouseEvent *event)
 {
-  Q_EMIT selectedArea(QRectF(p0_,QPointF(event->pos())).normalized().toRect());
+  // NOTE: "QRectF::toRect()" gives a QRect that does not include the right and bottom edges.
+  // Therefore, we need to grow it by one pixel to the right and bottom.
+  Q_EMIT selectedArea(QRectF(p0_,QPointF(event->pos())).normalized().toRect().marginsAdded(QMargins(0 , 0, 1, 1)));
 }

@@ -132,7 +132,7 @@ void ImageView::mousePressEvent(QMouseEvent * event) {
     }
   }
   else {
-    startPoint = mapToScene(event->pos()).toPoint();
+    startPoint = mapToScene(event->position().toPoint()).toPoint();
   }
 }
 
@@ -144,7 +144,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
     }
   }
   else if(!image_.isNull()) {
-    QPoint endPoint = mapToScene(event->pos()).toPoint();
+    QPoint endPoint = mapToScene(event->position().toPoint()).toPoint();
 
     QPainter painter(&image_);
     painter.setRenderHint(QPainter::Antialiasing, true);
