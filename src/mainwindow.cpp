@@ -426,7 +426,9 @@ void MainWindow::onFolderLoaded() {
     if(thumbnailsView_) { // showing thumbnails
       // select current file in the thumbnails view
       thumbnailsView_->childView()->setCurrentIndex(currentIndex_);
-      thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+      QTimer::singleShot(0, thumbnailsView_, [this]() {
+        thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+      });
     }
   }
   // this is used to open the first image of a folder
@@ -831,7 +833,9 @@ void MainWindow::updateUI() {
     if(thumbnailsView_) { // showing thumbnails
       // select current file in the thumbnails view
       thumbnailsView_->childView()->setCurrentIndex(currentIndex_);
-      thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+      QTimer::singleShot(0, thumbnailsView_, [this]() {
+        thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::EnsureVisible);
+      });
     }
 
     if(exifDataDock_) {
@@ -1335,9 +1339,9 @@ void MainWindow::setShowThumbnails(bool show) {
       if (currentFile_) { // select the loaded image
         currentIndex_ = indexFromPath(currentFile_);
         listView->setCurrentIndex(currentIndex_);
-        // wait to center the selection
-        QCoreApplication::processEvents();
-        listView->scrollTo(currentIndex_, QAbstractItemView::PositionAtCenter);
+        QTimer::singleShot(0, thumbnailsView_, [this]() {
+            thumbnailsView_->childView()->scrollTo(currentIndex_, QAbstractItemView::PositionAtCenter);
+        });
       }
       connect(thumbnailsView_->selectionModel(), &QItemSelectionModel::selectionChanged,
               this, &MainWindow::onThumbnailSelChanged);
