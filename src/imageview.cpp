@@ -51,8 +51,8 @@ ImageView::ImageView(QWidget* parent):
   autoZoomFit_(false),
   smoothOnZoom_(true),
   isSVG(false),
-  currentTool(ToolNone),
-  nextNumber(1),
+  currentTool_(ToolNone),
+  nextNumber_(1),
   showOutline_(false) {
 
   setViewportMargins(0, 0, 0, 0);
@@ -125,19 +125,19 @@ void ImageView::mouseDoubleClickEvent(QMouseEvent* event) {
 }
 
 void ImageView::mousePressEvent(QMouseEvent * event) {
-  if(currentTool == ToolNone) {
+  if(currentTool_ == ToolNone) {
     QGraphicsView::mousePressEvent(event);
     if(cursorTimer_) {
       cursorTimer_->stop();
     }
   }
   else {
-    startPoint = mapToScene(event->position().toPoint()).toPoint();
+    startPoint_ = mapToScene(event->position().toPoint()).toPoint();
   }
 }
 
 void ImageView::mouseReleaseEvent(QMouseEvent* event) {
-  if(currentTool == ToolNone) {
+  if(currentTool_ == ToolNone) {
     QGraphicsView::mouseReleaseEvent(event);
     if(cursorTimer_) {
       cursorTimer_->start(CURSOR_HIDE_DELY);
@@ -150,29 +150,32 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
     painter.setRenderHint(QPainter::Antialiasing, true);
     painter.setPen(QPen(Qt::red, 5));
 
-    switch (currentTool) {
+    switch (currentTool_) {
     case ToolArrow:
-      drawArrow(painter, startPoint, endPoint, M_PI / 8, 25);
+      drawArrow(painter, startPoint_, endPoint, M_PI / 8, 25);
       break;
-    case ToolRectangle:
+    case ToolRectangle: {
       // Draw the rectangle in the image and scene at the same time
-      painter.drawRect(QRect(startPoint, endPoint));
-      annotations.append(scene_->addRect(QRect(startPoint, endPoint), painter.pen()));
+      QRect r = QRect(startPoint_, endPoint).normalized();
+      painter.drawRect(r);
+      annotations_.append(scene_->addRect(r, painter.pen()));
       break;
-    case ToolCircle:
+    }
+    case ToolCircle: {
       // Draw the circle in the image and scene at the same time
-      painter.drawEllipse(QRect(startPoint, endPoint));
-      annotations.append(scene_->addEllipse(QRect(startPoint, endPoint), painter.pen()));
+      QRect r = QRect(startPoint_, endPoint).normalized();
+      painter.drawEllipse(r);
+      annotations_.append(scene_->addEllipse(r, painter.pen()));
       break;
-    case ToolNumber:
-    {
+    }
+    case ToolNumber: {
       // Set the font
       QFont font;
       font.setPixelSize(32);
       painter.setFont(font);
 
       // Calculate the dimensions of the text
-      QString text = QStringLiteral("%1").arg(nextNumber++);
+      QString text = QStringLiteral("%1").arg(nextNumber_++);
       QRectF textRect = painter.boundingRect(image_.rect(), 0, text);
       textRect.moveTo(endPoint);
 
@@ -190,7 +193,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       painter.drawPath(path);
       // Draw the circle in the sence
       auto item = scene_->addPath(path, painter.pen(), QBrush(Qt::red));
-      annotations.append(item);
+      annotations_.append(item);
 
       // Draw the text in the image
       painter.setPen(Qt::white);
@@ -308,7 +311,7 @@ void ImageView::rotateImage(bool clockwise) {
       // Since, in the case of SVG and GIF, annotations are not parts of the QImage and
       // because they might have been added at any time, they need to be transformed
       // by considering their previous transformations separately.
-      for(const auto& annotation : std::as_const(annotations)) {
+      for(const auto& annotation : std::as_const(annotations_)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -319,11 +322,11 @@ void ImageView::rotateImage(bool clockwise) {
     QTransform transform;
     transform.rotate(clockwise ? 90.0 : -90.0);
     image_ = image_.transformed(transform, Qt::SmoothTransformation);
-    int tmp = nextNumber; // restore it (may be restet by setImage())
+    int tmp = nextNumber_; // restore it (may be reset by setImage())
     /* when this is GIF or SVG, we need to transform its corresponding QImage
        without showing it to have right measures for auto-zooming and other things */
     setImage(image_, !gifMovie_ && !isSVG);
-    nextNumber = tmp;
+    nextNumber_ = tmp;
   }
 }
 
@@ -346,7 +349,7 @@ void ImageView::flipImage(bool horizontal) {
         outlineItem_->setTransform(transform, false);
         outlineItem_->setTransform(prevTrans, true);
       }
-      for(const auto& annotation : std::as_const(annotations)) {
+      for(const auto& annotation : std::as_const(annotations_)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -360,9 +363,9 @@ void ImageView::flipImage(bool horizontal) {
     else {
       image_ = image_.mirrored(false, true);
     }
-    int tmp = nextNumber;
+    int tmp = nextNumber_;
     setImage(image_, !gifMovie_ && !isSVG);
-    nextNumber = tmp;
+    nextNumber_ = tmp;
   }
 }
 
@@ -371,7 +374,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
   if(newSize == imgSize) {
     return false;
   }
-  int tmp = nextNumber;
+  int tmp = nextNumber_;
   if(!isSVG) { // with SVG, we get a sharp image below
     image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     setImage(image_, !gifMovie_);
@@ -389,7 +392,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
         outlineItem_->setTransform(transform, false);
         outlineItem_->setTransform(prevTrans, true);
       }
-      for(const auto& annotation : std::as_const(annotations)) {
+      for(const auto& annotation : std::as_const(annotations_)) {
         prevTrans = annotation->transform();
         annotation->setTransform(transform, false);
         annotation->setTransform(prevTrans, true);
@@ -406,7 +409,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
         imageItem->paint(&painter, &opt);
         painter.restore();
         // draw annotations
-        for(const auto& annotation : std::as_const(annotations)) {
+        for(const auto& annotation : std::as_const(annotations_)) {
           painter.save();
           painter.setTransform(annotation->transform());
           annotation->paint(&painter, &opt);
@@ -425,7 +428,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
       }
     }
   }
-  nextNumber = tmp;
+  nextNumber_ = tmp;
   return true;
 }
 
@@ -759,7 +762,7 @@ void ImageView::hideCursor(bool enable) {
 }
 
 void ImageView::activateTool(Tool tool) {
-  currentTool = tool;
+  currentTool_ = tool;
   viewport()->setCursor(tool == ToolNone ?
                             Qt::OpenHandCursor :
                             Qt::CrossCursor);
@@ -774,7 +777,7 @@ void ImageView::drawArrow(QPainter &painter,
   // Draw the line in the inmage
   painter.drawLine(start, end);
   // Draw the line in the scene
-  annotations.append(scene_->addLine(QLine(start, end), painter.pen()));
+  annotations_.append(scene_->addLine(QLine(start, end), painter.pen()));
 
   // Calculate the angle of the line
   QPoint delta = end - start;
@@ -794,8 +797,8 @@ void ImageView::drawArrow(QPainter &painter,
   painter.drawLine(end, end + tip1);
   painter.drawLine(end, end + tip2);
   // Draw the two lines in the scene
-  annotations.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
-  annotations.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
+  annotations_.append(scene_->addLine(QLine(end, end+tip1), painter.pen()));
+  annotations_.append(scene_->addLine(QLine(end, end+tip2), painter.pen()));
 }
 
 void ImageView::resetView() {
@@ -807,17 +810,17 @@ void ImageView::resetView() {
     }
   }
   // remove annotations
-  if(!annotations.isEmpty()) {
+  if(!annotations_.isEmpty()) {
     if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
-      for(const auto& annotation : std::as_const(annotations)) {
+      for(const auto& annotation : std::as_const(annotations_)) {
         scene_->removeItem(annotation);
       }
-      qDeleteAll(annotations.begin(), annotations.end());
+      qDeleteAll(annotations_.begin(), annotations_.end());
     }
-    annotations.clear();
+    annotations_.clear();
   }
   // reset numbering
-  nextNumber = 1;
+  nextNumber_ = 1;
 }
 
 } // namespace LxImage
