@@ -143,10 +143,10 @@ private:
   bool autoZoomFit_;
   bool smoothOnZoom_;
   bool isSVG; // is the image an SVG file?
-  Tool currentTool; // currently selected tool
-  QPoint startPoint; // starting point for the tool
-  QList<QGraphicsItem *> annotations;	//annotation items which have been drawn in the scene
-  int nextNumber;
+  Tool currentTool_; // currently selected tool
+  QPoint startPoint_; // starting point for the tool
+  QList<QGraphicsItem *> annotations_; //annotation items which have been drawn in the scene
+  int nextNumber_;
   bool showOutline_;
 };
 
