@@ -1,3 +1,11 @@
+lximage-qt-2.1.1 / 2025-01-29
+==============================
+ * Don't set a limit for image size (Qt6 had set an allocation limit of 256 MiB).
+ * Fixed invalid `nullptr` parameter in `QObject::connect` (and so, silenced a warning).
+ * Fixed a small miscalculation in selection screenshot.
+ * Ensure the current thumbnail is in the visible part of the thumbnail bar.
+ * Fixed a problem in rectangular annotations.
+
 lximage-qt-2.1.0 / 2024-11-05
 ==============================
  * Corrected a misspelled mimetype in the desktop entry.
