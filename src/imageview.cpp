@@ -32,6 +32,7 @@
 #include <QPainter>
 #include <QPainterPath>
 #include <QGuiApplication>
+#include <QWindow>
 #include <QtMath>
 
 #define CURSOR_HIDE_DELY 3000
@@ -245,8 +246,8 @@ void ImageView::zoomFit() {
   if(!image_.isNull()) {
     // if the image is smaller than our view, use its original size
     // instead of scaling it up.
-    if(static_cast<int>(image_.width() / qApp->devicePixelRatio()) <= width()
-       && static_cast<int>(image_.height() / qApp->devicePixelRatio()) <= height()) {
+    if(static_cast<int>(image_.width() / getPixelRatio()) <= width()
+       && static_cast<int>(image_.height() / getPixelRatio()) <= height()) {
       bool tmp = autoZoomFit_; // should be restored because it may be changed below
       zoomOriginal();
       autoZoomFit_ = tmp;
@@ -469,7 +470,7 @@ void ImageView::setImage(const QImage& image, bool show) {
   }
 
   image_ = image;
-  QRectF r(QPointF(0, 0), image_.size() / qApp->devicePixelRatio());
+  QRectF r(QPointF(0, 0), image_.size() / getPixelRatio());
   if(image.isNull()) {
     imageItem_->hide();
     imageItem_->setBrush(QBrush());
@@ -479,7 +480,7 @@ void ImageView::setImage(const QImage& image, bool show) {
   }
   else {
     if(show) {
-      image_.setDevicePixelRatio(qApp->devicePixelRatio());
+      image_.setDevicePixelRatio(getPixelRatio());
       imageItem_->setRect(r);
       imageItem_->setBrush(image_);
       imageItem_->show();
@@ -519,11 +520,11 @@ void ImageView::setGifAnimation(const QString& fileName) {
       gifMovie_ = nullptr;
     }
     QPixmap pix(image_.size());
-    pix.setDevicePixelRatio(qApp->devicePixelRatio());
+    pix.setDevicePixelRatio(getPixelRatio());
     pix.fill(Qt::transparent);
     QGraphicsItem* gifItem = new QGraphicsPixmapItem(pix);
     QLabel* gifLabel = new QLabel();
-    gifLabel->setMaximumSize(pix.size() / qApp->devicePixelRatio()); // show gif with its real size
+    gifLabel->setMaximumSize(pix.size() / getPixelRatio()); // show gif with its real size
     gifMovie_ = new QMovie(fileName);
     QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
     gifLabel->setAttribute(Qt::WA_NoSystemBackground);
@@ -564,11 +565,11 @@ void ImageView::setSVG(const QString& fileName) {
     imageItem_ = nullptr;
     isSVG = true;
     QGraphicsSvgItem* svgItem = new QGraphicsSvgItem(fileName);
-    svgItem->setScale(1 / qApp->devicePixelRatio()); // show svg with its real size
+    svgItem->setScale(1 / getPixelRatio()); // show svg with its real size
     scene_->addItem(svgItem);
     QRectF r(svgItem->boundingRect());
-    r.setBottomRight(r.bottomRight() / qApp->devicePixelRatio());
-    r.setTopLeft(r.topLeft() / qApp->devicePixelRatio());
+    r.setBottomRight(r.bottomRight() / getPixelRatio());
+    r.setTopLeft(r.topLeft() / getPixelRatio());
     scene_->setSceneRect(r);
 
     // outline
@@ -714,7 +715,7 @@ void ImageView::generateCache() {
   }
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.size() * qApp->devicePixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.size() * getPixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
@@ -724,10 +725,10 @@ void ImageView::generateCache() {
 // convert viewport coordinate to the original image (not scaled).
 QRect ImageView::viewportToScene(const QRect& rect) {
   // QPolygon poly = mapToScene(imageItem_->rect());
-  /* NOTE: The scene rectangle is shrunken by qApp->devicePixelRatio()
+  /* NOTE: The scene rectangle is shrunken by getPixelRatio()
      but we want the coordinates with respect to the original image. */
-  QPoint topLeft = (mapToScene(rect.topLeft()) * qApp->devicePixelRatio()).toPoint();
-  QPoint bottomRight = (mapToScene(rect.bottomRight()) * qApp->devicePixelRatio()).toPoint();
+  QPoint topLeft = (mapToScene(rect.topLeft()) * getPixelRatio()).toPoint();
+  QPoint bottomRight = (mapToScene(rect.bottomRight()) * getPixelRatio()).toPoint();
   return QRect(topLeft, bottomRight);
 }
 
@@ -821,6 +822,13 @@ void ImageView::resetView() {
   }
   // reset numbering
   nextNumber_ = 1;
+}
+
+qreal ImageView::getPixelRatio() const {
+  if(auto winHandle = window()->windowHandle()) {
+    return winHandle->devicePixelRatio();
+  }
+  return qApp->devicePixelRatio();
 }
 
 } // namespace LxImage

@@ -123,6 +123,8 @@ private:
 
   void resetView();
 
+  qreal getPixelRatio() const;
+
 private Q_SLOTS:
   void onFileDropped(const QString file);
   void generateCache();
