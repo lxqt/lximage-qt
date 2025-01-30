@@ -235,6 +235,13 @@ MainWindow::MainWindow():
 
   // set custom and hard-coded shortcuts
   setShortcuts();
+
+  if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+    // On Wayland, we should set the pixel ratio of the image by consulting
+    // the window handle when the image is shown at the startup, because each
+    // screen can have its own scaling. Hence the early creation of the handle.
+    winId();
+  }
 }
 
 MainWindow::~MainWindow() {
@@ -882,7 +889,15 @@ void MainWindow::updateUI() {
           show();
           int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
           QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
-          QScreen *appScreen = QGuiApplication::screenAt(QCursor::pos());
+          QScreen *appScreen = nullptr;
+          if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+            if(QWindow *win = windowHandle()) {
+              appScreen = win->screen();
+            }
+          }
+          else {
+            appScreen = QGuiApplication::screenAt(QCursor::pos());
+          }
           if(appScreen == nullptr) {
             appScreen = QGuiApplication::primaryScreen();
           }
