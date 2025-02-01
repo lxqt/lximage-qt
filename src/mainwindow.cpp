@@ -64,7 +64,6 @@ MainWindow::MainWindow():
   image_(),
   // currentFileInfo_(nullptr),
   imageModified_(false),
-  startMaximized_(false),
   folder_(nullptr),
   folderModel_(new Fm::FolderModel()),
   proxyModel_(new Fm::ProxyFolderModel()),
@@ -74,7 +73,8 @@ MainWindow::MainWindow():
   loadJob_(nullptr),
   saveJob_(nullptr),
   fileMenu_(nullptr),
-  showFullScreen_(false) {
+  showFullScreen_(false),
+  lastPixRatio_(1.0) {
 
   setAttribute(Qt::WA_DeleteOnClose); // FIXME: check if current image is saved before close
 
@@ -241,6 +241,18 @@ MainWindow::MainWindow():
     // the window handle when the image is shown at the startup, because each
     // screen can have its own scaling. Hence the early creation of the handle.
     winId();
+
+    // reload the image if the screen is changed and has a different scaling
+    if(QWindow *win = windowHandle()) {
+      lastPixRatio_ = win->devicePixelRatio();
+      connect(win, &QWindow::screenChanged, this, [this](QScreen* screen) {
+        if(screen != nullptr && isVisible() && windowHandle()
+           && lastPixRatio_ != windowHandle()->devicePixelRatio()) {
+          lastPixRatio_ = windowHandle()->devicePixelRatio();
+          on_actionReload_triggered();
+        }
+      });
+    }
   }
 }
 
@@ -763,7 +775,7 @@ void MainWindow::onImageLoaded() {
     /* we resized and moved the window without showing
        it in updateUI(), so we need to show it here */
     if(!isVisible()) {
-      if(startMaximized_) {
+      if(settings.windowMaximized()) {
         setWindowState(windowState() | Qt::WindowMaximized);
       }
       showAndRaise();
@@ -874,7 +886,7 @@ void MainWindow::updateUI() {
                               filePath);
         if (!isVisible()) {
           /* Here we try to implement the following behavior as far as possible:
-              (1) A minimum size of 400x400 is assumed;
+              (1) A minimum size of 600x400 is assumed;
               (2) The window is scaled to fit the image;
               (3) But for too big images, the window is scaled down;
               (4) The window is centered on the screen.
@@ -884,13 +896,13 @@ void MainWindow::updateUI() {
              Therefore, we first use show() without really showing the window. */
 
           // the maximization setting may be lost in resizeEvent because we resize the window below
-          startMaximized_ = static_cast<Application*>(qApp)->settings().windowMaximized();
           setAttribute(Qt::WA_DontShowOnScreen);
           show();
           int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
           QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
+          bool isWayland(QGuiApplication::platformName() == QStringLiteral("wayland"));
           QScreen *appScreen = nullptr;
-          if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+          if(isWayland) {
             if(QWindow *win = windowHandle()) {
               appScreen = win->screen();
             }
@@ -901,14 +913,27 @@ void MainWindow::updateUI() {
           if(appScreen == nullptr) {
             appScreen = QGuiApplication::primaryScreen();
           }
-          const QRect ag = appScreen ? appScreen->availableGeometry() : QRect();
+          QRect ag = appScreen ? appScreen->availableGeometry() : QRect();
+          if(isWayland) {
+            // because of a Qt issue on Wayland, the correct screen may not be set at this moment
+            const auto allScreens = qApp->screens();
+            for(const auto& screen : allScreens) {
+              QRect sag = screen->availableGeometry();
+              if(ag.width() > sag.width()) {
+                ag.setWidth(sag.width());
+              }
+              if(ag.height() > sag.height()) {
+                ag.setHeight(sag.height());
+              }
+            }
+          }
           // since the window isn't decorated yet, we have to assume a max thickness for its frame
           QSize maxFrame = QSize(50, 100);
           if(newSize.width() > ag.width() - maxFrame.width()
              || newSize.height() > ag.height() - maxFrame.height()) {
             newSize.scale(ag.width() - maxFrame.width(), ag.height() - maxFrame.height(), Qt::KeepAspectRatio);
           }
-          newSize = newSize.expandedTo(QSize(400, 400)); // a minimum size of 400x400 is good
+          newSize = newSize.expandedTo(QSize(600, 400)); // a minimum size of 600x400 is good
           move(ag.x() + (ag.width() - newSize.width())/2,
                ag.y() + (ag.height() - newSize.height())/2);
           resize(newSize);
@@ -963,7 +988,8 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     const Fm::CStrPtr file_name = currentFile_.toString();
 
     // set image zoom, like in onImageLoaded()
-    if(static_cast<Application*>(qApp)->settings().forceZoomFit()) {
+    Settings& settings = static_cast<Application*>(qApp)->settings();
+    if(settings.forceZoomFit()) {
       ui.actionZoomFit->setChecked(true);
     }
     ui.view->setAutoZoomFit(ui.actionZoomFit->isChecked());
@@ -978,7 +1004,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     image_ = ui.view->image();
     updateUI();
     if(!isVisible()) {
-      if(startMaximized_) {
+      if(settings.windowMaximized()) {
         setWindowState(windowState() | Qt::WindowMaximized);
       }
       showAndRaise();
@@ -1644,6 +1670,17 @@ void MainWindow::showAndRaise() {
     }
     else {
       show();
+    }
+    if(QGuiApplication::platformName() == QStringLiteral("wayland")) {
+      // A workaround for a Qt bug, because of which, the window handle may not
+      // give the real device pixel ratio on showing with a multi-screen setup.
+      QTimer::singleShot (100, this, [this]() {
+        if(QWindow *win = windowHandle()) {
+          if(lastPixRatio_ != win->devicePixelRatio()) {
+            on_actionReload_triggered();
+          }
+        }
+      });
     }
     raise();
     activateWindow();

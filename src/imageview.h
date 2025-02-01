@@ -41,7 +41,7 @@ public:
   ImageView(QWidget* parent = nullptr);
   virtual ~ImageView();
 
-  void setImage(const QImage& image, bool show = true);
+  void setImage(const QImage& image, bool show = true, bool updatePixelRatio = true);
   void setGifAnimation(const QString& fileName);
   void setSVG(const QString& fileName);
 
@@ -144,12 +144,13 @@ private:
   double scaleFactor_;
   bool autoZoomFit_;
   bool smoothOnZoom_;
-  bool isSVG; // is the image an SVG file?
+  bool isSVG_; // is the image an SVG file?
   Tool currentTool_; // currently selected tool
   QPoint startPoint_; // starting point for the tool
   QList<QGraphicsItem *> annotations_; //annotation items which have been drawn in the scene
   int nextNumber_;
   bool showOutline_;
+  qreal pixRatio_;
 };
 
 }
