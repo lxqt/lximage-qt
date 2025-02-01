@@ -41,6 +41,7 @@ Settings::Settings():
   slideShowInterval_(5),
   fallbackIconTheme_(QStringLiteral("oxygen")),
   maxRecentFiles_(5),
+  rememberWindowSize_(true),
   fixedWindowWidth_(640),
   fixedWindowHeight_(480),
   lastWindowWidth_(640),
@@ -77,7 +78,7 @@ bool Settings::load() {
   lastWindowWidth_ = settings.value(QStringLiteral("LastWindowWidth"), 640).toInt();
   lastWindowHeight_ = settings.value(QStringLiteral("LastWindowHeight"), 480).toInt();
   lastWindowMaximized_ = settings.value(QStringLiteral("LastWindowMaximized"), false).toBool();
-  rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
+  //rememberWindowSize_ = settings.value(QStringLiteral("RememberWindowSize"), true).toBool();
   showOutline_ = settings.value(QStringLiteral("ShowOutline"), false).toBool();
   showExifData_ = settings.value(QStringLiteral("ShowExifData"), false).toBool();
   exifDatakWidth_ = settings.value(QStringLiteral("ExifDatakWidth"), 250).toInt();
@@ -127,7 +128,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("LastWindowWidth"), lastWindowWidth_);
   settings.setValue(QStringLiteral("LastWindowHeight"), lastWindowHeight_);
   settings.setValue(QStringLiteral("LastWindowMaximized"), lastWindowMaximized_);
-  settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
+  //settings.setValue(QStringLiteral("RememberWindowSize"), rememberWindowSize_);
   settings.setValue(QStringLiteral("ShowOutline"), showOutline_);
   settings.setValue(QStringLiteral("ShowMenubar"), showMenubar_);
   settings.setValue(QStringLiteral("ShowToolbar"), showToolbar_);

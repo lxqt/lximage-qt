@@ -51,7 +51,7 @@ ImageView::ImageView(QWidget* parent):
   scaleFactor_(1.0),
   autoZoomFit_(false),
   smoothOnZoom_(true),
-  isSVG(false),
+  isSVG_(false),
   currentTool_(ToolNone),
   nextNumber_(1),
   showOutline_(false) {
@@ -69,6 +69,8 @@ ImageView::ImageView(QWidget* parent):
   outlineItem_->hide();
   outlineItem_->setPen(QPen(Qt::NoPen));
   scene_->addItem(outlineItem_);
+
+  pixRatio_ = getPixelRatio();
 }
 
 ImageView::~ImageView() {
@@ -246,8 +248,8 @@ void ImageView::zoomFit() {
   if(!image_.isNull()) {
     // if the image is smaller than our view, use its original size
     // instead of scaling it up.
-    if(static_cast<int>(image_.width() / getPixelRatio()) <= width()
-       && static_cast<int>(image_.height() / getPixelRatio()) <= height()) {
+    if(static_cast<int>(image_.width() / pixRatio_) <= viewport()->width()
+       && static_cast<int>(image_.height() / pixRatio_) <= viewport()->height()) {
       bool tmp = autoZoomFit_; // should be restored because it may be changed below
       zoomOriginal();
       autoZoomFit_ = tmp;
@@ -289,7 +291,7 @@ void ImageView::zoomOriginal() {
 }
 
 void ImageView::rotateImage(bool clockwise) {
-  if(gifMovie_ || isSVG) {
+  if(gifMovie_ || isSVG_) {
     if(QGraphicsItem* imageItem = imageGraphicsItem()) {
       QTransform transform;
       if(clockwise) {
@@ -326,13 +328,13 @@ void ImageView::rotateImage(bool clockwise) {
     int tmp = nextNumber_; // restore it (may be reset by setImage())
     /* when this is GIF or SVG, we need to transform its corresponding QImage
        without showing it to have right measures for auto-zooming and other things */
-    setImage(image_, !gifMovie_ && !isSVG);
+    setImage(image_, !gifMovie_ && !isSVG_, false);
     nextNumber_ = tmp;
   }
 }
 
 void ImageView::flipImage(bool horizontal) {
-  if(gifMovie_ || isSVG) {
+  if(gifMovie_ || isSVG_) {
     if(QGraphicsItem* imageItem = imageGraphicsItem()) {
       QTransform transform;
       if(horizontal) {
@@ -365,7 +367,7 @@ void ImageView::flipImage(bool horizontal) {
       image_ = image_.mirrored(false, true);
     }
     int tmp = nextNumber_;
-    setImage(image_, !gifMovie_ && !isSVG);
+    setImage(image_, !gifMovie_ && !isSVG_, false);
     nextNumber_ = tmp;
   }
 }
@@ -376,11 +378,11 @@ bool ImageView::resizeImage(const QSize& newSize) {
     return false;
   }
   int tmp = nextNumber_;
-  if(!isSVG) { // with SVG, we get a sharp image below
+  if(!isSVG_) { // with SVG, we get a sharp image below
     image_ = image_.scaled(newSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    setImage(image_, !gifMovie_);
+    setImage(image_, !gifMovie_, false);
   }
-  if(gifMovie_ || isSVG) {
+  if(gifMovie_ || isSVG_) {
     if(QGraphicsItem* imageItem = imageGraphicsItem()) {
       qreal sx = static_cast<qreal>(newSize.width()) / imgSize.width();
       qreal sy = static_cast<qreal>(newSize.height()) / imgSize.height();
@@ -399,7 +401,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
         annotation->setTransform(prevTrans, true);
       }
 
-      if(isSVG) {
+      if(isSVG_) {
         // create and set a sharp scaled image with SVG
         QPixmap pixmap(newSize);
         QPainter painter(&pixmap);
@@ -425,7 +427,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
           painter.restore();
         }
         image_ = pixmap.toImage();
-        setImage(image_, false);
+        setImage(image_, false, false);
       }
     }
   }
@@ -446,12 +448,12 @@ void ImageView::drawOutline() {
   outlineItem_->setZValue(1); // to be drawn on top of all other items
 }
 
-void ImageView::setImage(const QImage& image, bool show) {
+void ImageView::setImage(const QImage& image, bool show, bool updatePixelRatio) {
   if(show) {
     resetView();
-    if(gifMovie_ || isSVG) { // a gif animation or SVG file was shown before
+    if(gifMovie_ || isSVG_) { // a gif animation or SVG file was shown before
       scene_->clear();
-      isSVG = false;
+      isSVG_ = false;
       if(gifMovie_) { // should be deleted explicitly
         delete gifMovie_;
         gifMovie_ = nullptr;
@@ -469,8 +471,12 @@ void ImageView::setImage(const QImage& image, bool show) {
     }
   }
 
+  if(updatePixelRatio) {
+    pixRatio_ = getPixelRatio();
+  }
+
   image_ = image;
-  QRectF r(QPointF(0, 0), image_.size() / getPixelRatio());
+  QRectF r(QPointF(0, 0), image_.size() / pixRatio_);
   if(image.isNull()) {
     imageItem_->hide();
     imageItem_->setBrush(QBrush());
@@ -480,7 +486,7 @@ void ImageView::setImage(const QImage& image, bool show) {
   }
   else {
     if(show) {
-      image_.setDevicePixelRatio(getPixelRatio());
+      image_.setDevicePixelRatio(pixRatio_);
       imageItem_->setRect(r);
       imageItem_->setBrush(image_);
       imageItem_->show();
@@ -519,13 +525,17 @@ void ImageView::setGifAnimation(const QString& fileName) {
       delete gifMovie_;
       gifMovie_ = nullptr;
     }
+    pixRatio_ = getPixelRatio();
     QPixmap pix(image_.size());
-    pix.setDevicePixelRatio(getPixelRatio());
+    pix.setDevicePixelRatio(pixRatio_);
     pix.fill(Qt::transparent);
     QGraphicsItem* gifItem = new QGraphicsPixmapItem(pix);
     QLabel* gifLabel = new QLabel();
-    gifLabel->setMaximumSize(pix.size() / getPixelRatio()); // show gif with its real size
+    gifLabel->setMaximumSize(pix.size() / pixRatio_); // show gif with its real size
     gifMovie_ = new QMovie(fileName);
+    if(pixRatio_ != static_cast<qreal>(1)) {
+      gifMovie_->setScaledSize(pix.size() / pixRatio_);
+    }
     QGraphicsProxyWidget* gifWidget = new QGraphicsProxyWidget(gifItem);
     gifLabel->setAttribute(Qt::WA_NoSystemBackground);
     gifLabel->setMovie(gifMovie_);
@@ -563,13 +573,14 @@ void ImageView::setSVG(const QString& fileName) {
   else {
     scene_->clear();
     imageItem_ = nullptr;
-    isSVG = true;
+    isSVG_ = true;
+    pixRatio_ = getPixelRatio();
     QGraphicsSvgItem* svgItem = new QGraphicsSvgItem(fileName);
-    svgItem->setScale(1 / getPixelRatio()); // show svg with its real size
+    svgItem->setScale(1 / pixRatio_); // show svg with its real size
     scene_->addItem(svgItem);
     QRectF r(svgItem->boundingRect());
-    r.setBottomRight(r.bottomRight() / getPixelRatio());
-    r.setTopLeft(r.topLeft() / getPixelRatio());
+    r.setBottomRight(r.bottomRight() / pixRatio_);
+    r.setTopLeft(r.topLeft() / pixRatio_);
     scene_->setSceneRect(r);
 
     // outline
@@ -661,7 +672,7 @@ void ImageView::queueGenerateCache() {
 
   // we don't need to cache the scaled image if its the same as the original image (scale:1.0)
   // no cache for gif animations or SVG images either
-  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG || !smoothOnZoom_) {
+  if(scaleFactor_ == 1.0 || gifMovie_ || isSVG_ || !smoothOnZoom_) {
     if(cacheTimer_) {
       cacheTimer_->stop();
       delete cacheTimer_;
@@ -689,7 +700,7 @@ void ImageView::generateCache() {
   }
 
   if(!imageItem_ || image_.isNull()
-     || scaleFactor_ == 1.0 || gifMovie_ || isSVG || !smoothOnZoom_) {
+     || scaleFactor_ == 1.0 || gifMovie_ || isSVG_ || !smoothOnZoom_) {
     return;
   }
 
@@ -715,7 +726,7 @@ void ImageView::generateCache() {
   }
 
   // QImage scaled = subImage.scaled(subRect.width() * scaleFactor_, subRect.height() * scaleFactor_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-  QImage scaled = subImage.scaled(cachedRect_.size() * getPixelRatio(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+  QImage scaled = subImage.scaled(cachedRect_.size() * pixRatio_, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
   // convert the cached scaled image to pixmap
   cachedPixmap_ = QPixmap::fromImage(scaled);
@@ -725,10 +736,10 @@ void ImageView::generateCache() {
 // convert viewport coordinate to the original image (not scaled).
 QRect ImageView::viewportToScene(const QRect& rect) {
   // QPolygon poly = mapToScene(imageItem_->rect());
-  /* NOTE: The scene rectangle is shrunken by getPixelRatio()
-     but we want the coordinates with respect to the original image. */
-  QPoint topLeft = (mapToScene(rect.topLeft()) * getPixelRatio()).toPoint();
-  QPoint bottomRight = (mapToScene(rect.bottomRight()) * getPixelRatio()).toPoint();
+  /* NOTE: The scene rectangle is shrunken by pixRatio_, but
+     we want the coordinates with respect to the original image. */
+  QPoint topLeft = (mapToScene(rect.topLeft()) * pixRatio_).toPoint();
+  QPoint bottomRight = (mapToScene(rect.bottomRight()) * pixRatio_).toPoint();
   return QRect(topLeft, bottomRight);
 }
 
