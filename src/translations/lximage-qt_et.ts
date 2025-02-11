@@ -807,7 +807,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;View</source>
-        <translation>&amp;Vaata</translation>
+        <translation>&amp;Vaade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="145"/>

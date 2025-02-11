@@ -929,7 +929,7 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão de cores:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
@@ -949,7 +949,7 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
