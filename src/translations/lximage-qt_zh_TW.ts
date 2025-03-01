@@ -106,7 +106,7 @@
     <message>
         <location filename="../application.cpp" line="110"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>截圖並直接將其存到資料夾（已棄用，建議使用 screengrab）</translation>
+        <translation>擷圖並直接將其存到目錄（已棄用，建議使用 screengrab）</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="116"/>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="529"/>
         <source>Open directory</source>
-        <translation>打開資料夾</translation>
+        <translation>開啟目錄</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="550"/>
@@ -599,7 +599,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="562"/>
         <source>Open &amp;Directory</source>
-        <translation>打開資料夾(&amp;D)</translation>
+        <translation>開啟目錄(&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="565"/>
@@ -922,8 +922,8 @@ in the editing mode.</source>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished">May work only with images which have valid color spaces.
-Reload current image to see the effect.</translation>
+        <translation>可能僅適用於具有有效色彩空間的影像圖檔。
+重新載入目前圖檔以查看效果。</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
@@ -943,22 +943,22 @@ Reload current image to see the effect.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>線性 sRGB (linear gamma)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (wide-gamut 螢幕)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
