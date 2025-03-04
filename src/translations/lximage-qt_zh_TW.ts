@@ -6,17 +6,17 @@
     <message>
         <location filename="../shortcuts.ui" line="14"/>
         <source>Hidden Shortcuts</source>
-        <translation>隱藏的快捷鍵</translation>
+        <translation>隱藏的快速鍵</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>這些固定的快捷鍵，當在「偏好設定」→ 「快捷鍵」內被指定給其他動作時，將會被覆蓋。</translation>
+        <translation>這些固定的快速鍵將會被覆蓋，如果在 偏好設定 → 快速鍵 中被指定其他動作時。</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation>快捷鍵</translation>
+        <translation>快速鍵</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../upload/imgbbupload.cpp" line="44"/>
         <source>unknown error response</source>
-        <translation>未知的錯誤回應</translation>
+        <translation>不明錯誤回應</translation>
     </message>
 </context>
 <context>
@@ -127,7 +127,7 @@
     <message>
         <location filename="../upload/imgurupload.cpp" line="47"/>
         <source>unknown error response</source>
-        <translation>未知的錯誤回應</translation>
+        <translation>不明錯誤回應</translation>
     </message>
 </context>
 <context>
@@ -228,8 +228,8 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>在編輯模式下按下輔助鍵（Alt, Ctrl, Shift）
-以清除快捷鍵。</translation>
+        <translation>在編輯模式下
+使用組合修飾鍵(Alt, Ctrl, Shift)來清除快速鍵。</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="213"/>
@@ -249,12 +249,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.cpp" line="341"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;警告：重複的快捷鍵！&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;警告：偵測到不明確的快速鍵！&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="358"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;無法處理重複的快捷鍵。&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;不接受不明確的快速鍵。&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -419,7 +419,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="229"/>
         <source>Hidden &amp;Shortcuts</source>
-        <translation>隱藏的快捷鍵 (&amp;S)</translation>
+        <translation>隱藏的快速鍵(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
@@ -449,7 +449,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
         <source>Original Size</source>
-        <translation>原始尺寸</translation>
+        <translation>原始大小</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
@@ -727,7 +727,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="732"/>
         <location filename="../mainwindow.ui" line="735"/>
         <source>Rename</source>
-        <translation>更改名稱</translation>
+        <translation>重新命名</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="738"/>
@@ -870,7 +870,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Fit images when navigating</source>
-        <translation>瀏覽時自動調整圖片大小</translation>
+        <translation>導覽時自動符合圖片</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="60"/>
@@ -938,7 +938,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation>sRGB(被大部分的螢幕所支持）</translation>
+        <translation>sRGB (大多數螢幕支援）</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
@@ -968,7 +968,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="264"/>
         <source>Shortcuts</source>
-        <translation>快捷鍵</translation>
+        <translation>快速鍵</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="283"/>
@@ -978,7 +978,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="288"/>
         <source>Shortcut</source>
-        <translation>快捷鍵</translation>
+        <translation>快速鍵</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="296"/>
@@ -1004,7 +1004,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="14"/>
         <source>Resize Image</source>
-        <translation>調整圖片尺寸</translation>
+        <translation>變更圖片大小</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="26"/>
@@ -1019,12 +1019,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../resizeimagedialog.ui" line="40"/>
         <source>Current size:</source>
-        <translation>目前尺寸:</translation>
+        <translation>目前大小：</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="80"/>
         <source>New size:</source>
-        <translation>調整後的尺寸:</translation>
+        <translation>新建大小：</translation>
     </message>
     <message>
         <location filename="../resizeimagedialog.ui" line="93"/>
