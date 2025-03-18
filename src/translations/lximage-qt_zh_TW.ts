@@ -634,7 +634,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="603"/>
         <source>Deselect all drawing tools</source>
-        <translation>取消選擇所有繪圖工具</translation>
+        <translation>取消選擇全部繪圖工具</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="615"/>
@@ -752,7 +752,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="766"/>
         <source>By &amp;Modification Time</source>
-        <translation>以最後修改時間 (&amp;M)</translation>
+        <translation>依照最後修改時間(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="769"/>
@@ -762,7 +762,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>By C&amp;reation Time</source>
-        <translation>以建立時間 (&amp;R)</translation>
+        <translation>依照建立時間(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="780"/>
@@ -772,7 +772,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>By File &amp;Size</source>
-        <translation>依照檔案大小 (&amp;S)</translation>
+        <translation>依照檔案大小(&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="791"/>
@@ -782,7 +782,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="799"/>
         <source>By File &amp;Type</source>
-        <translation>以檔案型態 (&amp;T)</translation>
+        <translation>依照檔案類型(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="802"/>
@@ -830,7 +830,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
         <source>Icon theme:</source>
-        <translation>Icon 主題：</translation>
+        <translation>圖示主題：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
@@ -885,7 +885,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
         <source>Use system Trash (and do not prompt)</source>
-        <translation>使用系統的垃圾桶（並且不顯示確認提示）</translation>
+        <translation>使用系統垃圾桶 (並且不作提示)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="94"/>
@@ -988,7 +988,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
         <source>General</source>
-        <translation>一般</translation>
+        <translation>通則</translation>
     </message>
 </context>
 <context>
