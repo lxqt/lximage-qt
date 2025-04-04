@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="93"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation>以全螢幕模式啟動（在圖塊式視窗管理器下會比較好用）</translation>
+        <translation>以全螢幕啟動 (在平鋪視窗管理器下會很好用)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="101"/>
@@ -186,12 +186,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="846"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (讀取中...) - 看圖軟體</translation>
+        <translation>[*]%1 (載入中...) - 看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (讀取失敗) - 看圖軟體</translation>
+        <translation>[*]%1 (載入失敗) - 看圖軟體</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
@@ -404,7 +404,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>以其他應用程式開啟 (&amp;W)...</translation>
+        <translation>以其他應用程式開啟(&amp;W)…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
@@ -424,7 +424,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>&amp;Open…</source>
-        <translation>開啟 (&amp;O)…</translation>
+        <translation>開啟(&amp;O)…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="250"/>
@@ -519,7 +519,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>&amp;New Window</source>
-        <translation>新視窗(&amp;N)</translation>
+        <translation>新建視窗(&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
@@ -539,7 +539,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>Capture Screenshot</source>
-        <translation>拍攝螢幕快照</translation>
+        <translation>擷取螢幕畫面</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
@@ -690,17 +690,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="685"/>
         <source>&amp;Main Toolbar</source>
-        <translation>主選單列 (&amp;M)</translation>
+        <translation>主選單列(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="688"/>
         <source>Main Toolbar</source>
-        <translation>主選單列</translation>
+        <translation>主工具列</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="696"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>註解工具列 (&amp;A)</translation>
+        <translation>註解工具列(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="707"/>
@@ -716,7 +716,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="721"/>
         <source>Copy Pa&amp;th</source>
-        <translation>複製路徑 (&amp;T)</translation>
+        <translation>複製路徑(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="724"/>
@@ -742,7 +742,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="755"/>
         <source>&amp;By File Name</source>
-        <translation>以檔案名稱( &amp;B)</translation>
+        <translation>依照檔案名稱(&amp;B)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="758"/>
@@ -938,7 +938,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation>sRGB (大多數螢幕支援）</translation>
+        <translation>sRGB (大多數顯示器均有支援）</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
@@ -1049,12 +1049,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="14"/>
         <source>Screenshot</source>
-        <translation>螢幕截圖</translation>
+        <translation>螢幕畫面擷圖</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="27"/>
         <source>Take a screenshot</source>
-        <translation>拍攝螢幕截圖</translation>
+        <translation>取得螢幕畫面擷圖</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="34"/>

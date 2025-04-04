@@ -944,7 +944,7 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB Linear (gamma linear)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
@@ -954,12 +954,12 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (telas com larga gama de cores)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>RGB ProPhoto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
