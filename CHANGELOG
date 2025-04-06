@@ -1,3 +1,10 @@
+lximage-qt-2.2.0 / 2025-04-17
+==============================
+ * Used the device pixel ratio of the window on Wayland.
+ * Fixes and workarounds for multi-screen scaling issues on Wayland.
+ * Fixed an old issue in showing GIF animations with pixel ratios > 1.
+ * Commented out "RememberWindowSize" from settings because it was never used (but might be used later).
+
 lximage-qt-2.1.1 / 2025-01-29
 ==============================
  * Don't set a limit for image size (Qt6 had set an allocation limit of 256 MiB).
