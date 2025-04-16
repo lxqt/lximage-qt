@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="93"/>
+        <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>전체 화면에서 시작(바둑판식 배열 창 관리자에 유용할 수 있음)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="101"/>
+        <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>스크린숏 찍기(더 이상 사용되지 않음, 대신 screengrab을 사용해 주세요)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
         <translation>DIR</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>스크린숏을 찍어 GUI를 표시하지 않고 디렉터리에 저장합니다(더 이상 사용되지 않음, 대신 screengrab을 사용하세요)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="116"/>
+        <location filename="../application.cpp" line="119"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[파일1, 파일2,...]</translation>
     </message>
@@ -133,85 +133,85 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>About</source>
         <translation>정보</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>A simple and fast image viewer</source>
         <translation>단순하고 빠른 이미지 뷰어
 
 한국어 번역: 이정희 &lt;daemul72@gmail.com&gt;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="300"/>
         <source>Copyright (C) </source>
         <translation>Copyright (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>LXQt Project</source>
         <translation>LXQt 프로젝트</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="304"/>
         <source>Development: </source>
         <translation>개발: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="306"/>
         <source>Author: </source>
         <translation>개발자: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Open File</source>
         <translation>파일 열기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Image files (%1)</source>
         <translation>이미지 파일(%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Open directory</source>
         <translation>디렉터리 열기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Save File</source>
         <translation>파일 저장하기</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="846"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1(불러오는 중...) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1(불러오기 실패) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="858"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - 이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="904"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>[*]Image Viewer</source>
         <translation>[*]이미지 뷰어</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1302"/>
+        <location filename="../mainwindow.cpp" line="1347"/>
         <source>Thumbnails</source>
         <translation>마중그림</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
         <translation>EXIF 데이터</translation>
     </message>
@@ -283,32 +283,32 @@ in the editing mode.</source>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="50"/>
+        <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
         <translation>Imgur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="51"/>
+        <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="134"/>
+        <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
         <translation>시작</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="139"/>
         <source>Stop</source>
         <translation>중지</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="142"/>
         <source>Close</source>
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="147"/>
+        <location filename="../upload/uploaddialog.cpp" line="149"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
@@ -996,7 +996,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="996"/>
+        <location filename="../mainwindow.cpp" line="1041"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
