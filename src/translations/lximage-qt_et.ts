@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="93"/>
+        <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Käivita täisekraanivaates (näiteks omab mõtet paaniva aknahalduri puhul)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="101"/>
+        <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Tee ekraanitõmmis (pigem soovitame kasutada rakendust screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
         <translation>DIR</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Tee ekraanitõmmis ja salvesta määratud kausta ilma kasutajaliidest kasutamata (tänaseks on see meetod vananenud ja pigem kasuta rakendust screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="116"/>
+        <location filename="../application.cpp" line="119"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[FAIL1, FAIL2,...]</translation>
     </message>
@@ -133,83 +133,83 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>About</source>
         <translation>Rakenduse teave</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>A simple and fast image viewer</source>
         <translation>Lihtne ja kiire rakendus piltide vaatamiseks</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="300"/>
         <source>Copyright (C) </source>
         <translation>Autoriõigused (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>LXQt Project</source>
         <translation>LXQt Projekt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="304"/>
         <source>Development: </source>
         <translation>Arendus: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="306"/>
         <source>Author: </source>
         <translation>Autor: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Open File</source>
         <translation>Ava fail</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Image files (%1)</source>
         <translation>Pildifailid (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Open directory</source>
         <translation>Ava kaust</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Save File</source>
         <translation>Salvesta fail</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="846"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Laadin...) - Pildinäitaja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Laadimine ei õnnestunud) - Pildinäitaja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="858"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Pildinäitaja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="904"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Pildinäitaja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1302"/>
+        <location filename="../mainwindow.cpp" line="1347"/>
         <source>Thumbnails</source>
         <translation>Pisipildid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
         <translation>EXIF-kirjed</translation>
     </message>
@@ -281,32 +281,32 @@ toimetamisvaates muuteklahvi.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="50"/>
+        <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
         <translation>Imgur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="51"/>
+        <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="134"/>
+        <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
         <translation>Alusta</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="139"/>
         <source>Stop</source>
         <translation>Lõpeta</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="142"/>
         <source>Close</source>
         <translation>Sulge</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="147"/>
+        <location filename="../upload/uploaddialog.cpp" line="149"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
@@ -994,7 +994,7 @@ Tulemuse nägemiseks laadi pilt uuesti.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="996"/>
+        <location filename="../mainwindow.cpp" line="1041"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>

@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="93"/>
+        <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Iniciar em ecrã inteiro (pode ser útil em gestores de janela de mosaico)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="101"/>
+        <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Obter captura de ecrã (aplicação descontinuada, utilize o screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
         <translation>Diretório</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Obter captura de ecrã e guardar para um diretório sem abrir a interface (aplicação descontinuada, utilize screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="116"/>
+        <location filename="../application.cpp" line="119"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[Ficheiro1, Ficheiro2,...]</translation>
     </message>
@@ -133,83 +133,83 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>About</source>
         <translation>Acerca</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>A simple and fast image viewer</source>
         <translation>Um visualizador de imagens simples e rápido</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="300"/>
         <source>Copyright (C) </source>
         <translation>Direitos de autor (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>LXQt Project</source>
         <translation>Projecto LXQt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="304"/>
         <source>Development: </source>
         <translation>Desenvolvimento: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="306"/>
         <source>Author: </source>
         <translation>Autor: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Open File</source>
         <translation>Abrir ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Image files (%1)</source>
         <translation>Ficheiros de imagem (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Open directory</source>
         <translation>Abrir diretório</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Save File</source>
         <translation>Guardar ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="846"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (A carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Falha ao carregar...) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="858"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="904"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Visualizador de imagens</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1302"/>
+        <location filename="../mainwindow.cpp" line="1347"/>
         <source>Thumbnails</source>
         <translation>Miniaturas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
         <translation>Dados EXIF</translation>
     </message>
@@ -281,32 +281,32 @@ remover o atalho no modo de edição.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="50"/>
+        <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
         <translation>Imgur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="51"/>
+        <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="134"/>
+        <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="139"/>
         <source>Stop</source>
         <translation>Parar</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="142"/>
         <source>Close</source>
         <translation>Fechar</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="147"/>
+        <location filename="../upload/uploaddialog.cpp" line="149"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
@@ -994,7 +994,7 @@ Recarregue a imagem atual para ver o efeito.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="996"/>
+        <location filename="../mainwindow.cpp" line="1041"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>

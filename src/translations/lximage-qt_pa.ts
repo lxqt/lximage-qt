@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="93"/>
+        <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>ਪੂਰੀ ਸਕਰੀਨ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ (ਟਾਇਲਿੰਗ ਵਿੰਡੋ ਮੈਨੇਜਰ ਨਾਲ ਫਾਇਦੇਮੰਦ ਹੈ)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="101"/>
+        <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
         <translation>ਡਾਇ</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="110"/>
+        <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="116"/>
+        <location filename="../application.cpp" line="119"/>
         <source>[FILE1, FILE2,...]</source>
         <translation type="unfinished"></translation>
     </message>
@@ -133,83 +133,83 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>About</source>
         <translation>ਇਸ ਬਾਰੇ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="279"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>A simple and fast image viewer</source>
         <translation>ਸਰਲ ਅਤੇ ਤੇਜ਼ ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="281"/>
+        <location filename="../mainwindow.cpp" line="300"/>
         <source>Copyright (C) </source>
         <translation>ਕਾਪੀਰਾਈਟ (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="283"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>LXQt Project</source>
         <translation>LXQt ਪਰੋਜੈਕਟ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="285"/>
+        <location filename="../mainwindow.cpp" line="304"/>
         <source>Development: </source>
         <translation>ਵਿਕਾਸ: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="287"/>
+        <location filename="../mainwindow.cpp" line="306"/>
         <source>Author: </source>
         <translation>ਲੇਖਕ: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="515"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Open File</source>
         <translation>ਫਾਇਲ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Image files (%1)</source>
         <translation>ਚਿੱਤਰ ਫਾਇਲਾਂ (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Open directory</source>
         <translation>ਡਾਇਰੈਕਟਰੀ ਖੋਲ੍ਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="550"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Save File</source>
         <translation>ਫਾਇਲ ਸੰਭਾਲੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="846"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (ਲੋਡ ਕਰਨ ਲਈ ਅਸਫ਼ਲ) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="858"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="904"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>[*]Image Viewer</source>
         <translation>[*]ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1302"/>
+        <location filename="../mainwindow.cpp" line="1347"/>
         <source>Thumbnails</source>
         <translation>ਥੰਮਨੇਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
         <translation>EXIF ਡਾਟਾ</translation>
     </message>
@@ -280,32 +280,32 @@ in the editing mode.</source>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="50"/>
+        <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="51"/>
+        <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImgBB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="134"/>
+        <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
         <translation>ਸ਼ੁਰੂ</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="139"/>
         <source>Stop</source>
         <translation>ਰੋਕੋ</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="142"/>
         <source>Close</source>
         <translation>ਬੰਦ ਕਰੋ</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="147"/>
+        <location filename="../upload/uploaddialog.cpp" line="149"/>
         <source>Error</source>
         <translation>ਗਲਤੀ</translation>
     </message>
@@ -992,7 +992,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="996"/>
+        <location filename="../mainwindow.cpp" line="1041"/>
         <source>Error</source>
         <translation>ਗਲਤੀ</translation>
     </message>
