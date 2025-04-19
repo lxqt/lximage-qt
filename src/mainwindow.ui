@@ -69,7 +69,7 @@
     </widget>
     <widget class="LxImage::MruMenu" name="menuRecently_Opened_Files">
      <property name="title">
-      <string>&amp;Recently Opened Files</string>
+      <string>&amp;Recent Files</string>
      </property>
     </widget>
     <addaction name="actionNewWindow"/>
