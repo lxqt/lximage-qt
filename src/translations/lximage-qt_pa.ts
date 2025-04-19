@@ -318,85 +318,90 @@ in the editing mode.</source>
         <translation>ਚਿੱਤਰ ਦਰਸ਼ਕ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="204"/>
-        <location filename="../mainwindow.ui" line="699"/>
+        <location filename="../mainwindow.ui" line="72"/>
+        <source>&amp;Recent Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="208"/>
+        <location filename="../mainwindow.ui" line="703"/>
         <source>Annotations Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="224"/>
+        <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;About</source>
         <translation>ਇਸ ਬਾਰੇ(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="241"/>
+        <location filename="../mainwindow.ui" line="245"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="262"/>
+        <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Save</source>
         <translation>ਸੰਭਾਲੋ(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="265"/>
+        <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="274"/>
+        <location filename="../mainwindow.ui" line="278"/>
         <source>Save &amp;As</source>
         <translation>ਇੰਝ ਸੰਭਾਲੋ(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="286"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Close</source>
         <translation>ਬੰਦ ਕਰੋ(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="289"/>
+        <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="298"/>
+        <location filename="../mainwindow.ui" line="302"/>
         <source>Zoom &amp;In</source>
         <translation>ਜ਼ੂਮ ਇਨ(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="314"/>
         <source>Zoom &amp;Out</source>
         <translation>ਜ਼ੂਮ ਆਉਟ(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="313"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>Ctrl+-</source>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="322"/>
+        <location filename="../mainwindow.ui" line="326"/>
         <source>&amp;Copy to Clipboard</source>
         <translation>ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
-        <location filename="../mainwindow.ui" line="334"/>
+        <location filename="../mainwindow.ui" line="335"/>
+        <location filename="../mainwindow.ui" line="338"/>
         <source>Next File</source>
         <translation>ਅਗਲੀ ਫਾਇਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="346"/>
-        <location filename="../mainwindow.ui" line="349"/>
+        <location filename="../mainwindow.ui" line="350"/>
+        <location filename="../mainwindow.ui" line="353"/>
         <source>Previous File</source>
         <translation>ਪਿਛਲੀ ਫਾਇਥ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="337"/>
+        <location filename="../mainwindow.ui" line="341"/>
         <source>PgDown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -406,385 +411,380 @@ in the editing mode.</source>
         <translation>...ਨਾਲ ਖੋਲ੍ਹੋ(&amp;W)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="72"/>
-        <source>&amp;Recently Opened Files</source>
-        <translation>ਸੱਜਰੀਆਂ ਖੋਲ੍ਹੀਆਂ ਫਾਇਲਾਂ(&amp;R)</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="117"/>
+        <location filename="../mainwindow.ui" line="121"/>
         <source>Sorting</source>
         <translation>ਲੜੀਬੱਧ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="229"/>
+        <location filename="../mainwindow.ui" line="233"/>
         <source>Hidden &amp;Shortcuts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="238"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>&amp;Open…</source>
         <translation>...ਖੋਲ੍ਹੋ(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="250"/>
+        <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Reload File</source>
         <translation>ਫਾਇਲ ਮੁੜ-ਲੋਡ ਕਰੋ(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="253"/>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="301"/>
+        <location filename="../mainwindow.ui" line="305"/>
         <source>Ctrl+=</source>
         <translation>Ctrl+=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="352"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>PgUp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="364"/>
+        <location filename="../mainwindow.ui" line="368"/>
         <source>Original Size</source>
         <translation>ਅਸਲ ਆਕਾਰ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="367"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="379"/>
+        <location filename="../mainwindow.ui" line="383"/>
         <source>&amp;Fit</source>
         <translation>ਫਿੱਟ(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="388"/>
+        <location filename="../mainwindow.ui" line="392"/>
         <source>&amp;Rotate Clockwise</source>
         <translation>ਸੱਜੇ ਦਾਅ ਘੁੰਮਾਓ(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="391"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="400"/>
+        <location filename="../mainwindow.ui" line="404"/>
         <source>Rotate &amp;Counterclockwise</source>
         <translation>ਖੱਬੇ ਦਾਅ ਘੁੰਮਾਓ(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="403"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>L</source>
         <translation>L</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="408"/>
+        <location filename="../mainwindow.ui" line="412"/>
         <source>P&amp;references</source>
         <translation>ਪਸੰਦਾਂ(&amp;r)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="417"/>
+        <location filename="../mainwindow.ui" line="421"/>
         <source>&amp;Print</source>
         <translation>ਪਰਿੰਟ(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="420"/>
+        <location filename="../mainwindow.ui" line="424"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="429"/>
+        <location filename="../mainwindow.ui" line="433"/>
         <source>First File</source>
         <translation>ਪਹਿਲੀ ਫਾਇਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="432"/>
+        <location filename="../mainwindow.ui" line="436"/>
         <source>Home</source>
         <translation>ਘਰ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="441"/>
+        <location filename="../mainwindow.ui" line="445"/>
         <source>Last File</source>
         <translation>ਆਖਰੀ ਫਾਇਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="444"/>
+        <location filename="../mainwindow.ui" line="448"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="453"/>
+        <location filename="../mainwindow.ui" line="457"/>
         <source>&amp;New Window</source>
         <translation>ਨਵੀਂ ਵਿੰਡੋ(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="456"/>
+        <location filename="../mainwindow.ui" line="460"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="465"/>
+        <location filename="../mainwindow.ui" line="469"/>
         <source>Flip &amp;Horizontally</source>
         <translation>ਲੇਟਵੇਂ ਰੂਪ ਵਿੱਚ ਪਲਟੋ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="468"/>
+        <location filename="../mainwindow.ui" line="472"/>
         <source>H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="477"/>
+        <location filename="../mainwindow.ui" line="481"/>
         <source>Capture Screenshot</source>
         <translation>ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="485"/>
+        <location filename="../mainwindow.ui" line="489"/>
         <source>F&amp;ull Screen</source>
         <translation>ਪੂਰੀ ਸਕਰੀਨ(&amp;u)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="488"/>
+        <location filename="../mainwindow.ui" line="492"/>
         <source>F11</source>
         <translation type="unfinished">F11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="497"/>
+        <location filename="../mainwindow.ui" line="501"/>
         <source>Flip &amp;Vertically</source>
         <translation>ਲੰਬਕਾਰੀ ਪਲਟੋ(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="500"/>
+        <location filename="../mainwindow.ui" line="504"/>
         <source>V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="509"/>
+        <location filename="../mainwindow.ui" line="513"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>ਕਲਿੱਪਬੋਰਡ ਤੋਂ ਚੇਪੋ(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="521"/>
+        <location filename="../mainwindow.ui" line="525"/>
         <source>&amp;Slide Show</source>
         <translation>ਸਲਾਈਡ ਸ਼ੋਅ(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="530"/>
+        <location filename="../mainwindow.ui" line="534"/>
         <source>&amp;Delete</source>
         <translation>ਹਟਾਓ(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="533"/>
+        <location filename="../mainwindow.ui" line="537"/>
         <source>Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="541"/>
+        <location filename="../mainwindow.ui" line="545"/>
         <source>Show Thumbnails</source>
         <translation>ਥੰਮਨੇਲ ਵੇਖਾਓ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="544"/>
+        <location filename="../mainwindow.ui" line="548"/>
         <source>T</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="553"/>
+        <location filename="../mainwindow.ui" line="557"/>
         <source>File Properties</source>
         <translation>ਫਾਇਲ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="562"/>
+        <location filename="../mainwindow.ui" line="566"/>
         <source>Open &amp;Directory</source>
         <translation>ਡਾਇਰੈਕਟਰੀ ਖੋਲ੍ਹੋ(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="565"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Ctrl+D</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="574"/>
+        <location filename="../mainwindow.ui" line="578"/>
         <source>Upload</source>
         <translation>ਅੱਪਲੋਡ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="577"/>
+        <location filename="../mainwindow.ui" line="581"/>
         <source>Upload the image</source>
         <translation>ਚਿੱਤਰ ਅੱਪਲੋਡ ਕਰੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="580"/>
+        <location filename="../mainwindow.ui" line="584"/>
         <source>Ctrl+U</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="588"/>
+        <location filename="../mainwindow.ui" line="592"/>
         <source>Show EXIF Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="600"/>
+        <location filename="../mainwindow.ui" line="604"/>
         <source>No Tool</source>
         <translation>ਕੋਈ ਟੂਲ ਨਹੀਂ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="603"/>
+        <location filename="../mainwindow.ui" line="607"/>
         <source>Deselect all drawing tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="615"/>
+        <location filename="../mainwindow.ui" line="619"/>
         <source>Draw Arrow</source>
         <translation>ਤੀਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="618"/>
+        <location filename="../mainwindow.ui" line="622"/>
         <source>Draw an arrow</source>
         <translation>ਤੀਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="630"/>
+        <location filename="../mainwindow.ui" line="634"/>
         <source>Draw Rectangle</source>
         <translation>ਚਤੁਰਭੁਜ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="633"/>
+        <location filename="../mainwindow.ui" line="637"/>
         <source>Draw a hollow rectangle</source>
         <translation>ਖਾਲੀ ਆਇਤ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="645"/>
+        <location filename="../mainwindow.ui" line="649"/>
         <source>Draw Circle</source>
         <translation>ਚੱਕਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="648"/>
+        <location filename="../mainwindow.ui" line="652"/>
         <source>Draw a hollow circle</source>
         <translation>ਖਾਲੀ ਚੱਕਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="660"/>
+        <location filename="../mainwindow.ui" line="664"/>
         <source>Draw Number</source>
         <translation>ਨੰਬਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="663"/>
+        <location filename="../mainwindow.ui" line="667"/>
         <source>Draw incrementing numbers</source>
         <translation>ਵੱਧਦੇ ਨੰਬਰ ਵਾਹੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="671"/>
-        <location filename="../mainwindow.ui" line="674"/>
+        <location filename="../mainwindow.ui" line="675"/>
+        <location filename="../mainwindow.ui" line="678"/>
         <source>Menubar</source>
         <translation>ਮੇਨੂ-ਬਾਰ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="677"/>
+        <location filename="../mainwindow.ui" line="681"/>
         <source>Ctrl+M</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="685"/>
+        <location filename="../mainwindow.ui" line="689"/>
         <source>&amp;Main Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="688"/>
+        <location filename="../mainwindow.ui" line="692"/>
         <source>Main Toolbar</source>
         <translation>ਮੁੱਖ ਟੂਲਬਾਰ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="696"/>
+        <location filename="../mainwindow.ui" line="700"/>
         <source>&amp;Annotations Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
-        <location filename="../mainwindow.ui" line="710"/>
+        <location filename="../mainwindow.ui" line="711"/>
+        <location filename="../mainwindow.ui" line="714"/>
         <source>Show Outline</source>
         <translation>ਖਾਕਾ ਵੇਖਾਓ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="713"/>
+        <location filename="../mainwindow.ui" line="717"/>
         <source>O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="721"/>
+        <location filename="../mainwindow.ui" line="725"/>
         <source>Copy Pa&amp;th</source>
         <translation>ਪਾਥ ਕਾਪੀ ਕਰੋ(&amp;t)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="724"/>
+        <location filename="../mainwindow.ui" line="728"/>
         <source>Copy path</source>
         <translation>ਪਾਥ ਕਾਪੀ ਕਰੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="732"/>
-        <location filename="../mainwindow.ui" line="735"/>
+        <location filename="../mainwindow.ui" line="736"/>
+        <location filename="../mainwindow.ui" line="739"/>
         <source>Rename</source>
         <translation>ਨਾਂ-ਬਦਲੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="738"/>
+        <location filename="../mainwindow.ui" line="742"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="747"/>
+        <location filename="../mainwindow.ui" line="751"/>
         <source>Resize</source>
         <translation>ਆਕਾਰ ਬਦਲੋ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="755"/>
+        <location filename="../mainwindow.ui" line="759"/>
         <source>&amp;By File Name</source>
         <translation>ਫਾਇਲ ਨਾਂ ਨਾਲ(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="758"/>
+        <location filename="../mainwindow.ui" line="762"/>
         <source>By File Name</source>
         <translation>ਫਾਇਲ ਨਾਂ ਰਾਹੀਂ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="766"/>
+        <location filename="../mainwindow.ui" line="770"/>
         <source>By &amp;Modification Time</source>
         <translation>ਸੋਧਣ ਸਮੇਂ ਨਾਲ(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="769"/>
+        <location filename="../mainwindow.ui" line="773"/>
         <source>By Modification Time</source>
         <translation>ਸੋਧਣ ਸਮੇਂ ਨਾਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="777"/>
+        <location filename="../mainwindow.ui" line="781"/>
         <source>By C&amp;reation Time</source>
         <translation>ਬਣਾਉਣ ਸਮੇਂ ਨਾਲ(&amp;r)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="780"/>
+        <location filename="../mainwindow.ui" line="784"/>
         <source>By Creation Time</source>
         <translation>ਬਣਾਉਣ ਸਮੇਂ ਨਾਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="788"/>
+        <location filename="../mainwindow.ui" line="792"/>
         <source>By File &amp;Size</source>
         <translation>ਫਾਇਲ ਆਕਾਰ ਨਾਲ(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="791"/>
+        <location filename="../mainwindow.ui" line="795"/>
         <source>By File Size</source>
         <translation>ਫਾਇਲ ਆਕਾਰ ਨਾਲ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="799"/>
+        <location filename="../mainwindow.ui" line="803"/>
         <source>By File &amp;Type</source>
         <translation>ਫਾਇਲ ਦੀ ਕਿਸਮ ਨਾਲ(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="802"/>
+        <location filename="../mainwindow.ui" line="806"/>
         <source>By File Type</source>
         <translation>ਫਾਇਲ ਦੀ ਕਿਸਮ ਨਾਲ</translation>
     </message>
@@ -794,27 +794,27 @@ in the editing mode.</source>
         <translation>ਫਾਇਲ(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="97"/>
+        <location filename="../mainwindow.ui" line="101"/>
         <source>&amp;Help</source>
         <translation>ਮਦਦ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="104"/>
+        <location filename="../mainwindow.ui" line="108"/>
         <source>Go</source>
         <translation>ਜਾਓ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="113"/>
+        <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
         <translation>ਵੇਖੋ(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="145"/>
+        <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Edit</source>
         <translation>ਸੋਧੋ(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="169"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Toolbar</source>
         <translation>ਟੂਲਬਾਰ</translation>
     </message>
