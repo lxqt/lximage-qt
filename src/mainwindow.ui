@@ -71,6 +71,10 @@
      <property name="title">
       <string>&amp;Recently Opened Files</string>
      </property>
+     <property name="icon">
+      <iconset theme="document-open-recent">
+       <normaloff>.</normaloff>.</iconset>
+     </property>
     </widget>
     <addaction name="actionNewWindow"/>
     <addaction name="actionOpenFile"/>
