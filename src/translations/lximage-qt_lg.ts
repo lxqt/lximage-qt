@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="94"/>
+        <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Puloguramu etandikenga nga ebunye olutimbe (eno enkola esobola okuyamba mu bika bya biteekateek&apos;awakolerwa ebimu)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="102"/>
+        <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Kwata kifaananyi ky&apos;ebiri ku lutimbe (kino kidibizibwa, kozesamu screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
         <translation>TEREKERO</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="111"/>
+        <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Kano akawayiro kagireetera okukwata kifaananyi ky&apos;ebiri ku lutimbe nga tereese ddirisa lya yo (kino kidibizibwa, mu kifo kya kyo kozesa puloguramu screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="117"/>
+        <location filename="../application.cpp" line="119"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[FAYIRO1,FAYIRO2,...]</translation>
     </message>
@@ -133,88 +133,83 @@
 <context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="278"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>About</source>
         <translation>Kwanjula</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>A simple and fast image viewer</source>
         <translation>Puloguramu ey&apos;okukebera bifaananyi nga nyangu okukozesa era nga ekola mangu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
+        <location filename="../mainwindow.cpp" line="300"/>
         <source>Copyright (C) </source>
         <translation>Lukusa lwa kukoppolola (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="282"/>
-        <source>2013-2021</source>
-        <translation>2013-2021</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="284"/>
+        <location filename="../mainwindow.cpp" line="302"/>
         <source>LXQt Project</source>
         <translation>Kawefube wa LXQt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="286"/>
+        <location filename="../mainwindow.cpp" line="304"/>
         <source>Development: </source>
         <translation>Abaawandika: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="288"/>
+        <location filename="../mainwindow.cpp" line="306"/>
         <source>Author: </source>
         <translation>Muwandisi: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="516"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Open File</source>
         <translation>Bikkula fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="517"/>
-        <location filename="../mainwindow.cpp" line="552"/>
+        <location filename="../mainwindow.cpp" line="537"/>
+        <location filename="../mainwindow.cpp" line="572"/>
         <source>Image files (%1)</source>
         <translation>Fayiro ez&apos;ebifaananyi (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="550"/>
         <source>Open directory</source>
         <translation>Bikkula tterekero</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="571"/>
         <source>Save File</source>
         <translation>Kaza fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="847"/>
+        <location filename="../mainwindow.cpp" line="869"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Kubikkula...) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="853"/>
+        <location filename="../mainwindow.cpp" line="875"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Okubikkula kugaanye) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="859"/>
+        <location filename="../mainwindow.cpp" line="881"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="905"/>
+        <location filename="../mainwindow.cpp" line="948"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1302"/>
+        <location filename="../mainwindow.cpp" line="1347"/>
         <source>Thumbnails</source>
         <translation>Obulozaako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
         <translation>Ebikwata ku fayiro ebya EXIF</translation>
     </message>
@@ -287,32 +282,32 @@ agafuula enkola ya gannaago.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="50"/>
+        <location filename="../upload/uploaddialog.cpp" line="47"/>
         <source>Imgur</source>
         <translation>Imgur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="51"/>
+        <location filename="../upload/uploaddialog.cpp" line="48"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="134"/>
+        <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
         <translation>Tandika</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="137"/>
+        <location filename="../upload/uploaddialog.cpp" line="139"/>
         <source>Stop</source>
         <translation>Koma</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="140"/>
+        <location filename="../upload/uploaddialog.cpp" line="142"/>
         <source>Close</source>
         <translation>Mala</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="147"/>
+        <location filename="../upload/uploaddialog.cpp" line="149"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
@@ -325,18 +320,13 @@ agafuula enkola ya gannaago.</translation>
         <translation>Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="72"/>
-        <source>&amp;Recently Opened Files</source>
-        <translation>&amp;Fayiro ezaasemba okubikkulibwa</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="224"/>
+        <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;About</source>
         <translation>&amp;Okwanjula</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="204"/>
-        <location filename="../mainwindow.ui" line="683"/>
+        <location filename="../mainwindow.ui" line="208"/>
+        <location filename="../mainwindow.ui" line="703"/>
         <source>Annotations Toolbar</source>
         <translation>Akabaawo ak&apos;ebiramba ebiri mu kifaananyi</translation>
     </message>
@@ -346,452 +336,457 @@ agafuula enkola ya gannaago.</translation>
         <translation>&amp;Bikkuza...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="117"/>
+        <location filename="../mainwindow.ui" line="72"/>
+        <source>&amp;Recent Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="121"/>
         <source>Sorting</source>
         <translation>Sengeka fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="229"/>
+        <location filename="../mainwindow.ui" line="233"/>
         <source>Hidden &amp;Shortcuts</source>
         <translation>&amp;Mapeesa agagonza emirimu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="238"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>&amp;Open…</source>
         <translation>&amp;Bikkula…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="241"/>
+        <location filename="../mainwindow.ui" line="245"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="250"/>
+        <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Reload File</source>
         <translation>&amp;Ddamu okubikkula fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="253"/>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="262"/>
+        <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Save</source>
         <translation>&amp;Kaza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="265"/>
+        <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="274"/>
+        <location filename="../mainwindow.ui" line="278"/>
         <source>Save &amp;As</source>
         <translation>Fayiro &amp;gigyemu koppi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="286"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Close</source>
         <translation>&amp;Mala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="289"/>
+        <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="298"/>
+        <location filename="../mainwindow.ui" line="302"/>
         <source>Zoom &amp;In</source>
         <translation>&amp;Zimbulukusa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="301"/>
+        <location filename="../mainwindow.ui" line="305"/>
         <source>Ctrl+=</source>
         <translation>Ctrl+=</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="314"/>
         <source>Zoom &amp;Out</source>
         <translation>&amp;Kendeeza</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="313"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>Ctrl+-</source>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="322"/>
+        <location filename="../mainwindow.ui" line="326"/>
         <source>&amp;Copy to Clipboard</source>
         <translation>&amp;Kwata koppi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
-        <location filename="../mainwindow.ui" line="334"/>
+        <location filename="../mainwindow.ui" line="335"/>
+        <location filename="../mainwindow.ui" line="338"/>
         <source>Next File</source>
         <translation>Genda ku kiddako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="337"/>
+        <location filename="../mainwindow.ui" line="341"/>
         <source>PgDown</source>
         <translation>PageDown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="346"/>
-        <location filename="../mainwindow.ui" line="349"/>
+        <location filename="../mainwindow.ui" line="350"/>
+        <location filename="../mainwindow.ui" line="353"/>
         <source>Previous File</source>
         <translation>Genda ku kikulembera kino</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="352"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>PgUp</source>
         <translation>PageUp</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="364"/>
+        <location filename="../mainwindow.ui" line="368"/>
         <source>Original Size</source>
         <translation>Kirage ku bunene bwakyo obwa ddala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="367"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="379"/>
+        <location filename="../mainwindow.ui" line="383"/>
         <source>&amp;Fit</source>
         <translation>Ekifaananyi kijje k&amp;yonna mu katimbe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="388"/>
+        <location filename="../mainwindow.ui" line="392"/>
         <source>&amp;Rotate Clockwise</source>
         <translation>Ekifaananyi kiwunzikire ku &amp;ddyo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="391"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="400"/>
+        <location filename="../mainwindow.ui" line="404"/>
         <source>Rotate &amp;Counterclockwise</source>
         <translation>Ekifaananyi kiwunzikire ku &amp;kkono</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="403"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>L</source>
         <translation>L</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="408"/>
+        <location filename="../mainwindow.ui" line="412"/>
         <source>P&amp;references</source>
         <translation>&amp;Enteekateeka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="413"/>
+        <location filename="../mainwindow.ui" line="421"/>
         <source>&amp;Print</source>
         <translation>K&amp;ubisa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="416"/>
+        <location filename="../mainwindow.ui" line="424"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="425"/>
+        <location filename="../mainwindow.ui" line="433"/>
         <source>First File</source>
         <translation>Genda ku fayiro esooka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="428"/>
+        <location filename="../mainwindow.ui" line="436"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="437"/>
+        <location filename="../mainwindow.ui" line="445"/>
         <source>Last File</source>
         <translation>Genda ku fayiro esembayo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="440"/>
+        <location filename="../mainwindow.ui" line="448"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="449"/>
+        <location filename="../mainwindow.ui" line="457"/>
         <source>&amp;New Window</source>
         <translation>&amp;Leeta ddirisa Ppya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="452"/>
+        <location filename="../mainwindow.ui" line="460"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="469"/>
         <source>Flip &amp;Horizontally</source>
         <translation>Ekifaananyi kivuunikire mu bu&amp;gazi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="472"/>
         <source>H</source>
         <translation>H</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="481"/>
         <source>Capture Screenshot</source>
         <translation>Kwata kifaananyi ky&apos;ebiri ku lutimbe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="477"/>
+        <location filename="../mainwindow.ui" line="489"/>
         <source>F&amp;ull Screen</source>
         <translation>B&amp;una lutimbe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="480"/>
+        <location filename="../mainwindow.ui" line="492"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="485"/>
+        <location filename="../mainwindow.ui" line="501"/>
         <source>Flip &amp;Vertically</source>
         <translation>Ekifaananyi kivuunikire mu bu&amp;simba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="488"/>
+        <location filename="../mainwindow.ui" line="504"/>
         <source>V</source>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="497"/>
+        <location filename="../mainwindow.ui" line="513"/>
         <source>&amp;Paste from Clipboard</source>
         <translation>&amp;Paatiika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="509"/>
+        <location filename="../mainwindow.ui" line="525"/>
         <source>&amp;Slide Show</source>
         <translation>&amp;Omwoleso gw&apos;ebifaananyi gutandike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="518"/>
+        <location filename="../mainwindow.ui" line="534"/>
         <source>&amp;Delete</source>
         <translation>&amp;Gyawo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="521"/>
+        <location filename="../mainwindow.ui" line="537"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="529"/>
+        <location filename="../mainwindow.ui" line="545"/>
         <source>Show Thumbnails</source>
         <translation>Laga obulozaako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="548"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="537"/>
+        <location filename="../mainwindow.ui" line="557"/>
         <source>File Properties</source>
         <translation>Ebikwata ku fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="546"/>
+        <location filename="../mainwindow.ui" line="566"/>
         <source>Open &amp;Directory</source>
         <translation>Bikkula &amp;tterekero</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="549"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="558"/>
+        <location filename="../mainwindow.ui" line="578"/>
         <source>Upload</source>
         <translation>Sindika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="581"/>
         <source>Upload the image</source>
         <translation>Sindika ekifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="584"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="572"/>
+        <location filename="../mainwindow.ui" line="592"/>
         <source>Show EXIF Data</source>
         <translation>Laga ebikwata ku fayiro ebya EXIF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="584"/>
+        <location filename="../mainwindow.ui" line="604"/>
         <source>No Tool</source>
         <translation>Ta ebirambisibwa byonna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="607"/>
         <source>Deselect all drawing tools</source>
         <translation>Ta ebirambisibwa byonna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="619"/>
         <source>Draw Arrow</source>
         <translation>Teekawo akasaale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="622"/>
         <source>Draw an arrow</source>
         <translation>Teekawo akasaale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="634"/>
         <source>Draw Rectangle</source>
         <translation>Teekawo bokisi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
+        <location filename="../mainwindow.ui" line="637"/>
         <source>Draw a hollow rectangle</source>
         <translation>Teekawo bokisi ey&apos;ekyangaala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="629"/>
+        <location filename="../mainwindow.ui" line="649"/>
         <source>Draw Circle</source>
         <translation>Teekawo namuziga</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="652"/>
         <source>Draw a hollow circle</source>
         <translation>Teekawo namuziga ey&apos;ekyangaala</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="664"/>
         <source>Draw Number</source>
         <translation>Teekawo ennamba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="647"/>
+        <location filename="../mainwindow.ui" line="667"/>
         <source>Draw incrementing numbers</source>
         <translation>Teekawo ennamba ezigenda zeeyongera</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="655"/>
-        <location filename="../mainwindow.ui" line="658"/>
+        <location filename="../mainwindow.ui" line="675"/>
+        <location filename="../mainwindow.ui" line="678"/>
         <source>Menubar</source>
         <translation>Menyu erabike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="661"/>
+        <location filename="../mainwindow.ui" line="681"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="669"/>
+        <location filename="../mainwindow.ui" line="689"/>
         <source>&amp;Main Toolbar</source>
         <translation>&amp;Ebiyamba ebya bulijjo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="672"/>
+        <location filename="../mainwindow.ui" line="692"/>
         <source>Main Toolbar</source>
         <translation>Ebiyamba ebya bulijjo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="680"/>
+        <location filename="../mainwindow.ui" line="700"/>
         <source>&amp;Annotations Toolbar</source>
         <translation>Ebi&amp;ramba ebiri mu kifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="691"/>
-        <location filename="../mainwindow.ui" line="694"/>
+        <location filename="../mainwindow.ui" line="711"/>
+        <location filename="../mainwindow.ui" line="714"/>
         <source>Show Outline</source>
         <translation>Laga njegoyego z&apos;ekifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="697"/>
+        <location filename="../mainwindow.ui" line="717"/>
         <source>O</source>
         <translation>O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="705"/>
+        <location filename="../mainwindow.ui" line="725"/>
         <source>Copy Pa&amp;th</source>
         <translation>Kwata &amp;kkubo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="708"/>
+        <location filename="../mainwindow.ui" line="728"/>
         <source>Copy path</source>
         <translation>Kwata kkubo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
-        <location filename="../mainwindow.ui" line="719"/>
+        <location filename="../mainwindow.ui" line="736"/>
+        <location filename="../mainwindow.ui" line="739"/>
         <source>Rename</source>
         <translation>Kyusa erinnya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="722"/>
+        <location filename="../mainwindow.ui" line="742"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="731"/>
+        <location filename="../mainwindow.ui" line="751"/>
         <source>Resize</source>
         <translation>Kyusa bunene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="739"/>
+        <location filename="../mainwindow.ui" line="759"/>
         <source>&amp;By File Name</source>
         <translation>Sengekera ku &amp;mannya ga fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="742"/>
+        <location filename="../mainwindow.ui" line="762"/>
         <source>By File Name</source>
         <translation>Sengekera ku mannya ga fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="750"/>
+        <location filename="../mainwindow.ui" line="770"/>
         <source>By &amp;Modification Time</source>
         <translation>Sengekera ku mak&amp;yusa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="753"/>
+        <location filename="../mainwindow.ui" line="773"/>
         <source>By Modification Time</source>
         <translation>Sengekera ku makyusa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="761"/>
+        <location filename="../mainwindow.ui" line="781"/>
         <source>By C&amp;reation Time</source>
         <translation>Sengekera ku fayiro lwe &amp;zaakolebwawo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="764"/>
+        <location filename="../mainwindow.ui" line="784"/>
         <source>By Creation Time</source>
         <translation>Sengekera ku fayiro lwe zaakolebwawo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="772"/>
+        <location filename="../mainwindow.ui" line="792"/>
         <source>By File &amp;Size</source>
         <translation>Sengekera ku bu&amp;nene bwa fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="775"/>
+        <location filename="../mainwindow.ui" line="795"/>
         <source>By File Size</source>
         <translation>Sengekera ku bunene bwa fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="783"/>
+        <location filename="../mainwindow.ui" line="803"/>
         <source>By File &amp;Type</source>
         <translation>Sengekera ku k&amp;ika kya fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="786"/>
+        <location filename="../mainwindow.ui" line="806"/>
         <source>By File Type</source>
         <translation>Sengekera ku kika kya fayiro</translation>
     </message>
@@ -801,27 +796,27 @@ agafuula enkola ya gannaago.</translation>
         <translation>&amp;Fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="97"/>
+        <location filename="../mainwindow.ui" line="101"/>
         <source>&amp;Help</source>
         <translation>&amp;Nyamba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="104"/>
+        <location filename="../mainwindow.ui" line="108"/>
         <source>Go</source>
         <translation>Genda ku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="113"/>
+        <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
         <translation>E&amp;ndabika</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="145"/>
+        <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Edit</source>
         <translation>K&amp;yusa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="169"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Toolbar</source>
         <translation>Kabaawo k&apos;ebi&amp;yamba</translation>
     </message>
@@ -1002,7 +997,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="997"/>
+        <location filename="../mainwindow.cpp" line="1041"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
