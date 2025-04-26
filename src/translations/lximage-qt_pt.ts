@@ -321,7 +321,7 @@ remover o atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ficheiros recentes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>

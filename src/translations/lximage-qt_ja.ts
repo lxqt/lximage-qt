@@ -321,7 +321,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>最近使用したファイル(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>

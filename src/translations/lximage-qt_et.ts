@@ -337,7 +337,7 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiljutised fa&amp;ilid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>

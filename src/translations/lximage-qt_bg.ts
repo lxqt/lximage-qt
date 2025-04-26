@@ -337,7 +337,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Скорошни файлове</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
