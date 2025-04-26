@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Deze sneltoetsen worden overschreven als ze al toegekend zijn in Instellingen → Sneltoetsen.</translation>
+        <translation>Deze sneltoetsen worden overschreven als ze al zijn toegekend via Instellingen → Sneltoetsen.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../shortcuts.ui" line="47"/>
         <source>Close window or exit fullscreen mode</source>
-        <translation>Venster sluiten of beeldvullende modus verlaten</translation>
+        <translation>Venster sluiten of schermvullende weergave verlaten</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="52"/>
@@ -91,7 +91,7 @@
     <message>
         <location filename="../application.cpp" line="96"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
-        <translation>Opstarten in beeldvullende modus (handig bij gebruik van tegelende vensterbeheerders)</translation>
+        <translation>Opstarten in schermvullende weergave (handig bij gebruik van tegelende vensterbeheerders)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="104"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1442"/>
         <source>EXIF Data</source>
-        <translation>EXIF-gegevens</translation>
+        <translation>Exif-gegevens</translation>
     </message>
 </context>
 <context>
@@ -228,7 +228,7 @@
         <location filename="../preferencesdialog.cpp" line="74"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>Gebruik een sneltoets om een sneltoets te wissen
+        <translation>Gebruik een samensteltoets om een sneltoets te wissen
 in de bewerkmodus.</translation>
     </message>
     <message>
@@ -321,13 +321,13 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Onlan&amp;gs geopend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <location filename="../mainwindow.ui" line="703"/>
         <source>Annotations Toolbar</source>
-        <translation>Aantekeningwerkbalk</translation>
+        <translation>Aantekeningenwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
@@ -545,7 +545,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="489"/>
         <source>F&amp;ull Screen</source>
-        <translation>Beeldv&amp;ullend</translation>
+        <translation>Schermv&amp;ullend</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
@@ -626,7 +626,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="592"/>
         <source>Show EXIF Data</source>
-        <translation>EXIF-gegevens tonen</translation>
+        <translation>Exif-gegevens tonen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="604"/>
@@ -702,7 +702,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="700"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Aantekeningwerkbalk</translation>
+        <translation>&amp;Aantekeningenwerkbalk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="711"/>
@@ -847,7 +847,7 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
         <source>Fullscreen background color:</source>
-        <translation>Achtergrondkleur beeldvullende modus:</translation>
+        <translation>Achtergrondkleur schermvullende weergave:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
@@ -924,7 +924,7 @@ in de bewerkmodus.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation>Dit werkt mogelijk alleen in combinatie met afbeeldingen die geldige kleurruimten hebben.
+        <translation>Dit werkt mogelijk alleen in combinatie met afbeeldingen die geldige kleurruimten bevatten.
 Herlaad de huidige afbeelding om toe te passen.</translation>
     </message>
     <message>

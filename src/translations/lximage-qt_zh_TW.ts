@@ -321,7 +321,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>最近的檔案(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
@@ -387,7 +387,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="326"/>
         <source>&amp;Copy to Clipboard</source>
-        <translation>複製到剪貼簿(&amp;C)</translation>
+        <translation>複製至剪貼簿(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="335"/>
@@ -399,7 +399,7 @@ in the editing mode.</source>
         <location filename="../mainwindow.ui" line="350"/>
         <location filename="../mainwindow.ui" line="353"/>
         <source>Previous File</source>
-        <translation>前一個檔案</translation>
+        <translation>上一個檔案</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
