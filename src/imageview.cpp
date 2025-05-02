@@ -360,12 +360,16 @@ void ImageView::flipImage(bool horizontal) {
     }
   }
   if(!image_.isNull()) {
+#if (QT_VERSION >= QT_VERSION_CHECK(6,9,0))
+    image_ = image_.flipped(horizontal ? Qt::Horizontal : Qt::Vertical);
+#else
     if(horizontal) {
       image_ = image_.mirrored(true, false);
     }
     else {
       image_ = image_.mirrored(false, true);
     }
+#endif
     int tmp = nextNumber_;
     setImage(image_, !gifMovie_ && !isSVG_, false);
     nextNumber_ = tmp;
