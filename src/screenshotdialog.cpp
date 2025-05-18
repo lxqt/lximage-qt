@@ -229,14 +229,6 @@ void ScreenshotDialog::doScreenshot() {
   deleteLater(); // destroy ourself
 }
 
-static QString buildNumericFnPart() {
-  //we may have many copies running with no gui, for example user presses hot keys fast
-  //so they must have different file names to save, lets do it time + pid
-  const auto now = QDateTime::currentDateTime().toMSecsSinceEpoch();
-  const auto pid = getpid();
-  return QStringLiteral("%1_%2").arg(now).arg(pid);
-}
-
 static QString getWindowName(WId wid) {
   QString result;
   if(auto x11NativeInterfce = qApp->nativeInterface<QNativeInterface::QX11Application>()) {
@@ -297,15 +289,14 @@ void ScreenshotDialog::cmdTopShotToDir(QString path) {
   if(!fi.exists() || !fi.isDir() || !fi.isWritable()) {
     path = QDir::homePath();
   }
-  const QString filename = QStringLiteral("%1/%2_%3").arg(path).arg(getWindowName(activeWid)).arg(buildNumericFnPart());
+  const QString curTime = QDateTime::currentDateTime().toString(QStringLiteral("yyyy-MM-dd-hh-mm-ss-zzz"));
+  const QString filename = QStringLiteral("%1/lximage_%2_%3").arg(path).arg(getWindowName(activeWid)).arg(curTime);
 
-  const auto static png = QStringLiteral(".png");
-  QString finalName = filename % png;
-
-  //most unlikelly this will happen ... but user might change system clock or so and we dont want to overwrite file
-  for(int counter = 0; QFile::exists(finalName) && counter < 5000; ++counter) {
-    finalName = QStringLiteral("%1_%2%3").arg(filename).arg(counter).arg(png);
+  // very unlikely
+  QString finalName = filename;
+  for (int counter = 0; QFile::exists(finalName % QStringLiteral(".png")) && counter < 5000; counter += 1) {
+    finalName = QStringLiteral("%1_%2").arg(filename).arg(counter);
   }
-  //std::cout << finalName.toStdString() << std::endl;
-  img.save(finalName);
+
+  img.save(finalName % QStringLiteral(".png"));
 }
