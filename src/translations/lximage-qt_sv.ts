@@ -721,7 +721,7 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Senaste filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="101"/>
