@@ -160,6 +160,9 @@ MainWindow::MainWindow():
   ui.actionOriginalSize->setActionGroup(aGroup);
   ui.actionZoomFit->setChecked(true);
 
+  ui.actionNextFrame->setVisible(false);
+  ui.actionPreviousFrame->setVisible(false);
+
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
   contextMenu_->addSeparator();
@@ -715,6 +718,14 @@ void MainWindow::on_actionLast_triggered() {
   }
 }
 
+void MainWindow::on_actionNextFrame_triggered() {
+  ui.view->nextFrame();
+}
+
+void MainWindow::on_actionPreviousFrame_triggered() {
+  ui.view->previousFrame();
+}
+
 void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
   if(folder_) { // an folder is already loaded
     if(newFolderPath == folderPath_) { // same folder, ignore
@@ -978,14 +989,27 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     mimeType = QString::fromUtf8(mime_type);
     g_free(mime_type);
   }
-  if(mimeType == QLatin1String("image/gif")
+
+  const Fm::CStrPtr file_name = currentFile_.toString();
+
+  ui.actionNextFrame->setVisible(false);
+  ui.actionPreviousFrame->setVisible(false);
+  bool supportsAnimation(mimeType == QLatin1String("image/gif"));
+  if(!supportsAnimation && mimeType == QLatin1String("image/tiff")) {
+    supportsAnimation = ui.view->supportsAnimation(QString::fromUtf8(file_name.get()));
+    if(supportsAnimation) {
+      ui.actionNextFrame->setVisible(true);
+      ui.actionPreviousFrame->setVisible(true);
+    }
+  }
+
+  if(supportsAnimation
      || mimeType == QLatin1String("image/svg+xml") || mimeType == QLatin1String("image/svg+xml-compressed")) {
     if(!currentIndex_.isValid()) {
       // since onImageLoaded is not called here,
       // currentIndex_ should be set
       currentIndex_ = indexFromPath(currentFile_);
     }
-    const Fm::CStrPtr file_name = currentFile_.toString();
 
     // set image zoom, like in onImageLoaded()
     Settings& settings = static_cast<Application*>(qApp)->settings();
@@ -997,10 +1021,12 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
       ui.view->zoomOriginal();
     }
 
-    if(mimeType == QLatin1String("image/gif"))
-      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()));
-    else
+    if(supportsAnimation) {
+      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()), mimeType == QLatin1String("image/gif"));
+    }
+    else {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
+    }
     image_ = ui.view->image();
     updateUI();
     if(!isVisible()) {

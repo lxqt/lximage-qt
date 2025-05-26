@@ -42,7 +42,7 @@ public:
   virtual ~ImageView();
 
   void setImage(const QImage& image, bool show = true, bool updatePixelRatio = true);
-  void setGifAnimation(const QString& fileName);
+  void setGifAnimation(const QString& fileName, bool startAnimation);
   void setSVG(const QString& fileName);
 
   QImage image() const {
@@ -80,6 +80,11 @@ public:
 
   // if set to true, hides the cursor after 3s of inactivity
   void hideCursor(bool enable);
+
+  // for multi-page TIFF images
+  bool supportsAnimation(const QString& fileName) const;
+  void nextFrame();
+  void previousFrame();
 
   // Annotation tools
   enum Tool {

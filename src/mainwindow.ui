@@ -111,6 +111,9 @@
     <addaction name="actionNext"/>
     <addaction name="actionFirst"/>
     <addaction name="actionLast"/>
+    <addaction name="separator"/>
+    <addaction name="actionNextFrame"/>
+    <addaction name="actionPreviousFrame"/>
    </widget>
    <widget class="QMenu" name="menu_View">
     <property name="title">
@@ -804,6 +807,22 @@
    </property>
    <property name="toolTip">
     <string>By File Type</string>
+   </property>
+  </action>
+  <action name="actionNextFrame">
+   <property name="text">
+    <string>Next Frame</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Right</string>
+   </property>
+  </action>
+  <action name="actionPreviousFrame">
+   <property name="text">
+    <string>Previous Frame</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Left</string>
    </property>
   </action>
  </widget>
