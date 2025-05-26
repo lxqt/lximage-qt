@@ -506,7 +506,26 @@ void ImageView::setImage(const QImage& image, bool show, bool updatePixelRatio) 
   queueGenerateCache();
 }
 
-void ImageView::setGifAnimation(const QString& fileName) {
+bool ImageView::supportsAnimation(const QString& fileName) const {
+  QMovie movie(fileName);
+  return movie.frameCount() > 1;
+}
+
+void ImageView::nextFrame() {
+  if(gifMovie_ && gifMovie_->frameCount() > 1) {
+    int curFrame = gifMovie_->currentFrameNumber();
+    gifMovie_->jumpToFrame(curFrame < gifMovie_->frameCount() - 1 ? curFrame + 1 : 0);
+  }
+}
+
+void ImageView::previousFrame() {
+  if(gifMovie_ && gifMovie_->frameCount() > 1) {
+    int curFrame = gifMovie_->currentFrameNumber();
+    gifMovie_->jumpToFrame(curFrame > 0 ? curFrame - 1 : gifMovie_->frameCount() - 1);
+  }
+}
+
+void ImageView::setGifAnimation(const QString& fileName, bool startAnimation) {
   resetView();
   /* the built-in gif reader gives the first frame, which won't
      be shown but is used for tracking position and dimensions */
@@ -544,7 +563,12 @@ void ImageView::setGifAnimation(const QString& fileName) {
     gifLabel->setAttribute(Qt::WA_NoSystemBackground);
     gifLabel->setMovie(gifMovie_);
     gifWidget->setWidget(gifLabel);
-    gifMovie_->start();
+    if(startAnimation) {
+      gifMovie_->start();
+    }
+    else {
+      gifMovie_->jumpToFrame(0);
+    }
     scene_->addItem(gifItem);
     scene_->setSceneRect(gifItem->boundingRect());
 
