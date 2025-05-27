@@ -719,7 +719,7 @@ void MainWindow::on_actionLast_triggered() {
 }
 
 void MainWindow::on_actionNextFrame_triggered() {
-  ui.view->nextFrame();;
+  ui.view->nextFrame();
   int frame = ui.view->currentFrame();
   ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
