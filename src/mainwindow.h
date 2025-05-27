@@ -138,6 +138,8 @@ private Q_SLOTS:
 
   void on_actionNextFrame_triggered();
   void on_actionPreviousFrame_triggered();
+  void on_actionFirstFrame_triggered();
+  void on_actionLastFrame_triggered();
 
   void on_actionZoomIn_triggered();
   void on_actionZoomOut_triggered();
@@ -175,7 +177,7 @@ private Q_SLOTS:
 
 private:
   void onFolderLoaded();
-  void updateUI();
+  void updateUI(bool multiFrame = false);
   void setModified(bool modified);
   QModelIndex indexFromPath(const Fm::FilePath & filePath);
 

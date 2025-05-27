@@ -162,6 +162,8 @@ MainWindow::MainWindow():
 
   ui.actionNextFrame->setVisible(false);
   ui.actionPreviousFrame->setVisible(false);
+  ui.actionFirstFrame->setVisible(false);
+  ui.actionLastFrame->setVisible(false);
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
@@ -720,10 +722,30 @@ void MainWindow::on_actionLast_triggered() {
 
 void MainWindow::on_actionNextFrame_triggered() {
   ui.view->nextFrame();
+  image_ = ui.view->image();
+  int frame = ui.view->currentFrame();
+  ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
 
 void MainWindow::on_actionPreviousFrame_triggered() {
   ui.view->previousFrame();
+  image_ = ui.view->image();
+  int frame = ui.view->currentFrame();
+  ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
+}
+
+void MainWindow::on_actionFirstFrame_triggered() {
+  ui.view->firstFrame();
+  image_ = ui.view->image();
+  int frame = ui.view->currentFrame();
+  ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
+}
+
+void MainWindow::on_actionLastFrame_triggered() {
+  ui.view->lastFrame();
+  image_ = ui.view->image();
+  int frame = ui.view->currentFrame();
+  ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
 
 void MainWindow::loadFolder(const Fm::FilePath & newFolderPath) {
@@ -858,7 +880,7 @@ QModelIndex MainWindow::indexFromPath(const Fm::FilePath & filePath) {
 }
 
 
-void MainWindow::updateUI() {
+void MainWindow::updateUI(bool multiFrame) {
   if(currentIndex_.isValid()) {
     if(thumbnailsView_) { // showing thumbnails
       // select current file in the thumbnails view
@@ -895,6 +917,10 @@ void MainWindow::updateUI() {
                   .arg(image_.height());
         ui.statusBar->setText(QStringLiteral("%1×%2").arg(image_.width()).arg(image_.height()),
                               filePath);
+        int frame = ui.view->currentFrame();
+        ui.statusBar->setPermanentText(multiFrame && frame > 0
+                                       ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount())
+                                       : QString());
         if (!isVisible()) {
           /* Here we try to implement the following behavior as far as possible:
               (1) A minimum size of 600x400 is assumed;
@@ -994,12 +1020,16 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
 
   ui.actionNextFrame->setVisible(false);
   ui.actionPreviousFrame->setVisible(false);
+  ui.actionFirstFrame->setVisible(false);
+  ui.actionLastFrame->setVisible(false);
   bool supportsAnimation(mimeType == QLatin1String("image/gif"));
   if(!supportsAnimation && mimeType == QLatin1String("image/tiff")) {
     supportsAnimation = ui.view->supportsAnimation(QString::fromUtf8(file_name.get()));
     if(supportsAnimation) {
       ui.actionNextFrame->setVisible(true);
       ui.actionPreviousFrame->setVisible(true);
+      ui.actionFirstFrame->setVisible(true);
+      ui.actionLastFrame->setVisible(true);
     }
   }
 
@@ -1028,7 +1058,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
     }
     image_ = ui.view->image();
-    updateUI();
+    updateUI(supportsAnimation && mimeType != QLatin1String("image/gif"));
     if(!isVisible()) {
       if(settings.windowMaximized()) {
         setWindowState(windowState() | Qt::WindowMaximized);
@@ -1198,7 +1228,8 @@ void MainWindow::on_actionResize_triggered() {
 
 void MainWindow::setModified(bool modified) {
   imageModified_ = modified;
-  updateUI(); // should be done even if imageModified_ is not changed (because of transformations)
+  // This should be done even if imageModified_ is not changed (because of transformations):
+  updateUI(ui.statusBar->hasPermanentText());
 }
 
 void MainWindow::applySettings() {
