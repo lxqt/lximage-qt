@@ -83,8 +83,12 @@ public:
 
   // for multi-page TIFF images
   bool supportsAnimation(const QString& fileName) const;
+  int frameCount() const;
+  int currentFrame() const; // starts with 1, not 0
   void nextFrame();
   void previousFrame();
+  void firstFrame();
+  void lastFrame();
 
   // Annotation tools
   enum Tool {
@@ -127,6 +131,7 @@ private:
                  int tipLen);
 
   void resetView();
+  void removeAnnotations();
 
   qreal getPixelRatio() const;
 

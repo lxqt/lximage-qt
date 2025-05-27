@@ -78,6 +78,11 @@ StatusBar::StatusBar(QWidget* parent)
   pathLabel_->hide();
   pathLabel_->setFrameShape(QFrame::NoFrame);
   addWidget(pathLabel_);
+
+  permanentLabel_ = new QLabel();
+  permanentLabel_->setIndent(2);
+  addPermanentWidget(permanentLabel_);
+  permanentLabel_->hide();
 }
 
 StatusBar::~StatusBar() {
@@ -91,6 +96,17 @@ void StatusBar::setText(const QString& sizeTxt, const QString& pathTxt) {
   pathLabel_->setText(pathTxt);
   pathLabel0_->setVisible(!pathTxt.isEmpty());
   pathLabel_->setVisible(!pathTxt.isEmpty());
+
+  // also hide the permanent label when there is no size and path text
+  if(sizeTxt.isEmpty() && pathTxt.isEmpty()) {
+    permanentLabel_->clear();
+    permanentLabel_->setVisible(false);
+  }
+}
+
+void StatusBar::setPermanentText(const QString& text) {
+  permanentLabel_->setText(text);
+  permanentLabel_->setVisible(!text.isEmpty());
 }
 
 }

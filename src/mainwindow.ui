@@ -112,8 +112,10 @@
     <addaction name="actionFirst"/>
     <addaction name="actionLast"/>
     <addaction name="separator"/>
-    <addaction name="actionNextFrame"/>
     <addaction name="actionPreviousFrame"/>
+    <addaction name="actionNextFrame"/>
+    <addaction name="actionFirstFrame"/>
+    <addaction name="actionLastFrame"/>
    </widget>
    <widget class="QMenu" name="menu_View">
     <property name="title">
@@ -823,6 +825,16 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Left</string>
+   </property>
+  </action>
+  <action name="actionFirstFrame">
+   <property name="text">
+    <string>First Frame</string>
+   </property>
+  </action>
+  <action name="actionLastFrame">
+   <property name="text">
+    <string>Last Frame</string>
    </property>
   </action>
  </widget>

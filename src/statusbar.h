@@ -51,9 +51,13 @@ public:
   ~StatusBar();
 
   void setText(const QString& sizeTxt = QString(), const QString& pathTxt = QString());
+  void setPermanentText(const QString& text = QString());
+  bool hasPermanentText() const {
+    return permanentLabel_ != nullptr && permanentLabel_->isVisible();
+  }
 
 private:
-  QLabel *sizeLabel0_, *sizeLabel_, *pathLabel0_;
+  QLabel *sizeLabel0_, *sizeLabel_, *pathLabel0_, *permanentLabel_;
   Label *pathLabel_; // an elided path
 };
 

@@ -511,17 +511,63 @@ bool ImageView::supportsAnimation(const QString& fileName) const {
   return movie.frameCount() > 1;
 }
 
+int ImageView::frameCount() const {
+  if(gifMovie_) {
+    return gifMovie_->frameCount();
+  }
+  return 0;
+}
+
+int ImageView::currentFrame() const {
+  if(gifMovie_) {
+    return gifMovie_->currentFrameNumber() + 1;
+  }
+  return 0;
+}
+
 void ImageView::nextFrame() {
   if(gifMovie_ && gifMovie_->frameCount() > 1) {
+    removeAnnotations();
     int curFrame = gifMovie_->currentFrameNumber();
     gifMovie_->jumpToFrame(curFrame < gifMovie_->frameCount() - 1 ? curFrame + 1 : 0);
+    image_ = gifMovie_->currentImage();
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+        image_ = image_.transformed(imageItem->transform(), Qt::SmoothTransformation);
+    }
   }
 }
 
 void ImageView::previousFrame() {
   if(gifMovie_ && gifMovie_->frameCount() > 1) {
+    removeAnnotations();
     int curFrame = gifMovie_->currentFrameNumber();
     gifMovie_->jumpToFrame(curFrame > 0 ? curFrame - 1 : gifMovie_->frameCount() - 1);
+    image_ = gifMovie_->currentImage();
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+        image_ = image_.transformed(imageItem->transform(), Qt::SmoothTransformation);
+    }
+  }
+}
+
+void ImageView::firstFrame() {
+  if(gifMovie_ && gifMovie_->currentFrameNumber() > 0) {
+    removeAnnotations();
+    gifMovie_->jumpToFrame(0);
+    image_ = gifMovie_->currentImage();
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+        image_ = image_.transformed(imageItem->transform(), Qt::SmoothTransformation);
+    }
+  }
+}
+
+void ImageView::lastFrame() {
+  if(gifMovie_ && gifMovie_->currentFrameNumber() < gifMovie_->frameCount() - 1) {
+    removeAnnotations();
+    gifMovie_->jumpToFrame(gifMovie_->frameCount() - 1);
+    image_ = gifMovie_->currentImage();
+    if(QGraphicsItem* imageItem = imageGraphicsItem()) {
+        image_ = image_.transformed(imageItem->transform(), Qt::SmoothTransformation);
+    }
   }
 }
 
@@ -850,6 +896,10 @@ void ImageView::resetView() {
     }
   }
   // remove annotations
+  removeAnnotations();
+}
+
+void ImageView::removeAnnotations() {
   if(!annotations_.isEmpty()) {
     if(!scene_->items().isEmpty()) { // WARNING: This is not enough to guard against dangling pointers.
       for(const auto& annotation : std::as_const(annotations_)) {
