@@ -792,22 +792,22 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="814"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Następna klatka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Prawo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="822"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Poprzednia klatka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Lewo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>

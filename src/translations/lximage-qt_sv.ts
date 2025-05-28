@@ -716,22 +716,22 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../mainwindow.ui" line="814"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Nästa bildruta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Höger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="822"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Föregående bildruta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Vänster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>

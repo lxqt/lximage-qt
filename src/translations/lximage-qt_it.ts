@@ -793,22 +793,22 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../mainwindow.ui" line="814"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Frame successivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Destro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="822"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Frame precedente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Cltr+Sinistro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>

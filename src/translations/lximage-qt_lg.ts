@@ -793,22 +793,22 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="814"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Katimbe Akaddako</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+→</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="822"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Katimbe Akakulembera Kano</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+←</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>

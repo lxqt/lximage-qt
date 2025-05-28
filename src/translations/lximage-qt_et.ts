@@ -792,22 +792,22 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="814"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Järgmine kaader</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Nool paremale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="822"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Eelmine kaader</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Nool vasakule</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
