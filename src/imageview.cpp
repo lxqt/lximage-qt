@@ -54,7 +54,8 @@ ImageView::ImageView(QWidget* parent):
   isSVG_(false),
   currentTool_(ToolNone),
   nextNumber_(1),
-  showOutline_(false) {
+  showOutline_(false),
+  tiledBg_(false) {
 
   setViewportMargins(0, 0, 0, 0);
   setContentsMargins(0, 0, 0, 0);
@@ -441,7 +442,7 @@ bool ImageView::resizeImage(const QSize& newSize) {
 
 void ImageView::drawOutline() {
   QColor col = QColor(Qt::black);
-  if(qGray(backgroundBrush().color().rgb()) < GRAY) {
+  if(!tiledBg_ && qGray(backgroundBrush().color().rgb()) < GRAY) {
     col = QColor(Qt::white);
   }
   QPen outline(col, 1, Qt::DashLine);
@@ -450,6 +451,36 @@ void ImageView::drawOutline() {
   outlineItem_->setBrush(Qt::NoBrush);
   outlineItem_->setVisible(showOutline_);
   outlineItem_->setZValue(1); // to be drawn on top of all other items
+}
+
+void ImageView::setViewBackground(const QBrush& brush, bool solidBg) {
+  tiledBg_ = !solidBg;
+  QColor col;
+  if(solidBg) {
+    setBackgroundBrush(brush);
+    if(outlineItem_) {
+      col = qGray(brush.color().rgb()) < GRAY ? QColor(Qt::white) : QColor(Qt::black);
+    }
+  }
+  else {
+    QPixmap tilePixmap(64, 64);
+    tilePixmap.fill(Qt::white);
+    QPainter tilePainter(&tilePixmap);
+    QColor color(220, 220, 220);
+    tilePainter.fillRect(0, 0, 32, 32, color);
+    tilePainter.fillRect(32, 32, 32, 32, color);
+    tilePainter.end();
+    setBackgroundBrush(tilePixmap);
+    if(outlineItem_) {
+      col = QColor(Qt::black);
+    }
+  }
+  if(col.isValid()) {
+    QPen outline = outlineItem_->pen();
+    outline.setColor(col);
+    outlineItem_->setPen(outline);
+    viewport()->update();
+  }
 }
 
 void ImageView::setImage(const QImage& image, bool show, bool updatePixelRatio) {
@@ -687,19 +718,6 @@ void ImageView::showOutline(bool show) {
   showOutline_ = show;
 }
 
-void ImageView::updateOutline() {
-  if(outlineItem_) {
-    QColor col = QColor(Qt::black);
-    if(qGray(backgroundBrush().color().rgb()) < GRAY) {
-      col = QColor(Qt::white);
-    }
-    QPen outline = outlineItem_->pen();
-    outline.setColor(col);
-    outlineItem_->setPen(outline);
-    viewport()->update();
-  }
-}
-
 void ImageView::paintEvent(QPaintEvent* event) {
   if (!smoothOnZoom_) {
     QGraphicsView::paintEvent(event);
@@ -723,7 +741,7 @@ void ImageView::paintEvent(QPaintEvent* event) {
         // outline
         if(showOutline_) {
             QColor col = QColor(Qt::black);
-            if(qGray(backgroundBrush().color().rgb()) < GRAY) {
+            if(!tiledBg_ && qGray(backgroundBrush().color().rgb()) < GRAY) {
               col = QColor(Qt::white);
             }
             QPen outline(col, 1, Qt::DashLine);
@@ -738,6 +756,17 @@ void ImageView::paintEvent(QPaintEvent* event) {
     queueGenerateCache();
   }
   QGraphicsView::paintEvent(event);
+}
+
+void ImageView::drawBackground(QPainter *p, const QRectF& rect) {
+  if(!tiledBg_) {
+    QGraphicsView::drawBackground(p, rect);
+    return;
+  }
+  p->save();
+  p->resetTransform();
+  p->drawTiledPixmap(viewport()->rect(), backgroundBrush().texture());
+  p->restore();
 }
 
 void ImageView::queueGenerateCache() {

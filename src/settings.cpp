@@ -30,6 +30,7 @@ inline static Fm::FolderModel::ColumnId sortColumnFromString(const QString& str)
 
 Settings::Settings():
   useFallbackIconTheme_(QIcon::themeName().isEmpty() || QIcon::themeName() == QLatin1String("hicolor")),
+  solidBg_(true),
   bgColor_(255, 255, 255),
   fullScreenBgColor_(0, 0, 0),
   showExifData_(false),
@@ -64,6 +65,7 @@ Settings::~Settings() {
 bool Settings::load() {
   QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
   fallbackIconTheme_ = settings.value(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_).toString();
+  solidBg_ = settings.value(QStringLiteral("solidBg"), true).toBool();
   bgColor_ = settings.value(QStringLiteral("bgColor"), bgColor_).value<QColor>();
   fullScreenBgColor_ = settings.value(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_).value<QColor>();
   // showSidePane_;
@@ -115,6 +117,7 @@ bool Settings::save() {
   QSettings settings(QStringLiteral("lximage-qt"), QStringLiteral("settings"));
 
   settings.setValue(QStringLiteral("fallbackIconTheme"), fallbackIconTheme_);
+  settings.setValue(QStringLiteral("solidBg"), solidBg_);
   settings.setValue(QStringLiteral("bgColor"), bgColor_);
   settings.setValue(QStringLiteral("fullScreenBgColor"), fullScreenBgColor_);
   settings.setValue(QStringLiteral("slideShowInterval"), slideShowInterval_);

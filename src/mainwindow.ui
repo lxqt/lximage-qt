@@ -136,6 +136,7 @@
     <addaction name="actionOriginalSize"/>
     <addaction name="actionZoomFit"/>
     <addaction name="separator"/>
+    <addaction name="actionSolidBg"/>
     <addaction name="actionShowThumbnails"/>
     <addaction name="actionShowOutline"/>
     <addaction name="actionShowExifData"/>
@@ -835,6 +836,17 @@
   <action name="actionLastFrame">
    <property name="text">
     <string>Last Frame</string>
+   </property>
+  </action>
+  <action name="actionSolidBg">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Solid Background</string>
    </property>
   </action>
  </widget>

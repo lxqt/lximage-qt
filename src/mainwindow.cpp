@@ -109,9 +109,8 @@ MainWindow::MainWindow():
   // install an event filter on the image view
   ui.view->installEventFilter(this);
 
-  ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
-
-  ui.view->updateOutline();
+  ui.view->setViewBackground(QBrush(settings.bgColor()), settings.solidBg());
+  ui.actionSolidBg->setChecked(settings.solidBg());
 
   ui.view->showOutline(settings.isOutlineShown());
   ui.actionShowOutline->setChecked(settings.isOutlineShown());
@@ -174,6 +173,7 @@ MainWindow::MainWindow():
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionSlideShow);
   contextMenu_->addAction(ui.actionFullScreen);
+  contextMenu_->addAction(ui.actionSolidBg);
   contextMenu_->addAction(ui.actionShowOutline);
   contextMenu_->addAction(ui.actionShowExifData);
   contextMenu_->addAction(ui.actionShowThumbnails);
@@ -1214,11 +1214,9 @@ void MainWindow::setModified(bool modified) {
 void MainWindow::applySettings() {
   Application* app = static_cast<Application*>(qApp);
   Settings& settings = app->settings();
-  if(isFullScreen())
-    ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
-  else
-    ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
-  ui.view->updateOutline();
+  ui.view->setViewBackground(isFullScreen() ? QBrush(settings.fullScreenBgColor())
+                                            : QBrush(settings.bgColor()),
+                             ui.actionSolidBg->isChecked());
   ui.view->setSmoothOnZoom(settings.smoothOnZoom());
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 
@@ -1360,6 +1358,13 @@ void MainWindow::on_actionSlideShow_triggered(bool checked) {
 
 void MainWindow::on_actionShowThumbnails_triggered(bool checked) {
   setShowThumbnails(checked);
+}
+
+void MainWindow::on_actionSolidBg_triggered(bool checked) {
+  Settings& settings = static_cast<Application*>(qApp)->settings();
+  ui.view->setViewBackground(isFullScreen() ? QBrush(settings.fullScreenBgColor())
+                                            : QBrush(settings.bgColor()),
+                             checked);
 }
 
 void MainWindow::on_actionShowOutline_triggered(bool checked) {
@@ -1523,8 +1528,7 @@ void MainWindow::changeEvent(QEvent* event) {
     Settings& settings = static_cast<Application*>(qApp)->settings();
     if(isFullScreen()) { // changed to fullscreen mode
       ui.view->setFrameStyle(QFrame::NoFrame);
-      ui.view->setBackgroundBrush(QBrush(settings.fullScreenBgColor()));
-      ui.view->updateOutline();
+      ui.view->setViewBackground(QBrush(settings.fullScreenBgColor()), ui.actionSolidBg->isChecked());
       ui.toolBar->hide();
       ui.annotationsToolBar->hide();
       ui.statusBar->hide();
@@ -1545,8 +1549,7 @@ void MainWindow::changeEvent(QEvent* event) {
     }
     else { // restore to normal window mode
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
-      ui.view->setBackgroundBrush(QBrush(settings.bgColor()));
-      ui.view->updateOutline();
+      ui.view->setViewBackground(QBrush(settings.bgColor()), ui.actionSolidBg->isChecked());
       if(ui.actionMenubar->isChecked()) {
         on_actionMenubar_triggered(true);
       }

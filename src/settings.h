@@ -51,6 +51,13 @@ public:
     fallbackIconTheme_ = value;
   }
 
+  bool solidBg() const {
+    return solidBg_;
+  }
+  void setSolidBg(bool solidBg) {
+    solidBg_ = solidBg;
+  }
+
   QColor bgColor() const {
     return bgColor_;
   }
@@ -286,6 +293,7 @@ private:
 
 private:
   bool useFallbackIconTheme_;
+  bool solidBg_;
   QColor bgColor_;
   QColor fullScreenBgColor_;
   bool showExifData_;

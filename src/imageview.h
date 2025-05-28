@@ -100,7 +100,7 @@ public:
   };
   void activateTool(Tool tool);
   void showOutline(bool show);
-  void updateOutline();
+  void setViewBackground(const QBrush& brush, bool solidBg);
 
 Q_SIGNALS:
   void fileDropped(const QString file);
@@ -115,6 +115,7 @@ protected:
   virtual void focusInEvent(QFocusEvent* event);
   virtual void resizeEvent(QResizeEvent* event);
   virtual void paintEvent(QPaintEvent* event);
+  virtual void drawBackground(QPainter *p, const QRectF& rect);
 
 private:
   QGraphicsItem* imageGraphicsItem() const;
@@ -161,6 +162,7 @@ private:
   int nextNumber_;
   bool showOutline_;
   qreal pixRatio_;
+  bool tiledBg_;
 };
 
 }
