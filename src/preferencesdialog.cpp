@@ -82,6 +82,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.fullScreenBgColor->setColor(settings.fullScreenBgColor());
   ui.maxRecentFiles->setValue(settings.maxRecentFiles());
   ui.slideShowInterval->setValue(settings.slideShowInterval());
+  ui.solidBgBox->setChecked(settings.solidBg());
   ui.oulineBox->setChecked(settings.isOutlineShown());
   ui.menubarBox->setChecked(settings.isMenubarShown());
   ui.toolbarBox->setChecked(settings.isToolbarShown());
@@ -155,6 +156,7 @@ void PreferencesDialog::accept() {
   settings.setFullScreenBgColor(ui.fullScreenBgColor->color());
   settings.setMaxRecentFiles(ui.maxRecentFiles->value());
   settings.setSlideShowInterval(ui.slideShowInterval->value());
+  settings.setSolidBg(ui.solidBgBox->isChecked());
   settings.showOutline(ui.oulineBox->isChecked());
   settings.showMenubar(ui.menubarBox->isChecked());
   settings.showToolbar(ui.toolbarBox->isChecked());

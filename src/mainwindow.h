@@ -122,6 +122,7 @@ private Q_SLOTS:
   void on_actionUpload_triggered();
 
   void on_actionShowThumbnails_triggered(bool checked);
+  void on_actionSolidBg_triggered(bool checked);
   void on_actionShowOutline_triggered(bool checked);
   void on_actionShowExifData_triggered(bool checked);
   void on_actionFullScreen_triggered(bool checked);
