@@ -60,10 +60,6 @@ public:
 
   void openImageFile(const QString& fileName);
 
-  QImage image() const {
-    return image_;
-  }
-
   void pasteImage(QImage newImage);
 
   const Fm::FilePath & currentFile() const {
@@ -186,7 +182,6 @@ private:
   QMenu* contextMenu_;
   QTimer* slideShowTimer_;
 
-  QImage image_; // the image currently shown
   Fm::FilePath currentFile_; // path to current image file
   // FmFileInfo* currentFileInfo_; // info of the current file, can be NULL
   bool imageModified_; // the current image is modified by rotation, flip, or others and needs to be saved

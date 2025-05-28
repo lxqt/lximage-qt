@@ -61,7 +61,6 @@ MainWindow::MainWindow():
   QMainWindow(),
   contextMenu_(new QMenu(this)),
   slideShowTimer_(nullptr),
-  image_(),
   // currentFileInfo_(nullptr),
   imageModified_(false),
   folder_(nullptr),
@@ -505,8 +504,7 @@ void MainWindow::pasteImage(QImage newImage) {
   currentIndex_ = QModelIndex(); // invaludate current index since we don't have a folder model now
   currentFile_ = Fm::FilePath{};
 
-  image_ = newImage;
-  ui.view->setImage(image_);
+  ui.view->setImage(newImage);
   // always fit the image on pasting
   ui.actionZoomFit->setChecked(true);
   ui.view->setAutoZoomFit(true);
@@ -621,7 +619,7 @@ void MainWindow::on_actionSave_triggered() {
   if(saveJob_) // if we're currently saving another file
     return;
 
-  if(!image_.isNull()) {
+  if(!ui.view->image().isNull()) {
     if(currentFile_)
       saveImage(currentFile_);
     else
@@ -722,28 +720,24 @@ void MainWindow::on_actionLast_triggered() {
 
 void MainWindow::on_actionNextFrame_triggered() {
   ui.view->nextFrame();
-  image_ = ui.view->image();
   int frame = ui.view->currentFrame();
   ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
 
 void MainWindow::on_actionPreviousFrame_triggered() {
   ui.view->previousFrame();
-  image_ = ui.view->image();
   int frame = ui.view->currentFrame();
   ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
 
 void MainWindow::on_actionFirstFrame_triggered() {
   ui.view->firstFrame();
-  image_ = ui.view->image();
   int frame = ui.view->currentFrame();
   ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
 
 void MainWindow::on_actionLastFrame_triggered() {
   ui.view->lastFrame();
-  image_ = ui.view->image();
   int frame = ui.view->currentFrame();
   ui.statusBar->setPermanentText(frame > 0 ? tr("%1/%2 Frames").arg(frame).arg(ui.view->frameCount()) : QString());
 }
@@ -777,7 +771,7 @@ void MainWindow::onImageLoaded() {
     // Add to the MRU menu
     ui.menuRecently_Opened_Files->addItem(QString::fromUtf8(loadJob_->filePath().localPath().get()));
 
-    image_ = loadJob_->image();
+    QImage img = loadJob_->image();
     exifData_ = loadJob_->getExifData();
 
     loadJob_ = nullptr; // the job object will be freed later automatically
@@ -786,7 +780,7 @@ void MainWindow::onImageLoaded() {
 
     int cs = settings.colorSpace();
     if(cs > 0 && cs < 6) {
-      image_.convertToColorSpace(QColorSpace(static_cast<QColorSpace::NamedColorSpace>(cs)));
+      img.convertToColorSpace(QColorSpace(static_cast<QColorSpace::NamedColorSpace>(cs)));
     }
 
     // set image zoom, like in loadImage()
@@ -798,7 +792,7 @@ void MainWindow::onImageLoaded() {
       ui.view->zoomOriginal();
     }
 
-    ui.view->setImage(image_);
+    ui.view->setImage(img);
 
     // currentIndex_ should be corrected after loading
     currentIndex_ = indexFromPath(currentFile_);
@@ -904,7 +898,7 @@ void MainWindow::updateUI(bool multiFrame) {
       ui.statusBar->setText();
     }
     else {
-      if(image_.isNull()) {
+      if(ui.view->image().isNull()) {
         title = tr("[*]%1 (Failed to Load) - Image Viewer")
                   .arg(QString::fromUtf8(dispName.get()));
         ui.statusBar->setText();
@@ -913,9 +907,10 @@ void MainWindow::updateUI(bool multiFrame) {
         const QString filePath = QString::fromUtf8(dispName.get());
         title = tr("[*]%1 (%2x%3) - Image Viewer")
                   .arg(filePath)
-                  .arg(image_.width())
-                  .arg(image_.height());
-        ui.statusBar->setText(QStringLiteral("%1×%2").arg(image_.width()).arg(image_.height()),
+                  .arg(ui.view->image().width())
+                  .arg(ui.view->image().height());
+        ui.statusBar->setText(QStringLiteral("%1×%2").arg(ui.view->image().width())
+                                                     .arg(ui.view->image().height()),
                               filePath);
         int frame = ui.view->currentFrame();
         ui.statusBar->setPermanentText(multiFrame && frame > 0
@@ -936,7 +931,7 @@ void MainWindow::updateUI(bool multiFrame) {
           setAttribute(Qt::WA_DontShowOnScreen);
           show();
           int scrollThickness = style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-          QSize newSize = size() + image_.size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
+          QSize newSize = size() + ui.view->image().size() - ui.view->size() + QSize(scrollThickness, scrollThickness);
           bool isWayland(QGuiApplication::platformName() == QStringLiteral("wayland"));
           QScreen *appScreen = nullptr;
           if(isWayland) {
@@ -1005,8 +1000,6 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
 
   currentIndex_ = index;
   currentFile_ = filePath;
-  // clear current image, but do not update the view now to prevent flickers
-  image_ = QImage();
 
   const Fm::CStrPtr basename = currentFile_.baseName();
   char* mime_type = g_content_type_guess(basename.get(), nullptr, 0, nullptr);
@@ -1057,7 +1050,6 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     else {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
     }
-    image_ = ui.view->image();
     updateUI(supportsAnimation && mimeType != QLatin1String("image/gif"));
     if(!isVisible()) {
       if(settings.windowMaximized()) {
@@ -1106,32 +1098,22 @@ void MainWindow::saveImage(const Fm::FilePath & filePath) {
 }
 
 void MainWindow::on_actionRotateClockwise_triggered() {
-  if(!image_.isNull()) {
+  if(!ui.view->image().isNull()) {
     ui.view->rotateImage(true);
-    image_ = ui.view->image();
     setModified(true);
   }
 }
 
 void MainWindow::on_actionRotateCounterclockwise_triggered() {
-  if(!image_.isNull()) {
+  if(!ui.view->image().isNull()) {
     ui.view->rotateImage(false);
-    image_ = ui.view->image();
     setModified(true);
   }
 }
 
 void MainWindow::on_actionCopy_triggered() {
   QClipboard *clipboard = QApplication::clipboard();
-  QImage copiedImage = image_;
-  // FIXME: should we copy the currently scaled result instead of the original image?
-  /*
-  double factor = ui.view->scaleFactor();
-  if(factor == 1.0)
-    copiedImage = image_;
-  else
-    copiedImage = image_.scaled();
-  */
+  QImage copiedImage = ui.view->image();
   clipboard->setImage(copiedImage);
 }
 
@@ -1195,31 +1177,28 @@ void MainWindow::on_actionUpload_triggered()
 }
 
 void MainWindow::on_actionFlipVertical_triggered() {
-  if(!image_.isNull()) {
+  if(!ui.view->image().isNull()) {
     ui.view->flipImage(false);
-    image_ = ui.view->image();
     setModified(true);
   }
 }
 
 void MainWindow::on_actionFlipHorizontal_triggered() {
-  if(!image_.isNull()) {
+  if(!ui.view->image().isNull()) {
     ui.view->flipImage(true);
-    image_ = ui.view->image();
     setModified(true);
   }
 }
 
 void MainWindow::on_actionResize_triggered() {
-  if(image_.isNull()) {
+  if(ui.view->image().isNull()) {
     return;
   }
   ResizeImageDialog *dialog = new ResizeImageDialog(this);
-  dialog->setOriginalSize(image_.size());
+  dialog->setOriginalSize(ui.view->image().size());
   if(dialog->exec() == QDialog::Accepted) {
     QSize newSize = dialog->scaledSize();
     if(ui.view->resizeImage(newSize)) {
-      image_ = ui.view->image();
       setModified(true);
     }
   }
@@ -1320,7 +1299,7 @@ void MainWindow::on_actionPrint_triggered() {
 
     // fit the target rectangle into the viewport if needed and center it
     const QRectF viewportRect = painter.viewport();
-    QRectF targetRect = image_.rect();
+    QRectF targetRect = ui.view->image().rect();
     if(viewportRect.width() < targetRect.width()) {
       targetRect.setSize(QSize(viewportRect.width(), targetRect.height() * (viewportRect.width() / targetRect.width())));
     }
@@ -1331,19 +1310,19 @@ void MainWindow::on_actionPrint_triggered() {
 
     // set the viewport and window of the painter and paint the image
     painter.setViewport(targetRect.toRect());
-    painter.setWindow(image_.rect());
-    painter.drawImage(0, 0, image_);
+    painter.setWindow(ui.view->image().rect());
+    painter.drawImage(0, 0, ui.view->image());
 
     painter.end();
 
     // FIXME: The following code divides the image into columns and could be used later as an option.
     /*QRect pageRect = printer.pageRect();
-    int cols = (image_.width() / pageRect.width()) + (image_.width() % pageRect.width() ? 1 : 0);
-    int rows = (image_.height() / pageRect.height()) + (image_.height() % pageRect.height() ? 1 : 0);
+    int cols = (ui.view->image().width() / pageRect.width()) + (ui.view->image().width() % pageRect.width() ? 1 : 0);
+    int rows = (ui.view->image().height() / pageRect.height()) + (ui.view->image().height() % pageRect.height() ? 1 : 0);
     for(int row = 0; row < rows; ++row) {
       for(int col = 0; col < cols; ++col) {
         QRect srcRect(pageRect.width() * col, pageRect.height() * row, pageRect.width(), pageRect.height());
-        painter.drawImage(QPoint(0, 0), image_, srcRect);
+        painter.drawImage(QPoint(0, 0), ui.view->image(), srcRect);
         if(col + 1 == cols && row + 1 == rows) // this is the last page
           break;
         printer.newPage();
