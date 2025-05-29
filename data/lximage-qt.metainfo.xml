@@ -13,7 +13,7 @@
 
   <description>
     <p>
-    Fast and simple image viewer written in Qt. Among
+    Fast and simple image viewer written in Qt for X11 abd Wayland. Among
     its features are:
     </p>
     <ul>
@@ -25,8 +25,9 @@
       <li>Custom shortcuts</li>
       <li>Image annotations (arrow, rectangle, circle, numbers)</li>
       <li>Recent files</li>
-      <li>Upload images (Imgur)</li>
-      <li>Take screenshots</li>
+      <li>Support for multipage TIFF files</li>
+      <li>Upload images (ImgBB)</li>
+      <li>Take screenshots (x11)</li>
     </ul>
   </description>
 
