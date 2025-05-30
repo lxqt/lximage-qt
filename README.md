@@ -17,8 +17,9 @@ LXImage-Qt is the Qt port of LXImage, a simple and fast image viewer.
 * Custom shortcuts
 * Image annotations (arrow, rectangle, circle, numbers)
 * Recent files
-* Upload images (Imgur)
-* Take screenshots
+* Support for multipage TIFF files
+* Upload images (ImgBB)
+* Take screenshots (x11)
 
 More features can be found when it is used. LXImage-Qt is maintained by the LXQt project
 but can be used independently from this desktop environment.
