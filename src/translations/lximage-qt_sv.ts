@@ -185,7 +185,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 bildrutor</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1388"/>
@@ -745,17 +745,17 @@ en genväg i ändringsläge.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Första bildrutan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Sista bildrutan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Solid bakgrund</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1007,7 +1007,7 @@ Ladda om den nuvarande bilden för att se effekten.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Solid bakgrund som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>

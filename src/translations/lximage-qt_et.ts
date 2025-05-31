@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 lehte</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -821,17 +821,17 @@ toimetamisvaates muuteklahvi.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Esimene leht</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimane leht</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Ühtlane taust</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1007,7 +1007,7 @@ Tulemuse nägemiseks laadi pilt uuesti.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaikimisi on kasutusel ühtlane taust</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
