@@ -96,17 +96,17 @@
     <message>
         <location filename="../application.cpp" line="104"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
-        <translation>截圖（已棄用，建議使用 screengrab）</translation>
+        <translation>進行擷圖 (已經棄用，請改使用 screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
-        <translation>條</translation>
+        <translation>目錄</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="113"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
-        <translation>擷圖並直接將其存到目錄（已棄用，建議使用 screengrab）</translation>
+        <translation>擷圖並直接將其存到目錄 (已經棄用，請改使用 screengrab)</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="119"/>
@@ -190,17 +190,17 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 框頁</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (載入中...) - 看圖軟體</translation>
+        <translation>[*]%1 (載入中...) - 圖片檢視器</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="902"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
-        <translation>[*]%1 (載入失敗) - 看圖軟體</translation>
+        <translation>[*]%1 (載入失敗) - 圖片檢視器</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="908"/>
@@ -220,7 +220,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="1483"/>
         <source>EXIF Data</source>
-        <translation>EXIF資訊</translation>
+        <translation>EXIF 資料</translation>
     </message>
 </context>
 <context>
@@ -279,12 +279,12 @@ in the editing mode.</source>
     <message>
         <location filename="../statusbar.cpp" line="63"/>
         <source>Size:</source>
-        <translation>大小:</translation>
+        <translation>大小：</translation>
     </message>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation>路徑:</translation>
+        <translation>路徑：</translation>
     </message>
 </context>
 <context>
@@ -302,7 +302,7 @@ in the editing mode.</source>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="136"/>
         <source>Start</source>
-        <translation>開始</translation>
+        <translation>啟動</translation>
     </message>
     <message>
         <location filename="../upload/uploaddialog.cpp" line="139"/>
@@ -573,7 +573,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="519"/>
         <source>&amp;Paste from Clipboard</source>
-        <translation>從剪貼簿貼上(&amp;P)</translation>
+        <translation>自剪貼簿貼上(&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="531"/>
@@ -633,12 +633,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="598"/>
         <source>Show EXIF Data</source>
-        <translation>顯示EXIF資訊</translation>
+        <translation>顯示 EXIF 資料</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="610"/>
         <source>No Tool</source>
-        <translation>不使用註解工具</translation>
+        <translation>無工具</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="613"/>
@@ -648,42 +648,42 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="625"/>
         <source>Draw Arrow</source>
-        <translation>畫箭頭</translation>
+        <translation>畫出箭頭</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="628"/>
         <source>Draw an arrow</source>
-        <translation>畫一個箭頭</translation>
+        <translation>畫出一個箭頭</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Draw Rectangle</source>
-        <translation>畫矩形</translation>
+        <translation>畫出矩形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Draw a hollow rectangle</source>
-        <translation>畫一個空心的矩形</translation>
+        <translation>畫出一個空心的矩形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
         <source>Draw Circle</source>
-        <translation>畫圓形</translation>
+        <translation>畫出圓形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Draw a hollow circle</source>
-        <translation>畫一個空心的圓形</translation>
+        <translation>畫出一個空心的圓形</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="670"/>
         <source>Draw Number</source>
-        <translation>畫數字</translation>
+        <translation>畫出數字</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="673"/>
         <source>Draw incrementing numbers</source>
-        <translation>畫遞增的數字</translation>
+        <translation>畫出遞增的數字</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="681"/>
@@ -699,12 +699,12 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="695"/>
         <source>&amp;Main Toolbar</source>
-        <translation>主選單列(&amp;M)</translation>
+        <translation>主要選單列(&amp;M)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="698"/>
         <source>Main Toolbar</source>
-        <translation>主工具列</translation>
+        <translation>主要工具列</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="706"/>
@@ -746,7 +746,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="757"/>
         <source>Resize</source>
-        <translation>修改大小</translation>
+        <translation>變更大小</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="765"/>
@@ -821,17 +821,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>第一個框頁</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>最後的框頁</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>純色背景</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -879,12 +879,12 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>縮圖產生器的檔案大小限制:</translation>
+        <translation>縮圖檔案大小限制：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
         <source>Normal background color:</source>
-        <translation>預設背景顏色:</translation>
+        <translation>正常背景顏色：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="165"/>
@@ -894,22 +894,22 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="43"/>
         <source>Maximum number of recent files:</source>
-        <translation>最近使用的檔案的數量上限:</translation>
+        <translation>最近使用檔案的最大數量：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
-        <translation>幻燈片放映間隔（秒）:</translation>
+        <translation>投影片播放間隔 (秒)：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Show image outline by default</source>
-        <translation>預設顯示圖片的框線</translation>
+        <translation>顯示圖片外框依照預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>預設顯示註釋工具列</translation>
+        <translation>顯示工具列註釋依照預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
@@ -924,7 +924,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>縮圖大小:</translation>
+        <translation>縮圖尺寸：</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -944,17 +944,17 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>預設顯示 Exif 資訊面版</translation>
+        <translation>顯示 Exif 資料面版依照預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation>預設顯示選單列</translation>
+        <translation>顯示選單列依照預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
         <source>Show main toolbar by default</source>
-        <translation>預設顯示主工具列</translation>
+        <translation>顯示主要工具列依照預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="142"/>
@@ -977,7 +977,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation>沒有任何</translation>
+        <translation>無</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -1007,7 +1007,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>預設的純色背景</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
@@ -1118,12 +1118,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="50"/>
         <source>Current window only</source>
-        <translation>只有目前的視窗</translation>
+        <translation>僅於目前視窗</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="57"/>
         <source>Capture an area of the screen</source>
-        <translation>截圖選取的區域</translation>
+        <translation>擷圖於螢幕的區域</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
@@ -1138,12 +1138,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
         <source>Delay:</source>
-        <translation>延遲:</translation>
+        <translation>延遲：</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation>包含視窗標題和邊框</translation>
+        <translation>包含視窗標題和框格</translation>
     </message>
 </context>
 <context>

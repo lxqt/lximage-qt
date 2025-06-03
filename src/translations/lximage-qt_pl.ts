@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>Strony: %1/%2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -801,7 +801,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation>Następna klatka</translation>
+        <translation>Następna strona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
@@ -811,7 +811,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation>Poprzednia klatka</translation>
+        <translation>Poprzednia strona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
@@ -821,17 +821,17 @@ w trybie edycji.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwsza strona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatnia strona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Tło jednolite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1007,7 +1007,7 @@ Wczytaj ponownie bieżący obraz, aby zobaczyć efekt.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Tło jednolite domyślnie</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
