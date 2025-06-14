@@ -155,12 +155,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="308"/>
         <source>Development: </source>
-        <translation>Développement&#xa0;: </translation>
+        <translation>Développement : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="310"/>
         <source>Author: </source>
-        <translation>Auteur&#xa0;: </translation>
+        <translation>Auteur : </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="539"/>
@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 Pages</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -376,7 +376,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fichiers récents</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -623,7 +623,7 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="551"/>
         <source>Show Thumbnails</source>
-        <translation type="unfinished">Afficher les miniatures</translation>
+        <translation>Afficher les miniatures</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="554"/>
@@ -831,37 +831,37 @@ en mode édition.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Prochaine Page</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Flèche droite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Précédente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Flèche gauche</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Première Page</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Dernière Page</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan solide</translation>
     </message>
 </context>
 <context>
@@ -884,12 +884,12 @@ en mode édition.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation>Limite de taille du fichier de miniature&#xa0;:</translation>
+        <translation>Limite de taille du fichier de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Dimensions de l&apos;image de miniature&#xa0;:</translation>
+        <translation>Dimensions de l&apos;image de miniature :</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -1012,7 +1012,7 @@ Rechargez l&apos;image actuelle pour voir l&apos;effet.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrière-plan solide par défaut</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>

@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 frames</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -823,17 +823,17 @@ in de bewerkmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste frame</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste frame</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Effen achtergrond</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1009,7 +1009,7 @@ Herlaad de huidige afbeelding om toe te passen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard effen achtergrond gebruiken</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>

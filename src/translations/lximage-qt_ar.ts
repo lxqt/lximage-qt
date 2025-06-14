@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 إطارات</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -820,17 +820,17 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>الإطار الأول</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>الإطار الأخير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>خلفية صلبة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1006,7 +1006,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>خلفية صلبة افتراضيًا</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
