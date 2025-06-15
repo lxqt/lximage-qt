@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>Obutimbe %1 ku %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -822,17 +822,17 @@ agafuula enkola ya gannaago.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Akatimbe Akasooka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Akatimbe Akasembayo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Obwaliriro bwa Langi Emu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1010,7 +1010,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Obwaliriro obwa Bulijjo bwa Langi Emu</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
