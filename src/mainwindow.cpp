@@ -1016,9 +1016,10 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   ui.actionFirstFrame->setVisible(false);
   ui.actionLastFrame->setVisible(false);
   bool supportsAnimation(mimeType == QLatin1String("image/gif"));
-  if(!supportsAnimation && mimeType == QLatin1String("image/tiff")) {
+  if(!supportsAnimation
+     && (mimeType == QLatin1String("image/tiff") || mimeType == QLatin1String("image/webp"))) {
     supportsAnimation = ui.view->supportsAnimation(QString::fromUtf8(file_name.get()));
-    if(supportsAnimation) {
+    if(supportsAnimation && mimeType == QLatin1String("image/tiff")) {
       ui.actionNextFrame->setVisible(true);
       ui.actionPreviousFrame->setVisible(true);
       ui.actionFirstFrame->setVisible(true);
@@ -1027,7 +1028,8 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
   }
 
   if(supportsAnimation
-     || mimeType == QLatin1String("image/svg+xml") || mimeType == QLatin1String("image/svg+xml-compressed")) {
+     || mimeType == QLatin1String("image/svg+xml")
+     || mimeType == QLatin1String("image/svg+xml-compressed")) {
     if(!currentIndex_.isValid()) {
       // since onImageLoaded is not called here,
       // currentIndex_ should be set
@@ -1045,7 +1047,9 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     }
 
     if(supportsAnimation) {
-      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()), mimeType == QLatin1String("image/gif"));
+      ui.view->setGifAnimation(QString::fromUtf8(file_name.get()),
+                               mimeType == QLatin1String("image/gif")
+                               || mimeType == QLatin1String("image/webp"));
     }
     else {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
