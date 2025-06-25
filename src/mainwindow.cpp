@@ -1054,7 +1054,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
     else {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
     }
-    updateUI(supportsAnimation && mimeType != QLatin1String("image/gif"));
+    updateUI(supportsAnimation && mimeType == QLatin1String("image/tiff"));
     if(!isVisible()) {
       if(settings.windowMaximized()) {
         setWindowState(windowState() | Qt::WindowMaximized);
