@@ -1048,8 +1048,7 @@ void MainWindow::loadImage(const Fm::FilePath & filePath, QModelIndex index) {
 
     if(supportsAnimation) {
       ui.view->setGifAnimation(QString::fromUtf8(file_name.get()),
-                               mimeType == QLatin1String("image/gif")
-                               || mimeType == QLatin1String("image/webp"));
+                               mimeType != QLatin1String("image/tiff"));
     }
     else {
       ui.view->setSVG(QString::fromUtf8(file_name.get()));
