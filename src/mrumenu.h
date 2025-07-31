@@ -68,7 +68,7 @@ private Q_SLOTS:
 
 private:
 
-    QAction *createAction(const QString &filename);
+    QAction *createAction(QString filename);
     void destroyAction(int index);
     void updateSettings();
 
