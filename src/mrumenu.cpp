@@ -100,7 +100,7 @@ void MruMenu::setMaxItems(int m) {
 
 void MruMenu::onItemTriggered()
 {
-    Q_EMIT itemClicked(qobject_cast<QAction*>(sender())->text());
+    Q_EMIT itemClicked(qobject_cast<QAction*>(sender())->data().toString());
 }
 
 void MruMenu::onClearTriggered()
@@ -121,6 +121,7 @@ QAction *MruMenu::createAction(const QString &filename)
 {
     auto name = filename;
     QAction *action = new QAction(name.replace(QLatin1Char('&'), QLatin1String("&&")).replace(QLatin1Char('\t'), QLatin1Char(' ')), this);
+    action->setData(filename);
     connect(action, &QAction::triggered, this, &MruMenu::onItemTriggered);
     return action;
 }
