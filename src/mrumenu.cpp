@@ -119,7 +119,8 @@ void MruMenu::onClearTriggered()
 
 QAction *MruMenu::createAction(const QString &filename)
 {
-    QAction *action = new QAction(filename, this);
+    auto name = filename;
+    QAction *action = new QAction(name.replace(QLatin1Char('&'), QLatin1String("&&")).replace(QLatin1Char('\t'), QLatin1Char(' ')), this);
     connect(action, &QAction::triggered, this, &MruMenu::onItemTriggered);
     return action;
 }
