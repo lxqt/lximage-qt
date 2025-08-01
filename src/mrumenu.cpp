@@ -119,8 +119,11 @@ void MruMenu::onClearTriggered()
 
 QAction *MruMenu::createAction(const QString &filename)
 {
+    QFontMetrics metrics(font());
+    int w = 150 * metrics.horizontalAdvance(QLatin1Char(' ')); // for eliding long texts
     auto name = filename;
-    QAction *action = new QAction(name.replace(QLatin1Char('&'), QLatin1String("&&")).replace(QLatin1Char('\t'), QLatin1Char(' ')), this);
+    name.replace(QLatin1Char('&'), QLatin1String("&&")).replace(QLatin1Char('\t'), QLatin1Char(' '));
+    QAction *action = new QAction(metrics.elidedText(name, Qt::ElideMiddle, w), this);
     action->setData(filename);
     connect(action, &QAction::triggered, this, &MruMenu::onItemTriggered);
     return action;
