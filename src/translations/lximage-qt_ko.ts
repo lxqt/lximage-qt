@@ -192,7 +192,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 프레임</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -348,7 +348,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>최근 파일(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -803,37 +803,37 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>다음 프레임</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Right</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>이전 프레임</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Left</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>첫 번째 프레임</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>마지막 프레임</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>단색 배경</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1009,7 +1009,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>기본값으로 단색 배경</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
