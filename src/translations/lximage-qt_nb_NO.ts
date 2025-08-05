@@ -538,7 +538,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="475"/>
         <source>Flip &amp;Horizontally</source>
-        <translation>Snu &amp;horisontalt</translation>
+        <translation>Speilvend &amp;horisontalt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="478"/>
@@ -563,7 +563,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="507"/>
         <source>Flip &amp;Vertically</source>
-        <translation>Snu &amp;vertikalt</translation>
+        <translation>Speilvend &amp;vertikalt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="510"/>
@@ -689,7 +689,7 @@ i redigeringsmodus.</translation>
         <location filename="../mainwindow.ui" line="681"/>
         <location filename="../mainwindow.ui" line="684"/>
         <source>Menubar</source>
-        <translation>Menyfelt</translation>
+        <translation>Menylinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="687"/>
@@ -879,7 +879,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="53"/>
         <source>Thumbnailer file size limit:</source>
-        <translation type="unfinished">Størrelsesgrense for miniatyrbilder:</translation>
+        <translation>Filstørrelsesgrense for miniatyrbilder:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="151"/>
@@ -949,7 +949,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
         <source>Show menubar by default</source>
-        <translation>Vis menyfelt som forvalg</translation>
+        <translation>Vis menylinje som standard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="127"/>
