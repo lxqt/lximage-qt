@@ -978,7 +978,13 @@ void MainWindow::updateUI(bool multiFrame) {
   }
   else {
     title = tr("[*]Image Viewer");
-    ui.statusBar->setText();
+    if(ui.view->image().isNull()) {
+      ui.statusBar->setText();
+    }
+    else {
+      ui.statusBar->setText(QStringLiteral("%1×%2").arg(ui.view->image().width())
+                                                   .arg(ui.view->image().height()));
+    }
   }
   setWindowTitle(title);
   setWindowModified(imageModified_);

@@ -97,8 +97,8 @@ void StatusBar::setText(const QString& sizeTxt, const QString& pathTxt) {
   pathLabel0_->setVisible(!pathTxt.isEmpty());
   pathLabel_->setVisible(!pathTxt.isEmpty());
 
-  // also hide the permanent label when there is no size and path text
-  if(sizeTxt.isEmpty() && pathTxt.isEmpty()) {
+  // also hide the permanent label when there is no size or path text
+  if(sizeTxt.isEmpty() || pathTxt.isEmpty()) {
     permanentLabel_->clear();
     permanentLabel_->setVisible(false);
   }
