@@ -330,7 +330,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zuletzt verwendete Dateien</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
@@ -808,7 +808,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Rechts</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
@@ -818,7 +818,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Links</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
