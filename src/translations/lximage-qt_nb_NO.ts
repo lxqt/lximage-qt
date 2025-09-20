@@ -16,12 +16,12 @@
     <message>
         <location filename="../shortcuts.ui" line="34"/>
         <source>Shortcut</source>
-        <translation type="unfinished">Snarvei</translation>
+        <translation>Snarvei</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation type="unfinished">Handling</translation>
+        <translation>Handling</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="310"/>
         <source>Author: </source>
-        <translation type="unfinished">Utvikler: </translation>
+        <translation>Utvikler: </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="539"/>
@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 sider</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../mrumenu.cpp" line="49"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Slett</translation>
+        <translation>&amp;Tøm</translation>
     </message>
 </context>
 <context>
@@ -253,7 +253,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="217"/>
         <source>Left</source>
-        <translation type="unfinished">Venstre</translation>
+        <translation>Venstre</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="343"/>
@@ -346,7 +346,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nylige filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -756,7 +756,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="768"/>
         <source>By File Name</source>
-        <translation type="unfinished">Etter filnavn</translation>
+        <translation>Etter filnavn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="776"/>
@@ -776,22 +776,22 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>By Creation Time</source>
-        <translation>Etter opprettelsesdato</translation>
+        <translation>Etter opprettelsestid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
         <source>By File &amp;Size</source>
-        <translation type="unfinished">Etter fil&amp;størrelse</translation>
+        <translation>Etter fil&amp;størrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="801"/>
         <source>By File Size</source>
-        <translation type="unfinished">Etter filstørrelse</translation>
+        <translation>Etter filstørrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="809"/>
         <source>By File &amp;Type</source>
-        <translation type="unfinished">Etter fil&amp;type</translation>
+        <translation>Etter fil&amp;type</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="812"/>
@@ -801,7 +801,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Neste side</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
@@ -811,7 +811,7 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Forrige side</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
@@ -821,12 +821,12 @@ i redigeringsmodus.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Første side</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Siste side</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
