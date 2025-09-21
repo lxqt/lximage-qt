@@ -528,7 +528,7 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;New Window</source>
-        <translation>Cửa sổ mới (&amp;N)</translation>
+        <translation>Cửa Sổ Mới (&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>

@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 páginas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -330,7 +330,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivos &amp;Recentes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
@@ -802,7 +802,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Próxima página</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
@@ -812,7 +812,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Página anterior</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
@@ -822,17 +822,17 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Primeira página</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Última página</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Fundo sólido</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -973,7 +973,7 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation>Padrão de cores:</translation>
+        <translation>Padrão de Cores:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
@@ -993,12 +993,12 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation>Adobe RGB</translation>
+        <translation>RGB da Adobe</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation>DisplayP3 (telas com larga gama de cores)</translation>
+        <translation>DisplayP3 (monitores com wide-gamut)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
