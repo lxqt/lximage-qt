@@ -37,6 +37,7 @@ Application::Application(int& argc, char** argv):
   libFm(),
   windowCount_(0) {
   setApplicationVersion(QStringLiteral(LXIMAGE_VERSION));
+  setWindowIcon(QIcon::fromTheme(QStringLiteral("lximage-qt")));
 }
 
 bool Application::init(int argc, char** argv) {
