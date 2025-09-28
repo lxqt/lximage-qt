@@ -36,10 +36,10 @@ ResizeImageDialog::ResizeImageDialog(QWidget* parent):
   updateFromRatio_ = false;
   updateFromSizeOrPercentage_ = false;
 
-  connect(ui.widthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &ResizeImageDialog::onWidthChanged);
-  connect(ui.heightSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &ResizeImageDialog::onHeightChanged);
-  connect(ui.widthPercentSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ResizeImageDialog::onWidthPercentChanged);
-  connect(ui.heightPercentSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ResizeImageDialog::onHeightPercentChanged);
+  connect(ui.widthSpinBox, &QSpinBox::valueChanged, this, &ResizeImageDialog::onWidthChanged);
+  connect(ui.heightSpinBox, &QSpinBox::valueChanged, this, &ResizeImageDialog::onHeightChanged);
+  connect(ui.widthPercentSpinBox, &QDoubleSpinBox::valueChanged, this, &ResizeImageDialog::onWidthPercentChanged);
+  connect(ui.heightPercentSpinBox, &QDoubleSpinBox::valueChanged, this, &ResizeImageDialog::onHeightPercentChanged);
   connect(ui.keepAspectCheckBox, &QCheckBox::toggled, this, &ResizeImageDialog::onKeepAspectChanged);
 }
 

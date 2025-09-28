@@ -93,7 +93,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
 
   oldColorSpace_ = qBound(0, settings.colorSpace(), 5);
   ui.colorSpaceComboBox->setCurrentIndex(oldColorSpace_);
-  connect(ui.colorSpaceComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int index) {
+  connect(ui.colorSpaceComboBox, &QComboBox::currentIndexChanged, this, [](int index) {
     Settings& settings = static_cast<Application*>(qApp)->settings();
     settings.setColorSpace(index);
   });
