@@ -1299,7 +1299,7 @@ void MainWindow::setShortcuts(bool update) {
 void MainWindow::on_actionPrint_triggered() {
   // QPrinter printer(QPrinter::HighResolution);
   QPrinter printer;
-  QPrintDialog dlg(&printer);
+  QPrintDialog dlg(&printer, this);
   if(dlg.exec() == QDialog::Accepted) {
     QPainter painter;
     painter.begin(&printer);
