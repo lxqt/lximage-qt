@@ -101,7 +101,7 @@
     <message>
         <location filename="../application.cpp" line="113"/>
         <source>DIR</source>
-        <translation>ADRESÁŘ</translation>
+        <translation>SLOŽKA</translation>
     </message>
     <message>
         <location filename="../application.cpp" line="113"/>
@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 snímků</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -284,7 +284,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../statusbar.cpp" line="73"/>
         <source>Path:</source>
-        <translation>Cesta:</translation>
+        <translation>Popis umístění:</translation>
     </message>
 </context>
 <context>
@@ -341,12 +341,12 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>Otevřít &amp;s...</translation>
+        <translation>Otevřít &amp;s…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedávné soubo&amp;ry</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -371,7 +371,7 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
         <source>&amp;Reload File</source>
-        <translation>Nahrát soubo&amp;r znovu</translation>
+        <translation>Načíst soubo&amp;r znovu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="263"/>
@@ -801,37 +801,37 @@ v režimu úprav.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Následující snímek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl + Šipka pravo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Předchozí snímek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl + Šipka vlevo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>První snímek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Poslední snímek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednobarevné pozadí</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -966,8 +966,8 @@ v režimu úprav.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation>Může pracovat pouze s obrázky, které mají platné barevné prostory.
-Chcete-li vidět efekt, nahrajte nynější obrázek znovu.</translation>
+        <translation>Může se stát, že bude fungovat pouze s obrázky, které mají platné barevné
+prostory. Pokud chcete efekt uvidět, znovunačtěte stávající obrázek.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
@@ -1007,7 +1007,7 @@ Chcete-li vidět efekt, nahrajte nynější obrázek znovu.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednobarevné pozadí coby výchozí</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
