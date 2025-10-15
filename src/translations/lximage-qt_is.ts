@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="96"/>
+        <location filename="../application.cpp" line="97"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Byrja með fullan skjá (getur verið gott með mósaík gluggastjórum)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="104"/>
+        <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Taka Skjámynd (úrelt, notið screengrab í staðinn)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>DIR</source>
         <translation>MAPPA</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Taka skjámynd og vista hana í möppu án þess að sýna hana á skjánum (úrelt, notið screengrab í staðinn)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="119"/>
+        <location filename="../application.cpp" line="120"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[Skrá1,Skrá2,...]</translation>
     </message>
@@ -213,12 +213,12 @@
         <translation>[*]Myndskoðari</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1388"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>Thumbnails</source>
         <translation>Smámyndir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1483"/>
+        <location filename="../mainwindow.cpp" line="1492"/>
         <source>EXIF Data</source>
         <translation>EXIF-lýsigögn</translation>
     </message>
@@ -1043,7 +1043,7 @@ Endursýndu núverandi mynd til að skoða áhrifin.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1098"/>
         <source>Error</source>
         <translation>Villa</translation>
     </message>

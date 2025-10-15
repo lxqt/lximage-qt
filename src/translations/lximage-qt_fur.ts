@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="96"/>
+        <location filename="../application.cpp" line="97"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Invie a plen visôr (al podarès tornâ util tai gjestôrs di barcons tiling, vâl a dî a mosaic)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="104"/>
+        <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Cature une videade (obsolet; dopre screengrab al so puest)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>DIR</source>
         <translation>DIR</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Cature une videade e salvile te cartele cence mostrâ la interface grafiche (obsolet, dopre screengrab al so puest)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="119"/>
+        <location filename="../application.cpp" line="120"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[FILE1, FILE2,...]</translation>
     </message>
@@ -213,12 +213,12 @@
         <translation>[*]Visualizadôr imagjins</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1388"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>Thumbnails</source>
         <translation>Miniaturis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1483"/>
+        <location filename="../mainwindow.cpp" line="1492"/>
         <source>EXIF Data</source>
         <translation>Dâts EXIF</translation>
     </message>
@@ -1043,7 +1043,7 @@ Torne cjame la imagjin corinte par viodi l&apos;efiet.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1098"/>
         <source>Error</source>
         <translation>Erôr</translation>
     </message>

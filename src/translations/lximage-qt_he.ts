@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="96"/>
+        <location filename="../application.cpp" line="97"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>פתיחה במסך מלא (שימושי עם מנהלי חלונות מרצפים)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="104"/>
+        <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>צילום המסך (לא תקף עוד, נא להשתמש ב־screengrab במקום)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>DIR</source>
         <translation>DIR</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>צילום המסך ושמירת הצילום לתיקייה מבלי להציג את המנשק הגרפי (לא תקף עוד, נא להשתמש ב־screengrab במקום)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="119"/>
+        <location filename="../application.cpp" line="120"/>
         <source>[FILE1, FILE2,...]</source>
         <translation></translation>
     </message>
@@ -213,12 +213,12 @@
         <translation>[*]מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1388"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>Thumbnails</source>
         <translation>תמונות ממוזערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1483"/>
+        <location filename="../mainwindow.cpp" line="1492"/>
         <source>EXIF Data</source>
         <translation>נתוני EXIF</translation>
     </message>
@@ -1043,7 +1043,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1098"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>

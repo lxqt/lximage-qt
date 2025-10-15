@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="96"/>
+        <location filename="../application.cpp" line="97"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Puloguramu etandikenga nga ebunye olutimbe (eno enkola esobola okuyamba mu bika bya biteekateek&apos;awakolerwa ebimu)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="104"/>
+        <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Kwata kifaananyi ky&apos;ebiri ku lutimbe (kino kidibizibwa, kozesamu screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>DIR</source>
         <translation>TEREKERO</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Kano akawayiro kagireetera okukwata kifaananyi ky&apos;ebiri ku lutimbe nga tereese ddirisa lya yo (kino kidibizibwa, mu kifo kya kyo kozesa puloguramu screengrab)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="119"/>
+        <location filename="../application.cpp" line="120"/>
         <source>[FILE1, FILE2,...]</source>
         <translation>[FAYIRO1,FAYIRO2,...]</translation>
     </message>
@@ -213,12 +213,12 @@
         <translation>[*]Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1388"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>Thumbnails</source>
         <translation>Obulozaako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1483"/>
+        <location filename="../mainwindow.cpp" line="1492"/>
         <source>EXIF Data</source>
         <translation>Ebikwata ku fayiro ebya EXIF</translation>
     </message>
@@ -1046,7 +1046,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1098"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>

@@ -89,27 +89,27 @@
 <context>
     <name>LxImage::Application</name>
     <message>
-        <location filename="../application.cpp" line="96"/>
+        <location filename="../application.cpp" line="97"/>
         <source>Start in fullscreen (can be useful with tiling window managers)</source>
         <translation>Start i fullskjermsvisning (kan være nyttig med flisbaserte vindushåndterere)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="104"/>
+        <location filename="../application.cpp" line="105"/>
         <source>Take a screenshot (deprecated, please use screengrab instead)</source>
         <translation>Utfør skjermavbildning (foreldet, bruk screengrab istedenfor)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>DIR</source>
         <translation>MAPPE</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="113"/>
+        <location filename="../application.cpp" line="114"/>
         <source>Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)</source>
         <translation>Utfør en skjermavbildning og lagre den til mappen uten å vise grensesnittet (foreldet, bruk screengrab istedenfor)</translation>
     </message>
     <message>
-        <location filename="../application.cpp" line="119"/>
+        <location filename="../application.cpp" line="120"/>
         <source>[FILE1, FILE2,...]</source>
         <translation></translation>
     </message>
@@ -213,12 +213,12 @@
         <translation>[*] Bildeviser</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1388"/>
+        <location filename="../mainwindow.cpp" line="1397"/>
         <source>Thumbnails</source>
         <translation>Minibilder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1483"/>
+        <location filename="../mainwindow.cpp" line="1492"/>
         <source>EXIF Data</source>
         <translation>EXIF-data</translation>
     </message>
@@ -1042,7 +1042,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1089"/>
+        <location filename="../mainwindow.cpp" line="1098"/>
         <source>Error</source>
         <translation>Feil</translation>
     </message>
