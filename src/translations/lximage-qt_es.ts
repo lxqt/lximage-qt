@@ -205,7 +205,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="908"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2&#x202f;×&#x202f;%3). Visor de imágenes</translation>
+        <translation>[*]%1 (%2 × %3). Visor de imágenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="980"/>
@@ -330,7 +330,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Archivos recientes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
@@ -806,7 +806,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Derecha</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
@@ -816,7 +816,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Izquierda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
@@ -831,7 +831,7 @@ un atajo en el modo de edición.</translation>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Fondo sólido</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -1007,7 +1007,7 @@ Recargue la imagen actual para ver los resultados.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Fondo sólido por defecto</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
