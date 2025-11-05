@@ -1,3 +1,18 @@
+lximage-qt-2.3.0 / 2025-11-05
+==============================
+ * Added `document-open-recent` icon to "Recently Opened Files".
+ * Silenced compilation warning about `QImage::mirrored`.
+ * Supported multi-page TIFF images.
+ * Supported animated WebP images.
+ * Fixed copying annotations to clipboard.
+ * Supported non-solid (tiled) background.
+ * Fixed showing of ampersand in recent files menu.
+ * Show dimensions of pasted image on status-bar.
+ * Silenced a Clang warning.
+ * Set window icon.
+ * Removed unnecessary QOverloads.
+ * Gave parent window to print dialog.
+
 lximage-qt-2.2.0 / 2025-04-17
 ==============================
  * Used the device pixel ratio of the window on Wayland.
