@@ -1675,6 +1675,16 @@ void MainWindow::onFileDropped(const QString path) {
 }
 
 void MainWindow::fileMenuAboutToShow() {
+  // Enable these actions only if an image is opened
+  bool hasImage = (currentFile_ != nullptr);
+  ui.actionSave->setEnabled(hasImage);
+  ui.actionSaveAs->setEnabled(hasImage);
+  ui.actionReload->setEnabled(hasImage);
+  ui.actionUpload->setEnabled(hasImage);
+  ui.actionDelete->setEnabled(hasImage);
+  ui.actionFileProperties->setEnabled(hasImage);
+  ui.actionPrint->setEnabled(hasImage);
+
   // the "Open With..." submenu of Fm::FileMenu is shown
   // only if there is a file with a valid mime type
   if(currentIndex_.isValid()) {
