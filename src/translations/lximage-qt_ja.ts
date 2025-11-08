@@ -806,7 +806,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation>Ctrl+右</translation>
+        <translation>Ctrl+Right</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
@@ -816,7 +816,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation>Ctrl+左</translation>
+        <translation>Ctrl+Left</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
