@@ -282,6 +282,12 @@ Reload current image to see the effect.</string>
          <property name="selectionMode">
           <enum>QAbstractItemView::SingleSelection</enum>
          </property>
+         <property name="verticalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
+         <property name="horizontalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
          <attribute name="verticalHeaderVisible">
           <bool>false</bool>
          </attribute>
