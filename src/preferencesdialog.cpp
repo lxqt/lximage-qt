@@ -98,8 +98,13 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
     settings.setColorSpace(index);
   });
 
+  connect(ui.thumbnailBox, &QCheckBox::toggled, this, [this] () {
+    ui.thumbnailsPositionComboBox->setEnabled(ui.thumbnailBox->isChecked());
+  });
+
   ui.exifDataBox->setChecked(settings.showExifData());
   ui.thumbnailBox->setChecked(settings.showThumbnails());
+  ui.thumbnailsPositionComboBox->setEnabled(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
   ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
   initThumbnailSizes(settings);
