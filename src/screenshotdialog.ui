@@ -114,48 +114,18 @@
    <signal>accepted()</signal>
    <receiver>ScreenshotDialog</receiver>
    <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>257</x>
-     <y>231</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
    <receiver>ScreenshotDialog</receiver>
    <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>291</x>
-     <y>231</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>currentWindow</sender>
    <signal>toggled(bool)</signal>
    <receiver>includeFrame</receiver>
    <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>87</x>
-     <y>82</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>91</x>
-     <y>122</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
