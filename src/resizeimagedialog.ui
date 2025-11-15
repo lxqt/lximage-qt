@@ -201,48 +201,18 @@
    <signal>toggled(bool)</signal>
    <receiver>heightPercentSpinBox</receiver>
    <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>177</x>
-     <y>139</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>264</x>
-     <y>119</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
    <receiver>ResizeImageDialog</receiver>
    <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>140</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>154</x>
-     <y>78</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
    <receiver>ResizeImageDialog</receiver>
    <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>140</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>154</x>
-     <y>78</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
