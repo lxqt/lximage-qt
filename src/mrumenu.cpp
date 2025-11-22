@@ -19,6 +19,8 @@
  *
  */
 
+#include <algorithm>
+
 #include <QMutableListIterator>
 
 #include "application.h"
@@ -31,7 +33,7 @@ MruMenu::MruMenu(QWidget *parent)
     : QMenu(parent)
 {
     auto settings = static_cast<Application*>(qApp)->settings();
-    mMaxItems = qMin(qMax(settings.maxRecentFiles(), 0), 100);
+    mMaxItems = std::clamp(settings.maxRecentFiles(), 0, 100);
     mFilenames = settings.recentlyOpenedFiles();
     while (mFilenames.count() > mMaxItems) { // the config file may have been incorrectly edited
         mFilenames.removeLast();
@@ -84,7 +86,7 @@ void MruMenu::addItem(const QString &filename)
 }
 
 void MruMenu::setMaxItems(int m) {
-    m = qMin(qMax(m, 0), 100);
+    m = std::clamp(m, 0, 100);
     if (m == mMaxItems) {
         return;
     }
