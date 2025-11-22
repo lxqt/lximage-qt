@@ -19,6 +19,7 @@
  */
 
 #include "imageview.h"
+#include <cmath>
 #include <QWheelEvent>
 #include <QPaintEvent>
 #include <QPainter>
@@ -33,7 +34,6 @@
 #include <QPainterPath>
 #include <QGuiApplication>
 #include <QWindow>
-#include <QtMath>
 
 #define CURSOR_HIDE_DELY 3000
 #define GRAY 127
@@ -101,7 +101,7 @@ void ImageView::onFileDropped(const QString file) {
 
 void ImageView::wheelEvent(QWheelEvent* event) {
   QPoint angleDelta = event->angleDelta();
-  Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+  Qt::Orientation orient = (std::abs(angleDelta.x()) > std::abs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
   int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
   // Ctrl key is pressed
   if(event->modifiers() & Qt::ControlModifier) {
@@ -184,7 +184,7 @@ void ImageView::mouseReleaseEvent(QMouseEvent* event) {
       textRect.moveTo(endPoint);
 
       // Calculate the dimensions of the circle
-      qreal radius = qSqrt(textRect.width() * textRect.width() +
+      qreal radius = std::sqrt(textRect.width() * textRect.width() +
                            textRect.height() * textRect.height()) / 2;
       QRectF circleRect(textRect.left() + (textRect.width() / 2 - radius),
                         textRect.top() + (textRect.height() / 2 - radius),
@@ -896,16 +896,16 @@ void ImageView::drawArrow(QPainter &painter,
 
   // Calculate the angle of the line
   QPoint delta = end - start;
-  qreal angle = qAtan2(-delta.y(), delta.x()) - M_PI / 2;
+  qreal angle = std::atan2(-delta.y(), delta.x()) - M_PI / 2;
 
   // Calculate the points of the lines that converge at the tip
   QPoint tip1(
-    static_cast<int>(qSin(angle + tipAngle) * tipLen),
-    static_cast<int>(qCos(angle + tipAngle) * tipLen)
+    static_cast<int>(std::sin(angle + tipAngle) * tipLen),
+    static_cast<int>(std::cos(angle + tipAngle) * tipLen)
   );
   QPoint tip2(
-    static_cast<int>(qSin(angle - tipAngle) * tipLen),
-    static_cast<int>(qCos(angle - tipAngle) * tipLen)
+    static_cast<int>(std::sin(angle - tipAngle) * tipLen),
+    static_cast<int>(std::cos(angle - tipAngle) * tipLen)
   );
 
   // Draw the two lines in the image

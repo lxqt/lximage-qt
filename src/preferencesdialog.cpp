@@ -20,6 +20,7 @@
 
 #include "preferencesdialog.h"
 #include "application.h"
+#include <algorithm>
 #include <QDir>
 #include <QStringBuilder>
 #include <QKeyEvent>
@@ -91,7 +92,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.smoothOnZoomBox->setChecked(settings.smoothOnZoom());
   ui.useTrashBox->setChecked(settings.useTrash());
 
-  oldColorSpace_ = qBound(0, settings.colorSpace(), 5);
+  oldColorSpace_ = std::clamp(settings.colorSpace(), 0, 5);
   ui.colorSpaceComboBox->setCurrentIndex(oldColorSpace_);
   connect(ui.colorSpaceComboBox, &QComboBox::currentIndexChanged, this, [](int index) {
     Settings& settings = static_cast<Application*>(qApp)->settings();
@@ -101,7 +102,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.exifDataBox->setChecked(settings.showExifData());
   ui.thumbnailBox->setChecked(settings.showThumbnails());
   // the max. thumbnail size spinbox is in MiB
-  ui.thumbnailSpin->setValue(qBound(0, settings.maxThumbnailFileSize() / 1024, 1024));
+  ui.thumbnailSpin->setValue(std::clamp(settings.maxThumbnailFileSize() / 1024, 0, 1024));
   initThumbnailSizes(settings);
   initThumbnailsPositions(settings);
 
