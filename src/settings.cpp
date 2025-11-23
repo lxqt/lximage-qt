@@ -19,6 +19,7 @@
  */
 
 #include "settings.h"
+#include <cmath>
 #include <QSettings>
 #include <QIcon>
 #include <QKeySequence>
@@ -106,7 +107,7 @@ bool Settings::load() {
   settings.beginGroup(QStringLiteral("Thumbnail"));
   showThumbnails_ = settings.value(QStringLiteral("ShowThumbnails"), false).toBool();
   thumbnailsPositionFromString(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
-  setMaxThumbnailFileSize(qMax(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
+  setMaxThumbnailFileSize(std::max(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
   setThumbnailSize(settings.value(QStringLiteral("ThumbnailSize"), 64).toInt());
   settings.endGroup();
 

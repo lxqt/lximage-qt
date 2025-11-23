@@ -19,6 +19,7 @@
  */
 
 #include "mainwindow.h"
+#include <cmath>
 #include <QActionGroup>
 #include <QDir>
 #include <QFileInfo>
@@ -826,7 +827,7 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
         QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
         if(wheelEvent->modifiers() == 0) {
           QPoint angleDelta = wheelEvent->angleDelta();
-          Qt::Orientation orient = (qAbs(angleDelta.x()) > qAbs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
+          Qt::Orientation orient = (std::abs(angleDelta.x()) > std::abs(angleDelta.y()) ? Qt::Horizontal : Qt::Vertical);
           int delta = (orient == Qt::Horizontal ? angleDelta.x() : angleDelta.y());
           // NOTE: Each turn of a mouse wheel can change the image without problem but
           // touchpads trigger wheel events with much smaller angle deltas. Therefore,
