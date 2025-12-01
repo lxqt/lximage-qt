@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 Seiten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -803,7 +803,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächste Seite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
@@ -813,7 +813,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorherige Seite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
@@ -823,12 +823,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Erste Seite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Letzte Seite</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
