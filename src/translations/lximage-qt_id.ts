@@ -190,7 +190,7 @@
         <location filename="../mainwindow.cpp" line="742"/>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 Bingkai</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="896"/>
@@ -330,7 +330,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Berkas Terkini</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
@@ -805,32 +805,32 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Bingkai Selanjutnya</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Kanan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Bingkai Sebelumnya</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Kiri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Bingkai Pertama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Bingkai Terakhir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
@@ -975,12 +975,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
         <source>Color space:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruang warna:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="195"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Tak ada</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
@@ -995,7 +995,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
