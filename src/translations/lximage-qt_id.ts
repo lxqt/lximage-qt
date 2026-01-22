@@ -740,7 +740,7 @@ dalam mode pengeditan.</translation>
         <location filename="../mainwindow.ui" line="742"/>
         <location filename="../mainwindow.ui" line="745"/>
         <source>Rename</source>
-        <translation>Ganti nama</translation>
+        <translation>Ganti Nama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="748"/>
@@ -775,7 +775,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
         <source>By C&amp;reation Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Berdasarkan Waktu Pem&amp;buatan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
@@ -835,7 +835,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Latar Belakang Solid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -913,7 +913,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Tampilkan keterangan Bilah alat sebagai standar</translation>
+        <translation>Tampilkan bilah alat anotasi secara bawaan</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
@@ -970,7 +970,8 @@ dalam mode pengeditan.</translation>
         <location filename="../preferencesdialog.ui" line="190"/>
         <source>May work only with images which have valid color spaces.
 Reload current image to see the effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mungkin hanya berfungsi dengan gambar yang memiliki ruang warna yang valid.
+Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="183"/>
@@ -985,12 +986,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="200"/>
         <source>sRGB (supported by most monitors)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB (didukung oleh sebagian besar monitor)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="205"/>
         <source>Linear sRGB (linear gamma)</source>
-        <translation type="unfinished"></translation>
+        <translation>sRGB Linear (gamma linear)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
@@ -1000,17 +1001,17 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
         <source>DisplayP3 (wide-gamut screens)</source>
-        <translation type="unfinished"></translation>
+        <translation>DisplayP3 (layar gamut lebar)</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="220"/>
         <source>ProPhotoRgb</source>
-        <translation type="unfinished"></translation>
+        <translation>ProPhotoRgb</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Latar belakang solid secara bawaan</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
@@ -1131,7 +1132,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="67"/>
         <source>Include mouse cursor</source>
-        <translation>Sertakan kursor tetikus</translation>
+        <translation>Sertakan kursor mouse</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
