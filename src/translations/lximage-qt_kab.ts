@@ -895,12 +895,12 @@ deg uskar n teẓrigt.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Sken tinfulin n umnaṛ s wudem amezwer</translation>
+        <translation>Sken tinfulin n udukkan s wudem amezwer</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>Sken isefka n umnaṛ s wudem amezwer</translation>
+        <translation>Sken isefka n udukkan s wudem amezwer</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
