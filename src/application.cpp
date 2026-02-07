@@ -102,7 +102,7 @@ bool Application::parseCommandLineArgs() {
 
   QCommandLineOption screenshotOption(
     QStringList() << QStringLiteral("s") << QStringLiteral("screenshot"),
-    tr("Take a screenshot (deprecated, please use screengrab instead)")
+    tr("Take a screenshot")
   );
   if(isX11) {
     parser.addOption(screenshotOption);
@@ -111,7 +111,7 @@ bool Application::parseCommandLineArgs() {
 
   QCommandLineOption screenshotOptionDir(
     QStringList() << QStringLiteral("d") << QStringLiteral("dirscreenshot"),
-    tr("Take a screenshot and save it to the directory without showing the GUI (deprecated, please use screengrab instead)"), tr("DIR")
+    tr("Take a screenshot and save it to the directory without showing the GUI"), tr("DIR")
   );
   if(isX11) {
     parser.addOption(screenshotOptionDir);
