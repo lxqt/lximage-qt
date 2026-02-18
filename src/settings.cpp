@@ -57,7 +57,12 @@ Settings::Settings():
   smoothOnZoom_(true),
   useTrash_(true),
   colorSpace_(1),
-  sorting_(Fm::FolderModel::ColumnFileName) {
+  sorting_(Fm::FolderModel::ColumnFileName),
+  printerName_(""),
+  pageSize_(QPageSize::A4),
+  orientation_(QPageLayout::Portrait),
+  printFullPage_(true),
+  colorMode_(true) {
 }
 
 Settings::~Settings() {
@@ -109,6 +114,14 @@ bool Settings::load() {
   thumbnailsPositionFromString(settings.value(QStringLiteral("ThumbnailsPosition")).toString());
   setMaxThumbnailFileSize(std::max(settings.value(QStringLiteral("MaxThumbnailFileSize"), 4096).toInt(), 1024));
   setThumbnailSize(settings.value(QStringLiteral("ThumbnailSize"), 64).toInt());
+  settings.endGroup();
+
+  settings.beginGroup(QStringLiteral("Print"));
+  printerName_ = settings.value(QStringLiteral("Name")).toString();
+  pageSize_ = static_cast<QPageSize::PageSizeId>(settings.value(QStringLiteral("PageSize"), QPageSize::A4).toInt());
+  orientation_ = static_cast<QPageLayout::Orientation>(settings.value(QStringLiteral("Orientation"), QPageLayout::Portrait).toInt());
+  printFullPage_ = settings.value(QStringLiteral("FullPage"), true).toBool();
+  colorMode_ = settings.value(QStringLiteral("ColorMode"), true).toBool();
   settings.endGroup();
 
   return true;
@@ -163,6 +176,14 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ThumbnailsPosition"), thumbnailsPositionToString());
   settings.setValue(QStringLiteral("MaxThumbnailFileSize"), maxThumbnailFileSize());
   settings.setValue(QStringLiteral("ThumbnailSize"), thumbnailSize_);
+  settings.endGroup();
+
+  settings.beginGroup(QStringLiteral("Print"));
+  settings.setValue(QStringLiteral("Name"), printerName_);
+  settings.setValue(QStringLiteral("PageSize"), pageSize_);
+  settings.setValue(QStringLiteral("Orientation"), orientation_);
+  settings.setValue(QStringLiteral("FullPage"), printFullPage_);
+  settings.setValue(QStringLiteral("ColorMode"), colorMode_);
   settings.endGroup();
 
   return true;
@@ -255,4 +276,3 @@ static Fm::FolderModel::ColumnId sortColumnFromString(const QString& str) {
   }
   return ret;
 }
-

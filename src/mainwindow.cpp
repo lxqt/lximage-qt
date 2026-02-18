@@ -1298,10 +1298,26 @@ void MainWindow::setShortcuts(bool update) {
 }
 
 void MainWindow::on_actionPrint_triggered() {
-  // QPrinter printer(QPrinter::HighResolution);
+  Application* app = static_cast<Application*>(qApp);
+  Settings& settings = app->settings();
+
   QPrinter printer;
+  if(!settings.printerName().isEmpty()) {
+    printer.setPrinterName(settings.printerName());
+    printer.setPageSize(QPageSize(settings.pageSize()));
+    printer.setPageOrientation(settings.orientation());
+    printer.setFullPage(settings.printFullPage());
+    printer.setColorMode(settings.colorMode() ? QPrinter::Color : QPrinter::GrayScale);
+  }
+
   QPrintDialog dlg(&printer, this);
   if(dlg.exec() == QDialog::Accepted) {
+    settings.setPrinterName(printer.printerName());
+    settings.setPageSize(printer.pageLayout().pageSize().id());
+    settings.setOrientation(printer.pageLayout().orientation());
+    settings.setPrintFullPage(printer.fullPage());
+    settings.setColorMode(printer.colorMode() == QPrinter::Color);
+
     QPainter painter;
     painter.begin(&printer);
 

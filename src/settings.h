@@ -27,6 +27,8 @@
 #include <QColor>
 #include <QSize>
 #include <libfm-qt6/core/thumbnailjob.h>
+#include <QPageSize>
+#include <QPageLayout>
 #include <libfm-qt6/foldermodel.h>
 
 namespace LxImage {
@@ -283,6 +285,42 @@ public:
   Fm::FolderModel::ColumnId sorting() const {
     return sorting_;
   }
+
+  QString printerName() const {
+    return printerName_;
+  }
+  void setPrinterName(const QString &printerName) {
+    printerName_ = printerName;
+  }
+
+  QPageSize::PageSizeId pageSize() const {
+    return pageSize_;
+  }
+  void setPageSize(QPageSize::PageSizeId pageSize) {
+    pageSize_ = pageSize;
+  }
+
+  QPageLayout::Orientation orientation() const {
+    return orientation_;
+  }
+  void setOrientation(QPageLayout::Orientation orientation) {
+    orientation_ = orientation;
+  }
+
+  bool printFullPage() const {
+    return printFullPage_;
+  }
+  void setPrintFullPage(bool printFullPage) {
+    printFullPage_ = printFullPage;
+  }
+
+  bool colorMode() const {
+    return colorMode_;
+  }
+  void setColorMode(bool colorMode) {
+    colorMode_ = colorMode;
+  }
+
   void setSorting(Fm::FolderModel::ColumnId sorting) {
     sorting_ = sorting;
   }
@@ -328,6 +366,12 @@ private:
   QStringList removedActions_;
 
   Fm::FolderModel::ColumnId sorting_;
+
+  QString printerName_;
+  QPageSize::PageSizeId pageSize_;
+  QPageLayout::Orientation orientation_;
+  bool printFullPage_;
+  bool colorMode_;
 };
 
 }
