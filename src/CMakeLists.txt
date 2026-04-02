@@ -29,8 +29,6 @@ set(lximage-qt_SRCS
 
     upload/imgbbprovider.cpp
     upload/imgbbupload.cpp
-    upload/imgurprovider.cpp
-    upload/imgurupload.cpp
     upload/provider.cpp
     upload/upload.cpp
     upload/uploaddialog.cpp

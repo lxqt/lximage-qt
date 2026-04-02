@@ -42,9 +42,7 @@ UploadDialog::UploadDialog(QWidget *parent, const QString &filename)
     ui.setupUi(this);
 
     // Populate the list of providers
-    mImgurProvider = new ImgurProvider(this);
     mImgBBProvider = new ImgBBProvider(this);
-    ui.providerComboBox->addItem(tr("Imgur"), QVariant::fromValue(mImgurProvider));
     ui.providerComboBox->addItem(tr("ImgBB"), QVariant::fromValue(mImgBBProvider));
 
     updateUi();
