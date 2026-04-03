@@ -123,102 +123,94 @@
     </message>
 </context>
 <context>
-    <name>LxImage::ImgurUpload</name>
-    <message>
-        <location filename="../upload/imgurupload.cpp" line="47"/>
-        <source>unknown error response</source>
-        <translation>bilinmeyen hata yanıtı</translation>
-    </message>
-</context>
-<context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="300"/>
+        <location filename="../mainwindow.cpp" line="301"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="302"/>
+        <location filename="../mainwindow.cpp" line="303"/>
         <source>A simple and fast image viewer</source>
         <translation>Basit ve hızlı bir resim görüntüleyici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="304"/>
+        <location filename="../mainwindow.cpp" line="305"/>
         <source>Copyright (C) </source>
         <translation>Telif hakkı (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="306"/>
+        <location filename="../mainwindow.cpp" line="307"/>
         <source>LXQt Project</source>
         <translation>LXQt Projesi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="308"/>
+        <location filename="../mainwindow.cpp" line="309"/>
         <source>Development: </source>
         <translation>Geliştirme: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="310"/>
+        <location filename="../mainwindow.cpp" line="311"/>
         <source>Author: </source>
         <translation>Yazar: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="540"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="540"/>
-        <location filename="../mainwindow.cpp" line="575"/>
+        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="576"/>
         <source>Image files (%1)</source>
         <translation>Resim dosyaları (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>Open directory</source>
         <translation>Dizin aç</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="575"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="724"/>
-        <location filename="../mainwindow.cpp" line="730"/>
-        <location filename="../mainwindow.cpp" line="736"/>
-        <location filename="../mainwindow.cpp" line="742"/>
-        <location filename="../mainwindow.cpp" line="917"/>
+        <location filename="../mainwindow.cpp" line="725"/>
+        <location filename="../mainwindow.cpp" line="731"/>
+        <location filename="../mainwindow.cpp" line="737"/>
+        <location filename="../mainwindow.cpp" line="743"/>
+        <location filename="../mainwindow.cpp" line="918"/>
         <source>%1/%2 Frames</source>
         <translation>%1/%2 Çerçeve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="896"/>
+        <location filename="../mainwindow.cpp" line="897"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Yükleniyor...) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="902"/>
+        <location filename="../mainwindow.cpp" line="903"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Yükleme Başarısız Oldu) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="908"/>
+        <location filename="../mainwindow.cpp" line="909"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="980"/>
+        <location filename="../mainwindow.cpp" line="981"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Resim Gösterici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1398"/>
         <source>Thumbnails</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1492"/>
+        <location filename="../mainwindow.cpp" line="1493"/>
         <source>EXIF Data</source>
         <translation>EXIF Verileri</translation>
     </message>
@@ -226,7 +218,7 @@
 <context>
     <name>LxImage::MruMenu</name>
     <message>
-        <location filename="../mrumenu.cpp" line="49"/>
+        <location filename="../mrumenu.cpp" line="51"/>
         <source>&amp;Clear</source>
         <translation>&amp;Temizle</translation>
     </message>
@@ -234,34 +226,34 @@
 <context>
     <name>LxImage::PreferencesDialog</name>
     <message>
-        <location filename="../preferencesdialog.cpp" line="74"/>
+        <location filename="../preferencesdialog.cpp" line="75"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
         <translation>Düzenleme kipinde bir kısayolu temizlemek
 için bir değiştirici tuş kullanın.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="215"/>
+        <location filename="../preferencesdialog.cpp" line="216"/>
         <source>Bottom</source>
         <translation>Dip</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="216"/>
+        <location filename="../preferencesdialog.cpp" line="217"/>
         <source>Top</source>
         <translation>Üst</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="217"/>
+        <location filename="../preferencesdialog.cpp" line="218"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="343"/>
+        <location filename="../preferencesdialog.cpp" line="344"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Uyarı: Belirsiz kısayol algılandı!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="360"/>
+        <location filename="../preferencesdialog.cpp" line="361"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Belirsiz kısayol kabul edilmiyor.&lt;/b&gt;</translation>
     </message>
@@ -290,32 +282,27 @@ için bir değiştirici tuş kullanın.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="47"/>
-        <source>Imgur</source>
-        <translation>Imgur</translation>
-    </message>
-    <message>
-        <location filename="../upload/uploaddialog.cpp" line="48"/>
+        <location filename="../upload/uploaddialog.cpp" line="46"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="136"/>
+        <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
         <translation>Başlat</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="139"/>
+        <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
         <translation>Durdur</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="142"/>
+        <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="149"/>
+        <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
@@ -1043,7 +1030,7 @@ Etkiyi görmek için mevcut resmi yeniden yükleyin.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1098"/>
+        <location filename="../mainwindow.cpp" line="1099"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>

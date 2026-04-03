@@ -123,102 +123,94 @@
     </message>
 </context>
 <context>
-    <name>LxImage::ImgurUpload</name>
-    <message>
-        <location filename="../upload/imgurupload.cpp" line="47"/>
-        <source>unknown error response</source>
-        <translation>wazewo kiremya atategeerese</translation>
-    </message>
-</context>
-<context>
     <name>LxImage::MainWindow</name>
     <message>
-        <location filename="../mainwindow.cpp" line="300"/>
+        <location filename="../mainwindow.cpp" line="301"/>
         <source>About</source>
         <translation>Kwanjula</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="302"/>
+        <location filename="../mainwindow.cpp" line="303"/>
         <source>A simple and fast image viewer</source>
         <translation>Puloguramu ey&apos;okukebera bifaananyi nga nyangu okukozesa era nga ekola mangu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="304"/>
+        <location filename="../mainwindow.cpp" line="305"/>
         <source>Copyright (C) </source>
         <translation>Lukusa lwa kukoppolola (C) </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="306"/>
+        <location filename="../mainwindow.cpp" line="307"/>
         <source>LXQt Project</source>
         <translation>Kawefube wa LXQt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="308"/>
+        <location filename="../mainwindow.cpp" line="309"/>
         <source>Development: </source>
         <translation>Abaawandika: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="310"/>
+        <location filename="../mainwindow.cpp" line="311"/>
         <source>Author: </source>
         <translation>Muwandisi: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="540"/>
         <source>Open File</source>
         <translation>Bikkula fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="540"/>
-        <location filename="../mainwindow.cpp" line="575"/>
+        <location filename="../mainwindow.cpp" line="541"/>
+        <location filename="../mainwindow.cpp" line="576"/>
         <source>Image files (%1)</source>
         <translation>Fayiro ez&apos;ebifaananyi (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="553"/>
+        <location filename="../mainwindow.cpp" line="554"/>
         <source>Open directory</source>
         <translation>Bikkula tterekero</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="575"/>
         <source>Save File</source>
         <translation>Kaza fayiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="724"/>
-        <location filename="../mainwindow.cpp" line="730"/>
-        <location filename="../mainwindow.cpp" line="736"/>
-        <location filename="../mainwindow.cpp" line="742"/>
-        <location filename="../mainwindow.cpp" line="917"/>
+        <location filename="../mainwindow.cpp" line="725"/>
+        <location filename="../mainwindow.cpp" line="731"/>
+        <location filename="../mainwindow.cpp" line="737"/>
+        <location filename="../mainwindow.cpp" line="743"/>
+        <location filename="../mainwindow.cpp" line="918"/>
         <source>%1/%2 Frames</source>
         <translation>Obutimbe %1 ku %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="896"/>
+        <location filename="../mainwindow.cpp" line="897"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
         <translation>[*]%1 (Kubikkula...) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="902"/>
+        <location filename="../mainwindow.cpp" line="903"/>
         <source>[*]%1 (Failed to Load) - Image Viewer</source>
         <translation>[*]%1 (Okubikkula kugaanye) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="908"/>
+        <location filename="../mainwindow.cpp" line="909"/>
         <source>[*]%1 (%2x%3) - Image Viewer</source>
         <translation>[*]%1 (%2x%3) - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="980"/>
+        <location filename="../mainwindow.cpp" line="981"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1397"/>
+        <location filename="../mainwindow.cpp" line="1398"/>
         <source>Thumbnails</source>
         <translation>Obulozaako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1492"/>
+        <location filename="../mainwindow.cpp" line="1493"/>
         <source>EXIF Data</source>
         <translation>Ebikwata ku fayiro ebya EXIF</translation>
     </message>
@@ -226,7 +218,7 @@
 <context>
     <name>LxImage::MruMenu</name>
     <message>
-        <location filename="../mrumenu.cpp" line="49"/>
+        <location filename="../mrumenu.cpp" line="51"/>
         <source>&amp;Clear</source>
         <translation>&amp;Gyawo olukalala</translation>
     </message>
@@ -234,7 +226,7 @@
 <context>
     <name>LxImage::PreferencesDialog</name>
     <message>
-        <location filename="../preferencesdialog.cpp" line="74"/>
+        <location filename="../preferencesdialog.cpp" line="75"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
         <translation>Okugyamu amapeesa agatekedwa wano koona
@@ -242,27 +234,27 @@ we gawandikidwa olyoke onyige limu ku mapeesa
 agafuula enkola ya gannaago.</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="215"/>
+        <location filename="../preferencesdialog.cpp" line="216"/>
         <source>Bottom</source>
         <translation>Wansi</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="216"/>
+        <location filename="../preferencesdialog.cpp" line="217"/>
         <source>Top</source>
         <translation>Waggulu</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="217"/>
+        <location filename="../preferencesdialog.cpp" line="218"/>
         <source>Left</source>
         <translation>Ku kkono</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="343"/>
+        <location filename="../preferencesdialog.cpp" line="344"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
         <translation>&lt;b&gt;Kulabula: Waliwo ekitegekedwa mu mapeesa agagonza emirimu ekitategeereka bulungi!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../preferencesdialog.cpp" line="360"/>
+        <location filename="../preferencesdialog.cpp" line="361"/>
         <source>&lt;b&gt;Ambiguous shortcut not accepted.&lt;/b&gt;</source>
         <translation>&lt;b&gt;Ekitegekedwa mu mapeesa agagonza emirimu ekitategeereka bulungi kigaanidwa.&lt;/b&gt;</translation>
     </message>
@@ -291,32 +283,27 @@ agafuula enkola ya gannaago.</translation>
 <context>
     <name>LxImage::UploadDialog</name>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="47"/>
-        <source>Imgur</source>
-        <translation>Imgur</translation>
-    </message>
-    <message>
-        <location filename="../upload/uploaddialog.cpp" line="48"/>
+        <location filename="../upload/uploaddialog.cpp" line="46"/>
         <source>ImgBB</source>
         <translation>ImgBB</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="136"/>
+        <location filename="../upload/uploaddialog.cpp" line="134"/>
         <source>Start</source>
         <translation>Tandika</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="139"/>
+        <location filename="../upload/uploaddialog.cpp" line="137"/>
         <source>Stop</source>
         <translation>Koma</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="142"/>
+        <location filename="../upload/uploaddialog.cpp" line="140"/>
         <source>Close</source>
         <translation>Mala</translation>
     </message>
     <message>
-        <location filename="../upload/uploaddialog.cpp" line="149"/>
+        <location filename="../upload/uploaddialog.cpp" line="147"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
@@ -1046,7 +1033,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1098"/>
+        <location filename="../mainwindow.cpp" line="1099"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
