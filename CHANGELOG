@@ -1,3 +1,10 @@
+lximage-qt-2.4.0 / 2026-04-20
+==============================
+ * Removed Imgur upload option (credentials needed now).
+ * Cleaned up some ui files.
+ * Modernized code.
+ * Updated translations.
+
 lximage-qt-2.3.0 / 2025-11-05
 ==============================
  * Added `document-open-recent` icon to "Recently Opened Files".
