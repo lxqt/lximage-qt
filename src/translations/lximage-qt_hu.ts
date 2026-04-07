@@ -182,7 +182,7 @@
         <location filename="../mainwindow.cpp" line="743"/>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 oldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
@@ -333,7 +333,7 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>&amp;Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Legutóbbi fájlok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -788,37 +788,37 @@ kombináció törléséhez.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Következő oldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Jobbra nyíl</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Előző oldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+balra nyíl</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Első oldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Utolsó oldal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Egyszínű háttér</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -994,7 +994,7 @@ A hatás megtekintéséhez töltse újra a képet.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezés szerint egyszínű háttér</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
