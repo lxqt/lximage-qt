@@ -845,6 +845,20 @@ bool MainWindow::eventFilter(QObject* watched, QEvent* event) {
         }
         break;
       }
+      case QEvent::MouseButtonPress: {
+        QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
+        switch (mouseEvent->button()) {
+          case Qt::ForwardButton:
+            on_actionNext_triggered(); // next image
+            break;
+          case Qt::BackButton:
+            on_actionPrevious_triggered(); // previous image
+            break;
+          default:
+            break;
+        }
+        break;
+      }
       case QEvent::MouseButtonDblClick: {
         QMouseEvent* mouseEvent = static_cast<QMouseEvent*>(event);
         if(mouseEvent->button() == Qt::LeftButton)
