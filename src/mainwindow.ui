@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
+    <width>933</width>
     <height>425</height>
    </rect>
   </property>
@@ -14,8 +14,7 @@
    <string>Image Viewer</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="lximage-qt">
-    <normaloff>.</normaloff>.</iconset>
+   <iconset theme="lximage-qt"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -37,13 +36,13 @@
     <item>
      <widget class="LxImage::ImageView" name="view">
       <property name="renderHints">
-       <set>QPainter::Antialiasing|QPainter::TextAntialiasing</set>
+       <set>QPainter::RenderHint::Antialiasing|QPainter::RenderHint::TextAntialiasing</set>
       </property>
       <property name="dragMode">
-       <enum>QGraphicsView::ScrollHandDrag</enum>
+       <enum>QGraphicsView::DragMode::ScrollHandDrag</enum>
       </property>
       <property name="transformationAnchor">
-       <enum>QGraphicsView::AnchorUnderMouse</enum>
+       <enum>QGraphicsView::ViewportAnchor::AnchorUnderMouse</enum>
       </property>
      </widget>
     </item>
@@ -54,8 +53,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>543</width>
-     <height>22</height>
+     <width>933</width>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -72,8 +71,7 @@
       <string>&amp;Recent Files</string>
      </property>
      <property name="icon">
-      <iconset theme="document-open-recent">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="document-open-recent"/>
      </property>
     </widget>
     <addaction name="actionNewWindow"/>
@@ -175,11 +173,26 @@
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>2</width>
+     <height>2</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
    <property name="windowTitle">
     <string>Toolbar</string>
    </property>
    <property name="toolButtonStyle">
-    <enum>Qt::ToolButtonIconOnly</enum>
+    <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
    </property>
    <property name="floatable">
     <bool>false</bool>
@@ -194,6 +207,7 @@
    <addaction name="actionNext"/>
    <addaction name="separator"/>
    <addaction name="actionOpenFile"/>
+   <addaction name="actionOpenInNewWindow"/>
    <addaction name="actionReload"/>
    <addaction name="actionSaveAs"/>
    <addaction name="actionCopy"/>
@@ -227,8 +241,7 @@
   </widget>
   <action name="actionAbout">
    <property name="icon">
-    <iconset theme="help-about">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="help-about"/>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -241,8 +254,7 @@
   </action>
   <action name="actionOpenFile">
    <property name="icon">
-    <iconset theme="document-open">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-open"/>
    </property>
    <property name="text">
     <string>&amp;Open…</string>
@@ -253,8 +265,7 @@
   </action>
   <action name="actionReload">
    <property name="icon">
-    <iconset theme="view-refresh">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="view-refresh"/>
    </property>
    <property name="text">
     <string>&amp;Reload File</string>
@@ -265,8 +276,7 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset theme="document-save">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-save"/>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -277,8 +287,7 @@
   </action>
   <action name="actionSaveAs">
    <property name="icon">
-    <iconset theme="document-save-as">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-save-as"/>
    </property>
    <property name="text">
     <string>Save &amp;As</string>
@@ -289,8 +298,7 @@
   </action>
   <action name="actionClose">
    <property name="icon">
-    <iconset theme="application-exit">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="application-exit"/>
    </property>
    <property name="text">
     <string>&amp;Close</string>
@@ -301,8 +309,7 @@
   </action>
   <action name="actionZoomIn">
    <property name="icon">
-    <iconset theme="zoom-in">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="zoom-in"/>
    </property>
    <property name="text">
     <string>Zoom &amp;In</string>
@@ -313,8 +320,7 @@
   </action>
   <action name="actionZoomOut">
    <property name="icon">
-    <iconset theme="zoom-out">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="zoom-out"/>
    </property>
    <property name="text">
     <string>Zoom &amp;Out</string>
@@ -324,9 +330,11 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
-    <iconset theme="edit-copy">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-copy"/>
    </property>
    <property name="text">
     <string>&amp;Copy to Clipboard</string>
@@ -334,8 +342,7 @@
   </action>
   <action name="actionNext">
    <property name="icon">
-    <iconset theme="go-next">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-next"/>
    </property>
    <property name="text">
     <string>Next File</string>
@@ -349,8 +356,7 @@
   </action>
   <action name="actionPrevious">
    <property name="icon">
-    <iconset theme="go-previous">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-previous"/>
    </property>
    <property name="text">
     <string>Previous File</string>
@@ -367,8 +373,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="zoom-original">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="zoom-original"/>
    </property>
    <property name="text">
     <string>Original Size</string>
@@ -382,8 +387,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="zoom-fit-best">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="zoom-fit-best"/>
    </property>
    <property name="text">
     <string>&amp;Fit</string>
@@ -391,8 +395,7 @@
   </action>
   <action name="actionRotateClockwise">
    <property name="icon">
-    <iconset theme="object-rotate-right">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="object-rotate-right"/>
    </property>
    <property name="text">
     <string>&amp;Rotate Clockwise</string>
@@ -403,8 +406,7 @@
   </action>
   <action name="actionRotateCounterclockwise">
    <property name="icon">
-    <iconset theme="object-rotate-left">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="object-rotate-left"/>
    </property>
    <property name="text">
     <string>Rotate &amp;Counterclockwise</string>
@@ -420,8 +422,7 @@
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset theme="document-print">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-print"/>
    </property>
    <property name="text">
     <string>&amp;Print</string>
@@ -432,8 +433,7 @@
   </action>
   <action name="actionFirst">
    <property name="icon">
-    <iconset theme="go-first">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-first"/>
    </property>
    <property name="text">
     <string>First File</string>
@@ -444,8 +444,7 @@
   </action>
   <action name="actionLast">
    <property name="icon">
-    <iconset theme="go-last">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-last"/>
    </property>
    <property name="text">
     <string>Last File</string>
@@ -456,8 +455,7 @@
   </action>
   <action name="actionNewWindow">
    <property name="icon">
-    <iconset theme="document-new">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-new"/>
    </property>
    <property name="text">
     <string>&amp;New Window</string>
@@ -468,8 +466,7 @@
   </action>
   <action name="actionFlipHorizontal">
    <property name="icon">
-    <iconset theme="object-flip-horizontal">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="object-flip-horizontal"/>
    </property>
    <property name="text">
     <string>Flip &amp;Horizontally</string>
@@ -480,8 +477,7 @@
   </action>
   <action name="actionScreenshot">
    <property name="icon">
-    <iconset theme="camera-photo">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="camera-photo"/>
    </property>
    <property name="text">
     <string>Capture Screenshot</string>
@@ -500,8 +496,7 @@
   </action>
   <action name="actionFlipVertical">
    <property name="icon">
-    <iconset theme="object-flip-vertical">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="object-flip-vertical"/>
    </property>
    <property name="text">
     <string>Flip &amp;Vertically</string>
@@ -512,8 +507,7 @@
   </action>
   <action name="actionPaste">
    <property name="icon">
-    <iconset theme="edit-paste">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-paste"/>
    </property>
    <property name="text">
     <string>&amp;Paste from Clipboard</string>
@@ -524,8 +518,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="media-playback-start">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="media-playback-start"/>
    </property>
    <property name="text">
     <string>&amp;Slide Show</string>
@@ -533,8 +526,7 @@
   </action>
   <action name="actionDelete">
    <property name="icon">
-    <iconset theme="edit-delete">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-delete"/>
    </property>
    <property name="text">
     <string>&amp;Delete</string>
@@ -556,8 +548,7 @@
   </action>
   <action name="actionFileProperties">
    <property name="icon">
-    <iconset theme="document-properties">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-properties"/>
    </property>
    <property name="text">
     <string>File Properties</string>
@@ -565,8 +556,7 @@
   </action>
   <action name="actionOpenDirectory">
    <property name="icon">
-    <iconset theme="document-open">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-open"/>
    </property>
    <property name="text">
     <string>Open &amp;Directory</string>
@@ -577,8 +567,7 @@
   </action>
   <action name="actionUpload">
    <property name="icon">
-    <iconset theme="upload-media">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="upload-media"/>
    </property>
    <property name="text">
     <string>Upload</string>
@@ -847,6 +836,23 @@
    </property>
    <property name="text">
     <string>Solid Background</string>
+   </property>
+  </action>
+  <action name="actionOpenInNewWindow">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="window-new"/>
+   </property>
+   <property name="text">
+    <string>&amp;Open In New Window</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the Current File In a New Window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
  </widget>

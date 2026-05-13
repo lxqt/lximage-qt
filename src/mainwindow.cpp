@@ -187,6 +187,8 @@ MainWindow::MainWindow():
   contextMenu_->addAction(ui.actionRotateCounterclockwise);
   contextMenu_->addAction(ui.actionFlipHorizontal);
   contextMenu_->addAction(ui.actionFlipVertical);
+  contextMenu_->addSeparator();
+  contextMenu_->addAction(ui.actionOpenInNewWindow);
 
   auto sortGroup = new QActionGroup(ui.menu_View);
   sortGroup->setExclusive(true);
@@ -614,6 +616,18 @@ void MainWindow::on_actionNewWindow_triggered() {
     window->setWindowState(window->windowState() | Qt::WindowMaximized);
 
   window->show();
+}
+
+void MainWindow::on_actionOpenInNewWindow_triggered() {
+  Application* app = static_cast<Application*>(qApp);
+  MainWindow* window = new MainWindow();
+  window->resize(app->settings().windowWidth(), app->settings().windowHeight());
+
+  if(app->settings().windowMaximized())
+    window->setWindowState(window->windowState() | Qt::WindowMaximized);
+
+  window->show();
+  window->loadImage(currentFile_);
 }
 
 void MainWindow::on_actionSave_triggered() {
