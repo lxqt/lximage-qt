@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>Эти жестко запрограммированные сочетания клавиш будут переопределены, если они также назначены другим действиям в «Настройки» → «Сочетания клавиш».</translation>
+        <translation>Эти жёстко запрограммированные сочетания клавиш будут переопределены, если они также назначены другим действиям в «Настройки» → «Сочетания клавиш».</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
