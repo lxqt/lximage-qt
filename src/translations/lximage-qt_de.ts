@@ -187,7 +187,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
         <source>[*]%1 (Loading...) - Image Viewer</source>
-        <translation>[*]%1 (Lade...) - Bildbetrachter</translation>
+        <translation>[*]%1 (Laden ...) - Bildbetrachter</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="903"/>
@@ -229,7 +229,7 @@
         <location filename="../preferencesdialog.cpp" line="75"/>
         <source>Use a modifier key to clear a shortcut
 in the editing mode.</source>
-        <translation>Benutze Zusatztaste um die Verknüpfung
+        <translation>Zusatztaste verwenden, um die Verknüpfung
 im Bearbeitungsmodus zu löschen.</translation>
     </message>
     <message>
@@ -263,7 +263,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../saveimagejob.cpp" line="54"/>
         <source>Cannot save with this image format!</source>
-        <translation>Kann angegebenes Bildformat nicht speichern!</translation>
+        <translation>Dieses Bildformat kann nicht gespeichert werden!</translation>
     </message>
 </context>
 <context>
@@ -406,7 +406,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
         <source>Open &amp;With...</source>
-        <translation>Öffnen &amp;mit...</translation>
+        <translation>Öffnen &amp;mit ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
@@ -421,7 +421,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Open…</source>
-        <translation>&amp;Öffnen…</translation>
+        <translation>&amp;Öffnen …</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
@@ -566,7 +566,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="531"/>
         <source>&amp;Slide Show</source>
-        <translation>&amp;Diaschau</translation>
+        <translation>&amp;Diashow</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="540"/>
@@ -652,7 +652,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="643"/>
         <source>Draw a hollow rectangle</source>
-        <translation>Ein hohles Rechteck zeichnen</translation>
+        <translation>Ein leeres Rechteck zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
@@ -662,7 +662,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="658"/>
         <source>Draw a hollow circle</source>
-        <translation>Einen hohlen Kreis zeichnen</translation>
+        <translation>Einen leeren Kreis zeichnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="670"/>
@@ -820,7 +820,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Einfarbiger Hintergrund</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -888,17 +888,17 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="228"/>
         <source>Slide show interval (seconds):</source>
-        <translation>Diaschau-Intervall (Sekunden):</translation>
+        <translation>Diashow-Intervall (Sekunden):</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="249"/>
         <source>Show image outline by default</source>
-        <translation>Standardmäßig Bildkontur anzeigen</translation>
+        <translation>Bildkontur standardmäßig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="134"/>
         <source>Show annotations toolbar by default</source>
-        <translation>Standardmäßig Anmerkungssymbolleiste anzeigen</translation>
+        <translation>Anmerkungssymbolleiste standardmäßig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="256"/>
@@ -913,7 +913,7 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="76"/>
         <source>Thumbnail image dimensions:</source>
-        <translation>Vorschaubild-Abmessungen:</translation>
+        <translation>Vorschaubildabmessungen:</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="86"/>
@@ -928,12 +928,12 @@ im Bearbeitungsmodus zu löschen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="103"/>
         <source>Show thumbnails dock by default</source>
-        <translation>Zeige Bildchen-Anker als Standard</translation>
+        <translation>Miniaturansichten standardmäßig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="113"/>
         <source>Show Exif data dock by default</source>
-        <translation>Exif-Datendock standardmäßig anzeigen</translation>
+        <translation>Exif-Datenbereich standardmäßig anzeigen</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="120"/>
@@ -996,12 +996,12 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardmäßig einfarbiger Hintergrund</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
         <source>Smooth images on zooming</source>
-        <translation>Glätte Bilder beim Zoomen</translation>
+        <translation>Bilder beim Zoomen glätten</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="271"/>
@@ -1132,7 +1132,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../screenshotdialog.ui" line="101"/>
         <source>Include window title and frame</source>
-        <translation>Einschließlich Fenstertitel und Rahmen</translation>
+        <translation>Fenstertitel und Rahmen einschließen</translation>
     </message>
 </context>
 <context>

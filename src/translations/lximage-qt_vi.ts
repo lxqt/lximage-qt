@@ -182,7 +182,7 @@
         <location filename="../mainwindow.cpp" line="743"/>
         <location filename="../mainwindow.cpp" line="918"/>
         <source>%1/%2 Frames</source>
-        <translation type="unfinished"></translation>
+        <translation>%1/%2 Trang</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="897"/>
@@ -788,37 +788,37 @@ trong chế độ chỉnh sửa.</translation>
     <message>
         <location filename="../mainwindow.ui" line="817"/>
         <source>Next Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Trang Tiếp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Phải</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
         <source>Previous Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Trang Trước</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Trái</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
         <source>First Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Trang Đầu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="838"/>
         <source>Last Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Trang Cuối</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="849"/>
         <source>Solid Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Nền đơn sắc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="63"/>
@@ -994,7 +994,7 @@ Tải lại hình ảnh hiện tại để xem hiệu ứng.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Nền đơn sắc mặc định</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
