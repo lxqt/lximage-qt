@@ -856,7 +856,7 @@ w trybie edycji.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>Ustawienia</translation>
+        <translation>Preferencje</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>

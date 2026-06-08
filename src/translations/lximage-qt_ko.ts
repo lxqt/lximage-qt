@@ -11,7 +11,7 @@
     <message>
         <location filename="../shortcuts.ui" line="20"/>
         <source>These hard coded shortcuts will be overridden if they are also assigned to other actions in Preferences → Shortcuts.</source>
-        <translation>[기본설정] → [바로가기]의 다른 작업에 할당된 경우 이러한 하드코드된 단축키는 재지정됩니다.</translation>
+        <translation>[환경설정] → [바로가기]의 다른 작업에 할당된 경우 이러한 하드코드된 단축키는 재지정됩니다.</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="34"/>
@@ -482,7 +482,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>P&amp;references</source>
-        <translation>기본 설정(&amp;R)</translation>
+        <translation>환경설정(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="427"/>
@@ -858,7 +858,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>기본 설정</translation>
+        <translation>환경설정</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
