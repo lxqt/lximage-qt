@@ -580,7 +580,7 @@ in the editing mode.</source>
     <message>
         <location filename="../mainwindow.ui" line="551"/>
         <source>Show Thumbnails</source>
-        <translation>サムネイルの表示</translation>
+        <translation>サムネイルを表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="554"/>
