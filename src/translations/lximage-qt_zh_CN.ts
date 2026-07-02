@@ -856,7 +856,7 @@ in the editing mode.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="14"/>
         <source>Preferences</source>
-        <translation>偏好设置</translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="33"/>
