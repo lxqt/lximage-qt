@@ -649,7 +649,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="640"/>
         <source>Draw Rectangle</source>
-        <translation>Gambar persegi panjang</translation>
+        <translation>Gambar Persegi Panjang</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="643"/>
@@ -659,7 +659,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="655"/>
         <source>Draw Circle</source>
-        <translation>Gambar lingkaran</translation>
+        <translation>Gambar Lingkaran</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="658"/>
@@ -669,7 +669,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="670"/>
         <source>Draw Number</source>
-        <translation>Gambar angka</translation>
+        <translation>Gambar Angka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="673"/>
@@ -680,7 +680,7 @@ dalam mode pengeditan.</translation>
         <location filename="../mainwindow.ui" line="681"/>
         <location filename="../mainwindow.ui" line="684"/>
         <source>Menubar</source>
-        <translation>PapanMenu</translation>
+        <translation>Papanmenu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="687"/>
@@ -700,28 +700,28 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="706"/>
         <source>&amp;Annotations Toolbar</source>
-        <translation>&amp;Keterangan Bilah alat</translation>
+        <translation>Bilah Alat &amp;Keterangan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="717"/>
         <location filename="../mainwindow.ui" line="720"/>
         <source>Show Outline</source>
-        <translation>Tampilkan Garis Besar</translation>
+        <translation>Tampilkan Garis Luar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="723"/>
         <source>O</source>
-        <translation>Hai</translation>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="731"/>
         <source>Copy Pa&amp;th</source>
-        <translation>Salin Jalur</translation>
+        <translation>Salin &amp;Jalur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="734"/>
         <source>Copy path</source>
-        <translation>Salin Jalur</translation>
+        <translation>Salin jalur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="742"/>
@@ -732,7 +732,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="748"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="757"/>
@@ -762,12 +762,12 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="787"/>
         <source>By C&amp;reation Time</source>
-        <translation>Berdasarkan Waktu Pem&amp;buatan</translation>
+        <translation>Berdasarkan Waktu Pen&amp;ciptaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="790"/>
         <source>By Creation Time</source>
-        <translation>Menurut Waktu Penciptaan</translation>
+        <translation>Berdasarkan Waktu Penciptaan</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="798"/>
@@ -782,7 +782,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="809"/>
         <source>By File &amp;Type</source>
-        <translation>Berdasarkan File &amp;Tipe</translation>
+        <translation>Berdasarkan Tipe &amp;File</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="812"/>
@@ -842,7 +842,7 @@ dalam mode pengeditan.</translation>
     <message>
         <location filename="../mainwindow.ui" line="122"/>
         <source>&amp;View</source>
-        <translation>Lihat</translation>
+        <translation>&amp;Lihat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="155"/>
@@ -983,7 +983,7 @@ Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="210"/>
         <source>Adobe RGB</source>
-        <translation type="unfinished">Adobe RGB</translation>
+        <translation>Adobe RGB</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="215"/>
@@ -1008,7 +1008,7 @@ Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="271"/>
         <source>Shortcuts</source>
-        <translation type="unfinished">Pintasan</translation>
+        <translation>Pintasan</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
@@ -1023,7 +1023,7 @@ Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation type="unfinished">Bawaan</translation>
+        <translation>Bawaan</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
@@ -1036,7 +1036,7 @@ Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1099"/>
         <source>Error</source>
-        <translation type="unfinished">Kesalahan</translation>
+        <translation>Kesalahan</translation>
     </message>
 </context>
 <context>
@@ -1124,7 +1124,7 @@ Muat ulang gambar saat ini untuk melihat efeknya.</translation>
     <message>
         <location filename="../screenshotdialog.ui" line="74"/>
         <source> sec</source>
-        <translation type="unfinished"> det</translation>
+        <translation> det</translation>
     </message>
     <message>
         <location filename="../screenshotdialog.ui" line="91"/>
