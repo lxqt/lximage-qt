@@ -180,7 +180,7 @@
         <location filename="../mainwindow.cpp" line="731"/>
         <location filename="../mainwindow.cpp" line="737"/>
         <location filename="../mainwindow.cpp" line="743"/>
-        <location filename="../mainwindow.cpp" line="918"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>%1/%2 Frames</source>
         <translation>Obutimbe %1 ku %2</translation>
     </message>
@@ -196,21 +196,21 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="909"/>
-        <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Puloguramu ey&apos;okukebera bifaananyi</translation>
+        <source>[*]%1 - Image Viewer</source>
+        <translation>[*]%1 - Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="981"/>
+        <location filename="../mainwindow.cpp" line="978"/>
         <source>[*]Image Viewer</source>
         <translation>[*]Puloguramu ey&apos;okukebera bifaananyi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1398"/>
+        <location filename="../mainwindow.cpp" line="1395"/>
         <source>Thumbnails</source>
         <translation>Obulozaako</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1493"/>
+        <location filename="../mainwindow.cpp" line="1490"/>
         <source>EXIF Data</source>
         <translation>Ebikwata ku fayiro ebya EXIF</translation>
     </message>
@@ -1033,7 +1033,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1099"/>
+        <location filename="../mainwindow.cpp" line="1096"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>

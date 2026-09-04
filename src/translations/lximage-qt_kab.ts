@@ -195,8 +195,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
-        <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Ameskan n tugna</translation>
+        <source>[*]%1 - Image Viewer</source>
+        <translation>[*]%1 - Ameskan n tugna</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="904"/>
