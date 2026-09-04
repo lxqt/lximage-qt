@@ -906,10 +906,7 @@ void MainWindow::updateUI(bool multiFrame) {
       }
       else {
         const QString filePath = QString::fromUtf8(dispName.get());
-        title = tr("[*]%1 (%2x%3) - Image Viewer")
-                  .arg(filePath)
-                  .arg(ui.view->image().width())
-                  .arg(ui.view->image().height());
+        title = tr("[*]%1 - Image Viewer").arg(filePath.section(QLatin1Char('/'), -1));
         ui.statusBar->setText(QStringLiteral("%1×%2").arg(ui.view->image().width())
                                                      .arg(ui.view->image().height()),
                               filePath);
