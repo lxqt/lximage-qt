@@ -180,7 +180,7 @@
         <location filename="../mainwindow.cpp" line="731"/>
         <location filename="../mainwindow.cpp" line="737"/>
         <location filename="../mainwindow.cpp" line="743"/>
-        <location filename="../mainwindow.cpp" line="918"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>%1/%2 Frames</source>
         <translation>%1/%2 עמודים</translation>
     </message>
@@ -196,21 +196,21 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="909"/>
-        <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - מציג תמונות</translation>
+        <source>[*]%1 - Image Viewer</source>
+        <translation>[*]%1 - מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="981"/>
+        <location filename="../mainwindow.cpp" line="978"/>
         <source>[*]Image Viewer</source>
         <translation>[*]מציג תמונות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1398"/>
+        <location filename="../mainwindow.cpp" line="1395"/>
         <source>Thumbnails</source>
         <translation>תמונות ממוזערות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1493"/>
+        <location filename="../mainwindow.cpp" line="1490"/>
         <source>EXIF Data</source>
         <translation>נתוני EXIF</translation>
     </message>
@@ -1030,7 +1030,7 @@ Reload current image to see the effect.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../mainwindow.cpp" line="1099"/>
+        <location filename="../mainwindow.cpp" line="1096"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>

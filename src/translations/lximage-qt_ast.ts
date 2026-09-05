@@ -100,8 +100,8 @@ Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="644"/>
-        <source>[*]%1 (%2x%3) - Image Viewer</source>
-        <translation>[*]%1 (%2x%3) - Visor d&apos;imáxenes</translation>
+        <source>[*]%1 - Image Viewer</source>
+        <translation>[*]%1 - Visor d&apos;imáxenes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="680"/>
