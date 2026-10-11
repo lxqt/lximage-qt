@@ -1,7 +1,7 @@
 lximage-qt-2.5.0 / 2026-11-05
 ==============================
  * Put image name in title-bar (image path is already in status-bar).
- * Removed version check for less than Qt 6.9.
+ * Removed deprecated codes that were for Qt < 6.9.
  * Removed translations CMake artifact.
  * Updated the address of Free Software Foundation.
 
