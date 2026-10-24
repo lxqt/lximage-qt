@@ -98,6 +98,7 @@ MainWindow::MainWindow():
   connect(proxyModel_, &Fm::ProxyFolderModel::sortFilterChanged, this, &MainWindow::onSortFilterChanged);
 
   ui.view->setSmoothOnZoom(settings.smoothOnZoom());
+  ui.view->setZoomFitEnlarge(settings.enlargeOnZoomFit());
 
   // build context menu
   ui.view->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -1225,6 +1226,12 @@ void MainWindow::applySettings() {
                                             : QBrush(settings.bgColor()),
                              ui.actionSolidBg->isChecked());
   ui.view->setSmoothOnZoom(settings.smoothOnZoom());
+  if(ui.view->zoomFitEnlarge() != settings.enlargeOnZoomFit()) {
+    ui.view->setZoomFitEnlarge(settings.enlargeOnZoomFit());
+    if(ui.view->autoZoomFit()) { // apply the change to the current image
+      ui.view->zoomFit();
+    }
+  }
   ui.menuRecently_Opened_Files->setMaxItems(settings.maxRecentFiles());
 
   // also, update shortcuts

@@ -258,6 +258,13 @@ Reload current image to see the effect.</string>
         </widget>
        </item>
        <item row="7" column="0" colspan="2">
+        <widget class="QCheckBox" name="enlargeOnZoomFitBox">
+         <property name="text">
+          <string>Enlarge small images when fitting</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="2">
         <widget class="QCheckBox" name="smoothOnZoomBox">
          <property name="text">
           <string>Smooth images on zooming</string>
