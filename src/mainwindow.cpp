@@ -166,6 +166,8 @@ MainWindow::MainWindow():
 
   contextMenu_->addAction(ui.actionPrevious);
   contextMenu_->addAction(ui.actionNext);
+  contextMenu_->addAction(ui.actionOpenPreviousInNewWindow);
+  contextMenu_->addAction(ui.actionOpenNextInNewWindow);
   contextMenu_->addSeparator();
   contextMenu_->addAction(ui.actionZoomOut);
   contextMenu_->addAction(ui.actionZoomIn);
@@ -671,15 +673,25 @@ void MainWindow::on_actionClose_triggered() {
   deleteLater();
 }
 
+QModelIndex MainWindow::nextIndex() const {
+  if(proxyModel_->rowCount() <= 1 || !currentIndex_.isValid())
+    return QModelIndex();
+  if(currentIndex_.row() < proxyModel_->rowCount() - 1)
+    return proxyModel_->index(currentIndex_.row() + 1, 0);
+  return proxyModel_->index(0, 0);
+}
+
+QModelIndex MainWindow::previousIndex() const {
+  if(proxyModel_->rowCount() <= 1 || !currentIndex_.isValid())
+    return QModelIndex();
+  if(currentIndex_.row() > 0)
+    return proxyModel_->index(currentIndex_.row() - 1, 0);
+  return proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+}
+
 void MainWindow::on_actionNext_triggered() {
-  if(proxyModel_->rowCount() <= 1)
-    return;
-  if(currentIndex_.isValid()) {
-    QModelIndex index;
-    if(currentIndex_.row() < proxyModel_->rowCount() - 1)
-      index = proxyModel_->index(currentIndex_.row() + 1, 0);
-    else
-      index = proxyModel_->index(0, 0);
+  QModelIndex index = nextIndex();
+  if(index.isValid()) {
     const auto info = proxyModel_->fileInfoFromIndex(index);
     if(info)
       loadImage(info->path(), index);
@@ -687,18 +699,37 @@ void MainWindow::on_actionNext_triggered() {
 }
 
 void MainWindow::on_actionPrevious_triggered() {
-  if(proxyModel_->rowCount() <= 1)
-    return;
-  if(currentIndex_.isValid()) {
-    QModelIndex index;
-    if(currentIndex_.row() > 0)
-      index = proxyModel_->index(currentIndex_.row() - 1, 0);
-    else
-      index = proxyModel_->index(proxyModel_->rowCount() - 1, 0);
+  QModelIndex index = previousIndex();
+  if(index.isValid()) {
     const auto info = proxyModel_->fileInfoFromIndex(index);
     if(info)
       loadImage(info->path(), index);
   }
+}
+
+void MainWindow::openIndexInNewWindow(const QModelIndex& index) {
+  if(!index.isValid())
+    return;
+  const auto info = proxyModel_->fileInfoFromIndex(index);
+  if(!info)
+    return;
+  Application* app = static_cast<Application*>(qApp);
+  MainWindow* window = app->createWindow();
+  window->loadImage(info->path());
+  window->loadFolder(folderPath_);
+
+  window->resize(app->settings().windowWidth(), app->settings().windowHeight());
+  if(app->settings().windowMaximized())
+    window->setWindowState(window->windowState() | Qt::WindowMaximized);
+  // the window is shown after the image is loaded, in updateUI()
+}
+
+void MainWindow::on_actionOpenNextInNewWindow_triggered() {
+  openIndexInNewWindow(nextIndex());
+}
+
+void MainWindow::on_actionOpenPreviousInNewWindow_triggered() {
+  openIndexInNewWindow(previousIndex());
 }
 
 void MainWindow::on_actionFirst_triggered() {

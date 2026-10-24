@@ -83,6 +83,9 @@ protected:
   void loadImage(const Fm::FilePath & filePath, QModelIndex index = QModelIndex());
   void saveImage(const Fm::FilePath & filePath); // save current image to a file
   void loadFolder(const Fm::FilePath & newFolderPath);
+  QModelIndex nextIndex() const;
+  QModelIndex previousIndex() const;
+  void openIndexInNewWindow(const QModelIndex& index);
   QString openFileName();
   QString openDirectory();
   QString saveFileName(const QString& defaultName = QString());
@@ -130,6 +133,8 @@ private Q_SLOTS:
 
   void on_actionPrevious_triggered();
   void on_actionNext_triggered();
+  void on_actionOpenPreviousInNewWindow_triggered();
+  void on_actionOpenNextInNewWindow_triggered();
   void on_actionFirst_triggered();
   void on_actionLast_triggered();
 

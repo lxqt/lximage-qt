@@ -112,6 +112,9 @@
     <addaction name="actionFirst"/>
     <addaction name="actionLast"/>
     <addaction name="separator"/>
+    <addaction name="actionOpenPreviousInNewWindow"/>
+    <addaction name="actionOpenNextInNewWindow"/>
+    <addaction name="separator"/>
     <addaction name="actionPreviousFrame"/>
     <addaction name="actionNextFrame"/>
     <addaction name="actionFirstFrame"/>
@@ -360,6 +363,22 @@
    </property>
    <property name="shortcut">
     <string>PgUp</string>
+   </property>
+  </action>
+  <action name="actionOpenPreviousInNewWindow">
+   <property name="text">
+    <string>Open Previous File in New Window</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+PgUp</string>
+   </property>
+  </action>
+  <action name="actionOpenNextInNewWindow">
+   <property name="text">
+    <string>Open Next File in New Window</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+PgDown</string>
    </property>
   </action>
   <action name="actionOriginalSize">
