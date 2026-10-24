@@ -89,6 +89,7 @@ PreferencesDialog::PreferencesDialog(QWidget* parent):
   ui.toolbarBox->setChecked(settings.isToolbarShown());
   ui.annotationBox->setChecked(settings.isAnnotationsToolbarShown());
   ui.forceZoomFitBox->setChecked(settings.forceZoomFit());
+  ui.enlargeOnZoomFitBox->setChecked(settings.enlargeOnZoomFit());
   ui.smoothOnZoomBox->setChecked(settings.smoothOnZoom());
   ui.useTrashBox->setChecked(settings.useTrash());
 
@@ -163,6 +164,7 @@ void PreferencesDialog::accept() {
   settings.showToolbar(ui.toolbarBox->isChecked());
   settings.showAnnotationsToolbar(ui.annotationBox->isChecked());
   settings.setForceZoomFit(ui.forceZoomFitBox->isChecked());
+  settings.setEnlargeOnZoomFit(ui.enlargeOnZoomFitBox->isChecked());
   settings.setSmoothOnZoom(ui.smoothOnZoomBox->isChecked());
   settings.setUseTrash(ui.useTrashBox->isChecked());
 
