@@ -232,7 +232,7 @@ void ScreenshotDialog::doScreenshot() {
 static QString buildNumericFnPart() {
   //we may have many copies running with no gui, for example user presses hot keys fast
   //so they must have different file names to save, lets do it time + pid
-  const auto now = QDateTime::currentDateTime().toMSecsSinceEpoch();
+  const auto now = QDateTime::currentMSecsSinceEpoch();
   const auto pid = getpid();
   return QStringLiteral("%1_%2").arg(now).arg(pid);
 }
