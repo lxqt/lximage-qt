@@ -72,6 +72,7 @@ MainWindow::MainWindow():
   thumbnailsView_(nullptr),
   loadJob_(nullptr),
   saveJob_(nullptr),
+  tempCopyKey_(0),
   fileMenu_(nullptr),
   showFullScreen_(false),
   lastPixRatio_(1.0) {
@@ -1124,10 +1125,47 @@ void MainWindow::on_actionCopy_triggered() {
   clipboard->setImage(copiedImage);
 }
 
+// a path in the temporary directory for saving an image that has no file
+static QString tempImageFileName() {
+  QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
+  if(!tmp.isEmpty()) {
+    QDir tmpDir(tmp);
+    if(tmpDir.exists()) {
+      const QString curTime = QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmsszzz"));
+      return tmp + QStringLiteral("/lximage-") + curTime + QStringLiteral(".png");
+    }
+  }
+  return QString();
+}
+
 void MainWindow::on_actionCopyPath_triggered() {
   if(currentFile_) {
     const Fm::CStrPtr dispName = currentFile_.displayName();
     QApplication::clipboard()->setText(QString::fromUtf8(dispName.get()));
+  }
+  // if there is no open file (e.g., a screenshot), save the image to "/tmp"
+  // and copy that path, without making it the current file
+  else if(!ui.view->image().isNull()) {
+    const QImage image = ui.view->image();
+    // reuse the previous temporary file if the image has not changed since
+    if(!tempCopyPath_.isEmpty() && tempCopyKey_ == image.cacheKey() && QFile::exists(tempCopyPath_)) {
+      QApplication::clipboard()->setText(tempCopyPath_);
+      return;
+    }
+    const QString tmpFileName = tempImageFileName();
+    if(!tmpFileName.isEmpty() && saveJob_ == nullptr) {
+      const Fm::FilePath filePath = Fm::FilePath::fromPathStr(qPrintable(tmpFileName));
+      saveJob_ = new SaveImageJob(image, filePath);
+      connect(saveJob_, &Fm::Job::finished, this, [this, tmpFileName, key = image.cacheKey()] {
+        if(!saveJob_->failed()) {
+          tempCopyPath_ = tmpFileName;
+          tempCopyKey_ = key;
+          QApplication::clipboard()->setText(tmpFileName);
+        }
+        saveJob_ = nullptr;
+      });
+      saveJob_->runAsync();
+    }
   }
 }
 
@@ -1161,15 +1199,7 @@ void MainWindow::on_actionUpload_triggered()
     }
     // if there is no open file, save the image to "/tmp" and delete it after upload
     else if(!ui.view->image().isNull()) {
-      QString tmpFileName;
-      QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
-      if(!tmp.isEmpty()) {
-        QDir tmpDir(tmp);
-        if(tmpDir.exists()) {
-          const QString curTime = QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
-          tmpFileName = tmp + QStringLiteral("/lximage-") + curTime + QStringLiteral(".png");
-        }
-      }
+      const QString tmpFileName = tempImageFileName();
       if(!tmpFileName.isEmpty() && saveJob_ == nullptr) {
         const Fm::FilePath filePath = Fm::FilePath::fromPathStr(qPrintable(tmpFileName));
         saveJob_ = new SaveImageJob(ui.view->image(), filePath);
