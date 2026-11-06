@@ -299,8 +299,9 @@ void PreferencesDialog::initShortcuts() {
 
   // pair display and object names together (to get the latter from the former)
   if(ACTION_DISPLAY_NAMES.isEmpty()) {
-    QHash<QString, Application::ShortcutDescription>::const_iterator iter = app->defaultShortcuts().constBegin();
-    while (iter != app->defaultShortcuts().constEnd()) {
+    const auto &df = app->defaultShortcuts();
+    QHash<QString, Application::ShortcutDescription>::const_iterator iter = df.constBegin();
+    while (iter != df.constEnd()) {
       ACTION_DISPLAY_NAMES.insert(iter.value().displayText, iter.key());
       ++ iter;
     }
@@ -405,8 +406,9 @@ void PreferencesDialog::restoreDefaultShortcuts() {
   ui.tableWidget->setSortingEnabled(false);
 
   // consider all shortcuts modified
-  QHash<QString, Application::ShortcutDescription>::const_iterator iter = app->defaultShortcuts().constBegin();
-  while (iter != app->defaultShortcuts().constEnd()) {
+  const auto &df = app->defaultShortcuts();
+  QHash<QString, Application::ShortcutDescription>::const_iterator iter = df.constBegin();
+  while (iter != df.constEnd()) {
     modifiedShortcuts_.insert(iter.key(), iter.value().shortcut.toString(QKeySequence::PortableText));
     ++ iter;
   }
