@@ -20,6 +20,8 @@
 
 #include "screenshotselectarea.h"
 #include <QMouseEvent>
+#include <QGuiApplication>
+#include <QScreen>
 
 using namespace LxImage;
 
@@ -37,7 +39,14 @@ ScreenshotSelectArea::ScreenshotSelectArea(const QImage & image, QWidget* parent
   view_->move(0,0);
   view_->resize(image.width(), image.height());
   setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint);
-  setGeometry(image.rect());
+  // the image covers the whole virtual desktop, which may not start at (0, 0)
+  // and spans all screens
+  if(QScreen* screen = QGuiApplication::primaryScreen()) {
+    setGeometry(screen->virtualGeometry());
+  }
+  else {
+    setGeometry(image.rect());
+  }
   connect(view_, &ScreenshotSelectAreaGraphicsView::selectedArea, this, &ScreenshotSelectArea::areaSelected);
 }
 
