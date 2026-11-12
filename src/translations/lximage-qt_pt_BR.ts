@@ -794,7 +794,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="820"/>
         <source>Ctrl+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Direita</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="825"/>
@@ -804,7 +804,7 @@ um atalho no modo de edição.</translation>
     <message>
         <location filename="../mainwindow.ui" line="828"/>
         <source>Ctrl+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Esquerda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="833"/>
@@ -995,7 +995,7 @@ Recarregue a imagem para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="242"/>
         <source>Solid background by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Fundo de cor sólida por padrão</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="263"/>
