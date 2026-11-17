@@ -354,14 +354,18 @@ void PreferencesDialog::initShortcuts() {
 
 void PreferencesDialog::onShortcutChange(QTableWidgetItem* item) {
   QString desc = ui.tableWidget->item(ui.tableWidget->currentRow(), 0)->text();
+  QString prevTxt = allShortcuts_.value(desc);
   QString txt = item->text();
+  if(txt == prevTxt) {
+    return;
+  }
 
   const auto shortcuts = allShortcuts_.values();
   for(const auto& s : shortcuts) {
     if(!s.isEmpty() && s == txt) {
       showWarning(tr("<b>Ambiguous shortcut not accepted.</b>"));
       disconnect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
-      item->setText(allShortcuts_.value (desc)); // restore the previous shortcut
+      item->setText(prevTxt); // restore the previous shortcut
       connect(ui.tableWidget, &QTableWidget::itemChanged, this, &PreferencesDialog::onShortcutChange);
       return;
     }
