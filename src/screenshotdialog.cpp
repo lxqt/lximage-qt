@@ -154,8 +154,38 @@ QImage ScreenshotDialog::takeScreenshot(const WId& wid, const QRect& rect, bool 
   QImage image;
   QScreen *screen = QGuiApplication::primaryScreen();
   if(screen) {
-    QPixmap pixmap = screen->grabWindow(wid, rect.x(), rect.y(), rect.width(), rect.height());
-    image = pixmap.toImage();
+    // top left corner of the image in root window coordinates
+    QPoint origin;
+    if(wid) {
+      QPixmap pixmap = screen->grabWindow(wid, rect.x(), rect.y(), rect.width(), rect.height());
+      image = pixmap.toImage();
+    }
+    else {
+      // QScreen::grabWindow(0) only grabs its own screen, so grab all
+      // screens and put them at their positions on the virtual desktop
+      const QRect virtualGeometry = screen->virtualGeometry();
+      const qreal dpr = screen->devicePixelRatio();
+      QPixmap pixmap(virtualGeometry.size() * dpr);
+      pixmap.setDevicePixelRatio(dpr);
+      pixmap.fill(Qt::transparent);
+      QPainter painter(&pixmap);
+      const auto siblings = screen->virtualSiblings();
+      for(const auto& sibling : siblings) {
+        painter.drawPixmap(sibling->geometry().topLeft() - virtualGeometry.topLeft(), sibling->grabWindow(0));
+      }
+      painter.end();
+
+      // "rect" is in root window coordinates (native pixels)
+      const QPoint nativeOrigin = virtualGeometry.topLeft() * dpr;
+      if(rect.isValid()) {
+        origin = rect.topLeft();
+        image = pixmap.copy(rect.translated(-nativeOrigin)).toImage();
+      }
+      else {
+        origin = nativeOrigin;
+        image = pixmap.toImage();
+      }
+    }
 
     //call to hasXFixes() maybe executed here from cmd line with no gui mode (some day though, currently ignore cursor)
     if(takeCursor &&  hasXFixes()) {
@@ -181,7 +211,7 @@ QImage ScreenshotDialog::takeScreenshot(const WId& wid, const QRect& rect, bool 
             }
             // paint the cursor on the current image
             QPainter painter(&image);
-            painter.drawImage(cursor->x - cursor->xhot, cursor->y - cursor->yhot, cursorImage);
+            painter.drawImage(cursor->x - cursor->xhot - origin.x(), cursor->y - cursor->yhot - origin.y(), cursorImage);
           }
           XFree(cursor);
         }
