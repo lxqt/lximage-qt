@@ -207,6 +207,11 @@ private:
   LoadImageJob* loadJob_;
   SaveImageJob* saveJob_;
 
+  // temporary file saved by "Copy Path" for an image without a file,
+  // and the cache key of the image that was saved to it
+  QString tempCopyPath_;
+  qint64 tempCopyKey_;
+
   QPointer<Fm::FileMenu> fileMenu_;
 
   bool showFullScreen_;
