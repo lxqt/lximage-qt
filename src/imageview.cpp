@@ -50,6 +50,7 @@ ImageView::ImageView(QWidget* parent):
   cursorTimer_(nullptr),
   scaleFactor_(1.0),
   autoZoomFit_(false),
+  zoomFitEnlarge_(false),
   smoothOnZoom_(true),
   isSVG_(false),
   currentTool_(ToolNone),
@@ -246,7 +247,7 @@ void ImageView::resizeEvent(QResizeEvent* event) {
 }
 
 void ImageView::zoomFit() {
-  if(!image_.isNull()) {
+  if(!image_.isNull() && !zoomFitEnlarge_) {
     // if the image is smaller than our view, use its original size
     // instead of scaling it up.
     if(static_cast<int>(image_.width() / pixRatio_) <= viewport()->width()

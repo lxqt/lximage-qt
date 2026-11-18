@@ -54,6 +54,7 @@ Settings::Settings():
   showToolbar_(true),
   showAnnotationsToolbar_(false),
   forceZoomFit_(false),
+  enlargeOnZoomFit_(false),
   smoothOnZoom_(true),
   useTrash_(true),
   colorSpace_(1),
@@ -89,6 +90,7 @@ bool Settings::load() {
   showToolbar_ = settings.value(QStringLiteral("ShowToolbar"), true).toBool();
   showAnnotationsToolbar_ = settings.value(QStringLiteral("ShowAnnotationsToolbar"), false).toBool();
   forceZoomFit_ = settings.value(QStringLiteral("ForceZoomFit"), false).toBool();
+  enlargeOnZoomFit_ = settings.value(QStringLiteral("EnlargeOnZoomFit"), false).toBool();
   smoothOnZoom_ = settings.value(QStringLiteral("SmoothOnZoom"), true).toBool();
   useTrash_ = settings.value(QStringLiteral("UseTrash"), true).toBool();
   colorSpace_ = settings.value(QStringLiteral("ColorSpace"), 1).toInt();
@@ -140,6 +142,7 @@ bool Settings::save() {
   settings.setValue(QStringLiteral("ShowExifData"), showExifData_);
   settings.setValue(QStringLiteral("ExifDatakWidth"), exifDatakWidth_);
   settings.setValue(QStringLiteral("ForceZoomFit"), forceZoomFit_);
+  settings.setValue(QStringLiteral("EnlargeOnZoomFit"), enlargeOnZoomFit_);
   settings.setValue(QStringLiteral("SmoothOnZoom"), smoothOnZoom_);
   settings.setValue(QStringLiteral("UseTrash"), useTrash_);
   settings.setValue(QStringLiteral("ColorSpace"), colorSpace_);

@@ -69,6 +69,15 @@ public:
     autoZoomFit_ = value;
   }
 
+  bool zoomFitEnlarge() const {
+    return zoomFitEnlarge_;
+  }
+
+  // if set to true, zoomFit() also scales up images that are smaller than the view.
+  void setZoomFitEnlarge(bool value) {
+    zoomFitEnlarge_ = value;
+  }
+
   void setSmoothOnZoom(bool value) {
     smoothOnZoom_ = value;
   }
@@ -154,6 +163,7 @@ private:
   QTimer *cursorTimer_; // for hiding cursor in fullscreen mode
   double scaleFactor_;
   bool autoZoomFit_;
+  bool zoomFitEnlarge_; // whether zoomFit() should scale up small images
   bool smoothOnZoom_;
   bool isSVG_; // is the image an SVG file?
   Tool currentTool_; // currently selected tool

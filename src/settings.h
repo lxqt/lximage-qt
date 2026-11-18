@@ -241,6 +241,14 @@ public:
     forceZoomFit_ = on;
   }
 
+  bool enlargeOnZoomFit() const {
+    return enlargeOnZoomFit_;
+  }
+
+  void setEnlargeOnZoomFit(bool on) {
+    enlargeOnZoomFit_ = on;
+  }
+
   bool smoothOnZoom() const {
     return smoothOnZoom_;
   }
@@ -318,6 +326,7 @@ private:
   bool showToolbar_;
   bool showAnnotationsToolbar_;
   bool forceZoomFit_;
+  bool enlargeOnZoomFit_;
   bool smoothOnZoom_;
   bool useTrash_;
   int colorSpace_;
