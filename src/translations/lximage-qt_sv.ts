@@ -1009,7 +1009,7 @@ Ladda om den nuvarande bilden för att se effekten.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
         <source>Action</source>
-        <translation>Handling</translation>
+        <translation>Åtgärd</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="295"/>

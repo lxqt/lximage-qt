@@ -1004,7 +1004,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="271"/>
         <source>Shortcuts</source>
-        <translation>Клавишни комбинации</translation>
+        <translation>Клавишна комбинация</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
@@ -1014,7 +1014,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="295"/>
         <source>Shortcut</source>
-        <translation>Комбинация</translation>
+        <translation>Клавишна комбинация</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
