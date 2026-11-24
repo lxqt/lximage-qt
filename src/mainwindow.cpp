@@ -1534,6 +1534,7 @@ void MainWindow::changeEvent(QEvent* event) {
   if(event->type() == QEvent::WindowStateChange) {
     Settings& settings = static_cast<Application*>(qApp)->settings();
     if(isFullScreen()) { // changed to fullscreen mode
+      ui.actionFullScreen->setChecked(true);
       ui.view->setFrameStyle(QFrame::NoFrame);
       ui.view->setViewBackground(QBrush(settings.fullScreenBgColor()), ui.actionSolidBg->isChecked());
       ui.toolBar->hide();
@@ -1555,6 +1556,7 @@ void MainWindow::changeEvent(QEvent* event) {
       ui.view->hideCursor(true);
     }
     else { // restore to normal window mode
+      ui.actionFullScreen->setChecked(false);
       ui.view->setFrameStyle(QFrame::StyledPanel|QFrame::Sunken);
       ui.view->setViewBackground(QBrush(settings.bgColor()), ui.actionSolidBg->isChecked());
       if(ui.actionMenubar->isChecked()) {
