@@ -1008,17 +1008,17 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
         <source>Action</source>
-        <translation>العمل</translation>
+        <translation>الإجراء</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="295"/>
         <source>Shortcut</source>
-        <translation>إختصار</translation>
+        <translation>الاختصار</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Default</translation>
+        <translation>الافتراضي</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>

@@ -1007,7 +1007,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="271"/>
         <source>Shortcuts</source>
-        <translation>Amapeesa agagonza emirimu</translation>
+        <translation>Ebyanguyisa</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
@@ -1022,7 +1022,7 @@ okukibikkula enkyuka ekwate olabe enjawulo gy&apos;ereetawo.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Zaawo amapeesa agagonza emirimu aga bulijjo</translation>
+        <translation>Aga bulijjo</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>

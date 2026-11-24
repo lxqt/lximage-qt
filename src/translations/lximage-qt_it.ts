@@ -250,7 +250,7 @@ scorciatoia in modalità di modifica.</translation>
     <message>
         <location filename="../preferencesdialog.cpp" line="344"/>
         <source>&lt;b&gt;Warning: Ambiguous shortcut detected!&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Attenzione: Scorciatoia presente due volte! rilevata&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Attenzione: rilevata scorciatoia ambigua!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.cpp" line="361"/>
@@ -1020,7 +1020,7 @@ Ricarica l&apos;immagine corrente per vedere l&apos;effetto.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Ripristina</translation>
+        <translation>Predefinita</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../shortcuts.ui" line="39"/>
         <source>Action</source>
-        <translation>Akcja</translation>
+        <translation>Czynność</translation>
     </message>
     <message>
         <location filename="../shortcuts.ui" line="44"/>
@@ -1004,22 +1004,22 @@ Wczytaj ponownie bieżący obraz, aby zobaczyć efekt.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="271"/>
         <source>Shortcuts</source>
-        <translation>Klawisze</translation>
+        <translation>Skróty</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="290"/>
         <source>Action</source>
-        <translation>Działanie</translation>
+        <translation>Czynność</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="295"/>
         <source>Shortcut</source>
-        <translation>Klawisz</translation>
+        <translation>Skrót</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Domyślny</translation>
+        <translation>Domyślne</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>

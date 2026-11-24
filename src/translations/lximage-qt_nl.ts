@@ -1021,7 +1021,7 @@ Herlaad de huidige afbeelding om toe te passen.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Standaardwaarden</translation>
+        <translation>Standaard</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
