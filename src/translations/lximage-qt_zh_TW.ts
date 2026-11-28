@@ -1019,7 +1019,7 @@ Reload current image to see the effect.</source>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>預設值</translation>
+        <translation>預設</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>

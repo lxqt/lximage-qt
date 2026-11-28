@@ -1019,7 +1019,7 @@ Recarregue a imagem atual para ver o efeito.</translation>
     <message>
         <location filename="../preferencesdialog.ui" line="303"/>
         <source>Default</source>
-        <translation>Repor atalhos para os valores padrão</translation>
+        <translation>Predefinição</translation>
     </message>
     <message>
         <location filename="../preferencesdialog.ui" line="24"/>
